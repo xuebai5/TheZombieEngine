@@ -1,0 +1,12 @@
+/**
+    @defgroup NebulaAssetSystem Asset Subsystem
+    @ingroup Framework
+    @brief A wrapper class for the set of data that makes up an art object.
+    
+    Every type of asset (derived class) is able to load a different set of data
+    and perform a different set of loading operations.
+    
+    An Asset is just a convenient wrapper for related data objects generated 
+    from inside an art-creation tool or exporter. the application is free to
+    define its own kind of assets with related data structure and loading.
+*/

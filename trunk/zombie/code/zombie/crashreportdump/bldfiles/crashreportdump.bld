@@ -1,0 +1,20 @@
+#===============================================================================
+#  crashreportdump.bld
+#===============================================================================
+
+#===============================================================================
+#  utility modules
+#===============================================================================
+beginmodule crashreportdump
+    setdir crashreportdump
+    setlibs_win32 { dbghelp.lib }
+    setfiles { ExceptionHandler GetWinVer MiniVersion }
+    setheaders { CrashFileNames ExceptionHandler GetWinVer MiniVersion }
+endmodule
+
+begintarget crashreportdump
+    settype lib
+    setpch true
+    setwarningslevel 0
+    setmodules { crashreportdump }
+endtarget

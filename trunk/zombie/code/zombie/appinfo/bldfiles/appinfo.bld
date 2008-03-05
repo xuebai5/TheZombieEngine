@@ -1,0 +1,20 @@
+#-------------------------------------------------------------------------------
+#   appinfo.bld
+#   ================
+#   Nebula2 application bld file.
+#   (C) 2005 Conjurer Services, S.A.
+#-------------------------------------------------------------------------------
+beginmodule appinfo
+    setdir appinfo
+    setheaders { appinfo }
+endmodule
+#===============================================================================
+#  napplication appinfo
+#===============================================================================
+begintarget appinfo
+    settype lib
+    setpch true
+    setmodules {
+        appinfo 
+    }
+endtarget

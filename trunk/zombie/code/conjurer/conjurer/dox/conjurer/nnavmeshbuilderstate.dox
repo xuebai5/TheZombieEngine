@@ -1,0 +1,364 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nnavmeshbuilderstate
+    @cppclass nnavmeshbuilderstate
+    @superclass nroot
+    @classinfo
+      Editor state for building and saving navigation meshes.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinObstacleHeight
+    @format
+      f(MinObstacleHeight) -- Until which height above floor level an obstacle can rise without being considered as such
+    @attrs
+    @info
+      Until which height above floor level an obstacle can rise without being considered as such
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CharacterHeight
+    @format
+      f(CharacterHeight) -- Until which height above floor level an obstacle is considered as such
+    @attrs
+    @info
+      Until which height above floor level an obstacle is considered as such
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TriangleMeshesAsObstacles
+    @format
+      b(TriangleMeshesAsObstacles) -- Enable/disable the use of triable meshes as obstacles
+    @attrs
+    @info
+      Enable/disable the use of triable meshes as obstacles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinHardSlope
+    @format
+      f(MinHardSlope) -- Minimum slope angle to create another navigation node
+    @attrs
+    @info
+      Minimum slope angle to create another navigation node
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxWalkableSlope
+    @format
+      f(MaxWalkableSlope) -- Maximum walkable slope angle
+    @attrs
+    @info
+      Maximum walkable slope angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SeaLevel
+    @format
+      f(SeaLevel) -- Sea level
+    @attrs
+    @info
+      Sea level
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TerrainHolesEnabled
+    @format
+      b(TerrainHolesEnabled) -- Use of terrain holes to hole the navmesh
+    @attrs
+    @info
+      Use of terrain holes to hole the navmesh
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MergePolygons
+    @format
+      b(MergePolygons) -- Enable/disable the merging of polygons
+    @attrs
+    @info
+      Enable/disable the merging of polygons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeneratePortals
+    @format
+      b(GeneratePortals) -- Enable/disable the generation of portals
+    @attrs
+    @info
+      Enable/disable the generation of portals
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FitToObstacles
+    @format
+      b(FitToObstacles) -- Enable/disable fitting of polygons to obstacles
+    @attrs
+    @info
+      Enable/disable fitting of polygons to obstacles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinObstacleSize
+    @format
+      f(MinObstacleSize) -- Small obstacles are expanded to the specified size
+    @attrs
+    @info
+      Small obstacles are expanded to the specified size
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BuildNavMesh
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      build the navigation mesh, discarding the previous one
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BuildIndoorNavMesh
+    @output
+      b(unnamed) -- No info
+    @input
+      o(unnamed) -- No info
+    @info 
+      build the navigation mesh for an indoor, discarding the previous one
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BuildBrushNavMesh
+    @output
+      b(unnamed) -- No info
+    @input
+      o(unnamed) -- No info
+    @info 
+      build the navigation mesh for a brush, discarding the previous one
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd LoadNavMesh
+    @output
+      b(unnamed) -- No info
+    @input
+      s(unnamed) -- No info
+    @info 
+      load a navigation mesh from a file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveNavMesh
+    @output
+      b(unnamed) -- No info
+    @input
+      s(unnamed) -- No info
+    @info 
+      save the current navigation mesh to file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveOutdoorNavMesh
+    @output
+      b(unnamed) -- No info
+    @input
+      s(unnamed) -- No info
+    @info 
+      save the current outdoor's navigation mesh to file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd ClearExternalLinks
+    @output
+      v
+    @input
+      v
+    @info 
+      remove all external links from all navigation graphs
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GenerateExternalLinks
+    @output
+      v
+    @input
+      v
+    @info 
+      generate external links to connect superimposed navigation graphs
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinObstacleHeight
+    @cmdtype setter
+    @property MinObstacleHeight
+    @info 
+      Until which height above floor level an obstacle can rise without being considered as such
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinObstacleHeight
+    @cmdtype getter
+    @property MinObstacleHeight
+    @info 
+      Until which height above floor level an obstacle can rise without being considered as such
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCharacterHeight
+    @cmdtype setter
+    @property CharacterHeight
+    @info 
+      Until which height above floor level an obstacle is considered as such
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCharacterHeight
+    @cmdtype getter
+    @property CharacterHeight
+    @info 
+      Until which height above floor level an obstacle is considered as such
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTriangleMeshesAsObstacles
+    @cmdtype setter
+    @property TriangleMeshesAsObstacles
+    @info 
+      Enable/disable the use of triable meshes as obstacles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTriangleMeshesAsObstacles
+    @cmdtype getter
+    @property TriangleMeshesAsObstacles
+    @info 
+      Enable/disable the use of triable meshes as obstacles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinHardSlope
+    @cmdtype setter
+    @property MinHardSlope
+    @info 
+      Minimum slope angle to create another navigation node
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinHardSlope
+    @cmdtype getter
+    @property MinHardSlope
+    @info 
+      Minimum slope angle to create another navigation node
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxWalkableSlope
+    @cmdtype setter
+    @property MaxWalkableSlope
+    @info 
+      Maximum walkable slope angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxWalkableSlope
+    @cmdtype getter
+    @property MaxWalkableSlope
+    @info 
+      Maximum walkable slope angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSeaLevel
+    @cmdtype setter
+    @property SeaLevel
+    @info 
+      Sea level
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSeaLevel
+    @cmdtype getter
+    @property SeaLevel
+    @info 
+      Sea level
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTerrainHolesEnabled
+    @cmdtype setter
+    @property TerrainHolesEnabled
+    @info 
+      Use of terrain holes to hole the navmesh
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTerrainHolesEnabled
+    @cmdtype getter
+    @property TerrainHolesEnabled
+    @info 
+      Use of terrain holes to hole the navmesh
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMergePolygons
+    @cmdtype setter
+    @property MergePolygons
+    @info 
+      Enable/disable the merging of polygons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMergePolygons
+    @cmdtype getter
+    @property MergePolygons
+    @info 
+      Enable/disable the merging of polygons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeneratePortals
+    @cmdtype setter
+    @property GeneratePortals
+    @info 
+      Enable/disable the generation of portals
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeneratePortals
+    @cmdtype getter
+    @property GeneratePortals
+    @info 
+      Enable/disable the generation of portals
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFitToObstacles
+    @cmdtype setter
+    @property FitToObstacles
+    @info 
+      Enable/disable fitting of polygons to obstacles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFitToObstacles
+    @cmdtype getter
+    @property FitToObstacles
+    @info 
+      Enable/disable fitting of polygons to obstacles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinObstacleSize
+    @cmdtype setter
+    @property MinObstacleSize
+    @info 
+      Minimum size for obstacles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinObstacleSize
+    @cmdtype getter
+    @property MinObstacleSize
+    @info 
+      Minimum size for obstacles
+*/

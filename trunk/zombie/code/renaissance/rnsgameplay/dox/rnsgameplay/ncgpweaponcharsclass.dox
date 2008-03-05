@@ -1,0 +1,669 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGPWeaponCharsClass
+    @superclass ncGameplayClass
+    @classinfo
+      Component Class that represent the characteristics of weapons.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyMin
+    @format
+      f(AccuracyMin;min=-1;max=1;step=0.01;editor=slider) -- Minimum weapon accuracy
+    @attrs subgroup=Accuracy
+    @info
+      Minimum weapon accuracy
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyMax
+    @format
+      f(AccuracyMax;min=-1;max=1;step=0.01;editor=slider) -- Maximum weapon accuracy
+    @attrs subgroup=Accuracy
+    @info
+      Maximum weapon accuracy
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyLoss
+    @format
+      f(AccuracyLoss;min=-1;max=1;step=0.01;editor=slider) -- Accuracy loss of the weapon
+    @attrs subgroup=Accuracy
+    @info
+      Accuracy loss of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyProne
+    @format
+      f(AccuracyProne;min=-1;max=2;step=0.01;editor=slider) -- Accuracy when prone of the weapon
+    @attrs subgroup=Accuracy
+    @info
+      Accuracy when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyCrouch
+    @format
+      f(AccuracyCrouch;min=-1;max=2;step=0.01;editor=slider) -- Accuracy when crouch of the weapon
+    @attrs subgroup=Accuracy
+    @info
+      Accuracy when crouch of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyMove
+    @format
+      f(AccuracyMove;min=-1;max=2;step=0.01;editor=slider) -- Accuracy when move of the weapon
+    @attrs subgroup=Accuracy
+    @info
+      Accuracy when move of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyRun
+    @format
+      f(AccuracyRun;min=-1;max=2;step=0.01;editor=slider) -- Accuracy when run of the weapon
+    @attrs subgroup=Accuracy
+    @info
+      Accuracy when run of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyIronsight
+    @format
+      f(AccuracyIronsight;min=-1;max=2;step=0.01;editor=slider) -- Accuracy when ironsight of the weapon
+    @attrs subgroup=Accuracy
+    @info
+      Accuracy when ironsight of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccuracyAngle
+    @format
+      f(AccuracyAngle;min=-6.28;max=6.28;step=0.01;editor=slider) -- Accuracy angle of the weapon
+    @attrs subgroup=Accuracy
+    @info
+      Accuracy angle of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RecoilDeviationX
+    @format
+      f(RecoilDeviationX;min=-1;max=1;step=0.01;editor=slider) -- Recoil deviation in horizontal of the weapon
+    @attrs subgroup=Recoil
+    @info
+      Recoil deviation in horizontal of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RecoilDeviationY
+    @format
+      f(RecoilDeviationY;min=-1;max=1;step=0.01;editor=slider) -- Recoil deviation in vertical of the weapon
+    @attrs subgroup=Recoil
+    @info
+      Recoil deviation in vertical of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RecoilTime
+    @format
+      f(RecoilTime;min=-10;max=10;step=0.01;editor=slider) -- Recoil recover time of the weapon
+    @attrs subgroup=Recoil
+    @info
+      Recoil recover time of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RecoilDeviationProneX
+    @format
+      f(RecoilDeviationProneX;min=-1;max=1;step=0.01;editor=slider) -- Recoil deviation in horizontal when prone of the weapon
+    @attrs subgroup=Recoil
+    @info
+      Recoil deviation in horizontal when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RecoilDeviationProneY
+    @format
+      f(RecoilDeviationProneY;min=-1;max=1;step=0.01;editor=slider) -- Recoil deviation in vertical when prone of the weapon
+    @attrs subgroup=Recoil
+    @info
+      Recoil deviation in vertical when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AimSpeed
+    @format
+      f(AimSpeed;min=-1;max=1;step=0.01;editor=slider) -- Aim speed of the weapon
+    @attrs
+    @info
+      Aim speed of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AimSpeedProne
+    @format
+      f(AimSpeedProne;min=-1;max=1;step=0.01;editor=slider) -- Aim speed when prone of the weapon
+    @attrs
+    @info
+      Aim speed when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Range
+    @format
+      f(Range;min=-1000;max=1000;step=1;editor=slider) -- Range of the weapon
+    @attrs
+    @info
+      Range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinRange
+    @format
+      f(MinRange;min=-1000;max=1000;step=1;editor=slider) -- Minimum range of the weapon
+    @attrs
+    @info
+      Minimum range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Damage
+    @format
+      f(Damage;min=-500;max=500;step=1;editor=slider) -- Damage of the weapon
+    @attrs
+    @info
+      Damage of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DamageHalfRange
+    @format
+      f(DamageHalfRange;min=-500;max=500;step=1;editor=slider) -- Damage at half range of the weapon
+    @attrs
+    @info
+      Damage at half range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ShootVolume
+    @format
+      f(ShootVolume) -- Shoot volume of the weapon
+    @attrs
+    @info
+      Shoot volume of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ClipSize
+    @format
+      i(ClipSize;min=-500;max=500;step=1;editor=slider) -- Clip size of the weapon
+    @attrs
+    @info
+      Clip size of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Traits
+    @format
+      i(Traits;flags=ironsight:1,dotsight:2,scope:4,light:8,grenade:16,quick_reload:32,tracking:64,silencer:128) -- Traits of the weapon
+    @attrs
+    @info
+      Traits of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Slots
+    @format
+      i(Slots;flags=top:1,overbarrel:2,underbarrel:4,underbarrel_nog:8,mount:16,siderail:32,siderail_nog:64,muzzle_small:128,muzzle_small_nog:256,muzzle_big:512,muzzle_big_nog:1024,mag_hicap:2048,mag_clamp:4096,ammo:8192)  -- Slots of the weapon
+    @attrs
+    @info
+      Slots of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyMin
+    @cmdtype setter
+    @property AccuracyMin
+    @info 
+      Set minimum weapon accuracy
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyMin
+    @cmdtype getter
+    @property AccuracyMin
+    @info 
+      Get minimum weapon accuracy
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyMax
+    @cmdtype setter
+    @property AccuracyMax
+    @info 
+      Set maximum weapon accuracy
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyMax
+    @cmdtype getter
+    @property AccuracyMax
+    @info 
+      Get maximum weapon accuracy
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyLoss
+    @cmdtype setter
+    @property AccuracyLoss
+    @info 
+      Set accuracy loss of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyLoss
+    @cmdtype getter
+    @property AccuracyLoss
+    @info 
+      Get accuracy loss of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyProne
+    @cmdtype setter
+    @property AccuracyProne
+    @info 
+      Set accuracy when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyProne
+    @cmdtype getter
+    @property AccuracyProne
+    @info 
+      Get accuracy when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyCrouch
+    @cmdtype setter
+    @property AccuracyCrouch
+    @info 
+      Set accuracy when crouch of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyCrouch
+    @cmdtype getter
+    @property AccuracyCrouch
+    @info 
+      Get accuracy when crouch of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyMove
+    @cmdtype setter
+    @property AccuracyMove
+    @info 
+      Set accuracy when move of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyMove
+    @cmdtype getter
+    @property AccuracyMove
+    @info 
+      Get accuracy when move of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyRun
+    @cmdtype setter
+    @property AccuracyRun
+    @info 
+      Set accuracy when run of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyRun
+    @cmdtype getter
+    @property AccuracyRun
+    @info 
+      Get accuracy when run of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyIronsight
+    @cmdtype setter
+    @property AccuracyIronsight
+    @info 
+      Set accuracy when ironsight of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyIronsight
+    @cmdtype getter
+    @property AccuracyIronsight
+    @info 
+      Get accuracy when ironsight of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccuracyAngle
+    @cmdtype setter
+    @property AccuracyAngle
+    @info 
+      Set accuracy angle of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccuracyAngle
+    @cmdtype getter
+    @property AccuracyAngle
+    @info 
+      Get accuracy angle of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRecoilDeviationX
+    @cmdtype setter
+    @property RecoilDeviationX
+    @info 
+      Set recoil deviation in horizontal of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRecoilDeviationX
+    @cmdtype getter
+    @property RecoilDeviationX
+    @info 
+      Get recoil deviation in horizontal of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRecoilDeviationY
+    @cmdtype setter
+    @property RecoilDeviationY
+    @info 
+      Set recoil deviation in vertical of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRecoilDeviationY
+    @cmdtype getter
+    @property RecoilDeviationY
+    @info 
+      Get recoil deviation in vertical of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRecoilTime
+    @cmdtype setter
+    @property RecoilTime
+    @info 
+      Set recoil recover time of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRecoilTime
+    @cmdtype getter
+    @property RecoilTime
+    @info 
+      Get recoil recover time of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRecoilDeviationProneX
+    @cmdtype setter
+    @property RecoilDeviationProneX
+    @info 
+      Set recoil deviation in horizontal when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRecoilDeviationProneX
+    @cmdtype getter
+    @property RecoilDeviationProneX
+    @info 
+      Get recoil deviation in horizontal when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRecoilDeviationProneY
+    @cmdtype setter
+    @property RecoilDeviationProneY
+    @info 
+      Set recoil deviation in vertical when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRecoilDeviationProneY
+    @cmdtype getter
+    @property RecoilDeviationProneY
+    @info 
+      Get recoil deviation in vertical when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAimSpeed
+    @cmdtype setter
+    @property AimSpeed
+    @info 
+      Set aim speed of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAimSpeed
+    @cmdtype getter
+    @property AimSpeed
+    @info 
+      Get aim speed of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAimSpeedProne
+    @cmdtype setter
+    @property AimSpeedProne
+    @info 
+      Set aim speed when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAimSpeedProne
+    @cmdtype getter
+    @property AimSpeedProne
+    @info 
+      Get aim speed when prone of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRange
+    @cmdtype setter
+    @property Range
+    @info 
+      Set range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRange
+    @cmdtype getter
+    @property Range
+    @info 
+      Get range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinRange
+    @cmdtype setter
+    @property MinRange
+    @info 
+      Set minimum range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinRange
+    @cmdtype getter
+    @property MinRange
+    @info 
+      Get minimum range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDamage
+    @cmdtype setter
+    @property Damage
+    @info 
+      Set damage of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDamage
+    @cmdtype getter
+    @property Damage
+    @info 
+      Get damage of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDamageHalfRange
+    @cmdtype setter
+    @property DamageHalfRange
+    @info 
+      Set damage at half range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDamageHalfRange
+    @cmdtype getter
+    @property DamageHalfRange
+    @info 
+      Get damage at half range of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetShootVolume
+    @cmdtype setter
+    @property ShootVolume
+    @info 
+      Set shoot volume of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetShootVolume
+    @cmdtype getter
+    @property ShootVolume
+    @info 
+      Get shoot volume of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClipSize
+    @cmdtype setter
+    @property ClipSize
+    @info 
+      Set clip size of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClipSize
+    @cmdtype getter
+    @property ClipSize
+    @info 
+      Get clip size of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTraits
+    @cmdtype setter
+    @property Traits
+    @info 
+      set the traits of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTraits
+    @cmdtype getter
+    @property Traits
+    @info 
+      get the traits of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddTrait
+    @output
+      v
+    @input
+      i(type;enums=ironsight:1,dotsight:2,scope:4,light:8,grenade:16,quick_reload:32,tracking:64) -- the trait to add
+    @info 
+      Add a behaviour to the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveTrait
+    @output
+      v
+    @input
+      i(type;enums=ironsight:1,dotsight:2,scope:4,light:8,grenade:16,quick_reload:32,tracking:64) -- the trait to remove
+    @info 
+      remove a behavior of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AllowTrait
+    @output
+      b(unnamed) -- true if trait is allowed
+    @input
+      i(type;enums=ironsight:1,dotsight:2,scope:4,light:8,grenade:16,quick_reload:32,tracking:64) -- type of trait
+    @info 
+      Say if a trait is allowed by the weapon characteristics
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSlots
+    @cmdtype setter
+    @property Slots
+    @info 
+      set the slots of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSlots
+    @cmdtype getter
+    @property Slots
+    @info 
+      get the slots of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddSlot
+    @output
+      v
+    @input
+      i(type;enums=top:1,overbarrel:2,underbarrel:4,underbarrel_nog:8,mount:1,siderail:16,siderail_nog:32,muzzle_small:64,muzzle_small_nog:128,muzzle_big:256,muzzle_big_nog:512,mag_hicap:1024,mag_clamp:2048,ammo:4096) -- the trait to add
+    @info 
+      add a type to the slot
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AllowType
+    @output
+      b(unnamed) -- true if type is allowed in the addon
+    @input
+      i(type;enums=top:1,overbarrel:2,underbarrel:4,underbarrel_nog:8,mount:1,siderail:16,siderail_nog:32,muzzle_small:64,muzzle_small_nog:128,muzzle_big:256,muzzle_big_nog:512,mag_hicap:1024,mag_clamp:2048,ammo:4096) -- type of trait
+    @info 
+      say if addon allow a type of slot
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveSlot
+    @output
+      v
+    @input
+      i(type;enums=top:1,overbarrel:2,underbarrel:4,underbarrel_nog:8,mount:1,siderail:16,siderail_nog:32,muzzle_small:64,muzzle_small_nog:128,muzzle_big:256,muzzle_big_nog:512,mag_hicap:1024,mag_clamp:2048,ammo:4096) -- the slot to remove
+    @info 
+      remove a slot of the weapon
+*/

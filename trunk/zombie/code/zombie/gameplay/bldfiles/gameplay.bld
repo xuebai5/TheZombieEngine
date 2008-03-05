@@ -1,0 +1,102 @@
+#-------------------------------------------------------------------------------
+# Behaviour build file
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# BEGIN MODULES
+#-------------------------------------------------------------------------------
+
+beginmodule npathfinder
+    setdir npathfinder
+    setheaders { npathfinder }
+    setfiles { npathfinder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nastar
+    setdir nastar
+    setheaders { nastar }
+    setfiles { nastar }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ngamematerial
+    setdir gameplay
+    setfiles { ngamematerial_main ngamematerial_cmds }
+    setheaders { ngamematerial }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ngamematerialserver
+    setdir gameplay
+    setfiles { ngamematerialserver_main ngamematerialserver_cmds }
+    setheaders { ngamematerialserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncgamecamera
+    setdir ncgamecamera
+    setfiles { ncgamecamera_main ncgamecamera_cmds }
+    setheaders { ncgamecamera }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayloader
+    setdir gameplay
+    setfiles {
+        ncgameplayloader_main
+    }
+    setheaders { ncgameplayloader }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule nmissionhandler
+    setdir gameplay
+    setfiles { nmissionhandler_main nmissionhandler_cmds }
+    setheaders { nmissionhandler }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule nfxeventtrigger
+    setdir gameplay
+    setfiles { nfxeventtrigger_main nfxeventtrigger_cmds}
+    setheaders { nfxeventtrigger nfxeventtriggertypes }
+endmodule
+
+beginmodule gpimpactsound
+    setdir gameplay
+    setfiles { gpimpactsound }
+    setheaders { gpimpactsound }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ngamemessagewindowproxy
+    setdir gameplay
+    setfiles { ngamemessagewindowproxy_main ngamemessagewindowproxy_cmds }
+    setheaders { ngamemessagewindowproxy }
+endmodule
+
+#-------------------------------------------------------------------------------
+# BEGIN TARGETS
+#-------------------------------------------------------------------------------
+
+begintarget gameplay
+    settype lib
+    setwarningslevel 4
+    
+    setpch true
+    setmodules {
+        npathfinder
+        nastar
+        ngamematerial
+        ngamematerialserver
+        ncgamecamera
+        ncgameplayloader
+        nmissionhandler
+        nfxeventtrigger
+        gpimpactsound
+        ngamemessagewindowproxy
+    }
+        
+endtarget
+
+#-------------------------------------------------------------------------------
+# EOF
+#-------------------------------------------------------------------------------

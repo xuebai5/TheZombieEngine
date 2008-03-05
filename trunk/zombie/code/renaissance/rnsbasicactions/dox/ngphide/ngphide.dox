@@ -1,0 +1,20 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngphide
+    @cppclass nGPHide
+    @superclass nGPBasicAction
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Init
+    @output
+      b(unnamed) -- No info
+    @input
+      o(unnamed) -- No info
+      fff(unnamed) -- No info
+    @info 
+      Initial condition
+*/

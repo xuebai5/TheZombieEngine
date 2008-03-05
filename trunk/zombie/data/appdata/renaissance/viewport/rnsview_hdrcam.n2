@@ -1,0 +1,33 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:this()$
+-- -----------------------------------------------------------
+nthis:setrelsize(0.000000, 0.000000, 1.000000, 1.000000)
+nthis:setvisible(true)
+nthis:setnearplane(0.150000)
+nthis:setfarplane(1000.000000)
+nthis:setangleofview(59.999992)
+nthis:setisometricview(false)
+nthis:setresourcefile([[home:export/gfxlib/cameras/hdrcam.n2]])
+nthis:beginviewportentity([[Hdrcam]])
+  nthis:setvectorvariable([[ShadowColor]], 0.000000, 0.000000, 0.000000, 0.500000)
+  nthis:setvectorvariable([[Luminance]], 0.299000, 0.587000, 0.114000, 0.000000)
+  nthis:setvectorvariable([[Balance]], 1.000000, 1.000000, 1.000000, 1.000000)
+  nthis:setfloatvariable([[Saturation]], 0.900000)
+  nthis:setfloatvariable([[HdrBrightPassThreshold]], 0.300000)
+  nthis:setfloatvariable([[HdrBrightPassOffset]], 0.500000)
+  nthis:setfloatvariable([[HdrEmissiveFactor]], 1.000000)
+  nthis:setfloatvariable([[HdrBloomScale]], 0.200000)
+  nthis:setintvariable([[ShadowSrcBlend]], 1)
+  nthis:setintvariable([[ShadowDstBlend]], 2)
+  nthis:setpassenabled([[edit]], false)
+  nthis:setperspective(59.999992, 1.333333, 0.100000, 5000.000000)
+nthis:endobject()
+nthis:setmousexfactor(1.000000)
+nthis:setmouseyfactor(1.000000)
+nthis:setmouseyinvert(false)
+nthis:setmaxrenderdistance(300.000000)
+nthis:setocclusionradius(160.000000)
+nthis:setmaxnumoccluders(4)
+nthis:setareaanglemin(0.005000)
+-- -----------------------------------------------------------
+-- Eof

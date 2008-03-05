@@ -1,0 +1,49 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nfxserver
+    @cppclass nFXServer
+    @superclass nRoot
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd NewSpawnEffectObject
+    @output
+      o(unnamed) -- No info
+    @input
+      s(unnamed) -- No info
+    @info 
+      add a spawn effect to the pool by class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd PullEffectObject
+    @output
+      v
+    @input
+      o(unnamed) -- No info
+    @info 
+      pull an effect into the active array
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd KillEffectObject
+    @output
+      v
+    @input
+      o(unnamed) -- No info
+    @info 
+      kill an effect back into the pool
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveEffectObject
+    @output
+      v
+    @input
+      o(unnamed) -- No info
+    @info 
+      remove an effect from the pool
+*/

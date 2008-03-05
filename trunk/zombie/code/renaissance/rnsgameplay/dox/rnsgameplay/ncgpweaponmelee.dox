@@ -1,0 +1,52 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Gameplay
+    @cppclass ncGPWeaponMelee
+    @superclass nEntityObject
+    @classinfo
+      Component object with the behaviour of melee weapons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Geomid
+    @format
+      i(Geomid) -- geomid of the collision object of the weapon
+    @attrs
+    @info
+      Collision geomid
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DamageMelee
+    @format
+      i(DamageMelee) -- Melee damage of the weapon
+    @attrs
+        readonly=true
+    @info
+      Melee damage of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDamageMelee
+    @cmdtype getter
+    @property DamageMelee
+    @info 
+      Get the melee damage
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeomid
+    @cmdtype getter
+    @property Geomid
+    @info 
+      Get the collision geomid
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeomid
+    @cmdtype setter
+    @property Geomid
+    @info 
+      Set the collision geomid
+*/

@@ -1,0 +1,743 @@
+#-------------------------------------------------------------------------------
+#   nphysics.bld
+#
+    (C) 2004 Conjurer Services, S.A.
+#-------------------------------------------------------------------------------
+
+
+#--------------------------------------------------------------------
+# nphysicsgeom Module
+#
+#   Base object to create geomtries.
+#
+#--------------------------------------------------------------------
+beginmodule nphysicsgeom
+    setdir nphysics
+    setfiles {
+        nphysicsgeom_main nphysicsgeom_cmds nphysicsaabb
+    }
+    setheaders { nphysicsgeom nphysicsaabb }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomplane Module
+#
+#   Description of a geometric plane.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomplane
+    setdir nphysics
+    setfiles {
+        nphygeomplane_main nphygeomplane_cmds 
+    }
+    setheaders { nphygeomplane }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomsphere Module
+#
+#   Description of a geometric sphere.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomsphere
+    setdir nphysics
+    setfiles {
+        nphygeomsphere_main nphygeomsphere_cmds 
+    }
+    setheaders { nphygeomsphere }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomray Module
+#
+#   Description of a geometric ray.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomray
+    setdir nphysics
+    setfiles {
+        nphygeomray_main nphygeomray_cmds 
+    }
+    setheaders { nphygeomray }
+endmodule
+
+
+#--------------------------------------------------------------------
+# nphygeomtrimesh Module
+#
+#   Description of a triangle mesh.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomtrimesh
+    setdir nphysics
+    setfiles {
+        nphygeomtrimesh_main nphygeomtrimesh_cmds nphymeshload
+    }
+    setheaders { nphygeomtrimesh nphymeshload }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomcylinder Module
+#
+#   Description of a geometric cylinder.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomcylinder
+    setdir nphysics
+    setfiles {
+        nphygeomcylinder_main nphygeomcylinder_cmds 
+    }
+    setheaders { nphygeomcylinder }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeombox Module
+#
+#   Description of a geomtric box.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeombox
+    setdir nphysics
+    setfiles {
+        nphygeombox_main nphygeombox_cmds 
+    }
+    setheaders { nphygeombox }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomtrans Module
+#
+#   Description of a transform geometry.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomtrans
+    setdir nphysics
+    setfiles {
+        nphygeomtrans_main nphygeomtrans_cmds 
+    }
+    setheaders { nphygeomtrans }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomspace Module
+#
+#   Description of a geomtric space.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomspace
+    setdir nphysics
+    setfiles {
+        nphygeomspace_main nphygeomspace_cmds 
+    }
+    setheaders { nphygeomspace }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomhashspace Module
+#
+#   Description of a geomtric hash space.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomhashspace
+    setdir nphysics
+    setfiles {
+        nphygeomhashspace_main nphygeomhashspace_cmds 
+    }
+    setheaders { nphygeomhashspace }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomquadtreespace Module
+#
+#   Description of a geomtric qued tree space.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomquadtreespace
+    setdir nphysics
+    setfiles {
+        nphygeomquadtreespace_main nphygeomquadtreespace_cmds 
+    }
+    setheaders { nphygeomquadtreespace }
+endmodule
+
+#--------------------------------------------------------------------
+# nphycollide Module
+#
+#   Colliding code.
+#
+#--------------------------------------------------------------------
+beginmodule nphycollide
+    setdir nphysics
+    setfiles {
+        nphycollide_main
+    }
+    setheaders { nphycollide }
+endmodule
+
+#--------------------------------------------------------------------
+# nphysicsconfig Module
+#
+#   Description of the physics engine configuration.
+#
+#--------------------------------------------------------------------
+beginmodule nphysicsconfig
+	setlibs_win32_release { ode.lib OPCODE.lib }
+	setlibs_win32_debug { oded.lib OPCODE_D.lib }    
+    setdir nphysics
+    setfiles { nphysicsconfig nphysicsode }
+    setheaders { nphysicsconfig }
+endmodule
+
+#--------------------------------------------------------------------
+# nphyrigidbody Module
+#
+#   Description of a rigid body.
+#
+#--------------------------------------------------------------------
+beginmodule nphyrigidbody
+    setdir nphysics
+    setfiles { nphyrigidbody }
+    setheaders { nphyrigidbody }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphysicsobj Module
+#
+#   Description of the physics object.
+#
+#--------------------------------------------------------------------
+beginmodule ncphysicsobj
+    setdir nphysics
+    setfiles { ncphysicsobj_cmds ncphysicsobj_main }
+    setheaders { ncphysicsobj }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ncphysicsobjclass
+    setdir nphysics
+    setfiles { ncphysicsobjclass }
+    setheaders { ncphysicsobjclass }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphycompositeobj Module
+#
+#   Description of the composite physics object.
+#
+#--------------------------------------------------------------------
+beginmodule ncphycompositeobj
+    setdir nphysics
+    setfiles { ncphycompositeobj_cmds ncphycompositeobj_main }
+    setheaders { ncphycompositeobj }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyterrain Module
+#
+#   Description of the physics terrain.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyterrain
+    setdir nphysics
+    setfiles { ncphyterrain_cmds ncphyterrain_main }
+    setheaders { ncphyterrain }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyterraincell Module
+#
+#   Description of the a cell from a terrain.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyterraincell
+    setdir nphysics
+    setfiles { ncphyterraincell_cmds ncphyterraincell_main }
+    setheaders { ncphyterraincell }
+endmodule
+
+#--------------------------------------------------------------------
+# nphysicsworld Module
+#
+#   Description of the physics world.
+#
+#--------------------------------------------------------------------
+beginmodule nphysicsworld
+    setdir nphysics
+    setfiles { nphysicsworld_main nphysicsworld_cmds nphyatmosphera phyobjmanager }
+    setheaders { nphysicsworld nphyatmosphera phyobjmanager }
+endmodule
+
+#--------------------------------------------------------------------
+# nphysicsserver Module
+#
+#   The physics server generates the world for the physics.
+#
+#--------------------------------------------------------------------
+beginmodule nphysicsserver
+    setdir nphysics
+    setfiles { nphysicsserver_main nphysicsserver_cmds }
+    setheaders { nphysicsserver }
+endmodule
+
+#--------------------------------------------------------------------
+# nphysicsjoint Module
+#
+#   Definition of physics joints.
+#
+#--------------------------------------------------------------------
+beginmodule nphysicsjoint
+    setdir nphysics
+    setfiles { nphysicsjoint_main nphysicsjoint_cmds nphyjointgroup }
+    setheaders { nphysicsjoint nphyjointgroup }
+endmodule
+
+#--------------------------------------------------------------------
+# nphymaterial Module
+#
+#   Definition of physics material.
+#
+#--------------------------------------------------------------------
+beginmodule nphymaterial
+    setdir nphysics
+    setfiles { nphymaterial_main nphymaterial_cmds }
+    setheaders { nphymaterial }
+endmodule
+
+#--------------------------------------------------------------------
+# nphycontactjoint Module
+#
+#   Definition of contact joints.
+#
+#--------------------------------------------------------------------
+beginmodule nphycontactjoint
+    setdir nphysics
+    setfiles { nphycontactjoint_main nphycontactjoint_cmds }
+    setheaders { nphycontactjoint }
+endmodule
+
+#--------------------------------------------------------------------
+# nphytwohingejoint Module
+#
+#   Definition of a two serial hinges joint.
+#
+#--------------------------------------------------------------------
+beginmodule nphytwohingejoint
+    setdir nphysics
+    setfiles { nphytwohingejoint_main nphytwohingejoint_cmds }
+    setheaders { nphytwohingejoint }
+endmodule
+
+#--------------------------------------------------------------------
+# nphyAngularMotorJoint Module
+#
+#   Definition of a Angular Motor joint.
+#
+#--------------------------------------------------------------------
+beginmodule nphyangularmotorjoint
+    setdir nphysics
+    setfiles { nphyangularmotorjoint_main nphyangularmotorjoint_cmds }
+    setheaders { nphyangularmotorjoint }
+endmodule
+
+#--------------------------------------------------------------------
+# nphyballsocketjoint Module
+#
+#   Definition of a ball a socket joint.
+#
+#--------------------------------------------------------------------
+beginmodule nphyballsocketjoint
+    setdir nphysics
+    setfiles { nphyballsocketjoint_main nphyballsocketjoint_cmds }
+    setheaders { nphyballsocketjoint }
+endmodule
+
+#--------------------------------------------------------------------
+# nphyhingejoint Module
+#
+#   Definition of a hinge joint.
+#
+#--------------------------------------------------------------------
+beginmodule nphyhingejoint
+    setdir nphysics
+    setfiles { nphyhingejoint_main nphyhingejoint_cmds }
+    setheaders { nphyhingejoint }
+endmodule
+
+#--------------------------------------------------------------------
+# nphysliderjoint Module
+#
+#   Definition of a slider joint.
+#
+#--------------------------------------------------------------------
+beginmodule nphysliderjoint
+    setdir nphysics
+    setfiles { nphysliderjoint_main nphysliderjoint_cmds }
+    setheaders { nphysliderjoint }
+endmodule
+
+#--------------------------------------------------------------------
+# nphyuniversaljoint Module
+#
+#   Definition of a slider joint.
+#
+#--------------------------------------------------------------------
+beginmodule nphyuniversaljoint
+    setdir nphysics
+    setfiles { nphyuniversaljoint_main nphyuniversaljoint_cmds }
+    setheaders { nphyuniversaljoint }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyvehicle Module
+#
+#   Definition of a vehicle object.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyvehicle
+    setdir nphysics
+    setfiles { ncphyvehicle_main ncphyvehicle_cmds }
+    setheaders { ncphyvehicle }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ncphyvehicleclass
+    setdir nphysics
+    setfiles { ncphyvehicleclass }
+    setheaders { ncphyvehicleclass }
+endmodule
+
+#--------------------------------------------------------------------
+# nphyboom Module
+#
+#   Definition of a boom object explosion or blast.
+#
+#--------------------------------------------------------------------
+beginmodule nphyboom
+    setdir nphysics
+    setfiles { nphyboom_main nphyboom_cmds }
+    setheaders { nphyboom }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphysimpleobj Module
+#
+#   Definition of a simple object 1 body 1 geometry.
+#
+#--------------------------------------------------------------------
+beginmodule ncphysimpleobj
+    setdir nphysics
+    setfiles { ncphysimpleobj_main ncphysimpleobj_cmds }
+    setheaders { ncphysimpleobj }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyareadensity Module
+#
+#   Definition of a different density area.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyareadensity
+    setdir nphysics
+    setfiles { ncphyareadensity_main ncphyareadensity_cmds }
+    setheaders { ncphyareadensity }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphysea Module
+#
+#   Definition of a sea area.
+#
+#--------------------------------------------------------------------
+beginmodule ncphysea
+    setdir nphysics
+    setfiles { ncphysea_main ncphysea_cmds }
+    setheaders { ncphysea }
+endmodule
+
+
+#--------------------------------------------------------------------
+# ncphywaterpool Module
+#
+#   Definition of a water area.
+#
+#--------------------------------------------------------------------
+beginmodule ncphywaterpool
+    setdir nphysics
+    setfiles { ncphywaterpool_main ncphywaterpool_cmds }
+    setheaders { ncphywaterpool }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyragdoll Module
+#
+#   Definition of a basic ragdoll.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyragdoll
+    setdir nphysics
+    setfiles { ncphyragdoll_main ncphyragdoll_cmds }
+    setheaders { ncphyragdoll }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyragdolllimb Module
+#
+#   Definition of a basic ragdoll limb.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyragdolllimb
+    setdir nphysics
+    setfiles { ncphyragdolllimb_main ncphyragdolllimb_cmds }
+    setheaders { ncphyragdolllimb }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyhumragdoll Module
+#
+#   Definition of a humanoid ragdoll.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyhumragdoll
+    setdir nphysics
+    setfiles { ncphyhumragdoll_main ncphyhumragdoll_cmds }
+    setheaders { ncphyhumragdoll }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ncphyhumragdollclass
+    setdir nphysics
+    setfiles { ncphyhumragdollclass }
+    setheaders { ncphyhumragdollclass }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyfourleggedragdoll Module
+#
+#   Definition of a humanoid ragdoll.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyfourleggedragdoll
+    setdir nphysics
+    setfiles { ncphyfourleggedragdoll_main ncphyfourleggedragdoll_cmds }
+    setheaders { ncphyfourleggedragdoll }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ncphyfourleggedragdollclass
+    setdir nphysics
+    setfiles { ncphyfourleggedragdollclass }
+    setheaders { ncphyfourleggedragdollclass }
+endmodule
+
+#--------------------------------------------------------------------
+# nphyspace Module
+#
+#   Definition of a space basic.
+#
+#--------------------------------------------------------------------
+beginmodule nphyspace
+    setdir nphysics
+    setfiles { nphyspace_main nphyspace_cmds }
+    setheaders { nphyspace }
+endmodule
+
+#--------------------------------------------------------------------
+# nphypickobjmanager Module
+#
+#   Definition of the picking object manager.
+#
+#--------------------------------------------------------------------
+beginmodule nphypickobjmanager
+    setdir nphysics
+    setfiles { nphypickobjmanager_main nphypickobjmanager_cmds }
+    setheaders { nphypickobjmanager }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphypickableobj Module
+#
+#   Definition of an object that lives in the picking object world.
+#
+#--------------------------------------------------------------------
+beginmodule ncphypickableobj
+    setdir nphysics
+    setfiles { ncphypickableobj_main ncphypickableobj_cmds }
+    setheaders { ncphypickableobj }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomheightmap Module
+#
+#   Represents a geometry defined by a heightmap.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomheightmap
+    setdir nphysics
+    setfiles { nphygeomheightmap_main nphygeomheightmap_cmds }
+    setheaders { nphygeomheightmap }
+endmodule
+
+#--------------------------------------------------------------------
+# nphygeomcone Module
+#
+#   Represents a geometry defined by a cone.
+#
+#--------------------------------------------------------------------
+beginmodule nphygeomcone
+    setdir nphysics
+    setfiles { nphygeomcone_main nphygeomcone_cmds }
+    setheaders { nphygeomcone }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphycharacterobj Module
+#
+#   Definition of a character object.
+#
+#--------------------------------------------------------------------
+beginmodule ncphycharacterobj
+    setdir nphysics
+    setfiles { ncphycharacterobj_main ncphycharacterobj_cmds }
+    setheaders { ncphycharacterobj }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphywheel Module
+#
+#   Physics object specialization to represent a wheel.
+#
+#--------------------------------------------------------------------
+beginmodule ncphywheel
+    setdir nphysics
+    setfiles { ncphywheel_main ncphywheel_cmds }
+    setheaders { ncphywheel }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyindoor Module
+#
+#   Physics object representing an indoor.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyindoor
+    setdir nphysics
+    setfiles { ncphyindoor_main ncphyindoor_cmds }
+    setheaders { ncphyindoor }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ncphyindoorclass
+    setdir nphysics
+    setfiles { ncphyindoorclass }
+    setheaders { ncphyindoorclass }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphycloth Module
+#
+#   Physics object representing a squared pice of cloth.
+#
+#--------------------------------------------------------------------
+beginmodule ncphycloth
+    setdir nphysics
+    setfiles { ncphycloth_main ncphycloth_cmds }
+    setheaders { ncphycloth }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphyjoint Module
+#
+#   Generic joint component.
+#
+#--------------------------------------------------------------------
+beginmodule ncphyjoint
+    setdir nphysics
+    setfiles { ncphyjoint_main ncphyjoint_cmds }
+    setheaders { ncphyjoint }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ncphyjointclass
+    setdir nphysics
+    setfiles { ncphyjointclass }
+    setheaders { ncphyjointclass }
+endmodule
+
+#--------------------------------------------------------------------
+# ncphycharacter Module
+#
+#   Generic character physics component.
+#
+#--------------------------------------------------------------------
+beginmodule ncphycharacter
+    setdir nphysics
+    setfiles { ncphycharacter_main ncphycharacter_cmds }
+    setheaders { ncphycharacter }
+endmodule
+
+#--------------------------------------------------------------------
+begintarget nphysics
+    annotate "The Nebula2 Physics modules"
+    settype lib
+    setglobalcompileroptions_vc { "/I ../../../../ode/include" }
+    setglobalcompileroptions_vc { "/I ../../../../ode/OPCODE" } 
+    setcompileroptionsvc { 
+		"/I ../../../../ode/include"
+		"/I ../../../../ode/OPCODE" 
+	}  
+	setwarningslevel 4 
+	setpch true
+    setmodules {
+		nphysicsgeom
+		nphygeomsphere
+		nphygeombox
+        nphygeomspace
+        nphygeomhashspace
+        nphygeomquadtreespace
+        nphygeomplane
+        nphysicsserver
+        nphysicsworld
+        ncphysicsobj
+        ncphysicsobjclass
+        nphycollide
+		nphysicsconfig
+		nphygeomray
+		nphyrigidbody
+		nphygeomcylinder
+		nphygeomtrimesh
+		ncphyterrain
+		nphygeomtrans
+		ncphycompositeobj
+		ncphycharacterobj
+		nphysicsjoint
+		nphycontactjoint
+		nphytwohingejoint
+		nphyangularmotorjoint
+		nphyballsocketjoint
+		nphyhingejoint
+		nphysliderjoint
+		nphyuniversaljoint
+		nphymaterial
+		ncphyvehicle
+		ncphyvehicleclass
+		nphyboom
+		ncphysimpleobj
+		ncphywaterpool
+        ncphysea
+        ncphyareadensity
+        ncphyragdoll
+        ncphyragdolllimb
+        ncphyhumragdoll
+        ncphyhumragdollclass
+        ncphyfourleggedragdoll
+        ncphyfourleggedragdollclass
+        nphyspace
+        nphypickobjmanager
+        ncphypickableobj
+        ncphyterraincell
+        nphygeomheightmap
+        nphygeomcone
+        ncphywheel
+        ncphyindoor
+        ncphyindoorclass
+        ncphycloth
+        ncphyjoint
+        ncphyjointclass
+        ncphycharacter
+    }
+endtarget
+

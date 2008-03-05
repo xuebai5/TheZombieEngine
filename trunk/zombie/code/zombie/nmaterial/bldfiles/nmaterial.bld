@@ -1,0 +1,85 @@
+#===============================================================================
+#  nmaterial.bld
+#  nebula2 material subsystem.
+#
+#  Modules:
+#      nmaterial
+#      nmaterialbuilder
+#      nd3d9materialbuilder
+#      nmaterialtree
+#      nmaterialserver
+#      nmaterialnode
+#      nmaterialdb
+#      nmaterialdependencyserver
+#      nsurfacedependencyserver
+#===============================================================================
+
+#===============================================================================
+#  nmaterial modules
+#===============================================================================
+beginmodule nmaterial
+    setdir nmaterial
+    setfiles { nmaterial_main nmaterial_cmds }
+    setheaders { nmaterial }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmaterialbuilder
+    setdir nmaterial
+    setfiles { nmaterialbuilder_main }
+    setheaders { nmaterialbuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nd3d9materialbuilder
+    setdir nmaterial
+    setfiles { nd3d9materialbuilder_main nd3d9materialbuilder_cmds }
+    setheaders { nd3d9materialbuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmaterialtree
+    setdir nmaterial
+    setfiles { nmaterialtree_main }
+    setheaders { nmaterialtree }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmaterialserver
+    setdir nmaterial
+    setfiles { nmaterialserver_main nmaterialserver_cmds }
+    setheaders { nmaterialserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmaterialnode
+    setdir nmaterial
+    setfiles { nmaterialnode_main nmaterialnode_cmds }
+    setheaders { nmaterialnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmaterialdb
+    setdir nmaterial
+    setfiles { nmaterialdb nmaterialdbxmlparser }
+    setheaders { nmaterialdb nmaterialdbxmlparser }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmaterialdependencyserver
+    setdir nmaterial
+    setfiles { nmaterialdependencyserver_main }
+    setheaders { nmaterialdependencyserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nsurfacedependencyserver
+    setdir nmaterial
+    setfiles { nsurfacedependencyserver_main }
+    setheaders { nsurfacedependencyserver }
+endmodule
+
+#===============================================================================
+#  nmaterial Targets
+#===============================================================================
+begintarget nmaterial
+    settype lib
+    setpch true
+    setmodules {
+        nmaterial nmaterialtree nmaterialserver nmaterialnode
+        nmaterialbuilder nd3d9materialbuilder nmaterialdb
+        nsurfacedependencyserver nmaterialdependencyserver
+    }
+endtarget

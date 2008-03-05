@@ -1,0 +1,120 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass neventcondition
+    @cppclass nEventCondition
+    @superclass nCondition
+    @classinfo
+      Transition condition triggered by an event.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Event
+    @format
+      i(Event type)  -- No info
+    @attrs
+    @info
+      Set the event that triggers this condition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EventByPersistentId
+    @format
+      s(Event type) -- No info
+    @attrs
+    @info
+      Set the event that triggers this condition by unmutable id
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FilterCondition
+    @format
+      o(Filter condition) -- No info
+    @attrs
+    @info
+      Set the optional filter condition (replaces the old one, but does NOT release it)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EventFilterCondition
+    @format
+      s(Event condition) -- Event condition name
+    @attrs
+    @info
+      Set an event condition as the filter condition, loading it if needed (used for peristence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ScriptFilterCondition
+    @format
+      s(Script condition) -- Script condition name
+    @attrs
+    @info
+      Set a script condition as the filter condition, loading it if needed (used for peristence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEvent
+    @cmdtype setter
+    @property Event
+    @info 
+      Set the event that triggers this condition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEventByPersistentId
+    @cmdtype setter
+    @property EventByPersistentId
+    @info 
+      Set the event that triggers this condition by unmutable id
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEvent
+    @cmdtype getter
+    @property Event
+    @info 
+      Get the event that triggers this condition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFilterCondition
+    @cmdtype setter
+    @property FilterCondition
+    @info 
+      Set the optional filter condition (replaces the old one, but does NOT release it)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFilterCondition
+    @cmdtype getter
+    @property FilterCondition
+    @info 
+      Get the optional filter condition, or NULL if there isn't any
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Evaluate
+    @output
+      b(Triggers) -- No info
+    @input
+      o(Entity) -- No info
+    @info 
+      Tell if the filter condition evaluates to true (always return true if there's no filter condition)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEventFilterCondition
+    @cmdtype setter
+    @property EventFilterCondition
+    @info 
+      Set an event condition as the filter condition, loading it if needed (used for peristence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetScriptFilterCondition
+    @cmdtype setter
+    @property ScriptFilterCondition
+    @info 
+      Set a script condition as the filter condition, loading it if needed (used for peristence)
+*/

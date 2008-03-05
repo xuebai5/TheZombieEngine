@@ -1,0 +1,23 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngpmovearound
+    @cppclass nGPMoveAround
+    @superclass nGPBasicAction
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Init
+    @output
+      b(unnamed) -- No info
+    @input
+      o(unnamed) -- No info
+      i(minNumSteps) -- No info
+      i(maxNumSteps) -- No info
+      f(stepSize) -- No info
+      f(speed) -- No info
+    @info 
+      Initial condition
+*/

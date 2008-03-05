@@ -1,0 +1,34 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nrenderpathnode
+    @cppclass nRenderPathNode
+    @superclass nSceneNode
+    @classinfo
+      Performs scene rendering for a render path.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RenderPathFilename
+    @format
+      s(RenderPathFilename) -- set filename of render path definition XML file
+    @attrs
+    @info
+      set filename of render path definition XML file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRenderPathFilename
+    @cmdtype setter
+    @property RenderPathFilename
+    @info 
+      set filename of render path definition XML file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRenderPathFilename
+    @cmdtype getter
+    @property RenderPathFilename
+    @info 
+      get the render path filename
+*/

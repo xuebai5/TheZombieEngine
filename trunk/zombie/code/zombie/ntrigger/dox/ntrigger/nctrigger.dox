@@ -1,0 +1,37 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Common
+    @cppclass ncTrigger
+    @superclass nEntityObject
+    @classinfo
+      Base interface for all trigger components.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EventFlag
+    @format
+      i(Index) -- No info
+      b(Enabled) -- No info
+    @attrs
+    @info
+      Set the value of an event flag
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEventFlag
+    @cmdtype setter
+    @property EventFlag
+    @info 
+      Set the value of an event flag
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventFlag
+    @output
+      b(Enabled) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get the value of an event flag
+*/

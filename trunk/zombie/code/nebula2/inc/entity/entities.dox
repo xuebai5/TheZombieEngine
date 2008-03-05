@@ -1,0 +1,163 @@
+/**
+
+    @defgroup NebulaEntitySystem Nebula Entity System
+    @ingroup Kernel
+
+    @brief The entity system for Nebula allows combining functionality from different systems (graphics, physics, etc.) into entities which can then be manipulated as a whole.
+
+    @section NESRequirements Requirements for the Nebula entity system
+
+    @subsection NESDesignerReqs From the designers:
+
+    - The simplest possible system to create new entity classes, based on functionality provided by programmers.
+    - A way to create entities from those classes.
+
+    Typical usage scenario:
+
+    @code
+    - Get Alien entity class.
+    - Modify its maximum HPs, change its weapon (another entity)
+    - Save it as Alien2 entity class.
+    - Start creating Alien2 entities and place them on the map.
+    @endcode
+
+    @subsection NESProgrammerReqs From the programmers:
+
+    - A way to relate different parts of the system (graphics, physics, etc.).
+    - Without using too much indirection.
+    - With pieces developed separately but knowing about each other.
+    - Reusing the existing code as much as possible.
+
+    Typical usage scenario:
+
+    @code
+    A biped has to contain and coordinate data from:
+    - physics,
+    - graphics,
+    - and animation.
+    @endcode
+
+    @section NESOverview Overview
+
+    The entity system is best explained using two different views on it:
+    - The high-level view describes the entities as seen by the designers and how they are created, manipulated, customized, etc. It is based on data and scripts.
+    - The low-level view describes how the system is implemented in C++ on top of Nebula2's object model.
+
+    @section NESHighLevel The high level view
+
+    From the designer's point of view, the system is based on these concepts:
+    - An <b>entity type</b> is a construct created by the programmers which represents a coherent combination of functionality completely integrated. It also describes the possibilities in customization it offers. For example, a @e Biped type which exposes a @e shape property can be used to build different biped with different shapes.
+    - An <b>entity class</b> is a customization of a type made by the designers by setting different properties. For example, from the @e Biped type different biped classes can be created, such as @e Alien, @e Soldier, etc.
+    - An @b entity is an instance of an entity class. For example, there can be thousands of different @e Alien instances in a level, each would have the same shape but a different position.
+
+    Thus, entity types provide the information from which both entity classes and entities are made.
+
+    @section NESImplementation The implementation view
+
+    Some concepts:
+    - A @b system is a distinct part of functionality, such as the scene system, physics, AI, etc.
+    - A @b component is, conceptually, information a system needs in an entity or an entity class to be able to use it and functionality the module wants to expose through the entity. For example, the visibility system needs to know the position of each entity and the physics system has to access the physical information of an entire class of entities. Components have two parts:
+        - The @b object part keeps the data that has to be different in each entity, such as its position, AI state, physics state, etc.
+        - The @b class part keeps the data that can be shared between different entities, as for example the shape, the physics body, the AI state machine, etc.
+    - Components are combined into <b>entity types</b> which have also have two parts (derived from the component's parts).
+
+    Each system is responsible for providing the different components which will be used to build entity types. These components are implemented as two classes:
+    - one for the class part which is derived from nComponentClass,
+    - and another for the object part derived from nComponentObject.
+
+    Then an entity type is created by combining
+    - a set of class components into a class derived from nEntityClass, and
+    - a set of object components into a class derived from nEntityObject.
+    nEntityObject is derived from nObject, thus entity instances can have script commands, signals, etc.
+    nEntityClass is more complicated as it derived from
+    - nClass as its instances are responsible for keeping the script command list for entity instances.
+    - nRoot as it is an object on the @ref NebulaObjectSystemNamedObjectHierarchy NOH for editing purpouses.
+
+    @subsection NESCxxClassDiagram C++ classes diagram
+    Here is an inheritance diagram describing the different @b C++ classes making up a @e Biped entity type:
+
+    @dot
+    digraph cppclasses {
+        node [shape=record, fontname=Helvetica, fontsize=10, height=0.2];
+        ncomponentobject [ label="nComponentObject" URL="\ref nComponentObject" ];
+        ncomponentclass [ label="nComponentClass" URL="\ref nComponentClass" ];
+        ncphysics [ label="ncPhysics" ];
+        ncgraphics [ label="ncGraphics" ];
+        nentityobject [ label="nEntityObject" URL="\ref nEntityObject" ];
+        nobject [ label="nObject" URL="\ref nObject" ];
+        nclass [ label="nClass" URL="\ref nClass" ];
+        nroot [ label="nRoot" URL="\ref nRoot" ];
+        nentityclass [ label="nEntityClass" URL="\ref nEntityClass" ];
+        ncphysicsclass [ label="ncPhysicsClass" ];
+        ncgraphicsclass [ label="ncGraphicsClass" ];
+        nebiped [ label="neBiped" ];
+        nebipedclass [ label="neBipedClass" ];
+
+        edge [color="midnightblue"];
+        ncomponentobject -> ncphysics  [ dir=back ];
+        ncomponentobject -> ncgraphics [ dir=back ];
+        nobject -> nentityobject -> nebiped [ dir=back ];
+        ncphysics -> nebiped [ dir=back ];
+        ncgraphics -> nebiped [ dir=back ];
+        nobject -> nroot -> nentityclass -> nebipedclass [dir=back];
+        nclass -> nentityclass [dir=back];
+        ncomponentclass -> ncphysicsclass [dir=back];
+        ncomponentclass -> ncgraphicsclass [dir=back];
+        ncphysicsclass -> nebipedclass [dir=back];
+        ncgraphicsclass -> nebipedclass [dir=back];
+    }
+    @enddot
+
+    @subsection NESnClassDiagram nClasses diagram
+    This other diagram shows the inheritance relation between the different nClasses implemented above. Keep in mind that all classes which inherit (in C++ terms) from nEntityClass have an nClass (as they can be scripted) and are also nClasses for the entity objects.
+    Also, it's important to notice that no entity instance is present in this diagram, as entity instances inherit from nEntityObject which is an nObject not an nClass.
+
+    @dot
+    digraph nclasses {
+        graph [rankdir="LR"];
+        node [shape=record, fontname=Helvetica, fontsize=10, height=0.2, fillcolor="yellow",style="filled"];
+        nclasses [label="nClass\ninstances"];
+        nobject [label="nobject",group="nclasses"];
+        nroot [label="nroot",group="nclasses"];
+        nobject -> nroot [dir=back];
+        nentityclass [label="nentityclass",group="nclasses"];
+        nroot -> nentityclass [dir=back];
+        nebipedclass [label="nebipedclass",group="nclasses"];
+        nentityclass -> nebipedclass [dir=back];
+        alienclass [label="alienclass",group="nclasses"];
+        nebipedclass -> alienclass [dir=back];
+        soldierclass [label="soldierclass",group="nclasses"];
+        nebipedclass -> soldierclass [dir=back];
+
+        nentityobject [label="nentityobject",group="nclasses"];
+        nobject -> nentityobject [dir=back];
+
+        node [shape=record, fontname=Helvetica, fontsize=10, height=0.2, fillcolor="orange",style="filled"];
+        nebipeds [label="nBipedClass\ninstances",group="nebipeds"];
+        nebiped [label="nebiped",group="nebipeds"];
+        nentityobject -> nebiped [dir=back];
+        alien [label="alien",group="nebipeds"];
+        nebiped -> alien [dir=back];
+        soldier [label="soldier",group="nebipeds"];
+        nebiped -> soldier [dir=back];
+
+        edge [fontname=Helvetica, fontsize=10];
+        nebiped -> nebipedclass [label="nClass* cl",style="dashed",color="darkorchid3"];
+        alien -> alienclass [label="nClass* cl",style="dashed",color="darkorchid3"];
+        soldier -> soldierclass [label="nClass* cl",style="dashed",color="darkorchid3"];
+    }
+    @enddot
+
+    @section NESCurrent The current implementation
+
+    The current implementation of the entity system composes components into entity types using C++ inheritance.
+
+    @section NESTutorial Tutorial
+
+    See @ref Nebula2TutorialsEntities
+
+    @section NESCredits Credits
+
+    This entity system has been developed based on proposals and ideas by Bruce Mitchener, Mateu Batle and Marc Ordinas i Llopis. Also, the implementation of entities is a generalization of the nSceneNode / nRenderContext solution used in the scene system.
+
+**/

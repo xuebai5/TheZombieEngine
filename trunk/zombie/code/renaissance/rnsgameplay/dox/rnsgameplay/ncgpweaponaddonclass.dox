@@ -1,0 +1,159 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGPWeaponAddonClass
+    @superclass ncGPWeaponCharsClass
+    @classinfo
+      Component Class that represent the gameplay of a weapon accesory.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Weapons
+    @format
+      i(Weapons;flags=melee:1,handguns:2,shotguns:4,submachine:8,assault:16,lightmachine:32,sniper:64,portable_heavy:128,mounted_heavy:256) -- Weapons that addon can be put on
+    @attrs
+    @info
+      Weapons that addon can be put on
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FullAnimation
+    @format
+      b(FullAnimation) -- Full Animation flag
+    @attrs
+    @info
+      Full Animation flag
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MountTime
+    @format
+      f(MountTime) -- Mount Time of the addon
+    @attrs
+    @info
+      Mount Time of the addon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DismountTime
+    @format
+      f(DismountTime) -- Dismount Time of the addon
+    @attrs
+    @info
+      Dismount Time of the addon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property OffsetFlag
+    @format
+      b(OffsetFlag) -- Offset Flag of addon
+    @attrs
+    @info
+      Offset Flag of addon, to indicate a offset in first person
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DownOffset
+    @format
+      b(DownOffset) -- Down Offset for ironsight
+    @attrs
+    @info
+      Down Offset for ironsight, to indicate a offset in first person
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWeapons
+    @cmdtype setter
+    @property Weapons
+    @info 
+      Set weapons that addon can be put on
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWeapons
+    @cmdtype getter
+    @property Weapons
+    @info 
+      Get weapons that addon can be put on
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFullAnimation
+    @cmdtype setter
+    @property FullAnimation
+    @info 
+      Set the animation type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFullAnimation
+    @cmdtype getter
+    @property FullAnimation
+    @info 
+      Get the animation type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMountTime
+    @cmdtype setter
+    @property MountTime
+    @info 
+      Set the mount time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMountTime
+    @cmdtype getter
+    @property MountTime
+    @info 
+      Get the mount time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDismountTime
+    @cmdtype setter
+    @property DismountTime
+    @info 
+      Set the dismount time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDismountTime
+    @cmdtype getter
+    @property DismountTime
+    @info 
+      Get the dismount time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetOffsetFlag
+    @cmdtype setter
+    @property OffsetFlag
+    @info 
+      Set the offset flag of addon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetOffsetFlag
+    @cmdtype getter
+    @property OffsetFlag
+    @info 
+      Get the offset flag of addon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDownOffset
+    @cmdtype setter
+    @property DownOffset
+    @info 
+      Set the down offset of addon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDownOffset
+    @cmdtype getter
+    @property DownOffset
+    @info 
+      Get the down offset of addon
+*/

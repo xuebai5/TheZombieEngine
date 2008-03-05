@@ -1,0 +1,52 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Common
+    @cppclass ncAreaEventClass
+    @superclass nComponentClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EmittedEvent
+    @format
+      i(EmittedEvent) -- No info
+    @attrs private=true
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd ClearAllEmittedEvent
+    @output
+      v
+    @input
+      v
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEmittedEvent
+    @cmdtype setter
+    @property EmittedEvent
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEmittedEvent
+    @cmdtype getter
+    @property EmittedEvent
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEmittedEventByPersistendId
+    @cmdtype setter
+    @property EmittedEventByPersistendId
+    @info 
+      No information
+*/

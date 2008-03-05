@@ -1,0 +1,49 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ninputserver
+    @cppclass nInputServer
+    @superclass nRoot
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd StartLogToFile
+    @output
+      v
+    @input
+      s(filename) -- file where save the events
+    @info 
+      log the input to a file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd StartLogFromFile
+    @output
+      v
+    @input
+      s(filename) -- file with the events to load
+    @info 
+      load input from a file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd StopLogFile
+    @output
+      v
+    @input
+      v
+    @info 
+      stop log to/from file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsLogFileRunning
+    @output
+      b(unnamed) -- true if is log to/from file
+    @input
+      v
+    @info 
+      say if log file is running
+*/

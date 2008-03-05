@@ -1,0 +1,59 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGameplayVehicleClass
+    @superclass ncGameplayClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxHealth
+    @format
+      i(MaxHealth) -- No info
+    @attrs
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Seat
+    @format
+      s(Seat)   -- No info
+    @attrs private=true
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxHealth
+    @cmdtype setter
+    @property MaxHealth
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxHealth
+    @cmdtype getter
+    @property MaxHealth
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSeat
+    @cmdtype setter
+    @property Seat
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSeat
+    @cmdtype getter
+    @property Seat
+    @info 
+      No information
+*/

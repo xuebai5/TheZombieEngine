@@ -1,0 +1,59 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGPGrenadeClass
+    @superclass ncGameplayClass
+    @classinfo
+      Component Class that represent a Grenade gameplay.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LaunchPower
+    @format
+      f(LaunchPower;min=0;max=500000;step=10;editor=slider) -- Launch power of the grenade
+    @attrs
+    @info
+      Launch power of the grenade
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxLifeTime
+    @format
+      f(MaxLifeTime;min=0;max=50;step=1;editor=slider) -- Maximum life time of the rockets
+    @attrs
+    @info
+      Maximum life time of the rockets
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLaunchPower
+    @cmdtype setter
+    @property LaunchPower
+    @info 
+      set the launch power of the grenade
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLaunchPower
+    @cmdtype getter
+    @property LaunchPower
+    @info 
+      get the launch power of the grenade
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxLifeTime
+    @cmdtype setter
+    @property MaxLifeTime
+    @info 
+      set the maximum life time of the rockets
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxLifeTime
+    @cmdtype getter
+    @property MaxLifeTime
+    @info 
+      get the maximum life time of the rockets
+*/

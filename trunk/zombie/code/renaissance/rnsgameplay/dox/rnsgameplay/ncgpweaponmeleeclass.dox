@@ -1,0 +1,59 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGPWeaponMeleeClass
+    @superclass nEntityClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DamageMelee
+    @format
+      f(DamageMelee;min=0;max=500;step=1;editor=slider) -- Damage melee of the weapon
+    @attrs
+    @info
+      Damage melee of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MeleeDamageType
+    @format
+      i(MeleeDamageType;enums=melee:1,bullet:2,psionic:4,splash:8,enviroment:16,gas:32,vacumm:64,stun:128,falling:256) -- Melee Damage type of the weapon
+    @attrs
+    @info
+      Melee Damage type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDamageMelee
+    @cmdtype setter
+    @property DamageMelee
+    @info 
+      set the damage melee of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDamageMelee
+    @cmdtype getter
+    @property DamageMelee
+    @info 
+      get the damage melee of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMeleeDamageType
+    @cmdtype setter
+    @property MeleeDamageType
+    @info 
+      set the Melee Damage type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMeleeDamageType
+    @cmdtype getter
+    @property MeleeDamageType
+    @info 
+      get the Melee Damage type of the weapon
+*/

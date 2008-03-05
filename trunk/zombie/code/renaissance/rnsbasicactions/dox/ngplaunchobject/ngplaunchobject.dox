@@ -1,0 +1,20 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngplaunchobject
+    @cppclass nGPLaunchObject
+    @superclass nGPBasicAction
+    @classinfo
+      Basic action to launch an object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Init
+    @output
+      b(unnamed) -- true if the action can be done
+    @input
+      o(entity) -- entity that launch the object
+      s(objectName) -- name of class for the object
+    @info 
+      initial condition
+*/

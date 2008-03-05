@@ -1,0 +1,173 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Character Class
+    @cppclass ncCharacterClass
+    @superclass nComponentClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SkeletonClass
+    @format
+      s(SkeletonClass) -- No info
+    @attrs
+    @info
+      set skeleton class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SkeletonLevelClass
+    @format
+      i(SkeletonLevelClass) -- No info
+      s(SkeletonLevelClass) -- No info
+    @attrs
+    @info
+      set skeleton lod class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property PhysicsSkeletonClass
+    @format
+      s(PhysicsSkeletonClass) -- No info
+    @attrs
+    @info
+      set skeleton lod class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RagdollSkeletonClass
+    @format
+      s(RagdollSkeletonClass) -- No info
+    @attrs
+    @info
+      set ragdoll skeleton class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FirstPersonLevel
+    @format
+      i(FirstPersonLevel) -- No info
+    @attrs
+    @info
+      set first person class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ActivityDistance
+    @format
+      f(ActivityDistance) -- Max distance of animation
+    @attrs
+    @info
+      max distance of physics animation
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSkeletonClass
+    @cmdtype setter
+    @property SkeletonClass
+    @info 
+      set skeleton class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSkeletonClass
+    @cmdtype getter
+    @property SkeletonClass
+    @info 
+      get skeleton class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSkeletonLevelClass
+    @cmdtype setter
+    @property SkeletonLevelClass
+    @info 
+      set skeleton lod class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSkeletonLevelClass
+    @output
+      s(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get skeleton lod class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPhysicsSkeletonClass
+    @cmdtype setter
+    @property PhysicsSkeletonClass
+    @info 
+      set skeleton lod class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPhysicsSkeletonClass
+    @cmdtype getter
+    @property PhysicsSkeletonClass
+    @info 
+      get skeleton lod class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumberLevelSkeletons
+    @cmdtype getter
+    @property NumberLevelSkeletons
+    @info 
+      get number lod levels
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRagdollSkeletonClass
+    @cmdtype setter
+    @property RagdollSkeletonClass
+    @info 
+      set ragdoll skeleton class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRagdollSkeletonClass
+    @output
+      b(unnamed) -- No info
+    @input
+      s(unnamed) -- No info
+    @info 
+      get ragdoll skeleton class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFirstPersonLevel
+    @cmdtype setter
+    @property FirstPersonLevel
+    @info 
+      set first person class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFirstPersonLevel
+    @cmdtype getter
+    @property FirstPersonLevel
+    @info 
+      get first person class
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetActivityDistance
+    @cmdtype setter
+    @property ActivityDistance
+    @info 
+      set max distance for physics animation
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetActivityDistance
+    @cmdtype getter
+    @property ActivityDistance
+    @info 
+      get max distance for physics animation
+*/

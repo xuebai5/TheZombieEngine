@@ -1,0 +1,63 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ndebugserver
+    @cppclass nDebugServer
+    @superclass nroot
+    @classinfo
+      A central manager of debug options.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumOptions
+    @output
+      i(unnamed) -- number of options
+    @input
+      s(modulename) -- Name of the module
+    @info 
+      get number of debug options for named module
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetOptionAt
+    @output
+      s(unnamed) -- the option name
+    @input
+      s(modulename) -- Name of the module
+      i(index) -- option index
+    @info 
+      get option by index for named module
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetOptionEnabled
+    @output
+      v
+    @input
+      s(modulename) -- Name of the module
+      s(optionname) -- the name of the option
+      b(enabled) -- new option value
+    @info 
+      set option enabled for named module
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetOptionEnabled
+    @output
+      b(unnamed) -- the option value
+    @input
+      s(modulename) -- Name of the module
+      s(optionname) -- the name of the option
+    @info 
+      get option enabled for named module
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetOptionDescription
+    @output
+      s(unnamed) -- option description
+    @input
+      s(optionname) -- the name of the option
+    @info 
+      get option description for named module
+*/

@@ -1,0 +1,127 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Spatial
+    @cppclass ncSpatialOccluder
+    @superclass ncSpatial
+    @classinfo
+      Represents an occluder
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DoubleSided
+    @format
+      b(DoubleSided) -- Says if the occluder is double sided or not
+    @attrs
+    @info
+      Says if the occluder is double sided or not
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinDist
+    @format
+      f(MinDist) -- Minimum active distance for the occluder
+    @attrs
+    @info
+      Minimum active distance for the occluder
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxDist
+    @format
+      f(MaxDist) -- Maximum active distance for the occluder
+    @attrs
+    @info
+      Maximum active distance for the occluder
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Fly
+    @format
+      b(Fly) -- Says if the occluder is flying or not
+    @attrs
+    @info
+      Says if the occluder is flying or not
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetVertex
+    @cmdtype setter
+    @property Vertex
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDoubleSided
+    @cmdtype setter
+    @property DoubleSided
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDoubleSided
+    @cmdtype getter
+    @property DoubleSided
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd ChangeActiveSide
+    @output
+      v
+    @input
+      v
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinDist
+    @cmdtype setter
+    @property MinDist
+    @info 
+      Set the minimum active distance
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxDist
+    @cmdtype setter
+    @property MaxDist
+    @info 
+      Set the maximum active distance
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinDist
+    @cmdtype getter
+    @property MinDist
+    @info 
+      Get the minimum active distance
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxDist
+    @cmdtype getter
+    @property MaxDist
+    @info 
+      Get the maximum active distance
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFly
+    @cmdtype setter
+    @property Fly
+    @info 
+      Set the occluder as flying or not
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFly
+    @cmdtype getter
+    @property Fly
+    @info 
+      Says if the occluder is a flying one or not
+*/

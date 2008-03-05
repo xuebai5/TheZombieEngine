@@ -1,0 +1,35 @@
+#===============================================================================
+#  nnebula.bld
+#  The default Nebula2 distribution nnebula.lib library
+#
+#  Targets:
+#      nnebula
+#===============================================================================
+
+#===============================================================================
+#  nnebula Targets
+#===============================================================================
+begintarget nnebula
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        nbinscriptserver
+        nnpkfileserver nmemfile nsharedmemory nramfileserver nrlefile nvariableserver 
+        ninputserver nresourceloader nresourceserver nresource nresourcebundle
+        nmesh2 ntexture2 nsurface nfont2 nshader2 ngfxserver2
+        naudioserver3 nsound3 nlistener3 nsoundresource
+        nanimation nmemoryanimation nconserver
+        nparticle nparticleserver nparticleemitter
+        nparticle2 nparticleserver2 nparticle2emitter
+        nwindowhandler nwin32windowhandler
+        nmousecursor nmesharray ninstancestream nocclusionquery
+        nprefserver nwin32prefserver ncaptureserver nobjectarray
+        nlocaleserver
+        nmeshdeformer nskinmeshdeformer nblendshapedeformer
+    }
+    setbundles {
+        nshadow2
+        nvideo
+    }
+endtarget

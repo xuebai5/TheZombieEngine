@@ -1,0 +1,37 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Area Density
+    @cppclass ncPhyAreaDensity
+    @superclass ncPhySimpleObj
+    @classinfo
+      A base class to treat an area with a different density.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Resistance
+    @format
+    @attrs
+    @info
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetResistance
+    @cmdtype setter
+    @property Resistance
+    @info 
+      sets the resistance value of the fluid
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetResistance
+    @cmdtype getter
+    @property Resistance
+    @info 
+      gets the resistance value of the fluid
+*/
+
+//--------------------------------------------------------------------------------

@@ -1,0 +1,333 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Graphics Light
+    @cppclass ncSceneLight
+    @superclass ncScene
+    @classinfo
+      Graphic light object.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LightStatic
+    @format
+      b(LightStatic) -- light static
+    @attrs
+    @info
+      Light affects static (lightmapped) geometry
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLightStatic
+    @cmdtype setter
+    @property LightStatic
+    @info 
+      Set if the light affects static (lightmapped) geometry
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLightStatic
+    @cmdtype getter
+    @property LightStatic
+    @info 
+      Get if the light affects static (lightmapped) geometry
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LightDynamic
+    @format
+      b(LightDynamic) -- light dynamic
+    @attrs
+    @info
+      Light affects dynamic (non-lightmapped) geometry
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLightDynamic
+    @cmdtype setter
+    @property LightDynamic
+    @info 
+      Set if the light affects dynamic (non-lightmapped) geometry
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLightDynamic
+    @cmdtype getter
+    @property LightDynamic
+    @info 
+      Get if the light affects dynamic (non-lightmapped) geometry
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LightAmbient
+    @format
+      fff(AmbientColor;editor=color) -- light ambient color
+    @attrs subgroup=light
+    @info
+      Light ambient color.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLightAmbient
+    @cmdtype setter
+    @property LightAmbient
+    @info 
+      set light ambient color.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLightAmbient
+    @cmdtype getter
+    @property LightAmbient
+    @info 
+      get light ambient color.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LightDiffuse
+    @format
+      fff(DiffuseColor;editor=color) -- light diffuse color
+    @attrs subgroup=light
+    @info
+      Light diffuse color.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LightMapAmbientFactor
+    @format
+      f(LightMapAmbientFactor;min=0;max=2;step=0.01;editor=slider) -- the ambient factor for object with lightmap and static light
+    @attrs
+    @info
+      the ambient factor for object with lightmap and static light
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LightMapDiffuseFactor
+    @format
+      f(LightMapDiffuseFactor;min=0;max=2;step=0.01;editor=slider) -- the diffuse factor for object with lightmap and static light
+    @attrs
+    @info
+      the diffuse factor for object with lightmap and static light
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property TerrainAmbientFactor
+    @format
+      f(TerrainAmbientFactor;min=0;max=2;step=0.01;editor=slider) -- the ambient factor for terrain and grass
+    @attrs
+    @info
+      the ambient factor for terrain and grass
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @property TerrainDiffuseFactor
+    @format
+      f(TerrainDiffuseFactor;min=0;max=2;step=0.01;editor=slider) -- the diffuse factor for terrain and grass
+    @attrs
+    @info
+      the diffuse factor for terrain and grass
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTerrainDiffuseFactor
+    @cmdtype setter
+    @property TerrainDiffuseFactor
+    @info 
+      the diffuse factor for terrain and grass
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTerrainDiffuseFactor
+    @cmdtype getter
+    @property TerrainDiffuseFactor
+    @info 
+      the diffuse factor for terrain and grass.
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTerrainAmbientFactor
+    @cmdtype setter
+    @property TerrainAmbientFactor
+    @info 
+      the ambient factor for terrain and grass
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTerrainAmbientFactor
+    @cmdtype getter
+    @property TerrainAmbientFactor
+    @info 
+      the ambient factor for terrain and grass.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLightMapDiffuseFactor
+    @cmdtype setter
+    @property LightMapDiffuseFactor
+    @info 
+      set diffuse factor for object with lightmap and static light.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLightMapDiffuseFactor
+    @cmdtype getter
+    @property LightMapDiffuseFactor
+    @info 
+      get diffuse factor for object with lightmap and static light.
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLightMapAmbientFactor
+    @cmdtype setter
+    @property LightMapAmbientFactor
+    @info 
+      set ambient factor for object with lightmap and static light.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLightMapAmbientFactor
+    @cmdtype getter
+    @property LightMapAmbientFactor
+    @info 
+      get ambient factor for object with lightmap and static light.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLightDiffuse
+    @cmdtype setter
+    @property LightDiffuse
+    @info 
+      set light diffuse color.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLightDiffuse
+    @cmdtype getter
+    @property LightDiffuse
+    @info 
+      get light diffuse color.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LightSpecular
+    @format
+      fff(SpecularColor;editor=color) -- light specular color
+    @attrs subgroup=light
+    @info
+      Light specular color.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLightSpecular
+    @cmdtype setter
+    @property LightSpecular
+    @info 
+      set light specular color.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLightSpecular
+    @cmdtype getter
+    @property LightSpecular
+    @info 
+      get light specular color.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property FogColor
+    @format
+      fff(FogColor;editor=color) -- fog color
+    @attrs subgroup=fog
+    @info
+      Fog color.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFogColor
+    @cmdtype setter
+    @property FogColor
+    @info 
+      set fog color.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFogColor
+    @cmdtype getter
+    @property FogColor
+    @info 
+      get fog color.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property PointLightRadius
+    @format
+      f(innerRadius) -- inner radius
+      f(outerRadius) -- outer radius
+    @attrs subgroup=light
+    @info
+      Inner/outer radius for point lights.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPointLightRadius
+    @cmdtype setter
+    @property PointLightRadius
+    @info 
+      set point light inner/outer radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPointLightRadius
+    @cmdtype getter
+    @property PointLightRadius
+    @info 
+      get point light inner/outer radius
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ConeLightAngles
+    @format
+      f(innerAngle) -- inner angle (in degrees)
+      f(outerAngle) -- outer angle (in degrees)
+    @attrs subgroup=light
+    @info
+      Inner/outer angles for cone lights.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetConeLightAngles
+    @cmdtype setter
+    @property ConeLightAngles
+    @info 
+      set cone light inner/outer angles
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetConeLightAngles
+    @cmdtype getter
+    @property ConeLightAngles
+    @info 
+      get cone light inner/outer angles
+*/

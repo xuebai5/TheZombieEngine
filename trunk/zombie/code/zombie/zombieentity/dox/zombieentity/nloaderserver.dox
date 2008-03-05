@@ -1,0 +1,109 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nloaderserver
+    @cppclass nLoaderServer
+    @superclass nRoot
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LoadSpaces
+    @format
+      b(LoadSpaces) -- No info
+    @attrs
+    @info
+      set load entities in spaces
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LoadBatches
+    @format
+      b(LoadBatches) -- No info
+    @attrs
+    @info
+      set load entities in batches
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LoadResources
+    @format
+      b(LoadResources) -- No info
+    @attrs
+    @info
+      set load entity resources enabled
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property UnloadClassResources
+    @format
+      b(UnloadClassResources) -- No info
+    @attrs
+    @info
+      set unload unused class resources
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLoadSpaces
+    @cmdtype setter
+    @property LoadSpaces
+    @info 
+      set load entities in spaces
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLoadSpaces
+    @cmdtype getter
+    @property LoadSpaces
+    @info 
+      get load entities in spaces
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLoadBatches
+    @cmdtype setter
+    @property LoadBatches
+    @info 
+      set load entities in batches
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLoadBatches
+    @cmdtype getter
+    @property LoadBatches
+    @info 
+      get load entities in batches
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLoadResources
+    @cmdtype setter
+    @property LoadResources
+    @info 
+      set load entity resources enabled
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLoadResources
+    @cmdtype getter
+    @property LoadResources
+    @info 
+      get load entity resources enabled
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetUnloadClassResources
+    @cmdtype setter
+    @property UnloadClassResources
+    @info 
+      set unload unused class resources
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetUnloadClassResources
+    @cmdtype getter
+    @property UnloadClassResources
+    @info 
+      get unload unused class resources
+*/

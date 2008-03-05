@@ -1,0 +1,527 @@
+#===============================================================================
+#   nscene.bld
+#   Improved nebula2 scene modules
+#
+#   Modules:
+#      ncscene
+#      ncsceneclass
+#      ncscenelod
+#      ncscenelodclass
+#      ncsceneindexed
+#      ncsceneragdoll
+#      ncsceneragdollclass
+#      ncscenelight
+#      ncscenelightclass
+#      ncscenebatch
+#      ncviewport
+#      nsceneserver
+#      nscenegraph
+#      nsceneshader
+#      nshadertree
+#      nscenenode
+#      nstdsceneserver
+#      ntransformnode
+#      nviewportnode
+#      nabstractcameranode
+#      ncameranode
+#      nclippingcameranode
+#      nreflectioncameranode
+#      nrenderpath
+#      nabstractshadernode
+#      nsurfacenode
+#      nswingsurfacenode
+#      nlightnode
+#      nspotlightnode
+#      ngeometrynode
+#      nshapenode
+#      nparticleshapenode
+#      nparticleshapenode2
+#      nsubdivshapenode
+#      nblendshapenode
+#      nshadownode
+#      nattachmentnode
+#      nanimator
+#      nshaderanimator
+#      nvectoranimator
+#      ntransformanimator
+#      ntextureanimator
+#      ntexturekeyanimator
+#      nfloatanimator
+#      ntransformcurveanimator
+#      nuvanimator
+#      nblendshapeanimator
+#      nintanimator
+#      nlodnode
+#      nswitchnode
+#      nskingeometrynode
+#      nskingeometryanimator
+#      nskinragdollanimator
+#      ncharacteranimator
+#      nscenesurfacedependencyserver
+#      nanimatordependencyserver
+#      ninstshapenode
+#      nimpostornode
+#      nstaticbatchnode
+#      nbatchmeshloader
+#      nstreamgeometrynode
+#      nlensflarenode
+#      nvideoanimator
+#===============================================================================
+
+#===============================================================================
+#  scene components
+#===============================================================================
+beginmodule ncscene
+    setdir nscene
+    setfiles { ncscene_main ncscene_cmds ncscene_plugs }
+    setheaders { ncscene }
+endmodule
+#===============================================================================
+beginmodule ncsceneclass
+    setdir nscene
+    setfiles { ncsceneclass }
+    setheaders { ncsceneclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncsceneindexed
+    setdir nscene
+    setfiles { ncsceneindexed_main ncsceneindexed_cmds }
+    setheaders { ncsceneindexed }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenelod
+    setdir nscene
+    setfiles { ncscenelod_main }
+    setheaders { ncscenelod }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenelodclass
+    setdir nscene
+    setfiles { ncscenelodclass }
+    setheaders { ncscenelodclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncviewport
+    setdir nscene
+    setfiles { ncviewport_main ncviewport_cmds }
+    setheaders { ncviewport }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenelight
+    setdir nscene
+    setfiles { ncscenelight_main }
+    setheaders { ncscenelight }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenelightclass
+    setdir nscene
+    setfiles { ncscenelightclass_main }
+    setheaders { ncscenelightclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncsceneragdoll
+    setdir nscene
+    setfiles { ncsceneragdoll_main }
+    setheaders { ncsceneragdoll }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncsceneragdollclass
+    setdir nscene
+    setfiles { ncsceneragdollclass }
+    setheaders { ncsceneragdollclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenebatch
+    setdir nscene
+    setfiles { ncscenebatch_main }
+    setheaders { ncscenebatch }
+endmodule
+
+#===============================================================================
+#  scene modules
+#===============================================================================
+beginmodule nsceneserver
+    setdir nscene
+    setfiles { nsceneserver_main nsceneserver_shader nsceneserver_cmds }
+    setheaders { nsceneserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nscenegraph
+    setdir nscene
+    setfiles { nscenegraph_main }
+    setheaders { nscenegraph }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nstdsceneserver
+    setdir nscene
+    setfiles { nstdsceneserver_main }
+    setheaders { nstdsceneserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nsceneshader
+    setdir nscene
+    setfiles { nsceneshader }
+    setheaders { nsceneshader }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nshadertree
+    setdir nscene
+    setfiles { nshadertree_main nshadertree_cmds }
+    setheaders { nshadertree }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nscenenode
+    setdir nscene
+    setfiles { nscenenode_main nscenenode_cmds }
+    setheaders { nscenenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntransformnode
+    setdir nscene
+    setfiles { ntransformnode_main ntransformnode_cmds }
+    setheaders { ntransformnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nviewportnode
+    setdir nscene
+    setfiles { nviewportnode_main nviewportnode_cmds }
+    setheaders { nviewportnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nrenderpathnode
+    setdir nscene
+    setfiles { nrenderpathnode_main nrenderpathnode_cmds nrenderpathnode_stats }
+    setheaders { nrenderpathnode nshapebucket }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nabstractshadernode
+    setdir nscene
+    setfiles { nabstractshadernode_main nabstractshadernode_cmds }
+    setheaders { nabstractshadernode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nsurfacenode
+    setdir nscene
+    setfiles { nsurfacenode_main nsurfacenode_cmds }
+    setheaders { nsurfacenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nswingsurfacenode
+    setdir nscene
+    setfiles { nswingsurfacenode_main nswingsurfacenode_cmds }
+    setheaders { nswingsurfacenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nlightnode
+    setdir nscene
+    setfiles { nlightnode_main nlightnode_cmds }
+    setheaders { nlightnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nspotlightnode
+    setdir nscene
+    setfiles { nspotlightnode_main nspotlightnode_cmds }
+    setheaders { nspotlightnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ngeometrynode
+    setdir nscene
+    setfiles { ngeometrynode_main ngeometrynode_cmds }
+    setheaders { ngeometrynode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nshapenode
+    setdir nscene
+    setfiles { nshapenode_main nshapenode_cmds }
+    setheaders { nshapenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nsubdivshapenode
+    setdir nscene
+    setfiles { nsubdivshapenode_main nsubdivshapenode_cmds }
+    setheaders { nsubdivshapenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nblendshapenode
+    setdir nscene
+    setfiles { nblendshapenode_main nblendshapenode_cmds }
+    setheaders { nblendshapenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nattachmentnode
+    setdir nscene
+    setfiles { nattachmentnode_main nattachmentnode_cmds }
+    setheaders { nattachmentnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nanimator
+    setdir nscene
+    setfiles { nanimator_main nanimator_cmds }
+    setheaders { nanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nshaderanimator
+    setdir nscene
+    setfiles { nshaderanimator_main nshaderanimator_cmds }
+    setheaders { nshaderanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nvectoranimator
+    setdir nscene
+    setfiles { nvectoranimator_main nvectoranimator_cmds }
+    setheaders { nvectoranimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntransformanimator
+    setdir nscene
+    setfiles { ntransformanimator_main ntransformanimator_cmds }
+    setheaders { ntransformanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntextureanimator
+    setdir nscene
+    setfiles { ntextureanimator_main ntextureanimator_cmds }
+    setheaders { ntextureanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntexturekeyanimator
+    setdir nscene
+    setfiles { ntexturekeyanimator_main ntexturekeyanimator_cmds }
+    setheaders { ntexturekeyanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntextureswitchanimator
+    setdir nscene
+    setfiles { ntextureswitchanimator_main }
+    setheaders { ntextureswitchanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntransformoverrideanimator
+    setdir nscene
+    setfiles { ntransformoverrideanimator_main ntransformoverrideanimator_cmds }
+    setheaders { ntransformoverrideanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntransformswitchanimator
+    setdir nscene
+    setfiles { ntransformswitchanimator_main ntransformswitchanimator_cmds }
+    setheaders { ntransformswitchanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nskinanimator
+    setdir nscene
+    setfiles { nskinanimator_main nskinanimator_cmds }
+    setheaders nskinanimator
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntransformcurveanimator
+    setdir nscene
+    setfiles { ntransformcurveanimator_main ntransformcurveanimator_cmds }
+    setheaders ntransformcurveanimator
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nuvanimator
+    setdir nscene
+    setfiles { nuvanimator_main nuvanimator_cmds }
+    setheaders nuvanimator
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nblendshapeanimator
+    setdir nscene
+    setfiles { nblendshapeanimator_main nblendshapeanimator_cmds }
+    setheaders { nblendshapeanimator nblendstate nblendstatearray nblendtargetkey nblendtargetkeyarray}
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nshapedeformeranimator
+    setdir nscene
+    setfiles { nshapedeformeranimator_main nshapedeformeranimator_cmds }
+    setheaders { nshapedeformeranimator}
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nintanimator
+    setdir nscene
+    setfiles { nintanimator_main nintanimator_cmds }
+    setheaders { nintanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nfloatanimator
+    setdir nscene
+    setfiles { nfloatanimator_main nfloatanimator_cmds }
+    setheaders nfloatanimator
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nvideoanimator
+    setdir nscene
+    setfiles { nvideoanimator_main nvideoanimator_cmds }
+    setheaders { nvideoanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nlodnode
+    setdir nscene
+    setfiles { nlodnode_main nlodnode_cmds }
+    setheaders { nlodnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nswitchnode
+    setdir nscene
+    setfiles { nswitchnode_main nswitchnode_cmds }
+    setheaders { nswitchnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nparticleshapenode
+    setdir nscene
+    setfiles { nparticleshapenode_main nparticleshapenode_cmds }
+    setheaders { nparticleshapenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nparticleshapenode2
+    setdir nscene
+    setfiles { nparticleshapenode2_main nparticleshapenode2_cmds }
+    setheaders { nparticleshapenode2 }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ninstshapenode
+    setdir nscene
+    setfiles { ninstshapenode_main ninstshapenode_cmds }
+    setheaders { ninstshapenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nimpostornode
+    setdir nscene
+    setfiles { nimpostornode_main nimpostornode_cmds }
+    setheaders { nimpostornode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nstaticbatchnode
+    setdir nscene
+    setfiles { nstaticbatchnode_main nstaticbatchnode_cmds }
+    setheaders { nstaticbatchnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nskingeometrynode
+    setdir nscene
+    setfiles      { nskingeometrynode_main nskingeometrynode_cmds }
+    setheaders    { nskingeometrynode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nskingeometryanimator
+    setdir nscene
+    setfiles      { nskingeometryanimator_main nskingeometryanimator_cmds }
+    setheaders    { nskingeometryanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nskinragdollanimator
+    setdir nscene
+    setfiles      { nskinragdollanimator_main nskinragdollanimator_cmds }
+    setheaders    { nskinragdollanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncharacteranimator
+    setdir nscene
+    setfiles      { ncharacteranimator nragdollcharanimator }
+    setheaders    { ncharacteranimator nragdollcharanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nscenesurfacedependencyserver
+    setdir nscene
+    setfiles { nscenesurfacedependencyserver_main }
+    setheaders { nscenesurfacedependencyserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nanimatordependencyserver
+    setdir nscene
+    setfiles { nanimatordependencyserver_main }
+    setheaders { nanimatordependencyserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nbatchmeshloader
+    setdir nscene
+    setfiles { nbatchmeshloader_main }
+    setheaders { nbatchmeshloader }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nstreamgeometrynode
+    setdir nscene
+    setfiles { nstreamgeometrynode_main nstreamgeometrynode_cmds }
+    setheaders { nstreamgeometrynode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nlensflarenode
+    setdir nscene
+    setfiles { nlensflarenode_main nlensflarenode_cmds }
+    setheaders { nlensflarenode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nabstractcameranode
+    setdir nscene
+    setfiles { nabstractcameranode_main nabstractcameranode_cmds }
+    setheaders { nabstractcameranode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncameranode
+    setdir nscene
+    setfiles { ncameranode_main }
+    setheaders { ncameranode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nclippingcameranode
+    setdir nscene
+    setfiles { nclippingcameranode_main }
+    setheaders { nclippingcameranode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nreflectioncameranode
+    setdir nscene
+    setfiles { nreflectioncameranode_main }
+    setheaders { nreflectioncameranode }
+endmodule
+
+#===============================================================================
+#  nrenderpath Modules
+#===============================================================================
+beginmodule nrenderpath
+    setdir nrenderpath
+    setfiles {
+        nrenderpath2 nrppass nrpphase nrpsequence nrprendertarget nrpxmlparser
+        nrpshader
+    }
+    setheaders {
+        nrenderpath2 nrppass nrpphase nrpsequence nrprendertarget nrpxmlparser
+        nrpshader
+    }
+endmodule
+#===============================================================================
+#  nscene Targets
+#===============================================================================
+begintarget nscene
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        ncscene ncsceneclass 
+        ncsceneindexed 
+        ncscenelod ncscenelodclass
+        ncsceneragdoll ncsceneragdollclass
+        ncviewport 
+        ncscenelight ncscenelightclass
+        ncscenebatch
+        nsceneserver nscenegraph nstdsceneserver nsceneshader nshadertree
+        nscenenode ntransformnode
+        nrenderpathnode nviewportnode nabstractcameranode
+        ncameranode nclippingcameranode nreflectioncameranode
+        nabstractshadernode
+        nsurfacenode nswingsurfacenode nlightnode nspotlightnode
+        ngeometrynode nshapenode nparticleshapenode nparticleshapenode2
+        ninstshapenode nimpostornode nstaticbatchnode
+        nsubdivshapenode nblendshapenode nattachmentnode
+        nanimator nshaderanimator nvectoranimator ntransformanimator
+        ntextureanimator ntransformcurveanimator nuvanimator ntexturekeyanimator
+        nblendshapeanimator nshapedeformeranimator nintanimator nfloatanimator 
+        nlodnode nswitchnode ntextureswitchanimator nvideoanimator
+        ntransformoverrideanimator ntransformswitchanimator
+        nskingeometrynode nskingeometryanimator
+        nskinragdollanimator ncharacteranimator
+        nscenesurfacedependencyserver nanimatordependencyserver
+        nrenderpath nlensflarenode nbatchmeshloader nstreamgeometrynode
+    }
+endtarget

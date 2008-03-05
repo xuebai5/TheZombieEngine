@@ -1,0 +1,19 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngeomipmapnode
+    @cppclass nGeoMipMapNode
+    @superclass nGeometryNode
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd UpdateMaterials
+    @output
+      v
+    @input
+      v
+    @info 
+      update all material info
+*/

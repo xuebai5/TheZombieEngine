@@ -1,0 +1,69 @@
+/**
+    @defgroup NCSound Game Sound Layer
+    @ingroup NebulaTragnarionModules
+    
+    This module lays as an interface between the entity system and the audio server,
+    for positional audio. The @ref ncSoundScheduler is the central class. It acts as
+    a server, with a call to its Trigger method inside the BeginScene and EndScene of
+    the audio server.
+    
+    The sound library is the list of sound files and its properties.
+    
+    The @ref ncSound component together with the @ref ncSoundClass class component makes
+    an entity instance capable of playing sounds. Before doing that the class component
+    must be set a ncSoundEventTable, wich contains the sounds the entity class will play.
+    @ref ncSound is updated with the new position when the entity is moved. The current
+    ncSound component keeps tracking of the position of one sound, but more of them could
+    be done for entities wich will need playing more sounds simulaneously and track its
+    position.
+    
+    The methods Playxx and Stop in @ref ncSound can be used directly to play a sound.
+    A string that identifies the sound event must be passed to the Play method. If it is
+    a sound event that depends on a material, also its string identifier should be passed.
+    
+    @section The sound library and the sound events tables
+    
+    It's a list in wich each row describes a sound. Each sound is identified by a unique
+    string. Also, consecutive rows with the same sound id gives sound variations wich
+    are played randomly. For more info see the methods AddSound, SetSoundParams and
+    SetSoundTimeParams on @ref ncSoundLibrary.
+
+    The sound events table (@ref ncSoundEventTable) maps from event name to sound name, or
+    from event + material names to sound name, and belongs to an entity class. It is used
+    simply as a table for mapping sound names to the sound library and sound scheduler.
+    
+    @section The sound scheduler
+    
+    As stated before this class keeps track of what sounds are being played. In the Trigger method
+    sounds queued for playing are tested to begin playback in the audio server, as well as
+    sounds that need to be stopped. The fields beginTime and endTime stored in  @ref ncSound are
+    used to know when to start or stop a sound.
+    
+    
+    @section Modifications to nebula audio server
+    
+    The main difference of use for the audio server from what its nebula doc says, is that we use
+    only one nSound3 for a sound in the whole appliaction, when it says that one nSound3 must not be
+    shared by object instances.
+    Some functions were added to the audio server interface in order to implement this audio layer,
+    the are listed below.
+    
+    - @ref nAudio3::GetDuration()
+    Returns the duration of the sound in seconds.
+    
+    - @ref nAudio3::GetLastBufferUsed()
+    Returns the buffer used by the last call to Start() in the
+    same nSound3 instance.
+    
+    - @ref nAudio3::Update3DProperties( int index )
+    Sets the 3d properties (mainly position) to the audio buffer passed by parameter.
+    
+    - @ref nAudio3::Stop( int index )
+    Stop the audio buffer passed by parameter, for this sound
+    
+    These changes makes it possible to use internal audio buffers (whatever sound server it actually is)
+    so it can be handled in hardware, and the priority of sounds is controlled also by the audio server.
+    
+    
+    - @ref nMusicTable
+*/

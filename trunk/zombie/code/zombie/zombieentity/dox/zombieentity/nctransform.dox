@@ -1,0 +1,164 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Common
+    @cppclass ncTransform
+    @superclass nEntityObject
+    @classinfo
+      Entity transform
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Position
+    @format
+      fff(Position) -- No info
+    @attrs
+    @info
+      Position vector
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Euler
+    @format
+      fff(Euler) -- No info
+    @attrs
+    @info
+      Euler rotation in degrees
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Quat
+    @format
+      q(Quat)   -- No info
+    @attrs
+    @info
+      set quaternion rotation
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Scale
+    @format
+      fff(Scale) -- No info
+    @attrs
+    @info
+      set scale vector
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LockViewer
+    @format
+      b(LockViewer) -- locked to viewer
+    @attrs
+    @info
+      position locked to viewer position
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EulerYXZ
+    @format
+      f( Yaw ;min=-180;max=180;step=0.01;editor=slider) -- Rotation y Axis
+	  f( Pitch ;min=-180;max=180;step=0.01;editor=slider) -- Rotation x Axis 
+	  f( Roll ;min=-180;max=180;step=0.01;editor=slider) -- Rotation z Axis
+    @attrs
+    @info
+      Euler rotation in degrees
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd SetEulerYXZ
+	@cmdtype setter
+	@property EulerYXZ
+    @info
+    set euler YXZ rotation in degrees.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetEulerYXZ
+	@cmdtype getter
+	@property EulerYXZ
+    @info
+    get euler YXZ rotation in degrees.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPosition
+    @cmdtype setter
+    @property Position
+    @info 
+      set position vector
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPosition
+    @cmdtype getter
+    @property Position
+    @info 
+      get position vector
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEuler
+    @cmdtype setter
+    @property Euler
+    @info 
+      set euler rotation in degrees
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEuler
+    @cmdtype getter
+    @property Euler
+    @info 
+      get euler rotation in degrees
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetQuat
+    @cmdtype setter
+    @property Quat
+    @info 
+      set quaternion rotation
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetQuat
+    @cmdtype getter
+    @property Quat
+    @info 
+      get quaternion rotation
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetScale
+    @cmdtype setter
+    @property Scale
+    @info 
+      set scale vector
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetScale
+    @cmdtype getter
+    @property Scale
+    @info 
+      get scale vector
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLockViewer
+    @cmdtype setter
+    @property LockViewer
+    @info 
+      set position locked to viewer
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLockViewer
+    @cmdtype getter
+    @property LockViewer
+    @info 
+      get position locked to viewer
+*/

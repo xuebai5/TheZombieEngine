@@ -1,0 +1,55 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Gameplay
+    @cppclass ncGameplayPlayer
+    @superclass ncGameplayLiving
+    @classinfo
+      Component with the behaviour of a Player
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property InputState
+    @format
+      i(InputState;enums=Normal:0,Drive:1,Passenger:2,Frozen:3) -- Change the input state, just for testing
+    @attrs subgroup=Cheats
+    @info
+      Change the input state, just for testing
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetInputState
+    @cmdtype getter
+    @property InputState
+    @info 
+      Get player input state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetInputState
+    @cmdtype setter
+    @property InputState
+    @info 
+      Set player input state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsLocalPlayer
+    @output
+      b(unnamed) -- true if player is the local player
+    @input
+      v
+    @info 
+      get if is local player
+*/
+//--------------------------------------------------------------------------------
+/**
+
+    @cmd SetRunningMode
+    @output
+      v
+    @input
+      b(active) -- is true if running mode is active, else sprint mode is active
+    @info 
+      set the player velocity to running
+*/

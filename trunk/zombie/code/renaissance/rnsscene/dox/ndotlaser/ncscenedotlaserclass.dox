@@ -1,0 +1,73 @@
+//---------------------------------------------------------------------------------
+/**
+    @component Dot Laser
+    @cppclass ncScene
+    @superclass nEntityObject
+    @classinfo
+      Laser object.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LaserProjection
+    @format
+      f(distance 1;min=0;max=20;step=0.01;editor=slider) -- The distance 1, it's not a near plane
+      f(radius 1;min=0.001;max=0.5;step=0.001;editor=slider)   -- The radius at distance 1
+      f(distance 2;min=0;max=20;step=0.01;editor=slider) -- The distance 1, it's not a near plane
+      f(radius 2;min=0.001;max=0.5;step=0.001;editor=slider)   -- The radius at distance 1
+    @info
+      set vector shader override
+*/
+//------------------------------------------------------------------------------
+/**
+    @cmd SetLaserProjection
+	@cmdtype setter
+	@property LaserProjection
+    @info
+     Set the fucntion source blend.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetLaserProjection
+	@cmdtype getter
+	@property LaserProjection
+    @info
+     Get the LaserProjection
+*/
+
+
+--------------------------------------------------------------------------------
+/**
+    @property LaserEpsilon
+    @format
+      f(LaserEpsilon 1;min=0.0;max=0.25;step=0.01;editor=slider) -- The epsilon to collision point
+    @info
+      set vector shader override
+*/
+//------------------------------------------------------------------------------
+/**
+    @cmd SetLaserEpsilon
+	@cmdtype setter
+	@property LaserEpsilon
+    @info
+     Set the epsilon to collision point.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetLaserEpsilon
+	@cmdtype getter
+	@property LaserEpsilon
+    @info
+     Get the epsilon to collision point
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @property SetLaserProjectionScript
+    @format
+      ffff(SetLaserProjectionScript) -- 
+    @attrs private=true
+    @info
+*/

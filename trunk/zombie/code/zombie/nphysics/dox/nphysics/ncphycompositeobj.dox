@@ -1,0 +1,40 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Collision Composite
+    @cppclass ncPhyCompositeObj
+    @superclass ncPhysicsObj
+    @classinfo
+      An abstract physics object where the geometries within are encapsulated
+      by transforms and share the same body.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Add
+    @output
+      v
+    @input
+      v
+    @info 
+      adds a geometry to the object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Remove
+    @output
+      v
+    @input
+      v
+    @info 
+      removes a geometry from the object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CreateGeometryObj
+    @output
+      v
+    @input
+      s(unnamed) -- No info
+    @info 
+      creates an object composited
+*/

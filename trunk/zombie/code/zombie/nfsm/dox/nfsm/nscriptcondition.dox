@@ -1,0 +1,19 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nscriptcondition
+    @cppclass nScriptCondition
+    @superclass nCondition
+    @classinfo
+      Transition condition triggered by a script.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Evaluate
+    @output
+      b(Triggers) -- No info
+    @input
+      o(Entity) -- No info
+    @info 
+      Tell if the condition rule evaluates to true for the given entity
+*/

@@ -1,0 +1,150 @@
+/**
+    @page NebulaUserManuals Nebula User Manuals
+
+  - @ref NebulaConjurerUserManual
+  - @ref Nebula3dspluginUserManual
+  - @ref NebulaRenaissanceUserManual
+*/
+
+/** 
+    @page NebulaConjurerUserManual Nebula Conjurer User Manual
+
+<p>This is the Nebula Conjurer Editor User Manual, as of release 0.3. This means that the functionality and GUI is still in its first developing stages. Concretely, the GUI system is to be partially substituted by an external Multi Document Interface (MDI) main window, based on python languaje.</p>
+<p>Its main advantage is that it will let us to have a multimonitor application. Also the number of controls and libraries of this system will help us a lot for its efficiency and rapid development. </p>
+
+
+@section ConjurerUMGui Gui Buttons
+
+<p>The Gui of Conjurer is shown/hiden with the CTRL+X keys.</p>
+
+<p>The left column buttons from top to bottom:</p>
+<li>Turn on/off wireframe mode</li>
+<li>Turn on/off diffuse map</li>
+<li>Turn on/off diffuse light</li>
+<li>Turn on/off light map</li>
+<li>Turn on/off bump map</li>
+<li>Turn on/off specular light</li>
+<li>Turn on/off visibility</li>
+<li>Turn on/off physics draw</li>
+<li>turn on/off terrain lod</li>
+
+<p>The top row buttons from left to right are the module selection buttons:</p>
+<li>Level Module</li>
+<li>Scene Module</li>
+<li>Terrain Module</li>
+<li>Entity Module</li>
+<li>Light Module</li>
+<li>Camera Module</li>
+<li>Object Browser</li>
+<li>Command Console</li>
+<li>Debug Watches</li>
+<li>System Info</li>
+<li>Texture Browser</li>
+<li>Quit</li>
+
+<p>The modules load the GUI controls in the right side.</p>
+    
+@section ConjurerUMKeyboard Controls Configuration
+
+<li>Scene Navigation</li>
+
+    <ul>
+        <li>Free Camera Mode</li>
+        <p>If CTRL, SHIFT or ALT are pressed then there isn't movement.</p>        
+        <ul>
+            <li>W-S-A-D keyset to move forward, backward, strafe left/right</li>
+            <li>Right Mouse Button pressed and mouse move for look</li>
+            <li>Center Mouse Button pressed and mouse move for strafe left/right or move up/down</li>
+            <li>Mouse Wheel for zoom</li>
+        </ul>
+        <li>Game Camera Mode</li>
+        <p>In the Game Camera Mode the movement is the same that in free camera mode. Only that the camera can't pass throught the collision objects and the elevation of the camera remain the same until it collides with physical floor. This means that the camera stairs up.</p>
+    </ul>
+
+<li>Keyboard controls / shortcuts</li>
+
+    <ul>
+
+    <li>ALT+W : Switch single viewport mode</li>
+    <li>ALT+X : Switch maximized layout mode</li>
+
+    <li>CTRL+Z : Undo</li>
+    <li>CTRL+Y : Redo</li>
+
+    <li>Space : reset</li>
+    <li>Esc : quit</li>
+
+    <li>W : up</li>
+    <li>S : down</li>
+    <li>A : left</li>
+    <li>D : right</li>
+
+    <li>HOME / numpad 7 : in free camera mode, move up</li>
+    <li>END / numpad 1 : in free camera mode, move down</li>
+    
+    <li>key up / numpad 8 : turn down with camera</li>
+    <li>key down / numpad 5 : turn up with camera</li>
+    <li>key left / numpad 4 : turn left with camera</li>
+    <li>key right / numpad 6 : turn right with camera</li>
+
+    <li>I : show/hide info</li>
+    <li>J : show/hide light image</li>
+    <li>X : show/hide (0,0,0) axes</li>
+    
+    <li>0 : turn on/off fill mode</li>
+    <li>1 : turn on/off diffuse map</li>
+    <li>2 : turn on/off bump map</li>
+    <li>3 : turn on/off light map</li>
+    <li>4 : turn on/off diffuse light</li>
+    <li>5 : turn on/off specular light</li>    
+    <li>6 : turn on/off terrain lod</li>
+        
+    <li>8 : turn on/off skeleton</li>
+    
+    <li>V : turn on/off visibility</li>
+    <li>B : turn on/off draw bounding boxes</li>
+    <li>L : set light position</li>
+    <li>K : attach/de-atach light with camera</li>
+
+    <li>- : velocity_minus</li>
+    <li>+ : velocity_plus</li>
+    
+    <li>F1 : free camera mode</li>
+    <li>F2 : game camera mode</li>
+    
+    <li>F11 : show/hide the console</li>
+    <li>F12 : screenshot</li>
+    </ul>
+
+<li>Renaissance controls (F2 Mode)</li>
+    <ul>
+
+    <li>ALT+ : Switch single viewport mode</li>
+    <li>ALT+R : change normal/double magazine</li>
+    <li>ALT+F5 : Silencer</li>
+    <li>ALT+F6 : Flashlight</li>
+    <li>ALT+F7 : Reddot</li>
+    <li>ALT+F8 : Bipod</li>
+    <li>ALT+F9 : Assault Grip</li>
+    <li>ALT+F10 : Grenade launcher</li>
+    <li>ALT+F11 : Reflex sight</li>
+    <li>ALT+F12 : Scope</li>
+    
+    <li>Mouse left button : shoot</li>
+    <li>Mouse right button : with Grenade Launcher, launch rocket</li>
+    
+    <li>R : Reload</li>
+    <li>R Long Pressed: Full Reload</li>
+
+    <li>C : Crounch</li>
+    <li>X : Prone</li>
+    
+    <li>I : Ironsight on/off</li>
+
+    <li>M : Change fire mode to Auto/Semi</li>
+    
+    <li>Space : Stand up</li>
+    
+    </ul>
+   
+*/

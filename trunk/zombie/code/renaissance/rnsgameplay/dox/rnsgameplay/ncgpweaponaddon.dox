@@ -1,0 +1,34 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Gameplay
+    @cppclass ncGPWeaponAddon
+    @superclass ncGameplay
+    @classinfo
+      Component Object that represent the gameplay of a weapon accesory.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Enabled
+    @format
+      b(Enabled) -- Enabled flag
+    @attrs
+    @info
+      Enabled flag
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEnabled
+    @cmdtype setter
+    @property Enabled
+    @info 
+      Set enabled the addon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEnabled
+    @cmdtype getter
+    @property Enabled
+    @info 
+      Get if the addon is enabled
+*/

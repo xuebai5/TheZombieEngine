@@ -1,0 +1,109 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGameplayAlienClass
+    @superclass ncGameplayLivingClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FoodDetectionRadius
+    @format
+      f(FoodDetectionRadius) -- Alien detector food radius
+    @attrs subgroup=Perception
+    @info
+      Sets/gets food detection radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LeapRange
+    @format
+      f(LeapRange) -- Attack leap tange
+    @attrs subgroup=Combat
+    @info
+      Sets/gets leap range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RingSpeed
+    @format
+      i(RingSpeed) -- Aliens speed in the ring
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the ring speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LeapDamageMult
+    @format
+      f(LeapDamageMult) -- Damage multiplicator for leap attack
+    @attrs subgroup=Combat
+    @info
+      Sets/gets the leap damage multiplicator
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFoodDetectionRadius
+    @cmdtype setter
+    @property FoodDetectionRadius
+    @info
+      Sets/gets food detection radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFoodDetectionRadius
+    @cmdtype getter
+    @property FoodDetectionRadius
+    @info 
+      Sets/gets food detection radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLeapRange
+    @cmdtype setter
+    @property LeapRange
+    @info 
+      Sets/gets leap range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLeapRange
+    @cmdtype getter
+    @property LeapRange
+    @info 
+      Sets/gets leap range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRingSpeed
+    @cmdtype setter
+    @property RingSpeed
+    @info 
+      Sets/gets the ring speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRingSpeed
+    @cmdtype getter
+    @property RingSpeed
+    @info 
+      Sets/gets the ring speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLeapDamageMult
+    @cmdtype setter
+    @property LeapDamageMult
+    @info 
+      Sets/gets the leap damage multiplicator
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLeapDamageMult
+    @cmdtype getter
+    @property LeapDamageMult
+    @info 
+      Sets/gets the leap damage multiplicator
+*/

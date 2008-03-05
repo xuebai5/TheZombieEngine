@@ -1,0 +1,216 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Grass
+    @cppclass ncTerrainVegetationClass
+    @superclass nComponentClass
+    @classinfo
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property GrowthMaterialList
+    @format
+      o(GrowthMaterialList) -- The growth material list.
+    @info
+      The growth material list.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property VegetationCellSubDivision
+    @format
+      (VegetationCellSubDivision) -- The number of subdivision for cells.
+    @info
+      The number of subdivision for cells.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property NumSubBlockClip
+    @format
+      i(NumSubBlockClip) -- The number of visible subblocks
+    @attrs
+    @info
+        The number of visible subblocks.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property BeginFadeOutFactor
+    @format
+      f(BeginFadeOutFactor;min=0;max=1;step=0.01;editor=slider) -- Factor of begin  grass fade out
+    @attrs
+    @info
+        Factor of  begin grass fade out.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property GrassGeometryClipDistance
+    @format
+      f(BeginClip;min=0;max=1.1;step=0.001;editor=slider) -- When subcell is in this distance begin no draw triangle
+      f(EndClip;min=0.001;max=1.2;step=0.001;editor=slider) -- When subcell is in this distance  no draw triangle
+    @attrs
+    @info
+        Begin and end clip distance for no draw the mesh.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property GrowthMapSizeByCell
+    @format
+      i(GrowthMapSizeByCell) -- The map size for growth map
+    @attrs
+    @info
+        The map size for growth map.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property GrowthMeshName
+    @format
+      v
+    @attrs private=true
+    @info
+      Get GrowthMeshName
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryFactorClipDistance
+    @cmdtype getter
+    @property GrassGeometryClipDistance
+    @info 
+      Get the begin and end clip distance for no draw the mesh  
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryFactorClipDistance
+    @cmdtype setter
+    @property GrassGeometryClipDistance
+    @info 
+      Set the begin and end clip distance for no draw the mesh 
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetNumSubBlockClip
+    @cmdtype setter
+    @property NumSubBlockClip
+    @info 
+      Set minimun scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumSubBlockClip
+    @cmdtype getter
+    @property NumSubBlockClip
+    @info 
+      Get minimun scale
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGrasBeginFadeFactor
+    @cmdtype getter
+    @property BeginFadeOutFactor
+    @info 
+      Get begin of grass fadeout factor 
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGrasBeginFadeFactor
+    @cmdtype setter
+    @property BeginFadeOutFactor
+    @info 
+      Set begin of grass fadeout factor 
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGrowthMapSizeByCell
+    @cmdtype setter
+    @property GrowthMapSizeByCell
+    @info 
+      Set the map size for growth map
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGrowthMapSizeByCell
+    @cmdtype getter
+    @property GrowthMapSizeByCell
+    @info 
+      Get the map size for growth map
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GreateGrowthMaterialList
+    @output
+      o(unnamed) -- No info
+    @input
+      v
+    @info 
+      Create the material list called it when create the class first time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGrowthMaterialList
+    @cmdtype getter
+    @property GrowthMaterialList
+    @info 
+      Get  the material list
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGrowthMaterialById
+    @output
+      o(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      return the growth material
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CreateGrowthMaterial
+    @output
+      i(unnamed) -- No info
+    @input
+      s(unnamed) -- No info
+    @info 
+      Create growth material and apend it
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd DeleteGrowthMaterial
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      Delete material
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumberOfGrowthMaterials
+    @cmdtype getter
+    @property NumberOfGrowthMaterials
+    @info 
+      retuth the number of materials
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetVegetationCellSubDivision 
+    @cmdtype getter
+    @property VegetationCellSubDivision
+    @info 
+      Get  the material list
+*/

@@ -1,0 +1,233 @@
+#-------------------------------------------------------------------------------
+# ntrigger.bld
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# Trigger modules
+#-------------------------------------------------------------------------------
+
+beginmodule nflags
+    setdir ntrigger
+    setheaders {
+        nflags
+    }
+    setfiles {
+        nflags
+    }
+endmodule
+
+beginmodule ngameevent
+    setdir ntrigger
+    setheaders {
+        ngameevent
+    }
+    setfiles {
+        ngameevent
+    }
+endmodule
+
+beginmodule ncareaevent
+    setdir ntrigger
+    setheaders {
+        ncareaevent
+    }
+    setfiles {
+        ncareaevent_main
+    }
+endmodule
+
+beginmodule ncareaeventclass
+    setdir ntrigger
+    setheaders {
+        ncareaeventclass
+    }
+    setfiles {
+        ncareaeventclass_main
+    }
+endmodule
+
+beginmodule nctrigger
+    setdir ntrigger
+    setheaders {
+        nctrigger
+    }
+    setfiles {
+        nctrigger_main
+    }
+endmodule
+
+beginmodule nctriggerclass
+    setdir ntrigger
+    setheaders {
+        nctriggerclass
+    }
+    setfiles {
+        nctriggerclass_main
+    }
+endmodule
+
+beginmodule ncareatrigger
+    setdir ntrigger
+    setheaders {
+        ncareatrigger
+    }
+    setfiles {
+        ncareatrigger_main
+    }
+endmodule
+
+beginmodule ncagenttrigger
+    setdir ntrigger
+    setheaders {
+        ncagenttrigger
+    }
+    setfiles {
+        ncagenttrigger_main
+    }
+endmodule
+
+beginmodule ncgenerictrigger
+    setdir ntrigger
+    setheaders {
+        ncgenerictrigger
+    }
+    setfiles {
+        ncgenerictrigger_main
+    }
+endmodule
+
+beginmodule nctriggershape
+    setdir ntrigger
+    setheaders {
+        nctriggershape
+    }
+    setfiles {
+        nctriggershape_main
+    }
+endmodule
+
+beginmodule noperation
+    setdir ntrigger
+    setheaders {
+        noperation
+    }
+endmodule
+
+beginmodule ncmdoperation
+    setdir ntrigger
+    setheaders {
+        ncmdoperation
+    }
+    setfiles {
+        ncmdoperation_main
+        ncmdoperation_cmds
+    }
+endmodule
+
+beginmodule nscriptoperation
+    setdir ntrigger
+    setheaders {
+        nscriptoperation
+    }
+    setfiles {
+        nscriptoperation_main
+        nscriptoperation_cmds
+    }
+endmodule
+
+beginmodule ntriggeroperation
+    setdir ntrigger
+    setheaders {
+        ntriggeroperation
+    }
+    setfiles {
+        ntriggeroperation_main
+    }
+endmodule
+
+beginmodule ntriggereventcondition
+    setdir ntrigger
+    setheaders {
+        ntriggereventcondition
+    }
+    setfiles {
+        ntriggereventcondition_main
+    }
+endmodule
+
+beginmodule ntriggerstatecondition
+    setdir ntrigger
+    setheaders {
+        ntriggerstatecondition
+    }
+    setfiles {
+        ntriggerstatecondition_main
+        ntriggerstatecondition_cmds
+    }
+endmodule
+
+beginmodule nctriggeroutput
+    setdir ntrigger
+    setheaders {
+        nctriggeroutput
+    }
+    setfiles {
+        nctriggeroutput_main
+    }
+endmodule
+
+beginmodule ntriggerserver
+    setdir ntrigger
+    setheaders {
+        ntriggerserver
+    }
+    setfiles {
+        ntriggerserver_main
+        ntriggerserver_persist
+        ntriggerserver_cmds
+    }
+endmodule
+
+beginmodule naitester
+    setdir rnsstates
+    setheaders { naitester }
+    setfiles { 
+        naitester_main
+        naitester_cmds
+    }
+endmodule
+
+#-------------------------------------------------------------------------------
+# Trigger targets
+#-------------------------------------------------------------------------------
+
+begintarget ntrigger
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        nflags
+        ngameevent
+        ncareaevent
+        ncareaeventclass
+        nctrigger
+        nctriggerclass
+        ncareatrigger
+        ncagenttrigger
+        ncgenerictrigger
+        nctriggershape
+        noperation
+        ncmdoperation
+        nscriptoperation
+        ntriggeroperation
+        ntriggereventcondition
+        ntriggerstatecondition
+        nctriggeroutput
+        ntriggerserver
+        naitester
+    }
+endtarget
+
+#-------------------------------------------------------------------------------
+# EOF
+#-------------------------------------------------------------------------------

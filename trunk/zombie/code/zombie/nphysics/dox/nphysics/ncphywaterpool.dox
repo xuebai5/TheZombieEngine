@@ -1,0 +1,39 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Physics Water Pool.
+    @cppclass ncPhyWaterPool
+    @superclass ncPhyAreaDensity
+    @classinfo
+      Simulates a water pool behaviour.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property PoolsLength
+    @format
+      fff(PoolsLength) -- gets the lengths of the pool
+    @attrs
+    @info
+      gets the lengths of the pool
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPoolsLength
+    @cmdtype setter
+    @property PoolsLength
+    @info 
+      sets the lengths of the pool
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPoolsLength
+    @cmdtype getter
+    @property PoolsLength
+    @info 
+      gets the lengths of the pool
+*/
+
+//--------------------------------------------------------------------------------

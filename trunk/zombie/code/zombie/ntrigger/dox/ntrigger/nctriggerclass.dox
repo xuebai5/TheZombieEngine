@@ -1,0 +1,52 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Common
+    @cppclass ncTriggerClass
+    @superclass nComponentClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property PerceivableEvent
+    @format
+      i(PerceivableEvent) -- No info
+    @attrs private=true
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd ClearAllPerceivableEvents
+    @output
+      v
+    @input
+      v
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPerceivableEvent
+    @cmdtype setter
+    @property PerceivableEvent
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPerceivableEvent
+    @cmdtype getter
+    @property PerceivableEvent
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPerceivableEventByPersistendId
+    @cmdtype setter
+    @property PerceivableEventByPersistendId
+    @info 
+      No information
+*/

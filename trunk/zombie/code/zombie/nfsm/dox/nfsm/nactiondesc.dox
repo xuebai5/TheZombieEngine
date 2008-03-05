@@ -1,0 +1,264 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nactiondesc
+    @cppclass nActionDesc
+    @superclass nRoot
+    @classinfo
+      Holds info about which action to create and with what parameters
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ActionClass
+    @format
+      s(Class name) -- Action class name
+    @attrs
+    @info
+      Set the action class of this action description
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BoolArg
+    @format
+      i(Index) -- No info
+      b(Value) -- No info
+    @attrs
+    @info
+      Set a boolean argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FloatArg
+    @format
+      i(Index) -- No info
+      f(Value) -- No info
+    @attrs
+    @info
+      Set a float argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property IntArg
+    @format
+      i(Index) -- No info
+      i(Value) -- No info
+    @attrs
+    @info
+      Set an integer argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EntityArg
+    @format
+      i(Index) -- No info
+      o(Value) -- No info
+    @attrs
+    @info
+      Set an entity argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EntityArgById
+    @format
+      i(Index) -- No info
+      i(Value) -- No info
+    @attrs
+    @info
+      Set an entity argument by its id (used for persistence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StringArg
+    @format
+      i(Index) -- No info
+      s(Value) -- No info
+    @attrs
+    @info
+      Set a string argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Vector3Arg
+    @format
+      i(Index) -- No info
+      fff(Value) -- No info
+    @attrs
+    @info
+      Set a 3D vector argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ActionType
+    @format
+      i(Type) -- Internal action type id (transient id)
+    @attrs private=true
+    @info
+      Set the action type id of this action description (kept for backwards compatibility)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ArgsInBase64
+    @format
+      s(Values) -- All the argument values in a single string formatted in base 64
+    @attrs private=true
+    @info
+      Set action arguments, given in base64 (kept for backwards compatibility)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetActionClass
+    @cmdtype setter
+    @property ActionClass
+    @info 
+      Set the action class of this action description
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetActionClass
+    @cmdtype getter
+    @property ActionClass
+    @info 
+      Get the action class of this action description
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBoolArg
+    @cmdtype setter
+    @property BoolArg
+    @info 
+      Set a boolean argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBoolArg
+    @output
+      b(Value) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get a boolean argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFloatArg
+    @cmdtype setter
+    @property FloatArg
+    @info 
+      Set a float argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFloatArg
+    @output
+      f(Value) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get a float argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetIntArg
+    @cmdtype setter
+    @property IntArg
+    @info 
+      Set an integer argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetIntArg
+    @output
+      i(Value) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get an integer argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEntityArg
+    @cmdtype setter
+    @property EntityArg
+    @info 
+      Set an entity argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEntityArgById
+    @cmdtype setter
+    @property EntityArgById
+    @info 
+      Set an entity argument by its id (used for persistence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEntityArg
+    @output
+      o(Value) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get an entity argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEntityArgAsId
+    @output
+      o(Value) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get an entity argument as an entity id (used for the editor)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStringArg
+    @cmdtype setter
+    @property StringArg
+    @info 
+      Set a string argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetStringArg
+    @output
+      s(Value) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get a string argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetVector3Arg
+    @cmdtype setter
+    @property Vector3Arg
+    @info 
+      Set a 3D vector argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetVector3Arg
+    @output
+      fff(Value) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get a 3D vector argument
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetActionType
+    @cmdtype setter
+    @property ActionType
+    @info 
+      Set the action type id of this action description (kept for backwards compatibility)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetArgsInBase64
+    @cmdtype setter
+    @property ArgsInBase64
+    @info 
+      Set action arguments, given in base64 (kept for backwards compatibility)
+*/

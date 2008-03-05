@@ -1,0 +1,79 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nscriptclassserver
+    @cppclass nScriptClassServer
+    @superclass nRoot
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd HasScript
+    @output
+      b(unnamed)
+    @input
+      s(classname) -- name of the class to check
+    @info
+      check if a class has scripting
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddClass
+    @output
+      v
+    @input
+      s(classname) -- name of the class to add
+    @info 
+      add a nclass to the list of scripted classes
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddClasses
+    @output
+      v
+    @input
+      v
+    @info 
+      add all nclass of kernel server
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd DeleteClass
+    @output
+      v
+    @input
+      s(classname) -- name of the class to delete
+    @info 
+      delete a nclass from the list of scripted classes
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd DeleteClasses
+    @output
+      v
+    @input
+      v
+    @info 
+      delete all classes
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RefreshClass
+    @output
+      v
+    @input
+      s(classname) -- name of the class to refresh
+    @info 
+      refresh the scripts from a class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RefreshClasses
+    @output
+      v
+    @input
+      v
+    @info 
+      refresh the scripts from all classes
+*/

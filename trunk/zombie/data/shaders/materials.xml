@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ascii" ?>
+<MaterialDatabase shaderPath="home:data/shaders/2.0/materials">
+
+    <!-- declare variables -->
+    <Float name="FadeMinDistance" value="0.0" />
+    <Float name="FadeMaxDistance" value="20.0" />
+
+    <!-- shader parameters -->
+    <ShaderParam name="matAmbient" type="f4" />
+    <ShaderParam name="matDiffuse" type="f4" />
+    <ShaderParam name="matSpecular" type="f4" />
+    <ShaderParam name="matShininess" type="f" />
+    <ShaderParam name="matLevel" type="f" />
+    <ShaderParam name="mipMapLodBias" type="f" />
+    <ShaderParam name="funcDestBlend" type="i" />
+    <ShaderParam name="parallaxFactor" type="f" />
+    <ShaderParam name="parallaxFactorRatioUV" type="f" />
+    <ShaderParam name="illuminationColor" type="f4" />
+    <ShaderParam name="diffMap" type="t" />
+    <ShaderParam name="diffMap2" type="t" />
+    <ShaderParam name="bumpMap" type="t" />
+    <ShaderParam name="BumpMap3" type="t" />
+    <ShaderParam name="AmbientMap0" type="t" />
+    <ShaderParam name="CubeMap0" type="t" />
+    <ShaderParam name="clipMap" type="t" />
+    <ShaderParam name="levelMap" type="t" />
+    <ShaderParam name="lightMap" type="t" />
+    <ShaderParam name="controlMap" type="t" />
+    <ShaderParam name="parallaxMap" type="t" />
+    <ShaderParam name="illuminationMap" type="t" />
+    <ShaderParam name="envMaskFactor" type="f" />
+    <ShaderParam name="envMaskMap" type="t" />
+    <ShaderParam name="NoiseMap0" type="t" />
+    <ShaderParam name="TerrainGrassMinDist" type="f" />
+    <ShaderParam name="TerrainGrassMaxDist" type="f" />
+    <ShaderParam name="Amplitude" type="f" />
+    <ShaderParam name="Frequency" type="f" />
+    <ShaderParam name="Velocity" type="f4" />
+    <ShaderParam name="TexGenS" type="f4" />
+    <ShaderParam name="FresnelBias" type="f" />
+    <ShaderParam name="FresnelPower" type="f" />
+    <ShaderParam name="MinDist" type="f" variable="FadeMinDistance" />
+    <ShaderParam name="MaxDist" type="f" variable="FadeMaxDistance" />
+
+    <!-- material parameters -->
+    <MaterialParam type="hasalpha" name="true" vertexComp="">
+        <param name="funcDestBlend" />
+    </MaterialParam>
+    <MaterialParam type="alphatwoside" name="true" vertexComp="">
+    </MaterialParam>
+
+    <MaterialParam type="mat" name="hasalpha" vertexComp="">
+        <param name="funcDestBlend" />
+    </MaterialParam>
+    <MaterialParam type="mat" name="shadowvolume" vertexComp="Normal">
+    </MaterialParam>
+    <MaterialParam type="mat" name="singlecolorpass" vertexComp="">
+    </MaterialParam>
+
+    <MaterialParam type="pro" name="alphatwoside" vertexComp="">
+    </MaterialParam>
+    <MaterialParam type="pro" name="notculling" vertexComp="">
+    </MaterialParam>
+    <MaterialParam type="pro" name="depthbias" vertexComp="">
+    </MaterialParam>
+    <MaterialParam type="pro" name="grassfadeout" vertexComp="">
+        <param name="TerrainGrassMinDist" />
+        <param name="TerrainGrassMaxDist" />
+        <param name="NoiseMap0" />
+    </MaterialParam>
+    <MaterialParam type="pro" name="sky" vertexComp="">
+    </MaterialParam>
+    <MaterialParam type="pro" name="fresnel" vertexComp="Normal">
+        <param name="FresnelBias" />
+        <param name="FresnelPower" />
+    </MaterialParam>
+    <MaterialParam type="pro" name="fadeclipmap" vertexComp="">
+        <param name="MinDist" />
+        <param name="MaxDist" />
+    </MaterialParam>
+
+    <!-- environment interaction -->
+    <MaterialParam type="env" name="ambientlighting" vertexComp="">
+        <param name="matAmbient" />
+    </MaterialParam>
+    <MaterialParam type="env" name="diffuselighting" vertexComp="Normal">
+        <param name="matDiffuse" />
+    </MaterialParam>
+    <MaterialParam type="env" name="specularlighting" vertexComp="Normal">
+        <param name="matSpecular" />
+        <param name="matShininess" />
+        <param name="matLevel" />
+        <param name="MinDist" />
+        <param name="MaxDist" />
+    </MaterialParam>
+    <MaterialParam type="env" name="fogdisable" vertexComp="">
+    </MaterialParam>
+    
+    <MaterialParam type="env" name="illuminationcolor" vertexComp="Uv0">
+        <param name="illuminationColor" />
+        <param name="matAmbient" />
+    </MaterialParam>
+    <MaterialParam type="env" name="vcolormatambient" vertexComp="Color">
+    </MaterialParam>
+    <MaterialParam type="env" name="vcolorblend" vertexComp="Color">
+    </MaterialParam>
+    
+    <!-- geometry deformations -->
+    <MaterialParam type="deform" name="billboard" vertexComp="Uv3">
+    </MaterialParam>
+    <MaterialParam type="deform" name="swinging" vertexComp="">
+    </MaterialParam>
+    <MaterialParam type="deform" name="skinned" vertexComp="Weights|JIndices">
+    </MaterialParam>
+    <MaterialParam type="deform" name="morpher" vertexComp="">
+    </MaterialParam>
+    <MaterialParam type="deform" name="instanced" vertexComp="">
+    </MaterialParam>
+    <MaterialParam type="deform" name="wave" vertexComp="">
+        <param name="Amplitude" />
+        <param name="Frequency" />
+        <param name="Velocity" />
+        <param name="TexGenS" />
+    </MaterialParam>
+    
+    <!-- texture maps -->
+    <MaterialParam type="map" name="colormap" vertexComp="Uv0">
+        <param name="diffMap" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="bumpmap" vertexComp="Uv0|Tangent|Binormal">
+        <param name="bumpMap" />
+        <param name="mipMapLodBias" />
+        <param name="MinDist" />
+        <param name="MaxDist" />
+    </MaterialParam>
+    <MaterialParam type="map" name="illuminationmap" vertexComp="Uv0">
+        <param name="illuminationMap" />
+        <param name="matAmbient" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="lightmap" vertexComp="Uv1">
+        <param name="lightMap" />
+        <param name="matAmbient" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="shadowmap" vertexComp="">
+        <param name="shadowMap" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="controlmap" vertexComp="Uv2">
+        <param name="controlMap" />
+        <param name="diffMap2" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="environmentmap2d" vertexComp="Uv0|Normal">
+        <param name="AmbientMap0" />
+        <param name="envMaskMap" />
+        <param name="envMaskFactor" />
+        <param name="mipMapLodBias" />
+        <param name="MinDist" />
+        <param name="MaxDist" />
+    </MaterialParam>
+    <MaterialParam type="map" name="environmentmap3d" vertexComp="Uv0|Normal|Tangent|Binormal">
+        <param name="CubeMap0" />
+        <param name="envMaskMap" />
+        <param name="envMaskFactor" />
+        <param name="mipMapLodBias" />
+        <param name="MinDist" />
+        <param name="MaxDist" />
+    </MaterialParam>
+    <MaterialParam type="map" name="clipmap" vertexComp="Uv0">
+        <param name="diffMap" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="levelmap" vertexComp="Uv0">
+        <param name="levelMap" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="normalmap" vertexComp="Uv3|Tangent|Binormal">
+        <param name="BumpMap3" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="parallax" vertexComp="Uv0|Normal|Tangent|Binormal">
+        <param name="parallaxMap" />
+        <param name="parallaxFactor" />
+        <param name="parallaxFactorRatioUV" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <MaterialParam type="map" name="levelmapasenvmaskmap" vertexComp="">
+        <param name="levelMap" />
+        <param name="mipMapLodBias" />
+    </MaterialParam>
+    <!-- template to add more parameters -->
+    <!--MaterialParam type="..." name="..." vertexComp="...|...">
+        <param name="..." />
+    </MaterialParam-->
+
+</MaterialDatabase>

@@ -1,0 +1,366 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Graphics
+    @cppclass ncScene
+    @superclass nComponentObject
+    @classinfo
+      Graphic object.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property VectorOverride
+    @format
+      s(ShaderParam) -- shader parameter name
+      ffff(VectorOverride) -- vector override value
+    @attrs private=true
+    @info
+      set vector shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FloatOverride
+    @format
+      s(ShaderParam) -- shader parameter name
+      f(FloatOverride) -- float override value
+    @attrs private=true
+    @info
+      set float shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property IntOverride
+    @format
+      s(ShaderParam) -- shader parameter name
+      i(IntOverride) -- int override value
+    @attrs private=true
+    @info
+      set int shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TextureOverride
+    @format
+      s(ShaderParam) -- shader parameter name
+      s(TextureOverride) -- texture override filename
+    @attrs private=true
+    @info
+      set texture shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property HiddenEntity
+    @format
+      b(HiddenEntity) -- Hidden flag
+    @attrs
+    @info
+      hidden flag
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetVectorOverride
+    @cmdtype setter
+    @property VectorOverride
+    @info 
+      set vector shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetVectorOverride
+    @output
+      ffff(VectorOverride) -- vector override value
+    @input
+      s(ShaderParam) -- shader parameter name
+    @info 
+      get vector shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFloatOverride
+    @cmdtype setter
+    @property FloatOverride
+    @info 
+      set float shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFloatOverride
+    @output
+      f(FloatOverride) -- float override value
+    @input
+      s(ShaderParam) -- shader parameter name
+    @info 
+      get float shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetIntOverride
+    @cmdtype setter
+    @property IntOverride
+    @info 
+      set int shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetIntOverride
+    @output
+      i(IntOverride) -- int override value
+    @input
+      s(ShaderParam) -- shader parameter name
+    @info 
+      get int shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTextureOverride
+    @cmdtype setter
+    @property TextureOverride
+    @info 
+      set texture shader override
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property PassEnabled
+    @format
+      s(PassFourCC) -- pass fourcc
+      b(PassEnabled) -- pass enabled
+    @attrs private=true
+    @info
+      set if a pass is enabled by default
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPassEnabled
+    @cmdtype setter
+    @property PassEnabled
+    @info 
+      set if a pass is enabled by default
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPassEnabled
+    @output
+      b(passEnabled) -- pass enabled value
+    @input
+      s(passFourCC) -- pass fourcc
+    @info 
+      get if a pass is enabled by default
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Plug
+    @output
+      v
+    @input
+      s(attachmentName) -- attachment name
+      o(entity) -- entity to attach
+    @info 
+      plug
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd UnPlug
+    @output
+      v
+    @input
+      o(entity) -- entity to dettach
+    @info 
+      unplug
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LinearFogDistances
+    @format
+      f( fog end ) -- End of the fog range
+      f( fog start ) -- Start of the fog range
+    @attrs subgroup=fog
+    @info
+      The linear fog distances.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLinearFogDistances
+    @cmdtype setter
+    @property LinearFogDistances
+    @info 
+      Set distances for linear fog
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLinearFogDistances
+    @cmdtype getter
+    @property LinearFogDistances
+    @info 
+      Get distances for linear fog
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LayeredFogDistances
+    @format
+      f( fog top ) -- Top of the fog layer
+      f( fog end ) -- End of the fog layer
+      f( fog range ) -- Range of the fog layer
+    @attrs subgroup=fog
+    @info
+      The layered fog distances.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLayeredFogDistances
+    @cmdtype setter
+    @property LayeredFogDistances
+    @info 
+      Set distances for layered fog
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayeredFogDistances
+    @cmdtype getter
+    @property LayeredFogDistances
+    @info 
+      Get distances for layered fog
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property WaveFrequency
+    @format
+      f( Frequency ) -- wave frequency
+    @attrs subgroup=ocean
+    @info
+      The wave frequency
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWaveFrequency
+    @cmdtype setter
+    @property WaveFrequency
+    @info 
+      Set wave frequency
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWaveFrequency
+    @cmdtype getter
+    @property WaveFrequency
+    @info 
+      Get wave frequency
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property WaveAmplitude
+    @format
+      f( Amplitude ) -- wave amplitude
+    @attrs subgroup=ocean
+    @info
+      The wave amplitude
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWaveAmplitude
+    @cmdtype setter
+    @property WaveAmplitude
+    @info 
+      Set wave amplitude
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWaveAmplitude
+    @cmdtype getter
+    @property WaveAmplitude
+    @info 
+      Get wave amplitude
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property WaveVelocity
+    @format
+      f( x ) -- wave velocity X
+      f( y ) -- wave velocity Y
+    @attrs subgroup=ocean
+    @info
+      The wave speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWaveVelocity
+    @cmdtype setter
+    @property WaveVelocity
+    @info 
+      Set wave speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWaveVelocity
+    @cmdtype getter
+    @property WaveVelocity
+    @info 
+      Get wave speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TexScale
+    @format
+      f( X ) -- x scale
+      f( Y ) -- y scale
+    @attrs subgroup=ocean
+    @info
+      Texture scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTexScale
+    @cmdtype setter
+    @property TexScale
+    @info 
+      Set texture scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTexScale
+    @cmdtype getter
+    @property TexScale
+    @info 
+      Get texture scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Fresnel
+    @format
+      f( FresnelBias ) -- x scale
+      f( FresnelPower ) -- y scale
+    @attrs subgroup=ocean
+    @info
+      Fresnel term
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFresnel
+    @cmdtype setter
+    @property Fresnel
+    @info 
+      Set Fresnel term
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFresnel
+    @cmdtype getter
+    @property Fresnel
+    @info 
+      Get Fresnel term
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHiddenEntity
+    @cmdtype setter
+    @property HiddenEntity
+    @info 
+      Set hidden flag
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetHiddenEntity
+    @cmdtype getter
+    @property HiddenEntity
+    @info 
+      Get hidden flag
+*/

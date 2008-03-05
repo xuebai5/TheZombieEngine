@@ -1,0 +1,63 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nindoorarea
+    @cppclass nIndoorArea
+    @superclass nLoadArea
+    @classinfo
+      Indoor loading area
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LoadDistance
+    @format
+      i(MinLoadDistance) -- minimum distance to load neighbor area
+    @attrs
+    @info
+      min distance in portals to trigger loading of neighbor areas
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property UnloadDistance
+    @format
+      i(MaxUnloadDistance) -- maximum distance in portals to unload neighbor area
+    @attrs
+    @info
+      max distance in portals to trigger unloading of neighbor areas
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLoadDistance
+    @cmdtype setter
+    @property LoadDistance
+    @info 
+      set distance to load neighbor areas
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLoadDistance
+    @cmdtype getter
+    @property LoadDistance
+    @info 
+      get distance to load neighbor areas
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetUnloadDistance
+    @cmdtype setter
+    @property UnloadDistance
+    @info
+      set distance to unload neighbor areas
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetUnloadDistance
+    @cmdtype getter
+    @property UnloadDistance
+    @info 
+      get distance to unload neighbor areas
+*/

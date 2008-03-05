@@ -1,0 +1,175 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Common
+    @cppclass ncEditorClass
+    @superclass nEntityClass
+    @classinfo
+      Component Class to save data of the exporter in game classes.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveChunk
+    @output
+      v
+    @input
+      v
+    @info 
+      entity class persistence to separate file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveAssetChunk
+    @output
+      v
+    @input
+      v
+    @info 
+      entity class persistence to separate file
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsSetClassKey
+    @output
+      b(unnamed) -- true if key is found
+    @input
+      s(key) -- name of the key
+    @info 
+      is set class key
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsSetAssetKey
+    @output
+      b(unnamed) -- true if key is found
+    @input
+      s(key) -- name of the key
+    @info 
+      is set asset key
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClassKeyString
+    @output
+      v
+    @input
+      s(key) -- name of the key
+      s(value) -- data to save in the key
+    @info 
+      set a class key string
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClassKeyString
+    @output
+      s(value) -- the value of the key
+    @input
+      s(key) -- name of the key
+    @info 
+      get a class key string
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClassKeyInt
+    @output
+      v
+    @input
+      s(key) -- name of the key
+      i(value) -- data to save in the key
+    @info 
+      set a class key integer
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClassKeyInt
+    @output
+      i(value) -- the value of the key
+    @input
+      s(key) -- name of the key
+    @info 
+      get a class key integer
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClassKeyFloat
+    @output
+      v
+    @input
+      s(key) -- name of the key
+      f(value) -- data to save in the key
+    @info 
+      set a class key float
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClassKeyFloat
+    @output
+      f(value) -- the value of the key
+    @input
+      s(key) -- name of the key
+    @info 
+      get a class key float
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAssetKeyString
+    @output
+      v
+    @input
+      s(key) -- name of the key
+      s(value) -- data to save in the key
+    @info 
+      set a asset key string
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAssetKeyString
+    @output
+      s(value) -- the value of the key
+    @input
+      s(key) -- name of the key
+    @info 
+      get a asset key string
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAssetKeyInt
+    @output
+      v
+    @input
+      s(key) -- name of the key
+      i(value) -- data to save in the key
+    @info 
+      set a asset key integer
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAssetKeyInt
+    @output
+      i(value) -- the value of the key
+    @input
+      s(key) -- name of the key
+    @info 
+      get a asset key integer
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAssetKeyFloat
+    @output
+      v
+    @input
+      s(key) -- name of the key
+      f(value) -- data to save in the key
+    @info 
+      set a asset key float
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAssetKeyFloat
+    @output
+      f(value) -- the value of the key
+    @input
+      s(key) -- name of the key
+    @info 
+      get a asset key float
+*/

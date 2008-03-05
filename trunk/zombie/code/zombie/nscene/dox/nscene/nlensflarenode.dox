@@ -1,0 +1,171 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nlensflarenode
+    @cppclass nLensFlareNode
+    @superclass nGeometryNode
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BaseColor
+    @format
+      ffff(BaseColor) -- set color for the flare effect
+    @attrs
+    @info
+      set color for the flare effect
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BlindColor
+    @format
+      ffff(BlindColor) -- set color for the blind effect
+    @attrs
+    @info
+      set color for the blind effect
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FlareSizeAt
+    @format
+      i(FlareSizeAt) -- set flare size
+      f(FlareSizeAt) -- set flare size
+    @attrs
+    @info
+      set flare size
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FlarePosAt
+    @format
+      i(FlarePosAt) -- set flare position relative to the center
+      f(FlarePosAt) -- set flare position relative to the center
+    @attrs
+    @info
+      set flare position relative to the center
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FlareColorAt
+    @format
+      i(FlareColorAt) -- set color to an individual flare
+      ffff(FlareColorAt) -- set color to an individual flare
+    @attrs
+    @info
+      set color to an individual flare
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBaseColor
+    @cmdtype setter
+    @property BaseColor
+    @info 
+      set color for the flare effect
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBaseColor
+    @cmdtype getter
+    @property BaseColor
+    @info 
+      get base color for the effect
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBlindColor
+    @cmdtype setter
+    @property BlindColor
+    @info 
+      set color for the blind effect
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBlindColor
+    @cmdtype getter
+    @property BlindColor
+    @info 
+      set color for the blind effect
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BeginFlares
+    @output
+      v
+    @input
+      i(numFlares) -- set number of flares
+    @info 
+      allocate memory for the number of flares
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFlareSizeAt
+    @cmdtype setter
+    @property FlareSizeAt
+    @info 
+      set flare size
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFlareSizeAt
+    @output
+      f(flareSize) -- No info
+    @input
+      i(flareIndex) -- No info
+    @info 
+      get flare size
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFlarePosAt
+    @cmdtype setter
+    @property FlarePosAt
+    @info 
+      set flare position relative to the center
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFlarePosAt
+    @output
+      f(flarePos) -- No info
+    @input
+      i(flareIndex) -- No info
+    @info 
+      get flare position relative to the center
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFlareColorAt
+    @cmdtype setter
+    @property FlareColorAt
+    @info 
+      set color to an individual flare
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFlareColorAt
+    @output
+      ffff(flareColor) -- No info
+    @input
+      i(flareIndex) -- No info
+    @info 
+      get color to an individual flare
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EndFlares
+    @output
+      v
+    @input
+      v
+    @info 
+      end defining flares
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumFlares
+    @cmdtype getter
+    @property NumFlares
+    @info 
+      get number of flares
+*/

@@ -1,0 +1,69 @@
+#===============================================================================
+#   rnsscene.bld
+#===============================================================================
+
+#===============================================================================
+#   rnsscene Modules
+#===============================================================================
+
+beginmodule ndotlasernode
+    setdir ndotlaser
+    setfiles { ndotlasernode_main ndotlasernode_cmds }
+    setheaders { ndotlasernode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenedotlaser
+    setdir ndotlaser
+    setfiles { ncscenedotlaser_main ncscenedotlaser_cmds }
+    setheaders { ncscenedotlaser }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenedotlaserclass
+    setdir ndotlaser
+    setfiles { ncscenedotlaserclass_main ncscenedotlaserclass_cmds }
+    setheaders { ncscenedotlaserclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntimesyncanimator
+    setdir ntimesyncanimator
+    setfiles { ntimesyncanimator_main ntimesyncanimator_cmds }
+    setheaders { ntimesyncanimator }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncscenelightenvclass
+    setdir nscene
+    setfiles { ncscenelightenvclass }
+    setheaders { ncscenelightenvclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nlightenvnode
+    setdir nscene
+    setfiles { nlightenvnode_main }
+    setheaders { nlightenvnode }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nshadowlightnode
+    setdir nscene
+    setfiles { nshadowlightnode_main nshadowlightnode_cmds }
+    setheaders { nshadowlightnode }
+endmodule
+
+#===============================================================================
+#   rnsscene Targets
+#===============================================================================
+
+begintarget rnsscene
+    settype lib
+    setwarningslevel 4
+    
+    setpch true
+    setmodules {
+        ndotlasernode
+        ncscenedotlaser
+        ncscenedotlaserclass
+        ntimesyncanimator
+        ncscenelightenvclass
+        nlightenvnode
+        nshadowlightnode
+    }
+endtarget

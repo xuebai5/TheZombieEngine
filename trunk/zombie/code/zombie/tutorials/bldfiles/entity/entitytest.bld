@@ -1,0 +1,66 @@
+#-------------------------------------------------------------------------------
+#   Basic Examples
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+#   Modules
+#-------------------------------------------------------------------------------
+beginmodule entity01
+    setdir "entity_test"
+    setfiles { entity01 }
+    setheaders { entity01 }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncomponenta
+    setdir "entity_test"
+    setheaders { ncomponenta }
+    setfiles { ncomponenta }
+endmodule
+beginmodule ncomponentb
+    setdir "entity_test"
+    setheaders { ncomponentb }
+    setfiles { ncomponentb }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nentityobject1
+    setdir "entity_test"
+    setheaders { nentityobject1 }
+    setfiles { nentityobject1 }
+endmodule
+beginmodule nentityclass1
+    setdir "entity_test"
+    setheaders { nentityclass1 }
+    setfiles { nentityclass1 }
+endmodule
+
+#-------------------------------------------------------------------------------
+#   Targets
+#-------------------------------------------------------------------------------
+begintarget nentitytest
+    annotate "Test entities and components"
+    settype lib
+    setmodules {
+        ncomponenta
+        ncomponentb
+        nentityobject1
+        nentityclass1
+    }
+endtarget
+#-------------------------------------------------------------------------------
+begintarget entity01
+    annotate "Example of entities"
+    settype lib
+    setmodules {
+        entity01
+    }
+    settargetdeps {
+        nkernel
+        npythonserver
+        microtcl
+        nlua
+        nnebula
+        nnetwork
+        nentity
+        nentitytest
+        xml
+    }
+endtarget

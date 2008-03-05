@@ -1,0 +1,165 @@
+/**
+
+    @defgroup NNetworkEnetDocumentation Network System
+    @ingroup NNetworkEnetContribModule
+   
+    @section NNEDocA Main Network Class
+   
+    In the game to deal with the network layer we can use the nNetworkManager
+class. That class can be used the same in the multiplayer mode and in the
+singleplayer mode. The differences between both modes are internally resolved,
+in the singleplayer mode nothing is send using the network and all is locally
+executed, and in the multiplayer mode the class uses the lower layers to
+communicate between client and server applications.
+
+    The nNetworkManager class define signals to warn for new network events like
+the one when a ne client is connected with the server or the one when the server
+disconnected us form it.
+
+    The nNetworkManager class has a quite important method,
+nNetworkManager::IsServer(). This method tell us when we are executing in the
+client application or we are executing in the server application. The game logic
+code can has a different behaviour using this method to differenciate itself and
+no differeciate the game logic with the it is multiplayer or it is singleplayer
+thing. A singleplayer game always is server application.
+   
+    In order to communicate by network using the nNetworkManager class we can
+use to differents ways. We can communicate using the entity update or we can use
+the basic actions.
+
+    @section NNEDocB Network component for Entities
+
+    All entity that it has to interact by network, must have a component derived
+from ncNetwork. In addition to be a network entity must be created of a special
+way. It must be created with the method
+nEntityObjectServer::NewServerEntityObject(...) or it will be created
+automatically from nNetworkManager, when the entity is replicated from the
+server.
+   
+    In a client application, when a network entity has been created in the
+corresponding server, this entity is created in the client and using the
+nNetworkManager::OnNewEntity signal it is let now to the rest of the
+application.
+   
+    The network component serves to update the organizations from the server to
+the different connected clients. In order to be able it is neccesary to make
+several steps. The first one is made automatically, when a network entity is
+created is registered in the nNetworkManager instance and it is duplicated in
+all the connected clients.
+   
+    The second step is to indicate when a network entity has been modified. This
+is done calling to the method ncNetwork::SetModified(). With this method it is
+indicated that the entity has changed and it will be send when the
+nNetworkManager can do it.
+
+    The third step consists of extending the class ncNetwork with a
+specializaation. In the specialization we can indicate the size of an update
+buffer. Also we fill the data that were updated and the initial data of the
+entity to initialize it in new connected clients.
+
+    As example we can take the class ncNetworkTransform class which it is a
+component of network for entities that only updates its position and its
+direction.
+
+    The modifications of entities go from the server to the client. This is
+because these updates are executives and contain the definitive state of the
+entities. Only the server has the definitive state of entities. When an entity
+is marked as modified in a client application does not mean anything, simply it
+is not trasmited to the rest.
+   
+    @section NNEDocC Send Basic Actions
+
+    The Basic Actions is the other mechanism of communication between the client
+and the server. The normal behaviour in the multiplayer is that the client
+communicates wants to do a Basic Action to the server. The server decides if it
+must be execute and the server sends the Basic Action to all the connected
+clients so that all execute the same logic.
+
+    The Basic Actions should have to be sent directly using nNetworkManager
+instead of nGPActionManager. Using this way the Basic Actions are sended to the
+server if it is needed or executing them if we are in singleplayer.
+
+    It can be posible that the behaviour if the Basic Action was different in
+the server that in the client. We can use the method nNetworkManager::IsServer()
+to limit the functionality in the client or in the server. In general,
+everything that can be decisive, like causing damage to another entity, will be
+due to make only in the server. The client update the damage when the entity is
+updated from the server.
+   
+    It can be more advisable to use the discrimination of if this is the server
+or this is the client within gameplay properly instead of in each Basic Action.
+This way make that actions stay clear and we have less repeated code. For
+example, the functionality to change the life of an entity will be doed only in
+one place, but we have multiple actions that change the life of an entity ( e.g:
+shoot action, cure action, ...)
+
+    They will exist basic actions that need to execute itself only in the server
+or only in the client. This can be indicated with the following functions in the
+block of initcmds.
+
+@code
+NCMDPROTONATIVECPP_INITCMDS_BEGIN (nGPEnterVehicle)
+    NNETWORKTYPE_ONLYCLIENT()
+    NNETWORKTYPE_ONLYSERVER()
+NCMDPROTONATIVECPP_INITCMDS_END()
+@endcode
+
+ - Case 1: Basic action of type ONLYCLIENT called in the client.
+The basic action is locally executed in the client and it is not sended.
+
+ - Case 2: Basic action of type ONLYCLIENT called in the server.
+The basic action is locally executed in the server and it is not sended.
+
+ - Case 3: Basic action of type ONLYSERVER called in the client.
+The basic action is sended to the server, and when it arrives in the server, i
+will be executed but not sended to the clients.
+
+ - Case 4: Basic action of type ONLYSERVER called in the server.
+The basic action is executed locally in the server and it is not sended.
+
+    There is a difference between actions sent usually and actions queued in the
+network subject. An action send with the method nNetworkManager::SendAction(...)
+at the moment will be executed its init, is verified if everything was ok and it
+is sent if all was ok. If the init function return false, the Basic Action is
+not sended.
+
+    A Basic Action sended using the nNetworkManager::SendQueueAction(…) method
+always is sended without wait for the init result.
+
+    @section NNEDocD The third way of comunication
+
+    There is in addition one third form to communication between client and
+server. A simplified form of Remote Procedure Call or RPC. A RPC consists of a
+group with an identifier and a buffer of data. This RPC is sent from the client
+to the server or from the server to all the clients or to an single client. The
+application will receive a signal nNetworkManager::OnRPC when a RPC arrives from
+the server or a signal nNetworkManager::OnRPCServer when a RPC arrives from some
+client.
+
+The RPC itself must be understand by the application and not by the layer of
+network, and it is used for specific things of the game. For Example, to send
+the data of the level from the server to the clients. Or that the client
+indicates the server that it want to make a SPAWN.
+
+    @section NNEDocE Unreliable and Reliable send
+   
+A guaranteed package is a network message that makes sure that it arrived at his
+destiny. This is done waiting for of the application of destiny a receipt of the
+package. The guaranteed packages are more expensive in time, because they can
+require to be re-sended and they can delay all the later packages because they
+are sent in order.
+
+In order to avoid this there are nonguaranteed packages, which are not verified
+if they arrived or no, simply there are sent.
+
+There is actions that can be sended in a not guaranteed fashion. In order to
+make a non-guaranteed Basic Action it will be indicated with the following
+function in the block of initcmd:
+
+@code
+NCMDPROTONATIVECPP_INITCMDS_BEGIN (nGPEnterVehicle)
+    NNETWORKTYPE_UNRELIABLE()
+NCMDPROTONATIVECPP_INITCMDS_END()
+@endcode
+
+*/

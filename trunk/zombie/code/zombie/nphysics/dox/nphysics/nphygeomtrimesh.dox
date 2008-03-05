@@ -1,0 +1,30 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nphygeomtrimesh
+    @cppclass nPhyGeomTriMesh
+    @superclass nPhysicsGeom
+    @classinfo
+      A triangle mesh (TriMesh) represents an arbitrary collection of triangles.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property File
+    @format
+      s(File)   -- loads a description of a trimesh
+    @attrs
+    @info
+      loads a description of a trimesh
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFile
+    @cmdtype setter
+    @property File
+    @info 
+      loads a description of a trimesh
+*/
+
+//--------------------------------------------------------------------------------

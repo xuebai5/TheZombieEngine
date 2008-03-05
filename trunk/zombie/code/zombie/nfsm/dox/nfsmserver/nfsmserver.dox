@@ -1,0 +1,279 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nfsmserver
+    @cppclass nFSMServer
+    @superclass nRoot
+    @classinfo
+      Finite state machine server.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StoragePath
+    @format
+      s(Storage path) -- No info
+    @attrs
+    @info
+      Set the directory where all the FSMs, conditions, etc. are stored to/loaded from
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetStoragePath
+    @cmdtype getter
+    @property StoragePath
+    @info 
+      Get the directory where all the FSMs, conditions, etc. are stored to/loaded from
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStoragePath
+    @cmdtype setter
+    @property StoragePath
+    @info 
+      Set the directory where all the FSMs, conditions, etc. are stored to/loaded from
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd LoadAll
+    @output
+      b(Success) -- No info
+    @input
+      v
+    @info 
+      Load all the FSMs, conditions, etc.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFSM
+    @output
+      v
+    @input
+      s(FSM name) -- No info
+    @info 
+      Return a FSM, loading it if needed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventCondition
+    @output
+      v
+    @input
+      s(Condition name) -- No info
+    @info 
+      Return an event condition, loading it if needed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetScriptCondition
+    @output
+      v
+    @input
+      s(Condition name) -- No info
+    @info 
+      Return an script condition, loading it if needed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFSMSelector
+    @output
+      v
+    @input
+      s(Selector name) -- No info
+    @info 
+      Return an FSM selector, loading it if needed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetActionScript
+    @output
+      v
+    @input
+      s(Action desc. name) -- No info
+    @info 
+      Return an action script object, loading it if needed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveFSM
+    @output
+      b(Success) -- No info
+    @input
+      v
+    @info 
+      Save a FSM
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveEventCondition
+    @output
+      b(Success) -- No info
+    @input
+      v
+    @info 
+      Save an event condition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveScriptCondition
+    @output
+      b(Success) -- No info
+    @input
+      v
+    @info 
+      Save a script condition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveFSMSelector
+    @output
+      b(Success) -- No info
+    @input
+      v
+    @info 
+      Save a FSM selector
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveActionScript
+    @output
+      b(Success) -- No info
+    @input
+      v
+    @info 
+      Save an action script object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EraseFSM
+    @output
+      v
+    @input
+      v
+    @info 
+      Erase a FSM from disk
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EraseScriptCondition
+    @output
+      v
+    @input
+      v
+    @info 
+      Erase a script condition and its script from disk
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EraseFSMSelector
+    @output
+      v
+    @input
+      v
+    @info 
+      Erase a fsm selector and its script from disk
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EraseActionScript
+    @output
+      v
+    @input
+      v
+    @info 
+      Erase an action script object and its script from disk
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CreateConditionScript
+    @output
+      b(Success) -- No info
+    @input
+      s(Script name) -- No info
+    @info 
+      Create an empty condition script
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CreateFSMSelectorScript
+    @output
+      b(Success) -- No info
+    @input
+      s(Script name) -- No info
+    @info 
+      Create an empty FSM selector script
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CreateActionScript
+    @output
+      b(Success) -- No info
+    @input
+      s(Script name) -- No info
+    @info 
+      Create an empty action script
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetState
+    @output
+      o(State)
+    @input
+      s(FSM name) -- No info
+      s(State name) -- No info
+      i(State type) -- 0=Node, 1=Leaf, 2=End
+    @info 
+      Return a state, creating an empty one if needed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd FindFSMOfState
+    @output
+      o(FSM)
+    @input
+      o(State)
+    @info 
+      Return the FSM which a state belongs to
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd FindStateOfTransition
+    @output
+      o(State)
+    @input
+      o(Transition)
+    @info 
+      Return the state which a transition belongs to
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd FindTransition
+    @output
+      o(Transition)
+    @input
+      o(State)
+      s(Transition name) -- No info
+    @info 
+      Return a transition of a state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd FindLocalCondition
+    @output
+      o(Condition)
+    @input
+      o(Transition)
+      s(Condition name) -- No info
+    @info 
+      Return the local condition of a transition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd FindBehaviouralAction
+    @output
+      o(Action desc.)
+    @input
+      o(State)
+      s(Action desc. name) -- No info
+    @info 
+      Return the behavioural action of a state
+*/

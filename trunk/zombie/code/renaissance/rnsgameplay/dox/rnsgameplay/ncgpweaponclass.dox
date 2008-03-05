@@ -1,0 +1,370 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGPWeaponClass
+    @superclass ncGPWeaponCharsClass
+    @classinfo
+      Component Class that represent the gameplay of a weapon.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RateOfFire
+    @format
+      f(RateOfFire;min=0;max=10;step=0.1;editor=slider) -- Rate of fire of the weapon
+    @attrs
+    @info
+      Rate of fire of the weapon. Delay between two shots when the fire button is kept pressed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RateOfTapFire
+    @format
+      f(RateOfTapFire;min=0;max=10;step=0.1;editor=slider) -- Rate of tap fire of the weapon
+    @attrs
+    @info
+      Rate of tap fire of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CockTime
+    @format
+      f(CockTime;min=0;max=60;step=0.1;editor=slider) -- Cock time of the weapon
+    @attrs
+    @info
+      Cock time of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DamageType
+    @format
+      i(DamageType;flags=falling:256,melee:1,bullet:2,psionic:4,splash:8,enviroment:16,gas:32,vacumm:64,stun:128) -- Damage type of the weapon
+    @attrs
+    @info
+      Damage type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AmmoType
+    @format
+      i(AmmoType;enums=melee:1,10mm:2,10mm_flechette:8192,shell:4,shell_flechette:8,5mm:16,5mm_flechette:32,7mm:64,12mm:128,rocket:256,rocket_flechette:512,grenade:1024,grenade_flechette:2048,energy:4096) -- Ammo type of the weapon
+    @attrs subgroup=Ammo
+    @info
+      Ammo type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TypeShape
+    @format
+      i(TypeShape;enums=contact:16,instant:1,projectile:2,cone:4,sphere:8) -- Type shape of the weapon
+    @attrs subgroup=Ammo
+    @info
+      Type shape of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AmmoChamber
+    @format
+      i(AmmoChamber;min=0;max=10;step=1;editor=slider) -- Set the ammo chamber space of the weapon
+    @attrs subgroup=Ammo
+    @info
+      Set the ammo chamber space of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AmmoReq
+    @format
+      i(AmmoReq;flags=melee:1,10mm:2,10mm_flechette:8192,shell:4,shell_flechette:8,5mm:16,5mm_flechette:32,7mm:64,12mm:128,rocket:256,rocket_flechette:512,grenade:1024,grenade_flechette:2048,energy:4096) -- List of ammo types this weapon requires to work
+    @attrs subgroup=Ammo
+    @info
+      List of ammo types this weapon requires to work
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property WeaponType
+    @format
+      i(WeaponType;enums=melee:1,handguns:2,shotguns:4,submachine:8,assault:16,lightmachine:32,sniper:64,portable_heavy:128,mounted_heavy:256) -- Type of the weapon
+    @attrs
+    @info
+      Type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AddonOffset
+    @format
+      fff(AddonOffset) -- Offset of weapon with addons
+    @attrs
+    @info
+      Offset of weapon with addons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AddonOffsetBone
+    @format
+      i(AddonOffsetBone) -- Offset bone of weapon with addons
+    @attrs
+    @info
+      Offset bone of weapon with addons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FireModes
+    @format
+      i(FireModes;flags=auto:1,semi:2) -- Fire modes of weapon
+    @attrs
+    @info
+      Fire modes of weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DefaultMagazine
+    @format
+      s(DefaultMagazine) -- Default magazine of the weapon
+    @attrs
+    @info
+      Default magazine of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRateOfFire
+    @cmdtype setter
+    @property RateOfFire
+    @info 
+      Set the rate of fire of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRateOfFire
+    @cmdtype getter
+    @property RateOfFire
+    @info 
+      Get the rate of fire of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRateOfTapFire
+    @cmdtype setter
+    @property RateOfTapFire
+    @info 
+      Set the rate of tap fire of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRateOfTapFire
+    @cmdtype getter
+    @property RateOfTapFire
+    @info 
+      Get the rate of tap fire of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCockTime
+    @cmdtype setter
+    @property CockTime
+    @info 
+      Set the cock time of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCockTime
+    @cmdtype getter
+    @property CockTime
+    @info 
+      Get the cock time of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDamageType
+    @cmdtype setter
+    @property DamageType
+    @info 
+      Set the damage type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDamageType
+    @cmdtype getter
+    @property DamageType
+    @info 
+      Get the damage type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAmmoType
+    @cmdtype setter
+    @property AmmoType
+    @info 
+      Set the ammo type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAmmoType
+    @cmdtype getter
+    @property AmmoType
+    @info 
+      Get the ammo type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTypeShape
+    @cmdtype setter
+    @property TypeShape
+    @info 
+      Set the type shape of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTypeShape
+    @cmdtype getter
+    @property TypeShape
+    @info 
+      Get the type shape of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAmmoChamber
+    @cmdtype setter
+    @property AmmoChamber
+    @info 
+      Set the ammo chamber space of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAmmoChamber
+    @cmdtype getter
+    @property AmmoChamber
+    @info 
+      Get the ammo chamber space of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAmmoReq
+    @cmdtype setter
+    @property AmmoReq
+    @info 
+      Set the list of ammo types this weapon requires to work
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAmmoReq
+    @cmdtype getter
+    @property AmmoReq
+    @info 
+      Get the list of ammo types this weapon requires to work
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWeaponType
+    @cmdtype setter
+    @property WeaponType
+    @info 
+      Set the type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWeaponType
+    @cmdtype getter
+    @property WeaponType
+    @info 
+      Get the type of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCategory
+    @cmdtype setter
+    @property Category
+    @info 
+      set the category of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCategory
+    @cmdtype getter
+    @property Category
+    @info 
+      get the category of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAddonOffset
+    @cmdtype setter
+    @property AddonOffset
+    @info 
+      Set the offset of weapon with addons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAddonOffset
+    @cmdtype getter
+    @property AddonOffset
+    @info 
+      Get the offset of weapon with addons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAddonOffsetBone
+    @cmdtype setter
+    @property AddonOffsetBone
+    @info 
+      Set the offset bone of weapon with addons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAddonOffsetBone
+    @cmdtype getter
+    @property AddonOffsetBone
+    @info 
+      Get the offset bone of weapon with addons
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFireModes
+    @cmdtype setter
+    @property FireModes
+    @info 
+      Set the fire modes of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFireModes
+    @cmdtype getter
+    @property FireModes
+    @info 
+      Get the fire modes of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDefaultMagazine
+    @cmdtype setter
+    @property DefaultMagazine
+    @info 
+      Set default magazine of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDefaultMagazine
+    @cmdtype getter
+    @property DefaultMagazine
+    @info 
+      Get default magazine of the weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd HasSemiFireMode
+    @output
+      b(unnamed) -- 
+    @input
+      v(unnamed)
+    @info 
+      say if weapon has semi fire mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd HasAutoFireMode
+    @output
+      b(unnamed) -- 
+    @input
+      v(unnamed)
+    @info 
+      say if weapon has auto fire mode
+*/

@@ -1,0 +1,302 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Spatial Class
+    @cppclass ncSpatialClass
+    @superclass nEntityClass
+    @classinfo
+      Spatial component class for an entity.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property StaticBatch
+    @format
+      b(StaticBatch) -- objects are static for batching
+    @attrs
+    @info
+      Entities of this class are static for batching
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BatchLevel
+    @format
+      i(BatchLevel ;enums= None:-1,High:0,Medium:1,Low:2,Impostor:3) -- level of detail to batch statically
+    @attrs
+    @info
+      Set level of detail to use for static batching
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LevelDistance
+    @format
+      b(LevelDistance) -- objects are static for batching
+    @attrs private=true
+    @info
+      
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LevelThreshold
+    @format
+      b(LevelThreshold) -- objects are static for batching
+    @attrs private=true
+    @info
+      
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStaticBatch
+    @cmdtype setter
+    @property StaticBatch
+    @info 
+      Set if objects of this class are static for batching
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetStaticBatch
+    @cmdtype getter
+    @property StaticBatch
+    @info
+      Get if objects of this class are static for batching
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBatchLevel
+    @cmdtype setter
+    @property BatchLevel
+    @info 
+      Set level of detail to use to build batch graphics
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBatchLevel
+    @cmdtype getter
+    @property BatchLevel
+    @info
+      Get level of detail to use to build batch graphics
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property StaticShadow
+    @format
+      b(StaticShadow) -- objects are static for shadows
+    @attrs
+    @info
+      Entities of this class are static for shadows
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStaticShadow
+    @cmdtype setter
+    @property StaticShadow
+    @info 
+      Set if objects of this class are static for shadows
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetStaticShadow
+    @cmdtype getter
+    @property StaticShadow
+    @info
+      Get if objects of this class are static for shadows
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LodDistances
+    @format
+      f(High) -- max distance for level 0
+      f(Medium) -- max distance for level 1
+      f(Low) -- max distance for level 2
+      f(Impostor) -- max distance for impostors
+    @attrs
+    @info
+      Distances for levels of detail selection
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLodDistances
+    @cmdtype setter
+    @property LodDistances
+    @info 
+      Set distances for levels of detail selection
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLodDistances
+    @cmdtype getter
+    @property LodDistances
+    @info 
+      Get distances for levels of detail selection
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LodThresholds
+    @format
+      f(High) -- threshold for level 0
+      f(Medium) -- threshold for level 1
+      f(Low) -- threshold for level 2
+    @attrs
+    @info
+      Thresholds for levels of detail selection
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLodThresholds
+    @cmdtype setter
+    @property LodThresholds
+    @info 
+      Set thresholds for levels of detail selection
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLodThresholds
+    @cmdtype getter
+    @property LodThresholds
+    @info 
+      Get thresholds for levels of detail selection
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LodImpostor
+    @format
+      i(LodImpostor) -- level for the impostor, -1 if none
+    @attrs
+    @info
+      Level index for impostor LOD
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLodImpostor
+    @cmdtype setter
+    @property LodImpostor
+    @info 
+      Set level for impostor
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLodImpostor
+    @cmdtype getter
+    @property LodImpostor
+    @info 
+      Get level for impostor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property OriginalBBox
+    @format
+      fff(Center)  -- Center of the original bounding box
+      fff(Extents) -- Extents of the original bounding box
+    @attrs (private=true)
+    @info
+      Spatial class' original bounding box
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBBox
+    @cmdtype setter
+    @property OriginalBBox
+    @info 
+      Set original bounding box
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBBox
+    @cmdtype getter
+    @property OriginalBBox
+    @info 
+      Get original bounding box
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property TestModel
+    @format
+      s(TestModel;enums=NONE:none,SPHERE:sphere,FRUSTUM:frustum) -- Test model for the spatial element
+    @attrs (private=true)
+    @info
+      Spatial element's test model
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTestModel
+    @cmdtype setter
+    @property TestModel
+    @info 
+      Set spatial element's test model
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTestModel
+    @cmdtype getter
+    @property TestModel
+    @info 
+      Get spatial element's test model
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LevelLocked
+    @format
+      i(LevelLocked) -- Level of detail to lock, -1 if none
+    @attrs
+    @info
+      Lock a specific level of detail, -1 if none
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLevelLocked
+    @cmdtype setter
+    @property LevelLocked
+    @info 
+      Set locked level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLevelLocked
+    @cmdtype getter
+    @property LevelLocked
+    @info 
+      Get locked level of detail
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ShadowCaster
+    @format
+      b(ShadowCaster) -- object is shadow caster
+    @attrs
+    @info
+      Objects of this class cast shadows by default
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetShadowCaster
+    @cmdtype setter
+    @property ShadowCaster
+    @info 
+      Set default shadow caster
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetShadowCaster
+    @cmdtype getter
+    @property ShadowCaster
+    @info 
+      Get default shadow caster
+*/

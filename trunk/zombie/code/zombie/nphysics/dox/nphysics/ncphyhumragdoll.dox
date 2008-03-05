@@ -1,0 +1,209 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Human Rag Doll
+    @cppclass ncPhyHumRagDoll
+    @superclass ncPhyRagDoll
+    @classinfo
+      Base behaviour for humanoid rag-doll models.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Head
+    @format
+      v
+    @attrs
+    @info
+      sets the head object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Arm
+    @format
+      v
+      v
+    @attrs
+    @info
+      sets the arm object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ForeArm
+    @format
+      v
+      v
+    @attrs
+    @info
+      sets the fore arm object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Leg
+    @format
+      v
+      v
+    @attrs
+    @info
+      sets the leg object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ForeLeg
+    @format
+      v
+      v
+    @attrs
+    @info
+      sets the fore leg object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property NeckPoint
+    @format
+      fff(NeckPoint) -- sets the neck in world position
+    @attrs
+    @info
+      sets the neck in world position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ShoulderPoint
+    @format
+      v
+      fff(ShoulderPoint) -- sets the shoulder point
+    @attrs
+    @info
+      sets the shoulder point
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ElbowPoint
+    @format
+      v
+      fff(ElbowPoint) -- sets the elbow point
+    @attrs
+    @info
+      sets the elbow point
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property WristPoint
+    @format
+      v
+      fff(WristPoint) -- sets the wrist position
+    @attrs
+    @info
+      sets the wrist position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property KneePoint
+    @format
+      v
+      fff(KneePoint) -- sets the knee position
+    @attrs
+    @info
+      sets the knee position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHead
+    @cmdtype setter
+    @property Head
+    @info 
+      sets the head object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetArm
+    @cmdtype setter
+    @property Arm
+    @info 
+      sets the arm object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetForeArm
+    @cmdtype setter
+    @property ForeArm
+    @info 
+      sets the fore arm object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLeg
+    @cmdtype setter
+    @property Leg
+    @info 
+      sets the leg object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetForeLeg
+    @cmdtype setter
+    @property ForeLeg
+    @info 
+      sets the fore leg object
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetNeckPoint
+    @cmdtype setter
+    @property NeckPoint
+    @info 
+      sets the neck in world position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetShoulderPoint
+    @cmdtype setter
+    @property ShoulderPoint
+    @info 
+      sets the shoulder point
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetElbowPoint
+    @cmdtype setter
+    @property ElbowPoint
+    @info 
+      sets the elbow point
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWristPoint
+    @cmdtype setter
+    @property WristPoint
+    @info 
+      sets the wrist position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetKneePoint
+    @cmdtype setter
+    @property KneePoint
+    @info 
+      sets the knee position
+*/
+
+//--------------------------------------------------------------------------------

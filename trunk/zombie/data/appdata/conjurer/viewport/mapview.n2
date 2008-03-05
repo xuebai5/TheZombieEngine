@@ -1,0 +1,13 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nlevelmapviewport$
+-- -----------------------------------------------------------
+nthis:setviewervelocity(1.666667)
+nthis:setrelsize(0.0, 0.0, 1.0, 1.0)
+nthis:setviewerangles(0.0, 0.0)
+nthis:setviewerpos(0.0, 0.0, -2.0)
+nthis:setnearplane(0.1)
+nthis:setfarplane(5000.0)
+nthis:setangleofview(60.0)
+nthis:setbgcolor(1.0, 1.0, 1.0, 0.7)
+-- -----------------------------------------------------------
+-- Eof

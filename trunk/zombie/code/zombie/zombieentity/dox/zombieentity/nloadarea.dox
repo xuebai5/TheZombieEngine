@@ -1,0 +1,63 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nloadarea
+    @cppclass nLoadArea
+    @superclass nRoot
+    @classinfo
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Description
+    @format
+      s(Description) -- No info
+    @attrs
+    @info
+      set area description
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property SpaceId
+    @format
+      i(SpaceId) -- No info
+    @attrs
+    @info
+      set space entity id
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDescription
+    @cmdtype setter
+    @property Description
+    @info 
+      set area description
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDescription
+    @cmdtype getter
+    @property Description
+    @info 
+      get area description
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSpaceId
+    @cmdtype setter
+    @property SpaceId
+    @info 
+      set area space entity id
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSpaceId
+    @cmdtype getter
+    @property SpaceId
+    @info 
+      get area space entity id
+*/

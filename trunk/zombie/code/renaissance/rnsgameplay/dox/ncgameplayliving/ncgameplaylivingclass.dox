@@ -1,0 +1,1366 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGameplayLivingClass
+    @superclass ncGameplayClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BaseSpeed
+    @format
+      f(BaseSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the base speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultSpeed
+    @format
+      i(Speed)  -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultRunSpeed
+    @format
+      i(RunSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the run speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultRunIronsightSpeed
+    @format
+      i(RunIronsightSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the run speed while is in iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultIronsightSpeed
+    @format
+      i(IronsightSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the speed while is in iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultProneIronSightSpeed
+    @format
+      i(ProneIronSightSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the prone speed while is in iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultProneSpeed
+    @format
+      i(ProneSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the prone speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property JumpSpeed
+    @format
+      f(JumpSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the jump speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultCrouchSpeed
+    @format
+      i(CrouchSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the crouch speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultCrouchIronSightSpeed
+    @format
+      i(CrouchIronSightSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the crouch speed when iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultProneSpeed
+    @format
+      i(CrawlSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the crawl speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultProneIronSightSpeed
+    @format
+      i(ProneIronSightSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the crawl speed when iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MultSwimSpeed
+    @format
+      i(SwimSpeed) -- No info
+    @attrs subgroup=Speeds
+    @info
+      Sets/gets the swim speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StepsAnimCycle
+    @format
+      i(StepsAnimCycle) -- No info
+    @attrs subgroup=Movement
+    @info
+      Sets/gets the steps by anim cicle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TurnRadius
+    @format
+      f(TurnRadius) -- No info
+    @attrs subgroup=Movement
+    @info
+      Sets/gets the turnRadius of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxAngularVelocityInDegrees
+    @format
+      f(MaxAngularVelocity) -- Maximum orientation change in degrees per second
+    @attrs subgroup=Movement
+    @info
+      Sets/gets the maximum orientation change in degrees per second
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property JumpHeight
+    @format
+      f(JumpHeight) -- No info
+    @attrs subgroup=Movement
+    @info
+      Sets/gets the jump height
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Size
+    @format
+      f(Size)   -- No info
+    @attrs subgroup=Attributes
+    @info
+      Sets/gets the size of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxClimbSlope
+    @format
+      f(MaxClimbSlope) -- No info
+    @attrs subgroup=Movement
+    @info
+      Sets/gets the max climb slope
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FallingDamageRatio
+    @format
+      f(FallingDamageRatio) -- No info
+    @attrs subgroup=Combat
+    @info
+      Sets/gets the falling damage ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EyeHeight
+    @format
+      f(EyeHeight) -- No info
+    @attrs subgroup=Attributes
+    @info
+      Sets/gets the eye height
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property UseRange
+    @format
+      f(UseRange) -- No info
+    @attrs subgroup=Inventory
+    @info
+      Sets/gets the 'use' range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CanBeCarried
+    @format
+      b(CanBeCarried) -- No info
+    @attrs subgroup=Inventory
+    @info
+      Sets/gets if can be carried
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property PickUp
+    @format
+      b(PickUp) -- No info
+    @attrs subgroup=Inventory
+    @info
+      Sets/gets pickup property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property InventorySize
+    @format
+      i(InventorySize) -- No info
+    @attrs subgroup=Inventory
+    @info
+      Sets/gets the size inventory
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxHealth
+    @format
+      i(MaxHealth) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets the value for the max health
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RegenThreshold
+    @format
+      f(RegenThreshold) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets the value for the regen threshold
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RegenAmount
+    @format
+      f(RegenAmount) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets the value for the regent amount
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GameplayLivingState
+    @format
+      i(GameplayLivingState) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets the state (for persistence only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CanBeStunned
+    @format
+      b(CanBeStunned) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets 'can be stunned' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CanBeIncapacitated
+    @format
+      b(CanBeIncapacitated) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets 'can be incapatitated' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CanBeKilled
+    @format
+      b(CanBeKilled) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets 'can be killed' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property NeedsAir
+    @format
+      b(NeedsAir) -- No info
+    @attrs subgroup=Health
+    @info
+      Sets/gets if the entity needs air
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BreathMax
+    @format
+      f(BreathMax) -- No info
+    @attrs subgroup=Breath
+    @info
+      Sets/gets breathMax
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BreathLossAmount
+    @format
+      f(BreathLossAmount) -- No info
+    @attrs subgroup=Breath
+    @info
+      Sets/gets breathLossAmount
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BreathLossSpeed
+    @format
+      f(BreathLossSpeed) -- No info
+    @attrs subgroup=Breath
+    @info
+      Sets/gets breathLossSpeed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BreathRecoverySpeed
+    @format
+      f(BreathRecoverySpeed) -- No info
+    @attrs subgroup=Breath
+    @info
+      Sets/gets breathRecoverySpeed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SightRadius
+    @format
+      f(SightRadius) -- No info
+    @attrs subgroup=Perception
+    @info
+      Sets/gets sight radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FOVAngle
+    @format
+      f(FOVAngle) -- No info
+    @attrs subgroup=Movement
+    @info
+      Sets/gets FOV angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property HearingRadius
+    @format
+      f(HearingRadius) -- No info
+    @attrs subgroup=Perception
+    @info
+      Sets/gets hearing radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FeelingRadius
+    @format
+      f(FeelingRadius) -- No info
+    @attrs subgroup=Perception
+    @info
+      Sets/gets feeling radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MemoryTime
+    @format
+      i(MemoryTime) -- No info
+    @attrs subgroup=Perception
+    @info
+      Sets/gets memory time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CommRadius
+    @format
+      f(CommRadius) -- No info
+    @attrs subgroup=Perception
+    @info
+      Sets/gets communication radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CommIntensity
+    @format
+      f(CommIntensity) -- No info
+    @attrs subgroup=Perception
+    @info
+      Sets/gets communication intensity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MeleeRange
+    @format
+      f(MeleeRange) -- No info
+    @attrs subgroup=Combat
+    @info
+      Sets/gets melee range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MeleeWidth
+    @format
+      f(MeleeWidth) -- No info
+    @attrs subgroup=Combat
+    @info
+      Sets/gets melee width
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AttackSpeed
+    @format
+      f(AttackSpeed) -- No info
+    @attrs subgroup=Combat
+    @info
+      Sets/gets attack speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property DamageModification
+    @format
+      v
+      f(DamageModification) -- No info
+    @attrs subgroup=Combat
+    @info
+      Sets/gets damage modification for a concrete body part
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBaseSpeed
+    @cmdtype setter
+    @property BaseSpeed
+    @info 
+      Sets/gets the base speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBaseSpeed
+    @cmdtype getter
+    @property BaseSpeed
+    @info 
+      Sets/gets the base speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWalkSpeed
+    @cmdtype getter
+    @property WalkSpeed
+    @info 
+      Sets/gets the walk speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSpeed
+    @cmdtype setter
+    @property Speed
+    @info 
+      Sets/gets the speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSpeed
+    @cmdtype getter
+    @property Speed
+    @info 
+      Sets/gets the speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRunSpeed
+    @cmdtype setter
+    @property RunSpeed
+    @info 
+      Sets/gets the run speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRunSpeed
+    @cmdtype getter
+    @property RunSpeed
+    @info 
+      Sets/gets the run speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRunIronsightSpeed
+    @cmdtype setter
+    @property RunIronsightSpeed
+    @info 
+      Sets/gets the run speed while is in iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRunIronsightSpeed
+    @cmdtype getter
+    @property RunIronsightSpeed
+    @info 
+      Sets/gets the run speed while is in iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCrouchSpeed
+    @cmdtype setter
+    @property CrouchSpeed
+    @info 
+      Sets/gets the crouch speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCrouchSpeed
+    @cmdtype getter
+    @property CrouchSpeed
+    @info 
+      Sets/gets the crouch speed of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCrawlSpeed
+    @cmdtype setter
+    @property CrawlSpeed
+    @info 
+      Sets/gets the crawl speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCrawlSpeed
+    @cmdtype getter
+    @property CrawlSpeed
+    @info 
+      Sets/gets the crawl speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCrouchIronSightSpeed
+    @cmdtype setter
+    @property CrouchIronSightSpeed
+    @info 
+      Sets/gets the crouch speed when iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCrouchIronSightSpeed
+    @cmdtype getter
+    @property CrouchIronSightSpeed
+    @info 
+      Sets/gets the crouch speed when iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCrawlIronSightSpeed
+    @cmdtype setter
+    @property CrawlIronSightSpeed
+    @info 
+      Sets/gets the crawl speed when iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCrawlIronSightSpeed
+    @cmdtype getter
+    @property CrawlIronSightSpeed
+    @info 
+      Sets/gets the crawl speed when iron sight mode
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSwimSpeed
+    @cmdtype setter
+    @property SwimSpeed
+    @info 
+      Sets/gets the swim speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSwimSpeed
+    @cmdtype getter
+    @property SwimSpeed
+    @info 
+      Sets/gets the swim speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTurnRadius
+    @cmdtype setter
+    @property TurnRadius
+    @info 
+      Sets/gets the turnRadius of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTurnRadius
+    @cmdtype getter
+    @property TurnRadius
+    @info 
+      Sets/gets the turnRadius of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxAngularVelocityInDegrees
+    @cmdtype setter
+    @property MaxAngularVelocityInDegrees
+    @info 
+      Sets/gets the maximum orientation change in degrees per second
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxAngularVelocityInDegrees
+    @cmdtype getter
+    @property MaxAngularVelocityInDegrees
+    @info 
+      Sets/gets the maximum orientation change in degrees per second
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetJumpHeight
+    @cmdtype setter
+    @property JumpHeight
+    @info 
+      Sets/gets the jump height
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetJumpHeight
+    @cmdtype getter
+    @property JumpHeight
+    @info 
+      Sets/gets the jump height
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSize
+    @cmdtype setter
+    @property Size
+    @info 
+      Sets/gets the size of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSize
+    @cmdtype getter
+    @property Size
+    @info 
+      Sets/gets the size of the component
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxClimbSlope
+    @cmdtype setter
+    @property MaxClimbSlope
+    @info 
+      Sets/gets the max climb slope
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxClimbSlope
+    @cmdtype getter
+    @property MaxClimbSlope
+    @info 
+      Sets/gets the max climb slope
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFallingDamageRatio
+    @cmdtype setter
+    @property FallingDamageRatio
+    @info 
+      Sets/gets the falling damage ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFallingDamageRatio
+    @cmdtype getter
+    @property FallingDamageRatio
+    @info 
+      Sets/gets the falling damage ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEyeHeight
+    @cmdtype setter
+    @property EyeHeight
+    @info 
+      Sets/gets the eye height
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEyeHeight
+    @cmdtype getter
+    @property EyeHeight
+    @info 
+      Sets/gets the eye height
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetUseRange
+    @cmdtype setter
+    @property UseRange
+    @info 
+      Sets/gets the 'use' range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetUseRange
+    @cmdtype getter
+    @property UseRange
+    @info 
+      Sets/gets the 'use' range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCanBeCarried
+    @cmdtype setter
+    @property CanBeCarried
+    @info 
+      Sets/gets if can be carried
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CanBeCarried
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      Sets/gets if can be carried
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPickUp
+    @cmdtype setter
+    @property PickUp
+    @info 
+      Sets/gets pickup property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPickUp
+    @cmdtype getter
+    @property PickUp
+    @info 
+      Sets/gets pickup property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetInventorySize
+    @cmdtype setter
+    @property InventorySize
+    @info 
+      Sets/gets the size inventory
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetInventorySize
+    @cmdtype getter
+    @property InventorySize
+    @info 
+      Sets/gets the size inventory
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxHealth
+    @cmdtype setter
+    @property MaxHealth
+    @info 
+      Sets/gets the value for the max health
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxHealth
+    @cmdtype getter
+    @property MaxHealth
+    @info 
+      Sets/gets the value for the max health
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRegenThreshold
+    @cmdtype setter
+    @property RegenThreshold
+    @info 
+      Sets/gets the value for the regen threshold
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRegenThreshold
+    @cmdtype getter
+    @property RegenThreshold
+    @info 
+      Sets/gets the value for the regen threshold
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRegenAmount
+    @cmdtype setter
+    @property RegenAmount
+    @info 
+      Sets/gets the value for the regent amount
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRegenAmount
+    @cmdtype getter
+    @property RegenAmount
+    @info 
+      Sets/gets the value for the regent amount
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGameplayLivingState
+    @cmdtype setter
+    @property GameplayLivingState
+    @info 
+      Sets/gets the state (for persistence only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGameplayLivingState
+    @cmdtype getter
+    @property GameplayLivingState
+    @info 
+      Sets/gets the state (for persistence only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCanBeStunned
+    @cmdtype setter
+    @property CanBeStunned
+    @info 
+      Sets/gets 'can be stunned' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CanBeStunned
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      Sets/gets 'can be stunned' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCanBeIncapacitated
+    @cmdtype setter
+    @property CanBeIncapacitated
+    @info 
+      Sets/gets 'can be incapatitated' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CanBeIncapacitated
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      Sets/gets 'can be incapatitated' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCanBeKilled
+    @cmdtype setter
+    @property CanBeKilled
+    @info 
+      Sets/gets 'can be killed' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd CanBeKilled
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      Sets/gets 'can be killed' property
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetNeedsAir
+    @cmdtype setter
+    @property NeedsAir
+    @info 
+      Sets/gets if the entity needs air
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNeedsAir
+    @cmdtype getter
+    @property NeedsAir
+    @info 
+      Sets/gets if the entity needs air
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBreathMax
+    @cmdtype setter
+    @property BreathMax
+    @info 
+      Sets/gets breathMax
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBreathMax
+    @cmdtype getter
+    @property BreathMax
+    @info 
+      Sets/gets breathMax
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBreathLossAmount
+    @cmdtype setter
+    @property BreathLossAmount
+    @info 
+      Sets/gets breathLossAmount
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBreathLossAmount
+    @cmdtype getter
+    @property BreathLossAmount
+    @info 
+      Sets/gets breathLossAmount
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBreathLossSpeed
+    @cmdtype setter
+    @property BreathLossSpeed
+    @info 
+      Sets/gets breathLossSpeed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBreathLossSpeed
+    @cmdtype getter
+    @property BreathLossSpeed
+    @info 
+      Sets/gets breathLossSpeed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBreathRecoverySpeed
+    @cmdtype setter
+    @property BreathRecoverySpeed
+    @info 
+      Sets/gets breathRecoverySpeed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBreathRecoverySpeed
+    @cmdtype getter
+    @property BreathRecoverySpeed
+    @info 
+      Sets/gets breathRecoverySpeed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSightRadius
+    @cmdtype setter
+    @property SightRadius
+    @info 
+      Sets/gets sight radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSightRadius
+    @cmdtype getter
+    @property SightRadius
+    @info 
+      Sets/gets sight radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFOVAngle
+    @cmdtype setter
+    @property FOVAngle
+    @info 
+      Sets/gets FOV angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFOVAngle
+    @cmdtype getter
+    @property FOVAngle
+    @info 
+      Sets/gets FOV angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHearingRadius
+    @cmdtype setter
+    @property HearingRadius
+    @info 
+      Sets/gets hearing radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetHearingRadius
+    @cmdtype getter
+    @property HearingRadius
+    @info 
+      Sets/gets hearing radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFeelingRadius
+    @cmdtype setter
+    @property FeelingRadius
+    @info 
+      Sets/gets feeling radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFeelingRadius
+    @cmdtype getter
+    @property FeelingRadius
+    @info 
+      Sets/gets feeling radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMemoryTime
+    @cmdtype setter
+    @property MemoryTime
+    @info 
+      Sets/gets memory time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMemoryTime
+    @cmdtype getter
+    @property MemoryTime
+    @info 
+      Sets/gets memory time
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCommRadius
+    @cmdtype setter
+    @property CommRadius
+    @info 
+      Sets/gets communication radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCommRadius
+    @cmdtype getter
+    @property CommRadius
+    @info 
+      Sets/gets communication radius
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCommIntensity
+    @cmdtype setter
+    @property CommIntensity
+    @info 
+      Sets/gets communication intensity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetCommIntensity
+    @cmdtype getter
+    @property CommIntensity
+    @info 
+      Sets/gets communication intensity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMeleeRange
+    @cmdtype setter
+    @property MeleeRange
+    @info 
+      Sets/gets melee range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMeleeRange
+    @cmdtype getter
+    @property MeleeRange
+    @info 
+      Sets/gets melee range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMeleeWidth
+    @cmdtype setter
+    @property MeleeWidth
+    @info 
+      Sets/gets melee width
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMeleeWidth
+    @cmdtype getter
+    @property MeleeWidth
+    @info 
+      Sets/gets melee width
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAttackSpeed
+    @cmdtype setter
+    @property AttackSpeed
+    @info 
+      Sets/gets attack speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAttackSpeed
+    @cmdtype getter
+    @property AttackSpeed
+    @info 
+      Sets/gets attack speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDamageModification
+    @cmdtype setter
+    @property DamageModification
+    @info 
+      Sets/gets damage modification for a concrete body part
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultSpeed
+    @cmdtype setter
+    @property MultSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultSpeed
+    @cmdtype getter
+    @property MultSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRunMultSpeed
+    @cmdtype setter
+    @property RunMultSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRunMultSpeed
+    @cmdtype getter
+    @property RunMultSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultRunIronsightSpeed
+    @cmdtype setter
+    @property MultRunIronsightSpeed
+    @info 
+      Sets/gets mult run ironsight speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultRunIronsightSpeed
+    @cmdtype getter
+    @property MultRunIronsightSpeed
+    @info 
+      Sets/gets mult run ironsight speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultIronsightSpeed
+    @cmdtype setter
+    @property MultIronsightSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultIronsightSpeed
+    @cmdtype getter
+    @property MultIronsightSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultProneIronSightSpeed
+    @cmdtype setter
+    @property MultProneIronSightSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultProneIronSightSpeed
+    @cmdtype getter
+    @property MultProneIronSightSpeed
+    @info 
+      Sets/gets mult speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultProneSpeed
+    @cmdtype setter
+    @property MultProneSpeed
+    @info 
+      Sets/gets mult prone speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultProneSpeed
+    @cmdtype getter
+    @property MultProneSpeed
+    @info 
+      Sets/gets mult prone speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultSwimSpeed
+    @cmdtype setter
+    @property MultSwimSpeed
+    @info 
+      Sets/gets mult swim speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultSwimSpeed
+    @cmdtype getter
+    @property MultSwimSpeed
+    @info 
+      Sets/gets mult swim speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultCrouchSpeed
+    @cmdtype setter
+    @property MultCrouchSpeed
+    @info 
+      Sets/gets mult crouch speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultCrouchSpeed
+    @cmdtype getter
+    @property MultCrouchSpeed
+    @info 
+      Sets/gets mult crouch speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultCrouchIronSightSpeed
+    @cmdtype setter
+    @property MultCrouchIronSightSpeed
+    @info 
+      Sets/gets mult crouch ironsight speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultCrouchIronSightSpeed
+    @cmdtype getter
+    @property MultCrouchIronSightSpeed
+    @info 
+      Sets/gets mult crouch ironsight speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMultRunSpeed
+    @cmdtype setter
+    @property MultRunSpeed
+    @info 
+      Sets/gets mult run speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMultRunSpeed
+    @cmdtype getter
+    @property MultRunSpeed
+    @info 
+      Sets/gets mult run speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetJumpSpeed
+    @cmdtype setter
+    @property JumpSpeed
+    @info 
+      Sets/gets jump speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetJumpSpeed
+    @cmdtype getter
+    @property JumpSpeed
+    @info 
+      Sets/gets jump speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDamageModification
+    @output
+      f(unnamed) -- No info
+    @input
+      v
+    @info 
+      Sets/gets damage modification for a concrete body part
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd ResetRingsInfo
+    @output
+      v
+    @input
+      v
+    @info 
+      Reset rings information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddFightRing
+    @output
+      v
+    @input
+      f(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      Add a fight ring information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveFightRing
+    @output
+      v
+    @input
+      f(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      Remove a fight ring information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveFightRingIndex
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      Remove a fight ring information using an index
+*/

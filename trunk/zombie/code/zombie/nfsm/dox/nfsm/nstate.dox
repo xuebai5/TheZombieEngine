@@ -1,0 +1,79 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nstate
+    @cppclass nState
+    @superclass nRoot
+    @classinfo
+      Base class for any state of a finite state machine.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddTransition
+    @output
+      v
+    @input
+      o(Transition)
+    @info 
+      Add a transition from this state to one or more target states (the transition MUST HAVE a condition)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveTransition
+    @output
+      v
+    @input
+      o(Transition)
+    @info 
+      Remove a transition from this state (it does NOT release the transition)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd DeleteTransition
+    @output
+      v
+    @input
+      o(Transition)
+    @info 
+      Delete a transition from this state (it releases the transition)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddEmotionalAction
+    @output
+      v
+    @input
+      o(Action desc.)
+    @info 
+      Add an emotional action to the state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveEmotionalAction
+    @output
+      v
+    @input
+      o(Action desc.)
+    @info 
+      Delete an emotional action from the state (it does NOT release the action)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd DeleteEmotionalAction
+    @output
+      v
+    @input
+      o(Action desc.)
+    @info 
+      Delete an emotional action from the state (it releases the action)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddTransitionByName
+    @output
+      v
+    @input
+      s(Transition name) -- No info
+    @info 
+      Add a transition by its name (used for persistence)
+*/

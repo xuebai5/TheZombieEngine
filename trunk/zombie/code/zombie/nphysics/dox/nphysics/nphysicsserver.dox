@@ -1,0 +1,19 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nphysicsserver
+    @cppclass nPhysicsServer
+    @superclass nRoot
+    @classinfo
+      The physics server takes care of creating and managing the physics world.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Add
+    @output
+      v
+    @input
+      v
+    @info 
+      adds a world to the container
+*/

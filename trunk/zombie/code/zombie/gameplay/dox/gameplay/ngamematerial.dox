@@ -1,0 +1,95 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngamematerial
+    @cppclass nGameMaterial
+    @superclass nRoot
+    @classinfo
+      Represents a game material.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property PhysicsMaterial
+    @format
+      o(PhysicsMaterial) -- sets physics material
+    @attrs
+    @info
+      sets physics material
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Hard
+    @format
+      b(Hard) -- sets if material is hard
+    @attrs
+    @info
+      Hard material flag
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGameMaterialName
+    @cmdtype getter
+    @property GameMaterialName
+    @info 
+      returns the game material name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Update
+    @output
+      v
+    @input
+      v
+    @info 
+      updates the information (should be called after the material properties had been changed)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGameMaterialId
+    @cmdtype getter
+    @property GameMaterialId
+    @info 
+      returns the game material id
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPhysicsMaterial
+    @cmdtype setter
+    @property PhysicsMaterial
+    @info 
+      sets physics material
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPhysicsMaterial
+    @cmdtype getter
+    @property PhysicsMaterial
+    @info 
+      gets the physics material
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHard
+    @cmdtype setter
+    @property Hard
+    @info 
+      sets the hard flag of material
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetHard
+    @cmdtype getter
+    @property Hard
+    @info 
+      gets the hard flag of material
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Add
+    @output
+      v
+    @input
+      v
+    @info 
+      adds himself to the server
+*/
