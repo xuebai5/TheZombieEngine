@@ -1,0 +1,117 @@
+#-------------------------------------------------------------------------------
+#   NavMeshBuilder build file
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# BEGIN MODULES
+#-------------------------------------------------------------------------------
+
+beginmodule ncnavnode
+    setdir ncnavnode
+    setheaders { ncnavnode }
+    setfiles { ncnavnode_main }
+endmodule
+
+beginmodule nnavmesh
+    setdir nnavmesh
+    setheaders { nnavmesh }
+    setfiles { nnavmesh }
+endmodule
+
+beginmodule ncnavmesh
+    setdir ncnavmesh
+    setheaders { ncnavmesh }
+    setfiles { ncnavmesh_main }
+endmodule
+
+beginmodule ncnavmeshnode
+    setdir ncnavmesh
+    setheaders { ncnavmeshnode }
+    setfiles { ncnavmeshnode_main }
+endmodule
+
+beginmodule ncnavmeshobstacle
+    setdir ncnavmesh
+    setheaders { ncnavmeshobstacle }
+    setfiles { ncnavmeshobstacle_main }
+endmodule
+
+beginmodule nnavmeshbuilder
+    setdir nnavmeshbuilder
+    setheaders { nnavmeshbuilder }
+    setfiles { nnavmeshbuilder }
+endmodule
+
+beginmodule nnavmeshparser
+    setdir nnavmeshparser
+    setheaders {
+        nnavmeshfile
+        nnavmeshfilereader
+        nnavmeshfilewriter
+        nnavmeshpersist
+        navtag
+        navblockparser
+        navrootparser
+        navmeshparser
+        navmeshnodeparser
+        navmeshnodelinksparser
+        navpolygonparser
+        navgraphparser
+        navobstaclesparser
+        navparserfactory
+    }
+    setfiles {
+        nnavmeshfile
+        nnavmeshfilereader
+        nnavmeshfilewriter
+        nnavmeshpersist
+        navtag
+        navblockparser
+        navrootparser
+        navmeshparser
+        navmeshnodeparser
+        navmeshnodelinksparser
+        navpolygonparser
+        navgraphparser
+        navobstaclesparser
+        navparserfactory
+    }
+endmodule
+
+beginmodule ndelaunay
+    setdir ndelaunay
+    setheaders { ndelaunay }
+    setfiles { ndelaunay }
+endmodule
+
+beginmodule nnavutils
+    setdir nnavmesh
+    setheaders { nnavutils }
+    setfiles { nnavutils }
+endmodule
+
+#-------------------------------------------------------------------------------
+# BEGIN TARGETS
+#-------------------------------------------------------------------------------
+
+begintarget nnavmesh
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        ncnavnode
+        nnavmesh
+        ncnavmesh
+        ncnavmeshnode
+        ncnavmeshobstacle
+        nnavmeshbuilder
+        nnavmeshparser
+        ndelaunay
+        nnavutils
+    }
+endtarget
+
+
+#-------------------------------------------------------------------------------
+# EOF
+#-------------------------------------------------------------------------------

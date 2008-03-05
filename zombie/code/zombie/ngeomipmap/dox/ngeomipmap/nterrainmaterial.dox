@@ -1,0 +1,285 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nterrainmaterial
+    @cppclass nTerrainMaterial
+    @superclass nObject
+    @classinfo
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property TextureFileName
+    @format
+      s(TextureFileName) -- get texture path for this layer
+    @attrs
+    @info
+      get texture path for this layer
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Projection
+    @format
+      i(Projection) -- get projection type
+    @attrs
+    @info
+      get projection type
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property UVScale
+    @format
+      v
+    @attrs
+    @info
+      get UV scaling
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LayerHandle
+    @format
+      i(LayerHandle) -- Set layer handle
+    @attrs
+    @info
+      Set layer handle
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property MaskColor
+    @format
+      ffff(MaskColor) -- No info
+    @attrs
+    @info
+      No info
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Label
+    @format
+      s(Label)  -- No info
+    @attrs
+    @info
+      No info
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LayerPath
+    @format
+      s(LayerPath) -- No info
+    @attrs
+    @info
+      No info
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LayerUsePath
+    @format
+      s(LayerUsePath) -- No info
+    @attrs
+    @info
+      No info
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property IndexMapSize
+    @format
+      i(IndexMapSize) -- No info
+    @attrs
+    @info
+      No info
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd LoadResources
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      load resources
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTextureFileName
+    @cmdtype setter
+    @property TextureFileName
+    @info 
+      set the texture to use for this terrain layer
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTextureFileName
+    @cmdtype getter
+    @property TextureFileName
+    @info 
+      get texture path for this layer
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetProjection
+    @cmdtype setter
+    @property Projection
+    @info 
+      set projection type
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetProjection
+    @cmdtype getter
+    @property Projection
+    @info 
+      get projection type
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetUVScale
+    @cmdtype setter
+    @property UVScale
+    @info 
+      set UV scaling
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetUVScale
+    @cmdtype getter
+    @property UVScale
+    @info 
+      get UV scaling
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayerHandle
+    @cmdtype getter
+    @property LayerHandle
+    @info 
+      get layer handle
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLayerHandle
+    @cmdtype setter
+    @property LayerHandle
+    @info 
+      Set layer handle
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTextureThumbnail
+    @output
+      s(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaskColor
+    @cmdtype setter
+    @property MaskColor
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaskColor
+    @cmdtype getter
+    @property MaskColor
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLabel
+    @cmdtype setter
+    @property Label
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLabel
+    @cmdtype getter
+    @property Label
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLayerPath
+    @cmdtype setter
+    @property LayerPath
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayerPath
+    @cmdtype getter
+    @property LayerPath
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLayerUsePath
+    @cmdtype setter
+    @property LayerUsePath
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayerUsePath
+    @cmdtype getter
+    @property LayerUsePath
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetIndexMapSize
+    @cmdtype setter
+    @property IndexMapSize
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetIndexMapSize
+    @cmdtype getter
+    @property IndexMapSize
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------

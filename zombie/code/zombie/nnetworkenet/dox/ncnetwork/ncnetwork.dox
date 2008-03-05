@@ -1,0 +1,89 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Common
+    @cppclass ncNetwork
+    @superclass nEntityObject
+    @classinfo
+      Component Object that control the network behaviour.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LocalRoleName
+    @format
+      s(LocalRoleName;enums=none:"none",dumb:"dumb",simulated:"simulated",autonomous:"autonomous",authority:"authority") -- Local role of entity
+    @attrs
+    @info
+      set the local role of entity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RemoteRoleName
+    @format
+      s(RemoteRoleName;enums=none:"none",dumb:"dumb",simulated:"simulated",autonomous:"autonomous",authority:"authority") -- Remote role of entity
+    @attrs
+    @info
+      set the remote role of entity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsModified
+    @output
+      b(unnamed)
+    @input
+      v
+    @info 
+      say if the entity is modified
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetModified
+    @output
+      v
+    @input
+      v
+    @info 
+      set that the entity is modified
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetUpdated
+    @output
+      v
+    @input
+      v
+    @info 
+      set that the entity is clean, and not need to network update
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLocalRoleName
+    @cmdtype setter
+    @property LocalRoleName
+    @info 
+      set the local role of entity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLocalRoleName
+    @cmdtype getter
+    @property LocalRoleName
+    @info 
+      get the local role of entity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRemoteRoleName
+    @cmdtype setter
+    @property RemoteRoleName
+    @info 
+      set the remote role of entity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRemoteRoleName
+    @cmdtype getter
+    @property RemoteRoleName
+    @info 
+      get the remote role of entity
+*/

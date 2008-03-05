@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RenderPath name="dx7" shaderpath="home:data/shaders/fixed">
+
+    <!-- declare shaders and technique aliases -->
+    <Shaders>
+        <Shader name="passes" file="shaders:trag_passes.fx" />
+        <Shader name="phases" file="shaders:trag_phases.fx" />
+        <Shader name="terrain" file="shaders:trag_terrain.fx" />
+        <Shader name="nocull" file="shaders:trag_sequences.fx" technique="tSeqNoCull" />
+        <Shader name="depthbias" file="shaders:trag_sequences.fx" technique="tSeqDepthBias" />
+        <Shader name="linearfog" file="shaders:trag_sequences.fx" technique="tSeqLinearFog" />
+        <Shader name="depthbiaslinearfog" file="shaders:trag_sequences.fx" technique="tSeqDepthBiasLinearFog" />
+        <Shader name="alphatest" file="shaders:trag_sequences.fx" technique="tSeqAlphaTest" />
+        <Shader name="alphatestnocull" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestNoCull" />
+        <Shader name="alphatestlinearfog" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestLinearFog" />
+        <Shader name="alphatestnoculllinearfog" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestNoCullLinearFog" />
+    </Shaders>
+
+    <!-- define render targets -->
+    <RenderTarget name="Scene"       format="A8R8G8B8"      relSize="1.0" />
+    <RenderTarget name="Emissive"    format="X8R8G8B8"      relSize="1.0" />
+    <RenderTarget name="SceneHalf"   format="A8R8G8B8"      relSize="0.5" />
+    <RenderTarget name="SceneScaled" format="A8R8G8B8"      relSize="0.25" />
+    <RenderTarget name="BrightPass0" format="X8R8G8B8"      relSize="0.25" />
+    <RenderTarget name="BrightPass1" format="X8R8G8B8"      relSize="0.25" />
+    <RenderTarget name="BloomSource" format="X8R8G8B8"      relSize="0.125" />
+    <RenderTarget name="Bloom0"      format="X8R8G8B8"      relSize="0.125" />
+    <RenderTarget name="Bloom1"      format="X8R8G8B8"      relSize="0.125" />
+    <RenderTarget name="Bloom2"      format="X8R8G8B8"      relSize="0.125" />
+
+    <!-- declare variables -->
+    <Float4 name="Luminance"   value="0.299 0.587 0.114 0.0" />
+    <Float4 name="Balance"     value="1.0 1.0 1.0 1.0" />
+    <Float  name="Saturation"  value="1.0" />
+    <Float4 name="ShadowColor" value="0.0 0.0 0.0 0.5" />
+    <Float  name="HdrBrightPassThreshold" value="0.7" />
+    <Float  name="HdrBrightPassOffset"    value="1.0" />
+    <Float  name="HdrEmissiveFactor"      value="1.0" />
+    <Float  name="HdrBloomScale"          value="1.0" />
+    <Int    name="ShadowSrcBlend" value="1" />
+    <Int    name="ShadowDstBlend" value="2" />
+
+    <!-- render the scene into the Scene floating point buffer -->
+    <Pass name="Color" shader="shaders:trag_passes.fx" technique="tPassColor" renderTarget="Scene" clearColor="0.5 0.5 0.5 1.0" clearDepth="1.0" clearStencil="0">
+        <Phase name="depth" shader="shaders:trag_phases.fx" technique="tPhaseDepth" restore="Yes" fourcc="dept" sort="Surface" lights="Off" flags="ShapeVisible">
+            <Sequence shader="alphatest" />
+            <Sequence shader="nocull" />
+        </Phase>
+        <Phase name="instanced" fourcc="inst" sort="Surface" lights="On" flags="ShapeVisible">
+            <Sequence shader="alphatest" />
+            <Sequence shader="nocull" />
+            <Sequence shader="linearfog" />
+            <Sequence shader="alphatestnocull" />
+            <Sequence shader="alphatestlinearfog" />
+            <Sequence shader="alphatestnoculllinearfog" />
+        </Phase>
+        <Phase name="opaque" shader="shaders:trag_phases.fx" technique="tPhaseOpaque" restore="Yes" fourcc="colr" sort="Surface" lights="On" flags="ShapeVisible">
+            <Sequence shader="nocull" />
+            <Sequence shader="depthbias" />
+            <Sequence shader="linearfog" />
+            <Sequence shader="depthbiaslinearfog" />
+        </Phase>
+        <Phase name="terrain0" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm0" sort="Surface" lights="On">
+            <Sequence shader="linearfog" />
+        </Phase>
+        <Phase name="terrain1" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm1" sort="Surface" lights="On">
+            <Sequence shader="linearfog" />
+        </Phase>
+        <Phase name="sky" shader="shaders:trag_phases.fx" technique="tPhaseSky" restore="Yes" fourcc="sky0" sort="Surface" lights="Off" flags="ShapeVisible">
+        </Phase>
+        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseAlpha" restore="Yes" fourcc="alph" sort="BackToFront" lights="On" flags="ShapeVisible">
+            <Sequence shader="nocull" />
+            <Sequence shader="depthbias" />
+            <Sequence shader="linearfog" />
+            <Sequence shader="depthbiaslinearfog" />
+        </Phase>
+        <Phase name="laser" shader="shaders:trag_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="lase" sort="Surface" lights="On" flags="ShapeVisible" lightflags="CheckLightEntity" >
+        </Phase>
+        <Phase name="laser2" shader="shaders:trag_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="las2" sort="Surface" lights="Off" flags="ShapeVisible" >
+        </Phase>
+    </Pass>
+
+    <!-- draw stencil shadows -->
+    <Pass name="shadowVolumes" shader="shaders:trag_passes.fx" technique="tPassShadow" clearStencil="0">
+        <Float4 name="AlphaSrcBlend" variable="ShadowSrcBlend" />
+        <Float4 name="AlphaDstBlend" variable="ShadowDstBlend" />
+        <Phase name="shadowvolumes" fourcc="shdv" sort="Surface" lights="On" flags="ShadowVisible" lightflags="RenderOncePerLight">
+        </Phase>
+    </Pass>
+
+    <!-- draw stencil shadows -->
+    <Pass name="shadowPlane" shader="shaders:stencil_plane.fx" restore="Yes" renderTarget="Scene" drawQuad="Yes" shadowEnabledCondition="Yes">
+        <Float4 name="MatDiffuse" variable="ShadowColor" />
+    </Pass>
+
+    <!-- downscale scene 4x4 into SceneScaled floating point buffer -->
+    <Pass name="DownscaleScene0" shader="shaders:trag_hdr.fx" technique="tDownscale2x2" renderTarget="SceneHalf" drawQuad="Yes">
+        <Texture name="DiffMap0" value="Scene" />
+    </Pass>
+    <Pass name="DownscaleScene1" shader="shaders:trag_hdr.fx" technique="tDownscale2x2" renderTarget="SceneScaled" drawQuad="Yes">
+        <Texture name="DiffMap0" value="SceneHalf" />
+    </Pass>
+
+    <!-- invoke the bright pass filter -->
+    <Pass name="BrightPassFilter" shader="shaders:trag_hdr.fx" technique="tBrightPassFilter" renderTarget="BrightPass0" drawQuad="Yes">
+        <Texture name="DiffMap0" value="SceneScaled" />
+        <Float name="Intensity1" variable="HdrBrightPassThreshold" />
+        <Float name="Intensity2" variable="HdrBrightPassOffset" />
+    </Pass>
+
+    <!-- render emissive pass -->
+    <Pass name="Emissive" shader="shaders:trag_passes.fx" technique="tPassColor" renderTarget="Emissive" clearColor="0.0 0.0 0.0 1.0">
+        <Phase name="emissive" shader="shaders:trag_phases.fx" technique="tPhaseEmissive" restore="Yes" fourcc="emis" sort="Surface" lights="On" flags="ShapeVisible">
+        </Phase>
+    </Pass>
+
+    <!-- add the emissive pass to the bright pass -->
+    <Pass name="BrightPassEmissive" shader="shaders:trag_hdr.fx" technique="tCombine" renderTarget="BrightPass1" drawQuad="Yes">
+        <Texture name="DiffMap0" value="BrightPass0" />
+        <Texture name="DiffMap1" value="Emissive" />
+        <Float name="Intensity0" variable="HdrEmissiveFactor" />
+    </Pass>
+
+    <!-- create bloom effect -->
+    <Pass name="BrightPassToBloomSource" shader="shaders:trag_hdr.fx" technique="tGaussBlur5x5" renderTarget="BloomSource" drawQuad="Yes">
+        <Texture name="DiffMap0" value="BrightPass1" />
+    </Pass>
+    <Pass name="Bloom1" shader="shaders:trag_hdr.fx" technique="tGaussBlur5x5" renderTarget="Bloom0" drawQuad="Yes">
+        <Texture name="DiffMap0" value="BloomSource" />
+    </Pass>
+    <Pass name="Bloom2" shader="shaders:trag_hdr.fx" technique="tBloomHori" renderTarget="Bloom1" drawQuad="Yes">
+        <Texture name="DiffMap0" value="Bloom0" />
+    </Pass>
+    <Pass name="Bloom3" shader="shaders:trag_hdr.fx" technique="tBloomVert" renderTarget="Bloom2" drawQuad="Yes">
+        <Texture name="DiffMap0" value="Bloom1" />
+    </Pass>
+
+    <!-- compose the final frame -->
+    <Pass name="compose" shader="shaders:trag_hdr.fx" technique="tCompose" drawQuad="Yes">
+        <Texture name="DiffMap0" value="Scene" />
+        <Texture name="DiffMap2" value="Bloom2" />
+        <Float4 name="MatDiffuse" variable="Balance" />
+        <Float4 name="MatAmbient" variable="Luminance" />
+        <Float name="Intensity0" variable="Saturation" />
+        <Float name="Intensity1" variable="HdrBloomScale" />
+    </Pass>
+
+    <Pass name="overlay" shader="shaders:trag_passes.fx" technique="tPassColor">
+        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseOverlay" restore="true" fourcc="over" sort="Surface" lights="Off" flags="ShapeVisible">
+        </Phase>
+    </Pass>
+
+    <Pass name="Editor" >
+        <Phase name="editor" fourcc="edit" sort="Surface" lights="Off">
+        </Phase>
+        <Phase name="grassedition" fourcc="gmge" sort="Surface" lights="Off">
+        </Phase>
+    </Pass>
+
+    <!-- compose the final frame -->
+    <!--Pass name="compose" shader="shaders:trag_hdr.fx" technique="tCopy" drawQuad="Yes">
+        <Texture name="DiffMap0" value="BrightPass1" />
+    </Pass-->
+
+</RenderPath>

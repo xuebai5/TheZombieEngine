@@ -1,0 +1,41 @@
+
+#-------------------------------------------------------------------------------
+# BEGIN MODULES
+#-------------------------------------------------------------------------------
+
+beginmodule ngpactionmanager
+  setdir ngpactionmanager
+  setheaders { ngpactionmanager }
+  setfiles { ngpactionmanager }
+endmodule
+
+beginmodule ngpbasicaction
+  setdir ngpbasicaction
+  setheaders { ngpbasicaction }
+  setfiles { ngpbasicaction }
+endmodule
+
+beginmodule gpactionscript  
+  setdir gpactionscript  
+  setheaders { ngpactionscript }  
+  setfiles { ngpactionscript }  
+endmodule  
+
+#-------------------------------------------------------------------------------
+# BEGIN TARGETS
+#-------------------------------------------------------------------------------
+
+begintarget gpbasicactions
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        ngpactionmanager
+        ngpbasicaction
+        gpactionscript
+    }
+endtarget
+
+#-------------------------------------------------------------------------------
+# EOF
+#-------------------------------------------------------------------------------

@@ -1,0 +1,135 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Common
+    @cppclass ncAreaEvent
+    @superclass nEntityObject
+    @classinfo
+      Component for storing the area events that an entity emit.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EventSourceByIndex
+    @format
+      i(Index) -- No info
+      i(Source) -- Entity source id
+    @attrs
+    @info
+      Set the source entity id of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EventDurationByIndex
+    @format
+      i(Index) -- No info
+      i(Time) -- Duration in ticks, 0 for infinite
+    @attrs
+    @info
+      Set the duration of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EventPriorityByIndex
+    @format
+      i(Index) -- No info
+      i(Priority) -- Lower numbers have higher priority
+    @attrs
+    @info
+      Set the priority of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd PostAddEvent
+    @output
+      v
+    @input
+      s(Even type) -- Persistent type id
+      i(Source) -- Entity source id
+      i(Emitter) -- Entity emitter id
+      i(Duration) -- Duration in ticks, 0 for infinite
+      i(Priority) -- Lower numbers have higher priority
+    @info 
+      Post a command to the trigger server to create a new event
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventsCount
+    @cmdtype getter
+    @property EventsCount
+    @info 
+      Get the number of events emitted
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventIdByIndex
+    @output
+      i(Event id) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get the id of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventTypeByIndex
+    @output
+      i(Event type) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      Get the type of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEventSourceByIndex
+    @cmdtype setter
+    @property EventSourceByIndex
+    @info 
+      Set the source entity id of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventSourceByIndex
+    @output
+      o(Source) -- Entity source id
+    @input
+      i(Index) -- No info
+    @info 
+      Get the source entity id of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEventDurationByIndex
+    @cmdtype setter
+    @property EventDurationByIndex
+    @info 
+      Set the duration of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventDurationByIndex
+    @output
+      i(Time) -- Duration in ticks, 0 for infinite
+    @input
+      i(Index) -- No info
+    @info 
+      Get the duration of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEventPriorityByIndex
+    @cmdtype setter
+    @property EventPriorityByIndex
+    @info 
+      Set the priority of an event by index
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEventPriorityByIndex
+    @output
+      i(Priority) -- Lower numbers have higher priority
+    @input
+      i(Index) -- No info
+    @info 
+      Get the priority of an event by index
+*/

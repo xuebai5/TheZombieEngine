@@ -1,0 +1,65 @@
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nscenenode
+    @cppclass nSceneNode
+    @superclass nRoot
+    @classinfo
+       No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property FirstAnimator
+    @format
+      o(animator) -- access to first animation  to edition, temporal solution
+    @info
+      access to first animation  to edition, temporal solution
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property RenderPri
+    @format
+      i(Priority) -- Render priority
+    @info
+      Render priority
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd SetFirstAnimator
+	@cmdtype setter
+	@property FirstAnimator
+    @info
+        Set the first animation  to edition, temporal solution
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetFirstAnimator
+	@cmdtype getter
+	@property FirstAnimator
+    @info
+     Get the first animation  to edition, temporal solution
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd SetRenderPri
+	@cmdtype setter
+	@property RenderPri
+    @info
+        Set the render priority
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetRenderPri
+	@cmdtype getter
+	@property RenderPri
+    @info
+     Get the render priority
+*/

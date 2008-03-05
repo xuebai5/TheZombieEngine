@@ -1,0 +1,37 @@
+#===============================================================================
+#  toolchain.bld
+#  The Nebula2 toolchain for managing meshes and textures
+#
+#  Modules:
+#      nouputdebugproxy
+#  Targets:
+#      nouputdebugproxylib
+#===============================================================================
+
+#===============================================================================
+#  toolchain modules
+#===============================================================================
+beginmodule noutputdebugproxy
+    annotate "This is for change the ouputdebugString"
+    setdir tools
+    setfiles { 
+        noutputdebugproxy_main
+    }
+    setheaders {
+        noutputdebugproxy
+    }
+    setmoduledeps  { nkernel }
+endmodule
+#-------------------------------------------------------------------------------
+begintarget noutputdebugproxylib
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules { noutputdebugproxy }
+    settargetdeps {
+        nkernel
+    }
+    setglobalcompileroptions_vc { "/I ../../../../detours/include" }
+    setcompileroptionsvc { "/I ../../../../detours/include" }
+endtarget
+#-------------------------------------------------------------------------------

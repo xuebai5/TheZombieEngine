@@ -1,0 +1,125 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Ragdoll Interface
+    @cppclass ncRagDollClass
+    @superclass 
+    @classinfo
+      A rag doll communality interface.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RagType
+    @format
+      s(RagType) -- No info
+    @attrs
+    @info
+      set ragdoll type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RagdollJoint
+    @format
+      i(RagdollJoint) -- No info
+      i(RagdollJoint) -- No info
+    @attrs
+    @info
+      set ragdoll joint for the local joint
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property JointCorrespondence
+    @format
+      i(JointCorrespondence) -- No info
+      i(JointCorrespondence) -- No info
+      i(JointCorrespondence) -- No info
+    @attrs
+    @info
+      (lod, lodjoint, gfxragjoint)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRagType
+    @cmdtype setter
+    @property RagType
+    @info 
+      set ragdoll type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRagType
+    @cmdtype getter
+    @property RagType
+    @info 
+      get ragdoll type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRagdollJoint
+    @cmdtype setter
+    @property RagdollJoint
+    @info 
+      set ragdoll joint for the local joint
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRagdollJoint
+    @output
+      i(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get ragdoll joint for the local joint
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetJointCorrespondence
+    @cmdtype setter
+    @property JointCorrespondence
+    @info 
+      (lod, lodjoint, gfxragjoint)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGfxLodJointCorrespondence
+    @output
+      i(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      (lod, gfxragjoint)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGfxRagJointCorrespondence
+    @output
+      i(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      (lod, lodragjoint)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGfxLodJointCorrespondenceByIndex
+    @output
+      i(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      (lod, gfxragjoint)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGfxRagJointCorrespondenceByIndex
+    @output
+      i(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      (lod, lodragjoint)
+*/

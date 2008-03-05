@@ -1,0 +1,307 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Gameplay
+    @cppclass ncGamePlayDoor
+    @superclass ncGameplay
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Attributes
+    @format
+      i(Attributes;enums=none:0,free:1,closealone:2) -- Door Attibutes
+    @attrs
+    @info
+      sets attribs to the door
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SliddingSpeed
+    @format
+      f(SliddingSpeed) -- No info
+    @attrs
+    @info
+      sets the slidding speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SliddingLenght
+    @format
+      f(SliddingLenght) -- No info
+    @attrs
+    @info
+      sets the slidding lenght
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AngleSpeed
+    @format
+      f(AngleSpeed;min=-359;max=359;step=1;editor=slider) -- Door's openning angle
+    @attrs
+    @info
+      sets the angle speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property OpeningAngle
+    @format
+      f(OpeningAngle;min=-359;max=359;step=1;editor=slider) -- Door's openning angle
+    @attrs
+    @info
+      sets the openning angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property WaitingTime
+    @format
+      f(WaitingTime) -- No info
+    @attrs
+    @info
+      sets the waiting time b4 closing
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetType
+    @cmdtype getter
+    @property Type
+    @info 
+      returns the door type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetType
+    @cmdtype setter
+    @property Type
+    @info 
+      sets the door type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAttributes
+    @cmdtype getter
+    @property Attributes
+    @info 
+      gets doors attributes
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAttributes
+    @cmdtype setter
+    @property Attributes
+    @info 
+      sets attribs to the door
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsLocked
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      returns if the door is locked
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Lock
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      locks the door
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Unlock
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      unlocks the door
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Open
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      opens the door
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Close
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      close door
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsClosed
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      returns if the door is close
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsOpened
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      returns if the door is opened
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsBroken
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      returns if the door is broken
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDoorEntityA
+    @cmdtype setter
+    @property DoorEntityA
+    @info 
+      sets the door entity A
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDoorEntityA
+    @cmdtype getter
+    @property DoorEntityA
+    @info 
+      gets the door entity A
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDoorEntityB
+    @cmdtype setter
+    @property DoorEntityB
+    @info 
+      sets the door entity B
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDoorEntityB
+    @cmdtype getter
+    @property DoorEntityB
+    @info 
+      gets the door entity B
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Mount
+    @output
+      v
+    @input
+      v
+    @info 
+      mounts the door
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSliddingSpeed
+    @cmdtype getter
+    @property SliddingSpeed
+    @info 
+      gets the slidding speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSliddingSpeed
+    @cmdtype setter
+    @property SliddingSpeed
+    @info 
+      sets the slidding speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSliddingLenght
+    @cmdtype getter
+    @property SliddingLenght
+    @info 
+      gets the slidding lenght
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSliddingLenght
+    @cmdtype setter
+    @property SliddingLenght
+    @info 
+      sets the slidding lenght
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAngleSpeed
+    @cmdtype getter
+    @property AngleSpeed
+    @info 
+      gets the angle speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAngleSpeed
+    @cmdtype setter
+    @property AngleSpeed
+    @info 
+      sets the angle speed
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetOpeningAngle
+    @cmdtype getter
+    @property OpeningAngle
+    @info 
+      gets the openning angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetOpeningAngle
+    @cmdtype setter
+    @property OpeningAngle
+    @info 
+      sets the openning angle
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWaitingTime
+    @cmdtype getter
+    @property WaitingTime
+    @info 
+      gets the waiting time b4 closing
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWaitingTime
+    @cmdtype setter
+    @property WaitingTime
+    @info 
+      sets the waiting time b4 closing
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd DoAction
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      do action
+*/

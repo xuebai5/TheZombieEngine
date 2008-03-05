@@ -1,0 +1,49 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nphyhingejoint
+    @cppclass nPhyHingeJoint
+    @superclass nPhysicsJoint
+    @classinfo
+      Represents a hinge joint.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Anchor
+    @format
+      fff(Anchor) -- sets the hinge anchor
+    @attrs
+    @info
+      sets the hinge anchor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Axis
+    @format
+      fff(Axis) -- sets the hinge axis
+    @attrs
+    @info
+      sets the hinge axis
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAnchor
+    @cmdtype setter
+    @property Anchor
+    @info 
+      sets the hinge anchor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAxis
+    @cmdtype setter
+    @property Axis
+    @info 
+      sets the hinge axis
+*/
+
+//--------------------------------------------------------------------------------

@@ -1,0 +1,153 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Gameplay
+    @cppclass ncGameplayScavenger
+    @superclass ncGameplayAlien
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Pionering
+    @format
+      b(Pionering) -- No info
+    @attrs
+    @info
+      Changes behaviour states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Harvesting
+    @format
+      b(Harvesting) -- No info
+    @attrs
+    @info
+      Changes behaviour states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property WallClimbing
+    @format
+      b(WallClimbing) -- No info
+    @attrs
+    @info
+      Changes behaviour states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FoodSourceIntensity
+    @format
+      f(FoodSourceIntensity) -- No info
+    @attrs
+    @info
+      Sets/gets the food source intensity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LeftClaw
+    @format
+      v
+    @attrs
+    @info
+      Sets/gets left claw collision object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RightClaw
+    @format
+      v
+    @attrs
+    @info
+      Sets/gets right claw collision object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPionering
+    @cmdtype setter
+    @property Pionering
+    @info 
+      Changes behaviour states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHarvesting
+    @cmdtype setter
+    @property Harvesting
+    @info 
+      Changes behaviour states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWallClimbing
+    @cmdtype setter
+    @property WallClimbing
+    @info 
+      Changes behaviour states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFoodSourceIntensity
+    @cmdtype setter
+    @property FoodSourceIntensity
+    @info 
+      Sets/gets the food source intensity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFoodSourceIntensity
+    @cmdtype getter
+    @property FoodSourceIntensity
+    @info 
+      Sets/gets the food source intensity
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd QuestDoTaunt
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      Ask if it has to do the taunt basic action
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLeftClaw
+    @cmdtype setter
+    @property LeftClaw
+    @info 
+      Sets/gets left claw collision object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLeftClaw
+    @cmdtype getter
+    @property LeftClaw
+    @info 
+      Sets/gets left claw collision object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRightClaw
+    @cmdtype setter
+    @property RightClaw
+    @info 
+      Sets/gets right claw collision object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRightClaw
+    @cmdtype getter
+    @property RightClaw
+    @info 
+      Sets/gets right claw collision object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClawDamage
+    @cmdtype getter
+    @property ClawDamage
+    @info 
+      Get claw damage
+*/

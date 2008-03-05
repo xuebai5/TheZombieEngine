@@ -1,0 +1,164 @@
+#===============================================================================
+#  toolchain.bld
+#  The Nebula2 toolchain for managing meshes and textures
+#
+#  Modules:
+#      nmeshtool
+#      nmeshbuilder
+#      nanimbuilder
+#      nresourcecompiler
+#      napplauncher
+#      nnodelist
+#      nviewerapp
+#      nmayacamcontrol
+#  Targets:
+#      ntoollib
+#      nmeshtool
+#      nnpktool
+#===============================================================================
+
+#===============================================================================
+#  toolchain modules
+#===============================================================================
+beginmodule nmeshtool
+    annotate "Required module nmeshtool.exe"
+    setdir tools
+    setfiles { 
+        nmeshtool
+    }
+    setmoduledeps  { nmeshbuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmeshbuilder
+    setdir tools
+    setfiles { 
+        nmeshbuilder 
+        nmeshbuilder_loadsave 
+        nmeshbuilder_tangent 
+        nmeshbuilder_billboard
+        nmeshbuilder_skin
+        nskinpartitioner
+        nbspbuilder
+    }
+    setheaders { nmeshbuilder nskinpartitioner nbspbuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nanimbuilder
+    setdir tools
+    setfiles { nanimbuilder }
+    setheaders { nanimbuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nnpktool
+    setdir tools
+    setfiles { nnpktool }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nresourcecompiler
+    setdir tools
+    setfiles { nresourcecompiler }
+    setheaders { nresourcecompiler }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule napplauncher
+    setdir tools
+    setfiles { napplauncher }
+    setheaders { napplauncher }
+endmodule
+#-------------------------------------------------------------------------------
+#beginmodule nnodelist
+#    setdir tools
+#    setfiles { nnodelist }
+#    setheaders { nnodelist }
+#endmodule
+#-------------------------------------------------------------------------------
+beginmodule nviewerapp
+    setdir tools
+    setfiles { nviewerapp }
+    setheaders { nviewerapp }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmayacamcontrol
+    setdir tools
+    setfiles { nmayacamcontrol }
+    setheaders { nmayacamcontrol }
+endmodule
+#-------------------------------------------------------------------------------
+
+beginmodule nbmpfile
+    setdir tools
+    setfiles { nbmpfile }
+    setheaders { nbmpfile }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nimagefile
+    setdir tools
+    setfiles { nimagefile }
+    setheaders { nimagefile }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule npixelformat
+    setdir tools
+    setfiles { npixelformat}
+    setheaders { npixelformat}
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nlinedrawer
+    setdir tools
+    setfiles { nlinedrawer_main }
+    setheaders { nlinedrawer }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ntexturebuilder
+    setdir tools
+    setfiles { ntexturebuilder_main }
+    setheaders { ntexturebuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nmonitorserver
+    setdir tools
+    setfiles { nmonitorserver_main nmonitorserver_cmds }
+    setheaders { nmonitorserver }
+endmodule
+#===============================================================================
+#  toolchain Targets
+#===============================================================================
+begintarget ntoollib
+    annotate "Lib that holds the core tool functionality"
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        nmeshbuilder nanimbuilder nresourcecompiler
+        napplauncher nmayacamcontrol nnvx2loader
+        nn3d2loader 
+        nbmpfile
+        nimagefile
+        npixelformat
+        nlinedrawer
+        ntexturebuilder
+        nmonitorserver
+    }
+endtarget
+#        nn3d2loader nnodelist
+#-------------------------------------------------------------------------------
+begintarget nmeshtool
+    settype exe
+    setwarningslevel 4
+    setmodules { nmeshtool }
+    settargetdeps {
+        nkernel
+        ntoollib
+    }
+endtarget
+#-------------------------------------------------------------------------------
+begintarget nnpktool
+    settype exe
+    setwarningslevel 4
+    setpch true
+    setmodules { nnpktool nnpkfileserver}
+    settargetdeps {
+        nkernel
+    }
+endtarget
+#-------------------------------------------------------------------------------

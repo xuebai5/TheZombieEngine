@@ -1,0 +1,37 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Graphics
+    @cppclass ncSceneRagdollClass
+    @superclass ncSceneLodClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RagdollRoot
+    @format
+      i(RagdollRoot) -- set entity class for ragdoll level
+      v
+    @attrs
+    @info
+      set entity class for ragdoll level
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRagdollRoot
+    @cmdtype setter
+    @property RagdollRoot
+    @info 
+      set entity class for ragdoll level
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRagdollRoot
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      get entity class for ragdoll level
+*/

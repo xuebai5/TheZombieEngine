@@ -1,0 +1,34 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Graphics
+    @cppclass ncSceneIndexed
+    @superclass ncScene
+    @classinfo
+      Graphic object indexed.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SubscenePath
+    @format
+      s(SubscenePath) -- set subscene path
+    @attrs
+    @info
+      set subscene path
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSubscenePath
+    @cmdtype setter
+    @property SubscenePath
+    @info 
+      set subscene path
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSubscenePath
+    @cmdtype getter
+    @property SubscenePath
+    @info 
+      get subscene path
+*/

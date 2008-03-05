@@ -1,0 +1,51 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Common
+    @cppclass ncScriptTrigger
+    @superclass ncTrigger
+    @classinfo
+      Trigger that uses a script to handle the events.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TriggerScript
+    @format
+      o(Script) -- No info
+    @attrs
+    @info
+      Set the trigger script object used to answer to events
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property TriggerScriptByName
+    @format
+      s(Script name) -- No info
+    @attrs
+    @info
+      Set the trigger script object giving its name (used for persistence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTriggerScript
+    @cmdtype setter
+    @property TriggerScript
+    @info 
+      Set the trigger script object used to answer to events
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetTriggerScript
+    @cmdtype getter
+    @property TriggerScript
+    @info 
+      Get the trigger script object used to answer to events, or NULL if there isn't any
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetTriggerScriptByName
+    @cmdtype setter
+    @property TriggerScriptByName
+    @info 
+      Set the trigger script object giving its name (used for persistence)
+*/

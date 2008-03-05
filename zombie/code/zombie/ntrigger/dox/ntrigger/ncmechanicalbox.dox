@@ -1,0 +1,29 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Common
+    @cppclass ncMechanicalBox
+    @superclass nEntityObject
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SwitchTranslationMotor
+    @output
+      v
+    @input
+      v
+    @info 
+      Turn on/off the motor that makes this box move
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SwitchRotationMotor
+    @output
+      v
+    @input
+      v
+    @info 
+      Turn on/off the motor that makes this box rotate
+*/

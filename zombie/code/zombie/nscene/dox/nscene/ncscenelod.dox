@@ -1,0 +1,35 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Graphics
+    @cppclass ncSceneLod
+    @superclass ncScene
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LockedLevel
+    @format
+      b(LockedLevel) -- No info
+      i(LockedLevel) -- No info
+    @attrs
+    @info
+      set locked level
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLockedLevel
+    @cmdtype setter
+    @property LockedLevel
+    @info 
+      set locked level
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLockedLevel
+    @cmdtype getter
+    @property LockedLevel
+    @info 
+      get lockedlevel
+*/

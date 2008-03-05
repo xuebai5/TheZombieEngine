@@ -1,0 +1,1191 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Physics Vehicle Class.
+    @cppclass ncPhyVehicleClass
+    @superclass ncPhysicsObjClass
+    @classinfo
+      Base physic object to create a vehicle.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SteeringWheelObjectName
+    @format
+      s(SteeringWheelObjectName) -- No info
+    @attrs subgroup=Others
+    @info
+      sets the steering wheel object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheelTraction
+    @format
+      b(FrontLeftWheelTraction) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel traction for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheelTraction
+    @format
+      b(FrontRightWheelTraction) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel traction for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheelTraction
+    @format
+      b(RearLeftWheelTraction) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel traction for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheelTraction
+    @format
+      b(RearRightWheelTraction) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel traction for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheelDirection
+    @format
+      b(FrontLeftWheelDirection) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel direction for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheelDirection
+    @format
+      b(FrontRightWheelDirection) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel direction for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheelDirection
+    @format
+      b(RearLeftWheelDirection) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel direction for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheelDirection
+    @format
+      b(RearRightWheelDirection) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel direction for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheelSteeringMax
+    @format
+      f(FrontLeftWheelSteeringMax) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel steering max for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheelSteeringMax
+    @format
+      f(FrontRightWheelSteeringMax) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel steering max for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheelSteeringMax
+    @format
+      f(RearLeftWheelSteeringMax) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel steering max for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheelSteeringMax
+    @format
+      f(RearRightWheelSteeringMax) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel steering max for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheelSteeringForce
+    @format
+      f(FrontLeftWheelSteeringForce) -- No info
+    @attrs subgroup=WheelStearing;private=true
+    @info
+      sets wheel steering forcea for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheelSteeringForce
+    @format
+      f(FrontRightWheelSteeringForce) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel steering forcea for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheelSteeringForce
+    @format
+      f(RearLeftWheelSteeringForce) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel steering forcea for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheelSteeringForce
+    @format
+      f(RearRightWheelSteeringForce) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel steering forcea for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GravityCenterOffset
+    @format
+      fff(GravityCenterOffset) -- No info
+    @attrs subgroup=Vehicle
+    @info
+      set gravity center of the car (from the center of the car)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BHPs
+    @format
+      f(BHPs)   -- No info
+    @attrs subgroup=Engine
+    @info
+      sets how much BHPs (brake horse power) has
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxRevolution
+    @format
+      f(MaxRevolution) -- No info
+    @attrs subgroup=Engine
+    @info
+      sets the max revolutions of the engine
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxAntiRollForce
+    @format
+      f(MaxAntiRollForce) -- No info
+    @attrs subgroup=Vehicle
+    @info
+      sets the max force for the anti-roll bars
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AntiRollForce
+    @format
+      f(AntiRollForce) -- No info
+    @attrs subgroup=Vehicle
+    @info
+      sets the force for the anti-roll bars
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AccelerateRatio
+    @format
+      f(AccelerateRatio) -- No info
+    @attrs subgroup=Engine
+    @info
+      sets the accelerate ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property EngineResistance
+    @format
+      f(EngineResistance) -- No info
+    @attrs subgroup=Engine
+    @info
+      sets the engine resistance
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SteerRatio
+    @format
+      f(SteerRatio) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets the steer ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SteerRecoverRatio
+    @format
+      f(SteerRecoverRatio) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets the steer recover ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheelBreakTreshold
+    @format
+      f(FrontLeftWheelBreakTreshold) -- No info
+    @attrs subgroup=Others
+    @info
+      sets wheel break treshold for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheelBreakTreshold
+    @format
+      f(FrontRightWheelBreakTreshold) -- No info
+    @attrs subgroup=Others
+    @info
+      sets wheel break treshold for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheelBreakTreshold
+    @format
+      f(RearLeftWheelBreakTreshold) -- No info
+    @attrs subgroup=Others
+    @info
+      sets wheel break treshold for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheelBreakTreshold
+    @format
+      f(RearRightWheelBreakTreshold) -- No info
+    @attrs subgroup=Others
+    @info
+      sets wheel break treshold for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AirResistance
+    @format
+      f(AirResistance) -- No info
+    @attrs subgroup=Vehicle
+    @info
+      sets the vehicle resistance to the air
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheelSuspensionRecovery
+    @format
+      f(FrontLeftWheelSuspensionRecovery) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheelSuspensionRecovery
+    @format
+      f(FrontRightWheelSuspensionRecovery) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheelSuspensionRecovery
+    @format
+      f(RearLeftWheelSuspensionRecovery) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheelSuspensionRecovery
+    @format
+      f(RearRightWheelSuspensionRecovery) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheel
+    @format
+      s(FrontRightWheel) -- No info
+    @attrs subgroup=Others
+    @info
+      sets the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheel
+    @format
+      s(FrontLeftWheel) -- No info
+    @attrs subgroup=Others
+    @info
+      sets the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheel
+    @format
+      s(RearLeftWheel) -- No info
+    @attrs subgroup=Others
+    @info
+      sets the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheel
+    @format
+      s(RearRightWheel) -- No info
+    @attrs subgroup=Others
+    @info
+      sets the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property HasTraction
+    @format
+      i(HasTraction) -- No info
+      b(HasTraction) -- No info
+    @attrs subgroup=Others
+    @info
+      sets if a wheel has traction
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property HasDirection
+    @format
+      i(HasDirection) -- No info
+      b(HasDirection) -- No info
+    @attrs subgroup=Others
+    @info
+      sets if a wheel has direction
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SteeringMax
+    @format
+      i(SteeringMax) -- No info
+      f(SteeringMax) -- No info
+    @attrs subgroup=Others
+    @info
+      sets a wheel steering max
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SteeringForce
+    @format
+      i(SteeringForce) -- No info
+      f(SteeringForce) -- No info
+    @attrs subgroup=Others;private=true
+    @info
+      sets a wheel steering force
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SuspensionRecover
+    @format
+      f(SuspensionRecover) -- No info
+    @attrs subgroup=Others;private=true
+    @info
+      sets a wheel suspension recover
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SuspensionRecoverForce
+    @format
+      f(SuspensionRecoverForce) -- No info
+    @attrs subgroup=Others;private=true
+    @info
+      sets a wheel suspension recover force
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BreakTreshold
+    @format
+      i(BreakTreshold) -- No info
+      f(BreakTreshold) -- No info
+    @attrs subgroup=Others
+    @info
+      sets a wheel break treshold
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property WheelObjectName
+    @format
+      i(WheelObjectName) -- No info
+      s(WheelObjectName) -- No info
+    @attrs subgroup=Others
+    @info
+      sets a wheel object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontLeftWheelTraction
+    @cmdtype setter
+    @property FrontLeftWheelTraction
+    @info 
+      sets wheel traction for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontLeftWheelTraction
+    @cmdtype getter
+    @property FrontLeftWheelTraction
+    @info 
+      gets wheel traction from the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontRightWheelTraction
+    @cmdtype setter
+    @property FrontRightWheelTraction
+    @info 
+      sets wheel traction for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontRightWheelTraction
+    @cmdtype getter
+    @property FrontRightWheelTraction
+    @info 
+      gets wheel traction from the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearLeftWheelTraction
+    @cmdtype setter
+    @property RearLeftWheelTraction
+    @info 
+      sets wheel traction for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearLeftWheelTraction
+    @cmdtype getter
+    @property RearLeftWheelTraction
+    @info 
+      gets wheel traction from the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearRightWheelTraction
+    @cmdtype setter
+    @property RearRightWheelTraction
+    @info 
+      sets wheel traction for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearRightWheelTraction
+    @cmdtype getter
+    @property RearRightWheelTraction
+    @info 
+      gets wheel traction from the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontLeftWheelDirection
+    @cmdtype setter
+    @property FrontLeftWheelDirection
+    @info 
+      sets wheel direction for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontLeftWheelDirection
+    @cmdtype getter
+    @property FrontLeftWheelDirection
+    @info 
+      gets wheel direction from the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontRightWheelDirection
+    @cmdtype setter
+    @property FrontRightWheelDirection
+    @info 
+      sets wheel direction for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontRightWheelDirection
+    @cmdtype getter
+    @property FrontRightWheelDirection
+    @info 
+      gets wheel direction from the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearLeftWheelDirection
+    @cmdtype setter
+    @property RearLeftWheelDirection
+    @info 
+      sets wheel direction for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearLeftWheelDirection
+    @cmdtype getter
+    @property RearLeftWheelDirection
+    @info 
+      gets wheel direction from the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearRightWheelDirection
+    @cmdtype setter
+    @property RearRightWheelDirection
+    @info 
+      sets wheel direction for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearRightWheelDirection
+    @cmdtype getter
+    @property RearRightWheelDirection
+    @info 
+      gets wheel direction from the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontLeftWheelSteeringMax
+    @cmdtype setter
+    @property FrontLeftWheelSteeringMax
+    @info 
+      sets wheel steering max for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontLeftWheelSteeringMax
+    @cmdtype getter
+    @property FrontLeftWheelSteeringMax
+    @info 
+      gets wheel steering max from the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontRightWheelSteeringMax
+    @cmdtype setter
+    @property FrontRightWheelSteeringMax
+    @info 
+      sets wheel steering max for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontRightWheelSteeringMax
+    @cmdtype getter
+    @property FrontRightWheelSteeringMax
+    @info 
+      gets wheel steering max from the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearLeftWheelSteeringMax
+    @cmdtype setter
+    @property RearLeftWheelSteeringMax
+    @info 
+      sets wheel steering max for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearLeftWheelSteeringMax
+    @cmdtype getter
+    @property RearLeftWheelSteeringMax
+    @info 
+      gets wheel steering max from the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearRightWheelSteeringMax
+    @cmdtype setter
+    @property RearRightWheelSteeringMax
+    @info 
+      sets wheel steering max for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearRightWheelSteeringMax
+    @cmdtype getter
+    @property RearRightWheelSteeringMax
+    @info 
+      gets wheel steering max from the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontLeftWheelSteeringForce
+    @cmdtype setter
+    @property FrontLeftWheelSteeringForce
+    @info 
+      sets wheel steering forcea for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontLeftWheelSteeringForce
+    @cmdtype getter
+    @property FrontLeftWheelSteeringForce
+    @info 
+      gets wheel steering forcea from the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontRightWheelSteeringForce
+    @cmdtype setter
+    @property FrontRightWheelSteeringForce
+    @info 
+      sets wheel steering forcea for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontRightWheelSteeringForce
+    @cmdtype getter
+    @property FrontRightWheelSteeringForce
+    @info 
+      gets wheel steering forcea from the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearLeftWheelSteeringForce
+    @cmdtype setter
+    @property RearLeftWheelSteeringForce
+    @info 
+      sets wheel steering forcea for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearLeftWheelSteeringForce
+    @cmdtype getter
+    @property RearLeftWheelSteeringForce
+    @info 
+      gets wheel steering forcea from the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearRightWheelSteeringForce
+    @cmdtype setter
+    @property RearRightWheelSteeringForce
+    @info 
+      sets wheel steering forcea for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearRightWheelSteeringForce
+    @cmdtype getter
+    @property RearRightWheelSteeringForce
+    @info 
+      gets wheel steering forcea from the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGravityCenterOffset
+    @cmdtype getter
+    @property GravityCenterOffset
+    @info 
+      returns gravity center of the car (from the center of the car)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGravityCenterOffset
+    @cmdtype setter
+    @property GravityCenterOffset
+    @info 
+      set gravity center of the car (from the center of the car)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBHPs
+    @cmdtype setter
+    @property BHPs
+    @info 
+      sets how much BHPs (brake horse power) has
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBHPs
+    @cmdtype getter
+    @property BHPs
+    @info 
+      gets how much BHPs (brake horse power) has
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxRevolution
+    @cmdtype setter
+    @property MaxRevolution
+    @info 
+      sets the max revolutions of the engine
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxRevolution
+    @cmdtype getter
+    @property MaxRevolution
+    @info 
+      gets the max revolutions of the engine
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxAntiRollForce
+    @cmdtype setter
+    @property MaxAntiRollForce
+    @info 
+      sets the max force for the anti-roll bars
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxAntiRollForce
+    @cmdtype getter
+    @property MaxAntiRollForce
+    @info 
+      gets the max force for the anti-roll bars
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAntiRollForce
+    @cmdtype setter
+    @property AntiRollForce
+    @info 
+      sets the force for the anti-roll bars
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAntiRollForce
+    @cmdtype getter
+    @property AntiRollForce
+    @info 
+      gets the force for the anti-roll bars
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAccelerateRatio
+    @cmdtype setter
+    @property AccelerateRatio
+    @info 
+      sets the accelerate ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAccelerateRatio
+    @cmdtype getter
+    @property AccelerateRatio
+    @info 
+      gets the accelerate ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEngineResistance
+    @cmdtype setter
+    @property EngineResistance
+    @info 
+      sets the engine resistance
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEngineResistance
+    @cmdtype getter
+    @property EngineResistance
+    @info 
+      gets the engine resistance
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSteerRatio
+    @cmdtype setter
+    @property SteerRatio
+    @info 
+      sets the steer ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSteerRatio
+    @cmdtype getter
+    @property SteerRatio
+    @info 
+      gets the steer ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSteerRecoverRatio
+    @cmdtype setter
+    @property SteerRecoverRatio
+    @info 
+      sets the steer recover ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSteerRecoverRatio
+    @cmdtype getter
+    @property SteerRecoverRatio
+    @info 
+      gets the steer recover ratio
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontLeftWheelBreakTreshold
+    @cmdtype setter
+    @property FrontLeftWheelBreakTreshold
+    @info 
+      sets wheel break treshold for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontLeftWheelBreakTreshold
+    @cmdtype getter
+    @property FrontLeftWheelBreakTreshold
+    @info 
+      gets wheel break treshold from the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontRightWheelBreakTreshold
+    @cmdtype setter
+    @property FrontRightWheelBreakTreshold
+    @info 
+      sets wheel break treshold for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontRightWheelBreakTreshold
+    @cmdtype getter
+    @property FrontRightWheelBreakTreshold
+    @info 
+      gets wheel break treshold from the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearLeftWheelBreakTreshold
+    @cmdtype setter
+    @property RearLeftWheelBreakTreshold
+    @info 
+      sets wheel break treshold for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearLeftWheelBreakTreshold
+    @cmdtype getter
+    @property RearLeftWheelBreakTreshold
+    @info 
+      gets wheel break treshold from the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearRightWheelBreakTreshold
+    @cmdtype setter
+    @property RearRightWheelBreakTreshold
+    @info 
+      sets wheel break treshold for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearRightWheelBreakTreshold
+    @cmdtype getter
+    @property RearRightWheelBreakTreshold
+    @info 
+      gets wheel break treshold from the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAirResistance
+    @cmdtype setter
+    @property AirResistance
+    @info 
+      sets the vehicle resistance to the air
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAirResistance
+    @cmdtype getter
+    @property AirResistance
+    @info 
+      gets the vehicle resistance to the air
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontLeftWheelSuspensionRecovery
+    @cmdtype setter
+    @property FrontLeftWheelSuspensionRecovery
+    @info 
+      sets wheel suspension recovery for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontLeftWheelSuspensionRecovery
+    @cmdtype getter
+    @property FrontLeftWheelSuspensionRecovery
+    @info 
+      gets wheel suspension recovery from the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontRightWheelSuspensionRecovery
+    @cmdtype setter
+    @property FrontRightWheelSuspensionRecovery
+    @info 
+      sets wheel suspension recovery for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontRightWheelSuspensionRecovery
+    @cmdtype getter
+    @property FrontRightWheelSuspensionRecovery
+    @info 
+      gets wheel suspension recovery from the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearLeftWheelSuspensionRecovery
+    @cmdtype setter
+    @property RearLeftWheelSuspensionRecovery
+    @info 
+      sets wheel suspension recovery for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearLeftWheelSuspensionRecovery
+    @cmdtype getter
+    @property RearLeftWheelSuspensionRecovery
+    @info 
+      gets wheel suspension recovery from the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearRightWheelSuspensionRecovery
+    @cmdtype setter
+    @property RearRightWheelSuspensionRecovery
+    @info 
+      sets wheel suspension recovery for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearRightWheelSuspensionRecovery
+    @cmdtype getter
+    @property RearRightWheelSuspensionRecovery
+    @info 
+      gets wheel suspension recovery from the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontRightWheel
+    @cmdtype setter
+    @property FrontRightWheel
+    @info 
+      sets the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontRightWheel
+    @cmdtype getter
+    @property FrontRightWheel
+    @info 
+      gets the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFrontLeftWheel
+    @cmdtype setter
+    @property FrontLeftWheel
+    @info 
+      sets the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFrontLeftWheel
+    @cmdtype getter
+    @property FrontLeftWheel
+    @info 
+      gets the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearLeftWheel
+    @cmdtype setter
+    @property RearLeftWheel
+    @info 
+      sets the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearLeftWheel
+    @cmdtype getter
+    @property RearLeftWheel
+    @info 
+      gets the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetRearRightWheel
+    @cmdtype setter
+    @property RearRightWheel
+    @info 
+      sets the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetRearRightWheel
+    @cmdtype getter
+    @property RearRightWheel
+    @info 
+      gets the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHasTraction
+    @cmdtype setter
+    @property HasTraction
+    @info 
+      sets if a wheel has traction
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHasDirection
+    @cmdtype setter
+    @property HasDirection
+    @info 
+      sets if a wheel has direction
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSteeringMax
+    @cmdtype setter
+    @property SteeringMax
+    @info 
+      sets a wheel steering max
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSteeringForce
+    @cmdtype setter
+    @property SteeringForce
+    @info 
+      sets a wheel steering force
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSuspensionRecover
+    @cmdtype setter
+    @property SuspensionRecover
+    @info 
+      sets a wheel suspension recover
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSuspensionRecoverForce
+    @cmdtype setter
+    @property SuspensionRecoverForce
+    @info 
+      sets a wheel suspension recover force
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBreakTreshold
+    @cmdtype setter
+    @property BreakTreshold
+    @info 
+      sets a wheel break treshold
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWheelObjectName
+    @cmdtype setter
+    @property WheelObjectName
+    @info 
+      sets a wheel object
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BackwardsResistance
+    @format
+      f(BackwardsResistance) -- Percentage 0..1
+    @attrs subgroup=Engine
+    @info
+      Sets the resistance when goint backwards.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BreakingForce
+    @format
+      f(BreakingForce) -- Value
+    @attrs subgroup=Engine
+    @info
+      Sets the braking force.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SpeedMaxSteeringForced
+    @format
+      f(SpeedMaxSteeringForced) -- Value positivive in Km/h
+    @attrs subgroup=WheelStearing
+    @info
+      Sets the max speed to apply the steering hardness in Km/h
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property PercentageMaxSteering
+    @format
+      f(PercentageMaxSteering) -- Value from 1 to 0
+    @attrs subgroup=WheelStearing
+    @info
+      Sets the percentage of max steering force.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontLeftWheelSuspensionRecoverForce
+    @format
+      f(FrontLeftWheelSuspensionRecoverForce) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery force for the front left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FrontRightWheelSuspensionRecoverForce
+    @format
+      f(FrontRightWheelSuspensionRecoverForce) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery force for the front right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearLeftWheelSuspensionRecoverForce
+    @format
+      f(RearLeftWheelSuspensionRecoverForce) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery force for the rear left wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property RearRightWheelSuspensionRecoverForce
+    @format
+      f(RearRightWheelSuspensionRecoverForce) -- No info
+    @attrs subgroup=WheelStearing
+    @info
+      sets wheel suspension recovery force for the rear right wheel
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AirForce
+    @format
+      f(AirForce) -- No info
+    @attrs subgroup=Vehicle
+    @info
+      Sets the air force in Newtons
+*/

@@ -1,0 +1,20 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngptakepositionvehicle
+    @cppclass nGPTakePositionVehicle
+    @superclass nGPBasicAction
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Init
+    @output
+      b(unnamed) -- No info
+    @input
+      o(unnamed) -- No info
+      o(unnamed) -- No info
+    @info 
+      Initial condition
+*/

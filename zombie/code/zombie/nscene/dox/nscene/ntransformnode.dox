@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ntransformnode
+    @cppclass nTransformNode
+    @superclass nSceneNode
+    @classinfo
+       No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property FirstAnimator
+    @format
+      o(animator) -- access to first animation  to edition, temporal solution
+    @info
+      access to first animation  to edition, this property is in geometry node, temporal solution
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd SetFirstAnimator
+	@cmdtype setter
+	@property FirstAnimator
+    @info
+        Set the first animation  to edition, temporal solution
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetFirstAnimator
+	@cmdtype getter
+	@property FirstAnimator
+    @info
+     Get the first animation  to edition, temporal solution
+*/

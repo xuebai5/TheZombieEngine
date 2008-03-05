@@ -1,0 +1,728 @@
+#===============================================================================
+#  conjurer.bld
+#===============================================================================
+
+#===============================================================================
+#  conjurer modules
+#===============================================================================
+beginmodule conjurer
+    setdir conjurer
+    setfiles {
+        conjurer
+    }
+    setheaders{ personal }
+    setlibs_win32 { 
+        shell32.lib
+    }
+endmodule
+
+#===============================================================================
+#  conjurerapp modules
+#===============================================================================
+beginmodule nconjurerapp
+    setdir conjurer
+    setfiles {
+        nconjurerapp_main
+        nconjurerapp_cmds
+        nconjurerapp_input
+    }
+    setheaders { nconjurerapp nviewerparams }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nterraineditorstate
+    setdir conjurer
+    setfiles {
+        nterraineditorstate_main nterraineditorstate_input nterraineditorstate_cmds
+        terrainundocmd_main terraingeometryundocmd_main terrainpaintingundocmd_main
+        terraingrasseditundocmd_main terrainholeundocmd_main
+    }
+    setheaders { nterraineditorstate terrainundocmd terraingeometryundocmd terrainpaintingundocmd
+        terraingrasseditundocmd terrainholeundocmd }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nterrainlightmapbuilder
+    setdir conjurer
+    setfiles {
+        nterrainlightmapbuilder_main
+        nterrainlightmapbuilder_lights
+        nterrainlightmapbuilder_shadows
+    }
+    setheaders { nterrainlightmapbuilder }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nobjecteditorstate
+    setdir conjurer
+    setfiles {
+        nobjecteditorstate_main nobjecteditorstate_input nobjecteditorstate_cmds
+        objectplacingundocmd_main objecttransformundocmd_main polygontriggerundocmd_main
+    }
+    setheaders { nobjecteditorstate objectplacingundocmd objecttransformundocmd polygontriggerundocmd}
+endmodule
+#--------------------------------------------------------------------
+beginmodule nclasseditorstate
+    setdir conjurer
+    setfiles {
+        nclasseditorstate_main
+    }
+    setheaders { nclasseditorstate }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nnavmeshbuilderstate
+    setdir conjurer
+    setfiles {
+        nnavmeshbuilderstate_main nnavmeshbuilderstate_cmds
+    }
+    setheaders { nnavmeshbuilderstate }
+endmodule
+#--------------------------------------------------------------------
+beginmodule neditorstate
+    setdir conjurer
+    setfiles {
+        neditorstate_main neditorstate_cmds neditorstate_input
+    }
+    setheaders { neditorstate }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nassetloadstate
+    setdir conjurer
+    setfiles {
+        nassetloadstate_main nassetloadstate_cmds
+    }
+    setheaders { nassetloadstate }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitool
+    setdir conjurer
+    setfiles {
+        ninguitool_main
+        ninguitool_cmds
+    }
+    setheaders { ninguitool }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintool
+    setdir conjurer
+    setfiles {
+    ninguiterraintool_main
+    ninguiterraintool_cmds
+    }
+    setheaders { ninguiterraintool }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolgeom
+    setdir conjurer
+    setfiles {
+    ninguiterraintoolgeom_main
+    ninguiterraintoolgeom_cmds
+    }
+    setheaders { ninguiterraintoolgeom }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolraiselow
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolraiselow_main
+        ninguiterraintoolraiselow_cmds
+    }
+    setheaders { ninguiterraintoolraiselow }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolflatten
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolflatten_main
+        ninguiterraintoolflatten_cmds
+    }
+    setheaders { ninguiterraintoolflatten }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolsmooth
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolsmooth_main
+        ninguiterraintoolsmooth_cmds
+    }
+    setheaders { ninguiterraintoolsmooth }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolslope
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolslope_main
+        ninguiterraintoolslope_cmds
+    }
+    setheaders { ninguiterraintoolslope }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolnoise
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolnoise_main
+        ninguiterraintoolnoise_cmds
+    }
+    setheaders { ninguiterraintoolnoise }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolpaint
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolpaint_main
+        ninguiterraintoolpaint_cmds
+    }
+    setheaders { ninguiterraintoolpaint }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolgrass
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolgrass_main
+        ninguiterraintoolgrass_cmds
+    }
+    setheaders { ninguiterraintoolgrass }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolpolyline
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolpolyline_main
+        ninguiterraintoolpolyline_cmds
+    }
+    setheaders { ninguiterraintoolpolyline }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolhole
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolhole_main
+        ninguiterraintoolhole_cmds
+    }
+    setheaders { ninguiterraintoolhole }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguiterraintoolmultplacer
+    setdir conjurer
+    setfiles {
+        ninguiterraintoolmultplacer_main
+        ninguiterraintoolmultplacer_cmds
+    }
+    setheaders { ninguiterraintoolmultplacer }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitooltransform
+    setdir conjurer
+    setfiles {
+        ninguitooltransform_main
+        ninguitooltransform_cmds
+    }
+    setheaders { ninguitooltransform }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitooltranslation
+    setdir conjurer
+    setfiles {
+        ninguitooltranslation_main
+        ninguitooltranslation_cmds
+    }
+    setheaders { ninguitooltranslation }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolrotation
+    setdir conjurer
+    setfiles {
+        ninguitoolrotation_main
+        ninguitoolrotation_cmds
+    }
+    setheaders { ninguitoolrotation }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolscale
+    setdir conjurer
+    setfiles {
+        ninguitoolscale_main
+        ninguitoolscale_cmds
+    }
+    setheaders { ninguitoolscale }
+endmodule
+#--------------------------------------------------------------------
+beginmodule inguiobjecttransform
+    setdir conjurer
+    setfiles {
+        inguiobjecttransform_main
+    }
+    setheaders { inguiobjecttransform }
+endmodule
+#--------------------------------------------------------------------
+beginmodule inguiobjecttransformgroup
+    setdir conjurer
+    setfiles {
+        inguiobjecttransformgroup_main
+    }
+    setheaders { inguiobjecttransformgroup }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolselection
+    setdir conjurer
+    setfiles {
+        ninguitoolselection_main
+        ninguitoolselection_cmds
+    }
+    setheaders { ninguitoolselection }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolplacer
+    setdir conjurer
+    setfiles {
+        ninguitoolplacer_main
+        ninguitoolplacer_cmds
+    }
+    setheaders { ninguitoolplacer }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolphypick
+    setdir conjurer
+    setfiles {
+        ninguitoolphypick_main
+        ninguitoolphypick_cmds
+    }
+    setheaders { ninguitoolphypick }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolwaypoint
+    setdir conjurer
+    setfiles {
+        ninguitoolwaypoint_main
+        ninguitoolwaypoint_cmds
+    }
+    setheaders { ninguitoolwaypoint }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolgenwaypoint
+    setdir conjurer
+    setfiles {
+        ninguitoolgenwaypoint_main
+        ninguitoolgenwaypoint_cmds
+    }
+    setheaders { ninguitoolgenwaypoint }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolspherearea
+    setdir conjurer
+    setfiles {
+        ninguitoolspherearea_main
+        ninguitoolspherearea_cmds
+    }
+    setheaders { ninguitoolspherearea }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolprismarea
+    setdir conjurer
+    setfiles {
+        ninguitoolprismarea_main
+        ninguitoolprismarea_cmds
+    }
+    setheaders { ninguitoolprismarea }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolsoundsourcespherearea
+    setdir conjurer
+    setfiles {
+        ninguitoolsoundsourcespherearea_main
+        ninguitoolsoundsourcespherearea_cmds
+    }
+    setheaders { ninguitoolsoundsourcespherearea }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolsoundsourceprismarea
+    setdir conjurer
+    setfiles {
+        ninguitoolsoundsourceprismarea_main
+        ninguitoolsoundsourceprismarea_cmds
+    }
+    setheaders { ninguitoolsoundsourceprismarea }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ninguitoolmeasure
+    setdir conjurer
+    setfiles {
+        ninguitoolmeasure_main
+        ninguitoolmeasure_cmds
+    }
+    setheaders { ninguitoolmeasure }
+endmodule
+#--------------------------------------------------------------------
+beginmodule neditorgrid
+    setdir conjurer
+    setfiles {
+        neditorgrid_main neditorgrid_cmds
+    }
+    setheaders { neditorgrid }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nconjurersceneserver
+    setdir conjurer
+    setfiles {
+        nconjurersceneserver_main
+        nconjurersceneserver_cmds
+    }
+    setheaders { nconjurersceneserver }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nviewportdebugmodule
+    setdir conjurer
+    setfiles {
+        nviewportdebugmodule_main
+    }
+    setheaders { nviewportdebugmodule }
+endmodule
+#--------------------------------------------------------------------
+beginmodule neditordebugmodule
+    setdir conjurer
+    setfiles {
+        neditordebugmodule_main
+    }
+    setheaders { neditordebugmodule }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nscenedebugmodule
+    setdir conjurer
+    setfiles {
+        nscenedebugmodule_main
+    }
+    setheaders { nscenedebugmodule }
+endmodule
+#--------------------------------------------------------------------
+beginmodule devil
+    setdir il
+    setheaders { il ilut il_wrap }
+    setlibs_win32 {
+        devil.lib ilu.lib
+    }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nobjinspector
+    setdir conjurer
+    setfiles {
+        nobjinspector_main
+        nobjinspector_cmds
+    }
+    setheaders {
+        nobjinspector
+    }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nstatelist
+    setdir conjurer
+    setfiles {
+        nstatelist_main
+    }
+    setheaders {
+        nstatelist
+    }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nconjurergfxserver
+    setdir conjurer
+    setfiles {
+        nconjurergfxserver_main
+    }
+    setheaders {
+		nconjurergfxserver
+	}
+endmodule
+#--------------------------------------------------------------------
+beginmodule nconjurerwindowhandler
+    setdir conjurer
+    setfiles {
+        nconjurerwindowhandler_main
+    }
+    setheaders {
+		nconjurerwindowhandler
+	}
+endmodule
+#--------------------------------------------------------------------
+beginmodule nconjurerlayout
+    setdir conjurer
+    setfiles {
+        nconjurerlayout_main
+        nconjurerlayout_cmds
+    }
+    setheaders { nconjurerlayout }
+endmodule
+#--------------------------------------------------------------------
+beginmodule neditorviewport
+    setdir conjurer
+    setfiles {
+        neditorviewport_main
+        neditorviewport_input
+        neditorviewport_cmds
+    }
+    setheaders { neditorviewport }
+endmodule
+#--------------------------------------------------------------------
+beginmodule npreviewviewport
+    setdir conjurer
+    setfiles { npreviewviewport_main npreviewviewport_cmds }
+    setheaders { npreviewviewport }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nlevelmapviewport
+    setdir conjurer
+    setfiles { nlevelmapviewport_main nlevelmapviewport_cmds }
+    setheaders { nlevelmapviewport }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nconjurerbatchbuilder
+    setdir conjurer
+    setfiles { nentitybatchbuilder_main nterrainbatchbuilder_main
+               nimpostorbuilder_main }
+    setheaders { nentitybatchbuilder nterrainbatchbuilder nimpostorbuilder }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nconjurerdebugcompserver
+    setdir conjurer
+    setfiles { nconjurerdebugcompserver_main }
+    setheaders { nconjurerdebugcompserver }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nperceptiondebug
+    setdir conjurer
+    setheaders { nperceptiondebug }
+    setfiles { nperceptiondebug }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ngeometrystreameditor
+    setdir conjurer
+    setheaders { ngeometrystreameditor }
+    setfiles { 
+        ngeometrystreameditor_main
+        ngeometrystreameditor_build 
+        ngeometrystreameditor_cmds
+    }
+endmodule
+#--------------------------------------------------------------------
+beginmodule ngeometrystreameditorstate
+    setdir conjurer
+    setheaders { ngeometrystreameditorstate }
+    setfiles {
+        ngeometrystreameditorstate_main ngeometrystreameditorstate_cmds }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nglobalvariableeditor
+    setdir conjurer
+    setheaders { nglobalvariableeditor }
+    setfiles { nglobalvariableeditor_main }
+endmodule
+
+#===============================================================================
+#  conjurerexp Targets
+#===============================================================================
+begintarget conjurerexp
+    annotate "Conjurer modules needed in exporter"
+    settype lib
+    setpch true
+    setmodules { nlayermanager nlayer }
+endtarget
+
+#===============================================================================
+#  conjurerapp Targets
+#===============================================================================
+begintarget conjurerapp
+    annotate "Conjurer app"
+    settype lib
+    setpch true
+    setmodules {
+        ninguitool
+        ninguiterraintool
+        ninguiterraintoolgeom
+        ninguiterraintoolflatten
+        ninguiterraintoolnoise
+        ninguiterraintoolraiselow
+        ninguiterraintoolslope
+        ninguiterraintoolsmooth
+        ninguiterraintoolpaint
+        ninguiterraintoolgrass
+        ninguiterraintoolpolyline
+        ninguiterraintoolhole
+        ninguiterraintoolmultplacer
+        ninguitooltransform
+        ninguitooltranslation
+        ninguitoolrotation
+        ninguitoolscale
+        inguiobjecttransform
+        inguiobjecttransformgroup
+        ninguitoolselection
+        ninguitoolplacer
+        ninguitoolphypick
+        ninguitoolwaypoint
+        ninguitoolgenwaypoint
+        ninguitoolspherearea
+        ninguitoolmeasure
+        ninguitoolprismarea
+        ninguitoolsoundsourcespherearea
+        ninguitoolsoundsourceprismarea
+        neditorgrid
+        nconjurerapp
+        nconjurersceneserver
+        neditorstate
+        nassetloadstate
+        nterraineditorstate
+        nobjecteditorstate
+        nclasseditorstate
+        nnavmeshbuilderstate
+        nviewportdebugmodule
+        neditordebugmodule
+        nscenedebugmodule
+        nobjinspector
+        nstatelist
+        devil
+        nconjurergfxserver
+        nconjurerwindowhandler
+        nconjurerlayout
+        neditorviewport
+        npreviewviewport
+        nlevelmapviewport
+        nterrainlightmapbuilder
+        nconjurerbatchbuilder
+        nconjurerdebugcompserver
+        nperceptiondebug
+        ngeometrystreameditor
+        ngeometrystreameditorstate
+        nglobalvariableeditor
+    }
+endtarget
+#===============================================================================
+#  conjurer Targets
+#===============================================================================
+begintarget conjurer
+    annotate "Conjurer app"
+    seticon conjurer.ico
+    settype exe
+    setwarningslevel 4
+    setpch true
+    setstacksize 5120000
+
+    setmodules {
+        conjurer
+    }
+    settargetdeps {
+        gpbasicactions
+        rnsbasicactions
+        conjurerapp
+        conjurerexp
+        crashreportdump
+        framework
+        napplication
+        ndebug
+        ndinput8
+        ndirect3d9
+        nfsm
+        ngeomipmap
+        nkernel
+        nlua
+        nmaterial
+        nnavmesh
+        nnebula
+        noctree
+        nphysics
+        npythonserver
+        nscene
+        nspatial
+        ntoollib
+        ntrigger
+        nundoserver
+        xml
+        nnetworkenet
+        nnetwork
+        framework
+        rnsstates
+        rnsnetwork
+        nentity
+        ncshared
+        zombieentity
+        zombieentityexp
+        rnsentity
+        gameplay
+        rnsgameplay
+        ndsound
+        nmusictable
+        ncsound
+        nscriptclassserver
+        appinfo
+        nwaypoint
+        nanimation
+        ncommonapp
+        renaissanceapp
+        ngrass
+        ngrass_conjurer
+        nspecialfx
+        ngui
+        rnsscene
+        ndshow
+    }
+endtarget
+
+#===============================================================================
+#  conjurer Workspaces
+#===============================================================================
+beginworkspace conjurer
+    setbinarydir ./bin/
+    annotate "The Conjurer workspace."
+    setglobalcompileroptionsvc {
+        "/I ../../../../ode/include"
+        "/I ../../../../ode/OPCODE"
+    }
+    settargets {
+        conjurer
+        conjurerexp
+        gameplay
+        rnsgameplay
+        conjurerapp
+        crashreportdump
+        framework
+        napplication
+        ndebug
+        ndinput8
+        ndirect3d9
+        nfsm
+        ngeomipmap
+        nkernel
+        nlua
+        nmaterial
+        nnavmesh
+        nnebula
+        noctree
+        nphysics
+        npythonserver
+        nscene
+        nspatial
+        ntoollib
+        ntrigger
+        nundoserver
+        xml
+        nnetworkenet
+        nnetwork
+        gpbasicactions
+        rnsbasicactions
+        rnsstates
+        rnsnetwork
+        nentity
+        ncshared
+        zombieentity
+        zombieentityexp
+        rnsentity
+        ndsound
+        nmusictable
+        ncsound
+        nscriptclassserver
+        appinfo
+        nwaypoint
+        nanimation
+        ncommonapp
+        renaissanceapp
+        ngrass
+        ngrass_conjurer
+        nspecialfx
+        rnsscene
+        ndshow
+    }
+endworkspace

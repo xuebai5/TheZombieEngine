@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngpinsertininventory
+    @cppclass nGPInsertInInventory
+    @superclass nGPBasicAction
+    @classinfo
+      Insert a new item in the entity inventory 
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Init
+    @output
+      b(unnamed) -- true if the action can be done
+    @input
+      o(entity) -- entity that change the weapon
+      s(itemName) -- name of the item to insert
+      i(slot) -- where to insert the item
+      i(amount) -- Amount in stackable items
+    @info 
+      Initial condition
+*/

@@ -1,0 +1,132 @@
+#===============================================================================
+#  nentity.bld
+#  The Nebula2 entity system
+#
+#  Modules:
+#      nentity
+#      nentityclass
+#      nentityobject
+#  Targets:
+#      nentity
+#===============================================================================
+#===============================================================================
+#  nentity
+#===============================================================================
+#-------------------------------------------------------------------------------
+beginmodule ncomponentobject
+    setdir entity
+    setheaders { ncomponentobject ncmdprotonativecppcomponentobject 
+    nclasscomponentobject ncomponentidlist componentlist }
+    setfiles { ncomponentobject nclasscomponentobject }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncomponentclass
+    setdir entity
+    setheaders { ncomponentclass ncmdprotonativecppcomponentclass 
+    nclasscomponentclass }
+    setfiles { ncomponentclass nclasscomponentclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncomponentobjectserver
+    setdir entity
+    setheaders { ncomponentobjectserver }
+    setfiles { ncomponentobjectserver_main ncomponentobjectserver_cmds }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncomponentclassserver
+    setdir entity
+    setheaders { ncomponentclassserver }
+    setfiles { ncomponentclassserver_main ncomponentclassserver_cmds }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nentity
+    setdir entity
+    setheaders { nentity ndefinenebulaentity nentitytypes
+                nrefentityobject nmacros }
+    setfiles { nentitytypes }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nentityclass
+    setdir entity
+    setheaders { nentityclass nclassentityclass }
+    setfiles { nentityclass_main nentityclass_cmds nclassentityclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nentityobject
+    setdir entity
+    setheaders { nentityobject nclassentityobject }
+    setfiles { nentityobject_main nentityobject_cmds nclassentityobject }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nentityclassserver
+    setdir entity
+    setheaders { nentityclassinfo nentityclassserver }
+    setfiles { 
+        nentityclassinfo nentityclassserver_main nentityclassserver_cmds 
+    }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nentityobjectserver
+    setdir entity
+    setheaders { nentityobjectinfo nentityobjectserver }
+    setfiles {
+        nentityobjectinfo nentityobjectserver_main nentityobjectserver_cmds
+    }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nobjectinstancer
+    setdir entity
+    setheaders { nobjectinstancer }
+    setfiles { nobjectinstancer_main nobjectinstancer_cmds }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nobjectmagicinstancer
+    setdir entity
+    setheaders { nobjectmagicinstancer }
+    setfiles { nobjectmagicinstancer_main nobjectmagicinstancer_cmds }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nfileindex
+    setdir entity
+    setheaders { nfileindex }
+    setfiles { nfileindex_main nfileindex_cmds }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nfileindexgroup
+    setdir entity
+    setheaders { nfileindexgroup }
+    setfiles { nfileindexgroup_main }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncpersisthelper
+    setdir entity
+    setheaders { ncpersisthelper }
+    setfiles { ncpersisthelper_main }
+endmodule
+
+#-------------------------------------------------------------------------------
+#===============================================================================
+#  nentity target
+#===============================================================================
+begintarget nentity
+    annotate "The Nebula2 Entity system"
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules { 
+		ncomponentobject
+		ncomponentclass
+		ncomponentobjectserver
+		ncomponentclassserver
+        nentity 
+        nentityobject 
+        nentityclass 
+        nentityobjectserver 
+        nentityclassserver 
+        nobjectinstancer 
+        nobjectmagicinstancer
+        nfileindex
+        nfileindexgroup
+        ncpersisthelper
+    }
+endtarget

@@ -1,0 +1,4 @@
+/**
+    @defgroup NebulaFSMSystem Finite State Machines
+    @ingroup NebulaTragnarionModules
+*/

@@ -1,0 +1,26 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:this()$
+-- -----------------------------------------------------------
+nthis:setrelsize(0.000000, 0.000000, 1.000000, 1.000000)
+nthis:setvisible(true)
+nthis:setnearplane(0.150000)
+nthis:setfarplane(1000.000000)
+nthis:setangleofview(65.000000)
+nthis:setisometricview(false)
+nthis:setresourcefile([[home:export/gfxlib/cameras/stdcam.n2]])
+nthis:beginviewportentity([[Stdcam]])
+  nthis:setvectorvariable([[ShadowColor]], 0.000000, 0.000000, 0.000000, 0.500000)
+  nthis:setintvariable([[ShadowSrcBlend]], 1)
+  nthis:setintvariable([[ShadowDstBlend]], 2)
+  nthis:setpassenabled([[edit]], false)
+  nthis:setperspective(65.000000, 1.333333, 0.010000, 5000.000000)
+nthis:endobject()
+nthis:setmousexfactor(1.000000)
+nthis:setmouseyfactor(1.000000)
+nthis:setmouseyinvert(false)
+nthis:setmaxrenderdistance(300.000000)
+nthis:setocclusionradius(160.000000)
+nthis:setmaxnumoccluders(4)
+nthis:setareaanglemin(0.005000)
+-- -----------------------------------------------------------
+-- Eof

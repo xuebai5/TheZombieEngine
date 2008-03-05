@@ -1,0 +1,189 @@
+#-------------------------------------------------------------------------------
+# nfsm.bld
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# FSM modules
+#-------------------------------------------------------------------------------
+
+beginmodule nfsm
+    setdir nfsm
+    setheaders {
+        nfsm
+    }
+    setfiles {
+        nfsm_main
+        nfsm_cmds
+    }
+endmodule
+
+beginmodule nactiondesc
+    setdir nfsm
+    setheaders {
+        nactiondesc
+    }
+    setfiles {
+        nactiondesc_main
+        nactiondesc_cmds
+    }
+endmodule
+
+beginmodule nstate
+    setdir nfsm
+    setheaders {
+        nstate
+        keyarrayiterator
+    }
+    setfiles {
+        nstate_main
+        nstate_cmds
+    }
+endmodule
+
+beginmodule nnodestate
+    setdir nfsm
+    setheaders {
+        nnodestate
+    }
+    setfiles {
+        nnodestate_main
+        nnodestate_cmds
+    }
+endmodule
+
+beginmodule nleafstate
+    setdir nfsm
+    setheaders {
+        nleafstate
+    }
+    setfiles {
+        nleafstate_main
+        nleafstate_cmds
+    }
+endmodule
+
+beginmodule nendstate
+    setdir nfsm
+    setheaders {
+        nendstate
+    }
+    setfiles {
+        nendstate_main
+        nendstate_cmds
+    }
+endmodule
+
+beginmodule ntransition
+    setdir nfsm
+    setheaders {
+        ntransition
+    }
+    setfiles {
+        ntransition_main
+        ntransition_cmds
+    }
+endmodule
+
+beginmodule ncondition
+    setdir nfsm
+    setheaders {
+        ncondition
+    }
+    setfiles {
+        ncondition_main
+    }
+endmodule
+
+beginmodule neventcondition
+    setdir nfsm
+    setheaders {
+        neventcondition
+    }
+    setfiles {
+        neventcondition_main
+        neventcondition_cmds
+    }
+endmodule
+
+beginmodule nscriptcondition
+    setdir nfsm
+    setheaders {
+        nscriptcondition
+    }
+    setfiles {
+        nscriptcondition_main
+        nscriptcondition_cmds
+    }
+endmodule
+
+beginmodule nfsmselector
+    setdir nfsm
+    setheaders {
+        nfsmselector
+    }
+    setfiles {
+        nfsmselector_main
+        nfsmselector_cmds
+    }
+endmodule
+
+beginmodule ncfsm
+    setdir ncfsm
+    setheaders {
+        ncfsm
+    }
+    setfiles {
+        ncfsm_main
+    }
+endmodule
+
+beginmodule ncfsmclass
+    setdir ncfsm
+    setheaders {
+        ncfsmclass
+    }
+    setfiles {
+        ncfsmclass_main
+    }
+endmodule
+
+beginmodule nfsmserver
+    setdir nfsmserver
+    setheaders {
+        nfsmserver
+    }
+    setfiles {
+        nfsmserver_main
+        nfsmserver_cmds
+    }
+endmodule
+
+#-------------------------------------------------------------------------------
+# FSM targets
+#-------------------------------------------------------------------------------
+
+begintarget nfsm
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        nfsm
+        nactiondesc
+        nstate
+        nnodestate
+        nleafstate
+        nendstate
+        ntransition
+        ncondition
+        neventcondition
+        nscriptcondition
+        nfsmselector
+        ncfsm
+        ncfsmclass
+        nfsmserver
+    }
+endtarget
+
+#-------------------------------------------------------------------------------
+# EOF
+#-------------------------------------------------------------------------------

@@ -1,0 +1,84 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGameplayStriderClass
+    @superclass ncGameplayAlienClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property BaseJumpChance
+    @format
+      f(BaseJumpChance) -- Base jump chance
+    @attrs subgroup=Movement
+    @info
+      Sets/gets base jump change
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ClawClassName
+    @format
+      s(ClawClassName) -- Name of the claw class
+    @attrs subgroup=Attributes
+    @info
+      Sets/gets claw weapon class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ClawRange
+    @format
+      f(ClawRange) -- Range for the claw attack
+    @attrs subgroup=Combat
+    @info
+      Sets/gets the claw attack range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBaseJumpChance
+    @cmdtype setter
+    @property BaseJumpChance
+    @info 
+      Sets/gets base jump change
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBaseJumpChance
+    @cmdtype getter
+    @property BaseJumpChance
+    @info 
+      Sets/gets base jump change
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClawClassName
+    @cmdtype setter
+    @property ClawClassName
+    @info 
+      Sets/gets claw weapon class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClawClassName
+    @cmdtype getter
+    @property ClawClassName
+    @info 
+      Sets/gets claw weapon class
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClawRange
+    @cmdtype setter
+    @property ClawRange
+    @info 
+      Sets/gets the claw attack range
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClawRange
+    @cmdtype getter
+    @property ClawRange
+    @info 
+      Sets/gets the claw attack range
+*/

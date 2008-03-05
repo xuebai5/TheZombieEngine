@@ -1,0 +1,310 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngeometrystreameditor
+    @cppclass nGeometryStreamEditor
+    @superclass nroot
+    @classinfo
+      A meta-description of geometry streams for editor only.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt
+    @format
+      i(GeometryAt) -- index
+      s(GeometryAt) -- class name
+      i(GeometryAt) -- level
+      s(GeometryAt) -- geometry path
+    @attrs
+    @info
+      set source geometry at index (class, level, path)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property NumGeometries
+    @format
+      i(NumGeometries) -- No info
+    @attrs
+    @info
+      set/get number of geometries (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt0
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 0 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt1
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 1 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt2
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 2 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt3
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 3 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt4
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 4 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt5
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 5 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt6
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 6 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GeometryAt7
+    @format
+      s(Class;subtype=entityclass) -- Class
+      i(Level) -- Level
+      s(Material;subtype=material) -- Material
+      i(Frequency; min=1) -- Frequency
+    @attrs
+    @info
+      set/get geometries for the slot 7 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BeginGeometries
+    @output
+      v
+    @input
+      i(NumGeometries) -- Number of streamed geometries
+    @info 
+      begin adding geometries to the stream
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt
+    @cmdtype setter
+    @property GeometryAt
+    @info 
+      set source geometry at index (class, level, path)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt
+    @output
+      s(Class) -- No info
+      i(Level) -- No info
+      s(Geometry) -- No info
+    @input
+      i(Index) -- No info
+    @info 
+      get source geometry at index (class, level, path)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EndGeometries
+    @output
+      v
+    @input
+      v
+    @info 
+      end adding geometries to the stream
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetNumGeometries
+    @cmdtype setter
+    @property NumGeometries
+    @info 
+      set/get number of geometries (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumGeometries
+    @cmdtype getter
+    @property NumGeometries
+    @info 
+      set/get number of geometries (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt0
+    @cmdtype setter
+    @property GeometryAt0
+    @info 
+      set/get geometries for the slot 0 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt0
+    @cmdtype getter
+    @property GeometryAt0
+    @info 
+      set/get geometries for the slot 0 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt1
+    @cmdtype setter
+    @property GeometryAt1
+    @info 
+      set/get geometries for the slot 1 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt1
+    @cmdtype getter
+    @property GeometryAt1
+    @info 
+      set/get geometries for the slot 1 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt2
+    @cmdtype setter
+    @property GeometryAt2
+    @info 
+      set/get geometries for the slot 2 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt2
+    @cmdtype getter
+    @property GeometryAt2
+    @info 
+      set/get geometries for the slot 2 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt3
+    @cmdtype setter
+    @property GeometryAt3
+    @info 
+      set/get geometries for the slot 3 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt3
+    @cmdtype getter
+    @property GeometryAt3
+    @info 
+      set/get geometries for the slot 3 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt4
+    @cmdtype setter
+    @property GeometryAt4
+    @info 
+      set/get geometries for the slot 4 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt4
+    @cmdtype getter
+    @property GeometryAt4
+    @info 
+      set/get geometries for the slot 4 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt5
+    @cmdtype setter
+    @property GeometryAt5
+    @info 
+      set/get geometries for the slot 5 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt5
+    @cmdtype getter
+    @property GeometryAt5
+    @info 
+      set/get geometries for the slot 5 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt6
+    @cmdtype setter
+    @property GeometryAt6
+    @info 
+      set/get geometries for the slot 6 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt6
+    @cmdtype getter
+    @property GeometryAt6
+    @info 
+      set/get geometries for the slot 6 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGeometryAt7
+    @cmdtype setter
+    @property GeometryAt7
+    @info 
+      set/get geometries for the slot 7 (inspector only)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGeometryAt7
+    @cmdtype getter
+    @property GeometryAt7
+    @info 
+      set/get geometries for the slot 7 (inspector only)
+*/

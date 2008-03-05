@@ -1,0 +1,84 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Common
+    @cppclass ncSpecialFXClass
+    @superclass nEntityClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LifeTime
+    @format
+      f(LifeTime) -- No info
+    @attrs
+    @info
+      set effect lifetime
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Unique
+    @format
+      b(Unique) -- No info
+    @attrs
+    @info
+      set
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FxTypeEdition
+    @format
+      i(FxType;enums=Decal:0,Spawn:1,Invalid:4) -- No info
+    @attrs
+    @info
+      set effect type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLifeTime
+    @cmdtype setter
+    @property LifeTime
+    @info 
+      set effect lifetime
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLifeTime
+    @cmdtype getter
+    @property LifeTime
+    @info 
+      get effect lifetime
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetUnique
+    @cmdtype setter
+    @property Unique
+    @info 
+      set
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetUnique
+    @cmdtype getter
+    @property Unique
+    @info 
+      get
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFxTypeEdition
+    @cmdtype setter
+    @property FxTypeEdition
+    @info 
+      set effect type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFxTypeEdition
+    @cmdtype getter
+    @property FxTypeEdition
+    @info 
+      get effect type
+*/

@@ -1,0 +1,99 @@
+#-------------------------------------------------------------------------------
+#   nnetworkenet.bld
+#-------------------------------------------------------------------------------
+beginmodule nnetserverenet
+    setdir nnetworkenet
+    setfiles {
+        nnetserverenet_main nnetserverenet_cmds
+    }
+    setheaders nnetserverenet
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nnetclientenet
+    setdir nnetworkenet
+    setfiles {
+        nnetclientenet_main nnetclientenet_cmds
+    }
+    setheaders nnetclientenet
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nnetutils
+    setdir nnetworkenet
+    setfiles {
+        nnetutils
+    }
+    setheaders nnetutils
+    setlibs_win32_release{ enet.lib Ws2_32.lib Winmm.lib }
+    setlibs_win32_debug{ d_enet.lib Ws2_32.lib Winmm.lib }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nclientproxy
+    setdir nnetworkmanager
+    setheaders { nclientproxy }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nnethandler
+    setdir nnetworkenet
+    setheaders nnethandler
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nnetworkmanager
+    setdir nnetworkmanager
+    setfiles { 
+        nnetworkmanager_main nnetworkmanager_cmds 
+        nnetworkmanager_clnt nnetworkmanager_srvr
+    }
+    setheaders { nnetworkmanager }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nnetworkmanagermulti
+    setdir nnetworkmanager
+    setfiles { 
+        nnetworkmanagermulti_main nnetworkmanagermulti_actions
+        nnetworkmanagermulti_clnt nnetworkmanagermulti_srvr
+    }
+    setheaders { nnetworkmanagermulti }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncnetwork
+    setdir ncnetwork
+    setfiles { 
+        ncnetwork_main ncnetwork_cmds
+    }
+    setheaders { ncnetwork }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncnetworkclass
+    setdir ncnetwork
+    setfiles { 
+        ncnetworkclass_main ncnetworkclass_cmds
+    }
+    setheaders { ncnetworkclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncnetworktransform
+    setdir ncnetwork
+    setfiles { ncnetworktransform }
+    setheaders { ncnetworktransform }
+endmodule
+#-------------------------------------------------------------------------------
+begintarget nnetworkenet
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        nnetserverenet nnetclientenet 
+        nnetutils nnethandler 
+        nnetworkmanager 
+        nnetworkmanagermulti
+        nclientproxy
+        ncnetwork
+        ncnetworkclass
+        ncnetworktransform
+    }
+	setglobalcompileroptions_vc { "/I ../../../../enet/include" }
+    setcompileroptionsvc { "/I ../../../../enet/include" }
+endtarget
+#-------------------------------------------------------------------------------
+#    EOF
+#-------------------------------------------------------------------------------

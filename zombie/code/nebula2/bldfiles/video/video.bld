@@ -1,0 +1,44 @@
+#===============================================================================
+#  video.bld
+#  Video system modules
+#
+#  Modules:
+#      nvideoserver
+#  Bundles:
+#      nvideo
+#===============================================================================
+
+#-------------------------------------------------------------------------------
+beginmodule nvideoserver
+    setdir video
+    setfiles { nvideoserver_main nvideoserver_cmds }
+    setheaders { nvideoserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nvideoplayer
+    setdir video
+    setfiles { nvideoplayer_main }
+    setheaders { nvideoplayer }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule noggtheoraplayer
+    setdir video
+    setfiles { noggtheoraplayer_main }
+    setheaders { noggtheoraplayer }
+    setlibs_win32_release { ogg.lib theora.lib }
+    setlibs_win32_debug { ogg-d.lib theora-d.lib }
+    setlibs_linux { ogg theora }
+endmodule
+#-------------------------------------------------------------------------------
+
+#===============================================================================
+# nvideo bundles
+#===============================================================================
+beginbundle nvideo
+    setmodules {
+        nvideoserver
+        nvideoplayer
+        noggtheoraplayer
+    }
+endbundle
+#-------------------------------------------------------------------------------

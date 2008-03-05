@@ -1,0 +1,129 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ninventoryitem
+    @cppclass nInventoryItem
+    @superclass nObject
+    @classinfo
+      Item in an inventory
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Stack
+    @format
+      i(Stack)  -- stack size of the stackable item
+    @attrs
+    @info
+      stack size of stackable item
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Used
+    @format
+      b(Used)   -- item is in use
+    @attrs
+    @info
+      item is in use
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd StackSize
+    @cmdtype getter
+    @property Stack
+    @info 
+      get the stack size of the stackable item
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStack
+    @cmdtype setter
+    @property Stack
+    @info 
+      set the stack size of stackable item
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsUsed
+    @cmdtype getter
+    @property Used
+    @info 
+      say if item is used
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetUsed
+    @cmdtype setter
+    @property Used
+    @info 
+      set that item is in use
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsInfinite
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      get if the stackable item has infinite space
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsWeapon
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      returns if type of item is a weapon
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsAmmunition
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      returns if type of item is an ammunition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsEquipment
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      returns if type of item is an equipment
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsStackable
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      say if item is stackable
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsDropped
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      say if item is in the floor
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEntity
+    @output
+      o(entity) -- entity of the item
+    @input
+      v
+    @info 
+      get the entity of the item
+*/

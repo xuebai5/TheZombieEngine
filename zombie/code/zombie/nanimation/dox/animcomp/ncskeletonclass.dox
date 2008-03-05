@@ -1,0 +1,630 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Character Skeleton Class
+    @cppclass ncSkeletonClass
+    @superclass nComponentClass
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StateAnim
+    @format
+      i(StateAnim) -- No info
+      s(StateAnim) -- No info
+    @attrs
+    @info
+      set animation file for state (animation-driven)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Joint
+    @format
+      i(Joint)  -- No info
+      i(Joint)  -- No info
+      fff(Joint) -- No info
+      q(Joint)  -- No info
+      fff(Joint) -- No info
+    @attrs
+    @info
+      add a joint to the skeleton (not persisted, kept for backwards compatibility)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property NamedJoint
+    @format
+      i(NamedJoint) -- No info
+      i(NamedJoint) -- No info
+      fff(NamedJoint) -- No info
+      q(NamedJoint) -- No info
+      fff(NamedJoint) -- No info
+      s(NamedJoint) -- No info
+    @attrs
+    @info
+      add a joint to the skeleton
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property State
+    @format
+      i(State)  -- No info
+      i(State)  -- No info
+      f(State)  -- No info
+    @attrs
+    @info
+      add an animation state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StateWithJointGroup
+    @format
+      i(StateWithJointGroup) -- No info
+      i(StateWithJointGroup) -- No info
+      i(StateWithJointGroup) -- No info
+      f(StateWithJointGroup) -- No info
+    @attrs
+    @info
+      add animation state and jointgroup
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StateName
+    @format
+      i(StateName) -- No info
+      s(StateName) -- No info
+    @attrs
+    @info
+      set optional state name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Clip
+    @format
+      i(Clip)   -- No info
+      i(Clip)   -- No info
+      s(Clip)   -- No info
+    @attrs
+    @info
+      add an animation clip to a state (uses full skeleton)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ClipAndCurves
+    @format
+      i(ClipAndCurves) -- No info
+      i(ClipAndCurves) -- No info
+      i(ClipAndCurves) -- No info
+      s(ClipAndCurves) -- No info
+    @attrs
+    @info
+      set clip with a given number of curves
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property PerceptionOffset
+    @format
+      i(PerceptionOffset) -- No info
+      fff(PerceptionOffset) -- No info
+    @attrs
+    @info
+      set perceptionoffset
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StateAnimChannel
+    @format
+      i(StateAnimChannel) -- No info
+      s(StateAnimChannel) -- No info
+    @attrs
+    @info
+      set channel name for external animation agent
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StateBBox
+    @format
+      i(StateBBox) -- No info
+      fff(StateBBox) -- No info
+      fff(StateBBox) -- No info
+    @attrs
+    @info
+      set state bounding box
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FadeInTime
+    @format
+      i(FadeInTime) -- No info
+      f(FadeInTime) -- No info
+    @attrs
+    @info
+      set fade in time to an state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property GroupNumberJoints
+    @format
+      i(GroupNumberJoints) -- No info
+      i(GroupNumberJoints) -- No info
+    @attrs
+    @info
+      set group number of joints
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Group
+    @format
+      i(Group)  -- No info
+      i(Group)  -- No info
+      i(Group)  -- No info
+      i(Group)  -- No info
+      i(Group)  -- No info
+    @attrs
+    @info
+      set joint group
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property CommonJoint
+    @format
+      i(CommonJoint) -- No info
+    @attrs
+    @info
+      set common group joints
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AttachmentHelper
+    @format
+      i(AttachmentHelper) -- No info
+      s(AttachmentHelper) -- No info
+      i(AttachmentHelper) -- No info
+      fff(AttachmentHelper) -- No info
+      q(AttachmentHelper) -- No info
+    @attrs
+    @info
+      set attachment helper
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SubmissiveLeaderState
+    @format
+      s(SubmissiveLeaderState) -- No info
+      s(SubmissiveLeaderState) -- No info
+    @attrs
+    @info
+      set submissive and leader state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStateAnim
+    @cmdtype setter
+    @property StateAnim
+    @info 
+      set animation file for state (animation-driven)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetStateAnim
+    @output
+      s(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get animation file for state (animation-driven)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BeginJoints
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      begin configuring the character skeleton
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetJoint
+    @cmdtype setter
+    @property Joint
+    @info 
+      add a joint to the skeleton (not persisted, kept for backwards compatibility)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetNamedJoint
+    @cmdtype setter
+    @property NamedJoint
+    @info 
+      add a joint to the skeleton
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EndJoints
+    @output
+      v
+    @input
+      v
+    @info 
+      finish configuring the joint skeleton
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumJoints
+    @cmdtype getter
+    @property NumJoints
+    @info 
+      get number of joints in skeleton
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddJointName
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+      s(unnamed) -- No info
+    @info 
+      add a joint name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetJointName
+    @output
+      s(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get joint name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetJoint
+    @output
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+      fff(unnamed) -- No info
+      q(unnamed) -- No info
+      fff(unnamed) -- No info
+    @input
+      v
+    @info 
+      get joint attributes
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BeginStates
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      begin anim state definition
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetState
+    @cmdtype setter
+    @property State
+    @info 
+      add an animation state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStateWithJointGroup
+    @cmdtype setter
+    @property StateWithJointGroup
+    @info 
+      add animation state and jointgroup
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStateName
+    @cmdtype setter
+    @property StateName
+    @info 
+      set optional state name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetStateName
+    @output
+      s(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get state name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EndStates
+    @output
+      v
+    @input
+      v
+    @info 
+      finish adding states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumStates
+    @cmdtype getter
+    @property NumStates
+    @info 
+      get number of states
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BeginClips
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      begin adding clips to a state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClip
+    @cmdtype setter
+    @property Clip
+    @info 
+      add an animation clip to a state (uses full skeleton)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetClipAndCurves
+    @cmdtype setter
+    @property ClipAndCurves
+    @info 
+      set clip with a given number of curves
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EndClips
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      finish adding clips to a state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumClips
+    @output
+      i(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get number of animations in a state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPerceptionOffset
+    @cmdtype setter
+    @property PerceptionOffset
+    @info 
+      set perceptionoffset
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPerceptionOffset
+    @output
+      fff(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get perceptionoffset
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetJointByName
+    @output
+      i(unnamed) -- No info
+    @input
+      s(unnamed) -- No info
+    @info 
+      get a joint index by name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetClipAt
+    @output
+      s(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      get animation attributes
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStateAnimChannel
+    @cmdtype setter
+    @property StateAnimChannel
+    @info 
+      set channel name for external animation agent
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStateBBox
+    @cmdtype setter
+    @property StateBBox
+    @info 
+      set state bounding box
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetStateBBox
+    @output
+      fff(unnamed) -- No info
+      fff(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get state bounding box
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFadeInTime
+    @cmdtype setter
+    @property FadeInTime
+    @info 
+      set fade in time to an state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFadeInTime
+    @output
+      f(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get fade in time to an state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BeginJointGroups
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      begin joint groups
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGroupNumberJoints
+    @cmdtype setter
+    @property GroupNumberJoints
+    @info 
+      set group number of joints
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGroup
+    @cmdtype setter
+    @property Group
+    @info 
+      set joint group
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EndJointGroups
+    @output
+      v
+    @input
+      v
+    @info 
+      end joint groups
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCommonJoint
+    @cmdtype setter
+    @property CommonJoint
+    @info 
+      set common group joints
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AssignGroupToState
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+      i(unnamed) -- No info
+    @info 
+      assign group to state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd BeginAttachments
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      begin attachment helpers
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAttachmentHelper
+    @cmdtype setter
+    @property AttachmentHelper
+    @info 
+      set attachment helper
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd EndAttachments
+    @output
+      v
+    @input
+      v
+    @info 
+      end attachment helpers
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveAnimState
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      remove anim state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd ChangeAnimStateName
+    @output
+      b(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+      s(unnamed) -- No info
+    @info 
+      rename anim state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSubmissiveLeaderState
+    @cmdtype setter
+    @property SubmissiveLeaderState
+    @info 
+      set submissive and leader state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLeaderStateOf
+    @output
+      i(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get leader state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLeaderStateNameOf
+    @output
+      s(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get leader state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveClass
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      save class
+*/

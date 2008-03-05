@@ -1,0 +1,122 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nfsm
+    @cppclass nFSM
+    @superclass nRoot
+    @classinfo
+      Finite state machine.
+      This object just hold the data of a FSM, which can be shared among all
+      entities that use it, but it doesn't contain the logic to run it. To use it
+      you need the ncFSM component.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property InitialState
+    @format
+      o(Initial state) -- Entry state in the FSM
+    @attrs
+    @info
+      Set the initial state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property InitialStateByName
+    @format
+      s(State name) -- No info
+    @attrs
+    @info
+      Set the initial state by its name (used for persistence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Dirty
+    @format
+      b(Dirty)  -- No info
+    @attrs
+    @info
+      Set the dirty flag (FSM has changed)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddState
+    @output
+      v
+    @input
+      o(State)
+    @info 
+      Add a state to the FSM
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveState
+    @output
+      v
+    @input
+      o(State)
+    @info 
+      Remove a state from the FSM (it does NOT release the state)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd DeleteState
+    @output
+      v
+    @input
+      o(State)
+    @info 
+      Delete a state from the FSM (it releases the state)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetInitialState
+    @cmdtype setter
+    @property InitialState
+    @info 
+      Set the initial state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetInitialState
+    @cmdtype getter
+    @property InitialState
+    @info 
+      Return the initial state, or NULL if there isn't any initial state
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddStateByName
+    @output
+      v
+    @input
+      s(State name) -- No info
+      i(State type) -- 0=Node, 1=Leaf, 2=End
+    @info 
+      Add a state by its name, creating the state if needed (used for persistence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetInitialStateByName
+    @cmdtype setter
+    @property InitialStateByName
+    @info 
+      Set the initial state by its name (used for persistence)
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsDirty
+    @output
+      b(Dirty) -- No info
+    @input
+      v
+    @info 
+      Tell if this FSM has changed since the last time it was saved
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDirty
+    @cmdtype setter
+    @property Dirty
+    @info 
+      Set the dirty flag (FSM has changed)
+*/

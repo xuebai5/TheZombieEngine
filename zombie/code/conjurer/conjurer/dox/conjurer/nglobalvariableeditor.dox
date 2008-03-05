@@ -1,0 +1,55 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nglobalvariableeditor
+    @cppclass nGlobalVariableEditor
+    @superclass nRoot
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property FadeDistances
+    @format
+      f(MinDistance) -- minimum fade distance
+      f(MaxDistance) -- maximum fade distance
+    @attrs
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd IsDirty
+    @output
+      v
+    @input
+      v
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveGlobalVariables
+    @output
+      v
+    @input
+      v
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFadeDistances
+    @cmdtype setter
+    @property FadeDistances
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetFadeDistances
+    @cmdtype getter
+    @property FadeDistances
+    @info 
+      No information
+*/

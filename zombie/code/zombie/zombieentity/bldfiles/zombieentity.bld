@@ -1,0 +1,266 @@
+#===============================================================================
+#   zombieentity.bld
+#   Zombie entity modules
+#   
+#   Modules:
+#       ncdictionary
+#       ncdictionaryclass
+#       ncloader
+#       ncloaderclass
+#       ncassetclass
+#       ncbatchloader
+#       ncasset
+#       nctransform
+#       nctransformclass
+#       neJoint
+#       neRagdollLimb
+#       ncsuperentity
+#       ncsubentity
+#       ncpersisthelpersubentity
+#       nassetdependencyserver
+#       nbatchdependencyserver
+#       nloaderserver
+#       nasyncloaderserver
+#       nloadarea
+#       nindoorarea
+#       noutdoorarea
+#       ninstscenebuilder
+#       nbatchscenebuilder
+#       ncoutdoorbuilder
+#===============================================================================
+
+#===============================================================================
+#  ncshared modules
+#===============================================================================
+beginmodule ncdictionary
+    setdir zombieentity
+    setfiles {
+        ncdictionary_main
+    }
+    setheaders { ncdictionary }
+endmodule
+#===============================================================================
+beginmodule ncdictionaryclass
+    setdir zombieentity
+    setfiles {
+        ncdictionaryclass_main
+    }
+    setheaders { ncdictionaryclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncloader
+    setdir zombieentity
+    setfiles { ncloader_main }
+    setheaders { ncloader }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncloaderclass
+    setdir zombieentity
+    setfiles { ncloaderclass_main }
+    setheaders { ncloaderclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncbatchloader
+    setdir zombieentity
+    setfiles { ncbatchloader_main }
+    setheaders { ncbatchloader }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncassetclass
+    setdir zombieentity
+    setfiles {
+        ncassetclass_main
+    }
+    setheaders { ncassetclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nctransform
+    setdir zombieentity
+    setfiles { 
+        nctransform_main
+    }
+    setheaders { nctransform }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nctransformclass
+    setdir zombieentity
+    setfiles { 
+        nctransformclass_main
+    }
+    setheaders { nctransformclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncsuperentity
+  setdir zombieentity
+  setfiles { ncsuperentity_main }
+  setheaders { ncsuperentity }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncsubentity
+  setdir zombieentity
+  setfiles { ncsubentity_main }
+  setheaders { ncsubentity }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncpersisthelpersubentity
+  setdir zombieentity
+  setfiles { ncpersisthelpersubentity_main }
+  setheaders { ncpersisthelpersubentity }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nassetdependencyserver
+  setdir zombieentity
+  setfiles { nassetdependencyserver_main }
+  setheaders { nassetdependencyserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nbatchdependencyserver
+  setdir zombieentity
+  setfiles { nbatchdependencyserver_main }
+  setheaders { nbatchdependencyserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nloaderserver
+  setdir zombieentity
+  setfiles { nloaderserver_main nloaderserver_areas nloaderserver_cmds }
+  setheaders { nloaderserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nasyncloaderserver
+  setdir zombieentity
+  setfiles { nasyncloaderserver_main nasyncloaderserver_cmds }
+  setheaders { nasyncloaderserver }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nloadarea
+    setdir zombieentity
+    setfiles { nloadarea_main nloadarea_stats nloadarea_cmds }
+    setheaders { nloadarea }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nindoorarea
+    setdir zombieentity
+    setfiles { nindoorarea_main }
+    setheaders { nindoorarea }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule noutdoorarea
+    setdir zombieentity
+    setfiles { noutdoorarea_main }
+    setheaders { noutdoorarea }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ninstscenebuilder
+    setdir zombieentity
+    setfiles { ninstscenebuilder }
+    setheaders { ninstscenebuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nbatchscenebuilder
+    setdir zombieentity
+    setfiles { nbatchscenebuilder }
+    setheaders { nbatchscenebuilder }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncoutdoorbuilder
+  setdir zombieentity
+  setfiles { ncoutdoorbuilder }
+  setheaders { ncoutdoorbuilder }
+endmodule
+
+#===============================================================================
+#  ncshared target
+#===============================================================================
+begintarget ncshared
+    settype lib
+    setpch true    
+    setmodules {
+        nctransform nctransformclass
+        ncdictionary ncdictionaryclass 
+        ncloader ncloaderclass
+        ncassetclass ncsubentity ncsuperentity ncpersisthelpersubentity
+        ncbatchloader
+        nassetdependencyserver nloaderserver nasyncloaderserver nloadarea 
+        nindoorarea noutdoorarea
+        ninstscenebuilder nbatchscenebuilder nbatchdependencyserver
+        ncoutdoorbuilder
+    }
+endtarget
+
+#===============================================================================
+#  zombieentity modules
+#===============================================================================
+beginmodule zombieentity
+    setdir zombieentity
+    setfiles { zombieentity zombieentitylist }
+    setheaders { zombieentity }
+endmodule
+
+beginmodule graphicsentity
+    setdir zombieentity
+    setfiles { graphicsentity graphicsentitylist }
+    setheaders { graphicsentity }
+endmodule
+
+beginmodule graphicsentityexp
+    setdir zombieentity
+    setfiles { graphicsentityexp graphicsentitylistexp }
+    setheaders { graphicsentityexp }
+endmodule
+
+beginmodule physicsentity
+    setdir zombieentity
+    setfiles { physicsentity physicsentitylist }
+    setheaders { physicsentity }
+endmodule
+
+beginmodule physicsentityexp
+    setdir zombieentity
+    setfiles { physicsentityexp physicsentitylistexp }
+    setheaders { physicsentityexp }
+endmodule
+
+beginmodule spatialentity
+    setdir zombieentity
+    setfiles { spatialentity spatialentitylist }
+    setheaders { spatialentity }
+endmodule
+
+beginmodule spatialentityexp
+    setdir zombieentity
+    setfiles { spatialentityexp spatialentitylistexp }
+    setheaders { spatialentityexp }
+endmodule
+
+beginmodule conjurerentity
+    setdir conjurerentity
+    setfiles { conjurerentity conjurerentitylist }
+    setheaders { conjurerentity }
+endmodule
+
+#===============================================================================
+#  zombieentity target
+#===============================================================================
+#-------------------------------------------------------------------------------
+begintarget zombieentity
+    settype lib
+    setpch true    
+    setmodules { 
+        zombieentity 
+        graphicsentity 
+        physicsentity 
+        spatialentity 
+        conjurerentity 
+        }
+endtarget
+
+#-------------------------------------------------------------------------------
+begintarget zombieentityexp
+    settype lib
+    setpch true    
+    setmodules { 
+        graphicsentityexp
+        physicsentityexp
+        spatialentityexp
+    }
+endtarget

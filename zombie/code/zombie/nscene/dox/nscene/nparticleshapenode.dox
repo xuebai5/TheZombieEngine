@@ -1,0 +1,789 @@
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass
+    nparticleshapenode
+
+    @cppclass
+    nParticleShapeNode
+
+    @superclass
+    nshapenode
+
+    @classinfo
+    Take input mesh and render particles coming out of each vertex
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property particleEmissionDuration
+    @format
+      f( emission duration ;min=0;max=1000;step=0.01;editor=slider) -- Specifys the the length of the cycle.
+    @attrs subgroup=particles  
+    @info
+      The emitter emission duration.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property FuncSrcBlend
+    @format
+      i(Source Blend;enums=Zero:1,One:2,SrcColor:3,InvSrcColor:4,SrcAlpha:5,InvSrcAlpha:6,DestAlpha:7,InvDestAlpha:8,DestColor:9,InvDestColor:10,SrcAlphaSat:11) -- Specifys the blend source function.
+    @attrs subgroup=particles  
+    @info
+      The particle source blend function.
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setfuncsrcblend
+	@cmdtype setter
+	@property FuncSrcBlend
+    @info
+     Set the fucntion source blend.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getfuncsrcblend
+	@cmdtype getter
+	@property FuncSrcBlend
+    @info
+     Get the fucntion source blend.
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @property FuncDestBlend
+    @format
+      i(Destination Blend;enums=Zero:1,One:2,SrcColor:3,InvSrcColor:4,SrcAlpha:5,InvSrcAlpha:6,DestAlpha:7,InvDestAlpha:8,DestColor:9,InvDestColor:10,SrcAlphaSat:11) -- Specifys the blend destination function.
+    @attrs subgroup=particles  
+    @info
+      The particle destination blend function.
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setfuncdestblend
+	@cmdtype setter
+	@property FuncDestBlend
+    @info
+     Set the fucntion destination blend.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getfuncdestblend
+	@cmdtype getter
+	@property FuncDestBlend
+    @info
+     Get the fucntion destination blend.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ParticleTexture
+    @format
+      s( ParticleTexture;subtype=texture) -- Specifys the texture.
+    @attrs subgroup=particles  
+    @info
+      The particle texture.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ParticleMesh
+    @format
+      s( ParticleMesh;subtype=file) -- Specifys the mesh. Each vertex of mesh is a spawn point.
+    @attrs subgroup=particles
+    @info
+      The particle mesh. Each vertex of mesh is a spawn point.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ActivityDistance
+    @format
+      f( Activity distance ;min=0;max=1000;step=0.01;editor=slider) -- Specifys the activity distance.
+    @attrs subgroup=particles  
+    @info
+      The spread angle.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property SpreadAngle
+    @format
+      f( Spread angle ;min=-360;max=360;step=0.1;editor=slider) -- Specifys the spread angle.
+    @attrs subgroup=particles  
+    @info
+      The spread angle.
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @property BirthDelay
+    @format
+      f( Birth delay ;min=0;max=20;step=0.1;editor=slider) -- Specifys the birth delay.
+    @attrs subgroup=particles  
+    @info
+      The Birth delay.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property StartRotation
+    @format
+      f( Start rotation  ;min=-360.0;max=360.0;step=0.1;editor=slider) -- Specifys the start rotation.
+    @attrs subgroup=particles  
+    @info
+      The start rotation.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property GlobalScale
+    @format
+      f( Global Scale;min=0.1;max=10.0;step=0.1;editor=slider) -- Specifys the global scale.
+    @attrs subgroup=particles  
+    @info
+      The global scale.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ParticlesFollowNode
+    @format
+      b(FollowNode) -- Specifys the follow node.
+    @attrs subgroup=particles  
+    @info
+      The follow node
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlesfollownode
+	@cmdtype setter
+	@property ParticlesFollowNode
+    @info
+     Set the follow node
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlesfollownode
+	@cmdtype getter
+	@property ParticlesFollowNode
+    @info
+     Get the follow node.
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setglobalscale
+	@cmdtype setter
+	@property GlobalScale
+    @info
+     Set the global scale.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getglobalscale
+	@cmdtype getter
+	@property GlobalScale
+    @info
+     Get the global scale.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setstartrotation
+	@cmdtype setter
+	@property StartRotation
+    @info
+     Set the start rotation.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getstartrotation
+	@cmdtype getter
+	@property StartRotation
+    @info
+     Get the start rotation.
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setbirthdelay
+	@cmdtype setter
+	@property BirthDelay
+    @info
+     Set the birth delay.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getbirthdelay
+	@cmdtype getter
+	@property BirthDelay
+    @info
+     Get the birth delay.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setspreadangle
+	@cmdtype setter
+	@property SpreadAngle
+    @info
+     Set the spread angle.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getspreadangle
+	@cmdtype getter
+	@property SpreadAngle
+    @info
+     Get the spread angle.
+*/
+
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setactivitydistance
+	@cmdtype setter
+	@property ActivityDistance
+    @info
+     Set the activity distance.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getactivitydistance
+	@cmdtype getter
+	@property ActivityDistance
+    @info
+     Get the activity distance.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticletexture
+	@cmdtype setter
+	@property ParticleTexture
+    @info
+     Set the particle texture.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticletexture
+	@cmdtype getter
+	@property ParticleTexture
+    @info
+     Get the particle texture.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlemesh
+	@cmdtype setter
+	@property ParticleMesh
+    @info
+     Set the particle mesh.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlemesh
+	@cmdtype getter
+	@property ParticleMesh
+    @info
+     Get the particle mesh.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setemissionduration
+	@cmdtype setter
+	@property particleEmissionDuration
+    @info
+     Set the emitter emission duration.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getemissionduration
+	@cmdtype getter
+	@property particleEmissionDuration
+    @info
+     Get emitter emission duration.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleloop
+    @format
+      b(  loop )
+    @attrs subgroup=particles  
+    @info
+      if emitter loops.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setloop
+	@cmdtype setter
+	@property particleloop
+    @info
+     Set if emitter loops.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getloop
+	@cmdtype getter
+	@property particleloop
+    @info
+    Get if emitter loops.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property EmissionFrequency
+    @format
+      f( keyFrame0 ;min=0;max=500;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=500;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=500;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=500;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyfram 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyfram 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle emission frequency curve. This allows you to set the amount of particles that will be emitted over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd
+    setemissionfrequency
+	@cmdtype setter
+	@property EmissionFrequency
+    @info
+    Set the particle emission frequency curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd
+    getemissionfrequency
+	@cmdtype getter
+	@property EmissionFrequency
+    @info
+    Get the particle emission frequency curve.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LifeTime
+    @format
+      f( keyFrame0 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle life time curve. Allows you to set the lifetime of the particles. The units are measured in seconds.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd
+    setparticlelifetime
+	@cmdtype setter
+	@property LifeTime
+    @info
+    Set the particle life time curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd
+    getparticlelifetime
+	@cmdtype getter
+	@property LifeTime
+    @info
+    Get the particle life time curve.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property StartVelocity
+    @format
+      f( keyFrame0 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1 
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1 
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle start velocity curve. This is the velocity that will be set to the particle when it is going to be emitted.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlestartvelocity
+	@cmdtype setter
+	@property StartVelocity
+    @info
+     Set the particle start velocity curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd
+    getparticlestartvelocity
+	@cmdtype getter
+	@property StartVelocity
+    @info
+     Get the particle start velocity curve.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property RotationVelocity
+    @format
+      f( keyFrame0 ;min=-360;max=360;step=0.5;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=-360;max=360;step=0.5;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=-360;max=360;step=0.5;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=-360;max=360;step=0.5;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=-360;max=360;step=0.5;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle rotation velocity curve. This sets the amount of rotation for the particle over time, it is not the initial start-rotation-angle!
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlerotationvelocity
+	@cmdtype setter
+	@property RotationVelocity
+    @info
+     Set the particle rotation velocity curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlerotationvelocity
+	@cmdtype getter
+	@property RotationVelocity
+    @info
+     Get the particle rotation velocity curve.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleScale
+    @format
+      f( keyFrame0 ;min=0;max=7;step=0.1;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=7;step=0.1;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=7;step=0.1;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=7;step=0.1;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle scale curve. Allows you to set the size of the sprites, you can change the value over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlescale
+	@cmdtype setter
+	@property particleScale
+    @info
+     Set the particle scale curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlescale
+	@cmdtype getter
+	@property particleScale
+    @info
+     Get the particle scale curve.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleWeight
+    @format
+      f( keyFrame0 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle weight. Allows you to set the weight of the particle, so you can control whether a particle is moving up or down. You can change the value over time. But remember: The weight that you set up is not an initial start-value for the particle that is beeing emitted that time! The value will change the weight for all particles, means also the particles that are already emitted!
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticleweight
+	@cmdtype setter
+	@property particleWeight
+    @info
+     Set the particle weight.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticleweight
+	@cmdtype getter
+	@property particleWeight
+    @info
+     Get the particle weight.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleRGB
+    @format
+      fff( keyFrame0 red ;min=0;max=1;step=0.001;editor=color) -- red value in keyFrame 0
+	  fff( keyFrame1 red ;min=0;max=1;step=0.001;editor=color) -- red value in keyFrame 1
+	  fff( keyFrame2 red ;min=0;max=1;step=0.001;editor=color) -- red value in keyFrame 2
+	  fff( keyFrame3 red ;min=0;max=1;step=0.001;editor=color) -- red value in keyFrame 31
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle rgb curve. Here you can specify overlay-colors for the image-file. The values can be set in the color-bar an can be changed over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlergb
+	@cmdtype setter
+	@property particleRGB
+    @info
+     Set the particle rgb curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlergb
+	@cmdtype getter
+	@property particleRGB
+    @info
+     Get the particle rgb curve.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleAlpha
+    @format
+      f( keyFrame0 ;min=0;max=1;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=1;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=1;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=1;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      the particle alpha curve. Allows you to set the alpha of the sprites, you can change the value over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlealpha
+	@cmdtype setter
+	@property particleAlpha
+    @info
+     Set the particle alpha curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlealpha
+	@cmdtype getter
+	@property particleAlpha
+    @info
+     Get the particle alpha curvet.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleSideVelocity1
+    @format
+      f( keyFrame0 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The first particle side velocity curve. Allows you to set the side velocity flag 1 of the sprites, you can change the value over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlesidevelocity1
+	@cmdtype setter
+	@property particleSideVelocity1
+    @info
+     Set the first particle side velocity curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlesidevelocity1
+	@cmdtype getter
+	@property particleSideVelocity1
+    @info
+     Get the first particle side velocity curve.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleSideVelocity2
+    @format
+      f( keyFrame0 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The second particle side velocity curve. Allows you to set the side velocity flag 2 of the sprites, you can change the value over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlesidevelocity2
+	@cmdtype setter
+	@property particleSideVelocity2
+    @info
+     Set the second particle side velocity curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlesidevelocity2
+	@cmdtype getter
+	@property particleSideVelocity2
+    @info
+     Get the second particle side velocity curve.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleAirResistance
+    @format
+      f( keyFrame0 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=100;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=20;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle air resistance curve. Allows you to set the air resistance of the sprites, you can change the value over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticleairresistance
+	@cmdtype setter
+	@property particleAirResistance
+    @info
+     Set the particle air resistance curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticleairresistance
+	@cmdtype getter
+	@property particleAirResistance
+    @info
+     Get the particle air resistance curve.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property particleVelocityFactor
+    @format
+      f( keyFrame0 ;min=0;max=2;step=0.01;editor=slider) -- value in keyFrame 0
+	  f( keyFrame1 ;min=0;max=2;step=0.01;editor=slider) -- value in keyFrame 1
+	  f( keyFrame2 ;min=0;max=2;step=0.01;editor=slider) -- value in keyFrame 2
+	  f( keyFrame4 ;min=0;max=2;step=0.01;editor=slider) -- value in keyFrame 3
+	  f( keyFrame1 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( keyFrame2 pos ;min=0;max=1;step=0.001;editor=slider) -- position of keyframe 1
+	  f( frequency ;min=0;max=100;step=0.1;editor=slider) -- frequency 
+	  f( amplitude ;min=0;max=2;step=0.1;editor=slider) -- amplitude
+	  i( function ;min=0;max=1; enums= sine:0,cosine:1) -- function cosinus or sinus
+    @attrs subgroup=particle envelope curves 
+    @info
+      The particle velocity factor curve. Allows you to set the air resistance of the sprites, you can change the value over time.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd setparticlevelocityfactor
+	@cmdtype setter
+	@property particleVelocityFactor
+    @info
+     Set the particle velocity factor curve.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd getparticlevelocityfactor
+	@cmdtype getter
+	@property particleVelocityFactor
+    @info
+     Get the particle velocity factor curve.
+*/

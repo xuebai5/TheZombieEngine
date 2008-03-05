@@ -1,0 +1,84 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Gameplay
+    @cppclass ncGameplayVehicle
+    @superclass ncGameplay
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Health
+    @format
+      i(Health) -- No info
+    @attrs
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Seat
+    @format
+      o(Seat)   -- No info
+    @attrs private=true
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Battery
+    @format
+      b(Battery) -- No info
+    @attrs
+    @info
+      No info
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHealth
+    @cmdtype setter
+    @property Health
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetHealth
+    @cmdtype getter
+    @property Health
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSeat
+    @cmdtype setter
+    @property Seat
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSeat
+    @cmdtype getter
+    @property Seat
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBattery
+    @cmdtype setter
+    @property Battery
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetBattery
+    @cmdtype getter
+    @property Battery
+    @info 
+      No information
+*/

@@ -1,0 +1,110 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ninventorycontainer
+    @cppclass nInventoryContainer
+    @superclass nObject
+    @classinfo
+      Implements an item container for entities
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumItems
+    @output
+      i(numItems)
+    @input
+      v(unnamed)
+    @info 
+      get the number of items
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWeaponItemAt
+    @output
+      o(weapon)
+    @input
+      i(slot) -- the slot with the weapon
+    @info 
+      get the weapon item of one slot
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetItemAt
+    @output
+      o(item)
+    @input
+      i(slot) -- the slot with the item
+    @info 
+      get a normal item
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetItem
+    @output
+      o(item)
+    @input
+      i(id) -- the item identifier
+    @info 
+      get a normal item
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumBullets
+    @output
+      i(numBullets)
+    @input
+      i(type) -- type of the ammunition
+    @info 
+      get num bullets from an ammunition type
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveBullets
+    @output
+      v(unnamed)
+    @input
+      i(type) -- type of the ammunition
+      i(ammo) -- bullets removed
+    @info 
+      remove bullets from inventory
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumEquipment
+    @output
+      i(unnamed)
+    @input
+      s(name) -- name of the equipment
+    @info 
+      get number of the stack of the equipment
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEntitySlot
+    @output
+      i(unnamed)
+    @input
+      o(entity) -- entity to search
+    @info 
+      get entity to search
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEquipmentSlot
+    @output
+      i(unnamed)
+    @input
+      s(name) -- name of the equipment
+    @info 
+      get slot of the equipment
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetInventoryItem
+    @output
+      i(unnamed)
+    @input
+      s(name) -- name of the inventory
+    @info 
+      get item of the inventory
+*/

@@ -1,0 +1,513 @@
+#-------------------------------------------------------------------------------
+# Renaissance Behaviour build file
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# BEGIN MODULES
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+beginmodule ngameplayenums
+  setdir rnsgameplay
+  setheaders { ngameplayenums }
+  setfiles { ngameplayenums }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncaimovengine
+  setdir ncaimovengine
+  setheaders  { ncaimovengine }
+  setfiles { ncaimovengine ncaimovengine_cmds }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncaistate
+  setdir ncaistate
+  setheaders { ncaistate }
+  setfiles { ncaistate ncaistate_cmds } 
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncagentmemory
+  setdir ncagentmemory
+  setheaders { reminder ncagentmemory }
+  setfiles { ncagentmemory ncagentmemory_cmds } 
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncspawnpoint
+    setdir ncspawnpoint
+    setfiles { ncspawnpoint ncspawnpoint_cmds }
+    setheaders { ncspawnpoint }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncspawner
+    setdir ncspawner
+    setfiles { ncspawner ncspawner_cmds }
+    setheaders { ncspawner } 
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncpopulatorarea
+    setdir ncpopulatorarea
+    setfiles { ncpopulatorarea ncpopulatorarea_cmds }
+    setheaders { ncpopulatorarea }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule npopulator
+    setdir npopulator
+    setfiles { npopulator npopulator_cmds }
+    setheaders { npopulator }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplay
+    setdir rnsgameplay
+    setfiles {
+        ncgameplay_main
+        ncgameplay_net
+        ncgameplay_cmds
+    }
+    setheaders { ncgameplay }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayclass
+    setdir rnsgameplay
+    setfiles {
+        ncgameplayclass_main
+        ncgameplayclass_cmds
+    }
+    setheaders { ncgameplayclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayliving
+    setdir ncgameplayliving
+    setfiles {
+        ncgameplayliving_main
+        ncgameplayliving_cmds
+    }
+    setheaders { ncgameplayliving }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplaylivingclass
+    setdir ncgameplayliving
+    setfiles {
+        ncgameplaylivingclass_main
+        ncgameplaylivingclass_cmds
+    }
+    setheaders { ncgameplaylivingclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+#beginmodule ncgameplaystructure
+#    setdir ncgameplaystructure
+#    setfiles {
+#        ncgameplaystructure_main
+#        ncgameplaystructure_cmds
+#        ncgameplaystructureclass_main
+#        ncgameplaystructureclass_cmds
+#    }
+#    setheaders { ncgameplaystructure ncgameplaystructureclass }
+#endmodule
+
+#-------------------------------------------------------------------------------
+#beginmodule ncgameplaygroup
+#    setdir ncgameplaygroup
+#    setfiles {
+#        ncgameplaygroup_main
+#        ncgameplaygroup_cmds
+#        ncgameplaygroupclass_main
+#        ncgameplaygroupclass_cmds
+#    }
+#    setheaders { ncgameplaygroup ncgameplaygroupclass }
+#endmodule
+
+#-------------------------------------------------------------------------------
+#beginmodule ncgameplaysquad
+#    setdir ncgameplaysquad
+#    setfiles {
+#        ncgameplaysquad_main
+#        ncgameplaysquad_cmds
+#        ncgameplaysquadclass_main
+#        ncgameplaysquadclass_cmds
+#    }
+#    setheaders { ncgameplaysquad ncgameplaysquadclass }
+#endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayvehicleseat
+    setdir ncgameplayvehicleseat
+    setfiles {
+        ncgameplayvehicleseat_main
+        ncgameplayvehicleseat_cmds
+    }
+    setheaders { ncgameplayvehicleseat }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayvehicleseatclass
+    setdir ncgameplayvehicleseat
+    setfiles {
+        ncgameplayvehicleseatclass_main
+        ncgameplayvehicleseatclass_cmds
+    }
+    setheaders { ncgameplayvehicleseatclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayvehicle
+    setdir ncgameplayvehicle
+    setfiles {
+        ncgameplayvehicle_main
+        ncgameplayvehicle_cmds
+    }
+    setheaders { ncgameplayvehicle }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayvehicleclass
+    setdir ncgameplayvehicle
+    setfiles {
+        ncgameplayvehicleclass_main
+        ncgameplayvehicleclass_cmds
+    }
+    setheaders { ncgameplayvehicleclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplaywheel
+    setdir ncgameplaywheel
+    setfiles {
+        ncgameplaywheel_main
+    }
+    setheaders { ncgameplaywheel }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplaywheelclass
+    setdir ncgameplaywheel
+    setfiles {
+        ncgameplaywheelclass_main
+    }
+    setheaders { ncgameplaywheelclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayplayer
+    setdir ncgameplayplayer
+    setfiles {
+        ncgameplayplayer_main
+        ncgameplayplayer_move
+        ncgameplayplayer_cmds
+    }
+    setheaders { ncgameplayplayer }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncgameplayplayerclass
+    setdir ncgameplayplayer
+    setfiles {
+        ncgameplayplayerclass_main
+        ncgameplayplayerclass_cmds
+    }
+    setheaders { ncgameplayplayerclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpthrowable
+    setdir rnsgameplay
+    setheaders { ncgpthrowable }
+    setfiles { ncgpthrowable }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncgprocket
+    setdir rnsgameplay
+    setfiles {
+        ncgprocket_main
+        ncgprocket_cmds
+    }
+    setheaders { ncgprocket }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncgprocketclass
+    setdir rnsgameplay
+    setfiles {
+        ncgprocketclass_main
+        ncgprocketclass_cmds
+    }
+    setheaders { ncgprocketclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpgrenade
+    setdir rnsgameplay
+    setfiles {
+        ncgpgrenade_main
+        ncgpgrenade_cmds
+    }
+    setheaders { ncgpgrenade }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpgrenadeclass
+    setdir rnsgameplay
+    setfiles {
+        ncgpgrenadeclass_main
+        ncgpgrenadeclass_cmds
+    }
+    setheaders { ncgpgrenadeclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpweapon
+    setdir rnsgameplay
+    setfiles { 
+        ncgpweapon_main ncgpweapon_cmds
+    }
+    setheaders { ncgpweapon }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpweaponcharsclass
+    setdir rnsgameplay
+    setfiles { 
+        ncgpweaponcharsclass_main ncgpweaponcharsclass_cmds
+    }
+    setheaders { ncgpweaponclass }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule ncgpweaponclass
+    setdir rnsgameplay
+    setfiles { 
+        ncgpweaponclass_main ncgpweaponclass_cmds
+    }
+    setheaders { ncgpweaponclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpweaponmelee
+    setdir rnsgameplay
+    setfiles { 
+        ncgpweaponmelee_main ncgpweaponmelee_cmds
+    }
+    setheaders { ncgpweaponmelee }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpweaponmeleeclass
+    setdir rnsgameplay
+    setfiles { 
+        ncgpweaponmeleeclass_main ncgpweaponmeleeclass_cmds
+    }
+    setheaders { ncgpweaponmeleeclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpammunitionclass
+    setdir rnsgameplay
+    setfiles { ncgpammunitionclass }
+    setheaders { ncgpammunitionclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpexplosion
+    setdir rnsgameplay
+    setfiles {
+        ncgpexplosion_main
+    }
+    setheaders {
+        ncgpexplosion 
+    }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpexplosionclass
+    setdir rnsgameplay
+    setfiles {
+        ncgpexplosionclass_main
+        ncgpexplosionclass_cmds
+    }
+    setheaders {
+        ncgpexplosionclass
+    }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ninventoryitem
+    setdir rnsgameplay
+    setfiles { ninventoryitem }
+    setheaders { ninventoryitem }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ninventorycontainer
+    setdir rnsgameplay
+    setfiles { ninventorycontainer }
+    setheaders { ninventorycontainer }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ninventorymanager
+    setdir rnsgameplay
+    setfiles { ninventorymanager }
+    setheaders { ninventorymanager }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ndamagemanager
+    setdir rnsgameplay
+    setfiles {
+        ndamagemanager
+    }
+    setheaders {
+        ndamagemanager
+    }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule nrnsentitymanager
+    setdir rnsgameplay
+    setfiles {
+        nrnsentitymanager_main
+        nrnsentitymanager_net
+    }
+    setheaders {
+        nrnsentitymanager
+    }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule nclogicanimator
+    setdir nclogicanimator
+    setfiles {
+        nclogicanimator_main
+        nclogicanimator_cmds
+    }
+    
+    setheaders { nclogicanimator }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncsoundlayer
+    setdir ncsoundlayer
+    setfiles { ncsoundlayer }    
+    setheaders { ncsoundlayer }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncrnswaypoint
+  setdir ncrnswaypoint
+  setfiles { ncrnswaypoint_cmds ncrnswaypoint_main }
+  setheaders { ncrnswaypoint }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpsight
+  setdir ncgpperception
+  setfiles { ncgpsight_main }
+  setheaders { ncgpsight }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgphearing
+  setdir ncgpperception
+  setfiles { ncgphearing_main }
+  setheaders { ncgphearing }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgpfeeling
+  setdir ncgpperception
+  setfiles { ncgpfeeling_main }
+  setheaders { ncgpfeeling }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ngameplayutils
+    setdir rnsgameplay
+    setfiles { ngameplayutils }
+    setheaders { ngameplayutils }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplaydoor
+    setdir ncgameplaydoor
+    setfiles { ncgameplaydoor_main ncgameplaydoor_cmds }
+    setheaders { ncgameplaydoor }
+endmodule
+
+#-------------------------------------------------------------------------------
+beginmodule ncgameplaydoorclass
+    setdir ncgameplaydoor
+    setfiles { ncgameplaydoorclass_main ncgameplaydoorclass_cmds }
+    setheaders { ncgameplaydoorclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+# BEGIN TARGETS
+#-------------------------------------------------------------------------------
+
+begintarget rnsgameplay
+    settype lib
+    setwarningslevel 4
+    
+    setpch true
+    setmodules {
+        ngameplayenums
+        ncgameplay
+        ncgameplayclass
+        ncgameplayliving
+        ncgameplaylivingclass
+        ncgameplayplayer
+        ncgameplayplayerclass
+        ncgpthrowable
+        ncgprocket
+        ncgprocketclass
+        ncgpgrenade
+        ncgpgrenadeclass
+        ncgpweapon
+        ncgpweaponcharsclass
+        ncgpweaponclass
+        ncgpweaponmelee
+        ncgpweaponmeleeclass
+        ncgpammunitionclass
+        ncgpexplosion
+        ncgpexplosionclass
+        ndamagemanager
+        ncaimovengine
+        ncaistate
+        ncagentmemory
+        nclogicanimator
+        ncsoundlayer
+        ncrnswaypoint
+        ncgpsight
+        ncgphearing
+        ncgpfeeling
+        ngameplayutils
+        ninventoryitem
+        ninventorycontainer
+        ninventorymanager
+        nrnsentitymanager
+        ncgameplaydoor
+        ncgameplaydoorclass
+        ncspawner
+        ncspawnpoint
+        ncpopulatorarea
+        npopulator
+        ncgameplayvehicle
+        ncgameplayvehicleclass
+        ncgameplayvehicleseat
+        ncgameplayvehicleseatclass
+        ncgameplaywheel
+        ncgameplaywheelclass
+    }        
+        
+endtarget
+
+#-------------------------------------------------------------------------------
+# EOF
+#-------------------------------------------------------------------------------

@@ -1,0 +1,61 @@
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ntimesyncanimator
+    @cppclass nTimeSyncAnimator
+    @superclass nAnimator
+    @classinfo
+       To Synchronize the time, restart the time ofset of entity.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property CycleTime
+    @format
+      f(cycleTime) -- The time of cycle
+    @info
+      the time of cycle
+*/
+//------------------------------------------------------------------------------
+/**
+    @cmd SetCycleTime
+	@cmdtype setter
+	@property CycleTime
+    @info
+     Set the time of cycle.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetCycleTime
+	@cmdtype getter
+	@property CycleTime
+    @info
+     Get the time of cycle.
+*/
+
+
+//--------------------------------------------------------------------------------
+/**
+    @property OffsetTime
+    @format
+      f(OffsetTime) -- The time of offset
+    @info
+      the time of offset
+*/
+//------------------------------------------------------------------------------
+/**
+    @cmd SetOffsetTime
+	@cmdtype setter
+	@property OffsetTime
+    @info
+     Set the time of offset.
+*/
+
+//------------------------------------------------------------------------------
+/**
+    @cmd GetOffsetTime
+	@cmdtype getter
+	@property OffsetTime
+    @info
+     Get the time of offset.
+*/

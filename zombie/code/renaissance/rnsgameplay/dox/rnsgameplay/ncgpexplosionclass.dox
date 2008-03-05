@@ -1,0 +1,84 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Gameplay
+    @cppclass ncGPExplosionClass
+    @superclass nEntityClass
+    @classinfo
+      Component Class that represent an explosion.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ExplosionRadius
+    @format
+      f(ExplosionRadius;min=0;max=50;step=0.1;editor=slider) -- Radius of the explosion
+    @attrs
+    @info
+      Radius of the explosion
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ExplosionPower
+    @format
+      f(ExplosionPower;min=0;max=500000;step=10;editor=slider) -- Power of the explosion
+    @attrs
+    @info
+      Power of the explosion
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ExplosionDamage
+    @format
+      f(ExplosionDamage;min=0;max=500000;step=10;editor=slider) -- Damage of the explosion
+    @attrs
+    @info
+      Damage of the explosion
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetExplosionRadius
+    @cmdtype setter
+    @property ExplosionRadius
+    @info 
+      set the radius of the explosion of the rockets
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetExplosionRadius
+    @cmdtype getter
+    @property ExplosionRadius
+    @info 
+      get the radius of the explosion of the rockets
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetExplosionPower
+    @cmdtype setter
+    @property ExplosionPower
+    @info 
+      set the power of the explosion of the rockets
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetExplosionPower
+    @cmdtype getter
+    @property ExplosionPower
+    @info 
+      get the power of the explosion of the rockets
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetExplosionDamage
+    @cmdtype setter
+    @property ExplosionDamage
+    @info 
+      set the damage of the explosion of the rockets
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetExplosionDamage
+    @cmdtype getter
+    @property ExplosionDamage
+    @info 
+      get the damage of the explosion of the rockets
+*/

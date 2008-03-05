@@ -1,0 +1,42 @@
+#-------------------------------------------------------------------------------
+#   Basic Examples
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+#   Modules
+#-------------------------------------------------------------------------------
+beginmodule nccolor
+    setdir "esample"
+    setheaders { nccolor }
+    setfiles { nccolor }
+endmodule
+beginmodule ncprinter
+    setdir "esample"
+    setheaders { ncprinter }
+    setfiles { ncprinter }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nesample
+    setdir "esample"
+    setheaders { nesample }
+    setfiles { nesample }
+endmodule
+beginmodule nesampleclass
+    setdir "esample"
+    setheaders { nesampleclass }
+    setfiles { nesampleclass }
+endmodule
+
+#-------------------------------------------------------------------------------
+#   Targets
+#-------------------------------------------------------------------------------
+begintarget nesample
+    annotate "A sample entity and some simple components"
+    settype lib
+    setmodules {
+        nccolor
+        ncprinter
+        nesample
+        nesampleclass
+    }
+endtarget
+#-------------------------------------------------------------------------------

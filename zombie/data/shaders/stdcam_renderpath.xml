@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RenderPath name="dx7" shaderpath="home:data/shaders/2.0">
+
+    <!-- declare shaders and technique aliases -->
+    <Shaders>
+        <Shader name="passes" file="shaders:trag_passes.fx" />
+        <Shader name="phases" file="shaders:trag_phases.fx" />
+        <Shader name="terrain" file="shaders:trag_terrain.fx" />
+        <Shader name="nocull" file="shaders:trag_sequences.fx" technique="tSeqNoCull" />
+        <Shader name="depthbias" file="shaders:trag_sequences.fx" technique="tSeqDepthBias" />
+        <Shader name="linearfog" file="shaders:trag_sequences.fx" technique="tSeqLinearFog" />
+        <Shader name="depthbiaslinearfog" file="shaders:trag_sequences.fx" technique="tSeqDepthBiasLinearFog" />
+        <Shader name="alphatest" file="shaders:trag_sequences.fx" technique="tSeqAlphaTest" />
+        <Shader name="alphatestnocull" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestNoCull" />
+        <Shader name="alphatestlinearfog" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestLinearFog" />
+        <Shader name="alphatestnoculllinearfog" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestNoCullLinearFog" />
+    </Shaders>
+
+    <RenderTarget name="ShadowBuffer0"  format="R32F" width="512" height="512" />
+
+    <!-- declare variables -->
+    <Float4 name="ShadowColor" value="0.0 0.0 0.0 0.5" />
+    <Int    name="ShadowSrcBlend" value="1" />
+    <Int    name="ShadowDstBlend" value="2" />
+    
+    <!-- render into framebuffer -->
+    <Pass name="color" shader="shaders:trag_passes.fx" technique="tPassColor" clearColor="0.5 0.5 0.5 1.0" clearDepth="1.0" clearStencil="0">
+        <Phase name="depth" shader="shaders:trag_phases.fx" technique="tPhaseDepth" restore="Yes" fourcc="dept" sort="Surface" lights="Off" flags="ShapeVisible">
+            <Sequence shader="alphatest" />
+            <Sequence shader="nocull" />
+        </Phase>
+        <Phase name="instanced" fourcc="inst" sort="Surface" lights="On" flags="ShapeVisible">
+            <Sequence shader="alphatest" />
+            <Sequence shader="nocull" />
+            <Sequence shader="linearfog" />
+            <Sequence shader="alphatestnocull" />
+            <Sequence shader="alphatestlinearfog" />
+            <Sequence shader="alphatestnoculllinearfog" />
+        </Phase>
+        <Phase name="opaque" shader="shaders:trag_phases.fx" technique="tPhaseOpaque" restore="Yes" fourcc="colr" sort="Surface" lights="On" flags="ShapeVisible">
+            <Sequence shader="nocull" />
+            <Sequence shader="depthbias" />
+            <Sequence shader="linearfog" />
+            <Sequence shader="depthbiaslinearfog" />
+        </Phase>
+        <Phase name="terrain0" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm0" sort="Surface" lights="On">
+            <Sequence shader="linearfog" />
+        </Phase>
+        <Phase name="terrain1" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm1" sort="Surface" lights="On">
+            <Sequence shader="linearfog" />
+        </Phase>
+        <Phase name="sky" shader="shaders:trag_phases.fx" technique="tPhaseSky" restore="Yes" fourcc="sky0" sort="Surface" lights="Off" flags="ShapeVisible">
+        </Phase>
+        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseAlpha" restore="Yes" fourcc="alph" sort="BackToFront" lights="On" flags="ShapeVisible">
+            <Sequence shader="nocull" />
+            <Sequence shader="depthbias" />
+            <Sequence shader="linearfog" />
+            <Sequence shader="depthbiaslinearfog" />
+        </Phase>
+        <Phase name="laser" shader="shaders:trag_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="lase" sort="Surface" lights="On" flags="ShapeVisible" lightflags="CheckLightEntity" >
+        </Phase>
+        <Phase name="laser2" shader="shaders:trag_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="las2" sort="Surface" lights="Off" flags="ShapeVisible" >
+        </Phase>
+    </Pass>
+
+    <!-- draw stencil shadows -->
+    <Pass name="shadowVolumes" shader="shaders:trag_passes.fx" technique="tPassShadow" clearStencil="0">
+        <Float4 name="AlphaSrcBlend" variable="ShadowSrcBlend" />
+        <Float4 name="AlphaDstBlend" variable="ShadowDstBlend" />
+        <Phase name="shadowvolumes" fourcc="shdv" sort="Surface" lights="On" flags="ShadowVisible" lightflags="RenderOncePerLight">
+        </Phase>
+    </Pass>
+
+    <!-- draw shadow plane -->
+    <Pass name="shadowPlane" shader="shaders:stencil_plane.fx" restore="Yes" drawQuad="Yes" shadowEnabledCondition="Yes" >
+        <Float4 name="MatDiffuse" variable="ShadowColor" />
+    </Pass>
+
+    <Pass name="overlay">
+        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseOverlay" restore="true" fourcc="over" sort="Surface" lights="Off" flags="ShapeVisible">
+        </Phase>
+    </Pass>
+
+    <Pass name="Editor" >
+        <Phase name="editor" fourcc="edit" sort="Surface" lights="Off">
+        </Phase>
+        <Phase name="grassedition" fourcc="gmge" sort="Surface" lights="Off">
+        </Phase>
+    </Pass>
+
+    <!-- compose the final frame -->
+    <!--Pass name="compose" shader="shaders:trag_hdr.fx" technique="tCopy" drawQuad="Yes">
+        <Texture name="DiffMap0" value="ShadowBuffer0" />
+    </Pass-->
+
+    <!-- fini -->
+</RenderPath>

@@ -1,0 +1,21 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngpdismountaccessory
+    @cppclass nGPDismountAccessory
+    @superclass nGPBasicAction
+    @classinfo
+      Dismount an accesory from the actual weapon or from a weapon in the inventory
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd Init
+    @output
+      b(unnamed) -- true if the action can be done
+    @input
+      o(entity) -- entity that change the weapon
+      i(slotType) -- slot to dismount in the weapon
+      i(weaponLocation) -- index in the inventory for the weapon or -1 for current
+    @info 
+      Initial condition
+*/

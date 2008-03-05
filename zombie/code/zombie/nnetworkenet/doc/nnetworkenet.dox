@@ -1,0 +1,13 @@
+/**
+    @defgroup NNetworkEnetContribModule Networking Enet Contributed Module
+    @ingroup NebulaTragnarionModules
+    @brief nNetworkEnet implements basic networking functionality using Enet library.
+   
+    <p>
+    Network Client and a Network Server classes that internally use the eNet
+library <a href="http://enet.cubik.org/">Enet</a>. The eNet library is thin and
+robust protocol layer on top UDP to provide optional reliable and in-order
+delivery of packets.
+    </p>
+*/
+

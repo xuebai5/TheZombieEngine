@@ -1,0 +1,28 @@
+#===============================================================================
+#  nundoserver.bld
+#===============================================================================
+
+#===============================================================================
+#  nundoserver modules
+#===============================================================================
+beginmodule nundoserver
+    setdir nundo
+    setfiles {
+        undocmdscripted
+        undocmdbyscript
+        nundoserver_main
+        nundoserver_cmds
+    }
+    setheaders { undocmd undocmdscripted nundoserver undocmdbyscript }
+endmodule
+#===============================================================================
+#  nundoserver Targets
+#===============================================================================
+begintarget nundoserver
+    annotate "Undo Server"
+    settype lib
+    setpch true
+    setmodules {
+        nundoserver
+    }
+endtarget

@@ -1,0 +1,259 @@
+//------------------------------------------------------------------------------
+/**
+    @defgroup Nebula2TutorialsEntities Entity System Tutorials
+    @ingroup Nebula2Tutorials
+
+    The following sections describe the intended use of components and entities. Sample code will be extracted from the neSample tutorial, which must be your primary reference in creating new components and entities.
+
+    - @ref NebulaEntityCreatingComponents
+    - @ref NebulaEntityCreatingEntities
+
+    @section NebulaEntityCreatingComponents Creating entity components
+
+    @subsection Naming convention:
+
+    - A component for the module xxx is named ncXXXClass (the class), ncXXX (the object)
+
+    @subsection Component declarations
+
+    Required declarations in the component class (class and object):
+
+    - declaration 
+    
+    Declaration of the component object using virtual public inheritance from nComponentObject.
+
+@code    
+    class ncXXX : virtual public nComponentObject
+    {
+        /// constructor
+        ncXXX();
+        /// destructor
+        virtual ~ncXXX();
+    
+        // member functions
+        // script interface (see below)
+        // persistence (see below)
+        // component commands and signals (see below)
+        // signal definitions (see below)
+    };
+@code    
+
+     Same way, for class components use virtual public inheritance from nComponentClass.
+     
+@code
+    class ncClassXXX : virtual public nComponentClass
+    {
+        /// constructor
+        ncClassXXX();
+        /// destructor
+        virtual ~ncClassXXX();
+    
+        // member functions
+        // script interface (see below)
+        // persistence (see below)
+        // component commands and signals (see below)
+        // signal definitions (see below)
+    };
+@endcode    
+
+    - member functions
+    
+    Normal C++ functions defined freely.
+    
+    - script interface
+
+@code
+    NCMDPROTONATIVECPP_DECLARE_BEGIN(ncXXXClass)
+    //NCMDPROTONATIVECPP_DECLARE_...
+    NCMDPROTONATIVECPP_DECLARE_END(ncXXXClass);
+@endcode
+
+    - persistence
+
+@code
+    bool ncXXXClass::SaveCmds(nPersistServer * ps);
+    bool ncXXX::SaveCmds(nPersistServer * ps);
+@endcode
+
+    - component commands and signals
+
+@code
+    NCOMPONENT_BEGIN()
+        NCOMPONENT_ADDCMD(...)
+        NCOMPONENT_ADDSIGNAL(...)
+    NCOMPONENT_END()
+@endcode
+
+    Components can inherit from other components, the top root component must inherit from nComponentObject / nComponentClass. In the case, component inheritance is used the above declaration for commands and signals must be changed to the following:
+    
+@code    
+    NCOMPONENT_BEGIN_PARENT(parentComponentClassName)
+        NCOMPONENT_ADDCMD(...)
+        NCOMPONENT_ADDSIGNAL(...)
+    NCOMPONENT_END()    
+@endcode    
+
+    - signal definitions (in the ncxxxclass_main.cc, ncxxx_main.cc file)
+
+@code
+    NSIGNAL_DEFINE(ncXXXClas, ...);
+@endcode
+
+    @subsection NebulaEntityComponentImplementation Implementation hints
+
+    - accessing the class component from the object component
+
+    In order to provide access to a component of an entity, all components must be registered in the componentlist.h file, using the NCOMPONENT macro:
+
+@code
+    NCOMPONENT(ncXXX)
+@endcode
+
+    This requires every component be declared with NECLASS_COMPONENT(ncXXXClass) and NEOBJECT_COMPONENT(ncXXX) in the corresponding entity class and object. Then, resolving the component class from the component object can be done using the nComponentClassType template, like this:
+
+@code
+    ncXXX::...()
+
+    nEntityObject *entity = this->GetEntityObject();
+    nEntityClass *entityClass = (nEntityClass *) entity->GetClass();
+    ncXXXClass *componentClass = entityClass->GetComponent(nComponentClassType<ncXXXClass>());
+    ncXXXClass *componentClass1 = this->GetClassComponent(nComponentClassType<ncXXXClass>());
+    ncXXX2 *component2 = this->GetComponent(nComponentClassType<ncXXX2>());
+@endcode
+
+    componentClass now gives access to the component class of the containing entity.
+
+    @section NebulaEntityCreatingEntities Creating entities
+
+    @subsection Naming convention
+
+    - Entities are named neXXXClass (the class), and neXXX (the object).
+
+    @subsection Class declarations
+
+    - Written code is forbidden directly in the entity class, all code is inherited only from the components.
+            
+    - Declaration: the neXXXClass must be derived from nEntityClass, and any number of registered components.
+
+@code
+    class neSampleClass : 
+        public nEntityClass, 
+        public ncColorClass, 
+        public ncPrinterClass
+    {
+    public:
+        //...
+        
+    };
+@endcode
+
+    In the case of neXXX entities, they must be derived from nEntityObject and the registered components.
+
+@code
+    class neSample : 
+        public nEntityObject, 
+        public ncColor, 
+        public ncPrinter
+    {
+    public:
+        //...
+        
+    };
+@endcode
+    
+    - Entity persistence: component persistence can be reused, along with any entity-specific persistence.
+    
+@code
+    bool 
+    neSampleClass::SaveCmds(nPersistServer * ps)
+    {
+        if (nEntityObject::SaveCmds(ps) &&
+            ncColorClass::SaveCmds(ps) &&
+            ncPrinterClass::SaveCmds(ps) )
+        {
+            return true;
+        }
+    
+        return false;
+    }
+@endcode
+
+    Persistence is done in analog way for neSample.
+
+    - Class initialization: InitClass must be called for every component. Also, script commands are added here, instead of using the usual BEGINCMDS / ENDCMDS declaration of scripts commands.
+    
+@code
+    /// entity class initialization
+    static void InitClass(nClass * cl)
+    {
+        ncColorClass::InitClass<neSampleClass>(cl);
+        ncPrinterClass::InitClass<neSampleClass>(cl);
+        NCMDPROTONATIVECPP_ADDCMD(sampleclassprint);
+        //... commands
+        NCMDPROTONATIVECPP_ADDSIGNAL(sampleclassprinted);
+        //... signals
+    }
+@endcode
+
+    - Explicitly state the component set
+    
+    Use NECLASS_COMPONENT for entity classes. In the case you are using component inheritance, you must put one for each parent and grandparents of each inherited component.
+
+@code
+    NECLASS_COMPONENT(ncColorClass);
+    NECLASS_COMPONENT(ncPrinterClass);
+@endcode
+
+    Use NOBJECT_COMPONENT for entity classes. In the case you are using component inheritance, you must put one for each parent and grandparents of each inherited component.
+    
+@code
+    NEOBJECT_COMPONENT(ncColor)
+    NEOBJECT_COMPONENT(ncPrinter)
+@endcode    
+
+    - Macro placed in the cc file 
+    
+    For entity classes you must put the following macro in the nesampleclass_main.cc file. Basically you state which C++ class it is and from which nClass it derives.
+    
+@code
+    nNebulaEntityClass(neSample, "nentityclass")
+@endcode    
+    
+    For entity objects you must put the following macro in the nesample_main.cc file. Basically you specify which C++ class it is, from which nClass it derives (nentityobject) and which is its entity class (nesampleclass).
+        
+@code        
+    nNebulaEntityObject(neSample, "nentityobject", "nesampleclass");
+@endcode    
+    
+    
+    @subsection Implementation hints
+    
+    - Accessing a component class method or member from the entity class. Although component members can be accessed using the usual syntax, it is preferred to explicitly remove any possible ambiguitiy in accessing inherited members:
+    
+@code
+    this->ncColorClass::classprint();
+@endcode
+
+    - Accessing a component class method or member from client code. Either the entity class is known beforehand, or you can retrieve access to the component.
+    
+@code
+    ncColorClass *componentClass = entityClass->GetClassComponent(nType<ncColorClass>());
+    componentClass->classprint();
+@endcode
+
+    - The same holds true for accessing class components from an entity (object). The class for the entity is automatically resolved.
+    
+@code
+    ncColorClass *componentClass = entity->GetClassComponent(nType<ncColorClass>());
+    componentClass->classprint();
+@endcode
+
+    - Accessing a component object method or member from client code. Just the same, using the object version of the same construct:
+    
+@code
+    ncColor *component = entity->GetComponent(nType<ncColor>());
+    component->print();
+@endcode
+
+    The neSample tutorial created by Marc Ordinas <marc.ordinas@tragnarion.com>
+*/

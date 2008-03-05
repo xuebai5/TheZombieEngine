@@ -1,0 +1,54 @@
+#-------------------------------------------------------------------------------
+# BEGIN MODULES
+#-------------------------------------------------------------------------------
+
+beginmodule nwaypointserver
+    setdir nwaypointserver
+    setfiles { nwaypointserver_main nwaypointserver_cmds routemanager }
+    setheaders { nwaypointserver routemanager }
+endmodule
+
+beginmodule waypoint
+    setdir waypoint
+    setfiles { waypoint }
+    setheaders { waypoint }
+endmodule
+
+beginmodule ncwaypoint
+    setdir ncwaypoint
+    setfiles { ncwaypoint_main }
+    setheaders { ncwaypoint }
+endmodule
+
+beginmodule ncwaypointclass
+    setdir ncwaypoint
+    setfiles { ncwaypointclass }
+    setheaders { ncwaypointclass }
+endmodule
+
+beginmodule ncwaypointpath
+    setdir ncwaypointpath
+    setfiles { ncwaypointpath_main }
+    setheaders { ncwaypointpath }
+endmodule
+
+#-------------------------------------------------------------------------------
+# BEGIN TARGETS
+#-------------------------------------------------------------------------------
+
+begintarget nwaypoint
+    settype lib
+    setwarningslevel 4
+    setpch true
+    setmodules {
+        nwaypointserver
+        waypoint
+        ncwaypoint
+        ncwaypointclass
+        ncwaypointpath
+    }      
+endtarget
+
+#-------------------------------------------------------------------------------
+# EOF
+#-------------------------------------------------------------------------------

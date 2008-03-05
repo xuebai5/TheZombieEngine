@@ -1,0 +1,346 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @component Physics Joint
+    @cppclass ncPhyJoint
+    @superclass ncPhyPickableObj
+    @classinfo
+      Component for entities that represents any type of joint.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ObjectA
+    @format
+      o(ObjectA) -- gets the id of the object if any
+    @attrs
+    @info
+      gets the id of the object if any
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ObjectB
+    @format
+      o(ObjectB) -- gets the id of the object if any
+    @attrs
+    @info
+      gets the id of the object if any
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Type
+    @format
+      i(Type)   -- gets the type of joint
+    @attrs
+    @info
+      gets the type of joint
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property AnchorPoint
+    @format
+      fff(AnchorPoint) -- sets the joint's whereabouts
+    @attrs
+    @info
+      sets the joint's whereabouts
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property FirstAxis
+    @format
+      fff(FirstAxis) -- sets the first axis
+    @attrs
+    @info
+      sets the first axis
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property LowStopAnglePosition
+    @format
+      i(LowStopAnglePosition) -- sets low stop angle or position
+      f(LowStopAnglePosition) -- sets low stop angle or position
+    @attrs
+    @info
+      sets low stop angle or position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property HiStopAnglePosition
+    @format
+      i(HiStopAnglePosition) -- sets high stop angle or position
+      f(HiStopAnglePosition) -- sets high stop angle or position
+    @attrs
+    @info
+      sets high stop angle or position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property Velocity
+    @format
+      i(Velocity) -- sets desired motor velocity (this will be an angular or linear velocity)
+      f(Velocity) -- sets desired motor velocity (this will be an angular or linear velocity)
+    @attrs
+    @info
+      sets desired motor velocity (this will be an angular or linear velocity)
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property MaximunForce
+    @format
+      i(MaximunForce) -- the maximum force or torque that the motor will use to achieve the desired velocity
+      f(MaximunForce) -- the maximum force or torque that the motor will use to achieve the desired velocity
+    @attrs
+    @info
+      the maximum force or torque that the motor will use to achieve the desired velocity
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property FudgeFactor
+    @format
+      i(FudgeFactor) -- sets the fudge factor
+      f(FudgeFactor) -- sets the fudge factor
+    @attrs
+    @info
+      sets the fudge factor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property BouncynessStop
+    @format
+      i(BouncynessStop) -- sets the bouncyness of the stops
+      f(BouncynessStop) -- sets the bouncyness of the stops
+    @attrs
+    @info
+      sets the bouncyness of the stops
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property CFM
+    @format
+      i(CFM)    -- sets the constraint force mixing (CFM) value used when not at a stop
+      f(CFM)    -- sets the constraint force mixing (CFM) value used when not at a stop
+    @attrs
+    @info
+      sets the constraint force mixing (CFM) value used when not at a stop
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property StopERP
+    @format
+      i(StopERP) -- sets the error reduction parameter (ERP) used by the stops
+      f(StopERP) -- sets the error reduction parameter (ERP) used by the stops
+    @attrs
+    @info
+      sets the error reduction parameter (ERP) used by the stops
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property StopCFM
+    @format
+      i(StopCFM) -- sets the constraint force mixing (CFM) value used by the stops
+      f(StopCFM) -- sets the constraint force mixing (CFM) value used by the stops
+    @attrs
+    @info
+      sets the constraint force mixing (CFM) value used by the stops
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd Mount
+    @output
+      v
+    @input
+      v
+    @info 
+      mounts the joint
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd UnMount
+    @output
+      v
+    @input
+      v
+    @info 
+      unmounts the joint
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetObjectA
+    @cmdtype setter
+    @property ObjectA
+    @info 
+      sets the id of the object if any
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetObjectA
+    @cmdtype getter
+    @property ObjectA
+    @info 
+      gets the id of the object if any
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetObjectB
+    @cmdtype setter
+    @property ObjectB
+    @info 
+      sets the id of the object if any
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetObjectB
+    @cmdtype getter
+    @property ObjectB
+    @info 
+      gets the id of the object if any
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetType
+    @cmdtype setter
+    @property Type
+    @info 
+      sets the type of joint
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetType
+    @cmdtype getter
+    @property Type
+    @info 
+      gets the type of joint
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAnchorPoint
+    @cmdtype setter
+    @property AnchorPoint
+    @info 
+      sets the joint's whereabouts
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFirstAxis
+    @cmdtype setter
+    @property FirstAxis
+    @info 
+      sets the first axis
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLowStopAnglePosition
+    @cmdtype setter
+    @property LowStopAnglePosition
+    @info 
+      sets low stop angle or position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetHiStopAnglePosition
+    @cmdtype setter
+    @property HiStopAnglePosition
+    @info 
+      sets high stop angle or position
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetVelocity
+    @cmdtype setter
+    @property Velocity
+    @info 
+      sets desired motor velocity (this will be an angular or linear velocity)
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaximunForce
+    @cmdtype setter
+    @property MaximunForce
+    @info 
+      the maximum force or torque that the motor will use to achieve the desired velocity
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetFudgeFactor
+    @cmdtype setter
+    @property FudgeFactor
+    @info 
+      sets the fudge factor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetBouncynessStop
+    @cmdtype setter
+    @property BouncynessStop
+    @info 
+      sets the bouncyness of the stops
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetCFM
+    @cmdtype setter
+    @property CFM
+    @info 
+      sets the constraint force mixing (CFM) value used when not at a stop
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStopERP
+    @cmdtype setter
+    @property StopERP
+    @info 
+      sets the error reduction parameter (ERP) used by the stops
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetStopCFM
+    @cmdtype setter
+    @property StopCFM
+    @info 
+      sets the constraint force mixing (CFM) value used by the stops
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd MountSelected
+    @output
+      v
+    @input
+      v
+    @info 
+      mounts the selected object(s)
+*/
+
+//--------------------------------------------------------------------------------

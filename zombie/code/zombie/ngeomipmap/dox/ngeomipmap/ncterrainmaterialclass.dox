@@ -1,0 +1,403 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Terrain
+    @cppclass ncTerrainMaterialClass
+    @superclass nComponentClass
+    @classinfo
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property WeightMapSize
+    @format
+      i(WeightMapSize) -- get weightmap size
+    @attrs
+    @info
+      get weightmap size
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property GlobalTextureSize
+    @format
+      i(GlobalTextureSize) -- Gets global texture size
+    @attrs
+    @info
+      Gets global texture size
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property ModulationFactor
+    @format
+      f(ModulationFactor) -- Get global modulation factor
+    @attrs
+    @info
+      Get global modulation factor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property MaterialLODDistance
+    @format
+      i(MaterialLODDistance) -- distance in terrain cells around the camera where to apply detailed material 
+    @attrs
+    @info
+      distance in terrain cells around the camera where to apply detailed material 
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property NumBlockPreload
+    @format
+      i(NumBlockPreload) -- number of blocks to preload. Distance to be added to MaterialLODDistance.
+    @attrs
+    @info
+      number of blocks to preload. Distance to be added to MaterialLODDistance.
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property MagicNumber
+    @format
+      i(MagicNumber) -- set the root magic number
+    @attrs
+    @info
+      set the root magic number
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property WeightMapLayerIndex
+    @format
+      v
+    @attrs private=true
+    @info
+      Get WeightMapLayerIndex
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SingleWeightMapFlags
+    @format
+      v
+    @attrs private=true
+    @info
+      Get SingleWeightMapFlags
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SingleWeightMapFlags
+    @format
+      v
+    @attrs private=true
+    @info
+      Get SingleWeightMapFlags
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SingleWeightMapSize
+    @format
+      v
+    @attrs private=true
+    @info
+      Get SingleWeightMapSize
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property DefaultLightmapIsBlack
+    @format
+      b(DefaultLightmapIsBlack) --  if default lightmap is black or white
+    @attrs
+    @info
+       if default lightmap is black or white
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetDefaultLighmapIsBlack
+    @cmdtype getter
+    @property DefaultLightmapIsBlack
+    @info 
+      Gets if default lightmap is black or white
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetDefaultLighmapIsBlack
+    @cmdtype setter
+    @property DefaultLightmapIsBlack
+    @info 
+      Set if default lightmap is black or white
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWeightMapPath
+    @cmdtype getter
+    @property WeightMapPath
+    @info 
+      Get weightmap path
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetModulationTexturePath
+    @cmdtype getter
+    @property ModulationTexturePath
+    @info 
+      Get modulation texture path
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayerCount
+    @cmdtype getter
+    @property LayerCount
+    @info 
+      Get number of layers
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayerHandle
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      Get a layer handle by its position in the stack
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayerPos
+    @output
+      i(unnamed) -- No info
+    @input
+      v
+    @info 
+      Get a layer position by its handle
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd AddLayer
+    @output
+      v
+    @input
+      v
+    @info 
+      Create a new blank layer (return ptr), used for persistence
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd CreateLayer
+    @output
+      v
+    @input
+      v
+    @info 
+      Create a new blank layer
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd RemoveLayer
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      Remove layer
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SelectLayer
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      Set selected layer for painting
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSelectedLayerHandle
+    @cmdtype getter
+    @property SelectedLayerHandle
+    @info 
+      Get selected layer handle
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd Reset
+    @output
+      v
+    @input
+      v
+    @info 
+      Reset all layers and deallocate weightmap
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd RefreshWeightTexture
+    @output
+      v
+    @input
+      v
+    @info 
+      Refresh weight texture in the weightmap from the layer masks
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd RefreshGlobalTexture
+    @output
+      v
+    @input
+      v
+    @info 
+      Refresh global texture
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetWeightMapSize
+    @cmdtype setter
+    @property WeightMapSize
+    @info 
+      set weightmap size
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetWeightMapSize
+    @cmdtype getter
+    @property WeightMapSize
+    @info 
+      get weightmap size
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetGlobalTextureSize
+    @cmdtype setter
+    @property GlobalTextureSize
+    @info 
+      Sets global texture size
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetGlobalTextureSize
+    @cmdtype getter
+    @property GlobalTextureSize
+    @info 
+      Gets global texture size
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetModulationFactor
+    @cmdtype setter
+    @property ModulationFactor
+    @info 
+      Set global modulation factor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetModulationFactor
+    @cmdtype getter
+    @property ModulationFactor
+    @info 
+      Get global modulation factor
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaterialLODDistance
+    @cmdtype setter
+    @property MaterialLODDistance
+    @info 
+      set material lod distance
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaterialLODDistance
+    @cmdtype getter
+    @property MaterialLODDistance
+    @info 
+      get material lod distance
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetNumBlockPreload
+    @cmdtype setter
+    @property NumBlockPreload
+    @info 
+      set number of blocks to preload in cache
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetNumBlockPreload
+    @cmdtype getter
+    @property NumBlockPreload
+    @info 
+      get number of blocks to preload in cache
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMagicNumber
+    @cmdtype setter
+    @property MagicNumber
+    @info 
+      set the root magic number
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLayerByHandle
+    @output
+      v
+    @input
+      v
+    @info 
+      Get a layer by its handle
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd SaveTerrainMaterial
+    @output
+      b(unnamed) -- No info
+    @input
+      v
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @cmd ImportMaterials
+    @output
+      b(unnamed) -- No info
+    @input
+      o(unnamed) -- No info
+    @info 
+      Import the material list from another class
+*/
+
+//--------------------------------------------------------------------------------

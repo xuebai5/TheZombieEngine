@@ -1,0 +1,89 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nobject
+    @cppclass nObject
+    @superclass ---
+    @classinfo
+      nobject is the superclass of all higher level Nebula classes
+      and defines this basic behaviour and properties for all
+      nobject derived classes:
+      - runtime type information
+      - object persistency
+      - language independent scripting interface
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd beginnewobject
+    @output
+      o(unnamed) -- No info
+    @input
+      ss(unnamed) -- No info
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd endobject
+    @output
+      v
+    @input
+      v
+    @info 
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd this
+    @output
+      o(unnamed) -- No info
+    @input
+      v
+    @info 
+      No information
+*/
+
+//--------------------------------------------------------------------------------
+/**
+    @property objectDirty
+    @format
+      b( object dirty)
+    @info
+      The object is dirty.
+*/
+
+//-------------------------------------------------------------------
+/**
+    @cmd
+     setobjectdirty
+    @cmdtype 
+     setter
+    @property 
+     objectDirty
+    @input
+     b (objectdirty)
+
+    @output
+     v
+
+    @info
+     Set object is dirty
+*/
+//-------------------------------------------------------------------
+/**
+    @cmd
+    isobjectdirty
+    @cmdtype 
+     getter
+    @property 
+     objectDirty
+
+    @input
+    v
+
+    @output
+    b(objectdirty)
+
+    @info
+    if this object is dirty
+*/

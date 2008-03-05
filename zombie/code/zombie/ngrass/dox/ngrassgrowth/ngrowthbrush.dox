@@ -1,0 +1,184 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass ngrowthbrush
+    @cppclass nGrowthBrush
+    @superclass nRoot
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property SpawnProbability
+    @format
+      f(SpawnProbability;min=0;max=1;step=0.001;editor=slider) -- spawn probability
+    @attrs
+    @info
+       spawn probability
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinScale
+    @format
+      f(MinScale;min=0.5;max=1.5;step=0.0625;editor=slider) -- minimun scale
+    @attrs
+    @info
+      Minimun scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MaxScale
+    @format
+      f(MaxScale;min=0.5;max=1.5;step=0.0625;editor=slider) -- Maximun scale
+    @attrs
+    @info
+      Maximun scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinDistanceSameBrush
+    @format
+      f(MinDistanceSameBrush;min=0.2) -- Minimun distance betwen same brush
+    @attrs
+    @info
+      Minimimun distance betwen same brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property MinDistanceOtherBrush
+    @format
+      f(MinDistanceOtherBrush;min=0.2) -- Minimun distance with other brush
+    @attrs
+    @info
+      Minimun distance with other brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property ModulateByTerrain
+    @format
+      b(ModulateByTerrain) -- No info
+    @attrs
+    @info
+      The color modulate by terrain color
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property AssetName
+    @format
+      s(AssetName) -- No info
+    @attrs
+    @info
+      Sets the material name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetSpawnProbability
+    @cmdtype setter
+    @property SpawnProbability
+    @info 
+      Set spawn probability
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetSpawnProbability
+    @cmdtype getter
+    @property SpawnProbability
+    @info 
+      Get spawn probability
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinScale
+    @cmdtype setter
+    @property MinScale
+    @info 
+      Set minimun scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinScale
+    @cmdtype getter
+    @property MinScale
+    @info 
+      Get minimun scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMaxScale
+    @cmdtype setter
+    @property MaxScale
+    @info 
+      Set maximun scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMaxScale
+    @cmdtype getter
+    @property MaxScale
+    @info 
+      Get maximun scale
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinDistanceSameBrush
+    @cmdtype setter
+    @property MinDistanceSameBrush
+    @info 
+      Set mimimun distance betwen same brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinDistanceSameBrush
+    @cmdtype getter
+    @property MinDistanceSameBrush
+    @info 
+      Get mimimun distance betwen same brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetMinDistanceOtherBrush
+    @cmdtype setter
+    @property MinDistanceOtherBrush
+    @info 
+      Set mimimun distance betwen same brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetMinDistanceOtherBrush
+    @cmdtype getter
+    @property MinDistanceOtherBrush
+    @info 
+      Get mimimun distance betwen same brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetModulateByTerrain
+    @cmdtype setter
+    @property ModulateByTerrain
+    @info 
+      Set mimimun distance betwen same brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetModulateByTerrain
+    @cmdtype getter
+    @property ModulateByTerrain
+    @info 
+      Get mimimun distance betwen same brush
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetAssetName
+    @cmdtype setter
+    @property AssetName
+    @info 
+      Sets the material name
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetAssetName
+    @cmdtype getter
+    @property AssetName
+    @info 
+      Gets the material name
+*/

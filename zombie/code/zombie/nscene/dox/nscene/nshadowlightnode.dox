@@ -1,0 +1,79 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @scriptclass nshadowlightnode
+    @cppclass nShadowLightNode
+    @superclass nLightNode
+    @classinfo
+      No information
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Orthogonal
+    @format
+      f(Orthogonal) -- No info
+      f(Orthogonal) -- No info
+      f(Orthogonal) -- No info
+      f(Orthogonal) -- No info
+    @attrs
+    @info
+      set orthogonal parameters
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Euler
+    @format
+      fff(Euler) -- No info
+    @attrs
+    @info
+      set light euler
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property Position
+    @format
+      fff(Position) -- No info
+    @attrs
+    @info
+      set light position
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetOrthogonal
+    @cmdtype setter
+    @property Orthogonal
+    @info 
+      set orthogonal parameters
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetEuler
+    @cmdtype setter
+    @property Euler
+    @info 
+      set light euler
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetEuler
+    @cmdtype getter
+    @property Euler
+    @info 
+      get euler
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetPosition
+    @cmdtype setter
+    @property Position
+    @info 
+      set light position
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetPosition
+    @cmdtype getter
+    @property Position
+    @info 
+      get position
+*/

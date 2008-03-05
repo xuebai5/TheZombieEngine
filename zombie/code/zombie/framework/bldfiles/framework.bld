@@ -1,0 +1,75 @@
+#===============================================================================
+#  framework.bld
+#  The framework classes
+#===============================================================================
+
+#===============================================================================
+#  Asset modules
+#===============================================================================
+beginmodule nentityassetbuilder
+    setdir nasset
+    setfiles { nentityassetbuilder }
+    setheaders { nentityassetbuilder }
+endmodule
+
+#===============================================================================
+#  Layer modules
+#===============================================================================
+beginmodule nlayermanager
+    setdir nlayermanager
+    setfiles { nlayermanager_main nlayermanager_cmds}
+    setheaders { nlayermanager }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nlayer
+    setdir nlayermanager
+    setfiles { nlayer_main nlayer_cmds}
+    setheaders { nlayer }
+endmodule
+
+#===============================================================================
+#  level modules
+#===============================================================================
+beginmodule nlevelmanager
+    setdir nlevel
+    setfiles { nlevelmanager_main nlevelmanager_cmds }
+    setheaders { nlevelmanager }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nlevel
+    setdir nlevel
+    setfiles { nlevel_main nlevel_entity nlevel_cmds }
+    setheaders { nlevel }
+endmodule
+
+#===============================================================================
+#  world interface module
+#===============================================================================
+beginmodule nworldinterface
+    setdir nworldinterface
+    setfiles { nworldinterface_main nworldinterface_cmds }
+    setheaders { nworldinterface }
+endmodule
+
+#===============================================================================
+#  save manager
+#===============================================================================
+beginmodule nsavemanager
+    setdir nsavemanager
+    setfiles { nsavemanager_main nsavemanager_cmds }
+    setheaders { nsavemanager }
+endmodule
+
+#===============================================================================
+#  framework targets
+#===============================================================================
+begintarget framework
+    settype lib
+    setpch true
+    setmodules { 
+        nlevelmanager nlevel
+        nentityassetbuilder        
+        nworldinterface 
+        nsavemanager
+    }
+endtarget

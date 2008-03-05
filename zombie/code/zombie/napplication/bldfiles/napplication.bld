@@ -1,0 +1,53 @@
+#-------------------------------------------------------------------------------
+#   napplication.bld
+#   ================
+#   Nebula2 application bld file.
+#   (C) 2005 Conjurer Services, S.A.
+#-------------------------------------------------------------------------------
+beginmodule napplication
+    setdir napplication
+    setfiles { napplication_main napplication_cmds }
+    setheaders { napplication }
+endmodule
+#--------------------------------------------------------------------
+beginmodule nsingleinst
+    setdir nsingleinst
+    setfiles { singleinst }
+    setheaders{ singleinst }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nappstate
+    setdir napplication
+    setfiles { nappstate_main nappstate_cmds }
+    setheaders { nappstate }
+endmodule    
+#-------------------------------------------------------------------------------
+beginmodule nexitappstate
+    setdir napplication
+    setfiles { nexitappstate_main }
+    setheaders { nexitappstate }
+endmodule
+#-------------------------------------------------------------------------------
+beginmodule nappviewport
+    setdir napplication
+    setfiles { nappviewport_main nappviewport_cmds }
+    setheaders { nappviewport }
+endmodule    
+#--------------------------------------------------------------------
+beginmodule nappviewportui
+    setdir napplication
+    setfiles { nappviewportui_main nappviewportui_layout nappviewportui_cmds }
+    setheaders { nappviewportui }
+endmodule
+#===============================================================================
+#  napplication Targets
+#===============================================================================
+begintarget napplication
+    settype lib
+    setpch true
+    setmodules {
+        napplication nappstate nexitappstate
+        nsingleinst
+        nappviewportui nappviewport
+    }
+endtarget

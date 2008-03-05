@@ -1,0 +1,110 @@
+
+//---------------------------------------------------------------------------------
+/**
+    @componentclass Graphics
+    @cppclass ncSceneLodClass
+    @superclass ncSceneClass
+    @classinfo
+      Graphic object with levels of detail.
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LevelRoot
+    @format
+      i(LevelRoot) -- set entity class for level of detail
+      v
+    @attrs
+    @info
+      set entity class for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LevelRange
+    @format
+      i(LevelRange) -- set distance range for level of detail
+      f(LevelRange) -- set distance range for level of detail
+      f(LevelRange) -- set distance range for level of detail
+    @attrs
+    @info
+      set distance range for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LevelInstanced
+    @format
+      i(LevelRange) -- set distance range for level of detail
+    @attrs private=true
+    @info
+      set distance range for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LevelMaterialProfile
+    @format
+      i(LevelMaterialProfile) -- set distance range for level of detail
+    @attrs private=true
+    @info
+      set distance range for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @property LevelAlwaysOnTop
+    @format
+      b(LevelAlwaysOnTop) -- level of detail always on top
+    @attrs private=true
+    @info
+      set level of detail always on top
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLevelRoot
+    @cmdtype setter
+    @property LevelRoot
+    @info 
+      set entity class for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLevelRoot
+    @output
+      v
+    @input
+      i(unnamed) -- No info
+    @info 
+      get entity class for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLevelRange
+    @cmdtype setter
+    @property LevelRange
+    @info 
+      set distance range for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLevelRange
+    @output
+      f(unnamed) -- No info
+      f(unnamed) -- No info
+    @input
+      i(unnamed) -- No info
+    @info 
+      get distance range for level of detail
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd SetLevelAlwaysOnTop
+    @cmdtype setter
+    @property LevelAlwaysOnTop
+    @info 
+      set level of detail always on top
+*/
+//--------------------------------------------------------------------------------
+/**
+    @cmd GetLevelAlwaysOnTop
+    @cmdtype getter
+    @property LevelAlwaysOnTop
+    @info 
+      get level of detail always on top
+*/
