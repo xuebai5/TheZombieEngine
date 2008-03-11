@@ -22,7 +22,15 @@ public:
     /// find identical element in array, return index
     int FindIndex(const TYPE& elm) const;
     /// find identical element in array, return iterator
-    typename nArray<TYPE>::iterator Find(const TYPE& elm) const;
+    typename nArray<TYPE>::iterator Find(const TYPE& elm) const
+	{
+		int idx;
+		if (this->FindPosition(elm, idx))
+		{
+			return 0;
+		}
+		return &((*this)[idx]);
+	}
     /// assignment operator
     nSortedArray<TYPE,compare>& operator=(const nArray<TYPE>& rhs);
 
@@ -140,18 +148,6 @@ nSortedArray<TYPE,compare>::FindIndex(const TYPE& elm) const
     return idx;
 }
 
-//------------------------------------------------------------------------------
-template<class TYPE, int ( __cdecl *compare ) ( const TYPE *, const TYPE *)>
-typename nArray<TYPE>::iterator
-nSortedArray<TYPE,compare>::Find(const TYPE& elm) const
-{
-    int idx;
-    if (this->FindPosition(elm, idx))
-    {
-        return 0;
-    }
-    return &((*this)[idx]);
-}
 //------------------------------------------------------------------------------
 /**
 */

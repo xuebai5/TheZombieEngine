@@ -147,8 +147,8 @@ TerrainPaintingUndoCmd::Execute()
     n_assert(tm);
 
     // get weightmap
-    nTerrainCellInfo * wMap = tm->GetTerrainCellInfo( this->weightMapX, this->weightMapZ );
-    n_assert( wMap );
+    //nTerrainCellInfo * wMap = tm->GetTerrainCellInfo( this->weightMapX, this->weightMapZ );
+    //n_assert( wMap );
 
     nByteMapBuilder bmBuilder;
 
@@ -201,8 +201,8 @@ TerrainPaintingUndoCmd::Unexecute()
     ncTerrainMaterialClass * tm = object->GetClassComponent<ncTerrainMaterialClass>();
     n_assert(tm);
 
-    nTerrainCellInfo * wMap = tm->GetTerrainCellInfo( this->weightMapX, this->weightMapZ );
-    n_assert( wMap );
+    //nTerrainCellInfo * wMap = tm->GetTerrainCellInfo( this->weightMapX, this->weightMapZ );
+    //n_assert( wMap );
 
     nByteMapBuilder bmBuilder;
 
@@ -233,8 +233,8 @@ TerrainPaintingUndoCmd::RefreshTerrain()
         ncTerrainMaterialClass * tm = object->GetClassComponent<ncTerrainMaterialClass>();
         n_assert(tm);
 
-        nTerrainCellInfo * wMap = tm->GetTerrainCellInfo(this->weightMapX, this->weightMapZ );
-        n_assert( wMap );
+        //nTerrainCellInfo * wMap = tm->GetTerrainCellInfo(this->weightMapX, this->weightMapZ );
+        //n_assert( wMap );
 
         // Update layer use
         //wMap->CalculateLayerUse( this->layerHnd );g

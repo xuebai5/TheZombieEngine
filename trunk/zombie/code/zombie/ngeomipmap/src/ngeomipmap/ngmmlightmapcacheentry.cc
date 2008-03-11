@@ -54,8 +54,7 @@ nGMMLightMapCacheEntry::Alloc()
     nCacheEntry::Alloc();
 
     // get terrain material class
-    ncTerrainMaterialClass * tlm = this->outdoorClass->GetComponent<ncTerrainMaterialClass>();
-    n_assert(tlm);
+    n_assert( this->outdoorClass->GetComponent<ncTerrainMaterialClass>() );
 
     // generate resource name
     nString resLightName("lightmap_cache_");
@@ -187,8 +186,7 @@ nGMMLightMapCacheEntry::Setup(nEntityClass * cl)
     nGMMLightMapCacheEntry::outdoorClass = cl;
 
     // initialize the mesh builder
-    ncTerrainGMMClass * terrainGMMClass = cl->GetComponent<ncTerrainGMMClass>();
-    n_assert(terrainGMMClass);
+    n_assert( cl->GetComponent<ncTerrainGMMClass>() );
 }
 
 

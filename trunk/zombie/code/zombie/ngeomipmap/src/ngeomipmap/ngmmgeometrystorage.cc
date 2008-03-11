@@ -139,7 +139,9 @@ nGMMGeometryStorage::EndTerrainMesh()
 /**
 */
 void 
-nGMMGeometryStorage::BeginTerrainGroup(int numVertices, int numIndices)
+nGMMGeometryStorage::BeginTerrainGroup(
+	int N_IFDEF_ASSERTS(numVertices), 
+	int N_IFDEF_ASSERTS(numIndices) )
 {
     n_assert((this->numVertices + numVertices) <= this->maxVertices);
     n_assert((this->numIndices + numIndices) <= this->maxIndices);

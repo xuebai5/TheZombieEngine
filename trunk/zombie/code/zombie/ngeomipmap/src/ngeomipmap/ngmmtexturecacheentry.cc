@@ -296,8 +296,7 @@ nGMMTextureCacheEntry::Setup(nEntityClass * cl)
     nGMMTextureCacheEntry::outdoorClass = cl;
 
     // initialize the mesh builder
-    ncTerrainGMMClass * terrainGMMClass = cl->GetComponent<ncTerrainGMMClass>();
-    n_assert(terrainGMMClass);
+    n_assert( cl->GetComponent<ncTerrainGMMClass>() );
 
     // initialize the profilers
     if (!profGMMWeightMapIO.IsValid())

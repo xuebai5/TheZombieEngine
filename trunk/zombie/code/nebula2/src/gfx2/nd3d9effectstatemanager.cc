@@ -439,7 +439,7 @@ nD3D9EffectStateManager::Create( LPDIRECT3DDEVICE9 pDevice )
         // exceptions) from the driver.  Such duplicate state changes can be expensive
         // on the CPU.  To create the proper state manager, the application determines
         // whether or not it is executing on a PURE device.
-        bool bPureDevice = (cp.BehaviorFlags & D3DCREATE_PUREDEVICE) != 0;
+        //bool bPureDevice = (cp.BehaviorFlags & D3DCREATE_PUREDEVICE) != 0;
         
         //if (bPureDevice)
         //    pStateManager = new nD3D9PureDeviceStateManager( pDevice );

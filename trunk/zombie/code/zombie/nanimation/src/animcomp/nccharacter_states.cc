@@ -534,8 +534,7 @@ ncCharacter::GetElapsedTime(int stateIndex, bool fperson) const
     }
 
     // get the sample time from scene component
-    ncScene* sceneComp = this->GetEntityObject()->GetComponent<ncScene>();
-    n_assert(sceneComp);
+    n_assert( this->GetEntityObject()->GetComponent<ncScene>() );
     nTime curTime = nTimeServer::Instance()->GetFrameTime();
 
     int jointGroup = this->GetJointGroup(stateIndex, fperson);

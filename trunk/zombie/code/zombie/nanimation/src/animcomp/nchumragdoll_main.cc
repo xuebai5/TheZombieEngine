@@ -756,8 +756,7 @@ ncHumRagdoll::Load(nEntityObject* parentObj)
     this->SetCharacter(n_new(nCharacter2(ragClass->GetCharacter())));
     n_assert(this->character);
 
-    ncPhyHumRagDoll *phyHumRagdoll = this->GetComponent<ncPhyHumRagDoll>();
-    n_assert(phyHumRagdoll);
+    n_assert( this->GetComponent<ncPhyHumRagDoll>() );
 
     this->ragAnimator = n_new(nRagdollCharAnimator);
     this->ragAnimator->SetPhyRagdoll(this->GetEntityObject());
