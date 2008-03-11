@@ -589,8 +589,7 @@ nGuiServer::ValidateShader()
     }
     if (!shader->IsLoaded())
     {
-        bool guiShaderLoaded = shader->Load();
-        n_assert(guiShaderLoaded);
+        n_verify( shader->Load() );
     }
 }
 

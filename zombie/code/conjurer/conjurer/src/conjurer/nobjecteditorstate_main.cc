@@ -1749,8 +1749,7 @@ nObjectEditorState::LoadEntitiesInBatch(ncSpatialBatch* spatialBatch)
     const nArray<nEntityObject*>& subentities = spatialBatch->GetSubentities();
     for (int index = 0; index < subentities.Size(); ++index)
     {
-        nEntityObject* subentity = subentities[index];
-        n_assert(subentity);
+        n_assert( subentities[index] );
         ncSpatialBatch* batch = subentities[index]->GetComponent<ncSpatialBatch>();
         if (batch)
         {

@@ -52,8 +52,7 @@ nGuiClientWindow::~nGuiClientWindow()
 void
 nGuiClientWindow::UpdateLayout(const rectangle& newRect)
 {
-    nGuiSkin* skin = nGuiServer::Instance()->GetSkin();
-    n_assert(skin);
+    n_verify( nGuiServer::Instance()->GetSkin() );
 
     rectangle closeRect;
     rectangle sizeRect;

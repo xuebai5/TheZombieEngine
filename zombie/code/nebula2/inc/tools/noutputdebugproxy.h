@@ -11,8 +11,10 @@
 */
 //------------------------------------------------------------------------------
 
+#ifdef USE_DETOURS
 #pragma comment(lib, "detoured.lib")
 #pragma comment(lib, "detours.lib")
+#endif
 
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>

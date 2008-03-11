@@ -215,7 +215,7 @@ nInguiToolPhyPick::Pick( nAppViewport* vp, vector2 /*mp*/, line3 ray)
     @brief Return true if I can pick the given entity object
 */
 bool
-nInguiToolPhyPick::CanPickEntityObject(nEntityObject* entityObject)
+nInguiToolPhyPick::CanPickEntityObject(nEntityObject* /*entityObject*/)
 {
     return true;
 }

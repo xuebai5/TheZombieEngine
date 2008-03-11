@@ -632,8 +632,7 @@ nTerrainLine::GeneratePolygon( nMeshBuilder* mb, nString meshPath )
     {
 	    this->debugShader = nGfxServer2::Instance()->NewShader("terr_pol_shader");
 	    this->debugShader->SetFilename("shaders:terrpol.fx");
-	    bool success = this->debugShader->Load();
-	    n_assert(success);
+	    n_verify( this->debugShader->Load() );
     }
 
     return true;

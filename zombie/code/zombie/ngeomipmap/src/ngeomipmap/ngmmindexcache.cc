@@ -50,7 +50,11 @@ nGMMIndexCache::Setup(const char * terrainClassName, int numLODLevels, nGMMIndex
 /**
 */
 nMesh2 * 
-nGMMIndexCache::GetIndexMesh(int lod, int lodN, int lodE, int lodS, int lodW)
+nGMMIndexCache::GetIndexMesh(int lod, 
+	int N_IFDEF_ASSERTS(lodN), 
+	int N_IFDEF_ASSERTS(lodE), 
+	int N_IFDEF_ASSERTS(lodS), 
+	int N_IFDEF_ASSERTS(lodW) )
 {
     n_assert(lod >= 0 && lod <= this->numLODLevels);
     n_assert(lodN >= 0 && lod <= this->numLODLevels);

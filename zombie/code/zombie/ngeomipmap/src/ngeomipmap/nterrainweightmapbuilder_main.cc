@@ -464,8 +464,7 @@ nTerrainWeightMapBuilder::CheckBlockBoundaries( int x0, int z0, int x1, int z1)
     n_assert( z1 >= 0 && z1 < numBlocks );
 
     // Number of layer in the terrain
-    int numLayers = this->terrainMaterialComponent->GetLayerCount();
-    n_assert( numLayers > 0 );
+    n_assert( this->terrainMaterialComponent->GetLayerCount() > 0 );
 
     // Crop rectangle area to update
     if ( x1 < x0 )

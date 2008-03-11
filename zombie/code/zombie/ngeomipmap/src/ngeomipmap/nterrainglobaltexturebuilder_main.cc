@@ -142,8 +142,7 @@ nTerrainGlobalTextureBuilder::GenerateGlobalTexture( int x0, int z0, int x1, int
     gfxServer->PushTransform(nGfxServer2::Projection, matrix44() );
     
     // get scene node from the class (passed through to all the leaf cells)
-    ncSceneClass * scene = this->terrainMaterialComponent->GetComponent<ncSceneClass>();
-    n_assert(scene);
+    n_assert( this->terrainMaterialComponent->GetComponent<ncSceneClass>() );
 
     // Loop through tiles
     for (int j = z0; j <= z1; j++)

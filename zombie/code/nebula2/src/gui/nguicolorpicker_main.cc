@@ -71,8 +71,7 @@ nGuiColorPicker::Render()
         // make sure gui resource is loaded
         if (!guiResource->IsValid())
         {
-            bool success = guiResource->Load();
-            n_assert(success);
+            n_verify( guiResource->Load() );
         }
         
         // set the intensity and alpha value for rendering

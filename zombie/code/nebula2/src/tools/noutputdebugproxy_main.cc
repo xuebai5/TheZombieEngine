@@ -4,7 +4,9 @@
 //------------------------------------------------------------------------------
 #include "precompiled/pchnoutputdebugproxylib.h"
 #include "tools/noutputdebugproxy.h"
+#ifdef USE_DETOURS
 #include <detours.h>
+#endif
 #include "kernel/nlogclass.h"
 
 
@@ -90,6 +92,7 @@ nOutputDebugProxy::nOutputDebugProxy()
         nOutputDebugProxy::trueOutputDebugString == 0 )
     {
         trueOutputDebugString = OutputDebugString;
+#ifdef USE_DETOURS
         if ( NO_ERROR ==  DetourTransactionBegin() )
         {
             bool isOk = (NO_ERROR == DetourUpdateThread(GetCurrentThread()) );
@@ -103,6 +106,7 @@ nOutputDebugProxy::nOutputDebugProxy()
                 OutputDebugString("I can't change the OutputDebugString function");
             }
         }
+#endif
     } 
     else
     {
@@ -122,6 +126,7 @@ nOutputDebugProxy::~nOutputDebugProxy()
              (trueOutputDebugString != 0) // the function is changed
            )
         {
+#ifdef USE_DETOURS
             if ( DetourTransactionBegin() )
             {
                 bool isOk = (NO_ERROR == DetourUpdateThread(GetCurrentThread()));
@@ -137,6 +142,7 @@ nOutputDebugProxy::~nOutputDebugProxy()
                 }
 
             }
+#endif
         }
     }
 }

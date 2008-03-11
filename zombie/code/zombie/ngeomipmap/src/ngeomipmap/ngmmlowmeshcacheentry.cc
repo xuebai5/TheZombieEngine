@@ -58,8 +58,7 @@ nGMMLowMeshCacheEntry::Alloc()
 
     this->nCacheEntry::Alloc();
 
-    nGMMVertexBuilder * vertexBuilder = this->tgmmc->GetVertexBuilder();
-    n_assert(vertexBuilder);
+    n_assert( this->tgmmc->GetVertexBuilder() );
 
     this->cell = 0;
     // vertex position + normal, 3 floats each

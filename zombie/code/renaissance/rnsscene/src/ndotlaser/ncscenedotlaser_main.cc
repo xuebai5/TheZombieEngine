@@ -294,7 +294,7 @@ ncSceneDotLaser::UpdateLaserProjection()
 /**
 */
 void
-ncSceneDotLaser::TriggerClassModified(nObject* emitter)
+ncSceneDotLaser::TriggerClassModified(nObject* N_IFDEF_ASSERTS(emitter) )
 {
     n_assert2( this->GetEntityClass() == emitter , "Update ncSceneDotLaser from other object" );
     this->UpdateLaserProjection();
