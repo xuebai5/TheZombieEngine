@@ -176,7 +176,7 @@ def main():
     useGUI = True
     numCmdLineArgs = len(sys.argv)
     copydlls = True
-    getsvnrev = True
+    getsvnrev = False
     #copywidgets = False
     extraArgs = {}
     if numCmdLineArgs > 1:
@@ -219,6 +219,8 @@ def main():
                 copydlls = False
             elif '-nogetsvnrev' == sys.argv[i]:
                 getsvnrev = False
+            elif '-getsvnrev' == sys.argv[i]:
+                getsvnrev = True
             #elif '-copywidgets' == sys.argv[i]:
             #    copywidgets = True
             else:
