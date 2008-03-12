@@ -1,0 +1,151 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_RGBADD, DIALOG
+    BEGIN
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RGBADD DIALOGEX 0, 0, 228, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Color #1:",IDC_STATIC,9,22,30,8,0,WS_EX_RIGHT
+    LTEXT           "Color #2:",IDC_STATIC,9,38,29,8,0,WS_EX_RIGHT
+    LTEXT           "Maps",IDC_STATIC,120,9,20,8
+    CONTROL         "Custom1",IDC_MULT_TEX1,"CustButton",WS_TABSTOP,78,20,
+                    119,12
+    CONTROL         "Custom1",IDC_MULT_TEX2,"CustButton",WS_TABSTOP,78,36,
+                    119,12
+    CONTROL         "",IDC_MAPON1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,203,
+                    22,8,10
+    CONTROL         "",IDC_MAPON2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,203,
+                    38,8,10
+    GROUPBOX        "Alpha From:",IDC_STATIC,25,65,89,57
+    CONTROL         "Map #1",IDC_MULT_ALPHA1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,38,76,41,10
+    CONTROL         "Map #2",IDC_MULT_ALPHA2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,38,90,41,10
+    CONTROL         "Add Alphas",IDC_MULT_ALPHA3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,38,105,52,10
+    CONTROL         "",IDC_MULT_COL1,"ColorSwatch",0x0,43,20,31,13
+    CONTROL         "",IDC_MULT_COL2,"ColorSwatch",0x0,43,36,31,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_DS_RGBADD           "RGB Add"
+    IDS_DS_RGBADDPARAMS     "RGB Add Parameters"
+    IDS_DS_COLOR1           "Color 1"
+    IDS_DS_COLOR2           "Color 2"
+    IDS_JW_MAP1             "Map 1"
+    IDS_JW_MAP2             "Map 2"
+    IDS_JW_MAP1ENABLE       "Map 1 Enable"
+    IDS_JW_MAP2ENABLE       "Map 2 Enable"
+    IDS_PW_ALPHAFROM        "AlphaFrom"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DS_RGBADD_CDESC     "RGB Add"
+    IDS_DS_PARAMETERS       "Parameters"
+    IDS_DS_MTLDESC          "Standard materials and textures (Tragnarion)"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Spanish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,54 @@
+/**
+    @defgroup 3dsMax 3ds Max plugins
+    @ingroup NebulaTragnarionModules
+    @brief plugins for 3ds max7
+*/
+
+/** 
+    @defgroup n3dsMaxExporter 3ds Max exporter
+    @ingroup 3dsMax 
+    @brief The main plugin for export
+*/
+
+/** 
+    @defgroup n3dsMaxExporterKernel 3ds Max exporter kernel
+    @ingroup n3dsMaxExporter 
+    @brief The main classes
+*/
+
+/** 
+    @defgroup n3dsMaxMaterial 3ds Max exporter Materials
+    @ingroup n3dsMaxExporter 
+    @brief materials
+*/
+
+/** 
+    @defgroup n3dsMaxVisibility 3ds Max exporter visibility system
+    @ingroup n3dsMaxExporter 
+    @brief visibility
+*/
+
+/** 
+    @defgroup n3dsMaxAnimators 3ds Max exporter Animators
+    @ingroup n3dsMaxExporter 
+    @brief Animators
+*/
+
+/** 
+    @defgroup 3dsMorePlugins  plugins
+    @ingroup 3dsMax 
+    @brief more plugin for 3ds max6
+*/
+
+/** 
+    @defgroup n3dsMaxScripts
+    @ingroup 3dsMax 
+    @brief Maxscript plugins, macros and utilities
+*/
+
+/** 
+    @defgroup n3dsMaxAnimation 3ds Max exporter Animations
+    @ingroup n3dsMaxExporter
+    @brief Used to export skeletons, skeletal and blend animations, and character meshes.
+*/
+
