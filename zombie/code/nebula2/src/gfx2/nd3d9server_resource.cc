@@ -1,8 +1,8 @@
-#include "precompiled/pchndirect3d9.h"
 //------------------------------------------------------------------------------
 //  nd3d9server_resource.cc
 //  (C) 2003 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
 #include "gfx2/nd3d9server.h"
 #include "resource/nresourceserver.h"
 #include "gfx2/nmesh2.h"

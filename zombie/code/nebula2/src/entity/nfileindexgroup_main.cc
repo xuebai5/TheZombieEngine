@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nfileindexgroup_main.cc
-    @author Cristobal Castillo
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nfileindexgroup_main.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/nfileindexgroup.h"

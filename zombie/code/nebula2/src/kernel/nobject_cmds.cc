@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
+//  nobject_cmds.cc
 //  (c) 2004 Vadim Macagon
-//  Refactored out of nRoot.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/nkernelserver.h"

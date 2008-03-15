@@ -1,12 +1,12 @@
 #ifndef N_NMAPTABLE_H
 #define N_NMAPTABLE_H
+//------------------------------------------------------------------------------
 /**
    @file nmaptable.h
    @author Luis Jose Cabellos Gomez
    @brief Declaration of nMapTable class.
-   @brief $Id$ 
-   
-   This file is licensed under the terms of the Nebula License.
+
+   (C) Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 

@@ -1,9 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nsignalbindingset.cc
-
-    (c) 2004 Conjurer Services, S.A.
-*/
+//  nsignalbindingset.cc
+//  (c) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "signals/nsignalbindingset.h"

@@ -2,8 +2,8 @@
 #define NINPUTLOGEVENT_H
 //------------------------------------------------------------------------------
 /**
-   @file ninputlogevent.h
-   @author Luis Jose Cabellos Gomez
+    @file ninputlogevent.h
+    @author Luis Jose Cabellos Gomez
    
     (C) 2005 Conjurer Services, S.A.
 */

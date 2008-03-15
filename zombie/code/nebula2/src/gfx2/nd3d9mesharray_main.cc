@@ -1,8 +1,8 @@
-#include "precompiled/pchndirect3d9.h"
 //------------------------------------------------------------------------------
 //  nd3d9mesharray_main.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
 #include "gfx2/nd3d9mesharray.h"
 #include "kernel/nkernelserver.h"
 #include "gfx2/nd3d9server.h"

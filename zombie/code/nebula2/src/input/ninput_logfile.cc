@@ -1,9 +1,6 @@
-/**
-   @file ninput_logfile.cc
-   @author Luis Jose Cabellos Gomez
-
-    (C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ninput_logfile.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnnebula.h"
 #include "input/ninputserver.h"

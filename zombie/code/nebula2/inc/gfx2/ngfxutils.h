@@ -7,6 +7,8 @@
 
     @brief conversions between relative and absolute coordinates
     Utils for converting between screensizes and/or widget sizes
+    
+    (C) 2004 Conjurer Services, S.A.
 */
 
 #include "gfx2/ngfxserver2.h"

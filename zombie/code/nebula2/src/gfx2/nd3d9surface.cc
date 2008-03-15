@@ -1,9 +1,8 @@
-#include "precompiled/pchndirect3d9.h"
 //-----------------------------------------------------------------------------
 //  nd3d9surface.cc
-//
 //  (c) 2003, 2004 George McBay, Kim, Hyoun Woo
 //-----------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
 
 #include <d3d9.h>
 #include "gfx2/nd3d9server.h"

@@ -1,6 +1,6 @@
 #include "precompiled/pchntoollib.h"
 //------------------------------------------------------------------------------
-//	ntexturebuilder_main.cc
+//  ntexturebuilder_main.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "resource/nresource.h"

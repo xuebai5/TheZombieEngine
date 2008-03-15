@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nsignal.cc
-    @author Mateu Batle Sastre
-
-    (c) 2004 Conjurer Services, S.A.
-*/
+//  nsignal.cc
+//  (c) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/ntypes.h"

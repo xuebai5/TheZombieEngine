@@ -1,11 +1,13 @@
 #ifndef N_STREAM_H
 #define N_STREAM_H
-
 //-------------------------------------------------------------------
 /**
-    @class nstream    
+    @class nstream
+    @author Luis Cabellos
 
     defines an in/out stream for general purpose
+    
+    (C) Conjurer Services, S.A.
 */
 
 class nstream

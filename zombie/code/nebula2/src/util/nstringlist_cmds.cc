@@ -1,6 +1,6 @@
 #include "precompiled/pchnkernel.h"
 //-----------------------------------------------------------------------------
-//  nentityclasslibrary_cmds.cc
+//  nstringlist_cmds.cc
 //  (C) 2005 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
 #include "util/nstringlist.h"

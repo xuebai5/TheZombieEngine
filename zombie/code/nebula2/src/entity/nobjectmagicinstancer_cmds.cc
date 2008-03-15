@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nobjectmagicinstancer_cmds.cc
-    @author Juan Jose Luna
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nobjectmagicinstancer_cmds.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/nobjectmagicinstancer.h"

@@ -1,6 +1,6 @@
 #include "precompiled/pchngui.h"
 //------------------------------------------------------------------------------
-//  nGuiHoriSliderBoxedFloat_main.cc
+//  nguihorisliderboxedfloat_main.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
 #include "gui/nGuiHoriSliderBoxedFloat.h"

@@ -4,12 +4,11 @@
 /**
     @class nPolygonContainer
     @ingroup NebulaDataTypes
+    @author Miquel Angel Rujula
 
     @brief A polygons container. 
     
     (C) 2005 Conjurer Services, S.A.
-
-    Author: Miquel Angel Rujula
 */
 
 #include "mathlib/vector.h"

@@ -1,3 +1,7 @@
+//------------------------------------------------------------------------------
+//  nlogclassregistry_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/nlogclassregistry.h"
 #include "kernel/npersistserver.h"

@@ -1,8 +1,8 @@
-#include "precompiled/pchndirect3d9.h"
 //--------------------------------------------------------------------------------------
 //  nd3d9effectstatemanager.cc
 //  (c) 2005 Conjurer Services, S.A.
 //--------------------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
 #include "gfx2/nd3d9effectstatemanager.h"
 
 #include <d3d9.h>

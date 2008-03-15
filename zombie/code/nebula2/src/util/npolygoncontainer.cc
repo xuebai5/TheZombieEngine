@@ -1,7 +1,6 @@
 //------------------------------------------------------------------------------
 //  npolygoncontainer.cc
 //  (C) 2005 Conjurer Services, S.A.
-//  Author: Miquel Angel Rujula
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "util/npolygoncontainer.h"

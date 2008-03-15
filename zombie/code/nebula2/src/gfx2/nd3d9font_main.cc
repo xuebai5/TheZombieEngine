@@ -1,8 +1,8 @@
-#include "precompiled/pchndirect3d9.h"
 //------------------------------------------------------------------------------
 //  nd3d9font_main.cc
 //  (C) 2003 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
 #include "gfx2/nd3d9font.h"
 #include "kernel/nfileserver2.h"
 #include "gfx2/nd3d9server.h"

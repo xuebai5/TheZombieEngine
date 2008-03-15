@@ -1,8 +1,8 @@
+#include "precompiled/pchnnebula.h"
 //------------------------------------------------------------------------------
 //  nbinscriptserver_main.cc
 //  (C) 2002 RadonLabs GmbH
 //------------------------------------------------------------------------------
-#include "precompiled/pchnnebula.h"
 #include "kernel/nfileserver2.h"
 #include "kernel/nfile.h"
 #include "util/nstring.h"

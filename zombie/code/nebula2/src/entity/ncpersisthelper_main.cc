@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file ncpersisthelper.cc
-    @author Mateu Batle
-
-    (c) 2006 Conjurer Services, S.A.
-*/
+//  ncpersisthelper.cc
+//  (c) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/ncpersisthelper.h"

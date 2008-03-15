@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nentityclass_main.cc
-    @author Mateu Batle
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nentityclass_main.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/nentity.h"

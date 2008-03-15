@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-//  nOutputDebugProxy_main.cc
+//  noutputdebugproxy_main.cc
 //  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnoutputdebugproxylib.h"

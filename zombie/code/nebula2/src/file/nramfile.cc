@@ -1,9 +1,10 @@
-#include "precompiled/pchnnebula.h"
-#define N_IMPLEMENTS nRamFile
 //------------------------------------------------------------------------------
 //  nramfile.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchnnebula.h"
+#define N_IMPLEMENTS nRamFile
+
 #include "kernel/nkernelserver.h"
 #include "file/nramfile.h"
 #include "file/nsharedmemory.h"

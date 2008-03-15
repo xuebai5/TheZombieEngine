@@ -7,6 +7,8 @@
     @ingroup Util
     @brief A simple converter between generic data and base64, both ways.
     @author Carles Ros
+    
+    (C) 2006 Conjurer Services, S.A.
 */
 
 //------------------------------------------------------------------------------

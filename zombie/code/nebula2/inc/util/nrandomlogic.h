@@ -1,14 +1,16 @@
+#ifndef NRANDOMLOGIC_H
+#define NRANDOMLOGIC_H
+//------------------------------------------------------------------------------
 /**
    @file nrandomlogic.h
    @author Luis Jose Cabellos Gomez
    
    (C) 2005 Conjurer Services, S.A.
 */
-#ifndef NRANDOMLOGIC_H
-#define NRANDOMLOGIC_H
 
 #include "mathlib/vector.h"
 
+//------------------------------------------------------------------------------
 ///return a random integer between 0 and N_RAND_MAX
 unsigned int n_rand_func();
 /// set the seed of random functions 

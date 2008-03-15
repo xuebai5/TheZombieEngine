@@ -1,3 +1,4 @@
+#include "precompiled/pchngui.h"
 //------------------------------------------------------------------------------
 //  nguiscenecontrolwindow_main.cc
 //  (C) 2004 RadonLabs GmbH

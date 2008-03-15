@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nclassentityobject.cc
-    @author Mateu Batle
-
-    (c) 2006 Conjurer Services, S.A.
-*/
+//  nclassentityobject.cc
+//  (c) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/nclassentityobject.h"

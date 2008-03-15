@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nmonitorserver_cmds.cc
-    @author Juan Jose Luna
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nmonitorserver_cmds.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchntoollib.h"
 #include "tools/nmonitorserver.h"
