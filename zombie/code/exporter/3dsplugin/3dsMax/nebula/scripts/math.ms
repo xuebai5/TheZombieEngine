@@ -1,7 +1,7 @@
 /**
    @file math.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo
    @brief maths functions
    @remarks
    functions
@@ -9,6 +9,8 @@
 	- eigenVectorsSymMatrix, eigen vectors of symetric matrix 
 	- CalculateBBox
 	- sortMatrix
+
+   (C) 2006 Conjurer Services, S.A.
 */
 
 --------------------------------------------------------------------------------

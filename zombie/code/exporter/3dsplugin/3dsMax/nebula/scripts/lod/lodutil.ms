@@ -1,8 +1,10 @@
 /**
    @file lodUtil.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief This utility is for managament of lod
+   
+   (C) 2006 Conjurer Services, S.A.
 */
 utility NebLodUtil "Nebula LOD utilities" width:162 height:500
 (

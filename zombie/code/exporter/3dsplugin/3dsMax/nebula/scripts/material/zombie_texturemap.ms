@@ -1,8 +1,10 @@
 /**
    @file zombie_texturemap.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief Declaration of zTextureMap class.
+
+   (C) 2006 Conjurer Services, S.A.
 */
 global debugZombieTexture = false
 plugin textureMap  zTextureMap

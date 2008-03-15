@@ -1,7 +1,7 @@
 /**
    @file zombie_material.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief Materials
    @remark 
    - nebMaskRend The mask of render properites of zombie material.
@@ -14,6 +14,7 @@
    
    - Declaration of zStdMaterial class.
    
+   (C) 2006 Conjurer Services, S.A.
 */
 
 global debugZombie = false

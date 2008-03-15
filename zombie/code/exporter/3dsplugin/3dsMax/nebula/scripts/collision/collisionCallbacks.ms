@@ -1,8 +1,10 @@
 /**
    @file collisionCallbacks.ms
    @ingroup n3dsMaxScripts
-   @author Luis Jose Cabellos Gomez <luis.cabellos@tragnarion.com>
+   @author Luis Jose Cabellos Gomez
    @brief Collision Layer functions.
+   
+   (C) 2006 Conjurer Services, S.A.
 */
 
 --------------------------------------------------------------------------------

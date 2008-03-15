@@ -1,18 +1,20 @@
 /**
-   @file collisionFunctions.ms
-   @ingroup n3dsMaxScripts
-   @author Luis Jose Cabellos Gomez <luis.cabellos@tragnarion.com>
-   @brief Collision Layer functions.
-   @remarks
-   Physic Collision Object Properties
-   - physicObj         = true
-   - physicType        = 0, physic space
+    @file collisionFunctions.ms
+    @ingroup n3dsMaxScripts
+    @author Luis Jose Cabellos Gomez
+    @brief Collision Layer functions.
+    @remarks
+    Physic Collision Object Properties
+    - physicObj         = true
+    - physicType        = 0, physic space
                          1, collision object
-   - physicGeom        = [composite | box | sphere | cylinder]
-   - physicMaterial    = <material>
-   - physicSpace       = <space>
-   - physicParentSpace = <parent space>, only in spaces
-   - physicComposite   = true, if is children of a composite
+    - physicGeom        = [composite | box | sphere | cylinder]
+    - physicMaterial    = <material>
+    - physicSpace       = <space>
+    - physicParentSpace = <parent space>, only in spaces
+    - physicComposite   = true, if is children of a composite
+    
+    (C) 2006 Conjurer Services, S.A.
 */
 --------------------------------------------------------------------------------
 global nebNewExportOptions

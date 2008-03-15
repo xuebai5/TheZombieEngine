@@ -1,7 +1,7 @@
 /**
    @file materialFunctions.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo
    @brief main functions of scripts
    @remarks
    functions
@@ -12,6 +12,7 @@
     Structs
     - tlog, 
   
+   (C) 2006 Conjurer Services, S.A.
 */
 
 
