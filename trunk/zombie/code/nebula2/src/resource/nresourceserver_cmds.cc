@@ -1,16 +1,8 @@
 #include "precompiled/pchnnebula.h"
 //------------------------------------------------------------------------------
-/**
-    @file nresourceserver_cmds.cc
-    @ingroup NebulaResourceSystem
-
-    @author Carles Ros Martinez
-
-    @brief nResourceServer scripting
-
-    (C) 2005 Conjurer Services, S.A.
-*/
-#include "precompiled/pchnnebula.h"
+//  nresourceserver_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "resource/nresourceserver.h"
 
 static void n_getnumresources(void* o, nCmd* cmd);

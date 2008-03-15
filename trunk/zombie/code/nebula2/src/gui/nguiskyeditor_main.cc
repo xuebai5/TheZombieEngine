@@ -1,3 +1,4 @@
+#include "precompiled/pchngui.h"
 //------------------------------------------------------------------------------
 //  nguiskyeditor_main.cc
 //  (C) 2005 RadonLabs GmbH

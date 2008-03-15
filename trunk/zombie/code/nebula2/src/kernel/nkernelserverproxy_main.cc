@@ -1,10 +1,8 @@
+//------------------------------------------------------------------------------
+//  nkernelserverproxy_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
-/**
-   @file nkernelserverproxy_main.cc
-   @author Luis Jose Cabellos Gomez
-
-   (C) 2005 Conjurer Services, S.A.
-*/
 #include "kernel/nkernelserverproxy.h"
 #include "kernel/nkernelserver.h"
 

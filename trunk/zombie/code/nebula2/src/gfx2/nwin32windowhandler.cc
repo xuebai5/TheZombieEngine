@@ -1,9 +1,9 @@
-#include "precompiled/pchnnebula.h"
-#ifdef __WIN32__
 //------------------------------------------------------------------------------
 //  nwin32windowhandler.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchnnebula.h"
+#ifdef __WIN32__
 #include "kernel/nkernelserver.h"
 #include "gfx2/nwin32windowhandler.h"
 #include "kernel/nenv.h"

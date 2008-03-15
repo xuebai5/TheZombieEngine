@@ -1,12 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file polygon.cc
-    @ingroup NebulaMathDataTypes
-
-    @author Ismael Noche Navarro
-   
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  polygon.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "mathlib/polygon.h"

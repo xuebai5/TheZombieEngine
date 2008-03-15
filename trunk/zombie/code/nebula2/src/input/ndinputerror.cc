@@ -1,7 +1,6 @@
 //-------------------------------------------------------------------
 //  ndinputerror.cc
-//  DInput-Fehlermeldungen ausgeben.
-//  (C) 1999 A.Weissflog
+//  (C) 1999 Radon Labs
 //-------------------------------------------------------------------
 #include "kernel/ntypes.h"
 

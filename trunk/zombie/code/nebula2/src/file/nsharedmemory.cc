@@ -1,9 +1,10 @@
-#include "precompiled/pchnnebula.h"
-#define N_IMPLEMENTS nSharedMemory
 //------------------------------------------------------------------------------
 //  nsharedmemory.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchnnebula.h"
+#define N_IMPLEMENTS nSharedMemory
+
 #include "kernel/nkernelserver.h"
 #include "file/nsharedmemory.h"
 #if defined(__LINUX__) || defined(__MACOSX__)

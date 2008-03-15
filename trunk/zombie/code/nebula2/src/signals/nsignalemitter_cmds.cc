@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
+//  nsignalemitter_cmds.cc
 //  (c) 2005 Conjurer Services, S.A.
-//  Scripting commands for signals
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/nkernelserver.h"

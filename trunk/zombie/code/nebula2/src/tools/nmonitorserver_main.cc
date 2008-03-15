@@ -1,12 +1,7 @@
 #include "precompiled/pchntoollib.h"
 //------------------------------------------------------------------------------
-/**
-    @class nMonitorServer
-    @ingroup NebulaConsoleServer
-    @brief Onscreen monitor server that represents graphically a set of nEnv variables
-
-    (C) 2005 Conjurer Services, S.A.
-*/
+//  nmonitorserver_main.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "tools/nmonitorserver.h"
 #include "kernel/nkernelserver.h"

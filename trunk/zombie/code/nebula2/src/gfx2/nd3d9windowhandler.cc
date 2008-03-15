@@ -1,8 +1,8 @@
-#include "precompiled/pchndirect3d9.h"
 //------------------------------------------------------------------------------
 //  nd3d9windowhandler.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
 #include "gfx2/nd3d9windowhandler.h"
 #include "gfx2/nd3d9server.h"
 

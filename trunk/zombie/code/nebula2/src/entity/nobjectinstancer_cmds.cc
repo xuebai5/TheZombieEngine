@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nobjectinstancer_cmds.cc
-    @author Mateu Batle
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nobjectinstancer_cmds.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/nobjectinstancer.h"

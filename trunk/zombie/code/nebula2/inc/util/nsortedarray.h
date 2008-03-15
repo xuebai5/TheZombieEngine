@@ -6,6 +6,8 @@
     @ingroup NebulaDataTypes
 
     @brief A dynamic array template class automatically sorted.
+    
+    (C) Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "util/narray.h"

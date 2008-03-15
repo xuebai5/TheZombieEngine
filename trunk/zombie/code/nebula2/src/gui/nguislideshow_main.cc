@@ -3,7 +3,6 @@
 //  nguislideshow_main.cc
 //  (C) 2005 RadonLabs GmbH
 //------------------------------------------------------------------------------
-
 #include "gui/nguislideshow.h"
 #include "gui/nguislide.h"
 #include "gui/nguiwidget.h"

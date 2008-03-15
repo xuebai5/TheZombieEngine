@@ -1,4 +1,7 @@
 //------------------------------------------------------------------------------
+//  nsafelogbuffer.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/nsafelogbuffer.h"
 

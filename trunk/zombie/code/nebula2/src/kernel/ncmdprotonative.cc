@@ -1,4 +1,7 @@
 //--------------------------------------------------------------------
+//  ncmdprotonative.cc
+//  (C) 2005 Conjurer Services, S.A.
+//--------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/ncmdprotonative.h"
 

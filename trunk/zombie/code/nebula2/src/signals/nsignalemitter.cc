@@ -1,9 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nsignalemitter.cc
-
-    (c) 2004 Conjurer Services, S.A.
-*/
+//  nsignalemitter.cc
+//  (c) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/ncmdproto.h"

@@ -1,3 +1,7 @@
+//------------------------------------------------------------------------------
+//  simdlib.cc
+//  (C) 2004 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "mathlib/simdlib.h"
 #include <emmintrin.h>

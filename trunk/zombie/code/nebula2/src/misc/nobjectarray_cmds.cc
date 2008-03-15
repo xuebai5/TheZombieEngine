@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nobjectarray_cmds.cc
-    @author Mateu Batle
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nobjectarray_cmds.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnnebula.h"
 

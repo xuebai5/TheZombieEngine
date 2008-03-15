@@ -1,10 +1,8 @@
 #include "precompiled/pchnkernel.h"
-/**
-   @file nrandomlogic.cc
-   @author Luis Jose Cabellos Gomez
-
-   (C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  nrandomlogic.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "util/nrandomlogic.h"
 
 static unsigned int n_randP = 0;

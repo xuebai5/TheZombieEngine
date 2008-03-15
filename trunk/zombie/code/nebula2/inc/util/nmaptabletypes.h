@@ -6,7 +6,7 @@
    @brief Declaration of most common nMapTable 
    @brief $Id$ 
    
-   This file is licensed under the terms of the Nebula License.
+   (C) Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "util/nmaptable.h"

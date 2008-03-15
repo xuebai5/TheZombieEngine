@@ -1,8 +1,9 @@
-#include "precompiled/pchndirect3d9.h"
 //------------------------------------------------------------------------------
 //  nd3d9shaderinclude.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
+
 #include "kernel/nkernelserver.h"
 #include "gfx2/nd3d9shaderinclude.h"
 #include "kernel/nfileserver2.h"

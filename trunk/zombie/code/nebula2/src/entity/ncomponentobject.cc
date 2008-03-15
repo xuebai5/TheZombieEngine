@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file ncomponentobject.cc
-    @author Mateu Batle
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  ncomponentobject.cc
+//  (c) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/ncomponentobject.h"

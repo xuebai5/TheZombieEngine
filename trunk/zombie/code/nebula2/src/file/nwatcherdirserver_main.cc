@@ -1,3 +1,7 @@
+//-----------------------------------------------------------------------------
+//  nwatcherdirserver_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "file/nwatcherdirserver.h"
 #include "kernel/nfileserver2.h"

@@ -1,7 +1,7 @@
 #include "precompiled/pchngui.h"
 //------------------------------------------------------------------------------
 //  nguilabel_cmds.cc
-//  (C) 2006 Conjurer Services, S.A.
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "gui/nguilabel.h"
 

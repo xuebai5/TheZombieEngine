@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nfileindex_main.cc
-    @author Cristobal Castillo
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nfileindex_main.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 #include "entity/nfileindex.h"
@@ -13,7 +9,7 @@
 #include "file/nmemfile.h"
 #include "kernel/nlogclass.h"
 
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 nNebulaScriptClass(nFileIndex, "nobject");
 
 //------------------------------------------------------------------------------
@@ -554,8 +550,5 @@ nFileIndex::Entry::~Entry()
 {
     //Emtpy , this is needed by narray
 }
-
-
-
 
 //------------------------------------------------------------------------------

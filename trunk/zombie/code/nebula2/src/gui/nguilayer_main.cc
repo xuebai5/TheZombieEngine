@@ -1,7 +1,7 @@
 #include "precompiled/pchngui.h"
 //-----------------------------------------------------------------------------
 //  nguilayer_main.cc
-//  Juanga Covas, 23-Sept-2004
+//  (C) 2004 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
 #include "gui/nguilayer.h"
 #include "kernel/nkernelserver.h"

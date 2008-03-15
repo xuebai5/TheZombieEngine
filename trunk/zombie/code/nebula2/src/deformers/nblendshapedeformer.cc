@@ -1,8 +1,8 @@
-#include "precompiled/pchnnebula.h"
 //------------------------------------------------------------------------------
 //  nblendshapedeformer.cc
 //  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchnnebula.h"
 #include "deformers/nblendshapedeformer.h"
 
 //------------------------------------------------------------------------------

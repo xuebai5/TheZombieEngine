@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nobjectarray_main.cc
-    @author Mateu Batle
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nobjectarray_main.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnnebula.h"
 #include "misc/nobjectarray.h"

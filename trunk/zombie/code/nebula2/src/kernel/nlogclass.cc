@@ -1,3 +1,7 @@
+//------------------------------------------------------------------------------
+//  nkernelserverproxy_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/nlogclass.h"
 #include "kernel/logclassregistry.h"

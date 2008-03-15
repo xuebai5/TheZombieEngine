@@ -1,9 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nsignalregistry.cc
-
-    (c) 2004 Conjurer Services, S.A.
-*/
+//  nsignalregistry.cc
+//  (c) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnkernel.h"
 #include "kernel/nclass.h"

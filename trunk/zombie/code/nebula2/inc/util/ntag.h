@@ -4,9 +4,10 @@
 /**
     @class nTag
     @ingroup NebulaDataTypes
-
+    @author David Reyes
     @brief A tag to symbolize a string.
-    
+
+    (C) Conjurer Services, S.A.    
 */
 
 #include "kernel/ntypes.h"

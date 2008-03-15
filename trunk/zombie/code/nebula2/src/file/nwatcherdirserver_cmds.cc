@@ -1,9 +1,8 @@
-#include "precompiled/pchnkernel.h"
-
 //-----------------------------------------------------------------------------
 //  nwatcherdirserver_cmds.cc
 //  (C) 2005 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
+#include "precompiled/pchnkernel.h"
 #include "file/nwatcherdirserver.h"
 #include "kernel/ncmd.h"
 

@@ -1,10 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file nentityserver_object.cc
-    @author Mateu Batle
-
-    (c) 2005 Conjurer Services, S.A.
-*/
+//  nentityserver_object.cc
+//  (c) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"
 //------------------------------------------------------------------------------

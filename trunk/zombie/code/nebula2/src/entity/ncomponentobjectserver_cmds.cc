@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-//  @file ncomponentobjectserver_cmds.cc
+//  ncomponentobjectserver_cmds.cc
 //  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnentity.h"

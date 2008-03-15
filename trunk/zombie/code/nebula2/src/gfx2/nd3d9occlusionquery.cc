@@ -1,8 +1,8 @@
-#include "precompiled/pchndirect3d9.h"
 //------------------------------------------------------------------------------
 //  nd3d9occlusionquery.cc
 //  (C) 2005 Radon Labs GmbH
 //------------------------------------------------------------------------------
+#include "precompiled/pchndirect3d9.h"
 #include "gfx2/nd3d9occlusionquery.h"
 #include "gfx2/nshader2.h"
 

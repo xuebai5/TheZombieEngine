@@ -1,10 +1,12 @@
 #include "precompiled/pchntoollib.h"
+//------------------------------------------------------------------------------
+//  nmeshbuilder_billboard.cc
+//  (c) 2004 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "tools/nmeshbuilder.h"
 
-
- //------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 /**
-  
 */
  void 
 nMeshBuilder::TransformBillBoard()
@@ -25,7 +27,6 @@ nMeshBuilder::TransformBillBoard()
     {
         TriangleNoExplored[triangleIndex]=true;
     }
-
 
     int vertexIndex;
     
@@ -54,6 +55,9 @@ nMeshBuilder::TransformBillBoard()
     delete [] TriangleNoExplored;
 }
 
+//------------------------------------------------------------------------------
+/**
+*/
 void 
 nMeshBuilder::BuildTrianglePlane(nArray<plane>& planeArray) const
 {
@@ -80,8 +84,9 @@ nMeshBuilder::BuildTrianglePlane(nArray<plane>& planeArray) const
 
 }
 
-
-
+//------------------------------------------------------------------------------
+/**
+*/
 void 
 nMeshBuilder::Quad::set (const Triangle& t1,const Triangle& t2,nMeshBuilder* mesh)
 {
@@ -97,11 +102,11 @@ nMeshBuilder::Quad::set (const Triangle& t1,const Triangle& t2,nMeshBuilder* mes
     }
     idxV[3]=v[i];
     myMesh=mesh;
-
-
-
 }
 
+//------------------------------------------------------------------------------
+/**
+*/
 void
 nMeshBuilder::Quad::transformVertex()
 {
@@ -146,15 +151,18 @@ nMeshBuilder::Quad::transformVertex()
         vertex.SetUv(3,newUV);
         vertex.SetCoord(pivot);
     }
-
-
 }
 
-
+//------------------------------------------------------------------------------
+/**
+*/
 nMeshBuilder::Quad::Quad() : myMesh(0)
 {
 }
 
+//------------------------------------------------------------------------------
+/**
+*/
 void 
 nMeshBuilder::TransformSphericalNormals()
 {
@@ -189,12 +197,9 @@ nMeshBuilder::TransformSphericalNormals()
     float Count;
     Count = (float)numVertex;
 
-
     centerPoint*=(1.0f/Count); // average
 
-    // Calculate new normals
-    
-    
+    // Calculate new normals    
     for ( vertexIndex = 0; vertexIndex < numVertex; vertexIndex++)
     {
         vector3 normal;
@@ -204,5 +209,4 @@ nMeshBuilder::TransformSphericalNormals()
         vertex0.SetNormal(normal);
 
     }
-
 }
