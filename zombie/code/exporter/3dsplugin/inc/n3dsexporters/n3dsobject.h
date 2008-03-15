@@ -6,7 +6,8 @@
     @ingroup n3dsMaxExporterKernel
 
     Encapsulate a Igame object with others properties to facilities export
-    (C) 2005 Tragnarion
+
+    (C) 2005 Conjurer Services, S.A.
 */
 class IGameNode;
 class INode;
