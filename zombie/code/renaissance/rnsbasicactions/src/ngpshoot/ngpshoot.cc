@@ -108,17 +108,7 @@ nGPShoot::Init (nEntityObject* entity)
                     vector3 shotPosition;
 
                     this->CalculateDirection( shotPosition, shotDirection);
-/** ZOMBIE REMOVE
-                    if( !this->weapon->HasTrait(ncGPWeaponCharsClass::MOD_ENABLE_SILENCER) )
-                    {
-                        // emit a gameplay sound event at calculated position
-                        nGameEvent event;
-                        event.SetType( nGameEvent::SHOOT_SOUND );
-                        event.SetDuration( 4 );      
-                        nEntityObject* fakeEntity = nTriggerServer::Instance()->PlaceAreaEvent( shotPosition, event );
-                        event.SetSourceEntity( fakeEntity->GetId() );
-                    }
-*/
+
                     this->ShootFrom( shotPosition, shotDirection );
 
                     // update accuracy of weapon
@@ -164,20 +154,7 @@ nGPShoot::Init (nEntityObject* entity)
                     {
                         if ( this->weapon->GetFireMode() == ncGPWeaponClass::FM_SEMI )
                         {
-/** ZOMBIE REMOVE
-                            // silencer put?
-                            bool silencerPut = this->weapon->HasTrait( ncGPWeaponCharsClass::MOD_ENABLE_SILENCER );
-                            if ( ! silencerPut )
-                            {
-*/
-                                soundLayer->PlayAlone( "shoot", 1 );
-/** ZOMBIE REMOVE
-                            }
-                            else
-                            {
-                                soundLayer->PlayAlone( "shootsilencer", 1 );
-                            }
-*/
+                            soundLayer->PlayAlone( "shoot", 1 );
                         }
                     }
 

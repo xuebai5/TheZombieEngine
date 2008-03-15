@@ -66,10 +66,6 @@ public:
     void SetTargetPoint(vector3);
     /// Get point where target is when ring is determinated
     vector3 GetTargetPoint() const;
-/** ZOMBIE REMOVE
-    /// Returns true if the entity is in the outer occupied ring
-    bool IsInOuterRing() const;
-*/
     /// Set a  target
     void SetTarget (nEntityObject* target);
     /// Set active weapon

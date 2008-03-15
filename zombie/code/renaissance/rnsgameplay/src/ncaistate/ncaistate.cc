@@ -7,10 +7,7 @@
 #include "entity/nentityobjectserver.h"
 #include "ncgameplayliving/ncgameplayliving.h"
 #include "ncgameplayliving/ncgameplaylivingclass.h"
-/** ZOMBIE REMOVE
-#include "rnsgameplay/nfightringmanager.h"
-#include "rnsgameplay/nfightring.h"
-*/
+
 //------------------------------------------------------------------------------
 nNebulaComponentObject(ncAIState,nComponentObject);
 
@@ -57,13 +54,6 @@ ncAIState::InitInstance(nObject::InitInstanceMsg initType)
 void
 ncAIState::SetTarget (nEntityObject* target)
 {
-/** ZOMBIE REMOVE
-    ncGameplayLiving *living = this->GetComponent<ncGameplayLiving>();
-    if ( living )
-    {
-        living->LeaveFightRing();
-    }
-*/
     this->target = target;
 }
 
@@ -197,24 +187,3 @@ ncAIState::ThereIsCallingAlly() const
 {
     return this->GetCallingAllyId() != nEntityObjectServer::IDINVALID;
 }
-
-//------------------------------------------------------------------------------
-/**
-    Returns true if the entity is in the outer occupied ring or if it's not in
-    any ring
-*/
-/** ZOMBIE REMOVE
-bool 
-ncAIState::IsInOuterRing() const
-{
-    if (this->fightRingIdx == -1)
-    {
-        return true;
-    }
-
-    n_assert(this->target);
-    nFightRingManager* ringsManager = this->target->GetComponentSafe<ncGameplayLiving>()->GetRingsManager();
-    nFightRing* prevRing = ringsManager->GetRing(this->fightRingIdx + 1);
-    return (!prevRing || prevRing->IsEmpty());
-}
-*/

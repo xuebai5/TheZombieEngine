@@ -20,23 +20,13 @@ static nGameEvent::Info eventTypeInfo[ nGameEvent::EVENTS_NUMBER ] =
     { "fail",           "Fail",               GameEvent::FSM_IN,                      GameEvent::NO_SENSATION },
     { "player",         "Player",             GameEvent::FSM_AND_AREA_TRIGGER_IN,     GameEvent::VIEW_AND_TOUCH },
     { "squad_member",   "Squad member",       GameEvent::FSM_AND_AREA_TRIGGER_IN,     GameEvent::VIEW_AND_TOUCH },
-/** ZOMBIE REMOVE
-    { "scavenger",      "Scavenger",          GameEvent::FSM_AND_AREA_TRIGGER_IN,     GameEvent::VIEW_AND_TOUCH },
-    { "strider",        "Strider",            GameEvent::FSM_AND_AREA_TRIGGER_IN,     GameEvent::VIEW_AND_TOUCH },
-*/
     { "enter_area",     "Enter in area",      GameEvent::AREA_TRIGGER_OUT,            GameEvent::NO_SENSATION },
     { "exit_area",      "Exit from area",     GameEvent::AREA_TRIGGER_OUT,            GameEvent::NO_SENSATION },
     { "action issued",  "Action issued",      GameEvent::ACTION_TRIGGER_OUT,          GameEvent::NO_SENSATION },
     { "trigger_activation", "Activation",     GameEvent::GENERIC_TRIGGER_OUT,         GameEvent::NO_SENSATION },
     { "human_sound",    "Human sound",        GameEvent::ALL_IN,                      GameEvent::AUDIBLE },
-/** ZOMBIE REMOVE
-    { "alien_sound",    "Alien sound",        GameEvent::ALL_IN,                      GameEvent::AUDIBLE },
-*/
     { "target_lost",    "Target lost",        GameEvent::FSM_IN,                      GameEvent::NO_SENSATION },
     { "dead_human",     "Dead human",         GameEvent::ALL_IN,                      GameEvent::VIEW_AND_TOUCH_AND_HEAR },
-/** ZOMBIE REMOVE
-    { "dead_alien",     "Dead alien",         GameEvent::ALL_IN,                      GameEvent::VIEW_AND_TOUCH_AND_HEAR },
-*/
     { "shoot_sound",    "Shoot sound",        GameEvent::ALL_IN,                      GameEvent::AUDIBLE },
     { "explosion_sound","Explosion sound",    GameEvent::ALL_IN,                      GameEvent::AUDIBLE },
     { "impact_sound",   "Impact sound",       GameEvent::ALL_IN,                      GameEvent::AUDIBLE },

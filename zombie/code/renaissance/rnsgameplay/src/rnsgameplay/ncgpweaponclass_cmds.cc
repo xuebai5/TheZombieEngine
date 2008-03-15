@@ -32,8 +32,6 @@ NSCRIPT_INITCMDS_BEGIN(ncGPWeaponClass)
     NSCRIPT_ADDCMD_COMPCLASS('LG42', int, GetAddonOffsetBone , 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPCLASS('LS43', void, SetFireModes, 1, (int), 0, ());
     NSCRIPT_ADDCMD_COMPCLASS('LG43', int, GetFireModes , 0, (), 0, ());
-    NSCRIPT_ADDCMD_COMPCLASS('LS44', void, SetDefaultMagazine, 1, (const char *), 0, ());
-    NSCRIPT_ADDCMD_COMPCLASS('LG44', const char *, GetDefaultMagazine , 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPCLASS('LHAF', bool, HasSemiFireMode , 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPCLASS('LHSF', bool, HasAutoFireMode , 0, (), 0, ());
 NSCRIPT_INITCMDS_END()
@@ -65,7 +63,6 @@ ncGPWeaponClass::SaveCmds( nPersistServer * ps )
     ps->Put( this->GetEntityClass(), 'LS41', vector.x, vector.y, vector.z );
     ps->Put( this->GetEntityClass(), 'LS42', this->GetAddonOffsetBone() );
     ps->Put( this->GetEntityClass(), 'LS43', this->GetFireModes() );
-    ps->Put( this->GetEntityClass(), 'LS44', this->GetDefaultMagazine() );
 
     return true;
 }

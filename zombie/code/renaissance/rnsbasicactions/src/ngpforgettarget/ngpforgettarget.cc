@@ -61,12 +61,7 @@ nGPForgetTarget::Init (nEntityObject* entity)
     if ( state )
     {
         ncGameplayLiving* living = this->entity->GetComponentSafe<ncGameplayLiving>();
-/** ZOMBIE REMOVE
-        if (living)
-        {
-            living->LeaveFightRing();
-        }
-*/
+
         state->SetTarget (0);
         valid = valid && (living != 0);
     }

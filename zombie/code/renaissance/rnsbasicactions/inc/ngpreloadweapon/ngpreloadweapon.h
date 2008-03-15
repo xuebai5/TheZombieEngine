@@ -23,8 +23,8 @@ public:
     /// Destructor
     ~nGPReloadWeapon();
 
-        /// Initial condition
-        bool Init(nEntityObject*, bool);
+    /// Initial condition
+    bool Init(nEntityObject*, bool);
 
     /// Main execution loop
     bool Run();
@@ -39,12 +39,6 @@ private:
 
     /// calculate the bullets and the clips changed
     bool CalculateAmmo( bool fastReload );
-    /// put the magazine in the weapon
-    void PutMagazine();
-    /// put the magazine bullets in the magazine
-    void PutMagazineBullets();
-    /// restore plugins and bullets in the weapon
-    void RestoreMagazine();
 
     nString plugName;
     nString oldPlugName;

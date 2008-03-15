@@ -11,9 +11,7 @@
 */
 //------------------------------------------------------------------------------
 #include "rnsgameplay/ncgameplay.h"
-/** ZOMBIE REMOVE
-#include "rnsgameplay/ncgpweaponaddon.h"
-*/
+
 #include "nphysics/nphysicsgeom.h"
 
 #include "rnsgameplay/ncgpweaponclass.h"
@@ -60,35 +58,6 @@ public:
     void SetAmmoExtra(int);
     /// Set the actual ammo in the weapon (secundary magazine)
     int GetAmmoExtra ()const;
-/** ZOMBIE REMOVE
-    /// add a weapon accesory to the weapon
-    int AddAddon(nEntityObject *);
-    /// say if an addon was in a determinated slot
-    bool HasAddon(int);
-    /// returns an addon in the weapon slot
-    nEntityObject * GetAddon(int);
-    /// remove an addon in a slot from the weapon
-    nEntityObject * RemoveAddon(int);
-    /// remove an addon in a position
-    nEntityObject * RemoveAddonAt(int);
-    /// delete all addons of the weapon
-    void DeleteAllAddons ();
-    /// get num of slots
-    int GetNumSlots ()const;
-    /// get an addon in slots index
-    nEntityObject * GetAddonAt(int);
-
-    /// check if the weapon has a free slot for a weapon addon
-    bool IsAllowed(nEntityObject *);
-    /// check if the weapon has the addon already mounted
-    bool IsMounted(nEntityObject *);
-    /// check if a trait is allowed in the weapon
-    bool HasTrait(int)const;
-    /// Get slot name in that an addon will be added 
-    const char* GetSlotName(nEntityObject *)const;
-    /// Get slot in that an addon will be added 
-    int GetSlotFor(nEntityObject *)const;
-*/
     /// apply accuracy loss for shoot
     void ApplyAccuracyLoss ();
     /// apply accuracy recover in time
@@ -385,18 +354,6 @@ ncGPWeapon::GetProne()const
 
 //------------------------------------------------------------------------------
 /**
-    @returns the number of slots in the weapon
-*/
-/** ZOMBIE REMOVE
-inline
-int
-ncGPWeapon::GetNumSlots()const
-{
-    return this->max_slots;
-}
-*/
-//------------------------------------------------------------------------------
-/**
     @returns the fire mode
 */
 inline
@@ -406,16 +363,5 @@ ncGPWeapon::GetFireMode()const
     return this->fireMode;
 }
 
-//------------------------------------------------------------------------------
-/**
-*/
-/** ZOMBIE REMOVE
-inline
-nEntityObject *
-ncGPWeapon::GetDefaultMagazine() const
-{
-    return this->defaultMag;
-}
-*/
 //------------------------------------------------------------------------------
 #endif//NCGPWEAPON_H

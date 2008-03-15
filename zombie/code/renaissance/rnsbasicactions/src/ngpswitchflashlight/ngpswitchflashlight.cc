@@ -9,9 +9,6 @@
 #include "rnsgameplay/ngameplayutils.h"
 #include "nclogicanimator/nclogicanimator.h"
 #include "ncgpperception/ncgpsight.h"
-/** ZOMBIE REMOVE
-#include "ncgameplaystrider/ncgameplaystrider.h"
-*/
 #include "ncgameplayliving/ncgameplayliving.h"
 #include "rnsgameplay/ncgpweapon.h"
 
@@ -60,41 +57,6 @@ nGPSwitchFlashlight::Init (nEntityObject * entity)
         valid = ( weaponObject != 0 ) && ( weapon != 0 );
     }
 
-/** ZOMBIE REMOVE
-    if ( valid )
-    {
-        nArray<nEntityObject*> addons = weapon->GetAddonsByTrait( ncGPWeaponCharsClass::MOD_ENABLE_LIGHT );
-        for ( int i=0; i < addons.Size(); i++)
-        {            
-            // switch all light in weapon (any addon with lights)
-            nEntityObject* light = 0;
-            ncGPWeaponAddon* addon = addons[ i ]->GetComponentSafe<ncGPWeaponAddon>();
-            if ( addon )
-            {
-                light = addon->GetFlashlight();
-            }
-            n_assert2(light, "Addon don't have nelight entity");
-            if ( light )
-            {
-                bool active = !addon->GetEnabled();
-                ncDictionary* dict = addons[ i ]->GetComponentSafe<ncDictionary>();
-                if ( active && dict )
-                {
-                    dict->SetIntVariable( "lightstate", 0 );
-                    light->GetComponentSafe<ncSpatialLight>()->TurnOn();
-                }
-                else
-                {
-                    dict->SetIntVariable( "lightstate", 1 );
-                    light->GetComponentSafe<ncSpatialLight>()->TurnOff();
-                }
-                addon->SetEnabled( active );
-            }
-
-            valid = ( light != 0 );            
-        }
-    }    
-*/
     this->init = valid;
 
     return valid;

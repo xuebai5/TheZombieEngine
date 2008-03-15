@@ -61,7 +61,6 @@ NSCRIPT_INITCMDS_BEGIN(ncGameplayLiving)
     NSCRIPT_ADDCMD_COMPOBJECT('LSCW', void, SetCurrentWeapon, 1, (nEntityObject *), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('LGCW', nEntityObject *, GetCurrentWeapon , 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('LAPD', void, ApplyDamage, 1, (int), 0, ());
-    /*NSCRIPT_ADDCMD_COMPOBJECT('LSIR', void, SetIronsight, 1, (bool), 0, ());*/
     NSCRIPT_ADDCMD_COMPOBJECT('LGIR', bool, IsIronsight , 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('ISCB', void, SetCarriedByID, 1, (unsigned int), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('IGCB', unsigned int, GetCarriedByID, 0, (), 0, ());
@@ -74,12 +73,6 @@ NSCRIPT_INITCMDS_BEGIN(ncGameplayLiving)
 	NSCRIPT_ADDCMD_COMPOBJECT('ICRA', void, SetProning, 1, (bool), 0, ());
 	NSCRIPT_ADDCMD_COMPOBJECT('ISWM', bool, IsSwimming, 0, (), 0, ());
 	NSCRIPT_ADDCMD_COMPOBJECT('ISWG', void, SetSwimming, 1, (bool), 0, ());
-/** ZOMBIE REMOVE
-    NSCRIPT_ADDCMD_COMPOBJECT('RLFR', void, LeaveFightRing, 0, (), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('RCRM', void, CreateRingsManager, 0, (), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('RDRM', void, DestroyRingsManager, 0, (), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('FSIR', bool, HasSpaceInnerRings, 0, (), 0, ());
-*/
     NSCRIPT_ADDCMD_COMPOBJECT('FSHR', void, SetHasRegen, 1, (bool), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('F_HR', bool, HasRegen, 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('FSRI', void, SetPathId, 1, (int), 0, ());

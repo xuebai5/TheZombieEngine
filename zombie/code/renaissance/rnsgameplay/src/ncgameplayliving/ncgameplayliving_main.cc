@@ -9,10 +9,6 @@
 #include "ncaimovengine/ncaimovengine.h"
 #include "ncaistate/ncaistate.h"
 #include "rnsgameplay/ngameplayutils.h"
-/** ZOMBIE REMOVE
-#include "rnsgameplay/nfightring.h"
-#include "rnsgameplay/nfightringmanager.h"
-*/
 #include "ncfsm/ncfsm.h"
 
 #include "ncgpperception/ncgpfeeling.h"
@@ -33,9 +29,6 @@
 #include "animcomp/ncskeletonclass.h"
 
 #include "entity/nentityobjectserver.h"
-/** ZOMBIE REMOVE
-#include "rnsgameplay/nfightringmanager.h"
-*/
 #include "nnetworkmanager/nnetworkmanager.h"
 
 #ifndef NGAME
@@ -54,9 +47,6 @@ ncGameplayLiving::ncGameplayLiving() :
     commandAura	(0), 
     carriedBy	(0), 
     currentWeapon(0), 
-/** ZOMBIE REMOVE
-    ringsManager(0),
-*/
     inventory( 0 ),
     regenRate(90),
 	isSprint	(false),
@@ -89,12 +79,6 @@ ncGameplayLiving::ncGameplayLiving() :
 */
 ncGameplayLiving::~ncGameplayLiving()
 {
-/** ZOMBIE REMOVE
-    // destroy its rings manager, if exists
-    this->DestroyRingsManager();
-    // leave the current fight ring
-    this->LeaveFightRing();
-*/
     this->carriedBy = 0;
     this->currentWeapon = 0;
 
@@ -136,12 +120,7 @@ ncGameplayLiving::InitInstance(nObject::InitInstanceMsg initType)
             this->inventory->SetSize( livingClass->GetInventorySize() );
         }
     }
-/** ZOMBIE REMOVE
-    else
-    {
-        this->DestroyRingsManager();
-    }    
-*/
+
     this->SetBlocking(false);
 }
 
@@ -237,10 +216,7 @@ ncGameplayLiving::SetDead()
     {
         fsm->Reset();
     }
-/** ZOMBIE REMOVE
-    // if it's in a fight ring, remove it
-    this->LeaveFightRing();
-*/
+
     // stop move engine
     ncAIMovEngine * movengine = this->GetComponent<ncAIMovEngine>();
     if( movengine && !movengine->IsJumping() )
@@ -341,15 +317,7 @@ ncGameplayLiving::Run ( const float deltaTime)
     }    
 
     this->UpdateMemory();
-/** ZOMBIE REMOVE
-    if ( this->ringsManager )
-    {
-        if ( this->ringsManager->IsEmpty() )
-        {
-            this->DestroyRingsManager();
-        }
-    }
-*/
+
     if ( this->IsRecovering() )
     {
         // still have injection efects
@@ -628,94 +596,6 @@ ncGameplayLiving::IsInMeleeRange() const
 
 //-----------------------------------------------------------------------------
 /**
-    Make the entity to leave its current fight ring
-*/
-/** ZOMBIE REMOVE
-void
-ncGameplayLiving::LeaveFightRing()
-{
-    ncAIState* state = this->GetComponent<ncAIState>();
-    if ( state )
-    {
-        int ringIdx = state->GetFightRingIndex();
-        nEntityObject* target = state->GetTarget();
-        if ( target && (ringIdx != -1))
-        {
-            ncGameplayLiving* gameplay = target->GetComponentSafe<ncGameplayLiving>();
-            if ( gameplay )
-            {
-                nFightRingManager* ringsManager = gameplay->GetRingsManager();
-                if ( ringsManager )
-                {
-                    nFightRing* ring = ringsManager->GetRing(ringIdx);
-                    if ( ring )
-                    {
-                        ring->Remove(this->GetEntityObject());
-                    }
-                }                                           
-            }    
-            state->SetFightRingIndex(-1); 
-        }
-    }
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    Destroy the fight manager
-*/
-/** ZOMBIE REMOVE
-void
-ncGameplayLiving::DestroyRingsManager()
-{
-    if ( this->ringsManager )
-    {
-        n_delete(this->ringsManager);
-        this->ringsManager = 0;
-    }
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    Create the fight manager
-*/
-/** ZOMBIE REMOVE
-void
-ncGameplayLiving::CreateRingsManager()
-{
-    this->ringsManager = n_new(nFightRingManager);
-    nArray<ncGameplayLivingClass::RingInfo>* ringsInfo = this->GetClassComponentSafe<ncGameplayLivingClass>()->GetFightRingsInfo();
-    for (int i = 0; i < ringsInfo->Size(); ++i)
-    {
-        this->ringsManager->CreateNewRing(ringsInfo->At(i).radius, ringsInfo->At(i).size);
-    }
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    Reset all the entities in the rings
-*/
-/** ZOMBIE REMOVE
-void 
-ncGameplayLiving::ResetRings()
-{
-    if ( this->ringsManager )
-    {
-        int numRings = this->ringsManager->GetNumRings();
-        nFightRing* currRing = 0;
-        for (int i = 0; i < numRings; ++i)
-        {
-            currRing = this->ringsManager->GetRing(i);
-            nArray<nEntityObject*> &entities = currRing->GetEntities();
-            while (!entities.Empty())
-            {
-                entities.Front()->GetComponentSafe<ncGameplayLiving>()->LeaveFightRing();
-            }
-        }
-    }
-}
-*/
-//-----------------------------------------------------------------------------
-/**
     Create and place a dead event where the entity is
 */
 void
@@ -724,33 +604,6 @@ ncGameplayLiving::PlaceDeadEvent()
     //empty: Implemented in derived classes for launch died events
 }
 
-//------------------------------------------------------------------------------
-/**
-    
-*/
-/** ZOMBIE REMOVE
-bool
-ncGameplayLiving::HasSpaceInnerRings()
-{
-    nEntityObject* target = this->GetComponentSafe<ncAIState>()->GetTarget();
-    if (target)
-    {
-        nFightRingManager* manager = target->GetComponentSafe<ncGameplayLiving>()->GetRingsManager();
-        if ( manager )
-        {
-            int index = this->GetComponentSafe<ncAIState>()->GetFightRingIndex();
-            nFightRing* destRing = 0;
-            destRing = manager->GetRing(index - 1);
-            if ( destRing )
-            {
-                return destRing->HasSpaceFor(this->GetEntityObject());
-            }
-        }    
-    }
-
-    return false;    
-}
-*/
 //------------------------------------------------------------------------------
 /**
     Place the gameplay event emitted when made noise movement

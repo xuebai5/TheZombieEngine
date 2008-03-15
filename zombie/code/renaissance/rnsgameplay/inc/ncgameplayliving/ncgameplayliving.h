@@ -15,9 +15,7 @@ class ncGPHearing;
 class ncGPFeeling;
 class ncGPSight;
 class ncAIState;
-/** ZOMBIE REMOVE
-class nFightRingManager;
-*/
+
 //------------------------------------------------------------------------------
 class ncGameplayLiving : public ncGameplay
 {
@@ -182,17 +180,6 @@ public:
 	/// Say if the entity is swimming
     bool IsSwimming() const;
     void SetSwimming(bool);
-/** ZOMBIE REMOVE
-    /// Make the entity to leave its current fight ring
-    void LeaveFightRing();
-
-    /// Create the rings manager
-    void CreateRingsManager();
-    /// Destroy the rings manager
-    void DestroyRingsManager();
-    /// Return true if have space in inner rings
-    bool HasSpaceInnerRings();
-*/
     /// Sets/gets 'has regen' property
     void SetHasRegen(bool);
     bool HasRegen() const;
@@ -237,13 +224,6 @@ public:
 
     /// get body part
     ncGameplayLivingClass::BodyPart GetBodyPart(geomid geomId);
-/** ZOMBIE REMOVE
-    /// Get the fighting rings
-    nFightRingManager* GetRingsManager() const;
-
-    /// Reset all the entities in the rings to redetermine its rings
-    void ResetRings();
-*/
     /// Set the entity as impacted or not
     void SetImpacted(bool flag);
     /// Says if the entity has been impacted
@@ -313,10 +293,6 @@ private:
 
     // -- gameplay state
     unsigned int gpState;
-/** ZOMBIE REMOVE
-    /// manager that controlles the fight rings around this entity
-    nFightRingManager* ringsManager;
-*/
     /// id of the path associated to the entity
     int pathId;
     /// The last waypoint where the entity is moving
@@ -1206,18 +1182,6 @@ ncGameplayLiving::SetSwimming (bool swimming)
 	this->isSwimming = swimming;
 }
 
-//------------------------------------------------------------------------------
-/**
-    Get the fighting rings
-*/
-/** ZOMBIE REMOVE
-inline
-nFightRingManager* 
-ncGameplayLiving::GetRingsManager() const
-{
-    return this->ringsManager;
-}
-*/
 //------------------------------------------------------------------------------
 /**
     @param value new busy level

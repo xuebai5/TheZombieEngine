@@ -21,10 +21,6 @@
 
 #include "util/nstream.h"
 
-/** ZOMBIE REMOVE
-#include "rnsgameplay/ncgpweaponaddonclass.h"
-#include "rnsgameplay/ncgpweaponcharsclass.h"
-*/
 #include "ncgamecamera/ncgamecamera.h"
 #include "nclogicanimator/nclogicanimator.h"
 #include "ncsoundlayer/ncsoundlayer.h"

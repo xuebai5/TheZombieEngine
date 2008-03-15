@@ -6,8 +6,6 @@
 #include "zombieentity/ncbatchloader.h"
 #include "nscene/ncscenebatch.h"
 #include "nscene/nscenenode.h"
-/** ZOMBIE REMOVE
-#include "nasset/nasset.h"*/
 #ifndef NGAME
 #include "kernel/ndependencyserver.h"
 #endif//!NGAME

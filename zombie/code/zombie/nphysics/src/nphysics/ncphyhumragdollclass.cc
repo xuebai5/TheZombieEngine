@@ -696,29 +696,4 @@ ncPhyHumRagDollClass::SetHumanAngles()
     this->kneeUpDownAngleMax = phyreal(0); // over x-axis
 }
 
-//-----------------------------------------------------------------------------
-/**
-*/
-/** ZOMBIE REMOVE
-void 
-ncPhyHumRagDollClass::SetStriderAngles()
-{
-    this->neckFrontAngleMin = phyreal(-.3); // over x-axis
-    this->neckFrontAngleMax = phyreal(.3); // over x-axis
-    this->neckSidesAngleMin = phyreal(-.3); // over z-axis
-    this->neckSidesAngleMax = phyreal(.3); // over z-axis
-    this->shoulderUpDownAngleMin = -pi_value*phyreal(.75)*phyreal(.5); // over z-axis
-    this->shoulderUpDownAngleMax = phyreal(.1)*phyreal(.5); // over z-axis
-    this->shoulderFrontAngleMin = phyreal(-.2)*phyreal(.5); // over x-axis
-    this->shoulderFrontAngleMax = pi_value*phyreal(.75)*phyreal(.5); // over x-axis
-    this->elbowUpDownAngleMin = phyreal(0); // over x-axis
-    this->elbowUpDownAngleMax = phyreal(pi_value/2.)*phyreal(.5); // over x-axis
-    this->wristUpDownAngleMin = phyreal(-pi_value/2.5)*phyreal(.5); // over x-axis
-    this->wristUpDownAngleMax = phyreal(pi_value/2.5)*phyreal(.5); // over x-axis
-    this->wristSidesAngleMin = phyreal(-.6)*phyreal(.5); // over z-axis
-    this->wristSidesAngleMax = phyreal(.6)*phyreal(.5); // over z-axis
-    this->kneeUpDownAngleMin = phyreal(-pi_value/2.)*phyreal(.5); // over x-axis
-    this->kneeUpDownAngleMax = phyreal(0); // over x-axis
-}
-*/
 #endif
