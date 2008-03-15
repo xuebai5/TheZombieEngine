@@ -1,6 +1,6 @@
 #include "precompiled/pchrenaissanceapp.h"
 //------------------------------------------------------------------------------
-//  nCommonViewport_main.cc
+//  ncommonviewport_main.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nrnsappviewport/nrnsappviewport.h"

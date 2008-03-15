@@ -1,12 +1,14 @@
+#ifndef NCGPTHROWABLE_H
+#define NCGPTHROWABLE_H
+
+//------------------------------------------------------------------------------
 /**
    @file ncgpthrowable.h
    @author Luis Jose Cabellos Gomez
    
    (C) 2005 Conjurer Services, S.A.
 */
-#ifndef NCGPTHROWABLE_H
-#define NCGPTHROWABLE_H
-//------------------------------------------------------------------------------
+
 #include "rnsgameplay/ncgameplay.h"
 
 //------------------------------------------------------------------------------

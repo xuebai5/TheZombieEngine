@@ -1,7 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-/**
-    @file ncgameplayliving_cmds.cc
-*/
+//-----------------------------------------------------------------------------
+//  ncgameplayliving_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 
 #include "ncgameplayliving/ncgameplayliving.h"
 

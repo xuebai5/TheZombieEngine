@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 /**
     @class nGPDropItem
-    @ingroup
+    @ingroup NebulaGameplayBasicActions
 
     Drop an item from the entity inventory to the ground
 

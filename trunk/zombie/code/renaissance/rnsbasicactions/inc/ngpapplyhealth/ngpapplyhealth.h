@@ -1,15 +1,14 @@
-//------------------------------------------------------------------------------
-/**
-@class nGPApplyHealth
-@ingroup NebulaGameplay
-
-This basic action injects to the player an injection for restore health.
-
-(C) 2005 Copyright holder
-*/
-//------------------------------------------------------------------------------
 #ifndef N_GPAPPLYHEALTH_H
 #define N_GPAPPLYHEALTH_H
+//------------------------------------------------------------------------------
+/**
+    @class nGPApplyHealth
+    @ingroup NebulaGameplay
+    
+    This basic action injects to the player an injection for restore health.
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
 
 #include "ngpbasicaction/ngpbasicaction.h"
 

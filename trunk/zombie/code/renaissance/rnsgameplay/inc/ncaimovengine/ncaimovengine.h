@@ -1,5 +1,13 @@
 #ifndef NC_AIMOVENGINE_H
 #define NC_AIMOVENGINE_H
+
+//------------------------------------------------------------------------------
+/**
+    @class ncAIMovEngine
+
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 //------------------------------------------------------------------------------
 #include "entity/nentity.h"
 #include "mathlib/plane.h"

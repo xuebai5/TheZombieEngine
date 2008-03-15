@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 /**
     @class nGPSwitchFireMode
-    @ingroup
+    @ingroup NebulaGameplayBasicActions
     
     Basic Action to switch the mode of the weapon
     

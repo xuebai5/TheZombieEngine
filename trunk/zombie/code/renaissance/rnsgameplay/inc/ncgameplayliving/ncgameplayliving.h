@@ -2,6 +2,13 @@
 #define NCGAMEPLAYLIVING_H
 
 //------------------------------------------------------------------------------
+/**
+    @class ncGameplayLiving
+
+    (C) 2005 Conjurer Services, S.A.
+*/
+
+//------------------------------------------------------------------------------
 #include "rnsgameplay/ncgameplay.h"
 #include "rnsgameplay/ncgpweapon.h"
 #include "rnsgameplay/ninventorycontainer.h"

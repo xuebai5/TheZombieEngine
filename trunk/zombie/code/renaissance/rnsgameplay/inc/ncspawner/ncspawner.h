@@ -2,7 +2,15 @@
 #define NCSPAWNER_H
 
 //------------------------------------------------------------------------------
+/**
+    @class ncSpawner
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 #include "entity/nentity.h"
+
+//------------------------------------------------------------------------------
 
 class ncSpawner : public nComponentObject
 {

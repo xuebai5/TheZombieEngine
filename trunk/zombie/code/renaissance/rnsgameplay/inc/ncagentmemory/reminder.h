@@ -10,6 +10,8 @@
     A reminder have an age that can be used as its reliability/accuracy.
     A reminder is less reliable/accurate when it's older, since the world state
     from where that reminder was extracted has got more time to change.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "ntrigger/ngameevent.h"

@@ -3,9 +3,6 @@
 //------------------------------------------------------------------------------
 /**
     @class nRnsEntityManager
-    @ingroup 
-
-    Description of the porpouse of the class
 
     (C) 2005 Conjurer Services, S.A.
 */

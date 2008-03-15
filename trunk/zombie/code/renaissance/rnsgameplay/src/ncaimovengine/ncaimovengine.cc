@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsgameplay.h"
 //------------------------------------------------------------------------------
 //  naimovengine.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ncaimovengine/ncaimovengine.h"

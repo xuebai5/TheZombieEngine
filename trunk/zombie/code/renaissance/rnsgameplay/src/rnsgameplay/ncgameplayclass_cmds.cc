@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-/**
-   @file ncgameplayclass_cmds.cc
-   @author Luis Jose Cabellos Gomez
-   
-   (C) 2005 Conjurer Services, S.A.
-*/
+//-----------------------------------------------------------------------------
+//  ncgameplayclass_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 #include "rnsgameplay/ncgameplayclass.h"
 
 //-----------------------------------------------------------------------------

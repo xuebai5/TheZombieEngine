@@ -1,9 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-@file nGPProne.cc
-
-(C) 2005 Conjurer Services, S.A.
-*/
+//-----------------------------------------------------------------------------
+//  ngpprone.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 #include "ngpprone/ngpprone.h"
 
 #include "ncgameplayliving/ncgameplayliving.h"

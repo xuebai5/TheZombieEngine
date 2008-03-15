@@ -1,6 +1,13 @@
 #ifndef NCGAMEPLAYSQUADMEMBER_H
 #define NCGAMEPLAYSQUADMEMBER_H
 
+//------------------------------------------------------------------------------
+/**
+    @class ncGameplaySquadMember
+
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 #include "ncgameplayliving/ncgameplayliving.h"
 
 class ncGameplaySquadMember : public ncGameplayLiving

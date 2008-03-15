@@ -1,15 +1,7 @@
 #include "precompiled/pchrnsentity.h"
 //------------------------------------------------------------------------------
-/**
-    @ingroup NebulaEntity
-
-    List of all the entities with its configuration.
-    This must be a cc file, even although there is nothing really compiled in.
-    It is a really a header defining some macros, but a cc is required by
-    the build system right now.
-
-    (C) 2005 Conjurer Services, S.A.
-*/
+//  gpentitylist.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 // include for  define nNebulaEntity
 #include "entity/ndefinenebulaentity.h"

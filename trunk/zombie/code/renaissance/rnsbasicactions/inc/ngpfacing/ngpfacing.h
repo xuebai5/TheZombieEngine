@@ -8,6 +8,8 @@
 
     @brief Action class that define the facing of the an agent respect a 
            target or a direction
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "ngpbasicaction/ngpbasicaction.h"

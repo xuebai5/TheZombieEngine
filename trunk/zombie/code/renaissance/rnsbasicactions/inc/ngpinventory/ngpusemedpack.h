@@ -2,8 +2,8 @@
 #define NGPUSEMEDPACK_H
 //------------------------------------------------------------------------------
 /**
-    @class
-    @ingroup
+    @class nGPUseMedPack
+    @ingroup NebulaGameplayBasicActions
     
     Description of the porpouse of the class
     

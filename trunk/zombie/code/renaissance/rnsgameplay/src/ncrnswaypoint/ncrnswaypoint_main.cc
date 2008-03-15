@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsgameplay.h"
 //------------------------------------------------------------------------------
 //  ncrnswaypoint_main.cc
+//  (C) Conjurer Services, S.A. 2006
 //------------------------------------------------------------------------------
 
 #include "ncrnswaypoint/ncrnswaypoint.h"

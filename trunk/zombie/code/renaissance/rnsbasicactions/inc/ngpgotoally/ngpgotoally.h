@@ -7,6 +7,8 @@
     @ingroup NebulaGameplayBasicActions
 
     @brief Action class that makes an agent goes near a calling ally
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "ngpbasicaction/ngpbasicaction.h"

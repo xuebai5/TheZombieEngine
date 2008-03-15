@@ -1,12 +1,14 @@
+#ifndef NCGAMEPLAYCLASS_H
+#define NCGAMEPLAYCLASS_H
+
+//------------------------------------------------------------------------------
 /**
-   @file ncgameplayclass.h
+   @class ncGameplayClass
    @author Luis Jose Cabellos Gomez
    
    (C) 2005 Conjurer Services, S.A.
 */
-#ifndef NCGAMEPLAYCLASS_H
-#define NCGAMEPLAYCLASS_H
-//------------------------------------------------------------------------------
+
 #include "entity/nentity.h"
 
 //------------------------------------------------------------------------------

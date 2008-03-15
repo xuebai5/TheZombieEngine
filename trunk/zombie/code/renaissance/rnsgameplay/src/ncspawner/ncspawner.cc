@@ -1,5 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-
+//------------------------------------------------------------------------------
+//  ncspawner.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 #include "ncspawner/ncspawner.h"
 #include "util/nrandomlogic.h"
 #include "ncspawnpoint/ncspawnpoint.h"

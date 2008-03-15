@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsbasicactions.h"
 //------------------------------------------------------------------------------
-//  ngpdeterminering.cc
+//  ngpfotonextwaypoint.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nGPGotoNextWaypoint/nGPGotoNextWaypoint.h"
 

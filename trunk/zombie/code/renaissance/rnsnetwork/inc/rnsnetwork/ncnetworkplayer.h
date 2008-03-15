@@ -2,10 +2,7 @@
 #define NCNETWORKPLAYER_H
 //------------------------------------------------------------------------------
 /**
-    @class
-    @ingroup
-
-    Description of the porpouse of the class
+    @class ncNetworkPlayer
 
     (C) 2005 Conjurer Services, S.A.
 */

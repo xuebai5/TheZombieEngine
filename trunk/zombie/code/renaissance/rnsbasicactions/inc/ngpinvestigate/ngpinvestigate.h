@@ -1,18 +1,20 @@
-//------------------------------------------------------------------------------
-/**
-@class nGPInvestigate
-@ingroup NebulaGameplayBasicActions
-
-    This basic action makes the entity look around for events in its memory
-    or walk to them.
-
-(C) 2005 Copyright holder
-*/
-//------------------------------------------------------------------------------
 #ifndef NGPINVESTIGATE_H
 #define NGPINVESTIGATE_H
 
+//------------------------------------------------------------------------------
+/**
+    @class nGPInvestigate
+    @ingroup NebulaGameplayBasicActions
+    
+    This basic action makes the entity look around for events in its memory
+    or walk to them.
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 #include "ngpbasicaction/ngpbasicaction.h"
+
+//------------------------------------------------------------------------------
 
 class ncAIMovEngine;
 

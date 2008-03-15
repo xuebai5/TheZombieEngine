@@ -2,10 +2,7 @@
 #define NCNETWORKVEHICLE_H
 //------------------------------------------------------------------------------
 /**
-    @class
-    @ingroup
-
-    Description of the porpouse of the class
+    @class ncNetworkVehicle
 
     (C) 2005 Conjurer Services, S.A.
 */

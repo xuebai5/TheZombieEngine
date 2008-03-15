@@ -1,9 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-	@file nGPCrouch.cc
-	
-(C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngpcrouch.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngpcrouch/ngpcrouch.h"
 
 #include "ncgameplayliving/ncgameplayliving.h"

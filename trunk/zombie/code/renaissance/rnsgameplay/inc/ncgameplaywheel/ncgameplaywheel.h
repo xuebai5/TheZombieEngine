@@ -1,6 +1,13 @@
 #ifndef NCGAMEPLAYWHEEL_H
 #define NCGAMEPLAYWHEEL_H
 
+//------------------------------------------------------------------------------
+/**
+    @class ncGameplayWheel
+
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 #include "rnsgameplay/ncgameplay.h"
 
 class ncGameplayWheel : public ncGameplay

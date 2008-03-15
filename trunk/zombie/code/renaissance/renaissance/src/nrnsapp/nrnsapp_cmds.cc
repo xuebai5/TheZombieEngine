@@ -1,6 +1,6 @@
 #include "precompiled/pchrenaissanceapp.h"
 //------------------------------------------------------------------------------
-//  nRnsApp_cmds.cc
+//  nrnsapp_cmds.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nrnsapp/nrnsapp.h"

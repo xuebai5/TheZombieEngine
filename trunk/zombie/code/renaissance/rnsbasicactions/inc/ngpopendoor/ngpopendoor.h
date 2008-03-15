@@ -7,6 +7,8 @@
     @ingroup NebulaGameplayBasicActions
 
     @brief Action class that define the movement between two points
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 //------------------------------------------------------------------------------

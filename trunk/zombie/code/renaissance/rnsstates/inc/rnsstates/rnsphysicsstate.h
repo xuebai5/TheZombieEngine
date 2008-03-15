@@ -1,14 +1,12 @@
-/**
-   @file rnsphysicsstate.h
-   @author Luis Jose Cabellos Gomez
-   @brief 
-   @brief $Id$ 
-   
-   (C) 2005 Conjurer Services, S.A.
-*/
 #ifndef RNSPHYSICSSTATE_H
 #define RNSPHYSICSSTATE_H
 //------------------------------------------------------------------------------
+/**
+    @class RnsPhysicsState
+    @author Luis Jose Cabellos Gomez
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
 #include "napplication/nappstate.h"
 
 #include "mathlib/vector.h"

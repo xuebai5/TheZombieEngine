@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-
-/**
-    @file ncgameplaywheel_main.cc
-
-    (C) Conjurer Services, S.A. 2006
-*/
+//------------------------------------------------------------------------------
+//  ncgameplaywheel_main.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 
 #include "ncgameplaywheel/ncgameplaywheel.h"
 #include "entity/nentityobjectserver.h"

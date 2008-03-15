@@ -1,7 +1,8 @@
 #include "precompiled/pchgameplay.h"
-/**
-@file ncgameplaysquadclass_main.cc
-*/
+//------------------------------------------------------------------------------
+//  ncgameplaysquadclass_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 
 #include "ncgameplaysquad/ncgameplaysquadclass.h"
 

@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-
-/**
-    @file ncgameplaywheelclass_main.cc
-
-    (C) Conjurer Services, S.A. 2006
-*/
+//------------------------------------------------------------------------------
+//  file ncgameplaywheelclass_main.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 
 #include "ncgameplaywheel/ncgameplaywheelclass.h"
 

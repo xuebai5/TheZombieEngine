@@ -1,8 +1,7 @@
 #include "precompiled/pchrnsentity.h"
 //------------------------------------------------------------------------------
-/**
-    (C) 2005 Conjurer Services, S.A.
-*/
+//  gpentity.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #pragma warning( disable : 4250 )
 

@@ -5,6 +5,8 @@
     @class ncAIState
 
     @brief Stores state information for a entity
+
+    (C) 2005 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "entity/nentity.h"

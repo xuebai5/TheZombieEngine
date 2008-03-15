@@ -2,11 +2,9 @@
 #define NGPWIELDWEAPON_H
 //------------------------------------------------------------------------------
 /**
-    @class
-    @ingroup
-    
-    Description of the porpouse of the class
-    
+    @class nGPwieldWeapon
+    @ingroup NebulaGameplayBasicActions
+
     (C) 2005 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------

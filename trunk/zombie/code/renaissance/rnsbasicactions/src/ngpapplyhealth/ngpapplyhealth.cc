@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-@file ngApplyHealth.cc
-@author Javie Ferrer Gomez
-
-(C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngapplyhealth.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngpApplyHealth/ngpApplyHealth.h"
 
 #include "rnsgameplay/ngameplayutils.h"
@@ -17,7 +15,7 @@ nNebulaScriptClass(nGPApplyHealth, "ngpbasicaction");
 
 //------------------------------------------------------------------------------
 /**
-Nebula class scripting initialization
+    Nebula class scripting initialization
 */
 NSCRIPT_INITCMDS_BEGIN (nGPApplyHealth)
 	    NSCRIPT_ADDCMD('INIT', bool, Init, 2, (nEntityObject*, int), 0, ());

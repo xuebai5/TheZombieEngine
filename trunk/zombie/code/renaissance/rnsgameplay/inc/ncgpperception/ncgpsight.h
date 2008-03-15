@@ -3,11 +3,10 @@
 
 //------------------------------------------------------------------------------
 /**
-
     @file ncgpsight.h
     @class ncGPSight
     @ingroup Entities
-    @author Miquel Angel Rujula <>
+    @author Miquel Angel Rujula
    
     @brief Component Object that represents the sight perception of an agent.
 

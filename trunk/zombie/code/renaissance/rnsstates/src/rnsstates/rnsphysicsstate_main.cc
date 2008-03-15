@@ -1,12 +1,8 @@
 #include "precompiled/pchrnsstates.h"
-/**
-   @file rnsphysicsstate_main.cc
-   @author Luis Jose Cabellos Gomez
-   @brief 
-   @brief $Id$ 
-   
-   (C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  rnsphysicsstate_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "rnsstates/rnsphysicsstate.h"
 
 #include "napplication/napplication.h"

@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-@file ngpinvestigate.cc
-@author Marc Ordinas i Llopis
-
-(C) 2006 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngpinvestigate.cc
+//  (C) 2006 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngpinvestigate/ngpinvestigate.h"
 
 #include "nclogicanimator/nclogicanimator.h"

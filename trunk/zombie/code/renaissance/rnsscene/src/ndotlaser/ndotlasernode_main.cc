@@ -1,6 +1,6 @@
 #include "precompiled/pchrnsscene.h"
 //------------------------------------------------------------------------------
-//  ndotlaser_main.cc
+//  ndotlasernode_main.cc
 //  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "ndotlaser/ndotlasernode.h"
