@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass.h"
+//------------------------------------------------------------------------------
+//  nvegetationnode_main.cc
+//  (C) 2004 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "nvegetation/nvegetationnode.h"
 #include "nvegetation/ncterrainvegetationclass.h"
 #include "zombieentity/ncdictionary.h"

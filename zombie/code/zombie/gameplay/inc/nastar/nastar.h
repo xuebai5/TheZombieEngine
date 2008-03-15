@@ -6,6 +6,8 @@
     @class nAStar
 
     Path finder for a given navigation mesh
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nobject.h"

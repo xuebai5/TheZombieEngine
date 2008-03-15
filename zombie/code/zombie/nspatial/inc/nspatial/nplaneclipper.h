@@ -35,6 +35,8 @@
     When there are no active planes left you know the
     object and all its children are fully determined, so you can
     trivially add them all without doing any more clipping checks.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 #include "mathlib/plane.h"
 #include "mathlib/sphere.h"

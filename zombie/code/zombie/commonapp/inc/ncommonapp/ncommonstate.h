@@ -7,7 +7,7 @@
 
     @brief Zombie base nAppState. Implements gui loading and behavior by loading scripts
     
-    (C) 2004 RadonLabs GmbH
+    (C) 2004 Conjurer Services, S.A.
 */
 #include "napplication/nappstate.h"
 #include "kernel/nscriptserver.h"

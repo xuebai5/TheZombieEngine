@@ -1,4 +1,7 @@
 //------------------------------------------------------------------------------
+//  ncpersisthelpersubentity_main.cc
+//  (C) 2006 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchncshared.h"
 #include "zombieentity/ncpersisthelpersubentity.h"
 #include "zombieentity/ncsubentity.h"

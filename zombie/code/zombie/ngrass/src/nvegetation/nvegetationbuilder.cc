@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass_conjurer.h"
+//------------------------------------------------------------------------------
+//  nvegetationbuilder.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "nvegetation/nvegetationbuilder.h"
 #include "nspatial/ncspatialquadtreecell.h"
 #include "ngeomipmap/ncterraingmmcell.h"

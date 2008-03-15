@@ -14,6 +14,8 @@
     is that it will grab occluders and use them to cull away objects.
 
     The visitor will call Visit() for every element determined possibly visible.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nvisiblefrustumvisitor.h"

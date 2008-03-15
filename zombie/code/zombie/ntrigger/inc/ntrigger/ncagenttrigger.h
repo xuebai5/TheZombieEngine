@@ -1,6 +1,5 @@
 #ifndef NC_AGENTTRIGGER_H
 #define NC_AGENTTRIGGER_H
-
 //------------------------------------------------------------------------------
 /**
     @class ncAgentTrigger
@@ -11,6 +10,8 @@
     It delegates the handling of incoming events to the agent's perception
     system, which may pass them to the finite state machine, either untouched
     or transformed as other event types.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "ntrigger/nctrigger.h"

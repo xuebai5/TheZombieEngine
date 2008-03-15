@@ -1,6 +1,6 @@
 #ifndef N_VISIBLESPHEREVISITOR_H
 #define N_VISIBLESPHEREVISITOR_H
-
+//------------------------------------------------------------------------------
 /**
     @class nVisibleSphereVisitor
     @ingroup NSpatialContribModule
@@ -13,6 +13,8 @@
 
     The visitor will call Visit() for every element determined possibly
     visible.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nvisibilityvisitor.h"

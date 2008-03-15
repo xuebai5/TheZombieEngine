@@ -1,4 +1,8 @@
 #include "precompiled/pchnspatial.h"
+//-----------------------------------------------------------------------------
+//  ncspatialcell.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 #include "nspatial/nspatialcell.h"
 #include "nspatial/nspatialserver.h"
 #include "util/npolygoncontainer.h"

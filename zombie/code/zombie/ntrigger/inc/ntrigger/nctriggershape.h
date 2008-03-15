@@ -11,6 +11,8 @@
     The shape is stored in local coordinates. The component assumes that the
     entity has a ncTransform component to finally place the shape in world
     space when operations with the shape are requested.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "entity/nentity.h"

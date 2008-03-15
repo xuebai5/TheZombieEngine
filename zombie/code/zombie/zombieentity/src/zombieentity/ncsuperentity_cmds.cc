@@ -1,6 +1,7 @@
 #include "precompiled/pchgameplay.h"
 //------------------------------------------------------------------------------
 //  ncsuperentity_cmds.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "zombieentity/ncsuperentity.h"

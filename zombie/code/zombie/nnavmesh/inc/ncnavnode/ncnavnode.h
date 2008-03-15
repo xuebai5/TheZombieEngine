@@ -15,6 +15,8 @@
     get connected. This distinction is mainly for persistence purposes, for
     pathfinding an interface that treats all the graphs as a single graph is
     provided.
+
+   (C) 2005 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

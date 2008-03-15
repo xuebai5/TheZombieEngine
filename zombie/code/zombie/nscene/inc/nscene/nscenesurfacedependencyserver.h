@@ -5,7 +5,6 @@
    @file nscenesurfacedependencyserver.h
    @author ma.garcias <ma.garcias@yahoo.es>
    @brief Declaration of nSceneSurfaceDependencyServer class
-   @brief $Id$ 
    
    (C) 2005 Conjurer Services, S.A.
 */

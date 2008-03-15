@@ -1,14 +1,7 @@
 #include "precompiled/pchncsound.h"
-/*-----------------------------------------------------------------------------
-    @file nsoundscheduler_cmds.cc
-
-    @author Juan Jose Luna
-
-    @brief nSoundScheduler persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nsoundscheduler_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nsoundscheduler/nsoundscheduler.h"
 #include "kernel/npersistserver.h"

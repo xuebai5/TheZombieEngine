@@ -7,6 +7,8 @@
     @ingroup NebulaNavmeshSystem
 
     Navigation parser factories.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 class NavBlockParser;

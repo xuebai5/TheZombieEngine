@@ -1,20 +1,6 @@
 #ifndef N_VISIBILITYVISITOR_H
 #define N_VISIBILITYVISITOR_H
-
-#include "mathlib/vector.h"
-#include "mathlib/matrix.h"
-//#include "nspatial/nspatialoctreespace.h"
-//#include "nspatial/nspatialquadtreespace.h"
-//#include "nspatial/nspatialindoorspace.h"
-
-#include "util/narray.h"
-
-//class nSpatialElement;
-//class nSpatialCamera;
-class nGfxServer2;
-class nEntityObject;
-class ncSpatialPortal;
-
+//------------------------------------------------------------------------------
 /**
     @class nVisibilityVisitor
     @ingroup NSpatialContribModule
@@ -40,7 +26,24 @@ class ncSpatialPortal;
     5. In your class or a subclass, override Accept(nSpatialElement *, int)
     to process each visible element, either by accumulating the visible
     elements in a list, sending them to a render system, or whatever.
+
+    (C) 2006 Conjurer Services, S.A.
 */
+
+#include "mathlib/vector.h"
+#include "mathlib/matrix.h"
+//#include "nspatial/nspatialoctreespace.h"
+//#include "nspatial/nspatialquadtreespace.h"
+//#include "nspatial/nspatialindoorspace.h"
+
+#include "util/narray.h"
+
+//class nSpatialElement;
+//class nSpatialCamera;
+class nGfxServer2;
+class nEntityObject;
+class ncSpatialPortal;
+
 
 class nVisibilityVisitor 
 {

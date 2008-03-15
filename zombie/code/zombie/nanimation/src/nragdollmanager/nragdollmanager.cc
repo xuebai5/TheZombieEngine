@@ -1,5 +1,8 @@
 #include "precompiled/pchnanimation.h"
-
+//------------------------------------------------------------------------------
+//  nragdollmanager.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "nragdollmanager/nragdollmanager.h"
 #include "entity/nentityobjectserver.h"
 #include "ncragdoll/ncragdoll.h"

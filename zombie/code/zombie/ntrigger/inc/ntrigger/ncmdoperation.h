@@ -16,6 +16,8 @@
     need an object argument, define an alternative command that receives the
     object id and then resolves the object pointer on execution time, like this
     class does.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "ntrigger/noperation.h"

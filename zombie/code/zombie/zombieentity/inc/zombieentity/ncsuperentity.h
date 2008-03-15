@@ -1,6 +1,11 @@
 #ifndef ncSuperentity_H
 #define ncSuperentity_H
 
+//------------------------------------------------------------------------------
+/**
+    (C) 2006 Conjurer Services, S.A.
+*/
+
 #include "entity/nentity.h"
 #include "entity/nobjectinstancer.h"
 

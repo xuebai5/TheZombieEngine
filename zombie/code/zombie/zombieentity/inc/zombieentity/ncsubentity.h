@@ -1,6 +1,9 @@
 #ifndef N_SUBENTITY_H
 #define N_SUBENTITY_H
-
+//------------------------------------------------------------------------------
+/**
+    (C) 2006 Conjurer Services, S.A.
+*/
 #include "entity/nentity.h"
 #include "signals/nsignalnative.h"
 

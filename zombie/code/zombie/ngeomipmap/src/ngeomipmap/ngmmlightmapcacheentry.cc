@@ -1,12 +1,7 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmlightmapcachenetry.cc
-    @ingroup NebulaTerrain
-
-    @author Cristobal Castillo Domingo
-
-    (C) 2005 Conjurer Services, S.A.
-*/
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  ngmmlightmapcachenetry.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmlightmapcacheentry.h"
 

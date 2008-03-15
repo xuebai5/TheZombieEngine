@@ -4,7 +4,7 @@
 /**
     @class ncGameplayLoader
     @ingroup Entities
-    @author Miquel Angel Rujula <>
+    @author Miquel Angel Rujula
 
     @brief Base entity component to load the asset data for gameplay entities.
 

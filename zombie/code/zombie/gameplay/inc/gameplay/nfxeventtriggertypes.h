@@ -4,6 +4,8 @@
 /**
     @struct nLaunchSpecialFxData
     @brief Module contaisn the data for nFxEventTrigger
+
+    (C) 2006 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 

@@ -14,6 +14,8 @@
 
     The visitor will call Visit() for every element determined possibly
     visible.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nvisiblespherevisitor.h"

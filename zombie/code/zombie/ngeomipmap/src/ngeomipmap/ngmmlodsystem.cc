@@ -1,11 +1,6 @@
 //------------------------------------------------------------------------------
-/**
-    @file ngmmlodsystem.cc
-    @ingroup NebulaTerrain
-    @author Mateu Batle
-
-    (C) 2006 Conjurer Services, S.A.
-*/
+//  ngmmlodsystem.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmlodsystem.h"

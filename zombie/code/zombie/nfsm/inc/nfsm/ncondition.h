@@ -7,6 +7,8 @@
     @ingroup NebulaFSMSystem
 
     Interface for all conditions that triggers a state transition.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

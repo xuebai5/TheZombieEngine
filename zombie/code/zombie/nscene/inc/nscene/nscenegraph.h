@@ -11,6 +11,8 @@
     culling system determines that some node hierarchy is made visible 
     within the space determined by a scene graph. The whole scene graph is
     re-rendered each frame just in the right order.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 #include "kernel/nroot.h"
 #include "kernel/nautoref.h"

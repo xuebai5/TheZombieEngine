@@ -6,7 +6,9 @@
     @class nVegetationNode
     @ingroup NebulaGrass
     @author Cristobal Castillo Domingo
+
     @brief nVegetationNode is scene node used to render a vegetation in a terrain 
+
     (c) 2004 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------

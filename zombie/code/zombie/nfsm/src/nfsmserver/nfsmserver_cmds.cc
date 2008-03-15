@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------------
 //  nfsmserver_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
 #include "precompiled/pchnfsm.h"
 #include "nfsmserver/nfsmserver.h"

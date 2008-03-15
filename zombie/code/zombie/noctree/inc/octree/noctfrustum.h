@@ -7,7 +7,6 @@
 /**
     @class nOctFrustum
     @ingroup NOctreeContribModule
-    @brief
 */
 class nOctFrustum : public nOctVisitor
 {

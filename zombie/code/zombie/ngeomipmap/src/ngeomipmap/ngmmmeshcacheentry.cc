@@ -1,14 +1,7 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmmeshcacheentry.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    @brief Terrain rendering methods
-
-    (C) 2004 Conjurer Services, S.A.
-*/
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  ngmmmeshcacheentry.cc
+//  (C) 2004 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmmeshcacheentry.h"
 #include "ngeomipmap/ncterraingmmclass.h"

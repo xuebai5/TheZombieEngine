@@ -5,6 +5,8 @@
     @class nFxEventTrigger
 
     @brief Module that chooses which special fx has to be used
+
+    (C) 2006 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "gameplay/nfxeventtriggertypes.h"

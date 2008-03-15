@@ -7,6 +7,8 @@
     @ingroup NebulaTriggerSystem
 
     Interface to generically execute some type of operation.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

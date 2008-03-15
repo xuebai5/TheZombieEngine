@@ -5,8 +5,6 @@
     @class nDynamicAttachment
     @ingroup NebulaCharacterAnimationSystem
 
-    @brief Implements 
-
     (C) 2005 Conjurer Services, S.A.
 */
 

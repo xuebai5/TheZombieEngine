@@ -7,7 +7,9 @@
     @ingroup NebulaGameplayBasicActions
 
     @brief Superclass for ai actions. All ai basic actions will derive of this class.
-           Defines how a action must be coded
+    Defines how a action must be coded
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nobject.h"

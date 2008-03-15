@@ -1,6 +1,6 @@
 #ifndef N_SPHERECLIPPER_H
 #define N_SPHERECLIPPER_H
-
+//------------------------------------------------------------------------------
 /**
     @class nSphereClipper
     @ingroup NSpatialContribModule
@@ -12,6 +12,8 @@
     clipping sphere.  Also, the @c active_flag of the return value will be
     @c 0 if an object is totally inside the sphere; typically you can use
     this for hierarchical objects to avoid doing cull checks on the children.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "gfx2/ncamera2.h"

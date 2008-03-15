@@ -4,9 +4,7 @@
 /**
     @class nFxMaterial
     @ingroup SpecialFX
-    @author 
-
-    @brief ...
+    @author MA Garcias
 
     (C) 2006 Conjurer Services, S.A.
 */

@@ -22,6 +22,8 @@
     Sectors are typically connected to each other by portals.  You
     can also nest sectors within each other using the NOH; a sector
     contains all the sectors that are child nodes of this sector.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 class nSpatialSector : public nOctree {
 public:

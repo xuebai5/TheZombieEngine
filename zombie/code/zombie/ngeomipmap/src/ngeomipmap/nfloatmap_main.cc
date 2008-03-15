@@ -1,15 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file nfloatmap_main.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-    @author Juan Jose Luna
-
-    @brief FloatMap Class to handle generic maps of a float channel
-
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nfloatmap_main.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "loki/static_check.h"

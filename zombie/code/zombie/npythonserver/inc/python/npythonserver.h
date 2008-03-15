@@ -9,6 +9,8 @@
     Implements an nScriptServer that understands Python, extended
     by a few Nebula specific Python commands and the ability
     to route script cmds to Nebula C++ objects.
+
+//   (C)2004 Kim, Hyoun Woo.
 */
 //--------------------------------------------------------------------
 #ifdef _DEBUG

@@ -1,13 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file ngeomipmapnode_main.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    @brief Terrain rendering methods
-
-    (C) 2004 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngeomipmapnode_main.cc
+//  (C) 2004 Conjurer Services, S.A.
 //---------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 

@@ -7,6 +7,8 @@
     @ingroup NebulaFSMSystem
 
     Transition condition triggered by a script.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/ncmdprotonativecpp.h"

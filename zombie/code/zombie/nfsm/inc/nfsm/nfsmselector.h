@@ -15,6 +15,8 @@
     instance is linked to a script function (the SelectFSM function), although
     native implementations can be provided by inheriting from this class and
     overwrite the Select virtual method.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

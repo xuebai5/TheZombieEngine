@@ -5,7 +5,6 @@
    @file nbatchdependencyserver.h
    @author ma.garcias <ma.garcias@yahoo.es>
    @brief Declaration of nBatchDependencyServer class
-   @brief $Id$ 
    
    (C) 2005 Conjurer Services, S.A.
 */

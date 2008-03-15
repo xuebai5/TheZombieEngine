@@ -7,6 +7,8 @@
     @ingroup NebulaNavmeshSystem
 
     Navigation mesh file reader classes.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "nnavmeshparser/nnavmeshfile.h"

@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass.h"
+//------------------------------------------------------------------------------
+//  nvegetationmeshresourceloader_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "nvegetation/nVegetationMeshResourceLoader.h"
 
 //------------------------------------------------------------------------------

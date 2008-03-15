@@ -1,14 +1,7 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmlowmeshcacheentry.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    @brief Cache for low level of detail terrain vertices data
-
-    (C) 2006 Conjurer Services, S.A.
-*/
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  ngmmlowmeshcacheentry.cc
+//  (C) 2006 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmlowmeshcacheentry.h"
 #include "ngeomipmap/ncterraingmmclass.h"

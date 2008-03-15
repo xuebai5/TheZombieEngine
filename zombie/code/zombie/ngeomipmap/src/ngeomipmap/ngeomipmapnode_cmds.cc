@@ -1,14 +1,7 @@
 #include "precompiled/pchngeomipmap.h"
-/*-----------------------------------------------------------------------------
-    @file ngeomipmapnode_cmds.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    @brief ngeomipmapnode Nebula class persistence and scripting
-
-    (C) 2004 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngeomipmapnode_cmds.cc
+//  (C) 2004 Conjurer Services, S.A.
 //---------------------------------------------------------------------------
 #include "ngeomipmap/ngeomipmapnode.h"
 #include "kernel/npersistserver.h"

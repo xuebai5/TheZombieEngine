@@ -1,6 +1,10 @@
 #ifndef N_VEGETATIONMESHCAHEENTRY_H
 #define N_VEGETATIONMESHCAHEENTRY_H
 //------------------------------------------------------------------------------
+/**
+    (C) 2004 Conjurer Services, S.A.
+*/
+
 #include "ngeomipmap/ncache.h"
 #include "gfx2/nmesh2.h"
 #include "entity/nentityclass.h"

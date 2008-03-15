@@ -4,6 +4,8 @@
 //------------------------------------------------------------------------------
 /**
     @class nPathFinder
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nobject.h"

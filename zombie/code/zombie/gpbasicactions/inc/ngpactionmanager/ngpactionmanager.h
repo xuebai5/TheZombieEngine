@@ -6,6 +6,8 @@
     @ingroup NebulaGameplayBasicActions
 
     @brief class that manages the creation of the basic AI actions for entities
+
+    (C) 2006 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "kernel/nobject.h"

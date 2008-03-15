@@ -1,11 +1,7 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmindexresloader.cc
-    @ingroup NebulaTerrain
-    @author Mateu Batle Sastre
-
-    (C) 2006 Conjurer Services, S.A.
-*/
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  ngmmindexresloader.cc
+//  (C) 2006 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmindexresloader.h"
 #include "ngeomipmap/ngmmindexbuilder.h"

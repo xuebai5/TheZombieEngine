@@ -1,5 +1,8 @@
 #include "precompiled/pchgameplay.h"
-
+//------------------------------------------------------------------------------
+//  gpimpactsound.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "gameplay/gpimpactsound.h"
 #include "ncsound/ncsound.h"
 #include "gameplay/ngamematerial.h"

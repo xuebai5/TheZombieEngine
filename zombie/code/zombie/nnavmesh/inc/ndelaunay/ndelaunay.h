@@ -2,6 +2,8 @@
 #define N_DELAUNAY_H
 /**
     Source: http://astronomy.swin.edu.au/~pbourke/modelling/triangulate/
+
+   (C) 2005 Conjurer Services, S.A.
 */
 
 #include "mathlib/vector.h"

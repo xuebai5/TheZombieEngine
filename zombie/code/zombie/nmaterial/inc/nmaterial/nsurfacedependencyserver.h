@@ -5,7 +5,6 @@
    @file nmatsurfacedependencyserver.h
    @author ma.garcias <ma.garcias@yahoo.es>
    @brief Declaration of nMatSurfaceDependencyServer class
-   @brief $Id$ 
    
    (C) 2005 Conjurer Services, S.A.
 */

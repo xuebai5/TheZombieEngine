@@ -1,14 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file nterrainlayermanager_cmds.cc
-    @ingroup NebulaTerrain
-
-    @author Juan Jose Luna
-
-    @brief nTerrainLayerManager persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  ncterrainmaterialclass_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ncterrainmaterialclass.h"

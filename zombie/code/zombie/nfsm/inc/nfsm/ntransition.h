@@ -23,6 +23,8 @@
     script, which is intented to be evaluated when the event triggers as a final
     condition validation step (it can be seen as an event filter). At the other
     side, script conditions are intended to be checked periodically.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

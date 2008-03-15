@@ -4,12 +4,10 @@
 /**
     @class nLayerManager
     @ingroup Framework
-
+    @author Miquel Angel Rujula  
     @brief nLayerManager manages the layers system.
     
     (C) 2005  Conjurer Services, S.A.
-
-    @author: Miquel Angel Rujula  
 */
 
 #include "nlayermanager/nlayer.h"

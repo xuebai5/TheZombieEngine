@@ -10,6 +10,8 @@
     
     It store a navigation tag, but also knows all available tags and its string
     equivalences.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "util/nstring.h"

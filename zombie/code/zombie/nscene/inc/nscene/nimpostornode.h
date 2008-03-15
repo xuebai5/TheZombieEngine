@@ -5,8 +5,6 @@
     @class nImpostorNode
     @author MA Garcias <ma.garcias@yahoo.es>
     @ingroup SceneNodes
-
-    @brief ...
     
     (C) 2005 Conjurer Services, S.A.
 */

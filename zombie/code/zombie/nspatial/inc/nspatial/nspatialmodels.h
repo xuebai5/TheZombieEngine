@@ -1,18 +1,21 @@
 #ifndef N_SPATIALMODELS_H
 #define N_SPATIALMODELS_H
 //------------------------------------------------------------------------------
-#include "mathlib/sphere.h"
-#include "gfx2/ncamera2.h"
-#include "nspatial/nfrustumclipper.h"
-
-//------------------------------------------------------------------------------
 /**
     @class nSpatialModel
     @ingroup NebulaSpatialSystem
     @brief The interface for models.
 
     A spatial model is a shape used to perform visibility tests.
+
+    (C) 2006 Conjurer Services, S.A.
 */
+
+//------------------------------------------------------------------------------
+#include "mathlib/sphere.h"
+#include "gfx2/ncamera2.h"
+#include "nspatial/nfrustumclipper.h"
+
 class nSpatialModel
 {
 public:

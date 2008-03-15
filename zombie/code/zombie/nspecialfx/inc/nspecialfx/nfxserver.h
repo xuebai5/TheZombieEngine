@@ -6,8 +6,6 @@
     @ingroup SpecialFX
     @author MA Garcias <ma.garcias@yahoo.es>
 
-    @brief ...
-
     (C) 2006 Conjurer Services, S.A.
 */
 #include "kernel/nroot.h"

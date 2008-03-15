@@ -1,5 +1,8 @@
 #include "precompiled/pchnnavmesh.h"
-
+//------------------------------------------------------------------------------
+//  ndelaunay.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ndelaunay/ndelaunay.h"
 #include <stdlib.h>
 #include "mathlib/nmath.h"

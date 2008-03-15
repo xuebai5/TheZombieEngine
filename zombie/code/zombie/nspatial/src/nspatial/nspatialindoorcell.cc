@@ -1,5 +1,8 @@
-//------------------------------------------------------------------------------
 #include "precompiled/pchnspatial.h"
+//-----------------------------------------------------------------------------
+//  nspatialindoorcell.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 #include "nspatial/nspatialtypes.h"
 #include "nspatial/nspatialindoorcell.h"
 #include "nspatial/ncspatialindoor.h"

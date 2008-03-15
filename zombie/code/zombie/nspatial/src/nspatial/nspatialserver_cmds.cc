@@ -2,7 +2,6 @@
 //------------------------------------------------------------------------------
 //  nspatialserver_cmds.cc
 //  (C) 2005 Conjurer Services, S.A.
-//  @author Miquel Angel Rujula <>
 //------------------------------------------------------------------------------
 #include "nspatial/nspatialserver.h"
 #include "kernel/npersistserver.h"

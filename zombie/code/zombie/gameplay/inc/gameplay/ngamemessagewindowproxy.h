@@ -29,6 +29,8 @@
     On the server side it's required to register a callback to know which client
     owns each player. Also, on the client side the Trigger method should be
     called periodically.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

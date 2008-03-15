@@ -14,6 +14,8 @@
      - Persistance of FSMs
      - Load FSMs on demand
      - Editor helper functions
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

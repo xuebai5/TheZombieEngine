@@ -1,6 +1,11 @@
 #ifndef N_GROWTHSEEDCACHEENTRY_H
 #define N_GROWTHSEEDCACHEENTRY_H
 //------------------------------------------------------------------------------
+/**
+    (C) 2006 Conjurer Services, S.A.
+
+*/
+//------------------------------------------------------------------------------
 #include "ngeomipmap/ncache.h"
 #include "ngrassgrowth/ngrowthseeds.h"
 

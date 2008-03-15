@@ -1,11 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmgeometrystorage.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    (C) 2006 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngmmgeometrystorage.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmgeometrystorage.h"

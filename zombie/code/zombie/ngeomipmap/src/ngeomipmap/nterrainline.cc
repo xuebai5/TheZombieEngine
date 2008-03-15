@@ -1,15 +1,7 @@
 #include "precompiled/pchngeomipmap.h"
-/*-----------------------------------------------------------------------------
-    @file nheightmaptools_main.cc
-    @ingroup NebulaTerrain
-
-    @author Juan Jose Luna
-
-    @brief A line 3d wrapped to the terrain
-
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nheightmaptools_main.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "ngeomipmap/nterrainline.h"
 #include "kernel/nclass.h"

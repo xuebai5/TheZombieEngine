@@ -11,6 +11,8 @@
     Readers and writers inherit from this base class and implement read and write
     operations. Each value writen with some write operation must be read with
     its read operation counterpart.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "mathlib/vector.h"

@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass.h"
+//------------------------------------------------------------------------------
+//  ngrowthseeds_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngrassgrowth/ngrowthseeds.h"
 #include "kernel/nfileserver2.h"
 #include "kernel/nfile.h"

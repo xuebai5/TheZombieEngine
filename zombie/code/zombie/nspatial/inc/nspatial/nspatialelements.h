@@ -22,6 +22,8 @@ class nEntityObject;
     @brief The interface for models.
 
     A spatial model is a shape used to perform visibility tests.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 class nSpatialModel
 {

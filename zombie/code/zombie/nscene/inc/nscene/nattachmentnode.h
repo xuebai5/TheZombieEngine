@@ -15,6 +15,8 @@
     world space matrix of the bone origin offset by the specified transformations.
 
     Please note that nAttachmentNode assumes its parent is the target nSkinShapeNode.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 #include "nscene/nscenenode.h"
 #include "nscene/ntransformnode.h"

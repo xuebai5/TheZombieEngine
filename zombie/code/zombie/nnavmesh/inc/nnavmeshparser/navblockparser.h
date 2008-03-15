@@ -13,6 +13,8 @@
     savers share the same base class since the overall sintax parsing is
     delegated to a single class, avoiding most potencial errors, specially
     when mantaining both loaders and savers.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "util/narray.h"

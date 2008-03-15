@@ -1,6 +1,7 @@
 #include "precompiled/pchnnavmesh.h"
 //------------------------------------------------------------------------------
 //  nnavmeshfile.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "nnavmeshparser/nnavmeshfile.h"

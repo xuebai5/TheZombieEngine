@@ -5,8 +5,6 @@
     @class nBlendStateArray
     @ingroup NebulaAnimationSystem
 
-    @brief
-
     (C) 2005 Conjurer Services, S.A.
 */
 #include "nscene/nblendstate.h"

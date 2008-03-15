@@ -2,7 +2,6 @@
 //------------------------------------------------------------------------------
 //  nocclusionbuilder.cc
 //  (C) 2005 Conjurer Services, S.A.
-//  @author Miquel Angel Rujula <>
 //------------------------------------------------------------------------------
 
 #include "nspatial/nocclusionbuilder.h"

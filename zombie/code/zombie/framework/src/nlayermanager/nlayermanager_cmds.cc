@@ -2,7 +2,6 @@
 //------------------------------------------------------------------------------
 //  nlayermanager_cmds.cc
 //  (C) 2005 Conjurer Services, S.A.
-//  Author: Miquel Angel Rujula
 //------------------------------------------------------------------------------
 #include "nlayermanager/nlayermanager.h"
 #include "kernel/npersistserver.h"

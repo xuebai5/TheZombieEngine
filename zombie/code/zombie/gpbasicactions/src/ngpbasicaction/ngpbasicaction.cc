@@ -1,6 +1,7 @@
 #include "precompiled/pchgpbasicactions.h"
 //------------------------------------------------------------------------------
 //  ngpbasicactions.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ngpbasicaction/ngpbasicaction.h"

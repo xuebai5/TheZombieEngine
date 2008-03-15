@@ -31,6 +31,8 @@
     The objectives list is automatically loaded and saved by this class by
     binding itself to the level manager's level loaded and unloaded signals
     respectively.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

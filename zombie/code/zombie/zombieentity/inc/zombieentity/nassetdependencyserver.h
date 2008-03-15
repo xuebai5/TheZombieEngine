@@ -5,7 +5,6 @@
    @file nassetdependencyserver.h
    @author ma.garcias <ma.garcias@yahoo.es>
    @brief Declaration of nAssetDependencyServer class
-   @brief $Id$ 
    
    (C) 2005 Conjurer Services, S.A.
 */

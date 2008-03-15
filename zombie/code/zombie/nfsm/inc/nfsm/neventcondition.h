@@ -24,6 +24,8 @@
     Although the filter condition is supposed to be a script condition, it's
     stored and used as a generic condition. So if new condition types are
     created they may be used as filter condition as well.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/ncmdprotonativecpp.h"

@@ -1,4 +1,3 @@
-
 //------------------------------------------------------------------------------
 //  nterrainglobaltexturebuilder_main.cc
 //  (C) 2004 Conjurer Services, S.A.
@@ -7,8 +6,7 @@
 #include "ngeomipmap/nterrainglobaltexturebuilder.h"
 #include "tools/ntexturebuilder.h"
 #include "gfx2/ngfxserver2.h"
-//#include "gfx2/nshader2.h"
-//#include "gfx2/nmesh2.h"
+
 #include "ngeomipmap/nterraincellinfo.h"
 #include "ngeomipmap/ncterrainmaterialclass.h"
 #include "nscene/ncsceneclass.h"

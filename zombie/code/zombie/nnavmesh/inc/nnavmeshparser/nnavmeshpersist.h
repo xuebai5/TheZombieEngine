@@ -7,6 +7,8 @@
     @ingroup NebulaNavmeshSystem
 
     Navigation mesh loader and saver for all supported file formats and versions.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 class nNavMesh;

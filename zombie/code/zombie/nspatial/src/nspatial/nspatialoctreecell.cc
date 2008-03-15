@@ -1,4 +1,8 @@
 #include "precompiled/pchnspatial.h"
+//-----------------------------------------------------------------------------
+//  nspatialoctreecell.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 #include "nspatial/nspatialoctreecell.h"
 #include "entity/nentity.h"
 #include "nspatial/ncspatial.h"

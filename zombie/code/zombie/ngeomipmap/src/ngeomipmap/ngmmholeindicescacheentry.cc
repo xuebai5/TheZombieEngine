@@ -1,12 +1,7 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmholeindicescacheentry.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    (C) 2006 Conjurer Services, S.A.
-*/
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  ngmmholeindicescacheentry.cc
+//  (C) 2006 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmholeindicescacheentry.h"
 #include "ngeomipmap/ncterraingmmclass.h"

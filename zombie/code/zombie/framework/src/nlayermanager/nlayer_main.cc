@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerexp.h"
 //-----------------------------------------------------------------------------
-//  nlayer.cc
+//  nlayer_main.cc
 //  (C) 2005 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
 #include "nlayermanager/nlayer.h"

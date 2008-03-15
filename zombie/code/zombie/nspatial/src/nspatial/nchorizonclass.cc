@@ -1,9 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file nchorizonclass.cc
-    @author Mateu Batle Sastre
-
-    (C) 2006 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  nchorizonclass.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnspatial.h"
 #include "nspatial/nchorizonclass.h"

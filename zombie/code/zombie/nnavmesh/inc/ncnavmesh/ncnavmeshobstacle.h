@@ -15,6 +15,8 @@
     This component only kepts a reference to the obstacle's polygonal
     represenation, it doesn't delete the polygon when this component is
     destroyed.
+
+   (C) 2005 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"
