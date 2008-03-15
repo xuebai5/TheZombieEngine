@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------
 //  diffSecSampler.h
 //  Declare the standard control sampler for all shaders.
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 sampler DiffSecSampler = sampler_state

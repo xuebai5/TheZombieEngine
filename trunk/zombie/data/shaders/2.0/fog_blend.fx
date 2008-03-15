@@ -4,7 +4,7 @@
 //
 //  Default Volume Fog shader
 //
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
 //#include "shaders:../lib/fog.fx"

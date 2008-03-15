@@ -1,5 +1,5 @@
 #include "shaders:../lib/lib.fx"
-#include "shaders:../lib/libtrag.fx"
+#include "shaders:../lib/libzombie.fx"
 
 shared float4x4 ModelViewProjection[3];
 shared float3   ModelEyePos;

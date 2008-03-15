@@ -3,7 +3,7 @@
 //
 //  standard shader to set an overlay quad covering the screen.
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 shared float4x4 ModelViewProjection; 
 texture DiffMap0;

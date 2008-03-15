@@ -1,29 +1,40 @@
+#line 1 "zombie_cubeskybox.fx"
 //------------------------------------------------------------------------------
-//  2.0/materialerror.fx
+//  2.0/zombie_cubeskybox.fx
 //
-//  Error shader to replace invalid shaders
+//  A skybox textured by a cube map.
 //
-//  (C) 2005 Conjurer Services, S.A. 
+//  (C) 2004 RadonLabs GmbH
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
 
-shared float4x4 ModelViewProjection;       // the model*view*projection matrix
-shared float3   ModelEyePos;               // the eye position in model space
-shared float3   ModelLightPos;             // the light position in model space
+shared float4x4 ModelViewProjection;
+shared float4x4 Model;
 
-float4 MatDiffuse = float4(1.0f, 1.0f, 0.0f, 0.0f); // material diffuse color
+texture CubeMap0;
+float4 MatDiffuse;
 
-//------------------------------------------------------------------------------
-//  shader input/output declarations
 //------------------------------------------------------------------------------
 struct VsInput
 {
-    float4 position : POSITION;
+    float4 position  : POSITION;  // the particle position in world space
 };
 
 struct VsOutput
 {
-    float4 position     : POSITION;         // position in projection space
+    float4 position : POSITION;
+    float3 uv0 : TEXCOORD0;
+};
+
+//------------------------------------------------------------------------------
+sampler EnvMapSampler = sampler_state
+{
+    Texture = <CubeMap0>;
+	MinFilter = Linear;
+	MagFilter = Linear;
+	MipFilter = Linear;
+    AddressU = Clamp;
+    AddressV = Clamp;
 };
 
 //------------------------------------------------------------------------------
@@ -33,6 +44,7 @@ VsOutput vsMain(const VsInput vsIn)
 {
     VsOutput vsOut;
     vsOut.position = mul(vsIn.position, ModelViewProjection);
+    vsOut.uv0      = mul(vsIn.position, (float3x3)Model);
     return vsOut;
 }
 
@@ -40,10 +52,10 @@ VsOutput vsMain(const VsInput vsIn)
 //  The pixel shader.
 //------------------------------------------------------------------------------
 float4 psMain(const VsOutput psIn) : COLOR
-{
-    return MatDiffuse;
-}                                     
- 
+{	
+    return texCUBE(EnvMapSampler, psIn.uv0) * MatDiffuse;
+}
+
 //------------------------------------------------------------------------------
 //  The technique.
 //------------------------------------------------------------------------------
@@ -51,11 +63,27 @@ technique t0
 {
     pass p0
     {
-        CullMode        = None;
-        AlphaTestEnable = False;
-        DepthBias       = 0.0f;
-        
+	    ColorWriteEnable    = RED|GREEN|BLUE|ALPHA;  
+        NormalizeNormals    = True;
+        ZEnable             = True;
+        ZFunc               = LessEqual;
+        StencilEnable       = False;
+        DepthBias           = 0.0f;
+        FogEnable           = False;
+		
+		ZWriteEnable     = true;
+        AlphaBlendEnable = false;
+        AlphaTestEnable  = false;
+		
+        CullMode = NONE;
+        AlphaRef = 0;
         VertexShader = compile vs_2_0 vsMain();
         PixelShader  = compile ps_2_0 psMain();
     }
 }
+
+    
+
+    
+
+

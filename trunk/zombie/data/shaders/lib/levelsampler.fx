@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------
 //  levelsampler.h
 //  Declare the standard level sampler for all shaders.
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 sampler LevelSampler = sampler_state
 {

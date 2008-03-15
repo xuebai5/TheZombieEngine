@@ -5,7 +5,7 @@
 //  Helper shader for drawing wireframe overlay.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
-#include "shaders:../lib/libtrag.fx"
+#include "shaders:../lib/libzombie.fx"
 
 #define GEOMETRY_DEFAULT    0
 #define GEOMETRY_SKINNED    1

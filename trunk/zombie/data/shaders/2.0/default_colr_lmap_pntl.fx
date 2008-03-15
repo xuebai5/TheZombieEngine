@@ -10,10 +10,10 @@
 //  Material case:
 //      LightType=pntl
 //  
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
-#include "shaders:../lib/libtrag.fx"
+#include "shaders:../lib/libzombie.fx"
 
 shared float4x4 ModelViewProjection;
 shared float3   ModelEyePos;

@@ -4,7 +4,7 @@
 //
 //  Debug mode for drawing everything else in wireframe.
 //
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 int FillMode = 2; // wireframe

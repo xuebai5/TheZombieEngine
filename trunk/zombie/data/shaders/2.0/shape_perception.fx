@@ -4,7 +4,7 @@
 //
 //  Used for debug visualization.
 //  
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 shared float4x4 Model;
 shared float4x4 View;                   // the view matrix

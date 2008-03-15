@@ -4,7 +4,7 @@
 //
 //  Error shaders used to show you that a shape has no assigned material
 //  
-//  (c) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
 

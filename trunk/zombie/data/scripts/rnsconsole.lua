@@ -3,7 +3,7 @@
 --
 --  Renaissance console helper functions
 --
---  (C) 2006 Tragnarion Studios
+--  (C) 2006 Conjurer Services, S.A.
 ---------------------------------------------------------------------------------
 
 nebula.sys.servers.log:setlogenable( 'persistence', false )

@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 //  gmmt_dett_sampler.fx
 //  Geomipmap terrain detail texturing sampler
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 shared float TerrainSideSizeInv;    // 1 / block distance (weight map texture scale factor (scale UV))

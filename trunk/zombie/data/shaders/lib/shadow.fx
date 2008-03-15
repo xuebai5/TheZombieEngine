@@ -4,7 +4,7 @@
 //
 //  Support functions for shadow library.
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #define REVERSE_SHADOW_EXTRUSION

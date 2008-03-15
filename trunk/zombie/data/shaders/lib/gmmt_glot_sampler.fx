@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 //  gmmt_glot_sampler.fx
 //  Geomipmap terrain global texturing sampler
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 shared texture TerrainGlobalMap;        // global terrain map texture

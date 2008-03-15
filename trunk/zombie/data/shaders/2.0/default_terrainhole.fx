@@ -4,7 +4,7 @@
 //  
 //  Default shader for drawing terrain holes
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
 #include "shaders:../lib/shadow.fx"

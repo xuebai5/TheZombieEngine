@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------
 //  emissivesampler.h
 //  Declare the standard self-illumination map sampler for all shaders.
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 sampler EmissiveSampler = sampler_state
 {

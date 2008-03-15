@@ -1,10 +1,10 @@
 #line 1 "sfx_alph_seafoam.fx"
 //------------------------------------------------------------------------------
 //  sfx_alph_seafoam.fx
-//  (C) 2006 Tragnarion Studios
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
-#include "shaders:../lib/libtrag.fx"
+#include "shaders:../lib/libzombie.fx"
 #include "shaders:../lib/fog.fx"
 float4   ModelLightPos;
 float4 Velocity; // Encode the foam curve, x = cicling time, y = the climax time , z = then end time , w >0.5 smoth curve
