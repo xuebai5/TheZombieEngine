@@ -14,10 +14,10 @@
 //  Material case:
 //      LightType=pntl
 //  
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
-#include "shaders:../lib/libtrag.fx"
+#include "shaders:../lib/libzombie.fx"
 
 #include "shaders:../lib/bill.fx"
 #include "shaders:../lib/gmmt.fx"

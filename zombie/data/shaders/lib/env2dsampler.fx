@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------
 //  env2dsampler.fx
 //  An environment map sampler.
-//  (C) 2004 Tragnarion Studios
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 sampler Env2DSampler = sampler_state
 {

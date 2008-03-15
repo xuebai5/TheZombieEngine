@@ -8,7 +8,7 @@
 //  to global texturing, using a quadratic blending parameter
 //  based on distance to the eye position.
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "../lib/lib.fx"
 #include "../lib/gmmt.fx"

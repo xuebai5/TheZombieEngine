@@ -3,7 +3,7 @@
 //
 //  Frame compositing shader.
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 float  Intensity0;  // the color saturation value
 float4 MatDiffuse;  // the color balance value

@@ -4,7 +4,7 @@
 //  
 //  Default shader for shadow volume extrusion in dx9 cards.
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
 #include "shaders:../lib/shadow.fx"

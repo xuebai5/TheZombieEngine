@@ -5,7 +5,7 @@
 //  Used for debug visualization.
 //  Same as line.fx but with configurable ztest/zwrite
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 shared float4x4 ModelViewProjection;    // the model*view*projection matrix
 

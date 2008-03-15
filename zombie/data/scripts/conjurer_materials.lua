@@ -4,7 +4,7 @@
 --  Callback functions for nD3D9MaterialBuilder
 --  All material levels are implemented.
 --
---  (C) 2004 Tragnarion Studios
+--  (C) 2004 Conjurer Services, S.A.
 --------------------------------------------------------------------------------
 
 function OnMaterialStartup()
@@ -429,7 +429,7 @@ function BuildShaderName()
 
     if (builder:getattrib('shadowvolume') == 'true') then
         
-        builder:setshaderfile('shaders:trag_shadowvolumes.fx')
+        builder:setshaderfile('shaders:zombie_shadowvolumes.fx')
         if (builder:getattrib('skinned') == 'true') then
             builder:settechnique('tShadowSkinned')
         else
@@ -598,7 +598,7 @@ function BuildShader()
         CreateShaderDescription()
 
         builder:puts('//  \n')
-        builder:puts('//  (C) 2005 Tragnarion Studios\n')
+        builder:puts('//  (C) 2005 Conjurer Services, S.A.\n')
         builder:puts('//------------------------------------------------------------------------------\n')
 
     end
@@ -610,7 +610,7 @@ function BuildShader()
 
         -- include required headers
         builder:puts('#include "shaders:../lib/lib.fx"\n')
-        builder:puts('#include "shaders:../lib/libtrag.fx"\n')
+        builder:puts('#include "shaders:../lib/libzombie.fx"\n')
         builder:puts('\n')
 
         if (builder:getattrib('billboard') == 'true' or  builder:getattrib('swinging') == 'true') then

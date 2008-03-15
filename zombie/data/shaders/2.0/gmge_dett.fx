@@ -3,7 +3,7 @@
 //
 //  Geomipmap terrain, detail texturing
 //
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "../lib/gmmt.fx"

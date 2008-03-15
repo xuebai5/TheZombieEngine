@@ -3,7 +3,7 @@
 //  
 //  vertex+pixel shader with multipass lighting (2 lights)
 //  
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #define NumLights 2
 

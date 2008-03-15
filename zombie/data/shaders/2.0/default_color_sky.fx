@@ -8,10 +8,10 @@
 //      map=lightmap
 //  Material case:
 //  
-//  (C) 2005 Tragnarion Studios
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
-#include "shaders:../lib/libtrag.fx"
+#include "shaders:../lib/libzombie.fx"
 
 float4   LightAmbient = float4(0.0f, 0.0f, 0.0f, 0.0f);
 
