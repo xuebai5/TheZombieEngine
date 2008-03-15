@@ -1,11 +1,11 @@
 //------------------------------------------------------------------------------
 /**
-@class nGPIdle
-@ingroup NebulaGameplayBasicActions
-
+    @class nGPIdle
+    @ingroup NebulaGameplayBasicActions
+    
     This basic action idles for a given number of ticks.
-
-(C) 2005 Copyright holder
+    
+    (C) 2005 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #ifndef NGPIDLE_H

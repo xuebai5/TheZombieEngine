@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 /**
     @class nGPUseObject
-    @ingroup
+    @ingroup NebulaGameplayBasicActions
     
     Description of the porpouse of the class
     

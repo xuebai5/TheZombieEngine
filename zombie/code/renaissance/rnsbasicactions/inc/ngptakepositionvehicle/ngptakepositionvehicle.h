@@ -7,6 +7,8 @@
     @ingroup NebulaGameplayBasicActions
 
     @brief Action class that define how an entity takes position within a vehicle
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "ngpbasicaction/ngpbasicaction.h"

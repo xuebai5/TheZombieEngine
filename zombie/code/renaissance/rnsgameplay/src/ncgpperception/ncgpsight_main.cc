@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsgameplay.h"
 //------------------------------------------------------------------------------
 //  ncgpsight_main.cc
+//  (C) Conjurer Services, S.A. 2006
 //------------------------------------------------------------------------------
 
 #include "entity/nentityobjectserver.h"

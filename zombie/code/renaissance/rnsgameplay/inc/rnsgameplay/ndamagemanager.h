@@ -5,6 +5,8 @@
     @class nDamageManager
 
     @brief Module that calculate the damage produced to an entity.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "kernel/nobject.h"

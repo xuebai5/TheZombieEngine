@@ -1,5 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-
+//------------------------------------------------------------------------------
+//  nclogicanimator_main.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 #include "nclogicanimator/nclogicanimator.h"
 #include "util/nrandomlogic.h"
 

@@ -1,7 +1,12 @@
 #ifndef NCGAMEPLAYVEHICLESEATCLASS_H
 #define NCGAMEPLAYVEHICLESEATCLASS_H
 
-//-----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+/**
+    @class ncGameplayVehicleSeatClass
+
+    (C) 2005 Conjurer Services, S.A.
+*/
 
 #include "rnsgameplay/ncgameplayclass.h"
 

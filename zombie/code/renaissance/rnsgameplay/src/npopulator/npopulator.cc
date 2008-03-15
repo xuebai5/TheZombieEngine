@@ -1,5 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-
+//------------------------------------------------------------------------------
+//  npopulator.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 #include "npopulator/npopulator.h"
 #include "util/nrandomlogic.h"
 #include "ncspawner/ncspawner.h"

@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 /**
     @class nGPPickupItem
-    @ingroup
+    @ingroup NebulaGameplayBasicActions
 
     Pickup an item from the floor
 

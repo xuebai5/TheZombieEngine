@@ -1,9 +1,6 @@
-/**
-   @file ncgpthrowable.cc
-   @author Mateu Batle
-   
-   (C) 2006 Conjurer Services, S.A.
-*/
+//-----------------------------------------------------------------------------
+//  ncgpthrowable.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchrnsgameplay.h"
 #include "rnsgameplay/ncgpthrowable.h"

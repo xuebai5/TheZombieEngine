@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsbasicactions.h"
 //------------------------------------------------------------------------------
 //  ngpchangeweapon.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ngpchangeweapon/ngpchangeweapon.h"

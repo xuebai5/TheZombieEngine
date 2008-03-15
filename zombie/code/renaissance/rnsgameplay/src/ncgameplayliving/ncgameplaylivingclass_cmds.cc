@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
 //------------------------------------------------------------------------------
-/**
-    @file ncgameplaylivingclass_cmds.cc
-
-    (C) 2005 Conjurer Services, S.A.
-*/
+//  ncgameplaylivingclass_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ncgameplayliving/ncgameplaylivingclass.h"
 
 //-----------------------------------------------------------------------------

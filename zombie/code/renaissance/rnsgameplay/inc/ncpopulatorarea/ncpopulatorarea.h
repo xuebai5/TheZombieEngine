@@ -2,6 +2,13 @@
 #define NCPOPULATORAREA_H
 
 //------------------------------------------------------------------------------
+/**
+    @class ncPopulatorArea
+
+    (C) 2005 Conjurer Services, S.A.
+*/
+
+//------------------------------------------------------------------------------
 #include "entity/nentity.h"
 #include "util/ntag.h"
 

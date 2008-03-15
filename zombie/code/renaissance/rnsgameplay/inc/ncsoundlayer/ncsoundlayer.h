@@ -1,16 +1,18 @@
-//------------------------------------------------------------------------------
-/**
-	@file ncsoundlayer.h
-
-	(C) 2005 Conjurer Services, S.A.
-*/
-//------------------------------------------------------------------------------
 #ifndef NCSOUNDLAYER_H
 #define NCSOUNDLAYER_H
+
+//------------------------------------------------------------------------------
+/**
+    @class ncSoundLayer
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
 
 #include "entity/nentity.h"
 #include "ncsound/ncsound.h"
 #include "rnsgameplay/ngameplayenums.h"
+
+//------------------------------------------------------------------------------
 
 class ncSoundLayer : public ncSound
 {

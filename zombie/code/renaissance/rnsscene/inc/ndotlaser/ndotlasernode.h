@@ -1,6 +1,5 @@
 #ifndef N_DOTLASER_H
 #define N_DOTLASER_H
-#include "nscene/nspotlightnode.h"
 //------------------------------------------------------------------------------
 /**
     @class nDotLaserNode
@@ -11,6 +10,7 @@
 
     (C) 2006 Conjurer Services, S.A.
 */
+#include "nscene/nspotlightnode.h"
 
 //------------------------------------------------------------------------------
 class nDotLaserNode : public nLightNode

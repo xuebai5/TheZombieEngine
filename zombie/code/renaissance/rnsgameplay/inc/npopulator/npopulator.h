@@ -2,6 +2,13 @@
 #define NPOPULATOR_H
 
 //------------------------------------------------------------------------------
+/**
+    @class ncPopulator
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
+
+//------------------------------------------------------------------------------
 #include "kernel/nobject.h"
 #include "ncpopulatorarea/ncpopulatorarea.h"
 

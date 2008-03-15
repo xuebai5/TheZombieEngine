@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-    @file ngwaitsometime.cc
-    @author Javie Ferrer Gomez
-
-    (C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngwaitsometime.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngpwaitsometime/ngpwaitsometime.h"
 
 #include "ncaimovengine/ncaimovengine.h"

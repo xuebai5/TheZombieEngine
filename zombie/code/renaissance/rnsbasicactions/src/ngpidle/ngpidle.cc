@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-    @file ngpidle.cc
-    @author Marc Ordinas i Llopis
-
-    (C) 2006 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngpidle.cc
+//  (C) 2006 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngpidle/ngpidle.h"
 
 #include "nclogicanimator/nclogicanimator.h"

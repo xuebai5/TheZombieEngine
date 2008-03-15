@@ -1,6 +1,13 @@
 #ifndef NCGAMEPLAYGROUPCLASS_H
 #define NCGAMEPLAYGROUPCLASS_H
 
+//------------------------------------------------------------------------------
+/**
+    @class ncGameplayGroupClass
+
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 #include "gameplay/ncgameplayclass.h"
 
 class ncGameplayGroupClass : public ncGameplayClass

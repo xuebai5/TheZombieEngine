@@ -1,5 +1,6 @@
 #ifndef NCGAMEPLAY_H
 #define NCGAMEPLAY_H
+
 //------------------------------------------------------------------------------
 /**
     @class ncGameplay

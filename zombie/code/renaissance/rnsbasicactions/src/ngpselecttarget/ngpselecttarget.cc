@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsbasicactions.h"
 //------------------------------------------------------------------------------
 //  ngpselecttarget.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ngpselecttarget/ngpselecttarget.h"

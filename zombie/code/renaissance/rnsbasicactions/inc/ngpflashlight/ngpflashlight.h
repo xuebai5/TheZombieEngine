@@ -1,11 +1,11 @@
 //------------------------------------------------------------------------------
 /**
-@class nGPWaitSomeTime
-@ingroup NebulaGameplay
-
-    This basic action stops the move engine for a given number of ticks.
-
-(C) 2005 Copyright holder
+    @class nGPWaitSomeTime
+    @ingroup NebulaGameplay
+    
+        This basic action stops the move engine for a given number of ticks.
+    
+    (C) 2005 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #ifndef NGPFLASHLIGHT_H

@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsbasicactions.h"
 //------------------------------------------------------------------------------
 //  ngptakepositionvehicle.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ngptakepositionvehicle/ngptakepositionvehicle.h"

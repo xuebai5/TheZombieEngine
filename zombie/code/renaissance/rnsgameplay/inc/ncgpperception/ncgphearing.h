@@ -2,11 +2,10 @@
 #define NC_GPHEARING_H
 //------------------------------------------------------------------------------
 /**
-
     @file ncgphearing.h
     @class ncGPHearing
     @ingroup Entities
-    @author Miquel Angel Rujula <>
+    @author Miquel Angel Rujula
    
     @brief Component Object that represents the hearing perception of an agent.
 

@@ -1,12 +1,12 @@
+#ifndef NCLOGICANIMATOR_H
+#define NCLOGICANIMATOR_H
+
 //------------------------------------------------------------------------------
 /**
-    @file nclogicanimator.h
+    @class ncLogicAnimator
 
     (C) 2005 Conjurer Services, S.A.
 */
-//------------------------------------------------------------------------------
-#ifndef NCLOGICANIMATOR_H
-#define NCLOGICANIMATOR_H
 
 //------------------------------------------------------------------------------
 #include "entity/nentity.h"

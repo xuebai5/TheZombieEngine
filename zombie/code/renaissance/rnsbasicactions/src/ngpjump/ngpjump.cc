@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsbasicactions.h"
 //------------------------------------------------------------------------------
 //  ngpjump.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "ngpjump/ngpjump.h"
 #include "entity/nentityobject.h"

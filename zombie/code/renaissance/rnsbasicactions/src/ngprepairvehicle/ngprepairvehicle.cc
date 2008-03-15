@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsbasicactions.h"
 //------------------------------------------------------------------------------
 //  ngprepairvehicle.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "ngprepairvehicle/ngprepairvehicle.h"
 #include "entity/nentityobject.h"

@@ -1,6 +1,13 @@
 #ifndef NGPIRONSIGHT_H
 #define NGPIRONSIGHT_H
 //------------------------------------------------------------------------------
+/**
+    @class nGPIronsight
+    @ingroup NebulaGameplayBasicActions
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
+//------------------------------------------------------------------------------
 #include "ngpbasicaction/ngpbasicaction.h"
 
 //------------------------------------------------------------------------------

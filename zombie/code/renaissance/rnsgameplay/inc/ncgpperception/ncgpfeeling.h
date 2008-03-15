@@ -2,11 +2,10 @@
 #define NC_GPFEELING_H
 //------------------------------------------------------------------------------
 /**
-
     @file ncgpfeeling.h
     @class ncGPFeeling
     @ingroup Entities
-    @author Miquel Angel Rujula <>
+    @author Miquel Angel Rujula
    
     @brief Component Object that represents the feeling perception of an agent.
 

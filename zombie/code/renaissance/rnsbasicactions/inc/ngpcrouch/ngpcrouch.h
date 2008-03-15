@@ -1,10 +1,12 @@
-/**
-	@file ngcrouch.h
-	
-	(C) 2005 Conjurer Services, S.A.
-*/
 #ifndef NGPCROUCH_H
 #define NGPCROUCH_H
+
+//------------------------------------------------------------------------------
+/**
+    @class nGPCrouch
+
+    (C) 2005 Conjurer Services, S.A.
+*/
 
 #include "ngpbasicaction/ngpbasicaction.h"
 

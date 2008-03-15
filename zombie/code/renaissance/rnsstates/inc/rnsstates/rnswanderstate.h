@@ -1,16 +1,14 @@
-/**
-   @file RnsWanderState.h
-   @brief This state belongs to the renaissance project and its main purpose is
-    to allow a character to wonder around the scenerios.
-   @brief $Id$ 
-   
-   (C) 2005 Conjurer Services, S.A.
-*/
-
 #ifndef RnsWanderState_H
 #define RnsWanderState_H
 
 //------------------------------------------------------------------------------
+/**
+    @class RnsWanderState
+    @brief This state belongs to the renaissance project and its main purpose is
+    to allow a character to wonder around the scenerios.
+   
+    (C) 2005 Conjurer Services, S.A.
+*/
 
 #include "kernel/ntypes.h"
 #include "kernel/ncmdprotonativecpp.h"

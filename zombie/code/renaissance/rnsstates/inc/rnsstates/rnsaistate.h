@@ -1,14 +1,15 @@
-/**
-   @file rnsaistate.h
-   @author Luis Jose Cabellos Gomez
-   @brief 
-   @brief $Id$ 
-   
-   (C) 2005 Conjurer Services, S.A.
-*/
 #ifndef RNSAISTATE_H
 #define RNSAISTATE_H
+
 //------------------------------------------------------------------------------
+/**
+    @class RnsAiState
+    @ingroup RnsStates
+    @author Luis Jose Cabellos Gomez
+   
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 #include "napplication/nappstate.h"
 
 #include "mathlib/vector.h"

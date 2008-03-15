@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsbasicactions.h"
 //------------------------------------------------------------------------------
 //  ngpshoot.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ngpshoot/ngpshoot.h"

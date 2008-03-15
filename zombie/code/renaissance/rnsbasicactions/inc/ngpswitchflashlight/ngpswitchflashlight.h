@@ -1,11 +1,11 @@
 //------------------------------------------------------------------------------
 /**
-@class nGPWaitSomeTime
-@ingroup NebulaGameplay
-
+    @class nGPWaitSomeTime
+    @ingroup NebulaGameplay
+    
     This basic action turn on/off the weapon addon flashlight.
-
-(C) 2005 Copyright holder
+    
+    (C) 2005 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #ifndef NGPSWITCHFLASHLIGHT_H

@@ -1,6 +1,7 @@
 #include "precompiled/pchrnsgameplay.h"
 //------------------------------------------------------------------------------
 //  ncaistate.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ncaistate/ncaistate.h"

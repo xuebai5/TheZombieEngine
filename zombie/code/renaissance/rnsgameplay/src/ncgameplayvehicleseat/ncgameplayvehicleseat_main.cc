@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-
-/**
-    @file ncgameplayvehicleseat_main.cc
-
-    (C) Conjurer Services, S.A. 2005
-*/
+//------------------------------------------------------------------------------
+//  ncgameplayvehicleseat_main.cc
+//  (C) Conjurer Services, S.A. 2005
+//------------------------------------------------------------------------------
 
 #include "ncgameplayvehicleseat/ncgameplayvehicleseat.h"
 #include "ncgameplayvehicleseat/ncgameplayvehicleseatclass.h"

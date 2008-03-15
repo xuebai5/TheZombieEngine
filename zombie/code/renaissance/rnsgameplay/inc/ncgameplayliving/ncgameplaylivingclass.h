@@ -1,11 +1,12 @@
+#ifndef NCGAMEPLAYLIVINGCLASS_H
+#define NCGAMEPLAYLIVINGCLASS_H
+
+//------------------------------------------------------------------------------
 /**
-    @file ncgameplaylivingclass.h
+    @class ncGameplayLivingClass
 
     (C) 2005 Conjurer Services, S.A.
 */
-//------------------------------------------------------------------------------
-#ifndef NCGAMEPLAYLIVINGCLASS_H
-#define NCGAMEPLAYLIVINGCLASS_H
 
 //------------------------------------------------------------------------------
 #include "rnsgameplay/ncgameplayclass.h"

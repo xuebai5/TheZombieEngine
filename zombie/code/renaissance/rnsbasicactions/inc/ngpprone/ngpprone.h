@@ -1,10 +1,12 @@
-/**
-	@file ngcrouch.h
-	
-	(C) 2005 Conjurer Services, S.A.
-*/
 #ifndef NGPPRONE_H
 #define NGPPRONE_H
+
+//------------------------------------------------------------------------------
+/**
+    @file ngcrouch.h
+    
+    (C) 2005 Conjurer Services, S.A.
+*/
 
 #include "ngpbasicaction/ngpbasicaction.h"
 

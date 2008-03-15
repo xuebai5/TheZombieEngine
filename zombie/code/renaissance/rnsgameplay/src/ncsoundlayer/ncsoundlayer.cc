@@ -1,4 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
+//------------------------------------------------------------------------------
+//  ncsoundlayer.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 #include "ncsoundlayer/ncsoundlayer.h"
 #include "kernel/nlogclass.h"
 #include "zombieentity/nctransform.h"

@@ -1,7 +1,10 @@
 #include "precompiled/pchrnsgameplay.h"
 #include "ncspawner/ncspawner.h"
+//------------------------------------------------------------------------------
+//  ncspawner_cmds.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------
 NSCRIPT_INITCMDS_BEGIN(ncSpawner)
 	NSCRIPT_ADDCMD_COMPOBJECT('IASS', void, AddSpawner, 2, (nEntityObject*, float), 0, ());
 	NSCRIPT_ADDCMD_COMPOBJECT('ISPB', void, SetProbability, 2, (nEntityObject*, float), 0, ());

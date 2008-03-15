@@ -10,6 +10,8 @@
     Keep perceived events and how much time ago have been last perceived.
     It recalls the events for a short time, removing those that last too long
     without being perceived again.
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

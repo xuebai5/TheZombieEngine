@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-@file ngwaitsometime.cc
-@author Javie Ferrer Gomez
-
-(C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngpflashlight.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngpflashlight/ngpflashlight.h"
 
 #include "ncaimovengine/ncaimovengine.h"

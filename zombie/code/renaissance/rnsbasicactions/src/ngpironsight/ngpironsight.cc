@@ -1,10 +1,8 @@
 #include "precompiled/pchrnsbasicactions.h"
-/**
-   @file ngpironsight.cc
-   @author Luis Jose Cabellos Gomez
-
-   (C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngpironsight.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngpironsight/ngpironsight.h"
 
 #include "ncgameplayliving/ncgameplayliving.h"

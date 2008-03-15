@@ -1,11 +1,11 @@
 //------------------------------------------------------------------------------
 /**
-@class nGPGotoNextWaypoint
-@ingroup nGPGotoNextWaypoint
-
-This basic action go to the next waypoint of a path associated to an the entityliving.
-
-(C) 2005 Copyright holder
+    @class nGPGotoNextWaypoint
+    @ingroup nGPGotoNextWaypoint
+    
+    This basic action go to the next waypoint of a path associated to an the entityliving.
+    
+    (C) 2005 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #ifndef N_GPGOTONEXTWAYPOINT_H

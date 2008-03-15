@@ -1,5 +1,8 @@
 #include "precompiled/pchrnsgameplay.h"
-
+//------------------------------------------------------------------------------
+//  ncpopulatorarea.cc
+//  (C) Conjurer Services, S.A. 2006
+//------------------------------------------------------------------------------
 #include "ncpopulatorarea/ncpopulatorarea.h"
 #include "mathlib/polygon.h"
 #include "nspatial/nspatialserver.h"

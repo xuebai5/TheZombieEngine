@@ -1,6 +1,13 @@
 #ifndef NCGAMEPLAYSTRUCTURE_H
 #define NCGAMEPLAYSTRUCTURE_H
 
+//------------------------------------------------------------------------------
+/**
+    @class ncGameplayStructure
+
+    (C) 2005 Conjurer Services, S.A.
+*/
+
 #include "gameplay/ncgameplay.h"
 
 class ncGameplayStructure : public ncGameplay
