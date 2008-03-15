@@ -5,9 +5,6 @@
 #include "precompiled/pchrnsgameplay.h"
 
 #include "rnsgameplay/ncgpweapon.h"
-/** ZOMBIE REMOVE
-#include "rnsgameplay/ncgpweaponaddonclass.h"
-*/
 #include "entity/nentityobjectserver.h"
 
 #include "zombieentity/ncloaderclass.h"
@@ -61,26 +58,7 @@ ncGPWeapon::ncGPWeapon():
 */
 ncGPWeapon::~ncGPWeapon()
 {
-/** ZOMBIE REMOVE
-    if( this->slots_addons )
-    {
-        this->DeleteAllAddons();
-        n_delete( this->slots_addons );
-        this->slots_addons = 0;
-    }
-
-    if( this->defaultMag )
-    {
-        nEntityObjectServer::Instance()->RemoveEntityObject( this->defaultMag );
-        this->defaultMag = 0;
-    }
-
-    if( this->slots_types )
-    {
-        n_delete( this->slots_types );
-        this->slots_types = 0;
-    }
-*/
+    // empty
 }
 
 //------------------------------------------------------------------------------
@@ -106,29 +84,7 @@ ncGPWeapon::InitInstance( nObject::InitInstanceMsg /*initType*/ )
                 ++count;
             }
         }
-/** ZOMBIE REMOVE
-        // create the array of slots
-        if (initType != nObject::ReloadedInstance)
-        {
-            this->slots_addons = n_new_array( nEntityObject * , count );
-            this->slots_types = n_new_array( int, count );
-            this->max_slots = count;
-        }
 
-        // init the slots
-        int i = 0;
-        for( int mask = 1; 
-            mask < ncGPWeaponCharsClass::SLOT_LAST && i < count; 
-            mask <<= 1 )
-        {
-            if( (mask & slots) != 0 )
-            {
-                this->slots_types[ i ] = (mask & slots);
-                this->slots_addons[ i ] = 0;
-                ++i;
-            }
-        }
-*/
         if( weaponClass->HasAutoFireMode() )
         {
             this->fireMode = ncGPWeaponClass::FM_AUTO;
@@ -140,21 +96,6 @@ ncGPWeapon::InitInstance( nObject::InitInstanceMsg /*initType*/ )
         else
         {
             n_assert2_always( "Weapon without right fire mode" );
-        }
-
-        // create the default magazine
-        nString name = weaponClass->GetDefaultMagazine();
-        if( name.Length() )
-        {
-            this->defaultMag = nEntityObjectServer::Instance()->NewLocalEntityObject( name.Get() );
-            n_assert( this->defaultMag );
-            if( this->defaultMag )
-            {
-/** ZOMBIE REMOVE
-                int valid = this->AddAddon( this->defaultMag );
-                n_assert( valid );
-*/
-            }
         }
     }
 
@@ -228,52 +169,7 @@ ncGPWeapon::CalculateWeaponChars()
 
         this->weaponClipSize += weaponClass->GetClipSize();
     }
-/** ZOMBIE REMOVE
-    // get addon characteristics from addon class
-    ncGPWeaponAddonClass * addonClass;
-    for( int i = 0 ; i < this->max_slots ; ++i )
-    {
-        if( this->slots_addons[ i ] )
-        {
-            addonClass = this->slots_addons[ i ]->GetClassComponent<ncGPWeaponAddonClass>();
-            n_assert( addonClass );
-            if( addonClass )
-            {
-                this->weaponAccuracyMax += addonClass->GetAccuracyMax();
-                this->weaponAccuracyMin += addonClass->GetAccuracyMin();
-                this->weaponDamage += addonClass->GetDamage();
-                this->weaponRange += addonClass->GetRange();
-                this->weaponAccuracyLoss += addonClass->GetAccuracyLoss();
-                this->weaponRecoilTime += addonClass->GetRecoilTime();
-                weaponAccuracyIronsight += addonClass->GetAccuracyIronsight();
-                if( this->isProne )
-                {
-                    this->weaponAimSpeed += addonClass->GetAimSpeedProne();
-                    this->weaponRecoilDeviationX += addonClass->GetRecoilDeviationProneX();
-                    this->weaponRecoilDeviationY += addonClass->GetRecoilDeviationProneY();
-                    weaponAccuracyProne += addonClass->GetAccuracyProne();
-                }
-                else
-                {
-                    if( this->isCrouch )
-                    {
-                        weaponAccuracyCrouch += addonClass->GetAccuracyCrouch();
-                    }
-                    this->weaponAimSpeed += addonClass->GetAimSpeed();
-                    this->weaponRecoilDeviationX += addonClass->GetRecoilDeviationX();
-                    this->weaponRecoilDeviationY += addonClass->GetRecoilDeviationY();
-                }
 
-                if( this->isMoving )
-                {
-                    weaponAccuracyMove += weaponClass->GetAccuracyMove();
-                }
-
-                this->weaponClipSize += addonClass->GetClipSize();
-            }
-        }
-    }
-*/
     // adjust maximum accuracy
     if( this->isIronsight )
     {
@@ -305,442 +201,8 @@ ncGPWeapon::CalculateWeaponChars()
     {
         this->actualAccuracy = this->weaponAccuracyMin;
     }
-/** ZOMBIE REMOVE
-    // down the iron if there is an addon in TOP slot
-    ncDictionary * dictionary = this->GetComponent<ncDictionary>();
-    if( dictionary )
-    {
-        bool downIron = this->HasAddon( ncGPWeaponCharsClass::SLOT_TOP );
-        dictionary->SetIntVariable( "ironDownState", downIron ? 1 : 0 );
-    }
-*/
 }
 
-//------------------------------------------------------------------------------
-/**
-    @param addon the addon to check if its allowed
-    @retval true if addon is allowed in the weapon
-*/
-/** ZOMBIE REMOVE
-bool
-ncGPWeapon::IsAllowed( nEntityObject * addon )
-{
-    n_assert( addon );
-    if( addon )
-    {
-        ncGPWeaponAddonClass * addonClass = addon->GetClassComponent<ncGPWeaponAddonClass>();
-        n_assert( addonClass );
-        if( addonClass )
-        {
-            ncGPWeaponClass * weaponClass = this->GetClassComponent<ncGPWeaponClass>();
-            n_assert( weaponClass );
-            if( weaponClass )
-            {
-                if( 0 == (weaponClass->GetWeaponType() & addonClass->GetWeapons()))
-                {
-                    return false;
-                }
-            }
-
-            int slots = addonClass->GetSlots();
-            for( int i = 0 ; i < this->max_slots ; ++i )
-            {
-                if( ( ! this->slots_addons[ i ] || this->slots_addons[ i ] == this->defaultMag ) &&
-                    ( slots & this->slots_types[ i ] ) )
-                {
-                    return true;
-                }
-            }
-        }
-    }
-    return false;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param addon the addon to check if its mounted
-    @retval true if addon is allowed in the weapon
-*/
-/** ZOMBIE REMOVE
-bool
-ncGPWeapon::IsMounted( nEntityObject * addon )
-{
-    n_assert( addon );
-    if( addon )
-    {
-        for( int i = 0 ; i < this->max_slots ; ++i )
-        {
-            if( addon == this->slots_addons[ i ] )
-            {
-                return true;
-            }
-        }
-    }
-    return false;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param addon the addon to get the name of the slot
-    @returns the name of the slot
-*/
-/** ZOMBIE REMOVE
-const char *
-ncGPWeapon::GetSlotName( nEntityObject * addon )const
-{
-    n_assert( addon );
-    if( addon )
-    {
-        bool valid = true;
-        int slotsAddon = 0;
-        int slotsWeapon = 0;
-
-        ncGPWeaponAddonClass * addonClass = addon->GetClassComponent<ncGPWeaponAddonClass>();
-        valid = addonClass != 0;
-        n_assert( valid );
-        if( valid )
-        {
-            slotsAddon = addonClass->GetSlots();
-        }
-
-        const ncGPWeaponClass * weaponClass = this->GetClassComponent<ncGPWeaponClass>();
-        n_assert( weaponClass );
-        if( weaponClass )
-        {
-            slotsWeapon = weaponClass->GetSlots();
-        }
-
-        if( valid )
-        {
-            return ncGPWeaponCharsClass::GetSlotName( slotsAddon & slotsWeapon );
-        }
-    }
-
-    return 0;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param addon the addon to get the name of the slot
-    @returns the slot
-*/
-/** ZOMBIE REMOVE
-int
-ncGPWeapon::GetSlotFor( nEntityObject * addon )const
-{
-    n_assert( addon );
-    if( addon )
-    {
-        bool valid = true;
-        int slotsAddon = 0;
-        int slotsWeapon = 0;
-
-        ncGPWeaponAddonClass * addonClass = addon->GetClassComponent<ncGPWeaponAddonClass>();
-        valid = addonClass != 0;
-        n_assert( valid );
-        if( valid )
-        {
-            slotsAddon = addonClass->GetSlots();
-        }
-
-        const ncGPWeaponClass * weaponClass = this->GetClassComponent<ncGPWeaponClass>();
-        n_assert( weaponClass );
-        if( weaponClass )
-        {
-            slotsWeapon = weaponClass->GetSlots();
-        }
-
-        if( valid )
-        {
-            return ( slotsAddon & slotsWeapon );
-        }
-    }
-
-    return 0;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param addon the addon to add to the weapon
-    @returns the slot when the addon is put on
-    @retval 0 if the addon can not be added
-*/
-/** ZOMBIE REMOVE
-int
-ncGPWeapon::AddAddon( nEntityObject * addon  )
-{
-
-    n_assert( addon );
-    if( addon )
-    {
-        if( ! this->IsAllowed( addon ) )
-        {
-            return 0;
-        }
-
-        ncGPWeaponAddonClass * addonClass = addon->GetClassComponent<ncGPWeaponAddonClass>();
-        n_assert( addonClass );
-        if( addonClass )
-        {
-            for( int i = 0 ; i < this->max_slots ; ++i )
-            {
-                if( ( ! this->slots_addons[ i ] || this->slots_addons[ i ] == this->defaultMag ) && 
-                    addonClass->AllowType( this->slots_types[ i ] ) )
-                {
-                    // hide the default magazine if needed
-                    if( this->defaultMag && this->defaultMag == this->slots_addons[ i ] )
-                    {
-                        ncSpatial * spatial = this->defaultMag->GetComponent<ncSpatial>();
-                        if( spatial )
-                        {
-                            spatial->RemoveFromSpaces();
-                        }
-                    }
-
-                    this->slots_addons[ i ] = addon;
-
-                    // plug addon in weapon
-                    const char * slotName = this->GetSlotName( addon );
-                    n_assert( slotName );
-                    if( slotName )
-                    {
-                        ncScene * scene = this->GetComponentSafe<ncScene>();
-                        if( scene )
-                        {
-                            scene->Plug( slotName, addon->GetId() );
-                        }
-                    }
-
-                    // calculate new weapon stats
-                    this->CalculateWeaponChars();
-                    return this->slots_types[ i ];
-                }
-            }
-        }
-    }
-
-    return 0;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param type the slot when the addon is on
-    @returns the addon removed
-    @retval 0 if no addon can be removed
-*/
-/** ZOMBIE REMOVE
-nEntityObject *
-ncGPWeapon::RemoveAddon( int type )
-{
-    bool valid = ( type > 0 && type < int( ncGPWeaponCharsClass::SLOT_LAST ) );
-    n_assert( valid );
-    if( valid )
-    {
-        for( int i = 0 ; i < this->max_slots ; ++i )
-        {
-            if( this->slots_addons[ i ] && ( this->slots_types[ i ] == type ) )
-            {
-                return this->RemoveAddonAt( i );
-            }
-        }
-    }
-
-    return 0;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param index index in the array of addons
-    @returns the addon removed
-    @retval 0 if no addon can be removed
-*/
-/** ZOMBIE REMOVE
-nEntityObject *
-ncGPWeapon::RemoveAddonAt( int index )
-{
-    bool valid = ( index >= 0 && index < this->max_slots );
-    n_assert( valid );
-    if( valid )
-    {
-        nEntityObject * addon = this->slots_addons[ index ];
-        n_assert( addon );
-        if( addon )
-        {
-            int type = this->slots_types[ index ];
-
-            this->slots_addons[ index ] = 0;
-
-            // unplug addon from weapon
-            ncScene * scene = this->GetComponentSafe<ncScene>();
-            if( scene )
-            {
-                scene->UnPlug( addon->GetId() );
-            }
-
-            // put default magazine if a magazine is changed
-            if( ( type == ncGPWeaponCharsClass::SLOT_MAG_HICAP ) || 
-                ( type == ncGPWeaponCharsClass::SLOT_MAG_CLAMP ) )
-            {
-                if( this->defaultMag )
-                {
-                    int valid = this->AddAddon( this->defaultMag );
-                    n_assert( valid );
-                }
-            }
-
-            // calculate new weapon stats
-            this->CalculateWeaponChars();
-        }
-
-        return addon;
-    }
-
-    return 0;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param type the slot when the addon is on
-    @returns the addon or 0
-*/
-/** ZOMBIE REMOVE
-nEntityObject*
-ncGPWeapon::GetAddon( int type )
-{
-    bool valid = ( type > 0 && type < int( ncGPWeaponCharsClass::SLOT_LAST ) );
-    n_assert( valid );
-    if( valid )
-    {
-        for( int i = 0 ; i < this->max_slots ; ++i )
-        {
-            if( this->slots_addons[ i ] && ( this->slots_types[ i ] == type ) )
-            {
-                return this->slots_addons[ i ];
-            }
-        }
-    }
-
-    return 0;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param index index of the slot when the addon is on
-    @returns the addon or 0
-*/
-/** ZOMBIE REMOVE
-nEntityObject*
-ncGPWeapon::GetAddonAt( int index )
-{
-    bool valid = ( index >= 0 && index < this->max_slots );
-    n_assert( valid );
-    if( valid )
-    {
-        return this->slots_addons[ index ];
-    }
-
-    return 0;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param type the slot when the addon is on
-    @returns the addon or 0
-*/
-/** ZOMBIE REMOVE
-nArray<nEntityObject*>
-ncGPWeapon::GetAddonsByTrait( int type )
-{
-    bool valid = ( type > 0 && type < int( ncGPWeaponCharsClass::MOD_LAST ) );
-    n_assert( valid );
-    nArray<nEntityObject*> addonsList(0, 1);
-    if( valid )
-    {
-        for( int i = 0 ; i < this->max_slots ; ++i )
-        {
-            if( this->slots_addons[ i ] )
-            {
-                ncGPWeaponCharsClass* addonChars = 0;
-                addonChars = this->slots_addons[ i ]->GetClassComponentSafe<ncGPWeaponCharsClass>();
-                if ( addonChars && addonChars->AllowTrait( type ) )
-                {
-                    addonsList.Append( this->slots_addons[ i ] );
-                }
-            }
-        }
-    }
-
-    return addonsList;
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param type the slot when the addon is on
-    @returns true if there is an addon
-*/
-/** ZOMBIE REMOVE
-bool
-ncGPWeapon::HasAddon( int type )
-{
-    return ( this->GetAddon( type ) != 0 );
-}
-*/
-//------------------------------------------------------------------------------
-/**
-*/
-/** ZOMBIE REMOVE
-void
-ncGPWeapon::DeleteAllAddons( )
-{
-    for( int i = 0 ; i < this->max_slots ; ++i )
-    {
-        if( this->slots_addons[ i ] )
-        {
-            this->slots_addons[ i ] = 0;
-        }
-    }
-    this->CalculateWeaponChars();
-}
-*/
-//------------------------------------------------------------------------------
-/**
-    @param trait the trait to check
-    @retval true if the weapon has the trait
-*/
-/** ZOMBIE REMOVE
-bool
-ncGPWeapon::HasTrait( int trait )const
-{
-    const ncGPWeaponClass * weaponClass = this->GetClassComponent<ncGPWeaponClass>();
-    n_assert( weaponClass );
-    if( weaponClass )
-    {
-        if( weaponClass->AllowTrait( trait ) )
-        {
-            return true;
-        }
-    }
-
-    ncGPWeaponAddonClass * addonClass;
-    for( int i = 0 ; i < this->max_slots ; ++i )
-    {
-        if( this->slots_addons[ i ] )
-        {
-            addonClass = this->slots_addons[ i ]->GetClassComponent<ncGPWeaponAddonClass>();
-            n_assert( addonClass );
-            if( addonClass )
-            {
-                if( addonClass->AllowTrait( trait ) )
-                {
-                    return true;
-                }
-            }
-        }
-    }
-
-    return false;
-}
-*/
 //------------------------------------------------------------------------------
 /**
 */
@@ -827,20 +289,7 @@ float
 ncGPWeapon::GetDownOffset()const
 {
     float downOffset = 0;
-/** ZOMBIE REMOVE
-    ncGPWeaponAddonClass * addonClass;
-    for( int i = 0 ; i < this->max_slots ; ++i )
-    {
-        if( this->slots_addons[ i ] )
-        {
-            addonClass = this->slots_addons[ i ]->GetClassComponentSafe<ncGPWeaponAddonClass>();
-            if( addonClass )
-            {
-                downOffset += addonClass->GetDownOffset();
-            }
-        }
-    }
-*/
+
     return downOffset;
 }
 
@@ -853,12 +302,6 @@ ncGPWeapon::HasFullAmmo()const
 {
     if( this->ammo == this->weaponClipSize )
     {
-/** ZOMBIE REMOVE
-        if( this->HasTrait( ncGPWeaponCharsClass::MOD_ENABLE_QUICK_RELOAD ) )
-        {
-            return ( this->ammoExtra == this->weaponClipSize );
-        }
-*/
         return true;
     }
 
@@ -901,12 +344,6 @@ ncGPWeapon::SetScopeState( bool hideValue )
 bool
 ncGPWeapon::NeedFullReload() const
 {
-/** ZOMBIE REMOVE
-    if( ! this->HasTrait( ncGPWeaponCharsClass::MOD_ENABLE_QUICK_RELOAD ) )
-    {
-        return true;
-    }
-*/
     if( 0 == this->ammoExtra )
     {
         return true;

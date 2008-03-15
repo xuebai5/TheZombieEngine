@@ -127,10 +127,6 @@ public:
     void SetFireModes(int);
     /// Get the fire modes of the weapon
     int GetFireModes () const;
-    /// Set default magazine of weapon
-    void SetDefaultMagazine(const char *);
-    /// Get default magazine of weapon
-    const char * GetDefaultMagazine () const;
     /// say if weapon has auto fire mode
     bool HasSemiFireMode ()const;
     /// say if weapon has semi fire mode
@@ -411,28 +407,6 @@ int
 ncGPWeaponClass::GetAddonOffsetBone() const
 {
     return this->addonOffsetBone;
-}
-
-//------------------------------------------------------------------------------
-/**
-    @returns the fire modes
-*/
-inline
-void
-ncGPWeaponClass::SetDefaultMagazine( const char * name )
-{
-    this->defaultMagazine.Set( name );
-}
-
-//------------------------------------------------------------------------------
-/**
-    @returns the addon offset bone
-*/
-inline
-const char *
-ncGPWeaponClass::GetDefaultMagazine() const
-{
-    return this->defaultMagazine.Get();
 }
 
 //------------------------------------------------------------------------------

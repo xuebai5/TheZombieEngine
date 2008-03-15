@@ -243,9 +243,6 @@ void ncAgentMemory::UpdateMemory( nGameEvent::Time timeInc )
         }
 
         // Target no longer perceived by any event, so forget it
-/** ZOMBIE REMOVE
-        this->GetComponentSafe<ncGameplayLiving>()->LeaveFightRing();
-*/
         this->GetComponentSafe<ncAIState>()->SetTarget( NULL );
         ncFSM* fsm = this->GetComponent<ncFSM>();
         n_assert2( fsm, "The entity doesn't have the FSM component" );

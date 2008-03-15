@@ -225,15 +225,9 @@ nFxEventTrigger::Shoot( nEntityObject* shooter, nEntityObject* weapon)
     nFxSpecial* fxnode = 0;
 
     ncGameplayPlayer* player = shooter->GetComponent<ncGameplayPlayer>();
-/** ZOMBIE REMOVE
-    ncGPWeapon* gpweapon = weapon->GetComponentSafe<ncGPWeapon>();
-*/
+
     if( player && player->IsFirstCameraMode() )
     {
-/** ZOMBIE REMOVE
-        //if silencer, do not show muzzle flash
-        if( gpweapon && !gpweapon->IsMounted(player->GetInventory()->GetInventoryItem("Rns_wac_slb")) )
-*/
         {
             fxnode = this->GetFxFor(M4_1P_FIRE);
         }

@@ -792,27 +792,6 @@ ncGameplayPlayer::SetFirstCameraLod( bool activate )
         {
             scene->SetLockedLevel( activate, 0 );
         }
-
-/** ZOMBIE REMOVE
-        // fix weapon addons lod
-        ncGPWeapon * weaponGameplay = this->currentWeapon->GetComponent<ncGPWeapon>();
-        if( weaponGameplay )
-        {
-            nEntityObject * addonEntity = 0;
-            for( int i = 0 ; i < weaponGameplay->GetNumSlots(); ++i )
-            {
-                addonEntity = weaponGameplay->GetAddonAt( i );
-                if( addonEntity )
-                {
-                    scene = addonEntity->GetComponent<ncSceneLod>();
-                    if( scene )
-                    {
-                        scene->SetLockedLevel( activate, 0 );
-                    }
-                }
-            }
-        }
-*/
     }
 }
 
@@ -832,30 +811,9 @@ ncGameplayPlayer::RefreshScopeState()
 
     if( weapon )
     {
-/** ZOMBIE REMOVE
-        this->isInScopeMode = weapon->HasTrait( ncGPWeaponCharsClass::MOD_ENABLE_SCOPE );
-        this->isInScopeMode = this->isInScopeMode && this->IsIronsight();
-        bool hide = this->isInScopeMode && this->IsFirstCameraMode();
-
-        weapon->SetScopeState( hide );
-
-        ncScene * scene = this->GetEntityObject()->GetComponent<ncScene>();
-        if( scene )
-        {
-            scene->SetHiddenEntity( hide );
-        }
-*/
         if( this->IsIronsight() )
         {
-/** ZOMBIE REMOVE
-            if( weapon->HasTrait( ncGPWeaponCharsClass::MOD_ENABLE_SCOPE ) )
-            {
-                this->ironsightAngle = ncGameplayPlayer::SCOPE_ANGLE;
-            }
-            else*/
-            {
-                this->ironsightAngle = ncGameplayPlayer::IRONSIGHT_ANGLE;
-            }
+            this->ironsightAngle = ncGameplayPlayer::IRONSIGHT_ANGLE;
 
             this->fbIronsightAngle.SetGoal( this->ironsightAngle );
         }
@@ -1279,9 +1237,6 @@ ncGameplayPlayer::ShotWeapon()
 
             ncSoundLayer * soundLayer = this->currentWeapon->GetComponentSafe<ncSoundLayer>();
 
-/** ZOMBIE REMOVE
-            bool silencerPut = weapon->HasTrait( ncGPWeaponCharsClass::MOD_ENABLE_SILENCER );
-*/
             if( fire )
             {
                 if( weapon->GetAmmo() )
@@ -1291,18 +1246,7 @@ ncGameplayPlayer::ShotWeapon()
                         if( soundLayer && ! this->firedLastFrame &&
                             weapon->GetFireMode() == ncGPWeaponClass::FM_AUTO )
                         {
-/** ZOMBIE REMOVE
-                            if ( ! silencerPut )
-*/
-                            {
-                                soundLayer->PlaySoundTime( GP_ACTION_SHOOTBURST, 10, 0.0f, true );
-                            }
-/** ZOMBIE REMOVE
-                            else
-                            {
-                                soundLayer->PlaySoundTime( GP_ACTION_SHOOTBURSTSILENCER, 10, 0.0f, true );
-                            }
-*/
+                            soundLayer->PlaySoundTime( GP_ACTION_SHOOTBURST, 10, 0.0f, true );
                         }
 
                         this->firedLastFrame = true;
@@ -1381,19 +1325,7 @@ ncGameplayPlayer::ShotWeapon()
                         }
                     }
 
-                    // put release sound
-/** ZOMBIE REMOVE
-                    if ( ! silencerPut )
-                    {
-*/
-                        soundLayer->PlayAlone( "shootrelase", 1 );
-/** ZOMBIE REMOVE
-                    }
-                    else
-                    {
-                        soundLayer->PlayAlone( "shootreleasesilencer", 1 );
-                    }
-*/
+                    soundLayer->PlayAlone( "shootrelase", 1 );
                 }
             }
         }

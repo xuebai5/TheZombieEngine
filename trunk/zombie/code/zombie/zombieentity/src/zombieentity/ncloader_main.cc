@@ -10,9 +10,6 @@
 #include "nscene/ncscene.h"
 #include "nscene/nscenenode.h"
 #include "nscene/ncscenebatch.h"
-/** ZOMBIE REMOVE
-#include "nasset/nasset.h"
-*/
 #include "animcomp/nccharacter.h"
 #include "animcomp/nccharacterclass.h"
 #include "animcomp/ncskeletonclass.h"

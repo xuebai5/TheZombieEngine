@@ -75,10 +75,7 @@ public:
 private:
     /// initialize human data
     void InitInstanceHuman();
-/** ZOMBIE REMOVE
-    /// iniitialize strider data
-    void InitInstanceStrider();
-*/
+
     bool active;
 
     nRef<nEntityObject> refLimbs[NumLimbs];

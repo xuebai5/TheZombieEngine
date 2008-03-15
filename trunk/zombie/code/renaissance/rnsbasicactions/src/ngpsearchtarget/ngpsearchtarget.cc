@@ -10,9 +10,7 @@
 #include "nspatial/nspatialserver.h"
 #include "entity/nentityobjectserver.h"
 #include "ncgameplayliving/ncgameplayliving.h"
-/** ZOMBIE REMOVE
-#include "rnsgameplay/nfightringmanager.h"
-*/
+
 nNebulaScriptClass(nGPSearchTarget, "ngpbasicaction");
 
 //------------------------------------------------------------------------------
@@ -88,10 +86,6 @@ nGPSearchTarget::Init (nEntityObject* entity)
             {
                 // Forget current target
                 this->aistate->SetTarget(0);
-/** ZOMBIE REMOVE
-                // Get out of the fight ring
-                this->living->LeaveFightRing();
-*/
             }
         }
     }

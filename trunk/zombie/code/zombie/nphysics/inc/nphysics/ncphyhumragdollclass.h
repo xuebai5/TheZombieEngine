@@ -74,10 +74,6 @@ public:
 #ifdef __ZOMBIE_EXPORTER__
     /// set human min-max angles
     void SetHumanAngles();
-/** ZOMBIE REMOVE
-    /// set strider min-max angles
-    void SetStriderAngles();
-*/
 #endif
 
     // returns the neck front minimun angle (x-axis)

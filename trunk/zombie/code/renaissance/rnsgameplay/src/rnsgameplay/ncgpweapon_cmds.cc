@@ -19,21 +19,6 @@ NSCRIPT_INITCMDS_BEGIN(ncGPWeapon)
     NSCRIPT_ADDCMD_COMPOBJECT('LGAM', int, GetAmmo , 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('LSAX', void, SetAmmoExtra, 1, (int), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('LGAX', int, GetAmmoExtra , 0, (), 0, ());
-/** ZOMBIE REMOVE
-    NSCRIPT_ADDCMD_COMPOBJECT('LAWA', int, AddAddon, 1, (nEntityObject *), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LHWA', bool, HasAddon, 1, (int), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LGWA', nEntityObject *, GetAddon, 1, (int), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LRWA', nEntityObject *, RemoveAddon, 1, (int), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LRAA', nEntityObject *, RemoveAddonAt, 1, (int), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LDEA', void, DeleteAllAddons , 0, (), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LNLS', int, GetNumSlots , 0, (), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LGAA', nEntityObject *, GetAddonAt, 1, (int), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LIAL', bool, IsAllowed, 1, (nEntityObject *), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LIMN', bool, IsMounted, 1, (nEntityObject *), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LAWT', bool, HasTrait, 1, (int), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LGSN', const char*, GetSlotName, 1, (nEntityObject *), 0, ());
-    NSCRIPT_ADDCMD_COMPOBJECT('LGSF', int, GetSlotFor, 1, (nEntityObject *), 0, ());
-*/
     NSCRIPT_ADDCMD_COMPOBJECT('LLSS', void, ApplyAccuracyLoss , 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('LLRC', void, ApplyAccuracyRecover, 1, (float), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('LSIR', void, SetIronsight, 1, (bool), 0, ());

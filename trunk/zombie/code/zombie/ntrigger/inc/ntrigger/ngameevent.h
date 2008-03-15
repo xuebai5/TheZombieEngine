@@ -30,10 +30,6 @@ struct nGameEvent
         ACTION_FAIL,
         PLAYER,
         SQUAD_MEMBER,
-/** ZOMBIE REMOVE
-        SCAVENGER,
-        STRIDER,
-*/
         ENTER_IN_AREA,
         EXIT_FROM_AREA,
         ACTION_ISSUED,

@@ -26,9 +26,6 @@ NSCRIPT_INITCMDS_BEGIN(ncAIState)
     NSCRIPT_ADDCMD_COMPOBJECT('FGDP', vector3, GetDestPoint, 0, (), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('FSTP', void, SetTargetPoint, 1, (vector3), 0, ());
     NSCRIPT_ADDCMD_COMPOBJECT('FGTP', vector3, GetTargetPoint, 0, (), 0, ());
-/** ZOMBIE REMOVE
-    NSCRIPT_ADDCMD_COMPOBJECT('RIOR', bool, IsInOuterRing, 0, (), 0, ());
-*/
 NSCRIPT_INITCMDS_END()
 
 

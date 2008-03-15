@@ -107,11 +107,6 @@ nRagdollCharAnimator::AnimateHuman(nCharacter2* character )
             case ncRagDollClass::Human:
                 offset.set(0,0,float(-.25)); // <--- Hardcoded correction (David)
                 break;
-/** ZOMBIE REMOVE
-            case ncRagDollClass::Strider:
-                offset.set(float(-0.1f),float(0.25),0);// <--- Hardcoded correction (Antonia)
-                break;
-*/
             }
 
             offset = orientationMatrix * offset;

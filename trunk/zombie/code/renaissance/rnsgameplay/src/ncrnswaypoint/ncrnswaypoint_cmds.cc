@@ -27,25 +27,6 @@ NSCRIPT_INITCMDS_BEGIN(ncRnsWaypoint)
         NSCRIPT_ADDCMD_COMPOBJECT('IIJA', bool, IsJumpAttribute, 0, (), 0, ());
         NSCRIPT_ADDCMD_COMPOBJECT('ISJO', void, SetJumpoverAttribute, 1, (bool), 0, ());
         NSCRIPT_ADDCMD_COMPOBJECT('IIJO', bool, IsJumpoverAttribute, 0, (), 0, ());
-/** ZOMBIE REMOVE
-        NSCRIPT_ADDCMD_COMPOBJECT('ISHA', void, SetHopAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IIHA', bool, IsHopAttribute, 0, (), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISLP', void, SetLeapAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IILP', bool, IsLeapAttribute, 0, (), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISLI', void, SetLeapInAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IILI', bool, IsLeapInAttribute, 0, (), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISLO', void, SetLeapOutAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IILO', bool, IsLeapOutAttribute, 0, (), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISL2', void, SetLeapInOutAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISBA', void, SetBurrowAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IIBA', bool, IsBurrowAttribute, 0, (), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISBI', void, SetBurrowInAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IIBI', bool, IsBurrowInAttribute, 0, (), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISBO', void, SetBurrowOutAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IIBO', bool, IsBurrowOutAttribute, 0, (), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISB2', void, SetBurrowInOutAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('ISRL', void, SetRollAttribute, 1, (bool), 0, ());
-        NSCRIPT_ADDCMD_COMPOBJECT('IIRL', bool, IsRollAttribute, 0, (), 0, ());*/
         NSCRIPT_ADDCMD_COMPOBJECT('ISCU', void, SetClimbupAttribute, 1, (bool), 0, ());
         NSCRIPT_ADDCMD_COMPOBJECT('IICU', bool, IsClimbupAttribute, 0, (), 0, ());
         NSCRIPT_ADDCMD_COMPOBJECT('ISCD', void, SetClimbdownAttribute, 1, (bool), 0, ());

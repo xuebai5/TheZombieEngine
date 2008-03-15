@@ -11,9 +11,6 @@
 #include "rnsgameplay/ngameplayutils.h"
 #include "nclogicanimator/nclogicanimator.h"
 #include "ncgpperception/ncgpsight.h"
-/** ZOMBIE REMOVE
-#include "ncgameplaystrider/ncgameplaystrider.h"
-*/
 #include "mathlib/cone.h"
 
 

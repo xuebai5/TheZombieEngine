@@ -254,10 +254,7 @@ ncRagDollClass::TypeToString(RagDollType t)
     switch (t)
     {
         case Human:          return "human";
-/** ZOMBIE REMOVE
-        case Scavenger:      return "scavenger";
-        case Strider:        return "strider";
-*/
+
         default:
             n_error("ncRagDollClass::TypeToString(): invalid ragtype value '%d'!", t);
             return 0;
@@ -272,10 +269,7 @@ ncRagDollClass::StringToType(const char* str)
 {
     n_assert(str);
     if (0 == strcmp(str, "human"))       return Human;
-/** ZOMBIE REMOVE
-    if (0 == strcmp(str, "scavenger"))   return Scavenger;
-    if (0 == strcmp(str, "strider"))     return Strider;
-*/
+
     n_error("nFxEventTrigger::StringToType(): invalid ragtype string '%s'!", str);
         return INVALIDTYPE;
 }

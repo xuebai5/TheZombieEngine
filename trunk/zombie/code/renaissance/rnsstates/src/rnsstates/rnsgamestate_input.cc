@@ -523,17 +523,7 @@ RnsGameState::PlayerWeaponFireInput( const float frameTime, const ncGameplayPlay
                 this->network->CallRPCServer( 
                     nRnsEntityManager::WEAPON_TRIGGER, data.GetBufferSize(), data.GetBuffer() );
             }
-/** ZOMBIE REMOVE
-            if( inputServer->GetButton("SecondaryAttack") && ! player->IsBusy() )
-            {
-                if( weapon->HasTrait( ncGPWeaponCharsClass::MOD_ENABLE_GRENADE )) 
-                {
-                    this->inputArgs[0].Delete(); this->inputArgs[0].SetO( player->GetEntityObject() );
-                    this->inputArgs[1].Delete(); this->inputArgs[1].SetS( "Rocket" );
-                    this->network->SendAction( "ngplaunchobject", 2, this->inputArgs, true );
-                }
-            }
-*/
+
             if( inputServer->GetButton("RateOfFire") && ! player->IsBusy() )
             {
                 if( player->IsIronsight() )
