@@ -10,6 +10,8 @@
 
     This class reserves enough space to store the desired number of bits and
     exposes bit operations to work with them as flags.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 //------------------------------------------------------------------------------

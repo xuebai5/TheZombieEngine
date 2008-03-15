@@ -1,6 +1,7 @@
 #include "precompiled/pchncshared.h"
 //------------------------------------------------------------------------------
 //  ncSuperentity_main.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "zombieentity/ncsuperentity.h"

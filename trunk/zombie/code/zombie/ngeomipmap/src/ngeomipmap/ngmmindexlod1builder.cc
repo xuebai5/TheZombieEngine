@@ -1,11 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmindexlod1builder.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    (C) 2006 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngmmindexlod1builder.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmindexlod1builder.h"

@@ -1,7 +1,7 @@
 #ifndef N_VEGETATIONBUILDER_H
 #define N_VEGETATIONBUILDER_H
-
-/*-----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+/**
     @file nvegetationbuilder.h
     @class nVegetationBuilder
     @ingroup NebulaGrass

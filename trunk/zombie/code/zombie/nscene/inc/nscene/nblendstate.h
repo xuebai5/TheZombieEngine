@@ -5,8 +5,6 @@
     @class nBlendState
     @ingroup NebulaAnimationSystem
     
-    @brief 
-    
     (C) 2005 Conjurer Services, S.A.
 */
 #include "kernel/ntypes.h"

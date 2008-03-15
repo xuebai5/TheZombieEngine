@@ -27,6 +27,8 @@
         it has unexpectetly called while keeping full compatibility.
     --------------------------------------------------------
     @endverbatim
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "nnavmeshparser/navblockparser.h"

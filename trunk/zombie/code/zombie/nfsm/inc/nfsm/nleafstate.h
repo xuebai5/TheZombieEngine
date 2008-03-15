@@ -10,6 +10,8 @@
 
     A behavioural action is that action executed each frame and intended to make
     the agent which is attached to show some behaviour.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nstate.h"

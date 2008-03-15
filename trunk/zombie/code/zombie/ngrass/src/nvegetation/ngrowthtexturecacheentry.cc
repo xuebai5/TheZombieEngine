@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass_conjurer.h"
+//------------------------------------------------------------------------------
+//  ngrowthtexturecacheentry.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "nvegetation/ngrowthtexturecacheentry.h"
 #include "gfx2/ngfxserver2.h"
 #include "ngeomipmap/ncterrainmaterialclass.h"

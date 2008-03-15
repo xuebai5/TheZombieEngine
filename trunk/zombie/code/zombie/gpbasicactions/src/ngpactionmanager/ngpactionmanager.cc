@@ -1,6 +1,7 @@
 #include "precompiled/pchgpbasicactions.h"
 //------------------------------------------------------------------------------
-//  naiactionmanager.cc
+//  ngpactionmanager.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "ngpactionmanager/ngpactionmanager.h"

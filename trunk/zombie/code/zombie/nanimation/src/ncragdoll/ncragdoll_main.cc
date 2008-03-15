@@ -1,5 +1,8 @@
 #include "precompiled/pchnanimation.h"
-
+//------------------------------------------------------------------------------
+//  ncragdoll_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ncragdoll/ncragdoll.h"
 
 #include "animcomp/nccharacter.h"

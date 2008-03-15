@@ -1,20 +1,18 @@
 #ifndef N_LAYER_H
 #define N_LAYER_H
-
-#include "kernel/nroot.h"
-#include "nphysics/nphysicsserver.h"
-
 //------------------------------------------------------------------------------
 /**
     @class nLayer
     @ingroup Framework
-
+    @author Miquel Angel Rujula
     @brief nLayer groups elements.
     
     (C) 2005  Conjurer Services, S.A.
-
-    Author: Miquel Angel Rujula
 */
+
+#include "kernel/nroot.h"
+#include "nphysics/nphysicsserver.h"
+
 
 #include "util/nstring.h"
 #include "entity/nentityobject.h"

@@ -17,6 +17,8 @@
     Evaluate method receives the trigger itself plus the emitter entity of the
     event. As output, Evaluate should return a boolean telling if the event
     is accepted (true) or discarded (false).
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 class nTriggerStateCondition;

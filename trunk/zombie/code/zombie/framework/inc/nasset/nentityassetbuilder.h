@@ -4,7 +4,7 @@
 /**
     @class nEntityAsset
     @ingroup NebulaAssetSystem
-    @author M.A.Garcias <ma.garcias@yahoo.es>
+    @author Cristobal Castillo
 
     @brief This class exposes access to the internals an entity asset
     including saving assets and retrieving paths for saving specific

@@ -52,6 +52,8 @@
 
     @see nFSM to know more about the agent independent FSM part.
     @see ncFSMClass to know more about the agent type dependent FSM part.
+    
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

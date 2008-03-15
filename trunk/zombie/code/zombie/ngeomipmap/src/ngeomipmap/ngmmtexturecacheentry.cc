@@ -1,12 +1,7 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmtexturecachenetry.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    (C) 2005 Conjurer Services, S.A.
-*/
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  ngmmtexturecachenetry.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmtexturecacheentry.h"
 #include "kernel/nlogclass.h"

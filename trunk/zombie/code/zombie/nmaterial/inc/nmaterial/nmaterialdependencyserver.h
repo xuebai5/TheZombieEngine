@@ -8,7 +8,6 @@
    @ingroup NebulaMaterialSystem
 
    @brief Declaration of nMaterialDependencyServer class
-   @brief $Id$ 
    
    (C) 2005 Conjurer Services, S.A.
 */

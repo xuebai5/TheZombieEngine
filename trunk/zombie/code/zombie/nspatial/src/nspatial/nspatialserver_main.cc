@@ -2,7 +2,6 @@
 //------------------------------------------------------------------------------
 //  nspatialserver_main.cc
 //  (C) 2004 Conjurer Services, S.A.
-//  @author Miquel Angel Rujula <>
 //------------------------------------------------------------------------------
 
 #include "kernel/ntimeserver.h"

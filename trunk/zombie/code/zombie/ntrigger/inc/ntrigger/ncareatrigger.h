@@ -19,6 +19,8 @@
 
     An entity with this component must also have the ncTriggerShape component,
     which defines the trigger activation area.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "ntrigger/nctrigger.h"

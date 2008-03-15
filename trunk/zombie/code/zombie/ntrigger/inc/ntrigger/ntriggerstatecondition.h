@@ -18,6 +18,8 @@
     the emitter entity of the event (NULL in the case of state condition,
     since there's no event). Evaluate should return a boolean telling if the
     condition triggers (true) or not (false).
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

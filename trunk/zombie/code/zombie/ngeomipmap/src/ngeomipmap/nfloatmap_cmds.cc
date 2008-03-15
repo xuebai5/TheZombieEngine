@@ -1,15 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file nfloatmap_cmds.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-    @author Juan Jose Luna
-
-    @brief nFloatMap persistence and scripting
-
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nfloatmap_cmds.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 

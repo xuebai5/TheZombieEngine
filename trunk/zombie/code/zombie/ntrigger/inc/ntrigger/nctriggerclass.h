@@ -13,6 +13,8 @@
     Later changes on this component doesn't make its instances to update their
     input events (and it shouldn't since those could have been adjusted by the
     user for that individual instance).
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

@@ -1,6 +1,10 @@
 #ifndef GPIMPACTSOUND_H
 #define GPIMPACTSOUND_H
 
+/**
+    (C) 2006 Conjurer Services, S.A.
+*/
+
 #include "nphysics/ncphysicsobj.h"
 
 //-----------------------------------------------------------------------------

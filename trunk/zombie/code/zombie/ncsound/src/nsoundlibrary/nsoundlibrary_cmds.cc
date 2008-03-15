@@ -1,14 +1,7 @@
 #include "precompiled/pchncsound.h"
-/*-----------------------------------------------------------------------------
-    @file nsoundlibrary_cmds.cc
-
-    @author Juan Jose Luna
-
-    @brief nSoundLibrary persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nsoundlibrary_cmds.cc
+//  2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nsoundlibrary/nsoundlibrary.h"
 #include "kernel/npersistserver.h"

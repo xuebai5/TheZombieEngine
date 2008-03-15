@@ -23,6 +23,8 @@
     {obstacles block}
     --------------------------------------------------------
     @endverbatim
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "nnavmeshparser/navblockparser.h"

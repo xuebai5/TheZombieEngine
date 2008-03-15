@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass.h"
+//------------------------------------------------------------------------------
+//  ncterrainvegetationclass_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "nvegetation/ncterrainvegetationclass.h"
 #include "ngrassgrowth/ngrowthmaterial.h"
 

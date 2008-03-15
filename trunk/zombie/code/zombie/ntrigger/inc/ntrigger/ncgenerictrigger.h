@@ -23,6 +23,8 @@
     'trigger activation', so another component can catch the signal and act
     accordingly (for instance, the ncTriggerOutput component may execute the
     associated output).
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "ntrigger/nctrigger.h"

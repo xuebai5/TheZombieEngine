@@ -1,15 +1,7 @@
 #include "precompiled/pchngeomipmap.h"
-/*-----------------------------------------------------------------------------
-    @file ngeomipmapviewport.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    @brief Calculate some geomipmap parameters specific per viewport/camera
-
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  ngeomipmapviewport.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "ngeomipmap/ngeomipmapviewport.h"
 #include "gfx2/ngfxserver2.h"

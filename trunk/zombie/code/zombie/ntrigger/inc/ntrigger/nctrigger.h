@@ -19,6 +19,8 @@
 
     This component also have a culling radius, only used for triggers that
     handle area events when culling these events by proximity.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

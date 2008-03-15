@@ -1,4 +1,8 @@
 #include "precompiled/pchnspatial.h"
+//-----------------------------------------------------------------------------
+//  nspatialportal.cc
+//  (C) 2005 Conjurer Services, S.A.
+//-----------------------------------------------------------------------------
 #include "nspatial/nspatialportal.h"
 #include "nscene/nscenenode.h"
 

@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass.h"
+//------------------------------------------------------------------------------
+//  ncterrainvegetationcell_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "nvegetation/ncterrainvegetationcell.h"
 //-----------------------------------------------------------------------------
 NSCRIPT_INITCMDS_BEGIN(ncTerrainVegetationCell)

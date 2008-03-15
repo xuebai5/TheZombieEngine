@@ -14,6 +14,8 @@
     So, since not all triggers may use this component, it has been decoupled
     from ncTrigger to avoid memory waste (specially true if we consider the
     huge amount of agent entities that may populate a level).
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

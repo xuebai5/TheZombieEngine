@@ -12,6 +12,8 @@
     really seem useless for this state, so an end state tipically has no data,
     it just is used by the ncFSM to know that an end state has been reached and
     that the FSM must be popped and signaled its completion.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nstate.h"

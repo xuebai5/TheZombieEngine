@@ -1,5 +1,14 @@
 #ifndef N_SPATIALVISITOR_H
 #define N_SPATIALVISITOR_H
+//------------------------------------------------------------------------------
+/**
+    @class nSpatialVisitor
+    @ingroup NebulaSpatialSystem
+    @brief Visitor to collect all the entities in a given region of space or 
+    update the spatial information
+
+    (C) 2006 Conjurer Services, S.A.
+*/
 
 #include "util/narray.h"
 #include "mathlib/matrix.h"
@@ -20,14 +29,6 @@ class nFrustumClipper;
 
 struct VisitorFlags;
 
-//------------------------------------------------------------------------------
-/**
-    @class nSpatialVisitor
-    @ingroup NebulaSpatialSystem
-    @brief Visitor to collect all the entities in a given region of space or 
-    update the spatial information
-
-*/
 class nSpatialVisitor 
 {
 

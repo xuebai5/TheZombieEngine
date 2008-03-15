@@ -12,6 +12,8 @@
 
     This is a simple example of how to override visibilityvisitor.  We
     just override Visit() to append the given element to the array
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nvisiblefrustumvisitor.h"

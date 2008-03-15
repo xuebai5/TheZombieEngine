@@ -12,6 +12,8 @@
     the ExecuteOutput method.
 
     @see nScriptClassServer
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "ntrigger/noperation.h"

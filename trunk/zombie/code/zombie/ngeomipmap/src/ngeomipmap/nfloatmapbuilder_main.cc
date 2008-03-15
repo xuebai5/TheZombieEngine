@@ -1,15 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file nfloatmapbuilder_main.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-    @author Juan Jose Luna
-
-    @brief nHeightMap class to edit and persist heightmaps
-
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nfloatmapbuilder_main.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "kernel/nkernelserver.h"

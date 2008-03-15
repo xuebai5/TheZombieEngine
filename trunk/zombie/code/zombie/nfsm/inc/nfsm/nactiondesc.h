@@ -10,6 +10,8 @@
 
     The order and type of the action arguments are unknown by the FSM, they are
     set externally (by the editor/script) and used by the action manager.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

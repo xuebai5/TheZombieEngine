@@ -10,6 +10,8 @@
 
     The target trigger is notified by a call to HandleEvents with the special
     event 'trigger activation' and the activated trigger as the event source.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "ntrigger/noperation.h"

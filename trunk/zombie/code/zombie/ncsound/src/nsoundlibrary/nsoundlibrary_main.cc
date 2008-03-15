@@ -1,6 +1,6 @@
 #include "precompiled/pchncsound.h"
 //------------------------------------------------------------------------------
-//  nSoundLibrary_main.cc
+//  nsoundlibrary_main.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 

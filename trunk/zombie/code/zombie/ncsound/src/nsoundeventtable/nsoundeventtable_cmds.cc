@@ -1,14 +1,7 @@
 #include "precompiled/pchncsound.h"
-/*-----------------------------------------------------------------------------
-    @file nsoundeventtable_cmds.cc
-
-    @author Juan Jose Luna
-
-    @brief nSoundEventTable persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nsoundeventtable_cmds.cc
+// (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nsoundeventtable/nsoundeventtable.h"
 #include "kernel/npersistserver.h"

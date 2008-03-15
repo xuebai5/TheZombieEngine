@@ -7,6 +7,8 @@
     @ingroup NebulaTriggerSystem
 
     Events related to the game and handled by the trigger system.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "entity/nentityobject.h"

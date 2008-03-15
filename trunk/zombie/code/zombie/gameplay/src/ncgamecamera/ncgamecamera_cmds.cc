@@ -1,5 +1,8 @@
 #include "precompiled/pchgameplay.h"
-
+//------------------------------------------------------------------------------
+//  ncgamecamera_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ncgamecamera/ncgamecamera.h"
 
 #include "napplication/nappviewport.h"

@@ -7,6 +7,8 @@
     @ingroup NebulaNavmeshSystem
 
     Navigation mesh pathfinding. Stores the navegation mesh and navegation graph
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "util/narray.h"

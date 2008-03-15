@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass_conjurer.h"
+//------------------------------------------------------------------------------
+//  ngrowthmaterial_main.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #ifndef NGAME
 #include "ngrassgrowth/ngrowthmaterial.h"
 #include "util/nrandomlogic.h"

@@ -1,14 +1,7 @@
 #include "precompiled/pchnmusictable.h"
-/*-----------------------------------------------------------------------------
-    @file nmusictable_cmds.cc
-
-    @author Juan Jose Luna
-
-    @brief nMusicTable persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nmusictable_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nmusictable/nmusictable.h"
 #include "kernel/npersistserver.h"

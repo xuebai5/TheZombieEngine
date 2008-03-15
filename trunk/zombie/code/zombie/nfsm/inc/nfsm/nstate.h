@@ -30,6 +30,8 @@
        state.
      - Transitions to other states, triggered by some event or scripted
        condition.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

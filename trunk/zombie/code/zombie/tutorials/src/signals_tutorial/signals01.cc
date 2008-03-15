@@ -1,11 +1,9 @@
-//------------------------------------------------------------------------------
 /**
     @file signals01.cc
     @ingroup Nebula2TutorialsSignals
+    @author Luis Jose Cabellos Gomez
 
-    @brief Signal Example 01 - Defining, Binding, Emitting and Posting signals.
-
-    A simple example of signals, both synchronous and asynchronous.
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "kernel/nkernelserver.h"

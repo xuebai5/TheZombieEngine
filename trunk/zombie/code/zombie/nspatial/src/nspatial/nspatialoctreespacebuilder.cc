@@ -2,7 +2,6 @@
 //------------------------------------------------------------------------------
 //  nspatialoctreespacebuilder.cc
 //  (C) 2004 Conjurer Services, S.A.
-//  @author Miquel Angel Rujula <>
 //------------------------------------------------------------------------------
 
 #include "nspatial/nspatialoctreespacebuilder.h"

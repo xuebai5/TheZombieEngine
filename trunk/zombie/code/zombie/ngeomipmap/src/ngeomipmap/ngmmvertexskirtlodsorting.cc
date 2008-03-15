@@ -1,11 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file ngmmvertexskirtlodsorting.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    (C) 2006 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngmmvertexskirtlodsorting.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/ngmmvertexskirtlodsorting.h"

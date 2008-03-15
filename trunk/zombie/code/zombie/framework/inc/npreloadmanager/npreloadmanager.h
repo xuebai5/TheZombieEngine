@@ -16,6 +16,8 @@
     level manager. For the LevelLoaded it loads the resources the user desires
     to preload for that level, while for LevelSaved it saves the resources
     preload list.
+    
+    (C) 2005  Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"

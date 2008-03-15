@@ -6,6 +6,8 @@
     @ingroup NebulaNavmeshSystem
 
     Utility functions related to navigation
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "mathlib/vector.h"

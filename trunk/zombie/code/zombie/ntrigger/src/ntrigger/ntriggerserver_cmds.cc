@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------------
 //  ntriggerserver_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
 #include "precompiled/pchntrigger.h"
 #include "ntrigger/ntriggerserver.h"

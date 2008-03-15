@@ -14,6 +14,8 @@
     which is expected to load it only once, so no performance penalty results in
     successive loads of the same script (the script will be already loaded and
     ready to play with it).
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "ngpbasicaction/ngpbasicaction.h"

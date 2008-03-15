@@ -19,6 +19,8 @@
         vertex <x (float)> <y (float)> <z (float)>
     --------------------------------------------------------
     @endverbatim
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "nnavmeshparser/navblockparser.h"

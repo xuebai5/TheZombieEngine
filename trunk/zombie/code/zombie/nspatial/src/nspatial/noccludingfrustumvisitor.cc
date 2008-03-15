@@ -1,7 +1,7 @@
 #include "precompiled/pchnspatial.h"
 //--------------------------------------------------
-// noccludingfrustumvisitor.cc
-// (C) 2004 Gary Haussmann
+//  noccludingfrustumvisitor.cc
+//  (C) 2004 Gary Haussmann
 //--------------------------------------------------
 
 #include "nspatial/noccludingfrustumvisitor.h"

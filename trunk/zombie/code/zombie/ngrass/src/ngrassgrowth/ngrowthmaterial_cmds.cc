@@ -1,4 +1,8 @@
 #include "precompiled/pchngrass_conjurer.h"
+//------------------------------------------------------------------------------
+//  ngrowthmaterial_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "ngrassgrowth/ngrowthmaterial.h"
 #include "ngrassgrowth/ngrowthbrush.h"
 

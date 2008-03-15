@@ -1,9 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file nchorizonsegmentbuilder.cc
-    @author Mateu Batle Sastre
-
-    (C) 2006 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  nchorizonsegmentbuilder.cc
+//  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchnspatial.h"
 #include "nspatial/nhorizonsegmentbuilder.h"

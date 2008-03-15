@@ -5,8 +5,6 @@
     @class nnBlendTargetKey
     @ingroup NebulaAnimationSystem
     
-    @brief
-    
     (C) 2005 Conjurer Services, S.A.
 */
 

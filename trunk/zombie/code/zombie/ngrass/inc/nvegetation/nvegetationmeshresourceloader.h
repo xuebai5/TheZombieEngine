@@ -1,7 +1,7 @@
 #ifndef N_VEGETATIONMESHRESOURCELOADER_H
 #define N_VEGETATIONMESHRESOURCELOADER_H
-
-/*-----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+/**
     @file nVegetationMeshResourceLoader.h"
     @class nVegetationMeshResourceLoader
     @ingroup NebulaGrass
@@ -10,21 +10,16 @@
     @brief nVegetationMeshResourceLoader
     Only one instance of nVegetationMeshResourceLoader need be created per application.
     This create a nMesh2 resource from ngrowthseeds
-    (C) 2004 Conjurer Services, S.A.
 
+    (C) 2004 Conjurer Services, S.A.
 */
 
 #include "kernel/nroot.h"
 #include "kernel/ncmdprotonativecpp.h"
 #include "resource/nresourceloader.h"
+
 class nMesh2;
 
-//------------------------------------------------------------------------------
-
-//------------------------------------------------------------------------------
-/**
-    Class nVegetationMeshResourceLoader
-*/
 class nVegetationMeshResourceLoader : public nResourceLoader
 {
 public:

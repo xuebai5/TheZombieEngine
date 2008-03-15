@@ -1,6 +1,7 @@
 #include "precompiled/pchgameplay.h"
 //------------------------------------------------------------------------------
 //  npathfinder.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
 #include "npathfinder/npathfinder.h"

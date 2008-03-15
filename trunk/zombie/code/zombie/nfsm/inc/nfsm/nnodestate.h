@@ -15,6 +15,8 @@
     This selection function is a 'SelectFSM' named function contained within a
     script. This function receives the agent as a parameter and returns a
     reference to the FSM to be selected.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nstate.h"

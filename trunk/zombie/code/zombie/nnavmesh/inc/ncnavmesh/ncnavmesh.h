@@ -10,6 +10,8 @@
 
     This components provides an entity with a navigation mesh, allowing to load
     it from disk.
+
+   (C) 2005 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

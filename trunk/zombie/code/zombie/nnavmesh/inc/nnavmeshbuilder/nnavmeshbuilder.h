@@ -7,6 +7,8 @@
     @ingroup NebulaNavmeshSystem
 
     Navigation mesh builder for pathfinding.    
+
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "mathlib/vector.h"

@@ -7,6 +7,8 @@
     @ingroup NebulaNavmeshSystem
 
     Node for the navigation mesh 
+
+   (C) 2005 Conjurer Services, S.A.
 */
 
 #include "ncnavnode/ncnavnode.h"

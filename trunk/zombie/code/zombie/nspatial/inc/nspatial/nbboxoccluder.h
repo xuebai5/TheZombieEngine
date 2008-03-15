@@ -29,6 +29,8 @@
     false    0          this node is fully visible, so all children will be fully visible
     false    !0         this node is partially visible, so children will have to be tested individually
     @endverbatim
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "gfx2/ncamera2.h"

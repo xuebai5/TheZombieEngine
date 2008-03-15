@@ -1,15 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file nByteMapBuilder_main.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-    @author Juan Jose Luna
-
-    @brief nByteMap class to edit and persist bytemaps
-
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nbytemapbuilder_main.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "ngeomipmap/nbytemapbuilder.h"

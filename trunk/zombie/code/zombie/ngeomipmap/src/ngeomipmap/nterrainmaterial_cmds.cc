@@ -1,15 +1,7 @@
 #include "precompiled/pchngeomipmap.h"
-/*-----------------------------------------------------------------------------
-    @file nterrainmaterial_cmds.cc
-    @ingroup NebulaTerrain
-
-    @author Juan Jose Luna
-
-    @brief nTerrainMaterial persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nterrainmaterial_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "ngeomipmap/nterrainmaterial.h"
 #include "kernel/npersistserver.h"

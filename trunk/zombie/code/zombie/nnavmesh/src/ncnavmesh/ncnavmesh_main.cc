@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------------
 //  ncnavmesh_main.cc
+//  (C) 2005 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
 #include "precompiled/pchnnavmesh.h"
 #include "ncnavmesh/ncnavmesh.h"

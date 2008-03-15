@@ -1,5 +1,9 @@
 #ifndef N_GMMLIGHTMAPCACHEENTRY_H
 #define N_GMMLIGHTMAPCACHEENTRY_H
+/**
+    (C) 2006 Conjurer Services, S.A.
+
+*/
 //------------------------------------------------------------------------------
 #include "ngeomipmap/ncache.h"
 

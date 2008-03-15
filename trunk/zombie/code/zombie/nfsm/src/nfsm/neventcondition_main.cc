@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------------
 //  neventcondition_main.cc
+//  (C) 2005 Conjurer Services, S.A.
 //-----------------------------------------------------------------------------
 #include "precompiled/pchnfsm.h"
 #include "nfsm/neventcondition.h"

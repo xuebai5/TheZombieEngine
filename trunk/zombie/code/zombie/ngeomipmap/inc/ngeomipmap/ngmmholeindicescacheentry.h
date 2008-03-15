@@ -1,5 +1,9 @@
 #ifndef N_GMMHOLEINDICESCACHEENTRY_H
 #define N_GMMHOLEINDICESCACHEENTRY_H
+/**
+    (C) 2006 Conjurer Services, S.A.
+*/
+
 //------------------------------------------------------------------------------
 #include "ngeomipmap/ncache.h"
 

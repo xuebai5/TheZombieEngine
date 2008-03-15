@@ -1,10 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file ncterraingmm_main.cc
-    @ingroup NebulaTerrain
-    @author Mateu Batle Sastre
-
-    (c) 2004 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ncterraingmm_main.cc
+//  (c) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "nspatial/ncspatialquadtree.h"

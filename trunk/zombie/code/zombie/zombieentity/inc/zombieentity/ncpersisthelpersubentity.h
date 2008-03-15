@@ -7,6 +7,8 @@
 
     The persistence OID is the representation of the Object identifier which
     is saved on persistence. 
+
+    (C) 2006 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 #include "entity/ncpersisthelper.h"

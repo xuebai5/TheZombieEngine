@@ -1,5 +1,10 @@
 #ifndef N_GMMTEXTURECACHEENTRY_H
 #define N_GMMTEXTURECACHEENTRY_H
+
+/**
+    (C) 2006 Conjurer Services, S.A.
+
+*/
 //------------------------------------------------------------------------------
 #include "kernel/nprofiler.h"
 #include "ngeomipmap/ncache.h"

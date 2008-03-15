@@ -1,13 +1,7 @@
 #include "precompiled/pchngrass.h"
-
-/*-----------------------------------------------------------------------------
-    @file ngmmtexturecachenetry.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    (C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  ngmmtexturecachenetry.cc
+//  (C) 2005 Conjurer Services, S.A.
 //---------------------------------------------------------------------------
 #include "nvegetation/ngrowthseedcacheentry.h"
 #include "entity/nentity.h"

@@ -1,5 +1,10 @@
 #ifndef N_GMMMESHCACHEENTRY_H
 #define N_GMMMESHCACHEENTRY_H
+
+/**
+    (C) 2006 Conjurer Services, S.A.
+
+*/
 //------------------------------------------------------------------------------
 #include "ngeomipmap/ncache.h"
 

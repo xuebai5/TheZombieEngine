@@ -13,6 +13,8 @@
 
     The visitor will call Visit() for every entitiy determined possibly
     visible.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "nspatial/nfrustumclipper.h"

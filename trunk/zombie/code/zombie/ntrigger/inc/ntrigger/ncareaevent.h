@@ -15,6 +15,8 @@
     Never add or remove entities by yourself, do it through the trigger server.
     This assures that all events become logged and that events with a finite
     live time are removed when they expire.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "entity/nentity.h"

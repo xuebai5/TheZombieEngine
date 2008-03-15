@@ -17,6 +17,8 @@
     against that plane.  When there are no active planes, you know the
     object and all its children are fully inside the frustum and so can
     trivially add them all without doing any more clipping checks.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 //------------------------------------------------------------------------------
 

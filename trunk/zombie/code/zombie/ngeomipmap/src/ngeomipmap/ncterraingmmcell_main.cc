@@ -1,15 +1,6 @@
-/*-----------------------------------------------------------------------------
-    @file ngeomipmapblock.cc
-    @ingroup NebulaTerrain
-
-    @author Mateu Batle Sastre
-
-    @brief Class representing a single block/tile/patch in the geomipmap 
-    terrain
-
-    (C) 2004 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  ncterraingmmcell_main.cc
+//  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchngeomipmap.h"
 #include "nscene/ncsceneclass.h"

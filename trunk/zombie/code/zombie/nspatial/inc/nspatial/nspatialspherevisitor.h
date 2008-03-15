@@ -11,7 +11,9 @@
     position and radius.
 
     The visitor will call Visit() for every element determined to be fully or partially within the sphere.
-    */
+
+    (C) 2006 Conjurer Services, S.A.
+*/
 
 #include "nspatialvisitor.h"
 #include "nsphereclipper.h"

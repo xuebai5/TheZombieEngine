@@ -7,6 +7,8 @@
     @ingroup NebulaFSMSystem
 
     nKeyArray container forward constant iterator.
+
+    (C) 2006 Conjurer Services, S.A.
 */
 
 #include "util/nkeyarray.h"
