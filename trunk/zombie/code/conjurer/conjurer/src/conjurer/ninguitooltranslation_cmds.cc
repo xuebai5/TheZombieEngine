@@ -1,15 +1,7 @@
 #include "precompiled/pchconjurerapp.h"
-/*-----------------------------------------------------------------------------
-    @file ninguiterraintooltranslation_cmds.cc
-    @ingroup NebulaConjurerEditor
-
-    @author Juan Jose Luna
-
-    @brief nInguiTerrainToolTranslation persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  ninguitooltranslation_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/ninguitooltranslation.h"
 #include "kernel/npersistserver.h"

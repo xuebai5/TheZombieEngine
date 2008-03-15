@@ -1,15 +1,7 @@
 #include "precompiled/pchconjurerapp.h"
-/*-----------------------------------------------------------------------------
-    @file ninguiterraintoolholepolyline_cmds.cc
-    @ingroup NebulaConjurerEditor
-
-    @author Juan Jose Luna
-
-    @brief nInguiTerrainToolPolyLine persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  ninguiterraintoolholepolyline_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/ninguiterraintoolpolyline.h"
 #include "kernel/npersistserver.h"

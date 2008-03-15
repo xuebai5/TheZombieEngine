@@ -1,15 +1,7 @@
 #include "precompiled/pchconjurerapp.h"
-/*-----------------------------------------------------------------------------
-    @file ninguiterraintoolnoise_cmds.cc
-    @ingroup NebulaConjurerEditor
-
-    @author Juan Jose Luna
-
-    @brief InguiIerrainToolNoise persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  ninguiterraintoolnoise_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/ninguiterraintoolnoise.h"
 #include "kernel/npersistserver.h"

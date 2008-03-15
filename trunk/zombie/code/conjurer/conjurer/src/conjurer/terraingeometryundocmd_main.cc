@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerapp.h"
 //------------------------------------------------------------------------------
-//  nterraingeometry_undocmds.cc
+//  nterraingeometryundocmd_main.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 

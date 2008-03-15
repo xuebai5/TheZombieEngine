@@ -1,15 +1,7 @@
 #include "precompiled/pchconjurerapp.h"
-/*-----------------------------------------------------------------------------
-    @file ninguitoolmeasure_cmds.cc
-    @ingroup NebulaConjurerEditor
-
-    @author Juan Jose Luna
-
-    @brief nInguiToolMeasure persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  ninguitoolmeasure_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/ninguitoolmeasure.h"
 #include "kernel/npersistserver.h"

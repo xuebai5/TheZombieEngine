@@ -1,13 +1,7 @@
 #include "precompiled/pchconjurerapp.h"
-/*-----------------------------------------------------------------------------
-    @file nterrainlightmapbuilder_lights.cc
-    @ingroup NebulaConjurerEditor
-
-    @brief nTerrainLightmapBuilder
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nterrainlightmapbuilder_lights.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/nterrainlightmapbuilder.h"
 //------------------------------------------------------------------------------

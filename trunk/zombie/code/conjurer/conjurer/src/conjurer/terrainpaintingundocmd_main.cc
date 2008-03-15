@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerapp.h"
 //------------------------------------------------------------------------------
-//  nterrainpainting_undocmds.cc
+//  nterrainpaintingundocmd_main.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 

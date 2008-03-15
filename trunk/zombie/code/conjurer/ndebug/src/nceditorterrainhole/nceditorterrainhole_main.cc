@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-//  nceditor_main.cc
+//  nceditorterrainhole_main.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "precompiled/pchndebug.h"

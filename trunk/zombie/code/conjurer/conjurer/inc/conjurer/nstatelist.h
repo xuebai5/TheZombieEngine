@@ -2,15 +2,15 @@
 #define N_STATELIST_H
 //-------------------------------------------------------------------
 /**
-@file ncmdsaver.cc
-@ingroup NebulaConjurerEditor
-
-@author Javier Ferrer Gomez
-
-@brief This class is called by the persist server for get the list
-of all commands that compose the state.
-
-(C) 2005 Conjurer Services, S.A.
+    @file ncmdsaver.cc
+    @ingroup NebulaConjurerEditor
+    
+    @author Javier Ferrer Gomez
+    
+    @brief This class is called by the persist server for get the list
+    of all commands that compose the state.
+    
+    (C) 2005 Conjurer Services, S.A.
 */
 
 #include "kernel/nscriptserver.h"

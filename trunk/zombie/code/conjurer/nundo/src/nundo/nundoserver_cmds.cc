@@ -1,16 +1,7 @@
 #include "precompiled/pchnundoserver.h"
-/*-----------------------------------------------------------------------------
-    @file nundoserver_cmds.cc
-    @ingroup NebulaConjurerEditor
-
-    @author Mateu Batle Sastre
-    @author Juan Jose Luna
-
-    @brief nUndoServer persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nundoserver_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "nundo/undocmdbyscript.h"
 #include "nundo/nundoserver.h"

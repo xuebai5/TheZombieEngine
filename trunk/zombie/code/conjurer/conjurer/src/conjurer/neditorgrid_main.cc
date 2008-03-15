@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerapp.h"
 //------------------------------------------------------------------------------
-// neditorgrid_main.cc
+//  neditorgrid_main.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/neditorgrid.h"

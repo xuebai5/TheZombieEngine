@@ -1,14 +1,8 @@
 #include "precompiled/pchconjurerapp.h"
-//-------------------------------------------------------------------
-/**
-    @file nobjinspector_main.cc 
-    @ingroup NebulaConjurerGui
-    @author Javier Ferrer Gomez
-
-    @brief implements object inspector class
-
-    (C) 2005 Conjurer Services, S.A.
-*/
+//------------------------------------------------------------------------------
+//  nobjinspector_main.cc 
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 
 #include "conjurer/nobjinspector.h"
 #include "kernel/nkernelserver.h"

@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerapp.h"
 //------------------------------------------------------------------------------
-//  nInguiToolSoundSourceSphereArea.cc
+//  ninguitoolsoundsourcespherearea_main.cc
 //  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 

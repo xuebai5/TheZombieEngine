@@ -1,16 +1,7 @@
 #include "precompiled/pchconjurerapp.h"
-/*-----------------------------------------------------------------------------
-    @file nobjecteditorstate_cmds.cc
-    @ingroup NebulaConjurerEditor
-
-    @author Mateu Batle Sastre
-    @author Juan Jose Luna
-
-    @brief nObjectEditorState persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nobjecteditorstate_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/nobjecteditorstate.h"
 #include "kernel/npersistserver.h"

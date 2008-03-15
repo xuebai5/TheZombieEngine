@@ -227,7 +227,7 @@ class PreviewCtrl(wx.PyControl):
     
     def on_help(self, event):
         iehelpwindow.CreateWindow( app.get_top_window(self),
-            "http://wiki.tragnarion.com/tiki-index.php?page=SWD+Nebula+Conjurer+FSM+editor" )
+            "http://thezombieengine.sourceforge.net/SWD+Nebula+Conjurer+FSM+editor" )
     
     def on_change_fsm(self, event):
         if self.autorefresh_enabled:

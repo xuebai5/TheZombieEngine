@@ -1,6 +1,6 @@
 #include "precompiled/pchnundoserver.h"
 //------------------------------------------------------------------------------
-//  nundocmdscript_main.cc
+//  nundocmdbyscript.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 

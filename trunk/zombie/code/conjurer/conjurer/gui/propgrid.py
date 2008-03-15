@@ -163,7 +163,7 @@ class PropertyGrid(pg.PropertyGrid):
     
     The nodes also store a copy of the current and previous value, so
     'changing' and 'changed' events can be generated (more info about these
-    events at http://wiki.tragnarion.com/tiki-index.php?page=SWP+Nebula+Conjurer+Custom+Controls).
+    events at http://thezombieengine.sourceforge.net/SWP+Nebula+Conjurer+Custom+Controls).
     
     The properties should be added between begin/end calls. The usual is to
     add all the properties in a single strip, so begin is configured by default

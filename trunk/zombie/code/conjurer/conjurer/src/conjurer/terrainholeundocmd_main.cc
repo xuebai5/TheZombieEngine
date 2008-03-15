@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerapp.h"
 //------------------------------------------------------------------------------
-//  terrainholeundcmd_main.cc
+//  terrainholeundocmd_main.cc
 //  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 

@@ -1,10 +1,9 @@
 #include "precompiled/pchndebug.h"
-/**
-   @file ndebugcomponentserver.cc
-   @author Luis Jose Cabellos Gomez
+//------------------------------------------------------------------------------
+//  ndebugcomponentserver.cc
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 
-   (C) 2005 Conjurer Services, S.A.
-*/
 #include "ndebug/ndebugcomponentserver.h"
 #include "ndebug/nceditor.h"
 
