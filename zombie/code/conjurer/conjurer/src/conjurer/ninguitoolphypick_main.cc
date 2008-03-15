@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerapp.h"
 //------------------------------------------------------------------------------
-// ninguitoolplacer_main.cc
+// ninguitoolphypick_main.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/ninguitoolphypick.h"

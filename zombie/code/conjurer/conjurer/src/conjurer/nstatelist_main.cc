@@ -1,4 +1,7 @@
 //------------------------------------------------------------------------------
+//  nstatelist_main.cc 
+//  (C) 2005 Conjurer Services, S.A.
+//------------------------------------------------------------------------------
 #include "precompiled/pchconjurerapp.h"
 #include "conjurer/nstatelist.h"
 #include "kernel/nkernelserver.h"

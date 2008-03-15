@@ -177,6 +177,6 @@ class ChildWindow(childDialogGUI):
         if self.parent:
             self.parent.SetStatusText(evt.Text)
     
-def CreateWindow(frame, prefix, sufix="", query="", home="http://wiki.tragnarion.com"):
+def CreateWindow(frame, prefix, sufix="", query="", home="http://thezombieengine.sourceforge.net/"):
     # Creating lua shell window
     win = ChildWindow( frame, prefix, sufix, query, home )

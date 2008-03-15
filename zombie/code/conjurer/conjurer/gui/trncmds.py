@@ -473,6 +473,6 @@ class TerrainMenu(menu.Menu):
     def on_help(self, event):
         iehelpwindow.CreateWindow(
             self.get_frame(),
-            "http://wiki.tragnarion.com/tiki-index.php?page=" \
+            "http://thezombieengine.sourceforge.net/" \
                 "SWD+Nebula+Conjurer+Terrain" 
             )

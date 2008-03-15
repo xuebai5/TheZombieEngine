@@ -1,16 +1,7 @@
 #include "precompiled/pchconjurerapp.h"
-/*-----------------------------------------------------------------------------
-    @file nterraineditorstate_cmds.cc
-    @ingroup NebulaConjurerEditor
-
-    @author Mateu Batle Sastre
-    @author Juan Jose Luna
-
-    @brief nTerrainEditorState persistence and scripting
-
-    (C) 2005 Conjurer Services, S.A.
-
-*/
+//------------------------------------------------------------------------------
+//  nterraineditorstate_cmds.cc
+//  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/nterraineditorstate.h"
 #include "kernel/npersistserver.h"

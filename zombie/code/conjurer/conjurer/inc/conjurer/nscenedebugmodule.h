@@ -5,6 +5,7 @@
     @class nSceneDebugModule
     @ingroup NebulaConjurerEditor
 
+    (C) 2005 Conjurer Services, S.A.
 */
 #include "ndebug/ndebugmodule.h"
 

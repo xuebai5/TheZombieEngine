@@ -231,7 +231,7 @@ class FSMMenu(menu.Menu):
     
     def on_help(self, event):
         iehelpwindow.CreateWindow( self.get_frame(),
-            "http://wiki.tragnarion.com/tiki-index.php?page=SWD+Nebula+Conjurer+FSM+editor" )
+            "http://thezombieengine.sourceforge.net/SWD+Nebula+Conjurer+FSM+editor" )
 
 
 # TriggersMenu class

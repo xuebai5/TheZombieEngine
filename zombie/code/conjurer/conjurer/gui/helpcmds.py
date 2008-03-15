@@ -51,19 +51,19 @@ class HelpMenu(menu.Menu):
 
     def on_conjurer (self, evt):
         iehelpwindow.CreateWindow(self.get_frame(),
-                                  "http://wiki.tragnarion.com/tiki-index.php?page=SWD+Nebula+Conjurer+Conjurer")
+                                  "http://thezombieengine.sourceforge.net/SWD+Nebula+Conjurer+Conjurer")
 
     def on_summoner (self,evt):
         iehelpwindow.CreateWindow(self.get_frame(),
-                                  "http://wiki.tragnarion.com/tiki-index.php?page=SWD+Nebula+Conjurer+Summoner")
+                                  "http://thezombieengine.sourceforge.net/SWD+Nebula+Conjurer+Summoner")
 
     def on_export (self,evt):
         iehelpwindow.CreateWindow(self.get_frame(),
-                                  "http://wiki.tragnarion.com/tiki-index.php?page=SWD+Nebula+MAX+Exporter")
+                                  "http://thezombieengine.sourceforge.net/SWD+Nebula+MAX+Exporter")
 
     def on_manual (self,evt):
         iehelpwindow.CreateWindow(self.get_frame(),
-                                  "http://wiki.tragnarion.com/tiki-index.php?page=SWD+Nebula+Conjurer")
+                                  "http://thezombieengine.sourceforge.net/SWD+Nebula+Conjurer")
 
     def on_wiki_help(self,evt):
         dlg = wx.TextEntryDialog(self.get_frame(),
@@ -84,10 +84,10 @@ class HelpMenu(menu.Menu):
 
         if dlg.ShowModal() == wx.ID_OK:
             iehelpwindow.CreateWindow(self.get_frame(),
-                                      "http://wiki.tragnarion.com/"\
+                                      "http://thezombieengine.wiki.sourceforge.net/"\
                                       "tiki-searchresults.php?words=",
                                       "&where=wikis&search=go", dlg.GetValue(),
-                                      "http://wiki.tragnarion.com")
+                                      "http://thezombieengine.wiki.sourceforge.net/")
 
         dlg.Destroy()
 
@@ -100,11 +100,11 @@ class HelpMenu(menu.Menu):
 
         if dlg.ShowModal() == wx.ID_OK:
             iehelpwindow.CreateWindow(self.get_frame(),
-                                      "http://trac.tragnarion.com/"\
-                                      "nebula2rns/search?q=",
+                                      "http://sourceforge.net/tracker/?group_id=219911"\
+                                      "search?q=",
                                       "&wiki=on&changeset=on&ticket=on",
                                       dlg.GetValue(),
-                                      "http://trac.tragnarion.com/nebula2rns")
+                                      "http://sourceforge.net/tracker/?group_id=219911")
         dlg.Destroy()
 
     def on_nebula2_help(self,evt):
@@ -113,11 +113,11 @@ class HelpMenu(menu.Menu):
                                  'Trac Search Engine')
         if dlg.ShowModal() == wx.ID_OK:            
             iehelpwindow.CreateWindow(self.get_frame(),
-                                      "http://update.tragnarion.com/"\
+                                      "http://thezombieengine.sourceforge.net/"\
                                       "nightlybuild/doc/nebula2/html/class",
                                       ".html",
                                       dlg.GetValue(),
-                                      "http://update.tragnarion.com/"\
+                                      "http://thezombieengine.sourceforge.net/"\
                                       "nightlybuild/doc/nebula2/"\
                                       "html/index.html")
         dlg.Destroy()

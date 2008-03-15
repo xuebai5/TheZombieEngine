@@ -226,23 +226,23 @@ class AppWindowFrame(wx.MDIParentFrame):
         engine = query_list[1]
 
         if engine == "wiki":
-            iehelpwindow.CreateWindow(self, "http://wiki.tragnarion.com/"\
+            iehelpwindow.CreateWindow(self, "http://thezombieengine.sourceforge.net/"\
                                             "tiki-searchresults.php?words=",
                                       "&where=wikis&search=go",
                                       query_list[0],
-                                      "http://wiki.tragnarion.com")
+                                      "http://thezombieengine.sourceforge.net/")
         elif engine == "trac":
-            iehelpwindow.CreateWindow(self, "http://trac.tragnarion.com/"\
+            iehelpwindow.CreateWindow(self, "http://sourceforge.net/tracker/?group_id=219911"\
                                       "nebula2rns/search?q=",
                                       "&wiki=on&changeset=on&ticket=on", 
                                       query_list[0],
-                                      "http://trac.tragnarion.com/nebula2rns")
+                                      "http://sourceforge.net/tracker/?group_id=219911")
         elif engine == "nebula":
-            iehelpwindow.CreateWindow(self, "http://update.tragnarion.com/"\
+            iehelpwindow.CreateWindow(self, "http://thezombieengine.wiki.sourceforge.net/"\
                                       "nightlybuild/doc/nebula2/html/class",
                                       ".html",
                                       query_list[0],
-                                      "http://update.tragnarion.com/"\
+                                      "http://thezombieengine.wiki.sourceforge.net/"\
                                       "nightlybuild/doc/nebula2/"\
                                       "html/index.html")
 

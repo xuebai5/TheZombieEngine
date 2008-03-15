@@ -1,6 +1,6 @@
 #include "precompiled/pchconjurerapp.h"
 //------------------------------------------------------------------------------
-//  ninguiterraintoolgrass.cc
+//  ninguiterraintoolgrass_main.cc
 //  (C) 2006 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 

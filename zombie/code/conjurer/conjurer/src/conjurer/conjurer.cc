@@ -1,7 +1,7 @@
 #include "precompiled/pchconjurer.h"
 //------------------------------------------------------------------------------
 /**
-	@page ZombieEditorConjurer Conjurer
+    @page ZombieEditorConjurer Conjurer
 
     Conjurer
 
