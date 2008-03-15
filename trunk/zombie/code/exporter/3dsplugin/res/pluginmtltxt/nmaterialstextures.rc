@@ -93,7 +93,7 @@ STRINGTABLE
 BEGIN
     IDS_DS_RGBADD_CDESC     "RGB Add"
     IDS_DS_PARAMETERS       "Parameters"
-    IDS_DS_MTLDESC          "Standard materials and textures (Tragnarion)"
+    IDS_DS_MTLDESC          "Standard materials and textures (Zombie)"
 END
 
 #endif    // English (U.S.) resources

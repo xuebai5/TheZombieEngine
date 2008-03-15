@@ -1,8 +1,8 @@
 /**
    @file nappinfo.h
-   @author Mateu Batle Sastre <mateu.batle@tragnarion.com>
+   @author Mateu Batle
    
-   (C) 2005 Tragnarion Studios
+   (C) 2005 Conjurer Services, S.A.
 */
 #ifndef NAPPINFO_H
 #define NAPPINFO_H

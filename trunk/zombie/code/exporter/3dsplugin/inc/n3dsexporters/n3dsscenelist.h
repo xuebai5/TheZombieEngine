@@ -13,7 +13,7 @@
     Is a nArray of object scene.
     Implement a iterator for friendly use with 3dsMax progressbar.
 
-    (C) 2005 Tragnarion
+    (C) 2005 Conjurer Services, S.A.
 */
 class n3dsSceneList 
 {
