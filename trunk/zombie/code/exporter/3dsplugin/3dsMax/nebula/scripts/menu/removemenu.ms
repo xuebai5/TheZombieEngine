@@ -1,8 +1,10 @@
 /**
    @file removemenu.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief this script has functions for remove the menu in current version.
+
+   (C) 2006 Conjurer Services, S.A.
 */
 
 global nebMainMenu = "TragNebula2"

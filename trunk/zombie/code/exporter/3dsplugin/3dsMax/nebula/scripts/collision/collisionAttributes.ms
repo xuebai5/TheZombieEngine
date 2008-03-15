@@ -1,8 +1,10 @@
 /**
-   @file collisionAttributes.ms
-   @ingroup n3dsMaxScripts
-   @author Luis Jose Cabellos Gomez <luis.cabellos@tragnarion.com>
-   @brief Collision Attributes definition.
+    @file collisionAttributes.ms
+    @ingroup n3dsMaxScripts
+    @author Luis Jose Cabellos Gomez
+    @brief Collision Attributes definition.
+    
+    (C) 2006 Conjurer Services, S.A.
 */
 --------------------------------------------------------------------------------
 /**

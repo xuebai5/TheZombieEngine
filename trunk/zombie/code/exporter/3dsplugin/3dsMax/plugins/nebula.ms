@@ -1,7 +1,7 @@
 /**
    @file nebula.ms
    @ingroup n3dsMaxScripts
-   @author Luis Jose Cabellos Gomez <luis.cabellos@tragnarion.com>
+   @author Luis Jose Cabellos Gomez
    @brief Include of Nebula 3ds Max Scripts 
    @remarks 
    This script only include all modules , only for declarations of function , struct
@@ -12,6 +12,7 @@
    - scriptNebulaVersion: the current version of this tool
    - nebulaVersion is a persistent global variables , dont change the name of this variable.
    
+   (C) 2006 Conjurer Services, S.A.
 */
 global nebulaProgramersVersion  = false  -- Set this to false for release version
 global scriptNebulaVersion      = 000804 -- version 00.08.02  The version of this tools

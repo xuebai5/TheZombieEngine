@@ -1,8 +1,10 @@
 /**
    @file renderRollout.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief rollout use for mask render.
+
+   (C) 2006 Conjurer Services, S.A.
 */
 rollout zombieRenderRollout "Zombie Material simulate in 3ds MAX" width:280 height:556
 (

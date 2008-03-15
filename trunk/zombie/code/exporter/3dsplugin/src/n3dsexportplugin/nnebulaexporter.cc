@@ -169,11 +169,11 @@ int	nNebulaExporter::Export(const TCHAR *name, BOOL suppressPrompts, DWORD optio
     //int *TrickMemoryLeaks = n_new(int); //Use for detect memory leaks , base
 
     
-    // use the tragNebula menu
+    // use the Zombie menu
     if ( suppressPrompts == FALSE  && !IsDebuggerPresent() )
     {
-        //n_message (" go to TragNebula menu for export");
-        MessageBox(0, " Go to TragNebula menu for export", "Nebula export error", (MB_OK | MB_APPLMODAL | MB_SETFOREGROUND | MB_TOPMOST |MB_ICONERROR) );
+        //n_message (" go to Zombie menu for export");
+        MessageBox(0, " Go to Zombie menu for export", "Nebula export error", (MB_OK | MB_APPLMODAL | MB_SETFOREGROUND | MB_TOPMOST |MB_ICONERROR) );
         return IMPEXP_CANCEL;
     }
 

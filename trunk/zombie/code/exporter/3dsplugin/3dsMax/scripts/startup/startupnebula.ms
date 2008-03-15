@@ -1,8 +1,10 @@
 /**
    @file startupnebula.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief this script initialize al modules of plugins.
+
+   (C) 2006 Conjurer Services, S.A.
 */
 
 NebOp.initModule() -- The main module 

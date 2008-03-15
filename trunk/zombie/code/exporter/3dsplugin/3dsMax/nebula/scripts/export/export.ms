@@ -1,8 +1,10 @@
 /**
    @file export.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief This module is for mexport and persisted the options to export
+
+   (C) 2006 Conjurer Services, S.A.
 */
 
 explog = NebCreateLog "export"  "export module" 2 true

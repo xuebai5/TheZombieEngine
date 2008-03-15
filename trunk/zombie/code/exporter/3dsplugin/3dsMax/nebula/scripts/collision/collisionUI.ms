@@ -1,8 +1,10 @@
 /**
    @file collisionUI.ms
    @ingroup n3dsMaxScripts
-   @author Luis Jose Cabellos Gomez <luis.cabellos@tragnarion.com>
+   @author Luis Jose Cabellos Gomez
    @brief Collision User Interface.
+
+   (C) 2006 Conjurer Services, S.A.
 */
 --------------------------------------------------------------------------------
 /**

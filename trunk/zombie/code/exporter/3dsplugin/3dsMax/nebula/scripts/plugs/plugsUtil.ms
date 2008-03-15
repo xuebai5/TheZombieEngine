@@ -1,8 +1,10 @@
 /**
    @file materialUtil.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief This utility is for managament of zombieMaterials.
+
+   (C) 2006 Conjurer Services, S.A.
 */
 utility NebPlugsUtil "Nebula Plugs utilities"
 (

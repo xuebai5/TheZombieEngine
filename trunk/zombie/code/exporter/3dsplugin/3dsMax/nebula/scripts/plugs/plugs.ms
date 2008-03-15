@@ -1,8 +1,10 @@
 /**
    @file plugs.ms
    @ingroup n3dsMaxScripts
-   @author Cristobal Castillo Domingo <cristobal.castillo@tragnarion.com>
+   @author Cristobal Castillo Domingo
    @brief This module is for managament of visibility
+
+   (C) 2006 Conjurer Services, S.A.
 */
 
 plugslog = NebCreateLog "plugs"  "plugs module" 2 true
