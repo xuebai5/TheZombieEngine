@@ -2,9 +2,9 @@ fn NebCreateSubMenuItemProgramers  =
 (
     local menu = menuMan.createMenu nebProgramersMenu
     local ItemsTemp = #()
-    ItemsTemp[1] = menuMan.createActionItem "tragNebula_NebReset" "tragNebula"
+    ItemsTemp[1] = menuMan.createActionItem "zombie_NebReset" "zombie"
     
-    append ItemsTemp (menuMan.createActionItem "tragNebula_LogConfig" "tragNebula")
+    append ItemsTemp (menuMan.createActionItem "zombie_LogConfig" "zombie")
     
     for i=1 to itemsTemp.count do 
     (
@@ -21,9 +21,9 @@ fn NebCreateSubMenuItemMaterial  =
 (
     local menu = menuMan.createMenu nebMaterialMenu
     local ItemsTemp = #()
-    ItemsTemp[1] = menuMan.createActionItem "tragNebula_mtlClearMtlEditor" "tragNebula"
+    ItemsTemp[1] = menuMan.createActionItem "zombie_mtlClearMtlEditor" "zombie"
     
-    append ItemsTemp (menuMan.createActionItem "tragNebula_renderRollout" "tragNebula")
+    append ItemsTemp (menuMan.createActionItem "zombie_renderRollout" "zombie")
     
     for i=1 to itemsTemp.count do 
     (
@@ -39,10 +39,10 @@ fn NebCreateSubMenuItemMaterial  =
 fn NebAddItemVisbilityQuadMenu menu=
 (
     local ItemsTemp = #()
-    ItemsTemp[1] = menuMan.createActionItem "tragNebula_visToPortal" "tragNebula"
-    append ItemsTemp (menuMan.createActionItem "tragNebula_visToOccluder" "tragNebula")
-    append ItemsTemp (menuMan.createActionItem "tragNebula_visToCell" "tragNebula")
-    append ItemsTemp (menuMan.createActionItem "tragNebula_visCreateCell" "tragNebula")
+    ItemsTemp[1] = menuMan.createActionItem "zombie_visToPortal" "zombie"
+    append ItemsTemp (menuMan.createActionItem "zombie_visToOccluder" "zombie")
+    append ItemsTemp (menuMan.createActionItem "zombie_visToCell" "zombie")
+    append ItemsTemp (menuMan.createActionItem "zombie_visCreateCell" "zombie")
     
     for i=1 to itemsTemp.count do 
     (
@@ -53,7 +53,7 @@ fn NebAddItemVisbilityQuadMenu menu=
 fn NebAddItemPlugsQuadMenu menu=
 (
     local ItemsTemp = #()
-    ItemsTemp[1] = menuMan.createActionItem "tragNebula_plugToPlug" "tragNebula"
+    ItemsTemp[1] = menuMan.createActionItem "zombie_plugToPlug" "zombie"
 
     for i=1 to itemsTemp.count do 
     (
@@ -64,9 +64,9 @@ fn NebAddItemPlugsQuadMenu menu=
 fn NebAddItemMaterialQuadMenu menu=
 (
     local ItemsTemp = #()
-    ItemsTemp[1] = menuMan.createActionItem "tragNebula_UpdateBackedMaterialSelected" "tragNebula"
-    append ItemsTemp (menuMan.createActionItem "tragNebula_ShowLightmaps" "tragNebula")
-    append ItemsTemp (menuMan.createActionItem "tragNebula_ShowMaterials" "tragNebula")
+    ItemsTemp[1] = menuMan.createActionItem "zombie_UpdateBackedMaterialSelected" "zombie"
+    append ItemsTemp (menuMan.createActionItem "zombie_ShowLightmaps" "zombie")
+    append ItemsTemp (menuMan.createActionItem "zombie_ShowMaterials" "zombie")
 
     for i=1 to itemsTemp.count do 
     (
@@ -84,23 +84,23 @@ fn NebAddMenu =
 	
         local ItemsTemp = #()
         
-        ItemsTemp[1] = (menuMan.createActionItem "tragNebula_Export" "tragNebula")
-        append ItemsTemp  (menuMan.createActionItem "tragNebula_ExportSelected" "tragNebula")
-        append ItemsTemp  (menuMan.createActionItem "tragNebula_ExportDialog" "tragNebula")
+        ItemsTemp[1] = (menuMan.createActionItem "zombie_Export" "zombie")
+        append ItemsTemp  (menuMan.createActionItem "zombie_ExportSelected" "zombie")
+        append ItemsTemp  (menuMan.createActionItem "zombie_ExportDialog" "zombie")
         
         
-		--ItemsTemp[1] = (menuMan.createActionItem "tragNebula_Export" "tragNebula")
+		--ItemsTemp[1] = (menuMan.createActionItem "zombie_Export" "zombie")
         append ItemsTemp (menuMan.createSeparatorItem())
         append ItemsTemp (NebCreateSubMenuItemMaterial())
         append ItemsTemp ( NebCreateSubMenuItemProgramers() )
         
         append ItemsTemp (menuMan.createSeparatorItem())
-        append ItemsTemp (menuMan.createActionItem "tragNebula_WikiArtistDocList" "tragNebula")		
-        append ItemsTemp (menuMan.createActionItem "tragNebula_WikiMaxExporter" "tragNebula")
-        append ItemsTemp (menuMan.createActionItem "tragNebula_WikiConjurer" "tragNebula")
+        append ItemsTemp (menuMan.createActionItem "zombie_WikiArtistDocList" "zombie")		
+        append ItemsTemp (menuMan.createActionItem "zombie_WikiMaxExporter" "zombie")
+        append ItemsTemp (menuMan.createActionItem "zombie_WikiConjurer" "zombie")
         
         append ItemsTemp (menuMan.createSeparatorItem())
-        append ItemsTemp (menuMan.createActionItem "tragNebula_AboutDialog" "tragNebula")		
+        append ItemsTemp (menuMan.createActionItem "zombie_AboutDialog" "zombie")		
 
         
         
@@ -132,7 +132,7 @@ fn NebAddMenu =
         mainMenu.addItem subMenuItem subMenuIndex
         
         -- Create a quad menu
-        quadMenu = menuMan.CreateQuadMenu "TragNebula2Quad" "visibility" "plugs" "Materials" ""
+        quadMenu = menuMan.CreateQuadMenu "ZombieQuad" "visibility" "plugs" "Materials" ""
         menuman.setViewportRightClickMenu #shiftAndControlPressed quadMenu
         
         

@@ -1,6 +1,6 @@
 global GrimoireViewerGamelib
 global GrimoireViewerOnlyOf
-rollout nebExportOptionsRollut "Nebula Export Options" width:330 height:560
+rollout nebExportOptionsRollut "Zombie Export Options" width:330 height:560
 (
 		
 	groupBox     grp_ExportMode "Export Mode" pos:[10,10] width:150 height:130
@@ -28,7 +28,7 @@ rollout nebExportOptionsRollut "Nebula Export Options" width:330 height:560
 	
 	groupBox     grp_CharOptions      "Options for skeletons and animations" pos:[9,380] width:310 height:90
 	checkbox     chk_firstperson      "First person"   pos:[220,440]  width:80 height:17
-	radiobuttons rd_critter "" pos:[50,400] width:105 height:64 labels:#( "Human", "Scavenger", "Strider" ) columns:3
+	radiobuttons rd_critter "" pos:[50,400] width:105 height:64 labels:#( "Human" ) columns:1
 	
 --	checkbox     chk_exportmotion    "Motion"   pos:[140,440]  width:50 height:17
 --	groupBox     grp_optionsmotion   "MotionOptions" pos:[130,420] width:180 height:50

@@ -7,8 +7,8 @@
    (C) 2006 Conjurer Services, S.A.
 */
 
-global nebMainMenu = "TragNebula2"
-global nebQuadMainMenu = "TragNebula2Quad"
+global nebMainMenu = "Zombie"
+global nebQuadMainMenu = "ZombieQuad"
 global nebProgramersMenu = "nProgramers"
 global nebMaterialMenu = "nMaterial"
 
