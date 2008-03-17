@@ -1,6 +1,6 @@
 /**
     @defgroup 3dsMax 3ds Max plugins
-    @ingroup NebulaTragnarionModules
+    @ingroup ZombieModules
     @brief plugins for 3ds max7
 */
 

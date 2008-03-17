@@ -6,7 +6,7 @@
 macroScript zombie_NebReset
 category:"zombie"
 buttonText:"reload scripts"
-tooltip:"Reload all nebula's scripts" 
+tooltip:"Reload all zombie scripts" 
 ( 	
     on isEnabled return nebulaProgramersVersion
     on isVisible return nebulaProgramersVersion
