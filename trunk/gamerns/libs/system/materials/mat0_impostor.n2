@@ -1,0 +1,27 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nmaterial$
+-- -----------------------------------------------------------
+nthis:beginlevel()
+nthis:beginpass([[inst]])
+nthis:setshader([[shaders:default_inst_impostor.fx]])
+nthis:settechnique([[tDefault]])
+nthis:setsequence([[alphatestnocull]])
+nthis:beginnode([[fogmode]], [[lnrf]])
+nthis:setshader([[shaders:default_inst_impostor.fx]])
+nthis:settechnique([[tLinearFog]])
+nthis:setsequence([[alphatestnoculllinearfog]])
+nthis:beginnode([[LightType]], [[pntl]])
+nthis:setshader([[shaders:default_inst_impostor.fx]])
+nthis:settechnique([[tLinearFog_PointLight]])
+nthis:setsequence([[alphatestnoculllinearfog]])
+nthis:endnode()
+nthis:endnode()
+nthis:beginnode([[LightType]], [[pntl]])
+nthis:setshader([[shaders:default_inst_impostor.fx]])
+nthis:settechnique([[tPointLight]])
+nthis:setsequence([[alphatestnocull]])
+nthis:endnode()
+nthis:endpass()
+nthis:endlevel()
+-- -----------------------------------------------------------
+-- Eof

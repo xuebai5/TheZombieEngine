@@ -1,0 +1,8 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:ntransformnode$
+-- -----------------------------------------------------------
+nthis:beginnewobject([[nviewportnode]], [[viewport]])
+  nthis:setrenderpathfilename([[home:data/shaders/hdrcam_renderpath.xml]])
+nthis:endobject()
+-- -----------------------------------------------------------
+-- Eof

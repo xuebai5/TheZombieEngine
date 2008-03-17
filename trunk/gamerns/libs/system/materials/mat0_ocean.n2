@@ -1,0 +1,15 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nmaterial$
+-- -----------------------------------------------------------
+nthis:beginlevel()
+nthis:beginpass([[alph]])
+nthis:setshader([[shaders:zombie_ocean.fx]])
+nthis:settechnique([[tDefault]])
+nthis:beginnode([[fogmode]], [[lnrf]])
+nthis:setshader([[shaders:zombie_ocean.fx]])
+nthis:settechnique([[tLinearFog]])
+nthis:endnode()
+nthis:endpass()
+nthis:endlevel()
+-- -----------------------------------------------------------
+-- Eof

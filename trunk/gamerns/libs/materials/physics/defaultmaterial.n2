@@ -1,0 +1,13 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:this()$
+-- -----------------------------------------------------------
+nthis:setcoeficientbounce(0.000100)
+nthis:setcoeficientsoftnesserp(1.000000)
+nthis:setcoeficientsoftnesscfm(0.000000)
+nthis:setcoeficientslip(0.001000)
+nthis:setcoeficientpyramidfriction(0.500000)
+nthis:setminvelocitybounce(50.000000)
+nthis:setmaterialname([[]])
+nthis:update()
+-- -----------------------------------------------------------
+-- Eof

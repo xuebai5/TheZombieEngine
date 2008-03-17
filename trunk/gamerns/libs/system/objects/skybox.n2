@@ -1,0 +1,24 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:ntransformnode$
+-- -----------------------------------------------------------
+new('ntransformnode','Plane01.1392')
+  sel('Plane01.1392')
+  call('setlocalbox', 1.963158, 0.000000, -1.719227, 10.364357, 0.000000, 11.087589)
+  call('setposition', 1.963158, 0.000000, -1.719227)
+  new('nshapenode','shape.9')
+    sel('shape.9')
+    call('setlocalbox', 1.963158, 0.000000, -1.719227, 10.364357, 0.000000, 11.087589)
+    call('setmesh', [[wc:libs/system/meshes/ocean_s_0.nvx2]] )
+    call('setgroupindex', 1)
+    call('setmeshusage', [[WriteOnce|]])
+    call('setsurface', [[surface]])
+    new('nsurfacenode','surface')
+      sel('surface')
+      call('setvector', [[MatDiffuse]], 1.0, 1.0, 1.0, 1.0)
+      call('settexture', [[CubeMap0]], [[wc:libs/system/textures/cloudyhills.dds]])
+      call('setshader', [[dept]], [[shaders:zombie_cubeskybox.fx]])
+    sel('..')
+sel('..')
+sel('..')
+-- -----------------------------------------------------------
+-- Eof

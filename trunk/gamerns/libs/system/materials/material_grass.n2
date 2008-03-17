@@ -1,0 +1,13 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nmaterial$
+-- -----------------------------------------------------------
+nthis:addparam([[mat]], [[singlecolorpass]])
+nthis:addparam([[pro]], [[grassfadeout]])
+nthis:addparam([[env]], [[useterraincolor]])
+nthis:addparam([[map]], [[terrainlightmap]])
+nthis:addparam([[deform]], [[swinging]])
+nthis:addparam([[env]], [[ambientlighting]])
+nthis:addparam([[map]], [[clipmap]])
+nthis:addparam([[map]], [[colormap]])
+-- -----------------------------------------------------------
+-- Eof

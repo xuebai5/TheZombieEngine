@@ -1,0 +1,8 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:ntransformnode$
+-- -----------------------------------------------------------
+nthis:beginnewobject([[ncameranode]], [[viewport]])
+  nthis:setrenderpathfilename([[home:data/shaders/impostor_renderpath.xml]])
+nthis:endobject()
+-- -----------------------------------------------------------
+-- Eof

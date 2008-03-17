@@ -1,0 +1,16 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:ntransformnode$
+-- -----------------------------------------------------------
+nthis:beginnewobject([[ntransformnode]], [[Plane01.139]])
+  nthis:setlocalbox(1.963158, 0.000000, -1.719227, 10.364357, 0.000000, 11.087589)
+  nthis:setposition(1.963158, 0.000000, -1.719227)
+  nthis:beginnewobject([[nshapenode]], [[shape.9]])
+    nthis:setlocalbox(0.000000, -3.254384, 0.000000, 270.199982, 0.000000, 270.199982)
+    nthis:setdependency([[wc:libs/system/materials/surface0_ocean.n2]], [[/sys/servers/dependency/nsurfacedependencyserver]], [[setsurface]])
+    nthis:setmesh([[wc:libs/system/meshes/ocean_s_0.nvx2]])
+    nthis:setgroupindex(0)
+    nthis:setvertexshaderneed(false)
+  nthis:endobject()
+nthis:endobject()
+-- -----------------------------------------------------------
+-- Eof

@@ -1,0 +1,28 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:beginnewobjectentityclass(neoutdoor,Stdoutdoor)$
+-- -----------------------------------------------------------
+nthis:setresourcefile([[wc:libs/system/assets/Stdoutdoor]])
+nthis:clearragdollresources()
+nthis:setmass(0.000000)
+nthis:setdensity(1.000000)
+nthis:setmobile(false)
+nthis:setinstanceenabled(false)
+nthis:setmaxmateriallevel(0)
+nthis:setblocksize(9)
+nthis:seterror(5.000000)
+nthis:setlodselectormethod(1)
+nthis:setgeometryloddistance(1, 1, 1, 1, 1, 1)
+nthis:setallweightmapssize(256)
+nthis:setglobaltexturesize(256)
+nthis:setmaterialloddistance(1)
+nthis:setnumblockpreload(0)
+nthis:setmaterialresolutiondivisor(1)
+nthis:setmodulationfactor(0.500000)
+nthis:setvegetationcellsubdivision(4)
+nthis:setnumsubblockclip(3)
+nthis:setgrasbeginfadefactor(0.500000)
+nthis:setgrowthmeshlibrarysize(0)
+nthis:setgeometryfactorclipdistance(0.500000, 1.000000)
+nthis:setoriginalbbox(512.000000, 0.000000, 512.000000, 1024.000000, 1024.000000, 1024.000000)
+-- -----------------------------------------------------------
+-- Eof
