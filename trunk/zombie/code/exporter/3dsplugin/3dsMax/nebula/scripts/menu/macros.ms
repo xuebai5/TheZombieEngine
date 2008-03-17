@@ -3,8 +3,8 @@
 --------------------------------------------------------------
 -- macro script for 'reseet all files' menu item.
 --------------------------------------------------------------
-macroScript tragNebula_NebReset
-category:"tragNebula"
+macroScript zombie_NebReset
+category:"zombie"
 buttonText:"reload scripts"
 tooltip:"Reload all nebula's scripts" 
 ( 	
@@ -19,8 +19,8 @@ tooltip:"Reload all nebula's scripts"
 --------------------------------------------------------------
 -- macro script for 'reseet all files' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_LogConfig
-category:"tragNebula"
+macroscript zombie_LogConfig
+category:"zombie"
 buttonText:"log config"
 tooltip:"enable and disable the log" 
 icon:#("Tragnarion",11)
@@ -36,8 +36,8 @@ icon:#("Tragnarion",11)
 --------------------------------------------------------------
 -- macro script for 'convert to portal' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_visToPortal
-category:"tragNebula"
+macroscript zombie_visToPortal
+category:"zombie"
 buttonText:"Convert to Portal"
 tooltip:"Convert to Portal" 
 icon:#("Tragnarion",5)
@@ -54,8 +54,8 @@ icon:#("Tragnarion",5)
 --------------------------------------------------------------
 -- macro script for 'convert to Occluder' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_visToOccluder
-category:"tragNebula"
+macroscript zombie_visToOccluder
+category:"zombie"
 buttonText:"Convert to Occluder"
 tooltip:"Convert to Occluder" 
 --icon:#("Tragnarion",5)
@@ -72,8 +72,8 @@ tooltip:"Convert to Occluder"
 --------------------------------------------------------------
 -- macro script for 'convert to CEll' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_visToCell
-category:"tragNebula"
+macroscript zombie_visToCell
+category:"zombie"
 buttonText:"Convert to Cell"
 icon:#("Tragnarion",6)
 tooltip:"Convert to Cell" 
@@ -90,8 +90,8 @@ tooltip:"Convert to Cell"
 --------------------------------------------------------------
 -- macro script for 'Create a  CEll' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_visCreateCell
-category:"tragNebula"
+macroscript zombie_visCreateCell
+category:"zombie"
 buttonText:"Create Cell from this"
 icon:#("Tragnarion",7)
 tooltip:"Create Cell from mesh" 
@@ -109,8 +109,8 @@ tooltip:"Create Cell from mesh"
 --------------------------------------------------------------
 -- macro script for 'Clear Material Editor' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_mtlClearMtlEditor
-category:"tragNebula"
+macroscript zombie_mtlClearMtlEditor
+category:"zombie"
 buttonText:"Clear material editor"
 tooltip:"clean the material editor with Zombie Material" 
 icon:#("Tragnarion",9)
@@ -127,8 +127,8 @@ icon:#("Tragnarion",9)
 --------------------------------------------------------------
 -- macro script for 'Clear Material Editor' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_mtlClearStdMtlEditor
-category:"tragNebula"
+macroscript zombie_mtlClearStdMtlEditor
+category:"zombie"
 buttonText:"Clear material editor"
 tooltip:"clean the material editor with Standard Material" 
 icon:#("Tragnarion",8)
@@ -145,8 +145,8 @@ icon:#("Tragnarion",8)
 --------------------------------------------------------------
 -- macro script for 'Clear Material Editor' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_renderRollout
-category:"tragNebula"
+macroscript zombie_renderRollout
+category:"zombie"
 buttonText:"Show render dialog"
 tooltip:"The properties simulate in 3dsMax"
 icon:#("Tragnarion",1) 
@@ -163,8 +163,8 @@ icon:#("Tragnarion",1)
 --------------------------------------------------------------
 -- macro script for 'convert to CEll' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_collCreateComposite
-category:"tragNebula"
+macroscript zombie_collCreateComposite
+category:"zombie"
 buttonText:"Create Composite"
 tooltip:"create a new composite using the selection" 
 ( 	
@@ -184,8 +184,8 @@ tooltip:"create a new composite using the selection"
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_WikiArtistDocList
-category:"tragNebula"
+macroscript zombie_WikiArtistDocList
+category:"zombie"
 buttonText:"Wiki Artist Doc List"
 icon:#("Tragnarion",4)
 tooltip:"Wiki Artist Doc" 
@@ -201,8 +201,8 @@ tooltip:"Wiki Artist Doc"
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_WikiMaxExporter
-category:"tragNebula"
+macroscript zombie_WikiMaxExporter
+category:"zombie"
 buttonText:"Wiki Max Exporter"
 icon:#("Tragnarion",2)
 tooltip:"Wiki Max Exporter" 
@@ -218,8 +218,8 @@ tooltip:"Wiki Max Exporter"
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_WikiConjurer
-category:"tragNebula"
+macroscript zombie_WikiConjurer
+category:"zombie"
 buttonText:"Wiki Conjurer"
 icon:#("Tragnarion",3)
 tooltip:"Wiki Conjurer" 
@@ -236,8 +236,8 @@ tooltip:"Wiki Conjurer"
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_AboutDialog
-category:"tragNebula"
+macroscript zombie_AboutDialog
+category:"zombie"
 buttonText:"About"
 tooltip:"About" 
 icon:#("Tragnarion",10)
@@ -255,8 +255,8 @@ icon:#("Tragnarion",10)
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_ExportDialog
-category:"tragNebula"
+macroscript zombie_ExportDialog
+category:"zombie"
 buttonText:"ExportOptions"
 tooltip:""
 ( 	
@@ -271,8 +271,8 @@ tooltip:""
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_Export
-category:"tragNebula"
+macroscript zombie_Export
+category:"zombie"
 buttonText:"Export"
 tooltip:""
 ( 	
@@ -287,8 +287,8 @@ tooltip:""
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_ExportSelected
-category:"tragNebula"
+macroscript zombie_ExportSelected
+category:"zombie"
 buttonText:"Export selected"
 tooltip:""
 ( 	
@@ -304,8 +304,8 @@ tooltip:""
 --------------------------------------------------------------
 -- macro script for 'internals docs of artist' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_treeNormals
-category:"tragNebula"
+macroscript zombie_treeNormals
+category:"zombie"
 buttonText:"Tree Normals"
 tooltip:"Tree Normals"
 ( 	
@@ -322,8 +322,8 @@ tooltip:"Tree Normals"
 --------------------------------------------------------------
 -- macro script for 'convert to plug' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_plugToPlug
-category:"tragNebula"
+macroscript zombie_plugToPlug
+category:"zombie"
 buttonText:"Convert to Plug"
 tooltip:"Convert to Plug" 
 ( 	
@@ -337,8 +337,8 @@ tooltip:"Convert to Plug"
 --------------------------------------------------------------
 -- macro script for 'convert to plug' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_UpdateBackedMaterialSelected
-category:"tragNebula"
+macroscript zombie_UpdateBackedMaterialSelected
+category:"zombie"
 buttonText:"Update backed"
 tooltip:"Update backed material , object selected" 
 ( 	
@@ -356,8 +356,8 @@ tooltip:"Update backed material , object selected"
 --------------------------------------------------------------
 -- macro script for 'Update baked material' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_UpdateBackedMaterialEditor
-category:"tragNebula"
+macroscript zombie_UpdateBackedMaterialEditor
+category:"zombie"
 buttonText:"Update backed"
 tooltip:"Update backed material, mateditor" 
 ( 	
@@ -375,8 +375,8 @@ tooltip:"Update backed material, mateditor"
 --------------------------------------------------------------
 -- macro script for 'Show all ligtmaps in viewport' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_ShowLightmaps
-category:"tragNebula"
+macroscript zombie_ShowLightmaps
+category:"zombie"
 buttonText:"show lightmaps"
 tooltip:"Show all lightmaps in viewport" 
 ( 	
@@ -393,8 +393,8 @@ tooltip:"Show all lightmaps in viewport"
 --------------------------------------------------------------
 -- macro script for 'Show all materials in viewport' menu item.
 --------------------------------------------------------------
-macroscript tragNebula_ShowMaterials
-category:"tragNebula"
+macroscript zombie_ShowMaterials
+category:"zombie"
 buttonText:"show zmaterials"
 tooltip:"Show all zombie materials in viewport" 
 ( 	
