@@ -6,8 +6,8 @@
     <!--RenderTarget name="ShadowBuffer0" format="A8R8G8B8" width="1024" height="1024" /-->
     
     <!-- render into shadow buffer -->
-    <Pass name="ShadowMap" shader="shaders:trag_passes.fx" technique="tPassColor" renderTarget="ShadowBuffer0" clearColor="1.0 1.0 1.0 1.0" clearDepth="1.0" clearStencil="0">
-        <Phase name="shadowdepth" shader="shaders:trag_phases.fx" technique="tPhaseShadowDepth" fourcc="sdep" sort="Surface" lights="Off">
+    <Pass name="ShadowMap" shader="shaders:zombie_passes.fx" technique="tPassColor" renderTarget="ShadowBuffer0" clearColor="1.0 1.0 1.0 1.0" clearDepth="1.0" clearStencil="0">
+        <Phase name="shadowdepth" shader="shaders:zombie_phases.fx" technique="tPhaseShadowDepth" fourcc="sdep" sort="Surface" lights="Off">
         </Phase>
     </Pass>
     
