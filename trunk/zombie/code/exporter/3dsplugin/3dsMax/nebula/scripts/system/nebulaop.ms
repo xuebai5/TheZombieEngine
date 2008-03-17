@@ -293,7 +293,7 @@ rollout neb3dsAboutRollout "About n3DSMaxExporter" width:439 height:230
 	label lblDesc "Zombie 3DS Max Toolkit." pos:[156,57] width:217 height:20
 	label lbl2 "Script Version " pos:[156,72] width:210 height:20
 	label lbl3 "Copyright (c) 2004 Conjurer Services, S.A." pos:[156,91] width:210 height:20
-	bitmap Logo "" pos:[15,33] width:124 height:144 fileName:"nebula/images/logo_tragnarion.bmp"
+	bitmap Logo "" pos:[15,33] width:124 height:144 fileName:"nebula/images/logo_zombie.bmp"
 	button btnOk "Ok" pos:[345,194] width:84 height:24
 
 	
