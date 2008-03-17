@@ -1,0 +1,11 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:beginnewobjectentityclass(neviewport,Hdrcam)$
+-- -----------------------------------------------------------
+nthis:setresourcefile([[wc:libs/system/cameras/hdrcam.n2]])
+nthis:clearragdollresources()
+nthis:setfloatoverride([[MinDist]], 0.000000)
+nthis:setfloatoverride([[MaxDist]], 20.000000)
+nthis:setinstanceenabled(false)
+nthis:setmaxmateriallevel(0)
+-- -----------------------------------------------------------
+-- Eof

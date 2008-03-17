@@ -1,0 +1,21 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nmaterialnode$
+-- -----------------------------------------------------------
+nthis:setvector([[MatDiffuse]], 0.140442, 0.178000, 0.174701, 1.000000)
+nthis:setvector([[MatSpecular]], 0.765000, 1.000000, 0.832523, 1.000000)
+nthis:setvector([[MatAmbient]], 0.573000, 0.485061, 0.416571, 1.000000)
+nthis:setfloat([[Intensity0]], 4.966000)
+nthis:setfloat([[Intensity1]], 1.000000)
+nthis:setfloat([[Intensity2]], 0.269560)
+nthis:setfloat([[Frequency]], 0.100000)
+nthis:setfloat([[Amplitude]], 0.500000)
+nthis:setvector([[Velocity]], 0.010000, 0.010000, 0.000000, 0.000000)
+nthis:setvector([[TexGenS]], 10.000000, 20.000000, 0.000000, 0.000000)
+nthis:setfloat([[FresnelBias]], 0.100000)
+nthis:setfloat([[FresnelPower]], 4.000000)
+nthis:setfloat([[BumpScale]], 0.304980)
+nthis:settexture([[BumpMap0]], [[wc:libs/system/textures/waves2_bump.dds]])
+nthis:settexture([[CubeMap0]], [[wc:libs/system/textures/cloudyhills.dds]])
+nthis:setdependency([[wc:libs/system/materials/mat0_ocean.n2]], [[/sys/servers/dependency/nmaterialdependencyserver]], [[setmaterial]])
+-- -----------------------------------------------------------
+-- Eof

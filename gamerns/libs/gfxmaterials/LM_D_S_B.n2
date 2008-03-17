@@ -1,0 +1,12 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nmaterial$
+-- -----------------------------------------------------------
+nthis:addparam([[env]], [[ambientlighting]])
+nthis:addparam([[env]], [[diffuselighting]])
+nthis:addparam([[env]], [[specularlighting]])
+nthis:addparam([[map]], [[bumpmap]])
+nthis:addparam([[map]], [[colormap]])
+nthis:addparam([[map]], [[levelmap]])
+nthis:addparam([[map]], [[lightmap]])
+-- -----------------------------------------------------------
+-- Eof

@@ -1,0 +1,9 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:beginnewobjectentityclass(neviewport,Sepiacam)$
+-- -----------------------------------------------------------
+nthis:setresourcefile([[wc:libs/system/cameras/sepiacam.n2]])
+nthis:clearragdollresources()
+nthis:setinstanceenabled(false)
+nthis:setmaxmateriallevel(0)
+-- -----------------------------------------------------------
+-- Eof

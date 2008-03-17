@@ -1,0 +1,14 @@
+type n3d2
+numgroups 1
+numvertices 4
+vertexwidth 11
+numtris 2
+numedges 0
+vertexcomps coord normal uv0 tangent
+g 0 4 0 2 0 1
+v -0.5  0.5 0.0 0.0 0.0 1.0 0.0 -1.0 0.0 1.0 0.0
+v  0.5 -0.5 0.0 0.0 0.0 1.0 1.0  0.0 0.0 1.0 0.0
+v  0.5  0.5 0.0 0.0 0.0 1.0 1.0 -1.0 0.0 1.0 0.0
+v -0.5 -0.5 0.0 0.0 0.0 1.0 0.0  0.0 0.0 1.0 0.0
+t 1 2 3
+t 0 3 2

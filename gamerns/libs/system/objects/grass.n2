@@ -1,0 +1,6 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nvegetationnode$
+-- -----------------------------------------------------------
+nthis:setdependency([[wc:libs/system/materials/surface_grass.n2]], [[/sys/servers/dependency/nsurfacedependencyserver]], [[setsurface]])
+-- -----------------------------------------------------------
+-- Eof

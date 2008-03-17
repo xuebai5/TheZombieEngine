@@ -1,0 +1,16 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nmaterial$
+-- -----------------------------------------------------------
+nthis:beginlevel()
+nthis:beginpass([[dept]])
+nthis:setshader([[shaders:default_dept.fx]])
+nthis:endpass()
+nthis:beginpass([[colr]])
+nthis:setshader([[shaders:default_colr_lmap.fx]])
+nthis:beginnode([[LightType]], [[pntl]])
+nthis:setshader([[shaders:default_colr_lmap_pntl.fx]])
+nthis:endnode()
+nthis:endpass()
+nthis:endlevel()
+-- -----------------------------------------------------------
+-- Eof

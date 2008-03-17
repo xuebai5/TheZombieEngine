@@ -1,0 +1,9 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:beginnewobjectentityclass(neviewport,Mrtcam)$
+-- -----------------------------------------------------------
+nthis:setresourcefile([[wc:libs/system/cameras/mrtcam.n2]])
+nthis:clearragdollresources()
+nthis:setinstanceenabled(false)
+nthis:setmaxmateriallevel(0)
+-- -----------------------------------------------------------
+-- Eof

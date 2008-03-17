@@ -1,0 +1,6 @@
+-- -----------------------------------------------------------
+-- $parser:nluaserver$ $class:nmaterialnode$
+-- -----------------------------------------------------------
+nthis:setdependency([[wc:libs/system/materials/mat_lmap.n2]], [[/sys/servers/dependency/nmaterialdependencyserver]], [[setmaterial]])
+-- -----------------------------------------------------------
+-- Eof
