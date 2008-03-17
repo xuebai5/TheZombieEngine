@@ -2,9 +2,9 @@
 <RenderPath name="dx7" shaderpath="home:data/shaders/fixed">
 
     <!-- declare shaders and technique aliases -->
-    <Shader name="passes" file="shaders:trag_passes.fx" />
-    <Shader name="phases" file="shaders:trag_phases.fx" />
-    <Shader name="terrain" file="shaders:trag_terrain.fx" />
+    <Shader name="passes" file="shaders:zombie_passes.fx" />
+    <Shader name="phases" file="shaders:zombie_phases.fx" />
+    <Shader name="terrain" file="shaders:zombie_terrain.fx" />
 
     <!-- define render targets -->
     <RenderTarget name="Offscreen"   format="A8R8G8B8"       relSize="1.0" />
@@ -18,29 +18,29 @@
     <Int    name="ShadowDstBlend" value="2" />
 
     <!-- render into framebuffer -->
-    <Pass name="Scene" shader="shaders:trag_passes.fx" technique="tPassColor" renderTarget="Offscreen" clearColor="0.5 0.5 0.5 1.0" clearDepth="1.0" clearStencil="0">
-        <Phase name="depth" shader="shaders:trag_phases.fx" technique="tPhaseDepth" fourcc="dept" sort="Surface" lights="Off" flags="ShapeVisible">
+    <Pass name="Scene" shader="shaders:zombie_passes.fx" technique="tPassColor" renderTarget="Offscreen" clearColor="0.5 0.5 0.5 1.0" clearDepth="1.0" clearStencil="0">
+        <Phase name="depth" shader="shaders:zombie_phases.fx" technique="tPhaseDepth" fourcc="dept" sort="Surface" lights="Off" flags="ShapeVisible">
         </Phase>
-        <Phase name="instanced" shader="shaders:trag_phases.fx" technique="tPhaseInstanced" fourcc="inst" sort="Surface" lights="On" flags="ShapeVisible">
+        <Phase name="instanced" shader="shaders:zombie_phases.fx" technique="tPhaseInstanced" fourcc="inst" sort="Surface" lights="On" flags="ShapeVisible">
         </Phase>
-        <Phase name="opaque" shader="shaders:trag_phases.fx" technique="tPhaseOpaque" fourcc="colr" sort="Surface" lights="On" flags="ShapeVisible">
+        <Phase name="opaque" shader="shaders:zombie_phases.fx" technique="tPhaseOpaque" fourcc="colr" sort="Surface" lights="On" flags="ShapeVisible">
         </Phase>
-        <Phase name="terrainHoles" shader="shaders:trag_terrain.fx" technique="tPhaseTerrainHole" fourcc="gmmh" sort="Surface" lights="Off" flags="ShapeVisible">
+        <Phase name="terrainHoles" shader="shaders:zombie_terrain.fx" technique="tPhaseTerrainHole" fourcc="gmmh" sort="Surface" lights="Off" flags="ShapeVisible">
         </Phase>
-        <Phase name="terrain0" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain0" fourcc="gmm0" sort="Surface" lights="On">
+        <Phase name="terrain0" shader="shaders:zombie_terrain.fx" technique="tPhaseTerrain0" fourcc="gmm0" sort="Surface" lights="On">
         </Phase>
-        <Phase name="terrain1" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain1" fourcc="gmm1" sort="Surface" lights="On">
+        <Phase name="terrain1" shader="shaders:zombie_terrain.fx" technique="tPhaseTerrain1" fourcc="gmm1" sort="Surface" lights="On">
         </Phase>
-        <Phase name="sky" shader="shaders:trag_phases.fx" technique="tPhaseSky" fourcc="sky0" sort="Surface" lights="Off" flags="ShapeVisible">
+        <Phase name="sky" shader="shaders:zombie_phases.fx" technique="tPhaseSky" fourcc="sky0" sort="Surface" lights="Off" flags="ShapeVisible">
         </Phase>
-        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseAlpha" fourcc="alph" sort="BackToFront" lights="On" flags="ShapeVisible">
+        <Phase name="alpha" shader="shaders:zombie_phases.fx" technique="tPhaseAlpha" fourcc="alph" sort="BackToFront" lights="On" flags="ShapeVisible">
         </Phase>
     </Pass>
     
-    <Pass name="shadowVolumes" shader="shaders:trag_passes.fx" technique="tPassShadow" clearStencil="0">
+    <Pass name="shadowVolumes" shader="shaders:zombie_passes.fx" technique="tPassShadow" clearStencil="0">
         <Float4 name="AlphaSrcBlend" variable="ShadowSrcBlend" />
         <Float4 name="AlphaDstBlend" variable="ShadowDstBlend" />
-        <Phase name="shadowvolumes" shader="shaders:trag_phases.fx" technique="tPhaseShadowVolume" fourcc="shdv" sort="Surface" lights="On" flags="ShadowVisible" lightflags="RenderOncePerLight">
+        <Phase name="shadowvolumes" shader="shaders:zombie_phases.fx" technique="tPhaseShadowVolume" fourcc="shdv" sort="Surface" lights="On" flags="ShadowVisible" lightflags="RenderOncePerLight">
         </Phase>
     </Pass>
 
@@ -50,12 +50,12 @@
     </Pass>
     
     <!-- draw first person geometry -->
-    <Pass name="firstPerson" shader="shaders:trag_passes.fx" technique="tPassColor" renderTarget="Offscreen" clearDepth="1.0" >
-        <Phase name="depth" shader="shaders:trag_phases.fx" technique="tPhaseDepth" fourcc="dept" sort="Surface" lights="Off" flags="AlwaysOnTop">
+    <Pass name="firstPerson" shader="shaders:zombie_passes.fx" technique="tPassColor" renderTarget="Offscreen" clearDepth="1.0" >
+        <Phase name="depth" shader="shaders:zombie_phases.fx" technique="tPhaseDepth" fourcc="dept" sort="Surface" lights="Off" flags="AlwaysOnTop">
         </Phase>
-        <Phase name="opaque" shader="shaders:trag_phases.fx" technique="tPhaseOpaque" fourcc="colr" sort="Surface" lights="On" flags="AlwaysOnTop">
+        <Phase name="opaque" shader="shaders:zombie_phases.fx" technique="tPhaseOpaque" fourcc="colr" sort="Surface" lights="On" flags="AlwaysOnTop">
         </Phase>
-        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseAlpha" fourcc="alph" sort="BackToFront" lights="On" flags="AlwaysOnTop">
+        <Phase name="alpha" shader="shaders:zombie_phases.fx" technique="tPhaseAlpha" fourcc="alph" sort="BackToFront" lights="On" flags="AlwaysOnTop">
         </Phase>
     </Pass>
 
@@ -67,8 +67,8 @@
         <Float name="Intensity0" variable="Saturation" />
     </Pass>
 
-    <Pass name="overlay" shader="shaders:trag_passes.fx" technique="tPassColor">
-        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseOverlay" fourcc="over" sort="Surface" lights="Off" flags="ShapeVisible">
+    <Pass name="overlay" shader="shaders:zombie_passes.fx" technique="tPassColor">
+        <Phase name="alpha" shader="shaders:zombie_phases.fx" technique="tPhaseOverlay" fourcc="over" sort="Surface" lights="Off" flags="ShapeVisible">
         </Phase>
     </Pass>
     

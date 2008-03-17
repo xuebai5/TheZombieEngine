@@ -8,12 +8,12 @@
     <Float4 name="ShadowProjectionDeform" value="1.0 0.0 0.0 1.0" />
    
     <!-- render shadow depth to shadow buffer -->
-    <Pass name="color" shader="shaders:trag_passes.fx" technique="tPassTerrainShadow" renderTarget="TerrainShadowmap" clearColor="1.0 1.0 1.0 1.0" clearDepth="1.0" clearStencil="0">
+    <Pass name="color" shader="shaders:zombie_passes.fx" technique="tPassTerrainShadow" renderTarget="TerrainShadowmap" clearColor="1.0 1.0 1.0 1.0" clearDepth="1.0" clearStencil="0">
         <Float4 name="ShadowProjectionDeform" variable="ShadowProjectionDeform" />
 
-        <Phase name="depth" shader="shaders:trag_phases.fx" technique="tPhaseShadowDepth" fourcc="sdep" sort="Surface" lights="Off">
+        <Phase name="depth" shader="shaders:zombie_phases.fx" technique="tPhaseShadowDepth" fourcc="sdep" sort="Surface" lights="Off">
         </Phase>
-        <!--Phase name="gmsd" shader="shaders:trag_phases.fx" technique="tPhaseShadowDepth" fourcc="gmsd" sort="Surface" lights="Off">
+        <!--Phase name="gmsd" shader="shaders:zombie_phases.fx" technique="tPhaseShadowDepth" fourcc="gmsd" sort="Surface" lights="Off">
         </Phase-->
     </Pass>
     

@@ -3,17 +3,17 @@
 
     <!-- declare shaders and technique aliases -->
     <Shaders>
-        <Shader name="passes" file="shaders:trag_passes.fx" />
-        <Shader name="phases" file="shaders:trag_phases.fx" />
-        <Shader name="terrain" file="shaders:trag_terrain.fx" />
-        <Shader name="nocull" file="shaders:trag_sequences.fx" technique="tSeqNoCull" />
-        <Shader name="depthbias" file="shaders:trag_sequences.fx" technique="tSeqDepthBias" />
-        <Shader name="linearfog" file="shaders:trag_sequences.fx" technique="tSeqLinearFog" />
-        <Shader name="depthbiaslinearfog" file="shaders:trag_sequences.fx" technique="tSeqDepthBiasLinearFog" />
-        <Shader name="alphatest" file="shaders:trag_sequences.fx" technique="tSeqAlphaTest" />
-        <Shader name="alphatestnocull" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestNoCull" />
-        <Shader name="alphatestlinearfog" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestLinearFog" />
-        <Shader name="alphatestnoculllinearfog" file="shaders:trag_sequences.fx" technique="tSeqAlphaTestNoCullLinearFog" />
+        <Shader name="passes" file="shaders:zombie_passes.fx" />
+        <Shader name="phases" file="shaders:zombie_phases.fx" />
+        <Shader name="terrain" file="shaders:zombie_terrain.fx" />
+        <Shader name="nocull" file="shaders:zombie_sequences.fx" technique="tSeqNoCull" />
+        <Shader name="depthbias" file="shaders:zombie_sequences.fx" technique="tSeqDepthBias" />
+        <Shader name="linearfog" file="shaders:zombie_sequences.fx" technique="tSeqLinearFog" />
+        <Shader name="depthbiaslinearfog" file="shaders:zombie_sequences.fx" technique="tSeqDepthBiasLinearFog" />
+        <Shader name="alphatest" file="shaders:zombie_sequences.fx" technique="tSeqAlphaTest" />
+        <Shader name="alphatestnocull" file="shaders:zombie_sequences.fx" technique="tSeqAlphaTestNoCull" />
+        <Shader name="alphatestlinearfog" file="shaders:zombie_sequences.fx" technique="tSeqAlphaTestLinearFog" />
+        <Shader name="alphatestnoculllinearfog" file="shaders:zombie_sequences.fx" technique="tSeqAlphaTestNoCullLinearFog" />
     </Shaders>
 
     <RenderTarget name="ShadowBuffer0"  format="R32F" width="512" height="512" />
@@ -24,8 +24,8 @@
     <Int    name="ShadowDstBlend" value="2" />
     
     <!-- render into framebuffer -->
-    <Pass name="color" shader="shaders:trag_passes.fx" technique="tPassColor" clearColor="0.5 0.5 0.5 1.0" clearDepth="1.0" clearStencil="0">
-        <Phase name="depth" shader="shaders:trag_phases.fx" technique="tPhaseDepth" restore="Yes" fourcc="dept" sort="Surface" lights="Off" flags="ShapeVisible">
+    <Pass name="color" shader="shaders:zombie_passes.fx" technique="tPassColor" clearColor="0.5 0.5 0.5 1.0" clearDepth="1.0" clearStencil="0">
+        <Phase name="depth" shader="shaders:zombie_phases.fx" technique="tPhaseDepth" restore="Yes" fourcc="dept" sort="Surface" lights="Off" flags="ShapeVisible">
             <Sequence shader="alphatest" />
             <Sequence shader="nocull" />
         </Phase>
@@ -37,34 +37,34 @@
             <Sequence shader="alphatestlinearfog" />
             <Sequence shader="alphatestnoculllinearfog" />
         </Phase>
-        <Phase name="opaque" shader="shaders:trag_phases.fx" technique="tPhaseOpaque" restore="Yes" fourcc="colr" sort="Surface" lights="On" flags="ShapeVisible">
+        <Phase name="opaque" shader="shaders:zombie_phases.fx" technique="tPhaseOpaque" restore="Yes" fourcc="colr" sort="Surface" lights="On" flags="ShapeVisible">
             <Sequence shader="nocull" />
             <Sequence shader="depthbias" />
             <Sequence shader="linearfog" />
             <Sequence shader="depthbiaslinearfog" />
         </Phase>
-        <Phase name="terrain0" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm0" sort="Surface" lights="On">
+        <Phase name="terrain0" shader="shaders:zombie_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm0" sort="Surface" lights="On">
             <Sequence shader="linearfog" />
         </Phase>
-        <Phase name="terrain1" shader="shaders:trag_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm1" sort="Surface" lights="On">
+        <Phase name="terrain1" shader="shaders:zombie_terrain.fx" technique="tPhaseTerrain" restore="Yes" fourcc="gmm1" sort="Surface" lights="On">
             <Sequence shader="linearfog" />
         </Phase>
-        <Phase name="sky" shader="shaders:trag_phases.fx" technique="tPhaseSky" restore="Yes" fourcc="sky0" sort="Surface" lights="Off" flags="ShapeVisible">
+        <Phase name="sky" shader="shaders:zombie_phases.fx" technique="tPhaseSky" restore="Yes" fourcc="sky0" sort="Surface" lights="Off" flags="ShapeVisible">
         </Phase>
-        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseAlpha" restore="Yes" fourcc="alph" sort="BackToFront" lights="On" flags="ShapeVisible">
+        <Phase name="alpha" shader="shaders:zombie_phases.fx" technique="tPhaseAlpha" restore="Yes" fourcc="alph" sort="BackToFront" lights="On" flags="ShapeVisible">
             <Sequence shader="nocull" />
             <Sequence shader="depthbias" />
             <Sequence shader="linearfog" />
             <Sequence shader="depthbiaslinearfog" />
         </Phase>
-        <Phase name="laser" shader="shaders:trag_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="lase" sort="Surface" lights="On" flags="ShapeVisible" lightflags="CheckLightEntity" >
+        <Phase name="laser" shader="shaders:zombie_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="lase" sort="Surface" lights="On" flags="ShapeVisible" lightflags="CheckLightEntity" >
         </Phase>
-        <Phase name="laser2" shader="shaders:trag_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="las2" sort="Surface" lights="Off" flags="ShapeVisible" >
+        <Phase name="laser2" shader="shaders:zombie_phases.fx" technique="tPhaseLaser" restore="Yes" fourcc="las2" sort="Surface" lights="Off" flags="ShapeVisible" >
         </Phase>
     </Pass>
 
     <!-- draw stencil shadows -->
-    <Pass name="shadowVolumes" shader="shaders:trag_passes.fx" technique="tPassShadow" clearStencil="0">
+    <Pass name="shadowVolumes" shader="shaders:zombie_passes.fx" technique="tPassShadow" clearStencil="0">
         <Float4 name="AlphaSrcBlend" variable="ShadowSrcBlend" />
         <Float4 name="AlphaDstBlend" variable="ShadowDstBlend" />
         <Phase name="shadowvolumes" fourcc="shdv" sort="Surface" lights="On" flags="ShadowVisible" lightflags="RenderOncePerLight">
@@ -77,7 +77,7 @@
     </Pass>
 
     <Pass name="overlay">
-        <Phase name="alpha" shader="shaders:trag_phases.fx" technique="tPhaseOverlay" restore="true" fourcc="over" sort="Surface" lights="Off" flags="ShapeVisible">
+        <Phase name="alpha" shader="shaders:zombie_phases.fx" technique="tPhaseOverlay" restore="true" fourcc="over" sort="Surface" lights="Off" flags="ShapeVisible">
         </Phase>
     </Pass>
 
@@ -89,7 +89,7 @@
     </Pass>
 
     <!-- compose the final frame -->
-    <!--Pass name="compose" shader="shaders:trag_hdr.fx" technique="tCopy" drawQuad="Yes">
+    <!--Pass name="compose" shader="shaders:zombie_hdr.fx" technique="tCopy" drawQuad="Yes">
         <Texture name="DiffMap0" value="ShadowBuffer0" />
     </Pass-->
 
