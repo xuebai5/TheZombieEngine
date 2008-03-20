@@ -88,7 +88,7 @@ NebulaMain(int argc, char * argv[])
 #endif
 
     const char* startupArg      = args.GetStringArg("-startup", "home:data/scripts/rnsstartup.lua");
-    const char* levelArg        = args.GetStringArg("-level", "wc:levels/pishland.n2");
+    const char* levelArg        = args.GetStringArg("-level", "wc:levels/default.n2");
     bool fullscreenArg          = args.GetBoolArg("-fullscreen");
     bool alwaysOnTopArg         = args.GetBoolArg("-alwaysontop");
     bool helpArg                = args.GetBoolArg("-help");

@@ -19,21 +19,22 @@
 // compilation time
 #define N_RELEASE_BUILD_TIME        __TIME__
 // build id ?
-#define N_RELEASE_BUILD_ID          "$BuildId$"
+#define N_RELEASE_BUILD_ID          ""
 // last version of the working copy
 #define N_RELEASE_SVN_REVISION      0
 // range of revisions in the working copy
-#define N_RELEASE_SVN_RANGE         "$WCRANGE$"
+#define N_RELEASE_SVN_RANGE         ""
 // URL of the working copy
-#define N_RELEASE_SVN_HEADURL       "$WCURL$"
+#define N_RELEASE_SVN_HEADURL       ""
 // date of the revision
-#define N_RELEASE_SVN_DATE          "$WCDATE$"
+#define N_RELEASE_SVN_DATE          ""
 // 1 if the working copy has mixed revisions
 #define N_RELEASE_SVN_MIXED         0
 // 1 if the working copy has been locally modified
 #define N_RELEASE_SVN_LOCALMOD      0
 // string with complete info about the revision
-#define N_RELEASE_SVN_REVISION_STR  N_RELEASE_NUMBER_STR " - $WCRANGE$$WCMIXED? Mixed:$$WCMODS? LocalMod:$ - $WCDATE$"
+#define N_RELEASE_SVN_REVISION_STR  N_RELEASE_NUMBER_STR
+//#define N_RELEASE_SVN_REVISION_STR  N_RELEASE_NUMBER_STR " - $WCRANGE$$WCMIXED? Mixed:$$WCMODS? LocalMod:$ - $WCDATE$"
 
 #endif//NAPPINFO_H
 //------------------------------------------------------------------------------
