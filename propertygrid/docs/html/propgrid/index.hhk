@@ -1,0 +1,536 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Add"><param name="Name" value="Add"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGConstants.htm#a2"><param name="Name" value="wxPGConstants"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="AddPage"><param name="Name" value="AddPage"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a3"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Append"><param name="Name" value="Append"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a3"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ArrayStringToString"><param name="Name" value="ArrayStringToString"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_13"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm"><param name="Name" value="attrids"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga0"><param name="Name" value="wxPG_BOOL_USE_CHECKBOX"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga3"><param name="Name" value="wxPG_FILE_SHOW_FULL_PATH"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga2"><param name="Name" value="wxPG_FILE_WILDCARD"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga1"><param name="Name" value="wxPG_FLOAT_PRECISION"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="AutoGetTranslation"><param name="Name" value="AutoGetTranslation"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e0"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="CenterSplitter"><param name="Name" value="CenterSplitter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a13"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ChildChanged"><param name="Name" value="ChildChanged"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGPropertyWithChildren.htm#a6"><param name="Name" value="wxPGPropertyWithChildren"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Clear"><param name="Name" value="Clear"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a15"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Collapse"><param name="Name" value="Collapse"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a22"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a16"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Compact"><param name="Name" value="Compact"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a19"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Create"><param name="Name" value="Create"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a14"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a20"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Delete"><param name="Name" value="Delete"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a25"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="DoSetValue"><param name="Name" value="DoSetValue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a3"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="EditorsValueWasModified"><param name="Name" value="EditorsValueWasModified"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_0"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="EnableCategories"><param name="Name" value="EnableCategories"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a25"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="EnsureVisible"><param name="Name" value="EnsureVisible"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a37"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a29"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Expand"><param name="Name" value="Expand"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a39"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a30"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GenerateEditorTextCtrl"><param name="Name" value="GenerateEditorTextCtrl"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_4"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GenerateProperty"><param name="Name" value="GenerateProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGValueType.htm#a6"><param name="Name" value="wxPGValueType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetChoiceInfo"><param name="Name" value="GetChoiceInfo"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a15"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetCustomTypeName"><param name="Name" value="GetCustomTypeName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGValueType.htm#a2"><param name="Name" value="wxPGValueType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetFirstChild"><param name="Name" value="GetFirstChild"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a54"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetFirstVisible"><param name="Name" value="GetFirstVisible"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a50"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetGoodEditorDialogPosition"><param name="Name" value="GetGoodEditorDialogPosition"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_6"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetGrid"><param name="Name" value="GetGrid"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a52"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a40"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetImageSize"><param name="Name" value="GetImageSize"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a9"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetLastChild"><param name="Name" value="GetLastChild"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a59"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a41"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetLastProperty"><param name="Name" value="GetLastProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a58"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetLastVisible"><param name="Name" value="GetLastVisible"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a61"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetNextProperty"><param name="Name" value="GetNextProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a63"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a44"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetNextVisible"><param name="Name" value="GetNextVisible"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a67"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPageByName"><param name="Name" value="GetPageByName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a47"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPageByState"><param name="Name" value="GetPageByState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a48"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetParentingType"><param name="Name" value="GetParentingType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a14"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPrevProperty"><param name="Name" value="GetPrevProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a68"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPropertyByLabel"><param name="Name" value="GetPropertyByLabel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a102"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a54"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPropertyByName"><param name="Name" value="GetPropertyByName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a103"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPropertyCategory"><param name="Name" value="GetPropertyCategory"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a72"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a56"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPropertyValue"><param name="Name" value="GetPropertyValue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a89"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetPropertyValues"><param name="Name" value="GetPropertyValues"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a41"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a94"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetRoot"><param name="Name" value="GetRoot"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a105"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a97"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetTypeSize"><param name="Name" value="GetTypeSize"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGValueType.htm#a3"><param name="Name" value="wxPGValueType"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetValueAsString"><param name="Name" value="GetValueAsString"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a6"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetValueType"><param name="Name" value="GetValueType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a12"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="GetY"><param name="Name" value="GetY"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a22"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="InitAllTypeHandlers"><param name="Name" value="InitAllTypeHandlers"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e12"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="Insert"><param name="Name" value="Insert"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a116"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="InsertPage"><param name="Name" value="InsertPage"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a105"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="IsFrozen"><param name="Name" value="IsFrozen"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a128"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a107"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="IsPropertyExpanded"><param name="Name" value="IsPropertyExpanded"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e13"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a113"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="m_colour"><param name="Name" value="m_colour"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxColourPropertyValue.htm#o1"><param name="Name" value="wxColourPropertyValue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="m_type"><param name="Name" value="m_type"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxColourPropertyValue.htm#o0"><param name="Name" value="wxColourPropertyValue"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="NewProperty"><param name="Name" value="NewProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridState.htm#a27"><param name="Name" value="wxPropertyGridState"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="OnCustomPaint"><param name="Name" value="OnCustomPaint"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a16"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="OnEvent"><param name="Name" value="OnEvent"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a10"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__propflags.htm"><param name="Name" value="propflags"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__propflags.htm#ga4"><param name="Name" value="wxPG_PROP_CUSTOMIMAGE"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="RedrawAllVisible"><param name="Name" value="RedrawAllVisible"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a148"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="RegisterEditorClass"><param name="Name" value="RegisterEditorClass"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e15"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="RegisterValueType"><param name="Name" value="RegisterValueType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e14"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SelectProperty"><param name="Name" value="SelectProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a166"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetAttribute"><param name="Name" value="SetAttribute"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a17"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetBoolChoices"><param name="Name" value="SetBoolChoices"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e16"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#e0"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetCellBackgroundColour"><param name="Name" value="SetCellBackgroundColour"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a160"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetCellTextColour"><param name="Name" value="SetCellTextColour"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a161"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetDefaultPriority"><param name="Name" value="SetDefaultPriority"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a217"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a131"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetPropertyAttribute"><param name="Name" value="SetPropertyAttribute"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a153"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a133"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetPropertyColour"><param name="Name" value="SetPropertyColour"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a155"><param name="Name" value="wxPropertyGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a135"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetPropertyLabel"><param name="Name" value="SetPropertyLabel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a174"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetPropertyName"><param name="Name" value="SetPropertyName"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a176"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetPropertyValue"><param name="Name" value="SetPropertyValue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a196"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetPropertyValues"><param name="Name" value="SetPropertyValues"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a207"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetPropertyValueUnspecified"><param name="Name" value="SetPropertyValueUnspecified"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a205"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetTargetPage"><param name="Name" value="SetTargetPage"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a166"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetValueFromInt"><param name="Name" value="SetValueFromInt"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a8"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetValueFromString"><param name="Name" value="SetValueFromString"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a7"><param name="Name" value="wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetVerticalSpacing"><param name="Name" value="SetVerticalSpacing"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a211"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SetWindowStyleFlag"><param name="Name" value="SetWindowStyleFlag"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a216"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="SLAlloc"><param name="Name" value="SLAlloc"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_9"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm"><param name="Name" value="wndflags"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga0"><param name="Name" value="wxPG_AUTO_SORT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga3"><param name="Name" value="wxPG_BOLD_MODIFIED"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga13"><param name="Name" value="wxPG_EX_INIT_NOCAT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga1"><param name="Name" value="wxPG_HIDE_CATEGORIES"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga6"><param name="Name" value="wxPG_HIDE_MARGIN"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga9"><param name="Name" value="wxPG_LIMITED_EDITING"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga4"><param name="Name" value="wxPG_SPLITTER_AUTO_CENTER"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga5"><param name="Name" value="wxPG_TOOLTIPS"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxColourPropertyValue.htm"><param name="Name" value="wxColourPropertyValue"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxColourPropertyValue.htm#o1"><param name="Name" value="m_colour"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxColourPropertyValue.htm#o0"><param name="Name" value="m_type"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_AUTO_SORT"><param name="Name" value="wxPG_AUTO_SORT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga0"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_BOLD_MODIFIED"><param name="Name" value="wxPG_BOLD_MODIFIED"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga3"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_BOOL_USE_CHECKBOX"><param name="Name" value="wxPG_BOOL_USE_CHECKBOX"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga0"><param name="Name" value="attrids"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_EX_INIT_NOCAT"><param name="Name" value="wxPG_EX_INIT_NOCAT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga13"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_FILE_SHOW_FULL_PATH"><param name="Name" value="wxPG_FILE_SHOW_FULL_PATH"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga3"><param name="Name" value="attrids"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_FILE_WILDCARD"><param name="Name" value="wxPG_FILE_WILDCARD"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga2"><param name="Name" value="attrids"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_FLOAT_PRECISION"><param name="Name" value="wxPG_FLOAT_PRECISION"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__attrids.htm#ga1"><param name="Name" value="attrids"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_HIDE_CATEGORIES"><param name="Name" value="wxPG_HIDE_CATEGORIES"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga1"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_HIDE_MARGIN"><param name="Name" value="wxPG_HIDE_MARGIN"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga6"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_LIMITED_EDITING"><param name="Name" value="wxPG_LIMITED_EDITING"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga9"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_PROP_CUSTOMIMAGE"><param name="Name" value="wxPG_PROP_CUSTOMIMAGE"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__propflags.htm#ga4"><param name="Name" value="propflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_SPLITTER_AUTO_CENTER"><param name="Name" value="wxPG_SPLITTER_AUTO_CENTER"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga4"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="wxPG_TOOLTIPS"><param name="Name" value="wxPG_TOOLTIPS"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__wndflags.htm#ga5"><param name="Name" value="wndflags"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGConstants.htm"><param name="Name" value="wxPGConstants"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGConstants.htm#a2"><param name="Name" value="Add"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm"><param name="Name" value="wxPGProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a3"><param name="Name" value="DoSetValue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a15"><param name="Name" value="GetChoiceInfo"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a9"><param name="Name" value="GetImageSize"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a14"><param name="Name" value="GetParentingType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a6"><param name="Name" value="GetValueAsString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a12"><param name="Name" value="GetValueType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a22"><param name="Name" value="GetY"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a16"><param name="Name" value="OnCustomPaint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a10"><param name="Name" value="OnEvent"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a17"><param name="Name" value="SetAttribute"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a8"><param name="Name" value="SetValueFromInt"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a7"><param name="Name" value="SetValueFromString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a0"><param name="Name" value="wxPGProperty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a2"><param name="Name" value="~wxPGProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGPropertyWithChildren.htm"><param name="Name" value="wxPGPropertyWithChildren"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGPropertyWithChildren.htm#a6"><param name="Name" value="ChildChanged"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGPropertyWithChildren.htm#a1"><param name="Name" value="wxPGPropertyWithChildren"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGValueType.htm"><param name="Name" value="wxPGValueType"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGValueType.htm#a6"><param name="Name" value="GenerateProperty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGValueType.htm#a2"><param name="Name" value="GetCustomTypeName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGValueType.htm#a3"><param name="Name" value="GetTypeSize"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyCategoryClass.htm"><param name="Name" value="wxPropertyCategoryClass"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyCategoryClass.htm#a1"><param name="Name" value="wxPropertyCategoryClass"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a3"><param name="Name" value="Append"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_13"><param name="Name" value="ArrayStringToString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e0"><param name="Name" value="AutoGetTranslation"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a13"><param name="Name" value="CenterSplitter"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a15"><param name="Name" value="Clear"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a22"><param name="Name" value="Collapse"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a14"><param name="Name" value="Create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a25"><param name="Name" value="Delete"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_0"><param name="Name" value="EditorsValueWasModified"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a37"><param name="Name" value="EnsureVisible"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a39"><param name="Name" value="Expand"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_4"><param name="Name" value="GenerateEditorTextCtrl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a54"><param name="Name" value="GetFirstChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a50"><param name="Name" value="GetFirstVisible"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_6"><param name="Name" value="GetGoodEditorDialogPosition"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a52"><param name="Name" value="GetGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a59"><param name="Name" value="GetLastChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a58"><param name="Name" value="GetLastProperty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a61"><param name="Name" value="GetLastVisible"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a63"><param name="Name" value="GetNextProperty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a67"><param name="Name" value="GetNextVisible"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a68"><param name="Name" value="GetPrevProperty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a102"><param name="Name" value="GetPropertyByLabel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a103"><param name="Name" value="GetPropertyByName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a72"><param name="Name" value="GetPropertyCategory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a89"><param name="Name" value="GetPropertyValue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a41"><param name="Name" value="GetPropertyValues"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a105"><param name="Name" value="GetRoot"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e12"><param name="Name" value="InitAllTypeHandlers"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a116"><param name="Name" value="Insert"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a128"><param name="Name" value="IsFrozen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e13"><param name="Name" value="IsPropertyExpanded"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a148"><param name="Name" value="RedrawAllVisible"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e15"><param name="Name" value="RegisterEditorClass"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e14"><param name="Name" value="RegisterValueType"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a166"><param name="Name" value="SelectProperty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#e16"><param name="Name" value="SetBoolChoices"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a160"><param name="Name" value="SetCellBackgroundColour"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a161"><param name="Name" value="SetCellTextColour"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a217"><param name="Name" value="SetDefaultPriority"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a153"><param name="Name" value="SetPropertyAttribute"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a155"><param name="Name" value="SetPropertyColour"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a174"><param name="Name" value="SetPropertyLabel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a176"><param name="Name" value="SetPropertyName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a196"><param name="Name" value="SetPropertyValue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a207"><param name="Name" value="SetPropertyValues"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a205"><param name="Name" value="SetPropertyValueUnspecified"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a211"><param name="Name" value="SetVerticalSpacing"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a216"><param name="Name" value="SetWindowStyleFlag"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#z0_9"><param name="Name" value="SLAlloc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGrid.htm#a0"><param name="Name" value="wxPropertyGrid"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a3"><param name="Name" value="AddPage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a16"><param name="Name" value="Collapse"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a19"><param name="Name" value="Compact"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a20"><param name="Name" value="Create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a25"><param name="Name" value="EnableCategories"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a29"><param name="Name" value="EnsureVisible"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a30"><param name="Name" value="Expand"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a40"><param name="Name" value="GetGrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a41"><param name="Name" value="GetLastChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a44"><param name="Name" value="GetNextProperty"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a47"><param name="Name" value="GetPageByName"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a48"><param name="Name" value="GetPageByState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a54"><param name="Name" value="GetPropertyByLabel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a56"><param name="Name" value="GetPropertyCategory"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a94"><param name="Name" value="GetPropertyValues"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a97"><param name="Name" value="GetRoot"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a105"><param name="Name" value="InsertPage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a107"><param name="Name" value="IsFrozen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a113"><param name="Name" value="IsPropertyExpanded"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#e0"><param name="Name" value="SetBoolChoices"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a131"><param name="Name" value="SetDefaultPriority"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a133"><param name="Name" value="SetPropertyAttribute"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a135"><param name="Name" value="SetPropertyColour"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a166"><param name="Name" value="SetTargetPage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridManager.htm#a0"><param name="Name" value="wxPropertyGridManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridState.htm"><param name="Name" value="wxPropertyGridState"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPropertyGridState.htm#a27"><param name="Name" value="NewProperty"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="See Also" value="~wxPGProperty"><param name="Name" value="~wxPGProperty"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classwxPGProperty.htm#a2"><param name="Name" value="wxPGProperty"></OBJECT>
+</UL>
