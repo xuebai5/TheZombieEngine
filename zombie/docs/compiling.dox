@@ -206,4 +206,18 @@
     -level [level_name] Works just like in Conjurer. Currently, there is no other
         way to load a level in Renaissance, so this parameter should be always
         provided unless the game menu is extended to select levels.
+
+    @section 3DSMAXPluginInstall Installing 3D Studio MAX plugins
+	
+	To install the 3D Studio MAX plugins follow these steps:
+	
+	- Compile the debug version of the driver (better error reporting than release).
+	- Copy the three plugins n3dsutilfunctions.dlu, n3dsmaxexport.dle and nmaterialstextures.dlt 
+	to the plugins directory in your MAX installation (similar to C:\Program Files\Autodesk\3ds Max 9\plugins)
+	- Copy the libraries for devil.dll and ilu.dll to your MAX main directory (similar to C:\Program Files\Autodesk\3ds Max 9)
+	- Copy the directory trunk\zombie\code\exporter\3dsplugin\3dsMax to your MAX main directory (similar to C:\Program Files\Autodesk\3ds Max 9)
+	- Define the system variable NEBULA2_HOME pointing to the directory where you have the zombie directory (c:\sf\trunk\zombie for example)
+	- Define the system variable CONJURER_WC pointing to the directory where you have the data working copy (c:\sf\trunk\gamerns for example)
+	- Define the system variable CONJURER_WCTMP pointing to a temporal directory for exporting (e.g. c:\sf\trunk\wctmp)
+
 */
