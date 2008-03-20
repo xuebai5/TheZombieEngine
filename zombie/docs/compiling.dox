@@ -45,6 +45,9 @@
 
 	http://www.zlatkovic.com/pub/libxml/oldreleases/libxml2-2.6.17.win32.zip
   
+	In the case you want to run and compile the 3D Studio MAX 9 plugins you will need 
+	to install 3D Studio MAX 9 and 3D Studio MAX 9 SDK.
+  
     @subsection ZombieCompilingRequirementsLibIncluded Included libraries
 	
     Included external libraries:
@@ -83,11 +86,11 @@
 	
     - TinyXml. http://www.grinninglizard.com/tinyxml. Zlib license.
 	
-    - wxPropertyGrid. A wxPython control used for object inspectors. Based on the one provided in http://wxpropgrid.sourceforge.net/, but slightly modified to suit better the needs of Conjurer editor. The modified source is provided in the repository. WxWindows license which is basically L-GPL license.
+    - wxPropertyGrid. A wxPython control used for object inspectors. Based on the one provided in http://wxpropgrid.sourceforge.net/, but slightly modified to suit better the needs of Conjurer editor. The modified source is provided in the repository. WxWindows license which is basically L-GPL license. WxWindows license (similar to L-GPL).
 	
 	- dbghelp.dll. Microsoft helper library for debugging. Redistributed in bin/dll directory.
 	
-	- msvcp71.dll, msvcr71.dll
+	- msvcp71.dll, msvcr71.dll: visual c library for Visual Studio .NET 2003 (7.1).
 
     @subsection ZombieCompilingOptionalLibs Optional Libraries
 	
@@ -111,6 +114,12 @@
     python update.py -nogui -build [platform] [workspace]
     @endverbatim
     
+	There are three workspaces available in the project:
+	
+	- conjurer: editor and game application.
+	- renaissance: game application.
+	- 3dsplugin: 3D Studio MAX plugins.
+	
     For example, building the Conjurer project files for Visual Studio 2005 would be:
     
     @verbatim
@@ -147,6 +156,10 @@
     - Release. This is the fastest of configurations, it is optimized of asserts. 
       It is intended for final release, and its binaries are generated in the bin/win32 folder.
 
+    In order to compile the workspaces succesfully you will have to add includes and lib 
+	directories to your Microsoft Visual Studio configuration. At least for Direct X, Python,
+	Platform SDK and 3D Studio MAX 9 SDK (just for the exporter).
+	  
     @section ZombieCompilingRunning Running
 
     Zombie provides workspaces for the two most useful projects you'll need, the
@@ -154,6 +167,13 @@
     This sections is an overview of the most common options for running them.
     Please refer to their corresponding User manuals for detailed usage.
     
+	In order to run the editor, apart of all the dependencies that have been
+	mentioned previously you will need to copy manually the precompiled 
+	binaries for the property widget located in trunk/wxWidgets to your
+	wxWidgets installation (probably in C:\Python24\Lib\site-packages\wx-2.6-msw-unicode 
+	or similar directory). Note that the source code for the property widget
+	is also provided and you can compile it yourself (located in trunk/propertygrid).
+	
     The Conjurer application is the editor framework. In order to run it all
     required components need to be installed (see above), and a Working Copy
     needs to have been set up. The following parameters can be used to run
