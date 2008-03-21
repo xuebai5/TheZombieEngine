@@ -14,7 +14,7 @@
 
 
 const char defaultNameMaterial[] = "none";
-const char*  pathTextureSystem   = "home:export/textures/system/";
+const char*  pathTextureSystem   = "wc:libs/system/textures/";
 
 //------------------------------------------------------------------------------
 /**
@@ -691,7 +691,7 @@ n3dsMaterial::SetErrorMaterial()
     nAbstractPropBuilder propMatSurface;
     propMatSurface.SetAbstractType(nAbstractPropBuilder::NSURFACE);
     propMatSurface.SetShader("dept", "shaders:error.fx");
-    propMatSurface.SetTexture("diffMap", "home:export/textures/system/error.tga");
+    propMatSurface.SetTexture("diffMap", "wc:libs/system/textures/error.tga");
     this->propMatSurface = propMatSurface;
     this->notExport = true;
 }
