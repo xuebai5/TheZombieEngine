@@ -96,7 +96,8 @@ Page custom PageReinstall PageLeaveReinstall
 !define MUI_FINISHPAGE_LINK "Visit The Zombie Engine site at SourceForge for the latest news, FAQs and support"
 !define MUI_FINISHPAGE_LINK_LOCATION "http://thezombieengine.sf.net/"
 
-!define MUI_FINISHPAGE_RUN "$INSTDIR\zombie\bin\win32\conjurer.exe"
+!define MUI_FINISHPAGE_RUN
+!define MUI_FINISHPAGE_RUN_FUNCTION LaunchConjurer
 !define MUI_FINISHPAGE_NOREBOOTSUPPORT
 
 !define MUI_FINISHPAGE_SHOWREADME
@@ -139,6 +140,7 @@ ${MementoSection} "The Zombie Engine Core and Conjurer editor" SecCore
   File "..\zombie\bin\win32\ilu.dll"
   File "..\zombie\bin\win32\msvcp71.dll"
   File "..\zombie\bin\win32\msvcr71.dll"
+  File "..\zombie\bin\win32d\python24.dll"
   File "..\zombie\bin\win32\renaissance.exe"
   File "..\zombie\bin\win32\conjurer.exe"
   
@@ -149,6 +151,7 @@ ${MementoSection} "The Zombie Engine Core and Conjurer editor" SecCore
   File "..\zombie\bin\win32d\ilu.dll"
   File "..\zombie\bin\win32d\msvcp71.dll"
   File "..\zombie\bin\win32d\msvcr71.dll"
+  File "..\zombie\bin\win32d\python24.dll"
   File "..\zombie\bin\win32d\renaissance.exe"
   File "..\zombie\bin\win32d\conjurer.exe"
 
@@ -276,19 +279,15 @@ ${MementoSection} "Start Menu Shortcuts" SecStartMenuShortcuts
   SetOutPath $INSTDIR\zombie\bin\win32d
   ;CreateDirectory "$SMPROGRAMS\The Zombie Engine\Debug"
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "..\zombie\bin\win32d\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Presentation Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "..\zombie\bin\win32d\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Debug\Presentation Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
 
   SetOutPath $INSTDIR\zombie\bin\win32
   ;CreateDirectory "$SMPROGRAMS\The Zombie Engine\Release"
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "..\zombie\bin\win32\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Presentation Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "..\zombie\bin\win32\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Release\Presentation Renaissance.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
 
   SetOutPath $INSTDIR
@@ -570,4 +569,10 @@ Function .onInstSuccess
 
   SetDetailsPrint both
 	
+FunctionEnd
+
+Function LaunchConjurer
+
+  Exec '"$INSTDIR\zombie\bin\win32\conjurer.exe" -wc "$INSTDIR\gamerns" -w 1024 -h 768'
+  
 FunctionEnd
