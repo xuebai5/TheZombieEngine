@@ -76,7 +76,7 @@ Caption "The Zombie Engine ${VERSION} Setup"
 !define MUI_ABORTWARNING
 
 !define MUI_HEADERIMAGE
-!define MUI_WELCOMEFINISHPAGE_BITMAP "..\gamerns\libs\system\textures\rns_loadscreen.tga"
+;!define MUI_WELCOMEFINISHPAGE_BITMAP "..\gamerns\libs\system\textures\rns_loadscreen.tga"
 
 !define MUI_COMPONENTSPAGE_SMALLDESC
 
@@ -100,8 +100,8 @@ Page custom PageReinstall PageLeaveReinstall
 !define MUI_FINISHPAGE_NOREBOOTSUPPORT
 
 !define MUI_FINISHPAGE_SHOWREADME
-!define MUI_FINISHPAGE_SHOWREADME_TEXT "Show release notes"
-!define MUI_FINISHPAGE_SHOWREADME_FUNCTION ShowReleaseNotes
+;!define MUI_FINISHPAGE_SHOWREADME_TEXT "Show release notes"
+;!define MUI_FINISHPAGE_SHOWREADME_FUNCTION ShowReleaseNotes
 
 !insertmacro MUI_PAGE_FINISH
 
@@ -164,7 +164,7 @@ ${MementoSectionEnd}
 ${MementoSection} "Clean working copy data" SecWorkingCopy
 
   SetDetailsPrint textonly
-  DetailPrint "Clean working copy data..."
+  DetailPrint "Copying Clean working copy data..."
   SetDetailsPrint listonly
 
   SectionIn 1 2
@@ -172,6 +172,8 @@ ${MementoSection} "Clean working copy data" SecWorkingCopy
   SetOutPath $INSTDIR\gamerns
   File /r /x ".svn" "..\gamerns\*.*"
   File /r /x ".svn" "..\gamerns\*"
+
+  CreateDirectory "$INSTDIR\gamernstemp"
   
 ${MementoSectionEnd}
 
@@ -274,19 +276,19 @@ ${MementoSection} "Start Menu Shortcuts" SecStartMenuShortcuts
   SetOutPath $INSTDIR\zombie\bin\win32d
   ;CreateDirectory "$SMPROGRAMS\The Zombie Engine\Debug"
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "zombie\bin\win32d\renaissance.exe" +1 +2
+  IfFileExists "..\zombie\bin\win32d\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Presentation Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "zombie\bin\win32d\renaissance.exe" +1 +2
+  IfFileExists "..\zombie\bin\win32d\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Debug\Presentation Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
 
   SetOutPath $INSTDIR\zombie\bin\win32
   ;CreateDirectory "$SMPROGRAMS\The Zombie Engine\Release"
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "zombie\bin\win32\renaissance.exe" +1 +2
+  IfFileExists "..\zombie\bin\win32\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Presentation Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  IfFileExists "zombie\bin\win32\renaissance.exe" +1 +2
+  IfFileExists "..\zombie\bin\win32\renaissance.exe" +1 +2
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Release\Presentation Renaissance.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
 
   SetOutPath $INSTDIR
@@ -459,7 +461,7 @@ FunctionEnd
 Section Uninstall
 
   SetDetailsPrint textonly
-  DetailPrint "Uninstalling NSI Development Shell Extensions..."
+  DetailPrint "Uninstalling The Zombie Engine..."
   SetDetailsPrint listonly
 
   IfFileExists $INSTDIR\zombie\bin\win32\conjurer.exe zombie_installed
@@ -477,6 +479,10 @@ Section Uninstall
   
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Zombie"
   DeleteRegKey HKLM "Software\Zombie"
+
+  SetDetailsPrint textonly
+  DetailPrint "Deleting Environment variables..."
+  SetDetailsPrint listonly
   
   ; Write the environment variable/Exec
   Push "NEBULA2_HOME"      # name
@@ -489,11 +495,12 @@ Section Uninstall
   Call un.DeleteEnvStr
   
   SetDetailsPrint textonly
-  DetailPrint "Deleting Files..."
+  DetailPrint "Deleting Files and shortcuts..."
   SetDetailsPrint listonly
 
-  Delete "$SMPROGRAMS\The Zombie Engine"
+  RMDir /r "$SMPROGRAMS\The Zombie Engine"
   RMDir /r $INSTDIR
+  Delete "$DESKTOP\Conjurer.lnk"
 
   SetDetailsPrint both
 
@@ -503,7 +510,7 @@ Function .onInstSuccess
 
     ; Write the environment variable/Exec
     Push "NEBULA2_HOME"      # name
-    Push "$INSTDIR"          # value
+    Push "$INSTDIR\zombie"          # value
     Call WriteEnvStr
                            
     Push "CONJURER_WC"      
