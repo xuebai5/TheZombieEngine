@@ -1,0 +1,304 @@
+/**
+    @page ZombieFeatures Zombie Features
+
+    The Zombie engine is a game engine and framework based in nebula2, an open
+    source engine from Radon Labs. nebula2 has been extended in a number of ways,
+    and a full game framework has been created around it. It is mainly oriented
+    towards the creation of a multiplayer PC action game, but it can be adapted to
+    suit the needs of similar projects, and extended to support other genres and
+    platforms.
+
+    - @ref ZombieFeaturesComponents
+        - @ref ZombieFeaturesComponentsCore
+        - @ref ZombieFeaturesComponentsConjurer
+        - @ref ZombieFeaturesComponents3DSPlugin
+        - @ref ZombieFeaturesComponentsRenaissance
+    - @ref ZombieFeaturesCore
+    - @ref ZombieFeaturesConjurer
+    - @ref ZombieFeaturesRenaissance
+    - @ref ZombieFeatures3DSPlugin
+
+    @section ZombieFeaturesComponents Components
+
+    The Zombie Engine is not a standalone, out-of-the-box solution, but a suite
+    of modules and tools:
+
+    @subsection ZombieFeaturesComponentsCore Core
+
+    These are the low-level modules that provide the basic services used by the
+    rest of the framework. The Zombie Engine makes use of a significant part of the
+    core modules modules in nebula2, such as: kernel, file and resource management,
+    graphics, particles, character, audio and video, lua and python scripting, and
+    other utility modules. The source code for these modules can be found in the
+    code/nebula2/ path in the zombie distribution.
+
+    Along with these, a few other modules have been derived from existing
+    modules in the open source nebula2, but their architecture has been changed or
+    extended in significant ways, although they still make extensive use of the
+    contribution from the original nebula2 modules. These are the application,
+    scene, animation, and spatial modules.
+
+    Finally, some basic modules have been created from scratch to extend the
+    core system provided by nebula2, and to provide the remaining building blocks
+    required by the exporter, editor and game frameworks. These modules are entity,
+    material, terrain, physics, network, sound and music, and class scripting.
+
+    Regardless of their origin, all of these modules will be called Zombie Core,
+    for the sake of this documentation.
+
+    @subsection ZombieFeaturesComponentsConjurer Conjurer
+
+    To this group belong the modules, classes and scripts that build up the
+    editor framework, including the Conjurer and Summoner tools. Conjurer itself is
+    built on top of the nebula2 application module, and is divided in two big
+    pieces. One is the conjurer module itself, including the 3D interface for
+    editing entities and terrain, and other important modules such a Debug
+    visualizations and Undo commands.
+
+    The other half is Summoner, a MDI-style application built in Python using
+    the wxPython libraries for gui creation, that is fully integrated with the
+    Conjurer module, for which it provides the toolbars, dialogs and inspectors
+    required for editing operation. Summoner includes such powerful features as
+    interactive log window, script edition and execution, class and entity browsing,
+    and the ability to inspect, edit and save the game library and entities.
+
+    Working together, Conjurer and Summoner are the main entry point for game
+    designers, artists and programmers alike, to build maps, define behaviors and
+    manage the game database as stored in a shared repository (see Working Copy,
+    below).
+
+    @subsection ZombieFeaturesComponents3DSPlugin 3DSPlugin
+
+    The 3DStudio Max plugin is the main entry point for artists to work on art
+    assets and export them into the working copy, thus integrating them into the
+    game database. The plugin itself is a combination of a nebula2-based module, and
+    a set of MaxScript files that present the artists with an interface for defining
+    Zombie-specific materials, spatial structures (cells and portals), and other
+    such constructs, that will be converted into Zombie assets at export time.
+
+    @subsection ZombieFeaturesComponentsRenaissance Renaissance
+
+    The high-level game framework defines all classes, states and behaviors that
+    allow game designers and programmers to create a game. This is an extensive set
+    of modules built on top of the core modules, most significantly the entity
+    system. It plays 2 roles in developing a game: exposing the attributes and
+    contents that will define the behavior of the game in human-readable and
+    -editable form. And serving as a base for programmers to create the game
+    specific classes that will implement design requirements.
+
+    In order to play these two roles, the Renaissance framework includes such
+    generic game-related modules as Navigation and Pathfinding, Finite State
+    Machines, Triggers, Waypoints, Spawners, Special Effects or Game Actions. But
+    more specific modules are provided that cope with the specifics of a multiplayer
+    action game: Enemy AI, Combat and Weapons, Vehicles, Doors, and so on.
+
+    These modules can be found in the Zombie code, broken down in the different
+    areas they cover: entities, gameplay, actions, network, etc. most of which need
+    to be customized for other, specific types of games, but represent a sample of
+    the kinds of behaviors that it is possible to implement through the Zombie
+    engine.
+
+    Finally, Renaissance provides developers with an application framework,
+    required to pack it all up, and run the game as stored in the working copy,
+    stripping all tools and auxiliary code used by the editor. It also includes such
+    things as the handling of game menus, interface for game connections, and other
+    such user-oriented features.
+
+    @section ZombieFeaturesCore Zombie Core Features
+
+    The modules included in the nebula2-based Core provide the following set
+    of utilities and features. For more information on nebula2 modules, please
+    refer to the nebula2 open source documentation
+    (http://nebuladevice.cubik.org/documentation/nebula2/index.shtml).
+
+    - Kernel
+      - Object system
+      - Hierarchical object namespace
+      - Scripting
+      - Object persistence
+      - Signals
+      - Entities
+      - Resources
+      - Variables
+      - File system
+      - Multithreading
+      - Time management
+
+    - Utilities
+      - Console
+      - Logging
+      - Profiling
+      - Crash report
+      - Math library
+      - Smart pointers
+      - Resource and package management (builders, loaders, packaging)
+
+    - Systems
+      - DX9 graphics
+      - Input
+      - Particles
+      - Skeletal animation
+      - Scene renderer
+      - Spatial database
+      - 2D GUI
+      - Application framework
+      - Terrain renderer
+      - Graphics materials
+      - Collision
+      - Physics
+      - Audio and video
+      - Network
+      - Special FX
+
+    - What it lacks or could be improved
+      - Object property slots (not only commands)
+      - Property types- vector, list, dictionary
+      - Multiple platforms
+      - Memory management
+      - Multicore support
+      - Multithreading
+
+    @section ZombieFeaturesConjurer Conjurer Features
+
+    - Conjurer
+      - Editor viewport- Editor grid with Snap to grid /
+      - Viewport layout
+
+      - Entity placing: single and multiple entity placing
+      - Entity transform: translation, rotation, scaling
+      - Entity picking and selecting
+
+      - Game asset management
+      - Game level management
+      - Editor layer management
+      - Save and restore
+
+    - Terrain editor-
+      - Terrain geometry editor: raise, flatten, noise, slope, smooth
+      - High resolution terrain material painting editor with streaming for
+        painting large terrains
+      - Terrain holes
+      - Grass layer
+
+    - Distance measuring tool
+    - Sound source editor
+    - Trigger editor
+    - Waypoint editor
+
+    - Terrain lightmap builder
+    - Navigation mesh builder
+    
+    - Superentity editor: grouped entities
+    
+    - Geometry batch builder
+    - Geometry impostor builder
+    - Geometry stream editor
+
+    - Utilities
+      - Viewport debug options
+      - Viewport debug visualization
+      - Camera bookmarks
+      - Distance measuring
+      - On-screen logging
+      - Undo commands
+
+    - Summoner
+      - Grimoire: entity class library
+      - Object browser
+      - Entity browser
+      - Object and class inspection
+
+    - Lua console
+    - Python console
+    - Python script editor
+    - Lua class script editor
+
+    - User and level presets
+
+    - Layer management
+
+    - Terrain editor
+      - Geometry tools
+      - Terrain materials
+      - Grass brushes
+
+    - Music table
+    - Sound scheduler
+
+    - Particle system
+
+    - Animation management
+      - Entity attachments
+
+    - Grass editor
+    - FSM editor
+    - Spawner editor
+    - Event editor
+    - Mission objectives
+
+    @section ZombieFeatures3DSPlugin 3DSPlugin Features
+
+    - Class and asset exporter
+      - Export to temporary working copy for preview
+
+    - Geometry exporter
+      - Level-of-detail
+
+    - Material exporter
+      - Texture conversion
+      - Texture animators
+
+    - Animation exporter
+      - Skeletons
+      - Animations
+      - Plugs
+
+    - Collision exporter
+
+    - Visibility exporter
+      - Cells
+      - Portals
+      - Occluders
+
+    @section ZombieFeaturesRenaissance Renaissance features
+
+    - Navigation meshes
+    - Triggers
+    - Paths
+    - Spawners, Populators
+    - Game materials
+    - Game camera
+    - Mission handler
+
+    - Inventory
+      - Items
+      - Weapons
+      - Accesories
+
+    - Sound layer
+
+    - Effect manager
+      - special fx
+      - impact sounds
+
+    - Network replication
+
+    - Game AI
+      - Basic actions- decision
+      - Pathfinding
+      - FSMs
+      - Perception, Events
+      - Movement engine
+      - Memory
+      - Enemy AI
+      - Squad behavior
+
+    - Game combat
+      - Melee combat
+      - Ranged combat
+      - Group combat
+      - Missiles
+      - Vehicles
+
+    - Damage
+*/
