@@ -162,6 +162,9 @@ ${MementoSection} "The Zombie Engine Core and Conjurer editor" SecCore
   SetOutPath $INSTDIR\zombie\docs
   File /r /x ".svn" "..\zombie\docs\*.*"
 
+  SetOutPath $INSTDIR\zombie\code\conjurer\conjurer\gui
+  File /r /x ".svn" "..\zombie\code\conjurer\conjurer\gui\*.*"
+  
 ${MementoSectionEnd}
 
 ${MementoSection} "Clean working copy data" SecWorkingCopy
