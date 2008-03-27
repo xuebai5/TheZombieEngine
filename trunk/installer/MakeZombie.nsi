@@ -100,9 +100,7 @@ Page custom PageReinstall PageLeaveReinstall
 !define MUI_FINISHPAGE_RUN_FUNCTION LaunchConjurer
 !define MUI_FINISHPAGE_NOREBOOTSUPPORT
 
-!define MUI_FINISHPAGE_SHOWREADME
-;!define MUI_FINISHPAGE_SHOWREADME_TEXT "Show release notes"
-;!define MUI_FINISHPAGE_SHOWREADME_FUNCTION ShowReleaseNotes
+!define MUI_FINISHPAGE_SHOWREADME "$INSTDIR\readme.txt"
 
 !insertmacro MUI_PAGE_FINISH
 
@@ -131,7 +129,10 @@ ${MementoSection} "The Zombie Engine Core and Conjurer editor" SecCore
   
   SetOutPath $INSTDIR\zombie
   File "..\zombie\xmlschema.xml"
+  
+  SetOutPath $INSTDIR
   File "..\zombie\docs\Zombie LICENSE.txt"
+  File "..\installer\readme.txt"
 
   SetOutPath $INSTDIR\zombie\bin\win32
   ;File "..\zombie\bin\win32\xcrashreport.exe"
@@ -140,7 +141,7 @@ ${MementoSection} "The Zombie Engine Core and Conjurer editor" SecCore
   File "..\zombie\bin\win32\ilu.dll"
   File "..\zombie\bin\win32\msvcp71.dll"
   File "..\zombie\bin\win32\msvcr71.dll"
-  File "..\zombie\bin\win32d\python24.dll"
+  ;File "..\zombie\bin\win32d\python24.dll"
   File "..\zombie\bin\win32\renaissance.exe"
   File "..\zombie\bin\win32\conjurer.exe"
   
@@ -151,7 +152,7 @@ ${MementoSection} "The Zombie Engine Core and Conjurer editor" SecCore
   File "..\zombie\bin\win32d\ilu.dll"
   File "..\zombie\bin\win32d\msvcp71.dll"
   File "..\zombie\bin\win32d\msvcr71.dll"
-  File "..\zombie\bin\win32d\python24.dll"
+  ;File "..\zombie\bin\win32d\python24.dll"
   File "..\zombie\bin\win32d\renaissance.exe"
   File "..\zombie\bin\win32d\conjurer.exe"
 
@@ -453,9 +454,6 @@ Function PageLeaveReinstall
 FunctionEnd
 
 !endif # VER_MAJOR & VER_MINOR & VER_REVISION & VER_BUILD
-
-Function ShowReleaseNotes
-FunctionEnd
 
 ;--------------------------------
 ;Uninstaller Section
