@@ -145,8 +145,6 @@ nConjurerApp::Open()
 
     kernelServer->New("nkernelserverproxy", "/sys/servers/kernelserver");
 
-    nCommonApp::Open();
-
     // OUTGUI
     if (this->GetGuiScriptFile())
     {
@@ -156,6 +154,8 @@ nConjurerApp::Open()
     {
         this->SetRenderWindowEmbedded( false );
     }
+
+    nCommonApp::Open();
 
     this->refAITester = (nAITester*) kernelServer->New("naitester", "/sys/servers/aitester");
 
