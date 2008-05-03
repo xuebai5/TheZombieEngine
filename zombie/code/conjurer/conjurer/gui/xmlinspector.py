@@ -143,7 +143,7 @@ def cmds_select(inspector, cmd_name):
 
     if len(inspector.in_params) > 0:
         inspector.cmds_pg.Append(
-            pg.PropertyCategory( 
+            pg.wxPropertyCategory( 
                 "In Args", 
                 "InValues" 
                 )
@@ -159,7 +159,7 @@ def cmds_select(inspector, cmd_name):
 
     if len(inspector.out_params) > 0:
         inspector.cmds_pg.Append(
-            pg.PropertyCategory(
+            pg.wxPropertyCategory(
                 "Out Args", 
                 "OutValues")
                 )
@@ -278,56 +278,56 @@ def __draw_input_fields(inspector, params, type):
 
         if param_type == 'i':
             if "spin" == editor:
-                element = pg.IntProperty(param_name, label)                
+                element = pg.wxIntProperty(param_name, label)                
 
             elif "color" == editor:
-                element = pg.ColourProperty(param_name, label, wx.RED)
+                element = pg.wxColourProperty(param_name, label, wx.RED)
 
             elif "slider" == editor:
-                element = pg.IntProperty(param_name, label)
+                element = pg.wxIntProperty(param_name, label)
 
             elif "enum" == editor:
                 test_labels = ["uno", "dos", "tres"]
                 test_values = [1, 2, 3]
-                element = pg.EnumProperty(
+                element = pg.wxEnumProperty(
                                 param_name, 
                                 label, 
                                 test_labels, 
                                 test_values)
 
             elif "flags" == editor:
-                element = pg.IntProperty("flags", label)
+                element = pg.wxIntProperty("flags", label)
             else:
-                element = pg.IntProperty(param_name, label)
+                element = pg.wxIntProperty(param_name, label)
         
         elif param_type == 'f':
-            element = pg.FloatProperty('Float', label) 
+            element = pg.wxFloatProperty('Float', label) 
 
         elif param_type == 's':
             if "" == editor:
                 if type == "in":
                     element = check_string_subtypes(subtype, param_name, label)
                 else:
-                    element = pg.StringProperty(param_name, label, '')
+                    element = pg.wxStringProperty(param_name, label, '')
             elif "font" == editor:
-                element = pg.FontProperty(param_name, label, wx.NORMAL_FONT)
+                element = pg.wxFontProperty(param_name, label, wx.NORMAL_FONT)
 
         elif param_type == 'b':
-            element = pg.EnumProperty('Boolean', 
+            element = pg.wxEnumProperty('Boolean', 
                                label,['True','False'],[1,0],2)
         elif param_type == 'o':
             if type == "in":
                 element = check_string_subtypes(subtype, param_name, label)
             else:
-                element = pg.StringProperty(param_name, label, '')
+                element = pg.wxStringProperty(param_name, label, '')
         elif param_type == 'l':
             if type == "in":
-                element = pg.StringProperty('List', label, '')
+                element = pg.wxStringProperty('List', label, '')
             else:
-                element = pg.ArrayStringProperty('List', label, '')
+                element = pg.wxArrayStringProperty('List', label, '')
             
         else:
-            element = pg.StringProperty('String', label,
+            element = pg.wxStringProperty('String', label,
                                                    'Unknow type!!!')
 
         inspector.cmds_pg.Append(element)
@@ -349,38 +349,38 @@ def check_string_subtypes(subtype, param_name, label):
     if subtype is not "":
         if "asset" == subtype:
             directory = mangle_path("wc:export/assets") + "\\"
-            element = pg.FileProperty(param_name, label, directory)
+            element = pg.wxFileProperty(param_name, label, directory)
         elif "texture" == subtype:
             directory = mangle_path("wc:export/textures") + "\\"
-            element = pg.FileProperty(param_name, label, directory)
+            element = pg.wxFileProperty(param_name, label, directory)
         elif "shader" == subtype:
             directory = mangle_path("wc:export/shader") + "\\"
-            element = pg.FileProperty(param_name, label, directory)
+            element = pg.wxFileProperty(param_name, label, directory)
         elif "file" == subtype:
             directory = mangle_path("wc:")
-            element = pg.FileProperty(param_name, label, directory)
+            element = pg.wxFileProperty(param_name, label, directory)
         elif "directory" == subtype:
             directory = mangle_path("home:")
-            element = pg.DirProperty(param_name, label, directory)
+            element = pg.wxDirProperty(param_name, label, directory)
         elif "entityobject" == subtype:
-            element = pg.StringCallBackProperty(param_name, label, '' )
+            element = pg.wxStringCallBackProperty(param_name, label, '' )
             dlg = browser.create_dialog(True, "/sys/nobject/nentityobject")
             element.SetCallBackDialog(dlg)
         elif "nroot" == subtype:
-            element = pg.StringCallBackProperty(param_name, label, '' )
+            element = pg.wxStringCallBackProperty(param_name, label, '' )
             dlg = browser.create_dialog(True, "/")                            
             element.SetCallBackDialog(dlg)
         elif "entityclass" == subtype:
-            element = pg.StringCallBackProperty(param_name, label, '' )
+            element = pg.wxStringCallBackProperty(param_name, label, '' )
             dlg = grimoire.create_dialog(True)                            
             element.SetCallBackDialog(dlg)
         elif "nobjectclass" == subtype:
-            element = pg.StringCallBackProperty(param_name, label, '' )
+            element = pg.wxStringCallBackProperty(param_name, label, '' )
             dlg = entitybrowser.create_dialog(self)
             element.SetCallBackDialog(dlg)
     else:
         # No subtype
-        element = pg.StringProperty(param_name, label, '')
+        element = pg.wxStringProperty(param_name, label, '')
 
     return element
 

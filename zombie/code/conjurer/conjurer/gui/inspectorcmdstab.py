@@ -84,15 +84,15 @@ class ClassCommandsTab(wx.Panel):
                             )
 
         # Property grid.
-        self.cmds_pg = pg.PropertyGrid(
+        self.cmds_pg = pg.wxPropertyGrid(
                                 self, 
                                 -1, 
                                 wx.DefaultPosition, 
                                 wx.DefaultSize, 
-                                pg.PG_BOLD_MODIFIED
-                                |pg.PG_DEFAULT_STYLE
-                                |pg.PG_SPLITTER_AUTO_CENTER
-                                |pg.PG_FLOAT_PRECISION
+                                pg.wxPG_BOLD_MODIFIED
+                                |pg.wxPG_DEFAULT_STYLE
+                                |pg.wxPG_SPLITTER_AUTO_CENTER
+                                |pg.wxPG_FLOAT_PRECISION
                                 )
 
         # Get button

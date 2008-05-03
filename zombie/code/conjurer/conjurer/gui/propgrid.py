@@ -153,7 +153,7 @@ class PropertyInfo:
 
 
 # PropertyGrid class
-class PropertyGrid(pg.PropertyGrid):
+class PropertyGrid(pg.wxPropertyGrid):
     """
     Wrapper for the horribly interfaced property control
     
@@ -171,8 +171,8 @@ class PropertyGrid(pg.PropertyGrid):
     """
     
     def __init__(self, parent, pos=wx.DefaultPosition, size=wx.DefaultSize,
-        style=pg.PG_DEFAULT_STYLE):
-        pg.PropertyGrid.__init__(self, parent, -1, pos, size, style)
+        style=pg.wxPG_DEFAULT_STYLE):
+        pg.wxPropertyGrid.__init__(self, parent, -1, pos, size, style)
         
         # Properties are stored in several trees, one for each category.
         # A void category is created by default, used as a phantom category.
@@ -463,17 +463,17 @@ class PropertyGrid(pg.PropertyGrid):
         editor = format[Format_Editor]
         if editor == Editor_Spinner:
             # Editor spinner
-            prop = pg.IntProperty( name, label )
+            prop = pg.wxIntProperty( name, label )
         elif editor == Editor_Slider:
             # Set to slider for integers
             format[Format_Editor] = Editor_Slider_Int
-            prop = pg.IntProperty( name, label )
+            prop = pg.wxIntProperty( name, label )
             self.MakeAnyControlById( prop.GetId() )
         elif format[Format_Enums] != None:
             # Enum editor
             enums = format[Format_Enums]
             enums_list = self.__get_enum_list(enums)
-            prop = pg.EnumProperty(
+            prop = pg.wxEnumProperty(
                         name, 
                         label, 
                         enums_list[0], 
@@ -492,10 +492,10 @@ class PropertyGrid(pg.PropertyGrid):
                 flag_values = int(flag.split(':')[1])
                 labels_list.append(flag_string)
                 values_list.append(flag_values)
-            pid = pg.FlagsProperty ( name, label, labels_list, values_list )
+            pid = pg.wxFlagsProperty ( name, label, labels_list, values_list )
             return pid
         else:
-            prop = pg.IntProperty( name, label )
+            prop = pg.wxIntProperty( name, label )
         return prop
     
     def __append_float_property (self, name, label, format):
@@ -505,10 +505,10 @@ class PropertyGrid(pg.PropertyGrid):
         if editor == Editor_Slider:
             # Set to slider for integers
             format[Format_Editor] = Editor_Slider_Float
-            prop = pg.FloatProperty( name, label )
+            prop = pg.wxFloatProperty( name, label )
             self.MakeAnyControlById( prop.GetId() );
         else:
-            prop = pg.FloatProperty( name, label )
+            prop = pg.wxFloatProperty( name, label )
         return prop
 
     def change_property_colour (self, pid, color):
@@ -517,7 +517,7 @@ class PropertyGrid(pg.PropertyGrid):
     def append_category(self, name):
         """Add a new category """
         label = "category_" + name
-        prop = pg.PropertyCategory(name, label)
+        prop = pg.wxPropertyCategory(name, label)
         pid = self.Append( prop )
         # If only
         if self.categories[0].name == None:
@@ -539,7 +539,7 @@ class PropertyGrid(pg.PropertyGrid):
                        Format_Enums: None
                       }
         label = self.__get_next_label()
-        prop = pg.ParentProperty( name, label )
+        prop = pg.wxParentProperty( name, label )
         pid = self.__append_property(
                     prop, 
                     parent_pid, 
@@ -568,12 +568,12 @@ class PropertyGrid(pg.PropertyGrid):
         label = self.__get_next_label()
         type = format[Format_Type]
         if type == Type_Bool:
-            prop = pg.BoolProperty( name, label )
+            prop = pg.wxBoolProperty( name, label )
         elif type == Type_Float:
             prop = self.__append_float_property( name, label, format )
         elif type == Type_Int:
             prop = self.__append_int_property( parent_pid, name, label, format )
-            if not isinstance(prop, pg.PGProperty):
+            if not isinstance(prop, pg.wxPGProperty):
                 return prop                
         elif type == Type_Object:
             if format[Format_Subtype] != None:
@@ -583,7 +583,7 @@ class PropertyGrid(pg.PropertyGrid):
                             label
                             )
             else:
-                prop = pg.StringProperty( name, label, '' )
+                prop = pg.wxStringProperty( name, label, '' )
         elif type == Type_String:
             if format[Format_Subtype] != None:
                 prop = self.__get_subtype_property(
@@ -592,14 +592,14 @@ class PropertyGrid(pg.PropertyGrid):
                             label
                             )
             else:
-                prop = pg.StringProperty( name, label, '' )
+                prop = pg.wxStringProperty( name, label, '' )
         elif type == Type_Vector2:
             pid = self.__append_vector2( parent_pid, name, format, data )
             return pid
         elif type == Type_Vector3:
             if format[Format_Editor] == Editor_Color:
                 # Color editor
-                prop = pg.ColourProperty( name, label, wx.BLACK)
+                prop = pg.wxColourProperty( name, label, wx.BLACK)
             else:
                 pid = self.__append_vector3( parent_pid, name, format, data )
                 return pid
@@ -900,38 +900,38 @@ class PropertyGrid(pg.PropertyGrid):
     def __get_subtype_property(self, subtype, name, label):
         if "asset" == subtype:
             directory = servers.get_file_server().manglepath("wc:export/assets") + "\\"
-            prop = pg.FileProperty(name, label, directory)
+            prop = pg.wxFileProperty(name, label, directory)
         elif "texture" == subtype:
             directory = servers.get_file_server().manglepath("wc:export/textures") + "\\"
-            prop = pg.FileProperty(name, label, directory)
+            prop = pg.wxFileProperty(name, label, directory)
         elif "image" == subtype:
             directory = servers.get_file_server().manglepath("wc:export/textures") + "\\"
-            prop = pg.AdvImageFileProperty(name, label)
+            prop = pg.wxAdvImageFileProperty(name, label)
         elif "shader" == subtype:
             directory = servers.get_file_server().manglepath("wc:export/shader") + "\\"
-            prop = pg.FileProperty(name, label, directory)
+            prop = pg.wxFileProperty(name, label, directory)
         elif "file" == subtype:
             directory = servers.get_file_server().manglepath("wc:")
-            prop = pg.FileProperty(name, label, directory)
+            prop = pg.wxFileProperty(name, label, directory)
         elif "material" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '')
+            prop = pg.wxStringCallBackProperty(name, label, '')
             dlg = nodelibdlg.NodeLibDialog( self, nodelibdlg.SELECT,
                 'material', 'Material', "/usr/materials")
             prop.SetCallBackDialog(dlg)
         elif "directory" == subtype:
             directory = servers.get_file_server().manglepath("home:")
-            prop = pg.DirProperty(name, label, directory)
+            prop = pg.wxDirProperty(name, label, directory)
         elif "entityobjectclass" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '' )
+            prop = pg.wxStringCallBackProperty(name, label, '' )
             dlg = objbrowserwindow.create_dialog(
                         self, 
                         True, 
                         "/sys/nobject/nentityobject"
                         )
             prop.SetCallBackDialog(dlg)
-            prop = pg.StringProperty(name, label, '')
+            prop = pg.wxStringProperty(name, label, '')
         elif "nroot" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '' )
+            prop = pg.wxStringCallBackProperty(name, label, '' )
             dlg = objbrowserwindow.create_dialog(
                         self, 
                         True, 
@@ -939,28 +939,28 @@ class PropertyGrid(pg.PropertyGrid):
                         )
             prop.SetCallBackDialog(dlg)
         elif "entityclass" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '' )
+            prop = pg.wxStringCallBackProperty(name, label, '' )
             dlg = grimoire.create_dialog(self, True)
             prop.SetCallBackDialog(dlg)
         elif "entityobject" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '' )
+            prop = pg.wxStringCallBackProperty(name, label, '' )
             dlg = entitybrowser.create_dialog(self)
             prop.SetCallBackDialog(dlg)
         elif "musicsample" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '' )
+            prop = pg.wxStringCallBackProperty(name, label, '' )
             dlg = musictabledlg.dialog_for_music_sample_selection(self)
             prop.SetCallBackDialog(dlg)
         elif "musicmood" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '' )
+            prop = pg.wxStringCallBackProperty(name, label, '' )
             dlg = musictabledlg.dialog_for_music_mood_selection(self)
             prop.SetCallBackDialog(dlg)
         elif "musicstyle" == subtype:
-            prop = pg.StringCallBackProperty(name, label, '' )
+            prop = pg.wxStringCallBackProperty(name, label, '' )
             dlg = musictabledlg.dialog_for_music_style_selection(self)
             prop.SetCallBackDialog(dlg)
         else:
             print "Bad subtype"
-            prop = pg.StringProperty(name, label, '')
+            prop = pg.wxStringProperty(name, label, '')
     
         return prop
 
@@ -1025,7 +1025,7 @@ class PropertyGrid(pg.PropertyGrid):
         self.categories = [ _CategoryNode(None) ]
         self.properties = {}
         self.selected_pid = None
-        pg.PropertyGrid.Clear(self)
+        pg.wxPropertyGrid.Clear(self)
     
     def Clear(self):
         """Same as clear, just overwritten from the base class to avoid errors"""

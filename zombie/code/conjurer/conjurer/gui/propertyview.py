@@ -284,10 +284,10 @@ class PropertyView(editorpanel.EditorPanel):
         # Property grid 
         self.pg = propgrid.PropertyGrid(
                         self, 
-                        style = pg.PG_BOLD_MODIFIED |
-                                    pg.PG_DEFAULT_STYLE|
-                                    pg.PG_SPLITTER_AUTO_CENTER|
-                                    pg.PG_AUTO_SORT
+                        style = pg.wxPG_BOLD_MODIFIED |
+                                    pg.wxPG_DEFAULT_STYLE|
+                                    pg.wxPG_SPLITTER_AUTO_CENTER|
+                                    pg.wxPG_AUTO_SORT
                         )
 
         # Draw the property content
