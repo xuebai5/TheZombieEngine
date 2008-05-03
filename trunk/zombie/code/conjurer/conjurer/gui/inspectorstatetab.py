@@ -52,14 +52,14 @@ class StateTab(wx.Panel):
         # Property grid 
         # N.B. the state property grid is NOT sorted - 
         # see task #4270
-        self.cmds_pg = pg.PropertyGrid(
+        self.cmds_pg = pg.wxPropertyGrid(
                                 self, 
                                 -1, 
                                 wx.DefaultPosition, 
                                 wx.DefaultSize, 
-                                pg.PG_BOLD_MODIFIED|
-                                    pg.PG_DEFAULT_STYLE|
-                                    pg.PG_SPLITTER_AUTO_CENTER
+                                pg.wxPG_BOLD_MODIFIED|
+                                    pg.wxPG_DEFAULT_STYLE|
+                                    pg.wxPG_SPLITTER_AUTO_CENTER
                                 )
 
         # Default button
@@ -261,7 +261,7 @@ class StateTab(wx.Panel):
 
         if cmds_count == 0:
             self.cmds_pg.Append(
-                pg.PropertyCategory(
+                pg.wxPropertyCategory(
                     str("State is EMPTY"), 
                     str("nostate")
                     )
@@ -283,7 +283,7 @@ class StateTab(wx.Panel):
                 if arg_type == 1:
                     value = inspector.geti(num_cmd, num_arg+1)
                     self.element.append(
-                        pg.IntProperty(
+                        pg.wxIntProperty(
                             'Integer', 
                             label
                             )
@@ -302,7 +302,7 @@ class StateTab(wx.Panel):
                 elif arg_type == 2:
                     value = inspector.getf(num_cmd, num_arg+1)
                     self.element.append(
-                        pg.FloatProperty(
+                        pg.wxFloatProperty(
                             'Float', 
                             label
                             )
@@ -323,7 +323,7 @@ class StateTab(wx.Panel):
                 elif arg_type == 3:
                     value = inspector.gets(num_cmd, num_arg+1)
                     self.element.append(
-                        pg.StringProperty(
+                        pg.wxStringProperty(
                             'String',
                             label, 
                             ''
@@ -344,7 +344,7 @@ class StateTab(wx.Panel):
                 elif arg_type == 4:
                     value = inspector.getb(num_cmd, num_arg+1)
                     self.element.append(
-                        pg.EnumProperty(
+                        pg.wxEnumProperty(
                             'Boolean', 
                             label,
                             ['True','False'],
@@ -373,7 +373,7 @@ class StateTab(wx.Panel):
                 elif arg_type == 5:
                     value = inspector.geto(num_cmd, num_arg+1)             
                     self.element.append(
-                        pg.StringProperty(
+                        pg.wxStringProperty(
                             'Object', 
                             label, 
                             ''
@@ -404,7 +404,7 @@ class StateTab(wx.Panel):
                 cmds_name_desc = cmds_name_desc + ")"
                 undo_cmd = undo_cmd + ")"
 
-            category = pg.PropertyCategory(
+            category = pg.wxPropertyCategory(
                                 cmds_name_desc, 
                                 "cmdLabel%d" % num_cmd
                                 )

@@ -1047,9 +1047,9 @@ class AssetDialog (wx.Dialog):
 
         self.grid = propgrid.PropertyGrid(
                         self, 
-                        style=pg.PG_BOLD_MODIFIED|
-                                    pg.PG_DEFAULT_STYLE|
-                                    pg.PG_SPLITTER_AUTO_CENTER
+                        style=pg.wxPG_BOLD_MODIFIED|
+                                    pg.wxPG_DEFAULT_STYLE|
+                                    pg.wxPG_SPLITTER_AUTO_CENTER
                                 )
         # Use the a basic format with an entityclass selector
         format = { 

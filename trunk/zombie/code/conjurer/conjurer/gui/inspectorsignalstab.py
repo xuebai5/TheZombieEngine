@@ -80,15 +80,15 @@ class SignalEmitterTab(wx.Panel):
                             )
 
         # Property grid
-        self.cmds_pg = pg.PropertyGrid(
+        self.cmds_pg = pg.wxPropertyGrid(
                                 self, 
                                 -1, 
                                 wx.DefaultPosition, 
                                 wx.DefaultSize, 
-                                pg.PG_BOLD_MODIFIED
-                                    |pg.PG_DEFAULT_STYLE
-                                    |pg.PG_SPLITTER_AUTO_CENTER
-                                    |pg.PG_FLOAT_PRECISION
+                                pg.wxPG_BOLD_MODIFIED
+                                    |pg.wxPG_DEFAULT_STYLE
+                                    |pg.wxPG_SPLITTER_AUTO_CENTER
+                                    |pg.wxPG_FLOAT_PRECISION
                                 )
 
         # Send button
@@ -361,45 +361,45 @@ class SignalEmitterTab(wx.Panel):
                 label = "label_out%d" % i
                 
             if arg[i] == 'i':
-                element.append(pg.IntProperty('Integer', label))
+                element.append(pg.wxIntProperty('Integer', label))
                 self.cmds_pg.Append(element[i])
             elif arg[i] == 'f':
-                element.append(pg.FloatProperty('Float', label))
+                element.append(pg.wxFloatProperty('Float', label))
                 self.cmds_pg.Append(element[i])
             elif arg[i] == 's':
                 if type == "in":
-                    element.append(pg.StringCallBackProperty('String', 
+                    element.append(pg.wxStringCallBackProperty('String', 
                                     label, '' ))
                     self.cmds_pg.Append(element[i])
                     dlg = browser.create_dialog(self, True)
                     element[i].SetCallBackDialog(dlg)
                 else:                    
-                    element.append(pg.StringProperty('String', label, ''))
+                    element.append(pg.wxStringProperty('String', label, ''))
                     self.cmds_pg.Append(element[i])
             elif arg[i] == 'b':
-                element.append(pg.EnumProperty('Boolean', 
+                element.append(pg.wxEnumProperty('Boolean', 
                                    label,['True','False'],[1,0],2,0 ))
                 self.cmds_pg.Append(element[i])
             elif arg[i] == 'o':
                 if type == "in":
-                    element.append(pg.StringCallBackProperty( 'Object', 
+                    element.append(pg.wxStringCallBackProperty( 'Object', 
                                         label, '' ))
                     self.cmds_pg.Append(element[i])
                     dlg = browser.create_dialog(self, True)        
                     element[i].SetCallBackDialog(dlg)  
                 else:
-                    element.append(pg.StringProperty('Object', label, ''))
+                    element.append(pg.wxStringProperty('Object', label, ''))
                     self.cmds_pg.Append(element[i])
             elif arg[i] == 'l':
                 if type == "in":
-                    element.append(pg.StringProperty('List', label, ''))
+                    element.append(pg.wxStringProperty('List', label, ''))
                     self.cmds_pg.Append(element[i])
                 else:
-                    element.append(pg.ArrayStringProperty('List', label, ''))
+                    element.append(pg.wxArrayStringProperty('List', label, ''))
                     self.cmds_pg.Append(element[i])
                 
             else:
-                element.append(pg.StringProperty('String', label,
+                element.append(pg.wxStringProperty('String', label,
                                                        'Unknow type!!!'))
                 self.cmds_pg.Append(element[i])
         
@@ -488,7 +488,7 @@ class SignalEmitterTab(wx.Panel):
         self.in_elements = list()
         if num_args > 0:
             self.cmds_pg.Append(
-                pg.PropertyCategory(
+                pg.wxPropertyCategory(
                     "In Args", 
                     "InValues" 
                     )
@@ -503,7 +503,7 @@ class SignalEmitterTab(wx.Panel):
         self.out_elements = list()
         if inspector.getoutargscount(num_cmd) > 0:
             self.cmds_pg.Append(
-                pg.PropertyCategory(
+                pg.wxPropertyCategory(
                     "Out Args", 
                     "OutValues"
                     )

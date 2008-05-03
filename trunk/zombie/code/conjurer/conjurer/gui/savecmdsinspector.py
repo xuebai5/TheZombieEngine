@@ -115,7 +115,7 @@ def cmds_select(inspector_win):
     inspector_win.in_elements = list()  
     if num_args > 0:
         inspector_win.cmds_pg.Append(
-            pg.PropertyCategory(
+            pg.wxPropertyCategory(
                 "In Args", 
                 "InValues" 
                 )
@@ -131,7 +131,7 @@ def cmds_select(inspector_win):
     inspector_win.out_elements = list()
     if inspector.getoutargscount(num_cmd) > 0:
         inspector_win.cmds_pg.Append(
-            pg.PropertyCategory(
+            pg.wxPropertyCategory(
                 "Out Args", 
                 "OutValues"
                 )
@@ -186,45 +186,45 @@ def draw_input_fields(inspector_win, arg, element, type):
             label = "label_out%d" % i
             
         if arg[i] == 'i':
-            element.append(pg.IntProperty('Integer', label))
+            element.append(pg.wxIntProperty('Integer', label))
             inspector_win.cmds_pg.Append(element[i])
         elif arg[i] == 'f':
-            element.append(pg.FloatProperty('Float', label))
+            element.append(pg.wxFloatProperty('Float', label))
             inspector_win.cmds_pg.Append(element[i])
         elif arg[i] == 's':
             if type == "in":
-                element.append(pg.StringCallBackProperty('String', 
+                element.append(pg.wxStringCallBackProperty('String', 
                                 label, '' ))
                 inspector_win.cmds_pg.Append(element[i])
                 dlg = browser.create_dialog(inspector_win, True)
                 element[i].SetCallBackDialog(dlg)                                               
             else:                    
-                element.append(pg.StringProperty('String', label, ''))
+                element.append(pg.wxStringProperty('String', label, ''))
                 inspector_win.cmds_pg.Append(element[i])
         elif arg[i] == 'b':
-            element.append(pg.EnumProperty('Boolean', 
+            element.append(pg.wxEnumProperty('Boolean', 
                                label,['True','False'],[1,0],2 ))
             inspector_win.cmds_pg.Append(element[i])
         elif arg[i] == 'o':
             if type == "in":
-                element.append(pg.StringCallBackProperty( 'Object', 
+                element.append(pg.wxStringCallBackProperty( 'Object', 
                                     label, '' ))
                 inspector_win.cmds_pg.Append(element[i])
                 dlg = browser.create_dialog(inspector_win, True)        
                 element[i].SetCallBackDialog(dlg)  
             else:
-                element.append(pg.StringProperty('Object', label, ''))
+                element.append(pg.wxStringProperty('Object', label, ''))
                 inspector_win.cmds_pg.Append(element[i])
         elif arg[i] == 'l':
             if type == "in":
-                element.append(pg.StringProperty('List', label, ''))
+                element.append(pg.wxStringProperty('List', label, ''))
                 inspector_win.cmds_pg.Append(element[i])
             else:
-                element.append(pg.ArrayStringProperty('List', label, ''))
+                element.append(pg.wxArrayStringProperty('List', label, ''))
                 inspector_win.cmds_pg.Append(element[i])
             
         else:
-            element.append(pg.StringProperty('String', label,
+            element.append(pg.wxStringProperty('String', label,
                                                    'Unknow type!!!'))
             inspector_win.cmds_pg.Append(element[i])
 
