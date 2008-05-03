@@ -141,20 +141,20 @@ ${MementoSection} "The Zombie Engine Core and Conjurer editor" SecCore
   File "..\zombie\bin\win32\ilu.dll"
   File "..\zombie\bin\win32\msvcp71.dll"
   File "..\zombie\bin\win32\msvcr71.dll"
-  ;File "..\zombie\bin\win32d\python24.dll"
+  ;File "..\zombie\bin\win32\python24.dll"
   File "..\zombie\bin\win32\renaissance.exe"
   File "..\zombie\bin\win32\conjurer.exe"
   
-  SetOutPath $INSTDIR\zombie\bin\win32d
+  ;SetOutPath $INSTDIR\zombie\bin\win32d
   ;File "..\zombie\bin\win32\xcrashreport.exe"
-  File "..\zombie\bin\win32d\dbghelp.dll"
-  File "..\zombie\bin\win32d\devil.dll"
-  File "..\zombie\bin\win32d\ilu.dll"
-  File "..\zombie\bin\win32d\msvcp71.dll"
-  File "..\zombie\bin\win32d\msvcr71.dll"
+  ;File "..\zombie\bin\win32d\dbghelp.dll"
+  ;File "..\zombie\bin\win32d\devil.dll"
+  ;File "..\zombie\bin\win32d\ilu.dll"
+  ;File "..\zombie\bin\win32d\msvcp71.dll"
+  ;File "..\zombie\bin\win32d\msvcr71.dll"
   ;File "..\zombie\bin\win32d\python24.dll"
-  File "..\zombie\bin\win32d\renaissance.exe"
-  File "..\zombie\bin\win32d\conjurer.exe"
+  ;File "..\zombie\bin\win32d\renaissance.exe"
+  ;File "..\zombie\bin\win32d\conjurer.exe"
 
   SetOutPath $INSTDIR\zombie\data
   File /r /x ".svn" "..\zombie\data\*.*"
@@ -204,9 +204,9 @@ ${MementoSection} "3D Studio MAX 9 plugins" SecMAX9Plugins
   File "..\zombie\bin\dll\ilu.dll"
 
   SetOutPath $0\plugins
-  File "..\zombie\bin\win32d\nmaterialstextures.dlt"
-  File "..\zombie\bin\win32d\n3dsmaxexport.dle"
-  File "..\zombie\bin\win32d\n3dsutilfunctions.dlu" 
+  File "..\zombie\bin\win32\nmaterialstextures.dlt"
+  File "..\zombie\bin\win32\n3dsmaxexport.dle"
+  File "..\zombie\bin\win32\n3dsutilfunctions.dlu" 
   File "..\zombie\code\exporter\3dsplugin\3dsMax\plugins\nebula.ms"
 
   SetOutPath $0
@@ -280,19 +280,19 @@ ${MementoSection} "Start Menu Shortcuts" SecStartMenuShortcuts
 
   CreateDirectory "$SMPROGRAMS\The Zombie Engine"
 
-  SetOutPath $INSTDIR\zombie\bin\win32d
+  ;SetOutPath $INSTDIR\zombie\bin\win32d
   ;CreateDirectory "$SMPROGRAMS\The Zombie Engine\Debug"
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Presentation Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Debug\Presentation Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
+  ;CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
+  ;CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
+  ;CreateShortCut "$SMPROGRAMS\The Zombie Engine\Presentation Conjurer Debug.lnk" "$INSTDIR\zombie\bin\win32d\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
+  ;CreateShortCut "$SMPROGRAMS\The Zombie Engine\Debug\Presentation Renaissance Debug.lnk" "$INSTDIR\zombie\bin\win32d\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
 
   SetOutPath $INSTDIR\zombie\bin\win32
   ;CreateDirectory "$SMPROGRAMS\The Zombie Engine\Release"
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Presentation Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
-  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Release\Presentation Renaissance.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
+  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "-w 1024 -h 768 -sync" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
+  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Conjurer Full Screen.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
+  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "-w 1024 -h 768 -sync" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
+  CreateShortCut "$SMPROGRAMS\The Zombie Engine\Renaissance Full Screen.lnk" "$INSTDIR\zombie\bin\win32\renaissance.exe" "-w 1024 -h 768 -sync -fullscreen"  "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
 
   SetOutPath $INSTDIR
   CreateShortCut "$SMPROGRAMS\The Zombie Engine\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
@@ -310,7 +310,8 @@ ${MementoSection} "Desktop Shortcut" SecDesktopShortcuts
 
   SectionIn 1 2
 
-  CreateShortCut "$DESKTOP\Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
+  CreateShortCut "$DESKTOP\Conjurer.lnk" "$INSTDIR\zombie\bin\win32\conjurer.exe" "-w 1024 -h 768 -sync" "$INSTDIR\zombie\bin\win32\conjurer.exe" 0
+  CreateShortCut "$DESKTOP\Renaissance.lnk" "$INSTDIR\zombie\bin\win32\Renaissance.exe" "-w 1024 -h 768 -sync" "$INSTDIR\zombie\bin\win32\renaissance.exe" 0
 
 ${MementoSectionEnd}
 
@@ -534,21 +535,21 @@ Function .onInstSuccess
     WriteRegStr HKCR "n2_ext\Shell\Open" "" "Open"
     WriteRegStr HKCR "n2_ext\Shell\Open\Command" "" "$\"$INSTDIR\zombie\bin\win32\conjurer.exe$\" -w 1024 -h 768 -view2 $\"%1$\""
 
-    WriteRegStr HKCR "n2_ext\Shell" "" "open"
-    WriteRegStr HKCR "n2_ext\Shell\Open Debug" "" "Open Debug"
-    WriteRegStr HKCR "n2_ext\Shell\Open Debug\Command" "" "$\"$INSTDIR\zombie\bin\win32d\conjurer.exe$\" -w 1024 -h 768 -view2 $\"%1$\""
+    ;WriteRegStr HKCR "n2_ext\Shell" "" "open"
+    ;WriteRegStr HKCR "n2_ext\Shell\Open Debug" "" "Open Debug"
+    ;WriteRegStr HKCR "n2_ext\Shell\Open Debug\Command" "" "$\"$INSTDIR\zombie\bin\win32d\conjurer.exe$\" -w 1024 -h 768 -view2 $\"%1$\""
 
     WriteRegStr HKCR "n2_ext\Shell" "" "open"
-    WriteRegStr HKCR "n2_ext\Shell\Presentation" "" "Open Presentation"
-    WriteRegStr HKCR "n2_ext\Shell\Presentation\Command" "" "$\"$INSTDIR\zombie\bin\win32\conjurer.exe$\" -w 1024 -h 768 -sync -fullscreen -view2 $\"%1$\""
+    WriteRegStr HKCR "n2_ext\Shell\FullScreen" "" "Open FullScreen"
+    WriteRegStr HKCR "n2_ext\Shell\FullScreen\Command" "" "$\"$INSTDIR\zombie\bin\win32\conjurer.exe$\" -w 1024 -h 768 -sync -fullscreen -view2 $\"%1$\""
 
     WriteRegStr HKCR "n2_ext\Shell" "" "open"
     WriteRegStr HKCR "n2_ext\Shell\Embedded" "" "Editor Embedded"
     WriteRegStr HKCR "n2_ext\Shell\Embedded\Command" "" "$\"$INSTDIR\zombie\bin\win32\conjurer.exe$\" -gui $\"outgui:outgui.py$\" -w 1024 -h 768 -embedded -view2 $\"%1$\""
 
-    WriteRegStr HKCR "n2_ext\Shell" "" "open"
-    WriteRegStr HKCR "n2_ext\Shell\Embedded Debug" "" "Editor Embedded Debug"
-    WriteRegStr HKCR "n2_ext\Shell\Embedded Debug\Command" "" "$\"$INSTDIR\zombie\bin\win32d\conjurer.exe$\" -gui $\"outgui:outgui.py$\" -w 1024 -h 768 -embedded -view2 $\"%1$\""
+    ;WriteRegStr HKCR "n2_ext\Shell" "" "open"
+    ;WriteRegStr HKCR "n2_ext\Shell\Embedded Debug" "" "Editor Embedded Debug"
+    ;WriteRegStr HKCR "n2_ext\Shell\Embedded Debug\Command" "" "$\"$INSTDIR\zombie\bin\win32d\conjurer.exe$\" -gui $\"outgui:outgui.py$\" -w 1024 -h 768 -embedded -view2 $\"%1$\""
 
   ; Write installation path into the registry
   WriteRegStr HKLM "SOFTWARE\Zombie" "Install_Dir" "$INSTDIR"
