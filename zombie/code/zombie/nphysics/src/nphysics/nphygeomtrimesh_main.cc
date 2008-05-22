@@ -27,7 +27,7 @@ nNebulaScriptClass(nPhyGeomTriMesh, "nphysicsgeom");
     Constructor
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 nPhyGeomTriMesh::nPhyGeomTriMesh() : 
     dataID(NoValidID),
@@ -52,8 +52,8 @@ nPhyGeomTriMesh::nPhyGeomTriMesh() :
     Destructor
 
     history:
-        - 29-Sep-2004   David Reyes    created
-        - 22-Nov-2004   David Reyes    freeing memory
+        - 29-Sep-2004   Zombie         created
+        - 22-Nov-2004   Zombie         freeing memory
 */
 nPhyGeomTriMesh::~nPhyGeomTriMesh()
 {
@@ -82,7 +82,7 @@ nPhyGeomTriMesh::~nPhyGeomTriMesh()
     @param name name of the new geomtry
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void nPhyGeomTriMesh::Create()
 {
@@ -109,7 +109,7 @@ void nPhyGeomTriMesh::Create()
     Creates the structure to store the triangle mesh data
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void nPhyGeomTriMesh::CreateStructureData()
 {
@@ -128,7 +128,7 @@ void nPhyGeomTriMesh::CreateStructureData()
     @param number number of vertexes
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void nPhyGeomTriMesh::CreateSpaceVertexs( int number )
 {
@@ -148,7 +148,7 @@ void nPhyGeomTriMesh::CreateSpaceVertexs( int number )
     @param number number of indexes
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void nPhyGeomTriMesh::CreateSpaceTriangleIndexes( int number )
 {
@@ -168,7 +168,7 @@ void nPhyGeomTriMesh::CreateSpaceTriangleIndexes( int number )
     @param number number of normals
 
     history:
-        - 02-Feb-2006   David Reyes    created
+        - 02-Feb-2006   Zombie         created
 */
 void nPhyGeomTriMesh::CreateSpaceNormals( int number )
 {
@@ -187,7 +187,7 @@ void nPhyGeomTriMesh::CreateSpaceNormals( int number )
     @return vertex to the corresponding index
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 phyreal* nPhyGeomTriMesh::GetVertex( int index )
 {
@@ -207,7 +207,7 @@ phyreal* nPhyGeomTriMesh::GetVertex( int index )
     @return pointer to the first index of three
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 int* nPhyGeomTriMesh::GetTriangleIndex( int index )
 {
@@ -223,7 +223,7 @@ int* nPhyGeomTriMesh::GetTriangleIndex( int index )
     Updates the triangle mesh
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void nPhyGeomTriMesh::Update()
 {    
@@ -248,7 +248,7 @@ void nPhyGeomTriMesh::Update()
     @param server   graphics server
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void nPhyGeomTriMesh::Draw( nGfxServer2* server )
 {
@@ -353,7 +353,7 @@ void nPhyGeomTriMesh::Draw( nGfxServer2* server )
     @param filename   file where the data is
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 void nPhyGeomTriMesh::SetFile( const nString& filename )
 {
@@ -369,7 +369,7 @@ void nPhyGeomTriMesh::SetFile( const nString& filename )
     Releases data
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void nPhyGeomTriMesh::ReleaseData()
 {
@@ -381,7 +381,7 @@ void nPhyGeomTriMesh::ReleaseData()
     Returns the name of the last file loaded.
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const nString& nPhyGeomTriMesh::GetFileName() const
 {
@@ -396,7 +396,7 @@ const nString& nPhyGeomTriMesh::GetFileName() const
     @param buffer   data
 
     history:
-        - 08-Oct-2004   David Reyes    created
+        - 08-Oct-2004   Zombie         created
 */
 void nPhyGeomTriMesh::SetBufferVertexes( int number, phyreal* buffer )
 {
@@ -417,7 +417,7 @@ void nPhyGeomTriMesh::SetBufferVertexes( int number, phyreal* buffer )
     @param buffer   data
 
     history:
-        - 08-Oct-2004   David Reyes    created
+        - 08-Oct-2004   Zombie         created
 */
 void nPhyGeomTriMesh::SetBufferIndexes( int number, int* buffer )
 {
@@ -437,7 +437,7 @@ void nPhyGeomTriMesh::SetBufferIndexes( int number, int* buffer )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyGeomTriMesh::Scale( const phyreal factor )
 {
@@ -477,7 +477,7 @@ void nPhyGeomTriMesh::Scale( const phyreal factor )
     @return if any problem
     
     history:
-     - 23-Feb-2006   David Reyes    created
+     - 23-Feb-2006   Zombie         created
 */
 const bool nPhyGeomTriMesh::GetMeshData( const nString& filename )
 {
@@ -568,7 +568,7 @@ const bool nPhyGeomTriMesh::GetMeshData( const nString& filename )
     @return if any problem
     
     history:
-     - 23-Feb-2006   David Reyes    created
+     - 23-Feb-2006   Zombie         created
 */
 void nPhyGeomTriMesh::ReleaseMeshesData()
 {
@@ -587,7 +587,7 @@ void nPhyGeomTriMesh::ReleaseMeshesData()
 	Releases a counter from  the mesh data.
 
     history:
-     - 23-Feb-2006   David Reyes    created
+     - 23-Feb-2006   Zombie         created
 */
 void nPhyGeomTriMesh::ReleaseCounter( const int key )
 {
@@ -613,7 +613,7 @@ void nPhyGeomTriMesh::ReleaseCounter( const int key )
 	Fixes indexes data of a mesh (NOTE: Temporary patch).
 
     history:
-     - 31-Jul-2006   David Reyes    created
+     - 31-Jul-2006   Zombie         created
 */
 void nPhyGeomTriMesh::fixIndexes( const nString& filename ) 
 {

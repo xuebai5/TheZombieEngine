@@ -39,7 +39,7 @@ ncGameplayVehicleSeatClass::~ncGameplayVehicleSeatClass()
     @param type which type of seat
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 void ncGameplayVehicleSeatClass::SetSeatType( const type seattype )
 {
@@ -53,7 +53,7 @@ void ncGameplayVehicleSeatClass::SetSeatType( const type seattype )
     @return which type of seat
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 const ncGameplayVehicleSeatClass::type ncGameplayVehicleSeatClass::GetSeatType() const
 {
@@ -67,7 +67,7 @@ const ncGameplayVehicleSeatClass::type ncGameplayVehicleSeatClass::GetSeatType()
     @param newvalue angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeatClass::SetMaxYaw( const float newvalue )
 {
@@ -81,7 +81,7 @@ void ncGameplayVehicleSeatClass::SetMaxYaw( const float newvalue )
     @return angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 const float ncGameplayVehicleSeatClass::GetMaxYaw() const
 {
@@ -95,7 +95,7 @@ const float ncGameplayVehicleSeatClass::GetMaxYaw() const
     @param newvalue angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeatClass::SetMinYaw(const float newvalue )
 {
@@ -109,7 +109,7 @@ void ncGameplayVehicleSeatClass::SetMinYaw(const float newvalue )
     @return angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 const float ncGameplayVehicleSeatClass::GetMinYaw() const
 {
@@ -123,7 +123,7 @@ const float ncGameplayVehicleSeatClass::GetMinYaw() const
     @param newvalue angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeatClass::SetMaxPitch( const float newvalue )
 {
@@ -137,7 +137,7 @@ void ncGameplayVehicleSeatClass::SetMaxPitch( const float newvalue )
     @return angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 const float ncGameplayVehicleSeatClass::GetMaxPitch() const
 {
@@ -151,7 +151,7 @@ const float ncGameplayVehicleSeatClass::GetMaxPitch() const
     @param newvalue angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeatClass::SetMinPitch( const float newvalue )
 {
@@ -165,7 +165,7 @@ void ncGameplayVehicleSeatClass::SetMinPitch( const float newvalue )
     @return angle
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 const float ncGameplayVehicleSeatClass::GetMinPitch() const
 {

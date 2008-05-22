@@ -198,8 +198,8 @@ private:
     @return body ids
 
     history:
-        - 27-Sep-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 27-Sep-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline 
 bodyid nPhyRigidBody::Id() const
@@ -214,8 +214,8 @@ bodyid nPhyRigidBody::Id() const
     @return physics object
 
     history:
-        - 30-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 30-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 ncPhysicsObj* nPhyRigidBody::GetPhysicsObj() const
@@ -230,8 +230,8 @@ ncPhysicsObj* nPhyRigidBody::GetPhysicsObj() const
     @param body
 
     history:
-        - 07-Dec-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 07-Dec-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 bool nPhyRigidBody::IsConnectedTo( nPhyRigidBody const* body ) const
@@ -246,8 +246,8 @@ bool nPhyRigidBody::IsConnectedTo( nPhyRigidBody const* body ) const
     @return world
 
     history:
-        - 04-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 04-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 nPhysicsWorld* nPhyRigidBody::GetWorld() const
@@ -260,8 +260,8 @@ nPhysicsWorld* nPhyRigidBody::GetWorld() const
     Enabled the body.
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyRigidBody::Enable()
@@ -276,8 +276,8 @@ void nPhyRigidBody::Enable()
     Disables the body.
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyRigidBody::Disable()
@@ -294,8 +294,8 @@ void nPhyRigidBody::Disable()
     @param newposition  new body position
 
     history:
-        - 19-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 19-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetPosition( const vector3& newposition )
@@ -310,8 +310,8 @@ void nPhyRigidBody::SetPosition( const vector3& newposition )
     @param position  body position
 
     history:
-        - 25-Nov-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 25-Nov-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::GetPosition( vector3& position ) const
@@ -326,8 +326,8 @@ void nPhyRigidBody::GetPosition( vector3& position ) const
     @param neworientation  new body oritentation
 
     history:
-        - 19-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 19-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetOrientation( const matrix33& neworientation )
@@ -342,8 +342,8 @@ void nPhyRigidBody::SetOrientation( const matrix33& neworientation )
     @param orientation  body oritentation
 
     history:
-        - 19-Nov-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 19-Nov-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::GetOrientation( matrix33& orientation )
@@ -360,8 +360,8 @@ void nPhyRigidBody::GetOrientation( matrix33& orientation )
     @param az   euler angle for the z axis
 
     history:
-        - 19-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 19-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetOrientation( phyreal ax, phyreal ay, phyreal az )
@@ -380,8 +380,8 @@ void nPhyRigidBody::SetOrientation( phyreal ax, phyreal ay, phyreal az )
     @return bodys mass
 
     history:
-        - 19-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 19-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 phyreal nPhyRigidBody::GetMass() const
@@ -400,8 +400,8 @@ phyreal nPhyRigidBody::GetMass() const
     @param velocity new velocity
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetLinearVelocity( const vector3& velocity )
@@ -420,8 +420,8 @@ void nPhyRigidBody::SetLinearVelocity( const vector3& velocity )
     @param velocity     rigid body velocity
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::GetLinearVelocity( vector3& velocity ) const
@@ -438,8 +438,8 @@ void nPhyRigidBody::GetLinearVelocity( vector3& velocity ) const
     @param velocity     new velocity
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetAngularVelocity( const vector3& velocity )
@@ -458,8 +458,8 @@ void nPhyRigidBody::SetAngularVelocity( const vector3& velocity )
     @param velocity     rigid body velocity
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::GetAngularVelocity( vector3& velocity ) const
@@ -476,8 +476,8 @@ void nPhyRigidBody::GetAngularVelocity( vector3& velocity ) const
     @param force    new force to be added
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddForce( const vector3& force )
@@ -496,8 +496,8 @@ void nPhyRigidBody::AddForce( const vector3& force )
     @param torque    new torque to be added
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddTorque( const vector3& torque )
@@ -516,8 +516,8 @@ void nPhyRigidBody::AddTorque( const vector3& torque )
     @param force    new force to be added
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddRelativeForce( const vector3& force )
@@ -536,8 +536,8 @@ void nPhyRigidBody::AddRelativeForce( const vector3& force )
     @param torque    new torque to be added
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddRelativeTorque( const vector3& torque )
@@ -557,8 +557,8 @@ void nPhyRigidBody::AddRelativeTorque( const vector3& torque )
     @param position position of the force
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddForceAtPosition( const vector3& force, const vector3& position )
@@ -578,8 +578,8 @@ void nPhyRigidBody::AddForceAtPosition( const vector3& force, const vector3& pos
     @param position position of the force
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddRelativeForceAtPosition( const vector3& force, const vector3& position )
@@ -598,8 +598,8 @@ void nPhyRigidBody::AddRelativeForceAtPosition( const vector3& force, const vect
     @param force    new force
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetForce( const vector3& force )
@@ -618,8 +618,8 @@ void nPhyRigidBody::SetForce( const vector3& force )
     @param force    new force
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddRelativeForceAtRelativePosition( const vector3& force, const vector3& position )
@@ -638,8 +638,8 @@ void nPhyRigidBody::AddRelativeForceAtRelativePosition( const vector3& force, co
     @param force    new force
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::AddForceAtRelativePosition( const vector3& force, const vector3& position )
@@ -658,8 +658,8 @@ void nPhyRigidBody::AddForceAtRelativePosition( const vector3& force, const vect
     @param torque    new torque
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetTorque( const vector3& torque )
@@ -678,8 +678,8 @@ void nPhyRigidBody::SetTorque( const vector3& torque )
     @param force    rigid body absolute force
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::GetForce( vector3& force ) const
@@ -696,8 +696,8 @@ void nPhyRigidBody::GetForce( vector3& force ) const
     @param torque    rigid body absolute torque
 
     history:
-        - 22-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 22-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::GetTorque( vector3& torque ) const
@@ -714,8 +714,8 @@ void nPhyRigidBody::GetTorque( vector3& torque ) const
     @return a boolean
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 bool nPhyRigidBody::IsEnabled() const
@@ -732,8 +732,8 @@ bool nPhyRigidBody::IsEnabled() const
     @param obj   physics object
 
     history:
-        - 30-Nov-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 30-Nov-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhyRigidBody::SetPhysicsObj( ncPhysicsObj* obj )
@@ -748,7 +748,7 @@ void nPhyRigidBody::SetPhysicsObj( ncPhysicsObj* obj )
     @return speed threshold
 
     history:
-        - 30-Nov-2004   David Reyes    created
+        - 30-Nov-2004   Zombie         created
 */
 inline
 phyreal nPhyRigidBody::GetLinearVelocityThresholdAutoDisable()
@@ -763,7 +763,7 @@ phyreal nPhyRigidBody::GetLinearVelocityThresholdAutoDisable()
     @return speed threshold
 
     history:
-        - 30-Nov-2004   David Reyes    created
+        - 30-Nov-2004   Zombie         created
 */
 inline
 phyreal nPhyRigidBody::GetAngularVelocityThresholdAutoDisable()
@@ -778,7 +778,7 @@ phyreal nPhyRigidBody::GetAngularVelocityThresholdAutoDisable()
     @return true/false
 
     history:
-        - 08-Jul-2004   David Reyes    created
+        - 08-Jul-2004   Zombie         created
 */
 inline
 bool nPhyRigidBody::GetTweaked() const
@@ -793,7 +793,7 @@ bool nPhyRigidBody::GetTweaked() const
     @param is true/false
 
     history:
-        - 08-Jul-2004   David Reyes    created
+        - 08-Jul-2004   Zombie         created
 */
 inline
 void nPhyRigidBody::SetTweaked( bool is )
@@ -808,7 +808,7 @@ void nPhyRigidBody::SetTweaked( bool is )
     @param offset vector direction
 
     history:
-        - 08-Jul-2004   David Reyes    created
+        - 08-Jul-2004   Zombie         created
 */
 inline
 void nPhyRigidBody::SetTweakedOffset( const vector3& offset )
@@ -823,7 +823,7 @@ void nPhyRigidBody::SetTweakedOffset( const vector3& offset )
     @return vector direction
 
     history:
-        - 08-Jul-2004   David Reyes    created
+        - 08-Jul-2004   Zombie         created
 */
 inline
 const vector3& nPhyRigidBody::GetTweakedOffset() const
@@ -838,7 +838,7 @@ const vector3& nPhyRigidBody::GetTweakedOffset() const
     @return true/false
 
     history:
-        - 10-Aug-2004   David Reyes    created
+        - 10-Aug-2004   Zombie         created
 */
 inline
 const bool nPhyRigidBody::IsAtmospheraAffected() const
@@ -853,7 +853,7 @@ const bool nPhyRigidBody::IsAtmospheraAffected() const
     @param is true/false
 
     history:
-        - 10-Aug-2004   David Reyes    created
+        - 10-Aug-2004   Zombie         created
 */
 inline
 void nPhyRigidBody::SetIfAtmospheraAffected( const bool is )

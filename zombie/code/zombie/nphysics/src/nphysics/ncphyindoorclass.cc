@@ -23,7 +23,7 @@ NSCRIPT_INITCMDS_END()
     @param path physics chunck information directory
 
     history:
-        - 31-May-2005   David Reyes    created
+        - 31-May-2005   Zombie         created
 */
 void ncPhyIndoorClass::GetPath( nString& path ) const
 {

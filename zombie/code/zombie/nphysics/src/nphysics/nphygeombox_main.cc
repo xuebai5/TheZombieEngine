@@ -19,7 +19,7 @@ nNebulaScriptClass(nPhyGeomBox, "nphysicsgeom");
     Constructor
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 nPhyGeomBox::nPhyGeomBox()
 {
@@ -35,8 +35,8 @@ nPhyGeomBox::nPhyGeomBox()
     @param lengths  lengths of the box in each axis
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 27-Jan-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 27-Jan-2005   Zombie         inlined
 */
 void nPhyGeomBox::SetLengths( const vector3& lengths )
 {
@@ -81,8 +81,8 @@ void nPhyGeomBox::SetLengths( const vector3& lengths )
     Creates the geometry
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 01-Oct-2004   David Reyes    supress parameters
+        - 24-Sep-2004   Zombie         created
+        - 01-Oct-2004   Zombie         supress parameters
 */
 void nPhyGeomBox::Create()
 {
@@ -100,7 +100,7 @@ void nPhyGeomBox::Create()
     Destructor
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 nPhyGeomBox::~nPhyGeomBox()
 {
@@ -115,7 +115,7 @@ nPhyGeomBox::~nPhyGeomBox()
     @param server   graphics server
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 void nPhyGeomBox::Draw( nGfxServer2* server )
 {
@@ -178,7 +178,7 @@ void nPhyGeomBox::Draw( nGfxServer2* server )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyGeomBox::Scale( const phyreal factor )
 {

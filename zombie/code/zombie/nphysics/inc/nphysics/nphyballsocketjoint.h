@@ -66,8 +66,8 @@ public:
     @param anchor ball anchor
 
     history:
-        - 15-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyBallSocketJoint::SetAnchor( const vector3& anchor )
@@ -84,8 +84,8 @@ void nPhyBallSocketJoint::SetAnchor( const vector3& anchor )
     @param anchor ball anchor
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyBallSocketJoint::GetAnchor( vector3& anchor ) const

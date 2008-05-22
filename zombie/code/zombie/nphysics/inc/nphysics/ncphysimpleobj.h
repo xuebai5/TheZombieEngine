@@ -144,8 +144,8 @@ private:
     @return object geometry
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 nPhysicsGeom* ncPhySimpleObj::GetGeometry() const
@@ -161,8 +161,8 @@ nPhysicsGeom* ncPhySimpleObj::GetGeometry() const
     @return object geometry
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 nPhysicsGeom* ncPhySimpleObj::GetGeometry(int /*index*/) const
@@ -177,8 +177,8 @@ nPhysicsGeom* ncPhySimpleObj::GetGeometry(int /*index*/) const
     @return number of geometries
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 int ncPhySimpleObj::GetNumGeometries() const
@@ -197,8 +197,8 @@ int ncPhySimpleObj::GetNumGeometries() const
     @param boundingBox  bounding box
 
     history:
-        - 30-Nov-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 30-Nov-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void ncPhySimpleObj::GetAABB( nPhysicsAABB& boundingbox )
@@ -215,8 +215,8 @@ void ncPhySimpleObj::GetAABB( nPhysicsAABB& boundingbox )
     @param newposition      world position
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 27-Jan-2005   David Reyes    inline
+        - 29-Nov-2004   Zombie         created
+        - 27-Jan-2005   Zombie         inline
 */
 inline
 void ncPhySimpleObj::SetPosition( const vector3& newposition )
@@ -235,8 +235,8 @@ void ncPhySimpleObj::SetPosition( const vector3& newposition )
     @param newrotation  orientation of the object
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 27-Jan-2005   David Reyes    inline
+        - 29-Nov-2004   Zombie         created
+        - 27-Jan-2005   Zombie         inline
 */
 inline
 void ncPhySimpleObj::SetRotation( const matrix33& newrotation )
@@ -255,8 +255,8 @@ void ncPhySimpleObj::SetRotation( const matrix33& newrotation )
     @param position     object position
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 27-Jan-2005   David Reyes    inline
+        - 29-Nov-2004   Zombie         created
+        - 27-Jan-2005   Zombie         inline
 */
 inline
 void ncPhySimpleObj::GetPosition( vector3& position ) const
@@ -273,7 +273,7 @@ void ncPhySimpleObj::GetPosition( vector3& position ) const
     @param rotation matrix33 object orientation
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 inline
 void ncPhySimpleObj::GetOrientation( matrix33& rotation )
@@ -288,8 +288,8 @@ void ncPhySimpleObj::GetOrientation( matrix33& rotation )
     @param material     material
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 27-Jan-2005   David Reyes    inline
+        - 29-Nov-2004   Zombie         created
+        - 27-Jan-2005   Zombie         inline
 */
 inline
 void ncPhySimpleObj::SetMaterial( nPhyMaterial::idmaterial material )

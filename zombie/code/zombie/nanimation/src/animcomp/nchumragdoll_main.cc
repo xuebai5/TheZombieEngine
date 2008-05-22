@@ -495,7 +495,7 @@ ncHumRagdoll::SetJointData(int jointIndex, vector3& midPos, vector3& pos, const 
                 switch(this->GetClassComponent<ncRagDollClass>()->GetRagDollType())
                 {
                 case ncRagDollClass::Human:
-                    offset.set(0, 0, float(.25)); // <--- Hardcoded correction (David)
+                    offset.set(0, 0, float(.25)); // <--- Hardcoded correction
                     break;
                 }
 
@@ -668,7 +668,7 @@ ncHumRagdoll::InitializeRagdoll()
     Switchs off the ragdoll.
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 void ncHumRagdoll::SwitchOff()

@@ -63,7 +63,7 @@ namespace
     Constructor.
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 ncPhyVehicle::ncPhyVehicle() :
     wheels(0),
@@ -87,7 +87,7 @@ ncPhyVehicle::ncPhyVehicle() :
     Destructor.
  
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 ncPhyVehicle::~ncPhyVehicle()
 {
@@ -110,7 +110,7 @@ ncPhyVehicle::~ncPhyVehicle()
     Loader.
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicle::Load()
 {    
@@ -124,7 +124,7 @@ void ncPhyVehicle::Load()
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 void ncPhyVehicle::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -229,8 +229,8 @@ void ncPhyVehicle::InitInstance(nObject::InitInstanceMsg initType)
     @param acceleration grade of acceleration (push)
 
     history:
-        - 04-Nov-2004   David Reyes    created
-        - 17-Nov-2004   David Reyes    First Implementation
+        - 04-Nov-2004   Zombie         created
+        - 17-Nov-2004   Zombie         First Implementation
 */
 void ncPhyVehicle::SetAcceleration( const phyreal acceleration )
 {
@@ -249,7 +249,7 @@ void ncPhyVehicle::SetAcceleration( const phyreal acceleration )
     @param steering grade of steering (turn)
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::SetSteering( const phyreal steering )
 {
@@ -268,7 +268,7 @@ void ncPhyVehicle::SetSteering( const phyreal steering )
     @return speed in km/h
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 phyreal ncPhyVehicle::GetSpeed() const
 {
@@ -286,7 +286,7 @@ phyreal ncPhyVehicle::GetSpeed() const
     Builds the vehicle.
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Assemble()
 {
@@ -361,7 +361,7 @@ void ncPhyVehicle::Assemble()
     @param isset if the hand brake it's been applied
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::SetHandBrake( const bool isset )
 {
@@ -378,7 +378,7 @@ void ncPhyVehicle::SetHandBrake( const bool isset )
     Process b4 run the world.
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::PreProcess()
 {
@@ -429,8 +429,8 @@ void ncPhyVehicle::PreProcess()
     Applies dampening.
 
     history:
-        - 21-Apr-2005   David Reyes    created
-        - 10-Feb-2006   David Reyes    removed resistance on the wheels
+        - 21-Apr-2005   Zombie         created
+        - 10-Feb-2006   Zombie         removed resistance on the wheels
 */
 void ncPhyVehicle::Dampening()
 {
@@ -453,7 +453,7 @@ void ncPhyVehicle::Dampening()
     Updates all vehicle wheels axis.
 
     history:
-        - 01-Apr-2005   David Reyes    created
+        - 01-Apr-2005   Zombie         created
 */
 void ncPhyVehicle::UpdateWheelsAxis()
 {
@@ -471,7 +471,7 @@ void ncPhyVehicle::UpdateWheelsAxis()
     @return if it's set
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 const bool ncPhyVehicle::IsSetHandBrake() const
 {
@@ -486,7 +486,7 @@ const bool ncPhyVehicle::IsSetHandBrake() const
     @return a wheel
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 ncPhyVehicle::Wheel* ncPhyVehicle::operator [] (unsigned int index) const
 {
@@ -516,7 +516,7 @@ nEntityObject* ncPhyVehicle::GetSteeringWheel() const
     @return the vehicles joint group
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 nPhyJointGroup* ncPhyVehicle::GetJointGroup()
 {
@@ -531,7 +531,7 @@ nPhyJointGroup* ncPhyVehicle::GetJointGroup()
     @param camera
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Process( matrix44* /*camera*/, nGfxServer2* server )
 {
@@ -559,7 +559,7 @@ void ncPhyVehicle::Process( matrix44* /*camera*/, nGfxServer2* server )
     @param newposition world position
 
     history:
-        - 08-Nov-2004   David Reyes    created
+        - 08-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::SetPosition( const vector3& newposition )
 {
@@ -583,7 +583,7 @@ void ncPhyVehicle::SetPosition( const vector3& newposition )
     Returns the bhps per wheel.
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 phyreal ncPhyVehicle::GetBHPsPerWheel() const
 {
@@ -608,7 +608,7 @@ phyreal ncPhyVehicle::GetBHPsPerWheel() const
     @param camera camera to be used
 
     history:
-        - 19-Nov-2004   David Reyes    created
+        - 19-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::SetCamera( matrix44* camera )
 {
@@ -656,7 +656,7 @@ void ncPhyVehicle::SetCamera( matrix44* camera )
     Apply the acceleration (in engine time).
 
     history:
-        - 17-Dec-2004   David Reyes    created
+        - 17-Dec-2004   Zombie         created
 */
 void ncPhyVehicle::ApplyAcceleration()
 {
@@ -766,7 +766,7 @@ void ncPhyVehicle::ApplyAcceleration()
     Apply the steering (in engine time).
 
     history:
-        - 17-Dec-2004   David Reyes    created
+        - 17-Dec-2004   Zombie         created
 */
 void ncPhyVehicle::ApplySteer() 
 {
@@ -816,7 +816,7 @@ void ncPhyVehicle::ApplySteer()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 20-Dec-2004   David Reyes    created
+        - 20-Dec-2004   Zombie         created
 */
 void ncPhyVehicle::Create( nPhysicsWorld* world )
 {
@@ -861,7 +861,7 @@ void ncPhyVehicle::Create( nPhysicsWorld* world )
     Resets the physics.
 
     history:
-        - 30-Mar-2005   David Reyes    created
+        - 30-Mar-2005   Zombie         created
 */
 void ncPhyVehicle::Reset()
 {
@@ -880,7 +880,7 @@ void ncPhyVehicle::Reset()
     @param info impact information
 
     history:
-        - 30-Mar-2005   David Reyes    created
+        - 30-Mar-2005   Zombie         created
 */
 void ncPhyVehicle::OnImpact( const tImpactInfo& info )
 {
@@ -916,7 +916,7 @@ void ncPhyVehicle::OnImpact( const tImpactInfo& info )
     @param force force threshold in newtons
 
     history:
-        - 30-Mar-2005   David Reyes    created
+        - 30-Mar-2005   Zombie         created
 */
 void ncPhyVehicle::BreakableAt( nPhysicsGeom* where, phyreal force )
 {
@@ -947,7 +947,7 @@ void ncPhyVehicle::BreakableAt( nPhysicsGeom* where, phyreal force )
     @return true/false
 
     history:
-        - 30-Mar-2005   David Reyes    created
+        - 30-Mar-2005   Zombie         created
 */
 bool ncPhyVehicle::ItsFlipped() const
 {
@@ -972,7 +972,7 @@ bool ncPhyVehicle::ItsFlipped() const
     Try's to unflip the vehicle.
 
     history:
-        - 30-Mar-2005   David Reyes    created
+        - 30-Mar-2005   Zombie         created
 */
 void ncPhyVehicle::TryUnflip()
 {
@@ -988,7 +988,7 @@ void ncPhyVehicle::TryUnflip()
     Applies anti-roll bars.
 
     history:
-        - 20-Apr-2005   David Reyes    created
+        - 20-Apr-2005   Zombie         created
 */
 void ncPhyVehicle::AntiRollBars()
 {
@@ -1041,7 +1041,7 @@ void ncPhyVehicle::AntiRollBars()
     Process after run the world.
 
     history:
-        - 21-Apr-2005   David Reyes    created
+        - 21-Apr-2005   Zombie         created
 */
 void ncPhyVehicle::PostProcess()
 {
@@ -1070,7 +1070,7 @@ void ncPhyVehicle::PostProcess()
     @param wheelObject a wheel object
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 void ncPhyVehicle::SetWheelObject(const unsigned int wheelIndex, ncPhyWheel* wheelObject )
 {
@@ -1087,7 +1087,7 @@ void ncPhyVehicle::SetWheelObject(const unsigned int wheelIndex, ncPhyWheel* whe
     @param factor scale factor
 
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void ncPhyVehicle::Scale( const phyreal factor )
 {
@@ -1114,7 +1114,7 @@ void ncPhyVehicle::Scale( const phyreal factor )
     @param threshold force in newtons
     
     history:
-     - 10-Aug-2005   David Reyes    created
+     - 10-Aug-2005   Zombie         created
 */
 void ncPhyVehicle::SetPieceImpact( int index,  phyreal treshold )
 {
@@ -1142,7 +1142,7 @@ void ncPhyVehicle::SetPieceImpact( int index,  phyreal treshold )
     @return geometries number
     
     history:
-     - 10-Aug-2005   David Reyes    created
+     - 10-Aug-2005   Zombie         created
 */
 int ncPhyVehicle::GetNumberPieces() const
 {
@@ -1156,7 +1156,7 @@ int ncPhyVehicle::GetNumberPieces() const
     @param index geometry index
 
     history:
-     - 10-Aug-2005   David Reyes    created
+     - 10-Aug-2005   Zombie         created
 */
 void ncPhyVehicle::MarkPiece(int index)
 {
@@ -1170,7 +1170,7 @@ void ncPhyVehicle::MarkPiece(int index)
     @param index geometry index
 
     history:
-     - 10-Aug-2005   David Reyes    created
+     - 10-Aug-2005   Zombie         created
 */
 void ncPhyVehicle::UnMarkPiece(int index)
 {
@@ -1184,7 +1184,7 @@ void ncPhyVehicle::UnMarkPiece(int index)
     Constructor.
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 ncPhyVehicle::Wheel::Wheel() :
     direction(false),
@@ -1211,7 +1211,7 @@ ncPhyVehicle::Wheel::Wheel() :
     Destructor.
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 ncPhyVehicle::Wheel::~Wheel()
 {
@@ -1234,7 +1234,7 @@ ncPhyVehicle::Wheel::~Wheel()
     @param dir if it has direction
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetDirection( const bool dir )
 {
@@ -1248,7 +1248,7 @@ void ncPhyVehicle::Wheel::SetDirection( const bool dir )
     @param tract if it has traction
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetTraction( const bool tract )
 {
@@ -1262,7 +1262,7 @@ void ncPhyVehicle::Wheel::SetTraction( const bool tract )
     @param pos wheel position
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetPosition( const vector3& pos )
 {
@@ -1276,7 +1276,7 @@ void ncPhyVehicle::Wheel::SetPosition( const vector3& pos )
     @param direction suspension direction
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSpringDirection( const vector3& direction )
 {
@@ -1292,7 +1292,7 @@ void ncPhyVehicle::Wheel::SetSpringDirection( const vector3& direction )
     @param direction wheel axis direction
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetWheelAxis( const vector3& direction )
 {
@@ -1308,7 +1308,7 @@ void ncPhyVehicle::Wheel::SetWheelAxis( const vector3& direction )
     @return max steering (0..1)
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 const phyreal ncPhyVehicle::Wheel::GetMaxSteering() const
 {
@@ -1322,7 +1322,7 @@ const phyreal ncPhyVehicle::Wheel::GetMaxSteering() const
     @param wheelobj physics object representing the wheel
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetWheelObject( ncPhyWheel* wheelobj )
 {
@@ -1338,7 +1338,7 @@ void ncPhyVehicle::Wheel::SetWheelObject( ncPhyWheel* wheelobj )
     @return if it can be steer
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 const bool ncPhyVehicle::Wheel::IsDirection() const
 {
@@ -1352,7 +1352,7 @@ const bool ncPhyVehicle::Wheel::IsDirection() const
     @return if it has traction
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 const bool ncPhyVehicle::Wheel::HasTraction() const
 {
@@ -1366,7 +1366,7 @@ const bool ncPhyVehicle::Wheel::HasTraction() const
     @return physics object representing the wheel
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 ncPhyWheel*  ncPhyVehicle::Wheel::GetWheelObject() const
 {
@@ -1384,7 +1384,7 @@ ncPhyWheel*  ncPhyVehicle::Wheel::GetWheelObject() const
     @return if it's sliding
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 const bool ncPhyVehicle::Wheel::IsSliding() const
 {
@@ -1399,7 +1399,7 @@ const bool ncPhyVehicle::Wheel::IsSliding() const
     @param is if is a track wheel
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetTrackWheel( const bool /*is*/ )
 {
@@ -1413,7 +1413,7 @@ void ncPhyVehicle::Wheel::SetTrackWheel( const bool /*is*/ )
     @param max how much can be steered
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSteeringMax( const phyreal max )
 {
@@ -1430,7 +1430,7 @@ void ncPhyVehicle::Wheel::SetSteeringMax( const phyreal max )
     @param body where to be attached the wheel
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::Attach( nPhyRigidBody* body )
 {
@@ -1497,7 +1497,7 @@ void ncPhyVehicle::Wheel::Attach( nPhyRigidBody* body )
     @param jg jointgroup
 
     history:
-        - 04-Nov-2004   David Reyes    created
+        - 04-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetJointGroup( nPhyJointGroup *jg )
 {
@@ -1511,7 +1511,7 @@ void ncPhyVehicle::Wheel::SetJointGroup( nPhyJointGroup *jg )
     @param speed (angular speed)
 
     history:
-        - 05-Nov-2004   David Reyes    created
+        - 05-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSpeed( phyreal speed, const phyreal bhps )
 {
@@ -1531,7 +1531,7 @@ void ncPhyVehicle::Wheel::SetSpeed( phyreal speed, const phyreal bhps )
     @param steering how much
 
     history:
-        - 05-Nov-2004   David Reyes    created
+        - 05-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSteering( const phyreal steering )
 {
@@ -1555,7 +1555,7 @@ void ncPhyVehicle::Wheel::SetSteering( const phyreal steering )
     @param value    steering velocity
 
     history:
-        - 20-Dec-2004   David Reyes    created
+        - 20-Dec-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSteeringVelocity( phyreal value )
 {
@@ -1569,7 +1569,7 @@ void ncPhyVehicle::Wheel::SetSteeringVelocity( phyreal value )
     @return    steering velocity
 
     history:
-        - 20-Dec-2004   David Reyes    created
+        - 20-Dec-2004   Zombie         created
 */
 phyreal ncPhyVehicle::Wheel::GetSteeringVelocity() const
 {
@@ -1583,7 +1583,7 @@ phyreal ncPhyVehicle::Wheel::GetSteeringVelocity() const
     @param steering how much
 
     history:
-        - 05-Nov-2004   David Reyes    created
+        - 05-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetWorldPosition( const vector3& pos )
 {
@@ -1600,7 +1600,7 @@ void ncPhyVehicle::Wheel::SetWorldPosition( const vector3& pos )
     @param value steering force
 
     history:
-        - 22-Nov-2004   David Reyes    created
+        - 22-Nov-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSteeringForce( const phyreal value )
 {
@@ -1617,7 +1617,7 @@ void ncPhyVehicle::Wheel::SetSteeringForce( const phyreal value )
     @return value steering force
 
     history:
-        - 22-Nov-2004   David Reyes    created
+        - 22-Nov-2004   Zombie         created
 */
 phyreal ncPhyVehicle::Wheel::GetSteeringForce() const
 {
@@ -1631,7 +1631,7 @@ phyreal ncPhyVehicle::Wheel::GetSteeringForce() const
     @param value (0..1)  1...max recovery
 
     history:
-        - 20-Dec-2004   David Reyes    created
+        - 20-Dec-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSuspensionRecoverForce( phyreal value )
 {
@@ -1651,7 +1651,7 @@ void ncPhyVehicle::Wheel::SetSuspensionRecoverForce( phyreal value )
     @return (0..1)  1...max recovery
 
     history:
-        - 20-Dec-2004   David Reyes    created
+        - 20-Dec-2004   Zombie         created
 */
 phyreal ncPhyVehicle::Wheel::GetSuspensionRecoverForce() const
 {
@@ -1665,7 +1665,7 @@ phyreal ncPhyVehicle::Wheel::GetSuspensionRecoverForce() const
     @param value (0..1)  1...max recovery
 
     history:
-        - 20-Dec-2004   David Reyes    created
+        - 20-Dec-2004   Zombie         created
 */
 void ncPhyVehicle::Wheel::SetSuspensionRecover( phyreal value )
 {
@@ -1685,7 +1685,7 @@ void ncPhyVehicle::Wheel::SetSuspensionRecover( phyreal value )
     @return (0..1)  1...max recovery
 
     history:
-        - 20-Dec-2004   David Reyes    created
+        - 20-Dec-2004   Zombie         created
 */
 phyreal ncPhyVehicle::Wheel::GetSuspensionRecover() const
 {
@@ -1697,7 +1697,7 @@ phyreal ncPhyVehicle::Wheel::GetSuspensionRecover() const
     Adjust rotation axis.
 
     history:
-        - 01-Apr-2005   David Reyes    created
+        - 01-Apr-2005   Zombie         created
 */
 void ncPhyVehicle::Wheel::AdjustRotationAxis()
 {
@@ -1715,7 +1715,7 @@ void ncPhyVehicle::Wheel::AdjustRotationAxis()
     @return suspension joint
 
     history:
-        - 21-Apr-2005   David Reyes    created
+        - 21-Apr-2005   Zombie         created
 */
 nPhyTwoHingeJoint& ncPhyVehicle::Wheel::GetSuspension()
 {
@@ -1729,7 +1729,7 @@ nPhyTwoHingeJoint& ncPhyVehicle::Wheel::GetSuspension()
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void ncPhyVehicle::Wheel::Scale( const phyreal factor )
 {
@@ -1743,7 +1743,7 @@ void ncPhyVehicle::Wheel::Scale( const phyreal factor )
 	Draws the physic object.
 
     history:
-     - 18-Aug-2005   David Reyes    created
+     - 18-Aug-2005   Zombie         created
 */
 void ncPhyVehicle::Draw( nGfxServer2* server )
 {
@@ -1857,7 +1857,7 @@ void ncPhyVehicle::SetPositionPhyObj( const vector3& /*newpos*/ )
 	Checks if collision with other physics object.
 
     history:
-     - 15-Sep-2005   David Reyes    created
+     - 15-Sep-2005   Zombie         created
    
 */
 int ncPhyVehicle::Collide( const ncPhysicsObj* obj,
@@ -1886,7 +1886,7 @@ int ncPhyVehicle::Collide( const ncPhysicsObj* obj,
 	Checks if collision with a geometry.
 
     history:
-     - 15-Sep-2005   David Reyes    created
+     - 15-Sep-2005   Zombie         created
    
 */
 int ncPhyVehicle::Collide( const nPhysicsGeom* geom,
@@ -1914,7 +1914,7 @@ int ncPhyVehicle::Collide( const nPhysicsGeom* geom,
 	Checks if the object collides with anything in his own world.
 
     history:
-     - 15-Sep-2005   David Reyes    created
+     - 15-Sep-2005   Zombie         created
    
 */
 int ncPhyVehicle::Collide( int numContacts, nPhyCollide::nContact* contact ) const
@@ -1943,7 +1943,7 @@ int ncPhyVehicle::Collide( int numContacts, nPhyCollide::nContact* contact ) con
 	Moves the object to limbo.
 
     history:
-     - 16-Sep-2005   David Reyes    created
+     - 16-Sep-2005   Zombie         created
    
 */
 void ncPhyVehicle::YouShallDwellIntoTheLimbo()
@@ -1964,7 +1964,7 @@ void ncPhyVehicle::YouShallDwellIntoTheLimbo()
 	Recovers an object from the limbo.
 
     history:
-     - 16-Sep-2005   David Reyes    created
+     - 16-Sep-2005   Zombie         created
    
 */
 void ncPhyVehicle::YourSoulMayComeBackFromLimbo()
@@ -1990,7 +1990,7 @@ void ncPhyVehicle::YourSoulMayComeBackFromLimbo()
     @return the position
 
     history:
-     - 22-Dec-2005   David Reyes    created
+     - 22-Dec-2005   Zombie         created
    
 */
 const vector3 ncPhyVehicle::GetWheelPosition( const unsigned int index ) const
@@ -2014,7 +2014,7 @@ const vector3 ncPhyVehicle::GetWheelPosition( const unsigned int index ) const
     @return the orientation
 
     history:
-     - 22-Dec-2005   David Reyes    created
+     - 22-Dec-2005   Zombie         created
    
 */
 const vector3 ncPhyVehicle::GetWheelOrientation( const unsigned int index ) const
@@ -2039,7 +2039,7 @@ const vector3 ncPhyVehicle::GetWheelOrientation( const unsigned int index ) cons
     @return class
 
     history:
-     - 23-Dec-2005   David Reyes    created
+     - 23-Dec-2005   Zombie         created
    
 */
 nEntityClass* ncPhyVehicle::GetBrushClass() const
@@ -2066,7 +2066,7 @@ nEntityClass* ncPhyVehicle::GetBrushClass() const
     Creates the steering wheel object if any.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 void ncPhyVehicle::CreateSteeringWheel()
 {
@@ -2093,7 +2093,7 @@ void ncPhyVehicle::CreateSteeringWheel()
     Updates steering wheel.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 void ncPhyVehicle::UpdateSteeringWheel()
 {
@@ -2128,7 +2128,7 @@ void ncPhyVehicle::UpdateSteeringWheel()
     Computes the final acceleration and turning.
 
     history:
-        - 30-Jan-2006   David Reyes    created
+        - 30-Jan-2006   Zombie         created
 */
 void ncPhyVehicle::ComputeInput()
 {
@@ -2181,7 +2181,7 @@ void ncPhyVehicle::ComputeInput()
     @return gas expected
 
     history:
-        - 30-Jan-2006   David Reyes    created
+        - 30-Jan-2006   Zombie         created
 */
 const phyreal ncPhyVehicle::GetAccelerateValue() const
 {
@@ -2193,7 +2193,7 @@ const phyreal ncPhyVehicle::GetAccelerateValue() const
     Enables the physic object.
 
     history:
-        - 15-Feb-2006   David Reyes    created
+        - 15-Feb-2006   Zombie         created
 */
 void ncPhyVehicle::Enable()
 {
@@ -2214,7 +2214,7 @@ void ncPhyVehicle::Enable()
     Disables the physic object.
 
     history:
-        - 15-Feb-2006   David Reyes    created
+        - 15-Feb-2006   Zombie         created
 */
 void ncPhyVehicle::Disable()
 {
@@ -2234,7 +2234,7 @@ void ncPhyVehicle::Disable()
     Enables the physic object.
 
     history:
-        - 15-Feb-2006   David Reyes    created
+        - 15-Feb-2006   Zombie         created
 */
 void ncPhyVehicle::Wheel::Enable()
 {
@@ -2246,7 +2246,7 @@ void ncPhyVehicle::Wheel::Enable()
     Disables the physic object.
 
     history:
-        - 15-Feb-2006   David Reyes    created
+        - 15-Feb-2006   Zombie         created
 */
 void ncPhyVehicle::Wheel::Disable()
 {

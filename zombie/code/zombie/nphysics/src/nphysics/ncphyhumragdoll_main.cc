@@ -35,7 +35,7 @@ namespace {
     Constructor
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 ncPhyHumRagDoll::ncPhyHumRagDoll() :
     mainBody(0),
@@ -66,7 +66,7 @@ ncPhyHumRagDoll::ncPhyHumRagDoll() :
     Destructor
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 ncPhyHumRagDoll::~ncPhyHumRagDoll()
 {
@@ -78,7 +78,7 @@ ncPhyHumRagDoll::~ncPhyHumRagDoll()
     Process of creating of the object.
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyHumRagDoll::Create( nPhysicsWorld* world )
 {
@@ -104,7 +104,7 @@ void ncPhyHumRagDoll::Create( nPhysicsWorld* world )
     Assembles the body.
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyHumRagDoll::Assemble()
 {
@@ -128,7 +128,7 @@ void ncPhyHumRagDoll::Assemble()
     Attaches the head.
 
     history:
-        - 02-Mar-2005   David Reyes    created
+        - 02-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::AttachHead()
 {
@@ -183,7 +183,7 @@ void ncPhyHumRagDoll::AttachHead()
     @param arm (left/right)
 
     history:
-        - 02-Mar-2005   David Reyes    created
+        - 02-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::AttachArm( const which arm )
 {
@@ -274,7 +274,7 @@ void ncPhyHumRagDoll::AttachArm( const which arm )
     @param arm (left/right)
 
     history:
-        - 02-Mar-2005   David Reyes    created
+        - 02-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::AttachForeArm( const which arm )
 {
@@ -357,7 +357,7 @@ void ncPhyHumRagDoll::AttachForeArm( const which arm )
     @param leg (left/right)
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::AttachLeg( const which leg )
 {
@@ -452,7 +452,7 @@ void ncPhyHumRagDoll::AttachLeg( const which leg )
     @param leg (left/right)
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::AttachForeLeg( const which leg )
 {
@@ -538,7 +538,7 @@ void ncPhyHumRagDoll::AttachForeLeg( const which leg )
     @param head head limb
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetHead( ncPhyRagDollLimb* head )
 {
@@ -553,7 +553,7 @@ void ncPhyHumRagDoll::SetHead( ncPhyRagDollLimb* head )
     @param armobj arm object
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetArm( const which arm, ncPhyRagDollLimb* armobj )
 {
@@ -578,7 +578,7 @@ void ncPhyHumRagDoll::SetArm( const which arm, ncPhyRagDollLimb* armobj )
     @param armobj arm object
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetForeArm( const which arm, ncPhyRagDollLimb* armobj )
 {
@@ -603,7 +603,7 @@ void ncPhyHumRagDoll::SetForeArm( const which arm, ncPhyRagDollLimb* armobj )
     @param legobj leg object
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetLeg( const which leg, ncPhyRagDollLimb* legobj )
 {
@@ -628,7 +628,7 @@ void ncPhyHumRagDoll::SetLeg( const which leg, ncPhyRagDollLimb* legobj )
     @param legobj leg object
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetForeLeg( const which leg, ncPhyRagDollLimb* legobj )
 {
@@ -650,7 +650,7 @@ void ncPhyHumRagDoll::SetForeLeg( const which leg, ncPhyRagDollLimb* legobj )
     Creates the articulations.
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::CreateArticulations()
 {
@@ -668,7 +668,7 @@ void ncPhyHumRagDoll::CreateArticulations()
     @param position neck pivot point
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetNeckPoint( const vector3& position )
 {
@@ -683,7 +683,7 @@ void ncPhyHumRagDoll::SetNeckPoint( const vector3& position )
     @param position shoulder pivot point
     
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetShoulderPoint( const which shoulder, const vector3& position )
 {
@@ -709,7 +709,7 @@ void ncPhyHumRagDoll::SetShoulderPoint( const which shoulder, const vector3& pos
     @param position elbow pivot point
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetElbowPoint( const which elbow, const vector3& position )
 {
@@ -734,7 +734,7 @@ void ncPhyHumRagDoll::SetElbowPoint( const which elbow, const vector3& position 
     @param position leg pivot point
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetWristPoint( const which leg, const vector3& position )
 {
@@ -759,7 +759,7 @@ void ncPhyHumRagDoll::SetWristPoint( const which leg, const vector3& position )
     @param position knee pivot point
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::SetKneePoint( const which knee, const vector3& position )
 {
@@ -781,7 +781,7 @@ void ncPhyHumRagDoll::SetKneePoint( const which knee, const vector3& position )
     Creates the neck.
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::CreateNeck()
 {   
@@ -799,7 +799,7 @@ void ncPhyHumRagDoll::CreateNeck()
     Creates the elbows.
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::CreateElbows()
 {
@@ -825,7 +825,7 @@ void ncPhyHumRagDoll::CreateElbows()
     Creates the shoulders.
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::CreateShoulders()
 {
@@ -849,7 +849,7 @@ void ncPhyHumRagDoll::CreateShoulders()
     Creates the wrist.
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::CreateWrist()
 {
@@ -873,7 +873,7 @@ void ncPhyHumRagDoll::CreateWrist()
     Creates the knees.
 
     history:
-        - 08-Mar-2005   David Reyes    created
+        - 08-Mar-2005   Zombie         created
 */
 void ncPhyHumRagDoll::CreateKnees()
 {
@@ -902,7 +902,7 @@ void ncPhyHumRagDoll::CreateKnees()
     @return if any collision was processed
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 bool ncPhyHumRagDoll::CollisionProcess( int numContacts, nPhyCollide::nContact* contacts )
 {
@@ -935,7 +935,7 @@ bool ncPhyHumRagDoll::CollisionProcess( int numContacts, nPhyCollide::nContact* 
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyHumRagDoll::InitInstance(nObject::InitInstanceMsg initType)
 {

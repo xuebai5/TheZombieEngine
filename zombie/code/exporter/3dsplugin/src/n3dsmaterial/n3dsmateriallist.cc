@@ -504,7 +504,7 @@ n3dsMaterialList::AppendTexture( const nString& fileName )
                 newName = name.ReplaceBegin( repo , "wctextures:") ;
             } else
             {
-                int index = name.IndexOf( "home:", 0); //Special case use system textures
+                int index = name.IndexOf( "wc:", 0); //Special case use system textures
                 valid = 0 == index;
             }
             //@todo enque file Save

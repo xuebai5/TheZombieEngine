@@ -548,8 +548,8 @@ private:
     @param force a positive force magnitude
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 void ncPhyVehicleClass::SetMaxAntiRollForce( const phyreal force )
@@ -566,8 +566,8 @@ void ncPhyVehicleClass::SetMaxAntiRollForce( const phyreal force )
     @return a positive force magnitude
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 const phyreal ncPhyVehicleClass::GetMaxAntiRollForce() const
@@ -582,8 +582,8 @@ const phyreal ncPhyVehicleClass::GetMaxAntiRollForce() const
     @return a positive force magnitude
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 const phyreal ncPhyVehicleClass::GetAntiRollForce() const
@@ -598,8 +598,8 @@ const phyreal ncPhyVehicleClass::GetAntiRollForce() const
     @param force a positive force magnitude
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 void ncPhyVehicleClass::SetAntiRollForce( const phyreal force )
@@ -616,8 +616,8 @@ void ncPhyVehicleClass::SetAntiRollForce( const phyreal force )
     @param ratio revolutions per second
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 void ncPhyVehicleClass::SetAccelerateRatio( const phyreal ratio )
@@ -632,8 +632,8 @@ void ncPhyVehicleClass::SetAccelerateRatio( const phyreal ratio )
     @return revolutions per second
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 const phyreal ncPhyVehicleClass::GetAccelerateRatio() const
@@ -648,8 +648,8 @@ const phyreal ncPhyVehicleClass::GetAccelerateRatio() const
     @param resistance engine friction
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 void ncPhyVehicleClass::SetEngineResistance( const phyreal resistance )
@@ -664,8 +664,8 @@ void ncPhyVehicleClass::SetEngineResistance( const phyreal resistance )
     @return engine friction
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 const phyreal ncPhyVehicleClass::GetEngineResistance() const
@@ -680,8 +680,8 @@ const phyreal ncPhyVehicleClass::GetEngineResistance() const
     @param ratio steering ratio per unit of time
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 void ncPhyVehicleClass::SetSteerRatio( const phyreal ratio )
@@ -696,8 +696,8 @@ void ncPhyVehicleClass::SetSteerRatio( const phyreal ratio )
     @return steering ratio per unit of time
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 const phyreal ncPhyVehicleClass::GetSteerRatio() const
@@ -712,8 +712,8 @@ const phyreal ncPhyVehicleClass::GetSteerRatio() const
     @param ratio steering recovery ratio per unit of time
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 void ncPhyVehicleClass::SetSteerRecoverRatio( const phyreal ratio )
@@ -728,8 +728,8 @@ void ncPhyVehicleClass::SetSteerRecoverRatio( const phyreal ratio )
     @return steering recovery ratio per unit of time
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 26-Apr-2005   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 inline
 const phyreal ncPhyVehicleClass::GetSteerRecoverRatio() const

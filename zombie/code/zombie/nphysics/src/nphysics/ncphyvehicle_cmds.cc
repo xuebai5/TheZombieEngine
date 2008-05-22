@@ -27,7 +27,7 @@ NSCRIPT_INITCMDS_END()
     Save state of the component.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 bool ncPhyVehicle::SaveCmds(nPersistServer *server)
 {    

@@ -27,7 +27,7 @@ float nPhysicsAABB::* nPhysicsAABB::arrayPointers[8][3] = {
     @param vertex       selected vertex
 
     history:
-        - 30-Nov-2004   David Reyes   created
+        - 30-Nov-2004   Zombie        created
 */
 void nPhysicsAABB::GetVertex( int index, vector3& vertex ) const
 {
@@ -47,7 +47,7 @@ void nPhysicsAABB::GetVertex( int index, vector3& vertex ) const
     @return result of adding two bounding boxes
 
     history:
-        - 30-Nov-2004   David Reyes   created
+        - 30-Nov-2004   Zombie        created
 */
 nPhysicsAABB nPhysicsAABB::operator + ( const nPhysicsAABB& box )
 {
@@ -72,7 +72,7 @@ nPhysicsAABB nPhysicsAABB::operator + ( const nPhysicsAABB& box )
     @return itself
 
     history:
-        - 30-Nov-2004   David Reyes   created
+        - 30-Nov-2004   Zombie        created
 */
 nPhysicsAABB& nPhysicsAABB::operator += ( const nPhysicsAABB& box )
 {
@@ -94,7 +94,7 @@ nPhysicsAABB& nPhysicsAABB::operator += ( const nPhysicsAABB& box )
     @param scale scale factor
 
     history:
-        - 14-Dec-2004   David Reyes   created
+        - 14-Dec-2004   Zombie        created
 */
 void nPhysicsAABB::Scale( const float scale )
 {
@@ -116,7 +116,7 @@ void nPhysicsAABB::Scale( const float scale )
     @return true/false
 
     history:
-        - 15-Dec-2004   David Reyes   created
+        - 15-Dec-2004   Zombie        created
 */
 const bool nPhysicsAABB::operator == ( const nPhysicsAABB& box ) const
 {
@@ -146,7 +146,7 @@ const bool nPhysicsAABB::operator == ( const nPhysicsAABB& box ) const
     @return true/false
 
     history:
-        - 15-Dec-2004   David Reyes   created
+        - 15-Dec-2004   Zombie        created
 */
 const bool nPhysicsAABB::operator != ( const nPhysicsAABB& box ) const
 {
@@ -160,7 +160,7 @@ const bool nPhysicsAABB::operator != ( const nPhysicsAABB& box ) const
     Draws the bounding box.
 
     history:
-        - 15-Dec-2004   David Reyes   created
+        - 15-Dec-2004   Zombie        created
 */
 void nPhysicsAABB::Draw( nGfxServer2* server, const vector4& color )
 {

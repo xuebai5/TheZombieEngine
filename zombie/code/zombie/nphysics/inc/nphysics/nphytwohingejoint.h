@@ -87,8 +87,8 @@ public:
     @param anchor   anchor point
 
     history:
-        - 03-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 03-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::SetAnchor( const vector3& anchor )
@@ -105,8 +105,8 @@ void nPhyTwoHingeJoint::SetAnchor( const vector3& anchor )
     @param axis   first direction axis
 
     history:
-        - 03-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 03-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::SetFirstAxis( const vector3& axis )
@@ -123,8 +123,8 @@ void nPhyTwoHingeJoint::SetFirstAxis( const vector3& axis )
     @param axis   second direction axis
 
     history:
-        - 03-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 03-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::SetSecondAxis( const vector3& axis )
@@ -143,8 +143,8 @@ void nPhyTwoHingeJoint::SetSecondAxis( const vector3& axis )
     @param value        new parameters value
 
     history:
-        - 11-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 11-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::SetParam( const phy::jointparameter parameter, const phy::jointaxis axis, const phyreal value )
@@ -162,8 +162,8 @@ void nPhyTwoHingeJoint::SetParam( const phy::jointparameter parameter, const phy
     @param axis         wich axis
 
     history:
-        - 11-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 11-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::GetAxisDirection( vector3& direction, const phy::jointaxis axis )
@@ -180,8 +180,8 @@ void nPhyTwoHingeJoint::GetAxisDirection( vector3& direction, const phy::jointax
     @param axis         two hinge axis
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::GetFirstAxis( vector3& axis ) const
@@ -198,8 +198,8 @@ void nPhyTwoHingeJoint::GetFirstAxis( vector3& axis ) const
     @param axis         two hinge axis
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::GetSecondAxis( vector3& axis ) const
@@ -216,8 +216,8 @@ void nPhyTwoHingeJoint::GetSecondAxis( vector3& axis ) const
     @param anchor         two hinge anchor
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::GetFirstAnchor( vector3& anchor ) const
@@ -234,8 +234,8 @@ void nPhyTwoHingeJoint::GetFirstAnchor( vector3& anchor ) const
     @param anchor         two hinge anchor
 
     history:
-        - 20-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 20-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyTwoHingeJoint::GetSecondAnchor( vector3& anchor ) const

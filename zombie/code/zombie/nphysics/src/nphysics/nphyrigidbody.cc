@@ -23,7 +23,7 @@ namespace
     Constructor
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 nPhyRigidBody::nPhyRigidBody() : 
     worldOwner(0),
@@ -41,7 +41,7 @@ nPhyRigidBody::nPhyRigidBody() :
     Destructor
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 nPhyRigidBody::~nPhyRigidBody()
 {
@@ -58,7 +58,7 @@ nPhyRigidBody::~nPhyRigidBody()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 void nPhyRigidBody::CreateIn( nPhysicsWorld* world )
 {
@@ -85,7 +85,7 @@ void nPhyRigidBody::CreateIn( nPhysicsWorld* world )
     @param offset mass offset
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 void nPhyRigidBody::Update( nPhysicsGeom* geom, phyreal mass, phyreal density, const vector3& offset )
 {
@@ -106,7 +106,7 @@ void nPhyRigidBody::Update( nPhysicsGeom* geom, phyreal mass, phyreal density, c
     @param offset mass offset
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 void nPhyRigidBody::Update( tContainerGeometries& container, phyreal mass, phyreal density, const vector3& offset )
 {
@@ -220,7 +220,7 @@ void nPhyRigidBody::Update( tContainerGeometries& container, phyreal mass, phyre
     @param inertia body's inertia
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 void nPhyRigidBody::GetInertia( vector3& inertia )
 {
@@ -252,7 +252,7 @@ void nPhyRigidBody::GetInertia( vector3& inertia )
     @return true/false
 
     history:
-        - 23-Aug-2005   David Reyes    created
+        - 23-Aug-2005   Zombie         created
 */
 bool nPhyRigidBody::ContactWithOtherBodies() const
 {
@@ -266,7 +266,7 @@ bool nPhyRigidBody::ContactWithOtherBodies() const
     @param is true/false
 
     history:
-        - 23-Aug-2005   David Reyes    created
+        - 23-Aug-2005   Zombie         created
 */
 void nPhyRigidBody::SetContactWithOtherBodies( const bool is )
 {

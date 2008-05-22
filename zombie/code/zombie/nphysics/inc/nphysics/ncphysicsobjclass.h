@@ -72,7 +72,7 @@ private:
     @param mass object's mass
 
     history:
-        - 15-Jun-2005   David Reyes    copied from nPhysicsObj
+        - 15-Jun-2005   Zombie         copied from nPhysicsObj
 */
 inline
 void ncPhysicsObjClass::SetMass( phyreal mass )
@@ -88,7 +88,7 @@ void ncPhysicsObjClass::SetMass( phyreal mass )
     @param density object's density
 
     history:
-        - 15-Jun-2005   David Reyes    copied from nPhysicsObj
+        - 15-Jun-2005   Zombie         copied from nPhysicsObj
 */
 inline
 void ncPhysicsObjClass::SetDensity( phyreal density )
@@ -104,7 +104,7 @@ void ncPhysicsObjClass::SetDensity( phyreal density )
     @return object's mass
 
     history:
-        - 15-Jun-2005   David Reyes    copied from nPhysicsObj
+        - 15-Jun-2005   Zombie         copied from nPhysicsObj
 */
 inline
 const phyreal ncPhysicsObjClass::GetMass() const
@@ -119,7 +119,7 @@ const phyreal ncPhysicsObjClass::GetMass() const
     @return object's density
 
     history:
-        - 15-Jun-2005   David Reyes    copied from nPhysicsObj
+        - 15-Jun-2005   Zombie         copied from nPhysicsObj
 */
 inline
 const phyreal ncPhysicsObjClass::GetDensity() const

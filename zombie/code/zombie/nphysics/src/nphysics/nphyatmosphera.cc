@@ -17,7 +17,7 @@ const phyreal nPhyAtmosphera::airResistance = phyreal(-.01);
     Constructor
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 nPhyAtmosphera::nPhyAtmosphera()
 {
@@ -30,7 +30,7 @@ nPhyAtmosphera::nPhyAtmosphera()
     Destructor
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 nPhyAtmosphera::~nPhyAtmosphera()
 {
@@ -44,7 +44,7 @@ nPhyAtmosphera::~nPhyAtmosphera()
     @param density  atmosphere density
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void nPhyAtmosphera::SetDensity( phyreal density )
 {
@@ -60,7 +60,7 @@ void nPhyAtmosphera::SetDensity( phyreal density )
     @param wind     direction and force
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void nPhyAtmosphera::SetWind( const vector3& wind )
 {
@@ -74,7 +74,7 @@ void nPhyAtmosphera::SetWind( const vector3& wind )
     @return atmosphera density
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 phyreal nPhyAtmosphera::GetDensity() const
 {
@@ -88,7 +88,7 @@ phyreal nPhyAtmosphera::GetDensity() const
     @param wind     direction and force
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void nPhyAtmosphera::GetWind( vector3& wind ) const
 {
@@ -102,7 +102,7 @@ void nPhyAtmosphera::GetWind( vector3& wind ) const
     @param windorigin   world position where the wind starts
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void nPhyAtmosphera::SetWindOrigin( const vector3& windorigin )
 {
@@ -116,7 +116,7 @@ void nPhyAtmosphera::SetWindOrigin( const vector3& windorigin )
     @return   world position where the wind starts
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void nPhyAtmosphera::GetWindOrigin( vector3& windorigin ) const
 {
@@ -130,7 +130,7 @@ void nPhyAtmosphera::GetWindOrigin( vector3& windorigin ) const
     @param  list of objects
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void nPhyAtmosphera::Process( const nKeyArray< nPhyRigidBody* >& bodies )
 {

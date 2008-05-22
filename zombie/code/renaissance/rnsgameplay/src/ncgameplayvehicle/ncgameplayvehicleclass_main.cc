@@ -40,7 +40,7 @@ ncGameplayVehicleClass::~ncGameplayVehicleClass()
     @param entityname entityobject to use
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 void ncGameplayVehicleClass::SetSeat( const unsigned int index, const nString& entityname )
 {
@@ -58,7 +58,7 @@ void ncGameplayVehicleClass::SetSeat( const unsigned int index, const nString& e
     @return name of the seat class
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 const nString& ncGameplayVehicleClass::GetSeat(const unsigned int index) const
 {
@@ -76,7 +76,7 @@ const nString& ncGameplayVehicleClass::GetSeat(const unsigned int index) const
     @return priority lvl    
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 const unsigned int ncGameplayVehicleClass::GetSeatByPriority( const unsigned int priority ) const
 {

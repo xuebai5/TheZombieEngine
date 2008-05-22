@@ -20,7 +20,7 @@ nNebulaScriptClass(nPhyGeomCone, "nphysicsgeom");
     Constructor
 
     history:
-        - 15-Apr-2005   David Reyes    created
+        - 15-Apr-2005   Zombie         created
 */
 nPhyGeomCone::nPhyGeomCone()
 {
@@ -34,7 +34,7 @@ nPhyGeomCone::nPhyGeomCone()
     Destructor
 
     history:
-        - 15-Apr-2005   David Reyes    created
+        - 15-Apr-2005   Zombie         created
 */
 nPhyGeomCone::~nPhyGeomCone()
 {
@@ -46,7 +46,7 @@ nPhyGeomCone::~nPhyGeomCone()
     Creates the geometry
 
     history:
-        - 15-Apr-2005   David Reyes    created
+        - 15-Apr-2005   Zombie         created
 */
 void nPhyGeomCone::Create()
 {
@@ -67,7 +67,7 @@ void nPhyGeomCone::Create()
     @param server     graphic server
 
     history:
-        - 15-Apr-2005   David Reyes    created
+        - 15-Apr-2005   Zombie         created
 */
 void nPhyGeomCone::Draw( nGfxServer2 *server )
 {
@@ -89,7 +89,7 @@ void nPhyGeomCone::Draw( nGfxServer2 *server )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyGeomCone::Scale( const phyreal factor )
 {

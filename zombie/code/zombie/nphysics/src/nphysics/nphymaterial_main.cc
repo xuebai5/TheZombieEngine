@@ -23,7 +23,7 @@ int nPhyMaterial::MaterialsSize = 0;
     Constructor
 
     history:
-        - 28-Sep-2004   David Reyes   created
+        - 28-Sep-2004   Zombie        created
 */
 nPhyMaterial::nPhyMaterial() :
     nameMaterial(""),
@@ -42,7 +42,7 @@ nPhyMaterial::nPhyMaterial() :
     Destructor
 
     history:
-        - 28-Sep-2004   David Reyes   created
+        - 28-Sep-2004   Zombie        created
 */
 nPhyMaterial::~nPhyMaterial()
 {
@@ -58,7 +58,7 @@ nPhyMaterial::~nPhyMaterial()
     Updates the table of materials.
 
     history:
-        - 28-Sep-2004   David Reyes   created
+        - 28-Sep-2004   Zombie        created
 */
 void nPhyMaterial::Update()
 {
@@ -76,8 +76,8 @@ void nPhyMaterial::Update()
     Creates the table of material contacts.
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 28-Oct-2005   David Reyes   made it public
+        - 28-Sep-2004   Zombie        created
+        - 28-Oct-2005   Zombie        made it public
 */
 void nPhyMaterial::UpdateTableMaterialContacts()
 {
@@ -168,7 +168,7 @@ void nPhyMaterial::UpdateTableMaterialContacts()
     @param data structure to be filled
 
     history:
-        - 28-Sep-2004   David Reyes   created
+        - 28-Sep-2004   Zombie        created
 */
 void nPhyMaterial::Fill( surfacedata& data ) const
 {
@@ -224,7 +224,7 @@ void nPhyMaterial::Fill( surfacedata& data ) const
     @return datasurface information
 
     history:
-        - 29-Sep-2004   David Reyes   created
+        - 29-Sep-2004   Zombie        created
 */
 const surfacedata nPhyMaterial::operator + ( const nPhyMaterial& material ) const
 {
@@ -397,7 +397,7 @@ const surfacedata nPhyMaterial::operator + ( const nPhyMaterial& material ) cons
     @return boolean
 
     history:
-        - 29-Sep-2004   David Reyes   created
+        - 29-Sep-2004   Zombie        created
 */
 bool nPhyMaterial::Validate( const int type )
 {
@@ -418,7 +418,7 @@ bool nPhyMaterial::Validate( const int type )
     @return material
 
     history:
-        - 29-Sep-2004   David Reyes   created
+        - 29-Sep-2004   Zombie        created
 */  
 nPhyMaterial* nPhyMaterial::GetMaterial( idmaterial id )
 {
@@ -437,7 +437,7 @@ nPhyMaterial* nPhyMaterial::GetMaterial( idmaterial id )
     @return material name
 
     history:
-        - 26-Sep-2005   David Reyes   created
+        - 26-Sep-2005   Zombie        created
 */
 const nString& nPhyMaterial::GetMaterialName() const
 {
@@ -453,7 +453,7 @@ const nString& nPhyMaterial::GetMaterialName() const
     @return true/false
 
     history:
-        - 03-Nov-2005   David Reyes   created
+        - 03-Nov-2005   Zombie        created
 */
 bool nPhyMaterial::GetToBeRemoved() const
 {
@@ -467,7 +467,7 @@ bool nPhyMaterial::GetToBeRemoved() const
     @param has true/false
 
     history:
-        - 03-Nov-2005   David Reyes   created
+        - 03-Nov-2005   Zombie        created
 */
 void nPhyMaterial::SetToBeRemoved( bool has )
 {

@@ -32,7 +32,7 @@ nNebulaComponentObject(ncPhyJoint,nComponentObject);
     Constructor
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 ncPhyJoint::ncPhyJoint() :
     type( nPhysicsJoint::Invalid ),
@@ -52,7 +52,7 @@ ncPhyJoint::ncPhyJoint() :
     Destructor
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 ncPhyJoint::~ncPhyJoint()
 {
@@ -66,7 +66,7 @@ ncPhyJoint::~ncPhyJoint()
     @return joint type
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 nPhysicsJoint::JointTypes ncPhyJoint::GetType() const
 {
@@ -80,7 +80,7 @@ nPhysicsJoint::JointTypes ncPhyJoint::GetType() const
     @param rigid body
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetBodyA( nPhyRigidBody* body )
 {
@@ -94,7 +94,7 @@ void ncPhyJoint::SetBodyA( nPhyRigidBody* body )
     @param rigid body
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetBodyB( nPhyRigidBody* body )
 {
@@ -108,7 +108,7 @@ void ncPhyJoint::SetBodyB( nPhyRigidBody* body )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 19-Aug-2005   David Reyes    created
+        - 19-Aug-2005   Zombie         created
 */
 void ncPhyJoint::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -131,7 +131,7 @@ void ncPhyJoint::InitInstance(nObject::InitInstanceMsg initType)
     Mounts the joint
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 void ncPhyJoint::Mount()
 {
@@ -171,7 +171,7 @@ void ncPhyJoint::Mount()
     Creates the physics joint.
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 void ncPhyJoint::CreateJoint()
 {
@@ -301,7 +301,7 @@ void ncPhyJoint::CreateJoint()
     Sets the id of the object if any.
 
     history:
-        - 22-Aug-2005   David Reyes    created
+        - 22-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetObjectA( const nEntityObjectId id )
 {
@@ -313,7 +313,7 @@ void ncPhyJoint::SetObjectA( const nEntityObjectId id )
     Sets the id of the object if any.
 
     history:
-        - 22-Aug-2005   David Reyes    created
+        - 22-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetObjectB( const nEntityObjectId id )
 {
@@ -327,7 +327,7 @@ void ncPhyJoint::SetObjectB( const nEntityObjectId id )
     Mounts the selected object(s).
 
     history:
-        - 22-Aug-2005   David Reyes    created
+        - 22-Aug-2005   Zombie         created
 */
 void ncPhyJoint::MountSelected()
 {
@@ -368,7 +368,7 @@ void ncPhyJoint::MountSelected()
     Sets the object's position.
 
     history:
-        - 23-Aug-2005   David Reyes    created
+        - 23-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetPosition( const vector3& newposition )
 {
@@ -418,7 +418,7 @@ void ncPhyJoint::SetPosition( const vector3& newposition )
     Function to be process after running the simulation.
 
     history:
-        - 23-Aug-2005   David Reyes    created
+        - 23-Aug-2005   Zombie         created
 */
 void ncPhyJoint::PostProcess()
 {
@@ -439,7 +439,7 @@ void ncPhyJoint::PostProcess()
     @param typeJoint nPhysicsJoint::JointTypes
 
     history:
-        - 24-Aug-2005   David Reyes    created
+        - 24-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetType( const nPhysicsJoint::JointTypes typeJoint ) 
 {
@@ -453,7 +453,7 @@ void ncPhyJoint::SetType( const nPhysicsJoint::JointTypes typeJoint )
     @param point 3d world coordinates
 
     history:
-        - 24-Aug-2005   David Reyes    created
+        - 24-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetAnchorPoint( const vector3& point )
 {
@@ -499,7 +499,7 @@ void ncPhyJoint::SetAnchorPoint( const vector3& point )
     @return if the feature is supported
 
     history:
-        - 24-Aug-2005   David Reyes    created
+        - 24-Aug-2005   Zombie         created
 */
 bool ncPhyJoint::GetAnchorPoint( vector3& point ) const
 {
@@ -544,7 +544,7 @@ bool ncPhyJoint::GetAnchorPoint( vector3& point ) const
     @return if the feature is supported
 
     history:
-        - 24-Aug-2005   David Reyes    created
+        - 24-Aug-2005   Zombie         created
 */
 bool ncPhyJoint::GetFirstAxis( vector3& axis ) const
 {
@@ -572,7 +572,7 @@ bool ncPhyJoint::GetFirstAxis( vector3& axis ) const
     @param axis orientation vector
 
     history:
-        - 24-Aug-2005   David Reyes    created
+        - 24-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetFirstAxis( const vector3& axis )
 {
@@ -599,7 +599,7 @@ void ncPhyJoint::SetFirstAxis( const vector3& axis )
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetLowStopAnglePosition( const phy::jointaxis axis, const phyreal value )
 {
@@ -619,7 +619,7 @@ void ncPhyJoint::SetLowStopAnglePosition( const phy::jointaxis axis, const phyre
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetHiStopAnglePosition( const phy::jointaxis axis, const phyreal value )
 {
@@ -634,7 +634,7 @@ void ncPhyJoint::SetHiStopAnglePosition( const phy::jointaxis axis, const phyrea
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetVelocity( const phy::jointaxis axis, const phyreal value )
 {
@@ -652,7 +652,7 @@ void ncPhyJoint::SetVelocity( const phy::jointaxis axis, const phyreal value )
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetMaximunForce( const phy::jointaxis axis, const phyreal value )
 {
@@ -676,7 +676,7 @@ void ncPhyJoint::SetMaximunForce( const phy::jointaxis axis, const phyreal value
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetFudgeFactor( const phy::jointaxis axis, const phyreal value )
 {
@@ -694,7 +694,7 @@ void ncPhyJoint::SetFudgeFactor( const phy::jointaxis axis, const phyreal value 
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetBouncynessStop( const phy::jointaxis axis, const phyreal value )
 {
@@ -709,7 +709,7 @@ void ncPhyJoint::SetBouncynessStop( const phy::jointaxis axis, const phyreal val
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetCFM( const phy::jointaxis axis, const phyreal value )
 {
@@ -724,7 +724,7 @@ void ncPhyJoint::SetCFM( const phy::jointaxis axis, const phyreal value )
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetStopERP( const phy::jointaxis axis, const phyreal value )
 {
@@ -743,7 +743,7 @@ void ncPhyJoint::SetStopERP( const phy::jointaxis axis, const phyreal value )
     @param value parameter value
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::SetStopCFM( const phy::jointaxis axis, const phyreal value )
 {
@@ -755,7 +755,7 @@ void ncPhyJoint::SetStopCFM( const phy::jointaxis axis, const phyreal value )
     Unmounts the joint.
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 void ncPhyJoint::UnMount()
 {
@@ -771,7 +771,7 @@ void ncPhyJoint::UnMount()
     @return object id
 
     history:
-        - 26-Sep-2005   David Reyes    created
+        - 26-Sep-2005   Zombie         created
 */
 const nEntityObjectId ncPhyJoint::GetObjectA() const 
 {
@@ -785,7 +785,7 @@ const nEntityObjectId ncPhyJoint::GetObjectA() const
     @return object id
 
     history:
-        - 26-Sep-2005   David Reyes    created
+        - 26-Sep-2005   Zombie         created
 */
 const nEntityObjectId ncPhyJoint::GetObjectB() const
 {

@@ -24,7 +24,7 @@ const phyreal nPhyPickObjManager::maxRayDistance( phyreal(1000000) );
     Constructor
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 nPhyPickObjManager::nPhyPickObjManager() :
     world(0),
@@ -38,7 +38,7 @@ nPhyPickObjManager::nPhyPickObjManager() :
     Destructor
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 nPhyPickObjManager::~nPhyPickObjManager()
 {
@@ -60,7 +60,7 @@ nPhyPickObjManager::~nPhyPickObjManager()
     Creates the parallel world for picking no physic objects.
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 void nPhyPickObjManager::CreateWorld()
 {
@@ -103,7 +103,7 @@ void nPhyPickObjManager::CreateWorld()
     @return physics object
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 ncPhysicsObj* nPhyPickObjManager::GetPickedObj( const vector3& startposition, const vector3& direction )
 {

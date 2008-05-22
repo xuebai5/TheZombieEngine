@@ -21,7 +21,7 @@ NSCRIPT_INITCMDS_END()
     Save state of the component
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 */
 bool ncRagDoll::SaveCmds(nPersistServer* server)
 {

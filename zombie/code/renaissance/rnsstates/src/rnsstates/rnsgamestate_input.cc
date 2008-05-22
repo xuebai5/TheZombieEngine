@@ -332,7 +332,7 @@ RnsGameState::FreeCameraInput( const float frameTime )
     @param frameTime time passed between frames
     
     history:
-        - 27-Jan-2006   David Reyes    created
+        - 27-Jan-2006   Zombie         created
 */
 void RnsGameState::PlayerVehicleInput( const float frameTime )
 {

@@ -21,7 +21,7 @@ nNebulaComponentObject(ncPhyCharacter,ncPhyCompositeObj);
     Constructor
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 ncPhyCharacter::ncPhyCharacter() : 
     height(phyreal(2)),
@@ -38,7 +38,7 @@ ncPhyCharacter::ncPhyCharacter() :
     Destructor
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 ncPhyCharacter::~ncPhyCharacter()
 {
@@ -57,7 +57,7 @@ ncPhyCharacter::~ncPhyCharacter()
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 void ncPhyCharacter::InitInstance(nObject::InitInstanceMsg initType)
 {   
@@ -71,7 +71,7 @@ void ncPhyCharacter::InitInstance(nObject::InitInstanceMsg initType)
     @param newheight height in game units
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 void ncPhyCharacter::SetHeight( phyreal newheight )
 {
@@ -92,7 +92,7 @@ void ncPhyCharacter::SetHeight( phyreal newheight )
     @param wide wideness in game units
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 void ncPhyCharacter::SetWide( phyreal wide )
 {
@@ -113,7 +113,7 @@ void ncPhyCharacter::SetWide( phyreal wide )
     @param world world where the object will be created
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 void ncPhyCharacter::Create( nPhysicsWorld* world )
 {
@@ -170,7 +170,7 @@ void ncPhyCharacter::Create( nPhysicsWorld* world )
     Function to be process b4 running the simulation.
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 void ncPhyCharacter::PreProcess()
 {
@@ -189,7 +189,7 @@ void ncPhyCharacter::PreProcess()
     Function to be process after running the simulation.
 
     history:
-        - 29-Aug-2005   David Reyes    created
+        - 29-Aug-2005   Zombie         created
 */
 void ncPhyCharacter::PostProcess()
 {
@@ -208,7 +208,7 @@ void ncPhyCharacter::PostProcess()
     Gets the character height.
 
     history:
-        - 26-Sep-2005   David Reyes    created
+        - 26-Sep-2005   Zombie         created
 */
 phyreal ncPhyCharacter::GetHeight() const 
 {
@@ -220,7 +220,7 @@ phyreal ncPhyCharacter::GetHeight() const
     Gets the character wideness.
 
     history:
-        - 26-Sep-2005   David Reyes    created
+        - 26-Sep-2005   Zombie         created
 */
 phyreal ncPhyCharacter::GetWide() const
 {
@@ -232,7 +232,7 @@ phyreal ncPhyCharacter::GetWide() const
     Adds a force to the body.
 
     history:
-        - 26-Sep-2005   David Reyes    created
+        - 26-Sep-2005   Zombie         created
 */
 void ncPhyCharacter::AddForce( const vector3& force )
 {
@@ -251,7 +251,7 @@ void ncPhyCharacter::AddForce( const vector3& force )
     Deactivates the object.
 
     history:
-        - 27-Jan-2006   David Reyes    created
+        - 27-Jan-2006   Zombie         created
 */
 void ncPhyCharacter::Deactivate()
 {
@@ -267,7 +267,7 @@ void ncPhyCharacter::Deactivate()
     Activates the object.
 
     history:
-        - 27-Jan-2006   David Reyes    created
+        - 27-Jan-2006   Zombie         created
 */
 void ncPhyCharacter::Activates()
 {
@@ -283,7 +283,7 @@ void ncPhyCharacter::Activates()
     Changes character height.
 
     history:
-        - 18-May-2006   David Reyes    created
+        - 18-May-2006   Zombie         created
 */
 void ncPhyCharacter::ChangeHeight( const phyreal newHeight )
 {

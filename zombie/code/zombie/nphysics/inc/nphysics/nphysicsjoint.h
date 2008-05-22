@@ -206,8 +206,8 @@ protected:
     Returns the id of this joint.
 
     history:
-        - 25-Sep-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Sep-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 jointid nPhysicsJoint::Id() const
@@ -220,7 +220,7 @@ jointid nPhysicsJoint::Id() const
     Creates the joint in the default jointgroup
 
     history:
-        - 05-May-2005   David Reyes    inlined
+        - 05-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsJoint::Create( nPhysicsWorld* world )

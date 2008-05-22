@@ -99,7 +99,7 @@ nGPEnterVehicle::IsDone() const
     @return if the run has end
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 bool nGPEnterVehicle::Run()
 {

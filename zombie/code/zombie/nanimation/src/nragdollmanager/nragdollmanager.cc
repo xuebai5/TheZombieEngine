@@ -23,7 +23,7 @@ nRagDollManager* nRagDollManager::Singleton(0);
     Constructor
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 nRagDollManager::nRagDollManager() :
@@ -53,7 +53,7 @@ nRagDollManager::nRagDollManager() :
     Destructor
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 nRagDollManager::~nRagDollManager()
@@ -69,7 +69,7 @@ nRagDollManager::~nRagDollManager()
     Registers a manager for a given type of rag-doll
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 const int nRagDollManager::Register(const nString& className, const int numInstancesAllowed, const policy appliedpolicy)
@@ -120,7 +120,7 @@ const int nRagDollManager::Register(const nString& className, const int numInsta
     @return ragdoll common interface
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 ncRagDoll* nRagDollManager::PopRagDoll(const int id)
@@ -168,7 +168,7 @@ ncRagDoll* nRagDollManager::PopRagDoll(const int id)
     @param reg register where the policy will be applied
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 void nRagDollManager::ApplyCountingPolicy(ragdollReg* reg)
@@ -207,7 +207,7 @@ void nRagDollManager::ApplyCountingPolicy(ragdollReg* reg)
     @param index ragdoll's index
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 void nRagDollManager::Remove(ragdollReg* reg, const int index)
@@ -229,7 +229,7 @@ void nRagDollManager::Remove(ragdollReg* reg, const int index)
     @param reg register where the ragdoll will be removed
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 void nRagDollManager::PushRagDoll(const int id, ncRagDoll* ragdoll)
@@ -255,7 +255,7 @@ void nRagDollManager::PushRagDoll(const int id, ncRagDoll* ragdoll)
     @param rinterface the ragdoll interface
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 void nRagDollManager::Remove(ragdollReg* reg, ncRagDoll* rinterface)
@@ -276,7 +276,7 @@ void nRagDollManager::Remove(ragdollReg* reg, ncRagDoll* rinterface)
     @return pointer to the only instance of this object
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 */
 nRagDollManager* nRagDollManager::Instance()
 {
@@ -288,7 +288,7 @@ nRagDollManager* nRagDollManager::Instance()
     Destroys the data content
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 */
 void nRagDollManager::Destroy()
 {
@@ -317,7 +317,7 @@ void nRagDollManager::Destroy()
     @return true/false
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 */
 const bool nRagDollManager::CheckRegisteredAlready(const nString& className)
 {
@@ -333,7 +333,7 @@ const bool nRagDollManager::CheckRegisteredAlready(const nString& className)
     @return class id
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 */
 const int nRagDollManager::RegisteredClassId(const nString& className) const
 {
@@ -349,7 +349,7 @@ const int nRagDollManager::RegisteredClassId(const nString& className) const
     @return class id
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 */
 void nRagDollManager::InitRegisters()
 {
@@ -389,7 +389,7 @@ void nRagDollManager::InitRegisters()
     Clears the ragdolls info
 
     history:
-        - 09-Nov-2005   David Reyes    created
+        - 09-Nov-2005   Zombie         created
 */
 void nRagDollManager::Clear()
 {

@@ -119,7 +119,8 @@ NebulaMain(int argc, char * argv[])
     const char* wc2Dir          = args.GetStringArg("-wc2", 0);
     const char* watch           = args.GetStringArg("-watch","");
     bool sync                   = args.GetBoolArg("-sync");
-    const char* scriptOUTGUI    = args.GetStringArg("-gui", 0);
+    const char* scriptOUTGUI    = args.GetStringArg("-gui", "outgui:outgui.py");
+    bool noGuiArg               = args.GetBoolArg("-nogui");
     bool renderOutgui           = args.GetBoolArg("-embedded");
     const char* newInstance     = args.GetStringArg("-newinstance", 0);
     float lockFrameTime          = args.GetFloatArg("-lockframetime", 0.0);
@@ -309,7 +310,7 @@ NebulaMain(int argc, char * argv[])
     app->SetWatch(watch);
     app->SetViewportLayout(layoutArg);
     app->SetStartupScript(startupArg);
-    app->SetGUIScriptFile(scriptOUTGUI);
+    app->SetGUIScriptFile(noGuiArg ? 0 : scriptOUTGUI);
     app->SetRenderWindowEmbedded(renderOutgui);
     app->SetInitState( stateArg );
 

@@ -26,7 +26,7 @@ NSCRIPT_INITCMDS_END()
     Constructor.
 
     history:
-        - 15-Jun-2005   David Reyes    created
+        - 15-Jun-2005   Zombie         created
 */
 ncPhysicsObjClass::ncPhysicsObjClass() : 
     objectMass(0),
@@ -55,7 +55,7 @@ ncPhysicsObjClass::~ncPhysicsObjClass()
     Object persistency.
 
     history:
-        - 15-Jun-2005   David Reyes    created
+        - 15-Jun-2005   Zombie         created
 */
 bool ncPhysicsObjClass::SaveCmds(nPersistServer *ps)
 {
@@ -98,7 +98,7 @@ bool ncPhysicsObjClass::SaveCmds(nPersistServer *ps)
     @param is true/false
 
     history:
-        - 20-Feb-2006   David Reyes    created
+        - 20-Feb-2006   Zombie         created
 */
 void ncPhysicsObjClass::SetMobile(const bool is)
 {
@@ -112,7 +112,7 @@ void ncPhysicsObjClass::SetMobile(const bool is)
     @return true/false
 
     history:
-        - 20-Feb-2006   David Reyes    created
+        - 20-Feb-2006   Zombie         created
 */
 const bool ncPhysicsObjClass::GetMobile() const
 {

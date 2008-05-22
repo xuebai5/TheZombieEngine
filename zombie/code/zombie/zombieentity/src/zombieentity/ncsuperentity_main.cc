@@ -450,7 +450,7 @@ ncSuperentity::UpdateAABB()
     @return true/false
 
     history:
-        - 19-Dec-2005   David Reyes    created
+        - 19-Dec-2005   Zombie         created
 */
 const bool ncSuperentity::IsLoaded() const
 {
@@ -464,7 +464,7 @@ const bool ncSuperentity::IsLoaded() const
     @param is if the entity is been loaded or instanciated
 
     history:
-        - 19-Dec-2005   David Reyes    created
+        - 19-Dec-2005   Zombie         created
 */
 void ncSuperentity::SetIsLoaded( const bool is )
 {

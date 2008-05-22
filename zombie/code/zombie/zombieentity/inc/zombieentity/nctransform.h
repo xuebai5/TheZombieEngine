@@ -319,7 +319,7 @@ ncTransform::GetPolar()
     Enables physics update.
 
     history:
-        - 11-05-2005   David Reyes    created
+        - 11-05-2005   Zombie         created
 */
 inline
 void ncTransform::EnableUpdate( const compUpdate update )
@@ -331,7 +331,7 @@ void ncTransform::EnableUpdate( const compUpdate update )
     Disables physics update.
 
     history:
-        - 11-05-2005   David Reyes    created
+        - 11-05-2005   Zombie         created
 */
 inline
 void ncTransform::DisableUpdate( const compUpdate update )
@@ -357,7 +357,7 @@ ncTransform::GetUpdateFlag() const
     Returns if a component is mean to be updated.
 
     history:
-        - 11-05-2005   David Reyes    created
+        - 11-05-2005   Zombie         created
 */
 inline
 const bool ncTransform::UpdateComponent( const compUpdate update ) const

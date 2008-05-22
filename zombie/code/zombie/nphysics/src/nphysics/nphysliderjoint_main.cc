@@ -16,7 +16,7 @@ nNebulaScriptClass(nPhySliderJoint, "nphysicsjoint");
     Constructor
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 nPhySliderJoint::nPhySliderJoint()
 {
@@ -28,7 +28,7 @@ nPhySliderJoint::nPhySliderJoint()
     Destructor
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 nPhySliderJoint::~nPhySliderJoint()
 {
@@ -43,7 +43,7 @@ nPhySliderJoint::~nPhySliderJoint()
     @param group joints group
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 void nPhySliderJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 {
@@ -66,7 +66,7 @@ void nPhySliderJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 	Draws the joint.
 
     history:
-     - 18-Aug-2005   David Reyes    created
+     - 18-Aug-2005   Zombie         created
 */
 void nPhySliderJoint::Draw( nGfxServer2* server )
 {

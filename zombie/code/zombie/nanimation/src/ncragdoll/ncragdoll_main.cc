@@ -12,7 +12,7 @@
     Constructor
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 */
 ncRagDoll::ncRagDoll() :
     character(0),
@@ -27,7 +27,7 @@ ncRagDoll::ncRagDoll() :
     Destructor
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 */
 ncRagDoll::~ncRagDoll()
 {
@@ -39,7 +39,7 @@ ncRagDoll::~ncRagDoll()
     Switches off the ragdoll.
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 */
 void ncRagDoll::SwitchOff()
 {

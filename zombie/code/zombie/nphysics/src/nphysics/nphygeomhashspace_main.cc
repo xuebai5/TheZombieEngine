@@ -20,7 +20,7 @@ const int nPhyGeomHashSpace::MinLevelDefaultValue(1);
     Constructor
 
     history:
-        - 08-Oct-2004   David Reyes    created
+        - 08-Oct-2004   Zombie         created
 */
 nPhyGeomHashSpace::nPhyGeomHashSpace()
 {
@@ -36,7 +36,7 @@ nPhyGeomHashSpace::nPhyGeomHashSpace()
     Destructor
 
     history:
-        - 08-Oct-2004   David Reyes    created
+        - 08-Oct-2004   Zombie         created
 */
 nPhyGeomHashSpace::~nPhyGeomHashSpace()
 {
@@ -48,7 +48,7 @@ nPhyGeomHashSpace::~nPhyGeomHashSpace()
     Creates the geometry
 
     history:
-        - 08-Oct-2004   David Reyes    created
+        - 08-Oct-2004   Zombie         created
 */
 void nPhyGeomHashSpace::Create()
 {

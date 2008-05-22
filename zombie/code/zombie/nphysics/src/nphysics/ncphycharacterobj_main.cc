@@ -158,7 +158,7 @@ ncPhyCharacterObj::UpdateCharacterCollision()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 12-Aug-2004   David Reyes    created
+        - 12-Aug-2004   Zombie         created
 */
 void ncPhyCharacterObj::Create( nPhysicsWorld* world )
 {
@@ -186,7 +186,7 @@ void ncPhyCharacterObj::Create( nPhysicsWorld* world )
     Function to be process b4 running the simulation.
 
     history:
-        - 20-Sep-2005   David Reyes    created
+        - 20-Sep-2005   Zombie         created
 */
 void ncPhyCharacterObj::PreProcess()
 {
@@ -206,7 +206,7 @@ void ncPhyCharacterObj::PreProcess()
     Function to be process after running the simulation.
 
     history:
-        - 20-Sep-2005   David Reyes    created
+        - 20-Sep-2005   Zombie         created
 */
 void ncPhyCharacterObj::PostProcess()
 {
@@ -278,7 +278,7 @@ ncPhyCharacterObj::GetGeometryId( const nString pattern )
     Deactivates the object.
 
     history:
-        - 27-Jan-2006   David Reyes    created
+        - 27-Jan-2006   Zombie         created
 */
 void ncPhyCharacterObj::Deactivate()
 {
@@ -291,7 +291,7 @@ void ncPhyCharacterObj::Deactivate()
     Deactivates the object.
 
     history:
-        - 27-Jan-2006   David Reyes    created
+        - 27-Jan-2006   Zombie         created
 */
 void ncPhyCharacterObj::Activates()
 {

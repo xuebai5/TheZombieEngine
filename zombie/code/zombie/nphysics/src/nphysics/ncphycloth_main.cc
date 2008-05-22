@@ -23,7 +23,7 @@ phyreal ncPhyCloth::airResistance(phyreal(0.6));
     Constructor
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 ncPhyCloth::ncPhyCloth() : 
     nodesXAxis( 21 ), // Default values
@@ -51,7 +51,7 @@ ncPhyCloth::ncPhyCloth() :
     Destructor
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 ncPhyCloth::~ncPhyCloth() 
 {
@@ -70,7 +70,7 @@ ncPhyCloth::~ncPhyCloth()
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 void ncPhyCloth::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -84,7 +84,7 @@ void ncPhyCloth::InitInstance(nObject::InitInstanceMsg initType)
     @param world it's the world where the object will be come to existance
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 void ncPhyCloth::Create( nPhysicsWorld* world )
 {
@@ -115,7 +115,7 @@ void ncPhyCloth::Create( nPhysicsWorld* world )
     Builds the mesh representing the rectangular piece of cloth.
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 void ncPhyCloth::BuildMesh()
 {
@@ -333,7 +333,7 @@ void ncPhyCloth::BuildMesh()
     @param force adds a general force to the cloth piece
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 void ncPhyCloth::AddForce( const vector3& force )
 {
@@ -345,7 +345,7 @@ void ncPhyCloth::AddForce( const vector3& force )
     Function to be process after running the simulation.
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 void ncPhyCloth::PostProcess()
 {
@@ -395,7 +395,7 @@ void ncPhyCloth::PostProcess()
     @param is specifies if the node is tied or not
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 void ncPhyCloth::SetTiedNode( const unsigned xNode, const unsigned zNode, bool is )
 {
@@ -412,7 +412,7 @@ void ncPhyCloth::SetTiedNode( const unsigned xNode, const unsigned zNode, bool i
     Moves the cloth in the world.
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 void ncPhyCloth::Move()
 {
@@ -700,7 +700,7 @@ void ncPhyCloth::Move()
     @return if any collision was processed
 
     history:
-        - 17-Jan-2005   David Reyes    created
+        - 17-Jan-2005   Zombie         created
 */
 bool ncPhyCloth::CollisionProcess( int /*numContacts*/, nPhyCollide::nContact* /*contacts*/ )
 {
@@ -717,7 +717,7 @@ bool ncPhyCloth::CollisionProcess( int /*numContacts*/, nPhyCollide::nContact* /
     @return a node
 
     history:
-        - 17-Jan-2005   David Reyes    created
+        - 17-Jan-2005   Zombie         created
 */
 ncPhyCloth::nodeInfo* ncPhyCloth::GetNode( int x, int z ) const
 {

@@ -16,7 +16,7 @@ nNebulaScriptClass(nPhyAngularMotorJoint, "nphysicsjoint");
     Constructor.
 
     history:
-        - 09-Mar-2004   David Reyes    created
+        - 09-Mar-2004   Zombie         created
 */
 nPhyAngularMotorJoint::nPhyAngularMotorJoint()
 {   
@@ -28,7 +28,7 @@ nPhyAngularMotorJoint::nPhyAngularMotorJoint()
     Destructor.
 
     history:
-        - 09-Mar-2004   David Reyes    created
+        - 09-Mar-2004   Zombie         created
 */
 nPhyAngularMotorJoint::~nPhyAngularMotorJoint()
 {
@@ -43,7 +43,7 @@ nPhyAngularMotorJoint::~nPhyAngularMotorJoint()
     @param group joints group
 
     history:
-        - 09-Mar-2004   David Reyes    created
+        - 09-Mar-2004   Zombie         created
 */
 void nPhyAngularMotorJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 {
@@ -67,7 +67,7 @@ void nPhyAngularMotorJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* grou
     @param axis axis direction
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 void nPhyAngularMotorJoint::GetFirstAxis( vector3& /*axis*/ ) const
 {
@@ -80,7 +80,7 @@ void nPhyAngularMotorJoint::GetFirstAxis( vector3& /*axis*/ ) const
     @param axis axis direction
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 void nPhyAngularMotorJoint::GetSecondAxis( vector3& /*axis*/ ) const
 {
@@ -93,7 +93,7 @@ void nPhyAngularMotorJoint::GetSecondAxis( vector3& /*axis*/ ) const
     @param axis axis direction
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 void nPhyAngularMotorJoint::GetThirdAxis( vector3& /*axis*/ ) const
 {
@@ -106,7 +106,7 @@ void nPhyAngularMotorJoint::GetThirdAxis( vector3& /*axis*/ ) const
     @param numAxis number of axis
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 void nPhyAngularMotorJoint::SetNumberOfAxis( const int numAxis )
 {
@@ -125,7 +125,7 @@ void nPhyAngularMotorJoint::SetNumberOfAxis( const int numAxis )
 	Draws the joint.
 
     history:
-     - 18-Aug-2005   David Reyes    created
+     - 18-Aug-2005   Zombie         created
 */
 void nPhyAngularMotorJoint::Draw( nGfxServer2* server )
 {

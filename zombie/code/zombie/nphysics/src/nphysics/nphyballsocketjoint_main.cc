@@ -16,7 +16,7 @@ nNebulaScriptClass(nPhyBallSocketJoint, "nphysicsjoint");
     Constructor
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 nPhyBallSocketJoint::nPhyBallSocketJoint()
 {
@@ -28,7 +28,7 @@ nPhyBallSocketJoint::nPhyBallSocketJoint()
     Destructor
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 nPhyBallSocketJoint::~nPhyBallSocketJoint()
 {
@@ -43,7 +43,7 @@ nPhyBallSocketJoint::~nPhyBallSocketJoint()
     @param group joints group
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 void nPhyBallSocketJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 {
@@ -66,7 +66,7 @@ void nPhyBallSocketJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group 
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyBallSocketJoint::Scale( const phyreal factor )
 {
@@ -89,7 +89,7 @@ void nPhyBallSocketJoint::Scale( const phyreal factor )
 	Draws the joint.
 
     history:
-     - 18-Aug-2005   David Reyes    created
+     - 18-Aug-2005   Zombie         created
 */
 void nPhyBallSocketJoint::Draw( nGfxServer2* server )
 {

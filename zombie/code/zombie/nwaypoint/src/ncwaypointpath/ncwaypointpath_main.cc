@@ -32,7 +32,7 @@ NSCRIPT_INITCMDS_END()
     Constructor
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 ncWayPointPath::ncWayPointPath() :
     listWayPoints(InitWayPointsSize,GrowRationWayPointsSize),
@@ -47,7 +47,7 @@ ncWayPointPath::ncWayPointPath() :
     Destructor
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 ncWayPointPath::~ncWayPointPath()
 {
@@ -61,7 +61,7 @@ ncWayPointPath::~ncWayPointPath()
     @param name path name
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 void ncWayPointPath::Create( const nString& name )
 {
@@ -77,7 +77,7 @@ void ncWayPointPath::Create( const nString& name )
     @param id waypoint id
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 void ncWayPointPath::AddWayPoint( const WayPoint::waypointid id )
 {
@@ -98,7 +98,7 @@ void ncWayPointPath::AddWayPoint( const WayPoint::waypointid id )
     @return num waypoints
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 int ncWayPointPath::GetNumWayPoints() const
 {
@@ -112,7 +112,7 @@ int ncWayPointPath::GetNumWayPoints() const
     @return path name
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 const nString& ncWayPointPath::GetName() const
 {
@@ -126,7 +126,7 @@ const nString& ncWayPointPath::GetName() const
     @return true/false
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 const bool ncWayPointPath::CheckWayPointInPath( const WayPoint::waypointid id )
 {
@@ -147,7 +147,7 @@ const bool ncWayPointPath::CheckWayPointInPath( const WayPoint::waypointid id )
     @param id waypoint id
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 void ncWayPointPath::RemoveWayPointFromPath( const WayPoint::waypointid id )
 {
@@ -181,7 +181,7 @@ void ncWayPointPath::RemoveWayPointFromPath( const WayPoint::waypointid id )
     @param index index
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 WayPoint* ncWayPointPath::GetWayPointIndex( const int index ) const
 {
@@ -200,7 +200,7 @@ WayPoint* ncWayPointPath::GetWayPointIndex( const int index ) const
 
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 void ncWayPointPath::InsertWayPointInPath( const WayPoint::waypointid id,const WayPoint::waypointid idA,const WayPoint::waypointid 
 #ifndef NGAME
@@ -265,7 +265,7 @@ void ncWayPointPath::InsertWayPointInPath( const WayPoint::waypointid id,const W
     @return id
 
     history:
-        - 14-Dec-2004   David Reyes    created
+        - 14-Dec-2004   Zombie         created
 */
 const int ncWayPointPath::GetPathId() const
 {

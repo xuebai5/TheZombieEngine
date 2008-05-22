@@ -128,7 +128,7 @@ NSCRIPT_INITCMDS_END()
     Constructor.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 
 ncPhyVehicleClass::ncPhyVehicleClass():
@@ -158,7 +158,7 @@ ncPhyVehicleClass::ncPhyVehicleClass():
     Destructor.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 ncPhyVehicleClass::~ncPhyVehicleClass()
 {
@@ -172,7 +172,7 @@ ncPhyVehicleClass::~ncPhyVehicleClass()
     @return number of vehicle wheels
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 const unsigned int ncPhyVehicleClass::GetNumWheels() const
 {
@@ -187,7 +187,7 @@ const unsigned int ncPhyVehicleClass::GetNumWheels() const
     @param has traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheelTraction( const bool has )
 {
@@ -201,7 +201,7 @@ void ncPhyVehicleClass::SetFrontLeftWheelTraction( const bool has )
     @return traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetFrontLeftWheelTraction() const
 {
@@ -215,7 +215,7 @@ const bool ncPhyVehicleClass::GetFrontLeftWheelTraction() const
     @param has traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheelTraction( const bool has )
 {
@@ -229,7 +229,7 @@ void ncPhyVehicleClass::SetFrontRightWheelTraction( const bool has )
     @return traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetFrontRightWheelTraction() const
 {
@@ -243,7 +243,7 @@ const bool ncPhyVehicleClass::GetFrontRightWheelTraction() const
     @param has traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheelTraction( const bool has )
 {
@@ -257,7 +257,7 @@ void ncPhyVehicleClass::SetRearLeftWheelTraction( const bool has )
     @return traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetRearLeftWheelTraction() const
 {
@@ -271,7 +271,7 @@ const bool ncPhyVehicleClass::GetRearLeftWheelTraction() const
     @return traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheelTraction( const bool has )
 {
@@ -285,7 +285,7 @@ void ncPhyVehicleClass::SetRearRightWheelTraction( const bool has )
     @return traction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetRearRightWheelTraction() const
 {
@@ -299,8 +299,8 @@ const bool ncPhyVehicleClass::GetRearRightWheelTraction() const
     @param offset vehicle's mass offset
 
     history:
-        - 20-Dec-2004   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 20-Dec-2004   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 void ncPhyVehicleClass::SetGravityCenterOffset( const vector3& offset )
 {
@@ -314,8 +314,8 @@ void ncPhyVehicleClass::SetGravityCenterOffset( const vector3& offset )
     @return vehicle's mass offset
 
     history:
-        - 20-Dec-2004   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 20-Dec-2004   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 const vector3& ncPhyVehicleClass::GetGravityCenterOffset() const
 {
@@ -329,8 +329,8 @@ const vector3& ncPhyVehicleClass::GetGravityCenterOffset() const
     @param bhps BHPs
 
     history:
-        - 04-Nov-2004   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 04-Nov-2004   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 void ncPhyVehicleClass::SetBHPs( const phyreal bhps )
 {
@@ -346,7 +346,7 @@ void ncPhyVehicleClass::SetBHPs( const phyreal bhps )
     @return bhps
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetBHPs() const
 {
@@ -361,8 +361,8 @@ const phyreal ncPhyVehicleClass::GetBHPs() const
     @param revolutions engine revolutions / 1000   
 
     history:
-        - 22-Nov-2004   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 22-Nov-2004   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 void ncPhyVehicleClass::SetMaxRevolution( phyreal revolutions )
 {
@@ -380,8 +380,8 @@ void ncPhyVehicleClass::SetMaxRevolution( phyreal revolutions )
     @return revolutions
 
     history:
-        - 22-Nov-2004   David Reyes    created
-        - 06-May-2005   David Reyes    moved to ncphyvehicleclass
+        - 22-Nov-2004   Zombie         created
+        - 06-May-2005   Zombie         moved to ncphyvehicleclass
 */
 const phyreal ncPhyVehicleClass::GetMaxRevolution() const
 {
@@ -396,7 +396,7 @@ const phyreal ncPhyVehicleClass::GetMaxRevolution() const
     @pararm resistance aerodynamic coeficient (0..1)
 
     history:
-        - 11-Aug-2006   David Reyes    created
+        - 11-Aug-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetAirResistance(const phyreal resistance)
 {
@@ -412,7 +412,7 @@ void ncPhyVehicleClass::SetAirResistance(const phyreal resistance)
     @return aerodynamic coeficient (0..1)
 
     history:
-        - 11-Aug-2006   David Reyes    created
+        - 11-Aug-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetAirResistance() const
 {
@@ -424,7 +424,7 @@ const phyreal ncPhyVehicleClass::GetAirResistance() const
     Save state of the component.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 bool ncPhyVehicleClass::SaveCmds(nPersistServer *server)
 {
@@ -687,7 +687,7 @@ bool ncPhyVehicleClass::SaveCmds(nPersistServer *server)
     @param objectName wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheel( const nString& objectName )
 {
@@ -701,7 +701,7 @@ void ncPhyVehicleClass::SetFrontRightWheel( const nString& objectName )
     @return wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 const nString& ncPhyVehicleClass::GetFrontRightWheel() const
 {
@@ -715,7 +715,7 @@ const nString& ncPhyVehicleClass::GetFrontRightWheel() const
     @param objectName wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheel( const nString& objectName )
 {
@@ -729,7 +729,7 @@ void ncPhyVehicleClass::SetFrontLeftWheel( const nString& objectName )
     @return wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 const nString& ncPhyVehicleClass::GetFrontLeftWheel() const
 {
@@ -743,7 +743,7 @@ const nString& ncPhyVehicleClass::GetFrontLeftWheel() const
     @param objectName wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheel( const nString& objectName )
 {
@@ -757,7 +757,7 @@ void ncPhyVehicleClass::SetRearLeftWheel( const nString& objectName )
     @return wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 const nString& ncPhyVehicleClass::GetRearLeftWheel() const
 {
@@ -771,7 +771,7 @@ const nString& ncPhyVehicleClass::GetRearLeftWheel() const
     @param objectName wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheel( const nString& objectName )
 {
@@ -785,7 +785,7 @@ void ncPhyVehicleClass::SetRearRightWheel( const nString& objectName )
     @return wheel class name
 
     history:
-        - 21-Dec-2005   David Reyes    created
+        - 21-Dec-2005   Zombie         created
 */
 const nString& ncPhyVehicleClass::GetRearRightWheel() const
 {
@@ -799,7 +799,7 @@ const nString& ncPhyVehicleClass::GetRearRightWheel() const
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheelDirection( const bool has )
 {
@@ -813,7 +813,7 @@ void ncPhyVehicleClass::SetFrontLeftWheelDirection( const bool has )
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetFrontLeftWheelDirection() const
 {
@@ -827,7 +827,7 @@ const bool ncPhyVehicleClass::GetFrontLeftWheelDirection() const
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheelDirection( const bool has )
 {
@@ -841,7 +841,7 @@ void ncPhyVehicleClass::SetFrontRightWheelDirection( const bool has )
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetFrontRightWheelDirection() const
 {
@@ -855,7 +855,7 @@ const bool ncPhyVehicleClass::GetFrontRightWheelDirection() const
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheelDirection( const bool has )
 {
@@ -869,7 +869,7 @@ void ncPhyVehicleClass::SetRearLeftWheelDirection( const bool has )
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetRearLeftWheelDirection() const
 {
@@ -883,7 +883,7 @@ const bool ncPhyVehicleClass::GetRearLeftWheelDirection() const
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheelDirection( const bool has )
 {
@@ -898,7 +898,7 @@ void ncPhyVehicleClass::SetRearRightWheelDirection( const bool has )
     @param has direction
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetRearRightWheelDirection() const
 {
@@ -912,7 +912,7 @@ const bool ncPhyVehicleClass::GetRearRightWheelDirection() const
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheelSteeringMax( const phyreal has )
 {
@@ -926,7 +926,7 @@ void ncPhyVehicleClass::SetFrontLeftWheelSteeringMax( const phyreal has )
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontLeftWheelSteeringMax() const
 {
@@ -940,7 +940,7 @@ const phyreal ncPhyVehicleClass::GetFrontLeftWheelSteeringMax() const
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheelSteeringMax( const phyreal has )
 {
@@ -954,7 +954,7 @@ void ncPhyVehicleClass::SetFrontRightWheelSteeringMax( const phyreal has )
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontRightWheelSteeringMax() const
 {
@@ -968,7 +968,7 @@ const phyreal ncPhyVehicleClass::GetFrontRightWheelSteeringMax() const
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheelSteeringMax( const phyreal has )
 {
@@ -982,7 +982,7 @@ void ncPhyVehicleClass::SetRearLeftWheelSteeringMax( const phyreal has )
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearLeftWheelSteeringMax() const
 {
@@ -996,7 +996,7 @@ const phyreal ncPhyVehicleClass::GetRearLeftWheelSteeringMax() const
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheelSteeringMax( const phyreal has )
 {
@@ -1010,7 +1010,7 @@ void ncPhyVehicleClass::SetRearRightWheelSteeringMax( const phyreal has )
     @return steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearRightWheelSteeringMax() const
 {
@@ -1024,7 +1024,7 @@ const phyreal ncPhyVehicleClass::GetRearRightWheelSteeringMax() const
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheelSteeringForce( const phyreal has )
 {
@@ -1038,7 +1038,7 @@ void ncPhyVehicleClass::SetFrontLeftWheelSteeringForce( const phyreal has )
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontLeftWheelSteeringForce() const
 {
@@ -1052,7 +1052,7 @@ const phyreal ncPhyVehicleClass::GetFrontLeftWheelSteeringForce() const
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheelSteeringForce( const phyreal has )
 {
@@ -1066,7 +1066,7 @@ void ncPhyVehicleClass::SetFrontRightWheelSteeringForce( const phyreal has )
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontRightWheelSteeringForce() const
 {
@@ -1080,7 +1080,7 @@ const phyreal ncPhyVehicleClass::GetFrontRightWheelSteeringForce() const
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheelSteeringForce( const phyreal has )
 {
@@ -1094,7 +1094,7 @@ void ncPhyVehicleClass::SetRearLeftWheelSteeringForce( const phyreal has )
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearLeftWheelSteeringForce() const
 {
@@ -1108,7 +1108,7 @@ const phyreal ncPhyVehicleClass::GetRearLeftWheelSteeringForce() const
     @return steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheelSteeringForce( const phyreal has )
 {
@@ -1122,7 +1122,7 @@ void ncPhyVehicleClass::SetRearRightWheelSteeringForce( const phyreal has )
     @param has steering max
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearRightWheelSteeringForce() const
 {
@@ -1136,7 +1136,7 @@ const phyreal ncPhyVehicleClass::GetRearRightWheelSteeringForce() const
     @param has break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheelBreakTreshold( const phyreal has )
 {
@@ -1150,7 +1150,7 @@ void ncPhyVehicleClass::SetFrontLeftWheelBreakTreshold( const phyreal has )
     @param has break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontLeftWheelBreakTreshold() const
 {
@@ -1164,7 +1164,7 @@ const phyreal ncPhyVehicleClass::GetFrontLeftWheelBreakTreshold() const
     @param has break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheelBreakTreshold( const phyreal has )
 {
@@ -1178,7 +1178,7 @@ void ncPhyVehicleClass::SetFrontRightWheelBreakTreshold( const phyreal has )
     @param has break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontRightWheelBreakTreshold() const
 {
@@ -1192,7 +1192,7 @@ const phyreal ncPhyVehicleClass::GetFrontRightWheelBreakTreshold() const
     @param has break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheelBreakTreshold( const phyreal has )
 {
@@ -1206,7 +1206,7 @@ void ncPhyVehicleClass::SetRearLeftWheelBreakTreshold( const phyreal has )
     @param has break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearLeftWheelBreakTreshold() const
 {
@@ -1220,7 +1220,7 @@ const phyreal ncPhyVehicleClass::GetRearLeftWheelBreakTreshold() const
     @return break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheelBreakTreshold( const phyreal has )
 {
@@ -1234,7 +1234,7 @@ void ncPhyVehicleClass::SetRearRightWheelBreakTreshold( const phyreal has )
     @param has break treshold
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearRightWheelBreakTreshold() const
 {
@@ -1248,7 +1248,7 @@ const phyreal ncPhyVehicleClass::GetRearRightWheelBreakTreshold() const
     @param has suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheelSuspensionRecovery( const phyreal has )
 {
@@ -1262,7 +1262,7 @@ void ncPhyVehicleClass::SetFrontLeftWheelSuspensionRecovery( const phyreal has )
     @param has suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontLeftWheelSuspensionRecovery() const
 {
@@ -1276,7 +1276,7 @@ const phyreal ncPhyVehicleClass::GetFrontLeftWheelSuspensionRecovery() const
     @param has suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheelSuspensionRecovery( const phyreal has )
 {
@@ -1290,7 +1290,7 @@ void ncPhyVehicleClass::SetFrontRightWheelSuspensionRecovery( const phyreal has 
     @param has suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontRightWheelSuspensionRecovery() const
 {
@@ -1304,7 +1304,7 @@ const phyreal ncPhyVehicleClass::GetFrontRightWheelSuspensionRecovery() const
     @param has suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheelSuspensionRecovery( const phyreal has )
 {
@@ -1318,7 +1318,7 @@ void ncPhyVehicleClass::SetRearLeftWheelSuspensionRecovery( const phyreal has )
     @param has suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearLeftWheelSuspensionRecovery() const
 {
@@ -1332,7 +1332,7 @@ const phyreal ncPhyVehicleClass::GetRearLeftWheelSuspensionRecovery() const
     @return suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheelSuspensionRecovery( const phyreal has )
 {
@@ -1346,7 +1346,7 @@ void ncPhyVehicleClass::SetRearRightWheelSuspensionRecovery( const phyreal has )
     @param has suspension recovery
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearRightWheelSuspensionRecovery() const
 {
@@ -1361,7 +1361,7 @@ const phyreal ncPhyVehicleClass::GetRearRightWheelSuspensionRecovery() const
     @param has true/false
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetHasTraction(const unsigned int index, const bool has )
 {
@@ -1378,7 +1378,7 @@ void ncPhyVehicleClass::SetHasTraction(const unsigned int index, const bool has 
     @return true/false
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetHasTraction( const unsigned int wheel ) const
 {
@@ -1395,7 +1395,7 @@ const bool ncPhyVehicleClass::GetHasTraction( const unsigned int wheel ) const
     @param has true/false
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetHasDirection(const unsigned int index, const bool has )
 {
@@ -1412,7 +1412,7 @@ void ncPhyVehicleClass::SetHasDirection(const unsigned int index, const bool has
     @return true/false
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const bool ncPhyVehicleClass::GetHasDirection( const unsigned int wheel ) const
 {
@@ -1429,7 +1429,7 @@ const bool ncPhyVehicleClass::GetHasDirection( const unsigned int wheel ) const
     @param value value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetSteeringMax(const unsigned int index, const phyreal value )
 {
@@ -1446,7 +1446,7 @@ void ncPhyVehicleClass::SetSteeringMax(const unsigned int index, const phyreal v
     @return value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetSteeringMax( const unsigned int wheel ) const
 {
@@ -1463,7 +1463,7 @@ const phyreal ncPhyVehicleClass::GetSteeringMax( const unsigned int wheel ) cons
     @param value value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetSteeringForce(const unsigned int index, const phyreal value )
 {
@@ -1480,7 +1480,7 @@ void ncPhyVehicleClass::SetSteeringForce(const unsigned int index, const phyreal
     @return value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetSteeringForce( const unsigned int wheel ) const
 {
@@ -1497,7 +1497,7 @@ const phyreal ncPhyVehicleClass::GetSteeringForce( const unsigned int wheel ) co
     @param value value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetSuspensionRecover(const unsigned int index, const phyreal value )
 {
@@ -1514,7 +1514,7 @@ void ncPhyVehicleClass::SetSuspensionRecover(const unsigned int index, const phy
     @return value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetSuspensionRecover( const unsigned int wheel ) const
 {
@@ -1531,7 +1531,7 @@ const phyreal ncPhyVehicleClass::GetSuspensionRecover( const unsigned int wheel 
     @param value value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetSuspensionRecoverForce(const unsigned int index, const phyreal value )
 {
@@ -1548,7 +1548,7 @@ void ncPhyVehicleClass::SetSuspensionRecoverForce(const unsigned int index, cons
     @return value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetSuspensionRecoverForce( const unsigned int wheel ) const
 {
@@ -1565,7 +1565,7 @@ const phyreal ncPhyVehicleClass::GetSuspensionRecoverForce( const unsigned int w
     @param value value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetBreakTreshold(const unsigned int index, const phyreal value )
 {
@@ -1582,7 +1582,7 @@ void ncPhyVehicleClass::SetBreakTreshold(const unsigned int index, const phyreal
     @return value
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetBreakTreshold( const unsigned int wheel ) const
 {
@@ -1599,7 +1599,7 @@ const phyreal ncPhyVehicleClass::GetBreakTreshold( const unsigned int wheel ) co
     @param name wheel object name
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetWheelObjectName( const unsigned int wheel, const nString& name )
 {
@@ -1616,7 +1616,7 @@ void ncPhyVehicleClass::SetWheelObjectName( const unsigned int wheel, const nStr
     @return wheel object name
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const nString& ncPhyVehicleClass::GetWheelObjectName( const unsigned int wheel ) const
 {
@@ -1633,7 +1633,7 @@ const nString& ncPhyVehicleClass::GetWheelObjectName( const unsigned int wheel )
     @return wheel object name
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhyVehicleClass::SetSteeringWheelObjectName( const nString& objectName )
 {
@@ -1648,7 +1648,7 @@ void ncPhyVehicleClass::SetSteeringWheelObjectName( const nString& objectName )
     @return wheel object name
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 const nString& ncPhyVehicleClass::GetSteeringWheelObjectName() const
 {
@@ -1663,7 +1663,7 @@ const nString& ncPhyVehicleClass::GetSteeringWheelObjectName() const
     @param newvalue resistance in percentage where 0% completely resistant
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetBackwardsResistance( const phyreal newvalue )
 {
@@ -1677,7 +1677,7 @@ void ncPhyVehicleClass::SetBackwardsResistance( const phyreal newvalue )
     @return resistance in percentage where 0% completely resistant
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetBackwardsResistance() const
 {
@@ -1691,7 +1691,7 @@ const phyreal ncPhyVehicleClass::GetBackwardsResistance() const
     @return force
 
     history:
-        - 27-Feb-2006   David Reyes    created
+        - 27-Feb-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetBreakingForce() const
 {
@@ -1705,7 +1705,7 @@ const phyreal ncPhyVehicleClass::GetBreakingForce() const
     @param newforce braking force
 
     history:
-        - 27-Feb-2006   David Reyes    created
+        - 27-Feb-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetBreakingForce( const phyreal newforce )
 {
@@ -1719,7 +1719,7 @@ void ncPhyVehicleClass::SetBreakingForce( const phyreal newforce )
     @return max speed
 
     history:
-        - 27-Feb-2006   David Reyes    created
+        - 27-Feb-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetSpeedMaxSteeringForced() const
 {
@@ -1733,7 +1733,7 @@ const phyreal ncPhyVehicleClass::GetSpeedMaxSteeringForced() const
     @param newspeed max speed to force steering
 
     history:
-        - 27-Feb-2006   David Reyes    created
+        - 27-Feb-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetSpeedMaxSteeringForced( const phyreal newspeed )
 {
@@ -1747,7 +1747,7 @@ void ncPhyVehicleClass::SetSpeedMaxSteeringForced( const phyreal newspeed )
     @return percentage 
 
     history:
-        - 27-Feb-2006   David Reyes    created
+        - 27-Feb-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetPercentageMaxSteering() const
 {
@@ -1760,7 +1760,7 @@ const phyreal ncPhyVehicleClass::GetPercentageMaxSteering() const
     @param newpercentage percentage 
 
     history:
-        - 27-Feb-2006   David Reyes    created
+        - 27-Feb-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetPercentageMaxSteering( const phyreal newpercentage )
 {
@@ -1787,7 +1787,7 @@ void ncPhyVehicleClass::SetPercentageMaxSteering( const phyreal newpercentage )
     @param has suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontLeftWheelSuspensionRecoverForce( const phyreal has )
 {
@@ -1801,7 +1801,7 @@ void ncPhyVehicleClass::SetFrontLeftWheelSuspensionRecoverForce( const phyreal h
     @param has suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontLeftWheelSuspensionRecoverForce() const
 {
@@ -1815,7 +1815,7 @@ const phyreal ncPhyVehicleClass::GetFrontLeftWheelSuspensionRecoverForce() const
     @param has suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetFrontRightWheelSuspensionRecoverForce( const phyreal has )
 {
@@ -1829,7 +1829,7 @@ void ncPhyVehicleClass::SetFrontRightWheelSuspensionRecoverForce( const phyreal 
     @param has suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetFrontRightWheelSuspensionRecoverForce() const
 {
@@ -1843,7 +1843,7 @@ const phyreal ncPhyVehicleClass::GetFrontRightWheelSuspensionRecoverForce() cons
     @param has suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetRearLeftWheelSuspensionRecoverForce( const phyreal has )
 {
@@ -1857,7 +1857,7 @@ void ncPhyVehicleClass::SetRearLeftWheelSuspensionRecoverForce( const phyreal ha
     @param has suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearLeftWheelSuspensionRecoverForce() const
 {
@@ -1871,7 +1871,7 @@ const phyreal ncPhyVehicleClass::GetRearLeftWheelSuspensionRecoverForce() const
     @return suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetRearRightWheelSuspensionRecoverForce( const phyreal has )
 {
@@ -1885,7 +1885,7 @@ void ncPhyVehicleClass::SetRearRightWheelSuspensionRecoverForce( const phyreal h
     @param has suspension recovery
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetRearRightWheelSuspensionRecoverForce() const
 {
@@ -1899,7 +1899,7 @@ const phyreal ncPhyVehicleClass::GetRearRightWheelSuspensionRecoverForce() const
     @param new air force in newtons
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 void ncPhyVehicleClass::SetAirForce( const phyreal newvalue )
 {
@@ -1912,7 +1912,7 @@ void ncPhyVehicleClass::SetAirForce( const phyreal newvalue )
     @return air force in newtons
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 const phyreal ncPhyVehicleClass::GetAirForce() const
 {

@@ -24,7 +24,7 @@ nNebulaScriptClass(nGameMaterial, "nroot");
     Constructor
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 nGameMaterial::nGameMaterial() : 
     id( "" ),
@@ -43,7 +43,7 @@ nGameMaterial::nGameMaterial() :
     Destructor
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 nGameMaterial::~nGameMaterial()
 {
@@ -57,7 +57,7 @@ nGameMaterial::~nGameMaterial()
     @return material id
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 int nGameMaterial::GetMaterialId() const
 {
@@ -71,7 +71,7 @@ int nGameMaterial::GetMaterialId() const
     Creates the material.
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 void nGameMaterial::Create()
 {
@@ -84,7 +84,7 @@ void nGameMaterial::Create()
     @return game material name
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 const char* nGameMaterial::GetGameMaterialName() const
 {
@@ -98,7 +98,7 @@ const char* nGameMaterial::GetGameMaterialName() const
     @return game material id
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 const uint nGameMaterial::GetGameMaterialId() const
 {
@@ -112,7 +112,7 @@ const uint nGameMaterial::GetGameMaterialId() const
     @param material a physics material
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 void nGameMaterial::SetPhysicsMaterial( nPhyMaterial* material )
 {
@@ -133,7 +133,7 @@ void nGameMaterial::SetPhysicsMaterial( nPhyMaterial* material )
     @return a physics material
 
     history:
-        - 01-Aug-2004   David Reyes   created
+        - 01-Aug-2004   Zombie        created
 */
 nPhyMaterial* nGameMaterial::GetPhysicsMaterial() const
 {
@@ -145,7 +145,7 @@ nPhyMaterial* nGameMaterial::GetPhysicsMaterial() const
     Updates the information (should be called after the material properties had been changed).
 
     history:
-        - 28-Oct-2005   David Reyes   created
+        - 28-Oct-2005   Zombie        created
 */
 void nGameMaterial::Update()
 {
@@ -160,7 +160,7 @@ void nGameMaterial::Update()
     Updates the information (should be called after the material properties had been changed).
 
     history:
-        - 31-Oct-2005   David Reyes   created
+        - 31-Oct-2005   Zombie        created
 */
 void nGameMaterial::Add() 
 {
@@ -172,7 +172,7 @@ void nGameMaterial::Add()
     Inits object
 
     history:
-        - 31-Oct-2005   David Reyes   created
+        - 31-Oct-2005   Zombie        created
 */
 void nGameMaterial::InitInstance(nObject::InitInstanceMsg)
 {
@@ -185,7 +185,7 @@ void nGameMaterial::InitInstance(nObject::InitInstanceMsg)
     Returns if any of the materials components is dirty (changed).
 
     history:
-        - 31-Oct-2005   David Reyes   created
+        - 31-Oct-2005   Zombie        created
 */
 const bool nGameMaterial::IsDirty() const
 {
@@ -215,7 +215,7 @@ const bool nGameMaterial::IsDirty() const
     @return true/false
 
     history:
-        - 04-Nov-2005   David Reyes   created
+        - 04-Nov-2005   Zombie        created
 */
 bool nGameMaterial::GetToBeRemoved() const
 {
@@ -229,7 +229,7 @@ bool nGameMaterial::GetToBeRemoved() const
     @param has true/false
 
     history:
-        - 04-Nov-2005   David Reyes   created
+        - 04-Nov-2005   Zombie        created
 */
 void nGameMaterial::SetToBeRemoved( bool has )
 {

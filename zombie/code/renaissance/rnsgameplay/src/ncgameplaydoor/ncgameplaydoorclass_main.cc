@@ -21,7 +21,7 @@ namespace
     Constructor
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 ncGamePlayDoorClass::ncGamePlayDoorClass() :
     doorType( hinge ),
@@ -41,7 +41,7 @@ ncGamePlayDoorClass::ncGamePlayDoorClass() :
     Destructor
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 ncGamePlayDoorClass::~ncGamePlayDoorClass()
 {
@@ -53,7 +53,7 @@ ncGamePlayDoorClass::~ncGamePlayDoorClass()
     User init instance code.
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::InitInstance(nObject::InitInstanceMsg /*initType*/)
 {
@@ -67,7 +67,7 @@ void ncGamePlayDoorClass::InitInstance(nObject::InitInstanceMsg /*initType*/)
     @param value angle
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetMaxAngle( const float value )
 {
@@ -81,7 +81,7 @@ void ncGamePlayDoorClass::SetMaxAngle( const float value )
     @param value angle
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetMinAngle( const float value )
 {
@@ -95,7 +95,7 @@ void ncGamePlayDoorClass::SetMinAngle( const float value )
     @return angle
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoorClass::GetMaxAngle() const
 {
@@ -109,7 +109,7 @@ const float ncGamePlayDoorClass::GetMaxAngle() const
     @return angle
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoorClass::GetMinAngle() const
 {
@@ -123,7 +123,7 @@ const float ncGamePlayDoorClass::GetMinAngle() const
     @return door type
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const ncGamePlayDoorClass::type ncGamePlayDoorClass::GetType() const
 {
@@ -137,7 +137,7 @@ const ncGamePlayDoorClass::type ncGamePlayDoorClass::GetType() const
     @param newtype new door's type
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetType( const type newtype )
 {
@@ -151,7 +151,7 @@ void ncGamePlayDoorClass::SetType( const type newtype )
     @return door's attributes
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const int ncGamePlayDoorClass::GetAttributes() const
 {
@@ -165,7 +165,7 @@ const int ncGamePlayDoorClass::GetAttributes() const
     @param newattributes new door's attributes set
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetAttributes( const int newattributes )
 {
@@ -179,7 +179,7 @@ void ncGamePlayDoorClass::SetAttributes( const int newattributes )
     @return angle in degrees
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoorClass::GetOpeningAngle() const
 {
@@ -196,7 +196,7 @@ const float ncGamePlayDoorClass::GetOpeningAngle() const
     @param angle angle in degrees
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetOpeningAngle( const float angle )
 {
@@ -223,7 +223,7 @@ void ncGamePlayDoorClass::SetOpeningAngle( const float angle )
     @return speed in space game units per second
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoorClass::GetSliddingSpeed() const
 {
@@ -237,7 +237,7 @@ const float ncGamePlayDoorClass::GetSliddingSpeed() const
     @param speed speed in space game units per second
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetSliddingSpeed( const float speed )
 {
@@ -253,7 +253,7 @@ void ncGamePlayDoorClass::SetSliddingSpeed( const float speed )
     @return lenght in game units
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoorClass::GetSliddingLenght() const
 {
@@ -267,7 +267,7 @@ const float ncGamePlayDoorClass::GetSliddingLenght() const
     @param lenght lenght in game units
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetSliddingLenght( const float length )
 {
@@ -281,7 +281,7 @@ void ncGamePlayDoorClass::SetSliddingLenght( const float length )
     @return time in seconds
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoorClass::GetWaitingTime() const
 {
@@ -295,7 +295,7 @@ const float ncGamePlayDoorClass::GetWaitingTime() const
     @param time time in seconds
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetWaitingTime( const float time )
 {
@@ -309,7 +309,7 @@ void ncGamePlayDoorClass::SetWaitingTime( const float time )
     @return angle speed, degrees per second
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoorClass::GetAngleSpeed() const
 {
@@ -323,7 +323,7 @@ const float ncGamePlayDoorClass::GetAngleSpeed() const
     @param speed angle speed, degrees per second
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoorClass::SetAngleSpeed( const float speed )
 {

@@ -87,8 +87,8 @@ private:
     @return length of the ray
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyGeomRay::GetLength() const
@@ -105,8 +105,8 @@ phyreal nPhyGeomRay::GetLength() const
     @param direction    new direction of the ray
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomRay::SetDirection( const vector3& direction )
@@ -123,8 +123,8 @@ void nPhyGeomRay::SetDirection( const vector3& direction )
     @param direction    direction of the ray
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomRay::GetDirection( vector3& direction ) const
@@ -141,8 +141,8 @@ void nPhyGeomRay::GetDirection( vector3& direction ) const
     @param newposition  new start position of the ray
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomRay::SetPosition( const vector3& newposition ) 
@@ -159,8 +159,8 @@ void nPhyGeomRay::SetPosition( const vector3& newposition )
     @param nweposition  start position of the ray
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomRay::GetPosition( vector3& position ) const
@@ -177,8 +177,8 @@ void nPhyGeomRay::GetPosition( vector3& position ) const
     @param length     new length of the ray
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomRay::SetLength( phyreal length )

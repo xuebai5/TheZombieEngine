@@ -46,7 +46,7 @@ ncGameplayWheel::~ncGameplayWheel()
     @param deltaTime time in seconds, between this frame and the last
 
     history:
-     - 08-Feb-2006   David Reyes    created
+     - 08-Feb-2006   Zombie         created
    
 */
 void ncGameplayWheel::Run( const float /*deltaTime*/ )
@@ -61,7 +61,7 @@ void ncGameplayWheel::Run( const float /*deltaTime*/ )
 	Updates wheel sound.
 
     history:
-     - 08-Feb-2006   David Reyes    created
+     - 08-Feb-2006   Zombie         created
    
 */
 void ncGameplayWheel::UpdateSound()

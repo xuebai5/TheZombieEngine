@@ -129,8 +129,8 @@ class nPhyBoom : public nObject {
     @return world  
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 nPhysicsWorld* nPhyBoom::GetWorld() const
@@ -145,8 +145,8 @@ nPhysicsWorld* nPhyBoom::GetWorld() const
     @return type    explosion type  
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 nPhyBoom::type nPhyBoom::Type() const
@@ -161,8 +161,8 @@ nPhyBoom::type nPhyBoom::Type() const
     @return length
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 phyreal nPhyBoom::GetLength() const
@@ -177,8 +177,8 @@ phyreal nPhyBoom::GetLength() const
     @return force
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 phyreal nPhyBoom::GetForce() const
@@ -193,8 +193,8 @@ phyreal nPhyBoom::GetForce() const
     @return last registered explosion position
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 const vector3& nPhyBoom::At() const
@@ -209,8 +209,8 @@ const vector3& nPhyBoom::At() const
     @return explosion radius
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 phyreal nPhyBoom::GetRadius() const
@@ -225,8 +225,8 @@ phyreal nPhyBoom::GetRadius() const
     @param radius   explosion radius
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyBoom::SetRadius( phyreal radius )
@@ -241,8 +241,8 @@ void nPhyBoom::SetRadius( phyreal radius )
     @return direction
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 const vector3& nPhyBoom::GetDirection() const
@@ -257,8 +257,8 @@ const vector3& nPhyBoom::GetDirection() const
     @param direction explosion direction
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyBoom::SetDirection( const vector3& direction )
@@ -273,8 +273,8 @@ void nPhyBoom::SetDirection( const vector3& direction )
     @param type boom type
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyBoom::SetType( type typeboom )
@@ -289,8 +289,8 @@ void nPhyBoom::SetType( type typeboom )
     @param length distance
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyBoom::SetLength( phyreal length )
@@ -307,8 +307,8 @@ void nPhyBoom::SetLength( phyreal length )
     @param force force of the boom in newtons
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyBoom::SetForce( phyreal force )
@@ -325,8 +325,8 @@ void nPhyBoom::SetForce( phyreal force )
     @param world world where this explosion will live
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyBoom::SetWorld( nPhysicsWorld* world )

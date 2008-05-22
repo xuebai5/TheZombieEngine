@@ -15,7 +15,7 @@ nNebulaComponentObject(ncPhyRagDoll,ncPhyCompositeObj);
     Constructor
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 ncPhyRagDoll::ncPhyRagDoll() :
     containerLimbs( NumInitialLimbs, NumGrowthLimbs ),
@@ -31,7 +31,7 @@ ncPhyRagDoll::ncPhyRagDoll() :
     Destructor
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 ncPhyRagDoll::~ncPhyRagDoll()
 {
@@ -64,7 +64,7 @@ ncPhyRagDoll::~ncPhyRagDoll()
     @param newposition ragdoll's new position
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyRagDoll::SetPosition( const vector3& newposition )
 {
@@ -93,7 +93,7 @@ void ncPhyRagDoll::SetPosition( const vector3& newposition )
     @param newrotation ragdoll's new orientation
 
     history:
-        - 16-Mar-2005   David Reyes    created
+        - 16-Mar-2005   Zombie         created
 */
 void ncPhyRagDoll::SetRotation( const matrix33& newrotation )
 {
@@ -110,7 +110,7 @@ void ncPhyRagDoll::SetRotation( const matrix33& newrotation )
     @param az ragdoll's new angle in the z-axis
 
     history:
-        - 16-Mar-2005   David Reyes    created
+        - 16-Mar-2005   Zombie         created
 */
 void ncPhyRagDoll::SetRotation( phyreal ax, phyreal ay, phyreal az )
 {
@@ -126,7 +126,7 @@ void ncPhyRagDoll::SetRotation( phyreal ax, phyreal ay, phyreal az )
     @param world it's the world where the object will be come to existance
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyRagDoll::Create( nPhysicsWorld* world )
 {
@@ -141,7 +141,7 @@ void ncPhyRagDoll::Create( nPhysicsWorld* world )
     @param geometry geometry composing the main body
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyRagDoll::AddGeometryToMainBody( nPhysicsGeom* geometry ) 
 {
@@ -159,7 +159,7 @@ void ncPhyRagDoll::AddGeometryToMainBody( nPhysicsGeom* geometry )
     @param parent parent joint
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyRagDoll::AddLimbJoint( nPhysicsJoint* limbjoint, nPhysicsJoint* parent )
 {
@@ -176,7 +176,7 @@ void ncPhyRagDoll::AddLimbJoint( nPhysicsJoint* limbjoint, nPhysicsJoint* parent
     @param limb ragdoll limb
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyRagDoll::AddLimb( ncPhyRagDollLimb* limb )
 {
@@ -192,7 +192,7 @@ void ncPhyRagDoll::AddLimb( ncPhyRagDollLimb* limb )
     @param limb limb id
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void ncPhyRagDoll::BreakLimbJoint( const ncPhyRagDollLimb::rdId limb )
 {
@@ -208,7 +208,7 @@ void ncPhyRagDoll::BreakLimbJoint( const ncPhyRagDollLimb::rdId limb )
     Enables the physic object.
 
     history:
-        - 14-Mar-2005   David Reyes    created
+        - 14-Mar-2005   Zombie         created
 */
 void ncPhyRagDoll::Enable()
 {
@@ -226,7 +226,7 @@ void ncPhyRagDoll::Enable()
     Disables the physic object.
 
     history:
-        - 14-Mar-2005   David Reyes    created
+        - 14-Mar-2005   Zombie         created
 */
 void ncPhyRagDoll::Disable()
 {
@@ -247,7 +247,7 @@ void ncPhyRagDoll::Disable()
     @return space
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 nPhySpace* ncPhyRagDoll::GetSpace() const
 {
@@ -259,7 +259,7 @@ nPhySpace* ncPhyRagDoll::GetSpace() const
     Creates the rag-doll space.
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 void ncPhyRagDoll::CreateSpace()
 {
@@ -275,7 +275,7 @@ void ncPhyRagDoll::CreateSpace()
     @param limb ragdoll limb
 
     history:
-        - 30-Mar-2005   David Reyes    created
+        - 30-Mar-2005   Zombie         created
 */
 void ncPhyRagDoll::RemoveLimb( ncPhyRagDollLimb* limb )
 {
@@ -300,7 +300,7 @@ const ncPhyRagDoll::tContainerJoints& ncPhyRagDoll::GetJointsContainer() const
     @param joint a joint
 
     history:
-        - 14-Apr-2005   David Reyes    created
+        - 14-Apr-2005   Zombie         created
 */
 nPhysicsJoint* ncPhyRagDoll::GetParentJoint( const nPhysicsJoint* joint )
 {
@@ -321,7 +321,7 @@ nPhysicsJoint* ncPhyRagDoll::GetParentJoint( const nPhysicsJoint* joint )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyRagDoll::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -335,7 +335,7 @@ void ncPhyRagDoll::InitInstance(nObject::InitInstanceMsg initType)
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void ncPhyRagDoll::Scale( const phyreal factor )
 {
@@ -362,7 +362,7 @@ void ncPhyRagDoll::Scale( const phyreal factor )
 	Moves the object to limbo.
 
     history:
-     - 24-Oct-2005   David Reyes    created
+     - 24-Oct-2005   Zombie         created
 */
 void ncPhyRagDoll::YouShallDwellIntoTheLimbo()
 {
@@ -381,7 +381,7 @@ void ncPhyRagDoll::YouShallDwellIntoTheLimbo()
 	Recovers an object from the limbo.
 
     history:
-     - 24-Oct-2005   David Reyes    created
+     - 24-Oct-2005   Zombie         created
 */
 void ncPhyRagDoll::YourSoulMayComeBackFromLimbo()
 {

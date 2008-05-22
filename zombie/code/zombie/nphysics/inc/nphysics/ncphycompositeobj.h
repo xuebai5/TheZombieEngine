@@ -179,8 +179,8 @@ private:
     Resets the container
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inline
+        - 29-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inline
 */
 inline
 void ncPhyCompositeObj::ResetsContainer() 
@@ -195,8 +195,8 @@ void ncPhyCompositeObj::ResetsContainer()
     @param index    index to the geometry
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inline
+        - 29-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inline
 */
 inline
 nPhysicsGeom* ncPhyCompositeObj::GetGeometry( int index ) const
@@ -211,8 +211,8 @@ nPhysicsGeom* ncPhyCompositeObj::GetGeometry( int index ) const
     @return number of the geometries in this object
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inline
+        - 29-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inline
 */
 inline
 int ncPhyCompositeObj::GetNumGeometries() const
@@ -227,7 +227,7 @@ int ncPhyCompositeObj::GetNumGeometries() const
     @return true/false
 
     history:
-        - 06-Sep-2004   David Reyes    created
+        - 06-Sep-2004   Zombie         created
 */
 inline
 const bool ncPhyCompositeObj::IsSubSpaceAllowed() const
@@ -242,8 +242,8 @@ const bool ncPhyCompositeObj::IsSubSpaceAllowed() const
     @param position vector3 to be fill with the actual position of the object.
 
     history:
-        - 19-Oct-2004   David Reyes    created
-        - 21-Feb-2004   David Reyes    inlined
+        - 19-Oct-2004   Zombie         created
+        - 21-Feb-2004   Zombie         inlined
 */
 inline
 void ncPhyCompositeObj::GetPosition( vector3& position ) const

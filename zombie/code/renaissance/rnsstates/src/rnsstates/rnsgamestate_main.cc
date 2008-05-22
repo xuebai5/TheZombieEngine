@@ -653,7 +653,7 @@ RnsGameState::GetLastInventoryItem()const
     @param newstate player's new state
     
     history:
-        - 27-Jan-2006   David Reyes    created
+        - 27-Jan-2006   Zombie         created
 */
 void RnsGameState::NewPlayerState( int newstate, nEntityObject* player )
 {

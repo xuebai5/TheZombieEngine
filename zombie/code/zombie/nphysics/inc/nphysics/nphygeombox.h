@@ -73,8 +73,8 @@ private:
     @param lengths retrieved lengths of the box in each axis
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyGeomBox::GetLengths( vector3& lengths ) const

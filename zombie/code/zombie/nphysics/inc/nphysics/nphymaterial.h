@@ -221,8 +221,8 @@ private:
     @return material data
 
     history:
-        - 29-Sep-2004   David Reyes   created
-        - 27-Jan-2005   David Reyes   inline
+        - 29-Sep-2004   Zombie        created
+        - 27-Jan-2005   Zombie        inline
 
 */
 inline
@@ -241,7 +241,7 @@ surfacedata* nPhyMaterial::GetMaterial( idmaterial idA, idmaterial idB )
     Sets the pyramid friction coeficient to infinity.
 
     history:
-        - 04-May-2004   David Reyes   created
+        - 04-May-2004   Zombie        created
 
 */
 inline
@@ -258,7 +258,7 @@ void nPhyMaterial::SetCoeficientNormalFrictionInf()
     Sets the bounce coeficient to infinity.
 
     history:
-        - 04-May-2004   David Reyes   created
+        - 04-May-2004   Zombie        created
 
 */
 inline
@@ -275,7 +275,7 @@ void nPhyMaterial::SetCoeficientBounceInf()
     Sets the softness trough ERP (Error reduction parameter) to Infinity.
 
     history:
-        - 04-May-2004   David Reyes   created
+        - 04-May-2004   Zombie        created
 
 */
 inline
@@ -292,7 +292,7 @@ void nPhyMaterial::SetCoeficientSoftnessERPInf()
     Sets the softness trough CFM (Constaint force mixing) to Infinity.
 
     history:
-        - 04-May-2004   David Reyes   created
+        - 04-May-2004   Zombie        created
 
 */
 inline
@@ -309,7 +309,7 @@ void nPhyMaterial::SetCoeficientSoftnessCFMInf()
     Sets the slip coeficient to Infinity.
 
     history:
-        - 04-May-2004   David Reyes   created
+        - 04-May-2004   Zombie        created
 
 */
 inline
@@ -326,7 +326,7 @@ void nPhyMaterial::SetCoeficientSlipInf()
     Sets the pyramid friction coeficient to Infinity.
 
     history:
-        - 04-May-2004   David Reyes   created
+        - 04-May-2004   Zombie        created
 
 */
 inline
@@ -343,7 +343,7 @@ void nPhyMaterial::SetCoeficientPyramidFrictionInf()
     Sets the bounce minimun velocity  to Infinity.
 
     history:
-        - 04-May-2004   David Reyes   created
+        - 04-May-2004   Zombie        created
 
 */
 inline
@@ -362,8 +362,8 @@ void nPhyMaterial::SetMinVelocityBounceInf()
     @param name material name
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetMaterialName( const nString& name )
@@ -381,8 +381,8 @@ void nPhyMaterial::SetMaterialName( const nString& name )
     @return unique id of the material
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 const nPhyMaterial::idmaterial nPhyMaterial::Id() const
@@ -397,8 +397,8 @@ const nPhyMaterial::idmaterial nPhyMaterial::Id() const
     @param coeficient friction coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetCoeficientNormalFriction( phyreal coeficient )
@@ -428,8 +428,8 @@ void nPhyMaterial::SetCoeficientNormalFriction( phyreal coeficient )
     @param coeficient bounce coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetCoeficientBounce( phyreal coeficient )
@@ -453,8 +453,8 @@ void nPhyMaterial::SetCoeficientBounce( phyreal coeficient )
     @param coeficient softness ERP coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetCoeficientSoftnessERP( phyreal coeficient )
@@ -477,8 +477,8 @@ void nPhyMaterial::SetCoeficientSoftnessERP( phyreal coeficient )
     @param coeficient softness CFM coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetCoeficientSoftnessCFM( phyreal coeficient )
@@ -500,8 +500,8 @@ void nPhyMaterial::SetCoeficientSoftnessCFM( phyreal coeficient )
     @param coeficient slip coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetCoeficientSlip( phyreal coeficient )
@@ -523,8 +523,8 @@ void nPhyMaterial::SetCoeficientSlip( phyreal coeficient )
     @param coeficient Pyramid Friction coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetCoeficientPyramidFriction( phyreal coeficient )
@@ -554,8 +554,8 @@ void nPhyMaterial::SetCoeficientPyramidFriction( phyreal coeficient )
     @param velocity minimun velocity to bounce
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetMinVelocityBounce( phyreal velocity )
@@ -578,8 +578,8 @@ void nPhyMaterial::SetMinVelocityBounce( phyreal velocity )
     @param type contact type
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 bool nPhyMaterial::IsType( typeContact type ) const
@@ -597,8 +597,8 @@ bool nPhyMaterial::IsType( typeContact type ) const
     @param type type that will be added to the flags list
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::SetFlag( typeContact type )
@@ -616,8 +616,8 @@ void nPhyMaterial::SetFlag( typeContact type )
     @param type type that will be removed to the flags list
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::UnsetFlag( typeContact type )
@@ -635,8 +635,8 @@ void nPhyMaterial::UnsetFlag( typeContact type )
     @return normal friction coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 phyreal nPhyMaterial::GetCoeficientNormalFriction() const
@@ -653,8 +653,8 @@ phyreal nPhyMaterial::GetCoeficientNormalFriction() const
     @return bounce friction coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 phyreal nPhyMaterial::GetCoeficientBounce() const
@@ -669,8 +669,8 @@ phyreal nPhyMaterial::GetCoeficientBounce() const
     @return softness ERP coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 phyreal nPhyMaterial::GetCoeficientSoftnessERP() const
@@ -685,8 +685,8 @@ phyreal nPhyMaterial::GetCoeficientSoftnessERP() const
     @return softness CFM coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 phyreal nPhyMaterial::GetCoeficientSoftnessCFM() const
@@ -701,8 +701,8 @@ phyreal nPhyMaterial::GetCoeficientSoftnessCFM() const
     @return softness CFM coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 phyreal nPhyMaterial::GetCoeficientSlip() const
@@ -717,8 +717,8 @@ phyreal nPhyMaterial::GetCoeficientSlip() const
     @return pyramid friction coeficient
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 phyreal nPhyMaterial::GetCoeficientPyramidFriction() const
@@ -735,8 +735,8 @@ phyreal nPhyMaterial::GetCoeficientPyramidFriction() const
     @return minimun velocity for bouncing
 
     history:
-        - 28-Sep-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 28-Sep-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 phyreal nPhyMaterial::GetMinVelocityBounce() const
@@ -749,8 +749,8 @@ phyreal nPhyMaterial::GetMinVelocityBounce() const
     Enables friction direction.
 
     history:
-        - 22-Apr-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 22-Apr-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::EnableFrictionDirection()
@@ -766,8 +766,8 @@ void nPhyMaterial::EnableFrictionDirection()
     Disables the friction direction.
 
     history:
-        - 22-Apr-2004   David Reyes   created
-        - 12-May-2005   David Reyes   inlined
+        - 22-Apr-2004   Zombie        created
+        - 12-May-2005   Zombie        inlined
 */
 inline
 void nPhyMaterial::DisableFrictionDirection()

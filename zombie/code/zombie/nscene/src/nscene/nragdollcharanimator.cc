@@ -105,7 +105,7 @@ nRagdollCharAnimator::AnimateHuman(nCharacter2* character )
             switch( this->humragdoll->GetClassComponent<ncRagDollClass>()->GetRagDollType() )
             {
             case ncRagDollClass::Human:
-                offset.set(0,0,float(-.25)); // <--- Hardcoded correction (David)
+                offset.set(0,0,float(-.25)); // <--- Hardcoded correction
                 break;
             }
 

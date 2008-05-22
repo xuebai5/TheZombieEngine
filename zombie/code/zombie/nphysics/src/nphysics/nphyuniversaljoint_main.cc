@@ -15,7 +15,7 @@ nNebulaScriptClass(nPhyUniversalJoint, "nphysicsjoint");
     Constructor.
 
     history:
-        - 03-Nov-2004   David Reyes    created
+        - 03-Nov-2004   Zombie         created
 */
 nPhyUniversalJoint::nPhyUniversalJoint()
 {   
@@ -27,7 +27,7 @@ nPhyUniversalJoint::nPhyUniversalJoint()
     Destructor.
 
     history:
-        - 03-Nov-2004   David Reyes    created
+        - 03-Nov-2004   Zombie         created
 */
 nPhyUniversalJoint::~nPhyUniversalJoint()
 {
@@ -42,7 +42,7 @@ nPhyUniversalJoint::~nPhyUniversalJoint()
     @param group joints group
 
     history:
-        - 03-Nov-2004   David Reyes    created
+        - 03-Nov-2004   Zombie         created
 */
 void nPhyUniversalJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 {
@@ -65,7 +65,7 @@ void nPhyUniversalJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyUniversalJoint::Scale( const phyreal factor )
 {
@@ -88,7 +88,7 @@ void nPhyUniversalJoint::Scale( const phyreal factor )
 	Draws the joint.
 
     history:
-     - 18-Aug-2005   David Reyes    created
+     - 18-Aug-2005   Zombie         created
 */
 void nPhyUniversalJoint::Draw( nGfxServer2* server )
 {

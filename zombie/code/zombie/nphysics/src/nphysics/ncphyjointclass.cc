@@ -27,7 +27,7 @@ NSCRIPT_INITCMDS_END()
     Constructor.
 
     history:
-        - 19-Aug-2005   David Reyes    created
+        - 19-Aug-2005   Zombie         created
 */
 ncPhyJointClass::ncPhyJointClass() :
     jointType( nPhysicsJoint::Invalid )
@@ -40,7 +40,7 @@ ncPhyJointClass::ncPhyJointClass() :
     Destructor.
 
     history:
-        - 19-Aug-2005   David Reyes    created
+        - 19-Aug-2005   Zombie         created
 */
 ncPhyJointClass::~ncPhyJointClass()
 {
@@ -55,7 +55,7 @@ ncPhyJointClass::~ncPhyJointClass()
     @param type joint type
 
     history:
-        - 19-Aug-2005   David Reyes    created
+        - 19-Aug-2005   Zombie         created
 */
 void ncPhyJointClass::SetTypeJoint( int type )
 {
@@ -69,7 +69,7 @@ void ncPhyJointClass::SetTypeJoint( int type )
     @return joint type
 
     history:
-        - 19-Aug-2005   David Reyes    created
+        - 19-Aug-2005   Zombie         created
 */
 int ncPhyJointClass::GetTypeJoint() const
 {
@@ -81,7 +81,7 @@ int ncPhyJointClass::GetTypeJoint() const
     Object persistency.
 
     history:
-        - 19-Aug-2005   David Reyes    created
+        - 19-Aug-2005   Zombie         created
 */
 bool ncPhyJointClass::SaveCmds(nPersistServer* server)
 {

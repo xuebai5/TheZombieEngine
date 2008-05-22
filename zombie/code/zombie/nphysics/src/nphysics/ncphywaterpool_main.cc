@@ -19,7 +19,7 @@ const phyreal ncPhyWaterPool::DefaultResistance(phyreal(.01));
     Constructor
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 ncPhyWaterPool::ncPhyWaterPool() : 
     lengthsPool( 100, 10, 100 )
@@ -32,7 +32,7 @@ ncPhyWaterPool::ncPhyWaterPool() :
     Destructor
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 ncPhyWaterPool::~ncPhyWaterPool()
 {
@@ -46,7 +46,7 @@ ncPhyWaterPool::~ncPhyWaterPool()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 void ncPhyWaterPool::Create( nPhysicsWorld* world )
 {
@@ -82,7 +82,7 @@ void ncPhyWaterPool::Create( nPhysicsWorld* world )
     @param newposition new position
 
     history:
-        - 24-Jan-2005   David Reyes    created
+        - 24-Jan-2005   Zombie         created
 */
 void ncPhyWaterPool::SetPosition( const vector3& newposition )
 {
@@ -97,7 +97,7 @@ void ncPhyWaterPool::SetPosition( const vector3& newposition )
     @param newrotation new orientation
 
     history:
-        - 24-Jan-2005   David Reyes    created
+        - 24-Jan-2005   Zombie         created
 */
 void ncPhyWaterPool::SetRotation( const matrix33& newrotation )
 {
@@ -112,7 +112,7 @@ void ncPhyWaterPool::SetRotation( const matrix33& newrotation )
     @param lengths axis lengths of the pool
 
     history:
-        - 24-Jan-2005   David Reyes    created
+        - 24-Jan-2005   Zombie         created
 */
 void ncPhyWaterPool::SetPoolsLength( const vector3& lengths )
 {
@@ -139,7 +139,7 @@ void ncPhyWaterPool::SetPoolsLength( const vector3& lengths )
     Computes the bounding box (not an AA).
 
     history:
-        - 25-Jan-2005   David Reyes    created
+        - 25-Jan-2005   Zombie         created
 */
 void ncPhyWaterPool::UpdateBoundingBox()
 {
@@ -175,7 +175,7 @@ void ncPhyWaterPool::UpdateBoundingBox()
     @return true/false
 
     history:
-        - 26-Jan-2005   David Reyes    created
+        - 26-Jan-2005   Zombie         created
 */
 bool ncPhyWaterPool::ItBelongs( const vector3& worldpoint ) const
 {
@@ -208,7 +208,7 @@ bool ncPhyWaterPool::ItBelongs( const vector3& worldpoint ) const
     @param box axis aligned bounding box
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 bool ncPhyWaterPool::IsUnderFluid( const nPhysicsAABB& box ) const
 {
@@ -236,7 +236,7 @@ bool ncPhyWaterPool::IsUnderFluid( const nPhysicsAABB& box ) const
     @return if any collision was processed
 
     history:
-        - 24-Jan-2005   David Reyes    created
+        - 24-Jan-2005   Zombie         created
 */
 bool ncPhyWaterPool::CollisionProcess( int numContacts, nPhyCollide::nContact* contacts )
 {
@@ -320,7 +320,7 @@ bool ncPhyWaterPool::CollisionProcess( int numContacts, nPhyCollide::nContact* c
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 17-May-2005   David Reyes    created
+        - 17-May-2005   Zombie         created
 */
 void ncPhyWaterPool::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -334,7 +334,7 @@ void ncPhyWaterPool::InitInstance(nObject::InitInstanceMsg initType)
     @return pools lenghts
 
     history:
-        - 26-Sep-2005   David Reyes    created
+        - 26-Sep-2005   Zombie         created
 */
 const vector3& ncPhyWaterPool::GetPoolsLength() const
 {

@@ -25,7 +25,7 @@ const ncPhyRagDollLimb::rdId ncPhyRagDollLimb::rdNoValidID(0);
     Constructor
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 ncPhyRagDollLimb::ncPhyRagDollLimb() :
     ragDoll(0),
@@ -39,7 +39,7 @@ ncPhyRagDollLimb::ncPhyRagDollLimb() :
     Destructor
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 ncPhyRagDollLimb::~ncPhyRagDollLimb()
 {
@@ -57,7 +57,7 @@ ncPhyRagDollLimb::~ncPhyRagDollLimb()
     @param ragdoll ragdoll object
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 void ncPhyRagDollLimb::SetRagDoll( ncPhyRagDoll* ragdoll )
 {
@@ -71,7 +71,7 @@ void ncPhyRagDollLimb::SetRagDoll( ncPhyRagDoll* ragdoll )
     @return ragdoll object
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 ncPhyRagDoll* ncPhyRagDollLimb::GetRagDoll() const
 {
@@ -85,7 +85,7 @@ ncPhyRagDoll* ncPhyRagDollLimb::GetRagDoll() const
     @return true/false
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 const bool ncPhyRagDollLimb::IsFree() const
 {
@@ -103,7 +103,7 @@ const bool ncPhyRagDollLimb::IsFree() const
     @return if any collision was processed
 
     history:
-        - 09-Mar-2005   David Reyes    created
+        - 09-Mar-2005   Zombie         created
 */
 bool ncPhyRagDollLimb::CollisionProcess( int numContacts, nPhyCollide::nContact* contacts )
 {
@@ -117,7 +117,7 @@ bool ncPhyRagDollLimb::CollisionProcess( int numContacts, nPhyCollide::nContact*
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 30-Aug-2005   David Reyes    created
+        - 30-Aug-2005   Zombie         created
 */
 void ncPhyRagDollLimb::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -140,7 +140,7 @@ void ncPhyRagDollLimb::InitInstance(nObject::InitInstanceMsg initType)
     @param world it's the world where the object will be come to existance
 
     history:
-        - 06-Sep-2005   David Reyes    created
+        - 06-Sep-2005   Zombie         created
 */
 void ncPhyRagDollLimb::Create( nPhysicsWorld* world )
 {

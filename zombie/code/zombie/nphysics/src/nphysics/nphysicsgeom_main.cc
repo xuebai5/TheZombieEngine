@@ -16,8 +16,8 @@ nNebulaScriptClass(nPhysicsGeom, "nobject");
     Constructor
 
     history:
-        - 22-Sep-2004   David Reyes    created
-        - 23-Sep-2004   David Reyes    added name support
+        - 22-Sep-2004   Zombie         created
+        - 23-Sep-2004   Zombie         added name support
 */
 nPhysicsGeom::nPhysicsGeom() : 
     geomID( NoValidID ),
@@ -43,7 +43,7 @@ nPhysicsGeom::nPhysicsGeom() :
     Destructor
 
     history:
-        - 22-Sep-2004   David Reyes    created
+        - 22-Sep-2004   Zombie         created
 */
 nPhysicsGeom::~nPhysicsGeom() 
 {
@@ -69,7 +69,7 @@ nPhysicsGeom::~nPhysicsGeom()
 	@param server     graphic server
 
 	history:
-     - 24-Sep-2004   David Reyes    created
+     - 24-Sep-2004   Zombie         created
 */
 void nPhysicsGeom::Draw( nGfxServer2* server ) 
 {
@@ -254,7 +254,7 @@ void nPhysicsGeom::Draw( nGfxServer2* server )
 	@param az       influence of the angle in the x axis
 
 	history:
-     - 01-Oct-2004   David Reyes    created
+     - 01-Oct-2004   Zombie         created
 */
 void nPhysicsGeom::SetOrientation( phyreal ax, phyreal ay, phyreal az )
 {
@@ -277,7 +277,7 @@ void nPhysicsGeom::SetOrientation( phyreal ax, phyreal ay, phyreal az )
 	@param az       angle for the z axis
 
 	history:
-     - 01-Oct-2004   David Reyes    created
+     - 01-Oct-2004   Zombie         created
 */
 void nPhysicsGeom::GetOrientation( phyreal& ax, phyreal& ay, phyreal& az )
 {
@@ -299,7 +299,7 @@ void nPhysicsGeom::GetOrientation( phyreal& ax, phyreal& ay, phyreal& az )
     @param newspace a space
 
     history:
-     - 11-Oct-2004   David Reyes    created
+     - 11-Oct-2004   Zombie         created
 */
 void nPhysicsGeom::MoveToSpace( nPhySpace* newspace )
 {
@@ -331,7 +331,7 @@ void nPhysicsGeom::MoveToSpace( nPhySpace* newspace )
     @return physics object
 
     history:
-     - 14-Oct-2004   David Reyes    created
+     - 14-Oct-2004   Zombie         created
 */
 ncPhysicsObj* nPhysicsGeom::GetOwner() const
 {
@@ -363,7 +363,7 @@ ncPhysicsObj* nPhysicsGeom::GetOwner() const
     @param orientation geom orientation in the form of quaternion
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhysicsGeom::GetAbsoluteOrientation( quaternion& orientation ) const
 {
@@ -398,7 +398,7 @@ void nPhysicsGeom::GetAbsoluteOrientation( quaternion& orientation ) const
     @param position geom's world position
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhysicsGeom::GetAbsolutePosition( vector3& position ) const
 {
@@ -437,7 +437,7 @@ void nPhysicsGeom::GetAbsolutePosition( vector3& position ) const
     @return geometry's world
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 nPhysicsWorld* nPhysicsGeom::GetWorld() const
 {
@@ -453,7 +453,7 @@ nPhysicsWorld* nPhysicsGeom::GetWorld() const
     Marks this geometry.
 
     history:
-        - 10-Aug-2005   David Reyes    created
+        - 10-Aug-2005   Zombie         created
 */
 void nPhysicsGeom::Mark()
 {
@@ -468,7 +468,7 @@ void nPhysicsGeom::Mark()
     Unmarks this geometry.
 
     history:
-        - 10-Aug-2005   David Reyes    created
+        - 10-Aug-2005   Zombie         created
 */
 void nPhysicsGeom::UnMark()
 {
@@ -483,7 +483,7 @@ void nPhysicsGeom::UnMark()
     @param name material name
 
     history:
-        - 01-Sep-2005   David Reyes    created
+        - 01-Sep-2005   Zombie         created
 */
 void nPhysicsGeom::SetGameMaterial( const nString& name )
 {
@@ -507,7 +507,7 @@ void nPhysicsGeom::SetGameMaterial( const nString& name )
     @param id materials id
 
     history:
-        - 01-Sep-2005   David Reyes    created
+        - 01-Sep-2005   Zombie         created
 */
 void nPhysicsGeom::SetGameMaterialId( const uint id )
 {
@@ -521,7 +521,7 @@ void nPhysicsGeom::SetGameMaterialId( const uint id )
     @return material name
 
     history:
-        - 01-Sep-2005   David Reyes    created
+        - 01-Sep-2005   Zombie         created
 */
 //#ifndef NGAME
 const nString& nPhysicsGeom::GetGameMaterialName() const
@@ -537,7 +537,7 @@ const nString& nPhysicsGeom::GetGameMaterialName() const
     @return material id
 
     history:
-        - 01-Sep-2005   David Reyes    created
+        - 01-Sep-2005   Zombie         created
 */
 const uint nPhysicsGeom::GetGameMaterialId() const
 {
@@ -551,7 +551,7 @@ const uint nPhysicsGeom::GetGameMaterialId() const
     @return id
 
     history:
-        - 19-Sep-2005   David Reyes    created
+        - 19-Sep-2005   Zombie         created
 */
 int nPhysicsGeom::GetIdTag() const
 {
@@ -565,7 +565,7 @@ int nPhysicsGeom::GetIdTag() const
     @param newIdTag new id tag (can be NoValidID).
 
     history:
-        - 19-Sep-2005   David Reyes    created
+        - 19-Sep-2005   Zombie         created
 */
 void nPhysicsGeom::SetIdTag( int newIdTag )
 {
@@ -580,9 +580,9 @@ void nPhysicsGeom::SetIdTag( int newIdTag )
     @return material the geoemtry material
     
     history:
-     - 29-Oct-2004   David Reyes    created
-     - 12-Dec-2004   David Reyes    inlined
-     - 28-Oct-2005   David Reyes    removed inline
+     - 29-Oct-2004   Zombie         created
+     - 12-Dec-2004   Zombie         inlined
+     - 28-Oct-2005   Zombie         removed inline
 */
 const nPhyMaterial::idmaterial nPhysicsGeom::GetMaterial() const
 {

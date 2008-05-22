@@ -14,7 +14,7 @@ nNebulaScriptClass(nPhyGeomQuadTreeSpace, "nphyspace");
     Constructor
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 nPhyGeomQuadTreeSpace::nPhyGeomQuadTreeSpace() :
     containerGeometries(NumInitialGeometries,NumGrowthGeometries)
@@ -28,7 +28,7 @@ nPhyGeomQuadTreeSpace::nPhyGeomQuadTreeSpace() :
     Destructor
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 nPhyGeomQuadTreeSpace::~nPhyGeomQuadTreeSpace()
 {
@@ -40,7 +40,7 @@ nPhyGeomQuadTreeSpace::~nPhyGeomQuadTreeSpace()
     Creates the geometry
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhyGeomQuadTreeSpace::Create()
 {
@@ -62,7 +62,7 @@ void nPhyGeomQuadTreeSpace::Create()
     @param depth    how many divisions 4^depth
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhyGeomQuadTreeSpace::SetUp( const vector3& center, const vector3& extens, int depth )
 {
@@ -84,7 +84,7 @@ void nPhyGeomQuadTreeSpace::SetUp( const vector3& center, const vector3& extens,
     @param boundingbox  data structure to be filled
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhyGeomQuadTreeSpace::GetAABB( nPhysicsAABB& boundingbox )
 {
@@ -106,7 +106,7 @@ void nPhyGeomQuadTreeSpace::GetAABB( nPhysicsAABB& boundingbox )
     @return collision geometry
 
     history:
-        - 23-Sep-2005   David Reyes    created
+        - 23-Sep-2005   Zombie         created
 */
 nPhysicsGeom* nPhyGeomQuadTreeSpace::GetGeometry( int index )
 {
@@ -120,7 +120,7 @@ nPhysicsGeom* nPhyGeomQuadTreeSpace::GetGeometry( int index )
     @param geometry geometry collision geometry
 
     history:
-        - 23-Sep-2005   David Reyes    created
+        - 23-Sep-2005   Zombie         created
 */
 void nPhyGeomQuadTreeSpace::Add( nPhysicsGeom* geometry )
 {
@@ -136,7 +136,7 @@ void nPhyGeomQuadTreeSpace::Add( nPhysicsGeom* geometry )
     @param geometry geometry collision geometry
 
     history:
-        - 23-Sep-2005   David Reyes    created
+        - 23-Sep-2005   Zombie         created
 */
 void nPhyGeomQuadTreeSpace::Remove( nPhysicsGeom* geometry )
 {
@@ -152,7 +152,7 @@ void nPhyGeomQuadTreeSpace::Remove( nPhysicsGeom* geometry )
     @return number of geometries
 
     history:
-        - 23-Sep-2005   David Reyes    created
+        - 23-Sep-2005   Zombie         created
 */
 int nPhyGeomQuadTreeSpace::GetNumGeometries() const
 {

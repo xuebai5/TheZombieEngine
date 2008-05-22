@@ -13,7 +13,7 @@ nNebulaScriptClass(nPhyGeomTrans, "nphysicsgeom");
     Constructor
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 nPhyGeomTrans::nPhyGeomTrans() :
     encapsulatedGeom(0)
@@ -28,7 +28,7 @@ nPhyGeomTrans::nPhyGeomTrans() :
     Destructor
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 nPhyGeomTrans::~nPhyGeomTrans()
 {
@@ -40,7 +40,7 @@ nPhyGeomTrans::~nPhyGeomTrans()
     Creates the geometry
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void nPhyGeomTrans::Create()
 {
@@ -56,7 +56,7 @@ void nPhyGeomTrans::Create()
     @param geom it's the geom to be encapsulated
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void nPhyGeomTrans::AddGeometry( nPhysicsGeom* geom )
 {
@@ -105,7 +105,7 @@ void nPhyGeomTrans::AddGeometry( nPhysicsGeom* geom )
     @return encapsulated geometry
 
     history:
-        - 05-Nov-2004   David Reyes    created
+        - 05-Nov-2004   Zombie         created
 */
 void nPhyGeomTrans::Draw( nGfxServer2 *server )
 {
@@ -123,7 +123,7 @@ void nPhyGeomTrans::Draw( nGfxServer2 *server )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyGeomTrans::Scale( const phyreal factor )
 {

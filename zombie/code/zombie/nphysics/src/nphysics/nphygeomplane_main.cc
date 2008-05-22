@@ -18,7 +18,7 @@ nNebulaScriptClass(nPhyGeomPlane, "nphysicsgeom");
     Constructor
 
     history:
-        - 12-Jan-2005   David Reyes    created
+        - 12-Jan-2005   Zombie         created
 */
 nPhyGeomPlane::nPhyGeomPlane() :
     planeequation( 0, 0, 0, 0 )
@@ -33,7 +33,7 @@ nPhyGeomPlane::nPhyGeomPlane() :
     Destructor
 
     history:
-        - 12-Jan-2005   David Reyes    created
+        - 12-Jan-2005   Zombie         created
 */
 nPhyGeomPlane::~nPhyGeomPlane()
 {
@@ -45,7 +45,7 @@ nPhyGeomPlane::~nPhyGeomPlane()
     Creates the geometry
 
     history:
-        - 12-Jan-2005   David Reyes    created
+        - 12-Jan-2005   Zombie         created
 */
 void nPhyGeomPlane::Create()
 {
@@ -65,7 +65,7 @@ void nPhyGeomPlane::Create()
     @param newposition new geometry position
 
     history:
-        - 12-Jan-2005   David Reyes    created
+        - 12-Jan-2005   Zombie         created
 */
 void nPhyGeomPlane::SetPosition( const vector3& /*newposition*/ )
 {
@@ -79,7 +79,7 @@ void nPhyGeomPlane::SetPosition( const vector3& /*newposition*/ )
     @param position world position
 
     history:
-        - 12-Jan-2005   David Reyes    created
+        - 12-Jan-2005   Zombie         created
 */
 void nPhyGeomPlane::GetPosition( vector3& position ) const
 {
@@ -94,7 +94,7 @@ void nPhyGeomPlane::GetPosition( vector3& position ) const
     Draws the plane.
 
     history:
-        - 12-Jan-2005   David Reyes    created
+        - 12-Jan-2005   Zombie         created
 */
 void nPhyGeomPlane::Draw( nGfxServer2* server )
 {
@@ -159,7 +159,7 @@ void nPhyGeomPlane::Draw( nGfxServer2* server )
     @param equation plane equation coeficients
 
     history:
-        - 12-Jan-2005   David Reyes    created
+        - 12-Jan-2005   Zombie         created
 */
 void nPhyGeomPlane::SetEquation( const vector4& equation )
 {
@@ -184,7 +184,7 @@ void nPhyGeomPlane::SetEquation( const vector4& equation )
     @param neworientation matrix new orientation
 
     history:
-        - 08-Aug-2005   David Reyes    created
+        - 08-Aug-2005   Zombie         created
 */
 void nPhyGeomPlane::SetOrientation( const matrix33& /*neworientation*/)
 {    
@@ -198,7 +198,7 @@ void nPhyGeomPlane::SetOrientation( const matrix33& /*neworientation*/)
     @param orientation matrix orientation
 
     history:
-        - 08-Aug-2005   David Reyes    created
+        - 08-Aug-2005   Zombie         created
 */
 void nPhyGeomPlane::GetOrientation( matrix33& /*orientation*/) const
 {    

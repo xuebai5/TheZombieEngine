@@ -28,7 +28,7 @@ namespace {
     @param gmaterial none dynamic object material
 
     history:
-        - 14-Feb-2006   David Reyes    created
+        - 14-Feb-2006   Zombie         created
 */
 inline void gpProcessOnImpact( ncPhysicsObj* objA, const nPhyCollide::nContact* contact, nGameMaterial* gmaterial, geomid contactGeom )
 {
@@ -160,7 +160,7 @@ inline void gpProcessOnImpact( ncPhysicsObj* objA, const nPhyCollide::nContact* 
     @param contact contact information
 
     history:
-        - 14-Feb-2006   David Reyes    created
+        - 14-Feb-2006   Zombie         created
 */
 void gpImpactSoundProcess( ncPhysicsObj* objA, ncPhysicsObj* objB, const nPhyCollide::nContact* contact )
 {

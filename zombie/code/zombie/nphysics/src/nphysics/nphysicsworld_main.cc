@@ -54,7 +54,7 @@ int nPhysicsWorld::DEBUG_NumberOfBodies(0);
     Constructor
 
     history:
-        - 23-Sep-2004   David Reyes   created
+        - 23-Sep-2004   Zombie        created
 */
 nPhysicsWorld::nPhysicsWorld() :
     worldID( NoValidID ),
@@ -121,7 +121,7 @@ nPhysicsWorld::nPhysicsWorld() :
     Destructor
 
     history:
-        - 23-Sep-2004   David Reyes   created
+        - 23-Sep-2004   Zombie        created
 */
 nPhysicsWorld::~nPhysicsWorld()
 {
@@ -133,7 +133,7 @@ nPhysicsWorld::~nPhysicsWorld()
     Creates the world
 
     history:
-        - 23-Sep-2004   David Reyes   created
+        - 23-Sep-2004   Zombie        created
 */
 void nPhysicsWorld::Create()
 {
@@ -156,7 +156,7 @@ void nPhysicsWorld::Create()
     @param enabled  sets the stat of enabling in creation
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 void nPhysicsWorld::Enable()
 {
@@ -183,7 +183,7 @@ void nPhysicsWorld::Enable()
     Disables this world
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::Disable()
 {
@@ -212,7 +212,7 @@ void nPhysicsWorld::Disable()
     Destroys the world
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 void nPhysicsWorld::Destroy()
 {
@@ -273,7 +273,7 @@ void nPhysicsWorld::Destroy()
     @param obj object to be added to the world
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::Add( nEntityObject* obj )
 {
@@ -297,7 +297,7 @@ void nPhysicsWorld::Add( nEntityObject* obj )
     @param obj object to be removed from the world
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::Remove( ncPhysicsObj* obj )
 {
@@ -322,7 +322,7 @@ void nPhysicsWorld::Remove( ncPhysicsObj* obj )
     @param obj rigid body to be added from the world
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::Add( nPhyRigidBody* obj )
 {
@@ -340,7 +340,7 @@ void nPhysicsWorld::Add( nPhyRigidBody* obj )
     @param obj rigid body to be added from the world
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::Remove( nPhyRigidBody* obj )
 {
@@ -360,7 +360,7 @@ void nPhysicsWorld::Remove( nPhyRigidBody* obj )
     @param server graphics server
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::Draw( nGfxServer2* server )
 {
@@ -400,7 +400,7 @@ void nPhysicsWorld::Draw( nGfxServer2* server )
     Enables/disables depending of the active layers.
 
     history:
-        - 04-Aug-2004   David Reyes    created
+        - 04-Aug-2004   Zombie         created
 */
 void nPhysicsWorld::EnableByLayers()
 {
@@ -447,8 +447,8 @@ void nPhysicsWorld::EnableByLayers()
     @return num of contacts reported
 
     history:
-        - 11-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    new implememtation
+        - 11-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         new implememtation
 */
 int nPhysicsWorld::Collide( 
     const nPhysicsGeom *geom,
@@ -480,7 +480,7 @@ int nPhysicsWorld::Collide(
     @param worldspace a space
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::SetSpace( nPhySpace* worldspace )
 {
@@ -505,7 +505,7 @@ void nPhysicsWorld::SetSpace( nPhySpace* worldspace )
     @param step step factor
 
     history:
-        - 15-Oct-2004   David Reyes    created
+        - 15-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::RunWorld( phyreal step )
 {
@@ -589,7 +589,7 @@ void nPhysicsWorld::RunWorld( phyreal step )
     @param geomB geometry id
 
     history:
-        - 15-Oct-2004   David Reyes    created
+        - 15-Oct-2004   Zombie         created
 */
 void nPhysicsWorld::PossibleCollision(geomid geomA, geomid geomB)
 {
@@ -804,7 +804,7 @@ void nPhysicsWorld::PossibleCollision(geomid geomA, geomid geomB)
     @param breakablejoint a breakable joint
 
     history:
-        - 10-Nov-2004   David Reyes   created
+        - 10-Nov-2004   Zombie        created
 */
 void nPhysicsWorld::Add( nPhysicsJoint* breakablejoint )
 {
@@ -822,7 +822,7 @@ void nPhysicsWorld::Add( nPhysicsJoint* breakablejoint )
     @param breakablejoint a breakable joint
 
     history:
-        - 10-Nov-2004   David Reyes   created
+        - 10-Nov-2004   Zombie        created
 */
 void nPhysicsWorld::Remove( nPhysicsJoint* breakablejoint )
 {
@@ -838,7 +838,7 @@ void nPhysicsWorld::Remove( nPhysicsJoint* breakablejoint )
     Runs the breakable joints.
 
     history:
-        - 10-Nov-2004   David Reyes   created
+        - 10-Nov-2004   Zombie        created
 */
 void nPhysicsWorld::RunBreakableJoints()
 {
@@ -855,7 +855,7 @@ void nPhysicsWorld::RunBreakableJoints()
     Checks of the world simulation.
 
     history:
-        - 25-Nov-2004   David Reyes   created
+        - 25-Nov-2004   Zombie        created
 */
 void nPhysicsWorld::Check()
 {
@@ -901,7 +901,7 @@ void nPhysicsWorld::Check()
     Processes the explosions.
 
     history:
-        - 25-Nov-2004   David Reyes   created
+        - 25-Nov-2004   Zombie        created
 */
 void nPhysicsWorld::ProcessBooms()
 {
@@ -971,7 +971,7 @@ void nPhysicsWorld::ProcessBooms()
     Inits the explosions resources.
 
     history:
-        - 25-Nov-2004   David Reyes   created
+        - 25-Nov-2004   Zombie        created
 */
 void nPhysicsWorld::InitExplosions()
 {
@@ -987,7 +987,7 @@ void nPhysicsWorld::InitExplosions()
     Frees the explosions resources.
 
     history:
-        - 25-Nov-2004   David Reyes   created
+        - 25-Nov-2004   Zombie        created
 */
 void nPhysicsWorld::FreeExplosions()
 {
@@ -1006,7 +1006,7 @@ void nPhysicsWorld::FreeExplosions()
     @return a space
 
     history:
-        - 15-Dec-2004   David Reyes   created
+        - 15-Dec-2004   Zombie        created
 */
 nPhySpace* nPhysicsWorld::GetSpace() const
 {
@@ -1018,7 +1018,7 @@ nPhySpace* nPhysicsWorld::GetSpace() const
     Processes the objects b4 run the world.
 
     history:
-        - 16-Dec-2004   David Reyes   created
+        - 16-Dec-2004   Zombie        created
 */
 void nPhysicsWorld::PreProcessObjects()
 {
@@ -1040,7 +1040,7 @@ void nPhysicsWorld::PreProcessObjects()
     Processes the objects after run the world.
 
     history:
-        - 21-Apr-2005   David Reyes   created
+        - 21-Apr-2005   Zombie        created
 */
 void nPhysicsWorld::PostProcessObjects()
 {
@@ -1063,7 +1063,7 @@ void nPhysicsWorld::PostProcessObjects()
     Resets objects for each step.
 
     history:
-        - 17-Mar-2005   David Reyes   created
+        - 17-Mar-2005   Zombie        created
 */
 void nPhysicsWorld::ResetObjects()
 {
@@ -1088,7 +1088,7 @@ void nPhysicsWorld::ResetObjects()
     @return true/false
 
     history:
-        - 17-Mar-2005   David Reyes   created
+        - 17-Mar-2005   Zombie        created
 */
 bool nPhysicsWorld::IsBeenDestroyed() const
 {
@@ -1102,7 +1102,7 @@ bool nPhysicsWorld::IsBeenDestroyed() const
     @param is true/false
 
     history:
-        - 17-Mar-2005   David Reyes   created
+        - 17-Mar-2005   Zombie        created
 */
 void nPhysicsWorld::SetBeenDestroyed( const bool is )
 {
@@ -1117,7 +1117,7 @@ void nPhysicsWorld::SetBeenDestroyed( const bool is )
     @return true/false
 
     history:
-        - 06-Apr-2005   David Reyes   created
+        - 06-Apr-2005   Zombie        created
 */
 bool nPhysicsWorld::HasBodies() const
 {
@@ -1131,7 +1131,7 @@ bool nPhysicsWorld::HasBodies() const
     @param is true/false
 
     history:
-        - 06-Apr-2005   David Reyes   created
+        - 06-Apr-2005   Zombie        created
 */
 void nPhysicsWorld::SetHasBodies( bool has )
 {
@@ -1143,7 +1143,7 @@ void nPhysicsWorld::SetHasBodies( bool has )
     Updates the transform.
 
     history:
-        - 06-Apr-2005   David Reyes   created
+        - 06-Apr-2005   Zombie        created
 */
 void nPhysicsWorld::UpdateTransform()
 {
@@ -1177,7 +1177,7 @@ void nPhysicsWorld::UpdateTransform()
     Creates the storage for the contacts joints of the simulation.
 
     history:
-        - 09-Apr-2005   David Reyes   created
+        - 09-Apr-2005   Zombie        created
 */
 void nPhysicsWorld::InitStorageContactJoints()
 {
@@ -1194,7 +1194,7 @@ void nPhysicsWorld::InitStorageContactJoints()
     Releases the joint contacts after the simulation.
 
     history:
-        - 09-Apr-2005   David Reyes   created
+        - 09-Apr-2005   Zombie        created
 */
 void nPhysicsWorld::ReleaseJointContacts()
 {
@@ -1210,7 +1210,7 @@ void nPhysicsWorld::ReleaseJointContacts()
     Destroys the storage for the contacts joints of the simulation.
 
     history:
-        - 09-Apr-2005   David Reyes   created
+        - 09-Apr-2005   Zombie        created
 */
 void nPhysicsWorld::DestroyStorageContactJoints()
 {
@@ -1228,7 +1228,7 @@ void nPhysicsWorld::DestroyStorageContactJoints()
     @param obj a physic's object
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 void nPhysicsWorld::AddMobil( ncPhysicsObj* obj )
 {
@@ -1246,7 +1246,7 @@ void nPhysicsWorld::AddMobil( ncPhysicsObj* obj )
     @param obj a physic's object
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 void nPhysicsWorld::RemoveMobil( ncPhysicsObj* obj )
 {
@@ -1262,7 +1262,7 @@ void nPhysicsWorld::RemoveMobil( ncPhysicsObj* obj )
     Processes mobil objects.
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 void nPhysicsWorld::ProcessMobilObjects()
 {

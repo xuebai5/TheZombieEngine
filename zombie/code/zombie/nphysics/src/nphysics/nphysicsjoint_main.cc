@@ -15,7 +15,7 @@ nNebulaScriptClass(nPhysicsJoint, "nobject");
     Constructor
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 nPhysicsJoint::nPhysicsJoint() :
     type(Invalid),
@@ -34,7 +34,7 @@ nPhysicsJoint::nPhysicsJoint() :
     Destructor
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 nPhysicsJoint::~nPhysicsJoint()
 {
@@ -54,7 +54,7 @@ nPhysicsJoint::~nPhysicsJoint()
     @return returns the joins type
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 nPhysicsJoint::JointTypes nPhysicsJoint::Type() const
 {
@@ -69,7 +69,7 @@ nPhysicsJoint::JointTypes nPhysicsJoint::Type() const
     @param  bodyB   a body to be attached
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 void nPhysicsJoint::Attach( nPhyRigidBody* bodyA, nPhyRigidBody* bodyB )
 {
@@ -102,7 +102,7 @@ void nPhysicsJoint::Attach( nPhyRigidBody* bodyA, nPhyRigidBody* bodyB )
     @param  bodyB   a body to be attached
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 void nPhysicsJoint::Attach( bodyid bodyA, bodyid bodyB )
 {
@@ -119,7 +119,7 @@ void nPhysicsJoint::Attach( bodyid bodyA, bodyid bodyB )
     @return a bool value setting if it's a breakable join
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 bool nPhysicsJoint::IsBreakable() const
 {
@@ -133,8 +133,8 @@ bool nPhysicsJoint::IsBreakable() const
     @param is   sets if the join it's breakable
 
     history:
-        - 25-Sep-2004   David Reyes    created
-        - 10-Nov-2004   David Reyes    added functionality for breakability
+        - 25-Sep-2004   Zombie         created
+        - 10-Nov-2004   Zombie         added functionality for breakability
 */
 void nPhysicsJoint::SetBreakable( bool is )
 {
@@ -175,7 +175,7 @@ void nPhysicsJoint::SetBreakable( bool is )
     @param group joints group
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 void nPhysicsJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 {
@@ -200,7 +200,7 @@ void nPhysicsJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
     @return body id
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 nPhyRigidBody* nPhysicsJoint::GetBodyA() const
 {
@@ -216,7 +216,7 @@ nPhyRigidBody* nPhysicsJoint::GetBodyA() const
     @return body id
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 nPhyRigidBody* nPhysicsJoint::GetBodyB() const
 {
@@ -232,7 +232,7 @@ nPhyRigidBody* nPhysicsJoint::GetBodyB() const
     @param  max force
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::SetMaxForceBodyA( const phyreal force )
 {
@@ -250,7 +250,7 @@ void nPhysicsJoint::SetMaxForceBodyA( const phyreal force )
     @param  max force
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::SetMaxForceBodyB( const phyreal force )
 {
@@ -268,7 +268,7 @@ void nPhysicsJoint::SetMaxForceBodyB( const phyreal force )
     @param  max torque
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::SetMaxTorqueBodyA( const phyreal torque )
 {
@@ -286,7 +286,7 @@ void nPhysicsJoint::SetMaxTorqueBodyA( const phyreal torque )
     @param  max torque
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::SetMaxTorqueBodyB( const phyreal torque )
 {
@@ -304,7 +304,7 @@ void nPhysicsJoint::SetMaxTorqueBodyB( const phyreal torque )
     @return a world
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 nPhysicsWorld* nPhysicsJoint::GetWorld() const
 {
@@ -317,7 +317,7 @@ nPhysicsWorld* nPhysicsJoint::GetWorld() const
     Breaks the joint inconditionally.
 
     history:
-        - 28-Feb-2005   David Reyes    created
+        - 28-Feb-2005   Zombie         created
 */
 void nPhysicsJoint::ForceBreak()
 {
@@ -331,7 +331,7 @@ void nPhysicsJoint::ForceBreak()
     @return if a has been a break
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 bool nPhysicsJoint::Break()
 {
@@ -357,7 +357,7 @@ bool nPhysicsJoint::Break()
     Sets a parameters of the joints
 
     history:
-        - 12-Nov-2004   David Reyes    created
+        - 12-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::SetParam( const phy::jointparameter, const phy::jointaxis, const phyreal )
 {
@@ -369,7 +369,7 @@ void nPhysicsJoint::SetParam( const phy::jointparameter, const phy::jointaxis, c
     Adds torque to the motor joint
 
     history:
-        - 12-Nov-2004   David Reyes    created
+        - 12-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::AddTorque( const phyreal torque, const phy::jointaxis axis )
 {
@@ -389,7 +389,7 @@ void nPhysicsJoint::AddTorque( const phyreal torque, const phy::jointaxis axis )
     Adds force to the motor joint
 
     history:
-        - 12-Nov-2004   David Reyes    created
+        - 12-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::AddForce( const phyreal force, const phy::jointaxis axis )
 {
@@ -408,7 +408,7 @@ void nPhysicsJoint::AddForce( const phyreal force, const phy::jointaxis axis )
     Gets the axis direction
 
     history:
-        - 12-Nov-2004   David Reyes    created
+        - 12-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::GetAxisDirection( vector3&, const phy::jointaxis )
 {
@@ -419,7 +419,7 @@ void nPhysicsJoint::GetAxisDirection( vector3&, const phy::jointaxis )
     Attaches two physics objs
 
     history:
-        - 21-Dec-2004   David Reyes    created
+        - 21-Dec-2004   Zombie         created
 */
 void nPhysicsJoint::Attach( ncPhysicsObj* objectA, ncPhysicsObj* objectB )
 {
@@ -450,7 +450,7 @@ void nPhysicsJoint::Attach( ncPhysicsObj* objectA, ncPhysicsObj* objectB )
     @return breakability info if any
 
     history:
-        - 30-Nov-2004   David Reyes    created
+        - 30-Nov-2004   Zombie         created
 */
 nPhysicsJoint::Breakability* nPhysicsJoint::GetBreakabilityInfo() const
 {
@@ -462,7 +462,7 @@ nPhysicsJoint::Breakability* nPhysicsJoint::GetBreakabilityInfo() const
 	Scales the object.
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhysicsJoint::Scale( const phyreal /*factor*/ )
 {
@@ -475,7 +475,7 @@ void nPhysicsJoint::Scale( const phyreal /*factor*/ )
 	Draws the joint.
     
     history:
-     - 18-Aug-2005   David Reyes    created
+     - 18-Aug-2005   Zombie         created
 */
 void nPhysicsJoint::Draw( nGfxServer2* /*server*/ )
 {
@@ -490,7 +490,7 @@ void nPhysicsJoint::Draw( nGfxServer2* /*server*/ )
     Constructor
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 nPhysicsJoint::Breakability::Breakability( const jointid id  ) :
     jointData(0),
@@ -514,7 +514,7 @@ nPhysicsJoint::Breakability::Breakability( const jointid id  ) :
     Destructor
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 nPhysicsJoint::Breakability::~Breakability()
 {
@@ -536,7 +536,7 @@ nPhysicsJoint::Breakability::~Breakability()
     @return true if it's breakable
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 bool nPhysicsJoint::Breakability::IsBreakable() const
 {
@@ -562,7 +562,7 @@ bool nPhysicsJoint::Breakability::IsBreakable() const
     @param max force
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::Breakability::SetMaxForceBodyA( const phyreal force )
 {
@@ -576,7 +576,7 @@ void nPhysicsJoint::Breakability::SetMaxForceBodyA( const phyreal force )
     @param max force
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::Breakability::SetMaxForceBodyB( const phyreal force )
 {
@@ -590,7 +590,7 @@ void nPhysicsJoint::Breakability::SetMaxForceBodyB( const phyreal force )
     @param max torque
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::Breakability::SetMaxTorqueBodyA( const phyreal torque )
 {
@@ -604,7 +604,7 @@ void nPhysicsJoint::Breakability::SetMaxTorqueBodyA( const phyreal torque )
     @param max torque
 
     history:
-        - 10-Nov-2004   David Reyes    created
+        - 10-Nov-2004   Zombie         created
 */
 void nPhysicsJoint::Breakability::SetMaxTorqueBodyB( const phyreal torque )
 {
@@ -619,7 +619,7 @@ void nPhysicsJoint::Breakability::SetMaxTorqueBodyB( const phyreal torque )
     @param axis which axis
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 const phyreal nPhysicsJoint::GetParam( const phy::jointparameter /*parameter*/, const phy::jointaxis /*axis*/ ) const
 {
@@ -631,7 +631,7 @@ const phyreal nPhysicsJoint::GetParam( const phy::jointparameter /*parameter*/, 
     Resets the joint.
 
     history:
-        - 30-Jan-2006   David Reyes    created
+        - 30-Jan-2006   Zombie         created
 */
 void nPhysicsJoint::Reset()
 {

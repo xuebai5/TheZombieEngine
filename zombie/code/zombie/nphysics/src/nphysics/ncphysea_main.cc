@@ -20,7 +20,7 @@ const phyreal ncPhySea::DefaultResistance(phyreal(.01));
     Constructor
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 ncPhySea::ncPhySea() :
     sealevel( DefaultSeaLevel )
@@ -33,7 +33,7 @@ ncPhySea::ncPhySea() :
     Destructor
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 ncPhySea::~ncPhySea()
 {
@@ -47,7 +47,7 @@ ncPhySea::~ncPhySea()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 void ncPhySea::Create( nPhysicsWorld* world )
 {
@@ -81,7 +81,7 @@ void ncPhySea::Create( nPhysicsWorld* world )
     @return true/false
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 bool ncPhySea::IsUnderFluid( const nPhysicsAABB& box ) const
 {
@@ -102,7 +102,7 @@ bool ncPhySea::IsUnderFluid( const nPhysicsAABB& box ) const
     @param level sea's height
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 void ncPhySea::SetSeaLeavel( phyreal level )
 {
@@ -126,7 +126,7 @@ void ncPhySea::SetSeaLeavel( phyreal level )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 17-May-2005   David Reyes    created
+        - 17-May-2005   Zombie         created
 */
 void ncPhySea::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -143,7 +143,7 @@ void ncPhySea::InitInstance(nObject::InitInstanceMsg initType)
     @return if any collision was processed
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 bool ncPhySea::CollisionProcess( int numContacts, nPhyCollide::nContact* contacts )
 {

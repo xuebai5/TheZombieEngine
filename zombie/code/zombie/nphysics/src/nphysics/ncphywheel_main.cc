@@ -25,7 +25,7 @@ nNebulaComponentObject(ncPhyWheel,ncPhyCompositeObj);
     Constructor
 
     history:
-        - 18-Apr-2005   David Reyes    created
+        - 18-Apr-2005   Zombie         created
 */
 ncPhyWheel::ncPhyWheel() : 
     wheelOwner(0),
@@ -40,7 +40,7 @@ ncPhyWheel::ncPhyWheel() :
     Destructor
 
     history:
-        - 18-Apr-2005   David Reyes    created
+        - 18-Apr-2005   Zombie         created
 */
 ncPhyWheel::~ncPhyWheel() 
 {
@@ -54,7 +54,7 @@ ncPhyWheel::~ncPhyWheel()
     @param vehicle a vehicle
 
     history:
-        - 18-Apr-2005   David Reyes    created
+        - 18-Apr-2005   Zombie         created
 */
 void ncPhyWheel::SetVehicle( ncPhyVehicle* vehicle )
 {
@@ -68,7 +68,7 @@ void ncPhyWheel::SetVehicle( ncPhyVehicle* vehicle )
     @return a vehicle
 
     history:
-        - 18-Apr-2005   David Reyes    created
+        - 18-Apr-2005   Zombie         created
 */
 ncPhyVehicle* ncPhyWheel::GetVehicle() const
 {
@@ -83,7 +83,7 @@ ncPhyVehicle* ncPhyWheel::GetVehicle() const
     @param cjoint a contact joint
 
     history:
-        - 22-Apr-2005   David Reyes    created
+        - 22-Apr-2005   Zombie         created
 */
 void ncPhyWheel::ProcessDynamicMaterial( nPhyContactJoint* cjoint )
 {
@@ -120,7 +120,7 @@ void ncPhyWheel::ProcessDynamicMaterial( nPhyContactJoint* cjoint )
     Resets the wheel state.
 
     history:
-        - 22-Apr-2005   David Reyes    created
+        - 22-Apr-2005   Zombie         created
 */
 void ncPhyWheel::Resets()
 {
@@ -134,7 +134,7 @@ void ncPhyWheel::Resets()
     Precomputes the values that will be repeated during a single step.
 
     history:
-        - 26-Apr-2005   David Reyes    created
+        - 26-Apr-2005   Zombie         created
 */
 void ncPhyWheel::PreCompute()
 {
@@ -162,7 +162,7 @@ void ncPhyWheel::PreCompute()
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 26-Apr-2005   David Reyes    created
+        - 26-Apr-2005   Zombie         created
 */
 void ncPhyWheel::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -191,7 +191,7 @@ void ncPhyWheel::InitInstance(nObject::InitInstanceMsg initType)
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 void ncPhyWheel::PreProcess()
 {
@@ -215,7 +215,7 @@ void ncPhyWheel::PreProcess()
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 03-Mar-2006   David Reyes    created
+        - 03-Mar-2006   Zombie         created
 */
 void ncPhyWheel::PostProcess()
 {

@@ -628,7 +628,7 @@ ncFourLeggedRagdoll::GetPhysicsBBox(bbox3& bbox)
     Switchs off the ragdoll.
 
     history:
-        - 07-Nov-2005   David Reyes    created
+        - 07-Nov-2005   Zombie         created
 
 */
 void ncFourLeggedRagdoll::SwitchOff()

@@ -82,7 +82,7 @@ ncGameplayVehicle::~ncGameplayVehicle()
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 void ncGameplayVehicle::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -103,7 +103,7 @@ void ncGameplayVehicle::InitInstance(nObject::InitInstanceMsg initType)
     @param entityname entityobject to use
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 void ncGameplayVehicle::SetSeat( const unsigned int index, const nString& entityname )
 {
@@ -131,7 +131,7 @@ void ncGameplayVehicle::SetSeat( const unsigned int index, const nString& entity
     @return seat entity
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 nEntityObject* ncGameplayVehicle::GetSeat( const unsigned int index ) const
 {
@@ -145,7 +145,7 @@ nEntityObject* ncGameplayVehicle::GetSeat( const unsigned int index ) const
     Creates the car sets.
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 void ncGameplayVehicle::CreateSeats()
 {
@@ -184,7 +184,7 @@ void ncGameplayVehicle::CreateSeats()
     Destroys object information.
 
     history:
-        - 18-Jan-2006   David Reyes    created
+        - 18-Jan-2006   Zombie         created
 */
 void ncGameplayVehicle::Destroy()
 {
@@ -207,7 +207,7 @@ void ncGameplayVehicle::Destroy()
     @return number of vehicles
 
     history:
-        - 19-Jan-2006   David Reyes    created
+        - 19-Jan-2006   Zombie         created
 */
 unsigned int ncGameplayVehicle::GetNumVehiclesAvailable()
 {
@@ -224,7 +224,7 @@ unsigned int ncGameplayVehicle::GetNumVehiclesAvailable()
     @return vehicle
 
     history:
-        - 19-Jan-2006   David Reyes    created
+        - 19-Jan-2006   Zombie         created
 */
 nEntityObject* ncGameplayVehicle::GetClossestVehicle( const vector3& position )
 {
@@ -264,7 +264,7 @@ nEntityObject* ncGameplayVehicle::GetClossestVehicle( const vector3& position )
     @return vehicle entity
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 nEntityObject* ncGameplayVehicle::GetVehicle( const unsigned int index )
@@ -279,7 +279,7 @@ nEntityObject* ncGameplayVehicle::GetVehicle( const unsigned int index )
     @return true/false
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 const bool ncGameplayVehicle::IsASeatAvailable() const
@@ -302,7 +302,7 @@ const bool ncGameplayVehicle::IsASeatAvailable() const
     @return if succesful
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 const bool ncGameplayVehicle::ReserveSeat( nEntityObject* driver )
@@ -339,7 +339,7 @@ const bool ncGameplayVehicle::ReserveSeat( nEntityObject* driver )
     @param deltaTime time transcurred since last call in seconds
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 void ncGameplayVehicle::Run( const float /*deltaTime*/ )
@@ -431,7 +431,7 @@ void ncGameplayVehicle::Run( const float /*deltaTime*/ )
 	Vehicle sound.
 
     history:
-     - 08-Feb-2006   David Reyes    created
+     - 08-Feb-2006   Zombie         created
    
 */
 void ncGameplayVehicle::UpdateSound()
@@ -490,7 +490,7 @@ void ncGameplayVehicle::UpdateSound()
 	Kicks in vehicle.
 
     history:
-     - 08-Feb-2006   David Reyes    created
+     - 08-Feb-2006   Zombie         created
    
 */
 // workaround to compiler error, see MS Knowledge Base 320004
@@ -525,7 +525,7 @@ void ncGameplayVehicle::SwitchOnVehicle()
 	Switches off the vehicle.
 
     history:
-     - 08-Feb-2006   David Reyes    created
+     - 08-Feb-2006   Zombie         created
    
 */
 void ncGameplayVehicle::SwitchOffVehicle()
@@ -551,7 +551,7 @@ void ncGameplayVehicle::SwitchOffVehicle()
     @param has true/false
 
     history:
-     - 17-Feb-2006   David Reyes    created
+     - 17-Feb-2006   Zombie         created
    
 */
 void ncGameplayVehicle::SetBattery( const bool has )
@@ -566,7 +566,7 @@ void ncGameplayVehicle::SetBattery( const bool has )
     @return true/false
 
     history:
-     - 17-Feb-2006   David Reyes    created
+     - 17-Feb-2006   Zombie         created
    
 */
 const bool ncGameplayVehicle::GetBattery() const

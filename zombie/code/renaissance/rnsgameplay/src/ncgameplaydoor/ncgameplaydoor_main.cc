@@ -43,7 +43,7 @@ nNebulaComponentObject(ncGamePlayDoor,ncGameplay);
     Constructor
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 ncGamePlayDoor::ncGamePlayDoor() :
     doorType( ncGamePlayDoorClass::hinge ),
@@ -73,7 +73,7 @@ ncGamePlayDoor::ncGamePlayDoor() :
     Destructor
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 ncGamePlayDoor::~ncGamePlayDoor()
 {
@@ -99,7 +99,7 @@ ncGamePlayDoor::~ncGamePlayDoor()
     @return door type
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const ncGamePlayDoorClass::type ncGamePlayDoor::GetType() const
 {
@@ -113,7 +113,7 @@ const ncGamePlayDoorClass::type ncGamePlayDoor::GetType() const
     @param newtype new door's type
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::SetType( const ncGamePlayDoorClass::type newtype )
 {
@@ -127,7 +127,7 @@ void ncGamePlayDoor::SetType( const ncGamePlayDoorClass::type newtype )
     @return door's attributes
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const int ncGamePlayDoor::GetAttributes() const
 {
@@ -141,7 +141,7 @@ const int ncGamePlayDoor::GetAttributes() const
     @param newattributes new door's attributes set
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::SetAttributes( const int newattributes )
 {
@@ -155,7 +155,7 @@ void ncGamePlayDoor::SetAttributes( const int newattributes )
     @return true/false
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const bool ncGamePlayDoor::IsLocked() const
 {
@@ -167,7 +167,7 @@ const bool ncGamePlayDoor::IsLocked() const
     Locks the door
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const bool ncGamePlayDoor::Lock()
 {
@@ -186,7 +186,7 @@ const bool ncGamePlayDoor::Lock()
     Unlocks the door
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const bool ncGamePlayDoor::Unlock()
 {
@@ -205,7 +205,7 @@ const bool ncGamePlayDoor::Unlock()
     Opens the door
 
     history:
-        - 29-Nov-2005   David Reyes    created  
+        - 29-Nov-2005   Zombie         created  
 */
 bool ncGamePlayDoor::Open() 
 {
@@ -234,7 +234,7 @@ bool ncGamePlayDoor::Open()
     Close door
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 bool ncGamePlayDoor::Close()
 {
@@ -265,7 +265,7 @@ bool ncGamePlayDoor::Close()
     @param true/false
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const bool ncGamePlayDoor::IsBroken() const
 {
@@ -279,7 +279,7 @@ const bool ncGamePlayDoor::IsBroken() const
     @param object door object representing
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::SetDoorEntityA( nEntityObject* object )
 {
@@ -293,7 +293,7 @@ void ncGamePlayDoor::SetDoorEntityA( nEntityObject* object )
     @return door object representing
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 nEntityObject* ncGamePlayDoor::GetDoorEntityA() const
 {
@@ -307,7 +307,7 @@ nEntityObject* ncGamePlayDoor::GetDoorEntityA() const
     @param object door object representing
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::SetDoorEntityB( nEntityObject* object )
 {
@@ -321,7 +321,7 @@ void ncGamePlayDoor::SetDoorEntityB( nEntityObject* object )
     @return door object representing
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 nEntityObject* ncGamePlayDoor::GetDoorEntityB() const
 {
@@ -333,7 +333,7 @@ nEntityObject* ncGamePlayDoor::GetDoorEntityB() const
     Mounts the door
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::Mount()
 {
@@ -374,7 +374,7 @@ void ncGamePlayDoor::Mount()
     Mounts slidding doors
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::MountSlidding()
 {
@@ -386,7 +386,7 @@ void ncGamePlayDoor::MountSlidding()
     Mounts hinge doors
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::MountHinge()
 {
@@ -406,7 +406,7 @@ void ncGamePlayDoor::MountHinge()
     User init instance code
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -434,7 +434,7 @@ void ncGamePlayDoor::InitInstance(nObject::InitInstanceMsg initType)
     @return if the action has finished
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoAction( const float deltaTime )
 {
@@ -467,7 +467,7 @@ const bool ncGamePlayDoor::DoAction( const float deltaTime )
     @return if the action has finished
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoSliddingAction( const nTime& time )
 {
@@ -499,7 +499,7 @@ const bool ncGamePlayDoor::DoSliddingAction( const nTime& time )
     @return if the action has finished
 
     history:
-        - 29-Nov-2005   David Reyes    created
+        - 29-Nov-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoHingeAction( const nTime& time )
 {
@@ -535,7 +535,7 @@ const bool ncGamePlayDoor::DoHingeAction( const nTime& time )
     Restores the door stat after loading
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::Restore()
 {
@@ -547,7 +547,7 @@ void ncGamePlayDoor::Restore()
     Plugs the fakes
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::PlugFakes()
 {
@@ -574,7 +574,7 @@ void ncGamePlayDoor::PlugFakes()
     @param to where to plug
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::PlugFake( nEntityObject*& fake, nEntityObject* to )
 {
@@ -600,7 +600,7 @@ void ncGamePlayDoor::PlugFake( nEntityObject*& fake, nEntityObject* to )
     Destroys dynamic data
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::Destroy()
 {
@@ -641,7 +641,7 @@ void ncGamePlayDoor::Destroy()
     @param value angle
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::SetMaxAngle( const float value )
 {
@@ -667,7 +667,7 @@ void ncGamePlayDoor::SetMaxAngle( const float value )
     @param value angle
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 void ncGamePlayDoor::SetMinAngle( const float value )
 {
@@ -693,7 +693,7 @@ void ncGamePlayDoor::SetMinAngle( const float value )
     @return angle
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 const float ncGamePlayDoor::GetMaxAngle() const
 {
@@ -707,7 +707,7 @@ const float ncGamePlayDoor::GetMaxAngle() const
     @return angle
 
     history:
-        - 30-Nov-2005   David Reyes    created
+        - 30-Nov-2005   Zombie         created
 */
 const float ncGamePlayDoor::GetMinAngle() const
 {
@@ -721,7 +721,7 @@ const float ncGamePlayDoor::GetMinAngle() const
     @return angle
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 const bool ncGamePlayDoor::IsClosed() const
 {
@@ -744,7 +744,7 @@ const bool ncGamePlayDoor::IsOpened() const
     Stores the original state
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::OriginalState()
 {
@@ -793,7 +793,7 @@ void ncGamePlayDoor::OriginalState()
     Does some precomputation
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::PreCompute()
 {
@@ -885,7 +885,7 @@ bool ncGamePlayDoor::ConnectToPortal()
     @param newstate new state
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::SetNewState( const int newstate )
 {
@@ -925,7 +925,7 @@ void ncGamePlayDoor::UpdatePortal()
     Hinge openning action
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoHingeOpenningAction()
 {
@@ -1006,7 +1006,7 @@ const bool ncGamePlayDoor::DoHingeOpenningAction()
     Waits for a time
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoWaiting()
 {
@@ -1026,7 +1026,7 @@ const bool ncGamePlayDoor::DoWaiting()
     Hinge openning action
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoHingeClosenningAction()
 {
@@ -1109,7 +1109,7 @@ const bool ncGamePlayDoor::DoHingeClosenningAction()
     Mounts a free door
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::MountFreeDoor()
 {
@@ -1179,7 +1179,7 @@ void ncGamePlayDoor::MountFreeDoor()
     Slidding openning action
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoSliddingOpenningAction()
 {
@@ -1232,7 +1232,7 @@ const bool ncGamePlayDoor::DoSliddingOpenningAction()
     Slidding closenning action
 
     history:
-        - 01-Dec-2005   David Reyes    created
+        - 01-Dec-2005   Zombie         created
 */
 const bool ncGamePlayDoor::DoSliddingClosenningAction()
 {
@@ -1277,7 +1277,7 @@ const bool ncGamePlayDoor::DoSliddingClosenningAction()
     Slides an object with collision
 
     history:
-        - 02-Dec-2005   David Reyes    created
+        - 02-Dec-2005   Zombie         created
 */
 const bool ncGamePlayDoor::Slide( nEntityObject* object, const vector3& axis, const vector3& from )
 {
@@ -1322,7 +1322,7 @@ const bool ncGamePlayDoor::Slide( nEntityObject* object, const vector3& axis, co
     @param time elapsed
 
     history:
-        - 02-Dec-2005   David Reyes    created
+        - 02-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::Run (const float deltaTime)
 {
@@ -1338,7 +1338,7 @@ void ncGamePlayDoor::Run (const float deltaTime)
     Unmonts the door
 
     history:
-        - 02-Dec-2005   David Reyes    created
+        - 02-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::UnMount()
 {
@@ -1376,7 +1376,7 @@ void ncGamePlayDoor::UnMount()
     Mounts a hinge door.
 
     history:
-        - 05-Dec-2005   David Reyes    created
+        - 05-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::MountHingeDoor()
 {
@@ -1390,7 +1390,7 @@ void ncGamePlayDoor::MountHingeDoor()
     @return speed in space game units per second
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoor::GetSliddingSpeed() const
 {
@@ -1404,7 +1404,7 @@ const float ncGamePlayDoor::GetSliddingSpeed() const
     @param speed speed in space game units per second
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::SetSliddingSpeed( const float speed )
 {
@@ -1420,7 +1420,7 @@ void ncGamePlayDoor::SetSliddingSpeed( const float speed )
     @return lenght in game units
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoor::GetSliddingLenght() const
 {
@@ -1434,7 +1434,7 @@ const float ncGamePlayDoor::GetSliddingLenght() const
     @param lenght lenght in game units
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::SetSliddingLenght( const float length )
 {
@@ -1446,7 +1446,7 @@ void ncGamePlayDoor::SetSliddingLenght( const float length )
     Retrieves the doors from the superentity component
 
     history:
-        - 06-Dec-2005   David Reyes    created
+        - 06-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::RetrieveDoors()
 {
@@ -1485,7 +1485,7 @@ void ncGamePlayDoor::RetrieveDoors()
     @return angle speed, degrees per second
 
     history:
-        - 12-Dec-2005   David Reyes    created
+        - 12-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoor::GetAngleSpeed() const
 {
@@ -1499,7 +1499,7 @@ const float ncGamePlayDoor::GetAngleSpeed() const
     @param speed angle speed, degrees per second
 
     history:
-        - 12-Dec-2005   David Reyes    created
+        - 12-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::SetAngleSpeed( const float speed )
 {
@@ -1515,7 +1515,7 @@ void ncGamePlayDoor::SetAngleSpeed( const float speed )
     @return angle in degrees
 
     history:
-        - 12-Dec-2005   David Reyes    created
+        - 12-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoor::GetOpeningAngle() const
 {
@@ -1532,7 +1532,7 @@ const float ncGamePlayDoor::GetOpeningAngle() const
     @param angle angle in degrees
 
     history:
-        - 12-Dec-2005   David Reyes    created
+        - 12-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::SetOpeningAngle( const float angle )
 {
@@ -1559,7 +1559,7 @@ void ncGamePlayDoor::SetOpeningAngle( const float angle )
     @return time in seconds
 
     history:
-        - 12-Dec-2005   David Reyes    created
+        - 12-Dec-2005   Zombie         created
 */
 const float ncGamePlayDoor::GetWaitingTime() const
 {
@@ -1573,7 +1573,7 @@ const float ncGamePlayDoor::GetWaitingTime() const
     @param time time in seconds
 
     history:
-        - 12-Dec-2005   David Reyes    created
+        - 12-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::SetWaitingTime( const float time )
 {
@@ -1587,7 +1587,7 @@ void ncGamePlayDoor::SetWaitingTime( const float time )
     @param time time in seconds
 
     history:
-        - 12-Dec-2005   David Reyes    created
+        - 12-Dec-2005   Zombie         created
 */
 void ncGamePlayDoor::ProcessDoor()
 {

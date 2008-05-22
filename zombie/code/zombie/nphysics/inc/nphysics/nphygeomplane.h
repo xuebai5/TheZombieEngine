@@ -72,8 +72,8 @@ private:
     @return plane equation coeficients
 
     history:
-        - 12-Jan-2005   David Reyes    created
-        - 27-Jan-2005   David Reyes    inlined
+        - 12-Jan-2005   Zombie         created
+        - 27-Jan-2005   Zombie         inlined
 */
 inline
 const vector4& nPhyGeomPlane::GetEquation() const

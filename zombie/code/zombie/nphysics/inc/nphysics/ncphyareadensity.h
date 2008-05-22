@@ -81,7 +81,7 @@ private:
     @param value resistance coeficient ranges from 0 to 1.
 
     history:
-        - 17-Mar-2005   David Reyes    created
+        - 17-Mar-2005   Zombie         created
 */
 inline
 void ncPhyAreaDensity::SetResistance( const phyreal value )
@@ -99,7 +99,7 @@ void ncPhyAreaDensity::SetResistance( const phyreal value )
     @return resistance coeficient ranges from 0 to 1.
 
     history:
-        - 17-Mar-2005   David Reyes    created
+        - 17-Mar-2005   Zombie         created
 */
 inline
 phyreal ncPhyAreaDensity::GetResistance() const

@@ -17,7 +17,7 @@ nNebulaScriptClass(nPhyContactJoint, "nphysicsjoint");
     Constructor.
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 nPhyContactJoint::nPhyContactJoint()
 {   
@@ -29,7 +29,7 @@ nPhyContactJoint::nPhyContactJoint()
     Destructor.
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 nPhyContactJoint::~nPhyContactJoint()
 {
@@ -44,7 +44,7 @@ nPhyContactJoint::~nPhyContactJoint()
     @param group joints group
 
     history:
-        - 25-Oct-2004   David Reyes    created
+        - 25-Oct-2004   Zombie         created
 */
 void nPhyContactJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 {
@@ -71,7 +71,7 @@ void nPhyContactJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
     @param value new parameter's value   
 
     history:
-        - 12-Nov-2004   David Reyes    created
+        - 12-Nov-2004   Zombie         created
 */
 void nPhyContactJoint::SetParam( const phy::jointparameter, const phy::jointaxis, const phyreal )
 {

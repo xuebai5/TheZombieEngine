@@ -63,8 +63,8 @@ private:
     @param min      smallest cell size
 
     history:
-        - 08-Oct-2004   David Reyes    created
-        - 12-May-2006   David Reyes    inlined
+        - 08-Oct-2004   Zombie         created
+        - 12-May-2006   Zombie         inlined
 */
 inline
 void nPhyGeomHashSpace::SetLevels( int max, int min )
@@ -82,8 +82,8 @@ void nPhyGeomHashSpace::SetLevels( int max, int min )
     @param min      smallest cell size
 
     history:
-        - 28-Jan-2005   David Reyes    created
-        - 12-May-2006   David Reyes    inlined
+        - 28-Jan-2005   Zombie         created
+        - 12-May-2006   Zombie         inlined
 */ 
 inline
 void nPhyGeomHashSpace::GetLevels( int& max, int& min )

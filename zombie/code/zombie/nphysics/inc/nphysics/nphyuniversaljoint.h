@@ -87,8 +87,8 @@ public:
     @param anchor   anchor point
 
     history:
-        - 03-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 03-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyUniversalJoint::SetAnchor( const vector3& anchor )
@@ -105,8 +105,8 @@ void nPhyUniversalJoint::SetAnchor( const vector3& anchor )
     @param axis   first direction axis
 
     history:
-        - 03-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 03-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyUniversalJoint::SetFirstAxis( const vector3& axis )
@@ -123,8 +123,8 @@ void nPhyUniversalJoint::SetFirstAxis( const vector3& axis )
     @param axis   second direction axis
 
     history:
-        - 03-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 03-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyUniversalJoint::SetSecondAxis( const vector3& axis )
@@ -141,8 +141,8 @@ void nPhyUniversalJoint::SetSecondAxis( const vector3& axis )
     @param anchor   hoint anchor
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyUniversalJoint::GetAnchor( vector3& anchor ) const
@@ -159,8 +159,8 @@ void nPhyUniversalJoint::GetAnchor( vector3& anchor ) const
     @param axis   hoint axis
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyUniversalJoint::GetFirstAxis( vector3& axis ) const
@@ -177,8 +177,8 @@ void nPhyUniversalJoint::GetFirstAxis( vector3& axis ) const
     @param axis   hoint axis
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyUniversalJoint::GetSecondAxis( vector3& axis ) const
@@ -197,8 +197,8 @@ void nPhyUniversalJoint::GetSecondAxis( vector3& axis ) const
     @param value new parameter's value
 
     history:
-        - 07-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 07-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyUniversalJoint::SetParam( const phy::jointparameter parameter, const phy::jointaxis axis, const phyreal value )
@@ -215,8 +215,8 @@ void nPhyUniversalJoint::SetParam( const phy::jointparameter parameter, const ph
     @return angle
 
     history:
-        - 06-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 06-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyUniversalJoint::GetAngleFirstAxis() const
@@ -233,8 +233,8 @@ phyreal nPhyUniversalJoint::GetAngleFirstAxis() const
     @return angle
 
     history:
-        - 06-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 06-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyUniversalJoint::GetAngleSecondAxis() const

@@ -69,8 +69,8 @@ private:
     @return true/false
 
     history:
-        - 15-Dec-2004   David Reyes   created
-        - 08-Mar-2006   David Reyes   inlined
+        - 15-Dec-2004   Zombie        created
+        - 08-Mar-2006   Zombie        inlined
 */
 inline
 const bool nPhysicsAABB::IsInside( const float x, const float y, const float z ) const

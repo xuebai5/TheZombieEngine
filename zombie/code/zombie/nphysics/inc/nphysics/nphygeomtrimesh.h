@@ -177,8 +177,8 @@ public:
     @return number of vertexes
 
     history:
-        - 10-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 10-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 int nPhyGeomTriMesh::GetNumberVertexes() const
@@ -193,8 +193,8 @@ int nPhyGeomTriMesh::GetNumberVertexes() const
     @return number of indexes
 
     history:
-        - 10-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 10-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 int nPhyGeomTriMesh::GetNumberIndexes() const
@@ -209,8 +209,8 @@ int nPhyGeomTriMesh::GetNumberIndexes() const
     @return buffer address
 
     history:
-        - 08-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 08-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 const phyreal* nPhyGeomTriMesh::GetBufferVertexes() const
@@ -225,8 +225,8 @@ const phyreal* nPhyGeomTriMesh::GetBufferVertexes() const
     @return buffer address
 
     history:
-        - 08-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 08-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 const int* nPhyGeomTriMesh::GetBufferIndexes() const
@@ -241,8 +241,8 @@ const int* nPhyGeomTriMesh::GetBufferIndexes() const
     @return num of contacts
 
     history:
-        - 08-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 08-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 int nPhyGeomTriMesh::GetNumContacts() const
