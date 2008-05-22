@@ -58,7 +58,7 @@ NSCRIPT_INITCMDS_END()
     @param server persist server
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 bool nWayPointServer::SaveCmds(nPersistServer* server)
 {

@@ -19,7 +19,7 @@
     @param id the new waypoint id
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 WayPoint::WayPoint( const vector3& position, const waypointid id ) :
     point( position ),
@@ -42,7 +42,7 @@ WayPoint::WayPoint( const vector3& position, const waypointid id ) :
     Destructor
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 WayPoint::~WayPoint()
 {
@@ -63,7 +63,7 @@ WayPoint::~WayPoint()
     @return waypoint id
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const WayPoint::waypointid WayPoint::GetId() const
 {
@@ -77,7 +77,7 @@ const WayPoint::waypointid WayPoint::GetId() const
     @return position
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const vector3& WayPoint::GetPosition() const
 {
@@ -91,7 +91,7 @@ const vector3& WayPoint::GetPosition() const
     @param position new way point position
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void WayPoint::SetNewPosition( const vector3& position )
 {
@@ -106,7 +106,7 @@ void WayPoint::SetNewPosition( const vector3& position )
     @param newname new waypoint name
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void WayPoint::SetName( const nString& newname )
 {
@@ -120,7 +120,7 @@ void WayPoint::SetName( const nString& newname )
     @return name
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const nString& WayPoint::GetName() const
 {
@@ -134,7 +134,7 @@ const nString& WayPoint::GetName() const
     @param fward waypoint
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void WayPoint::SetForward( WayPoint* fward )
 {
@@ -148,7 +148,7 @@ void WayPoint::SetForward( WayPoint* fward )
     @param bward waypoint
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void WayPoint::SetBackward( WayPoint* bward )
 {
@@ -162,7 +162,7 @@ void WayPoint::SetBackward( WayPoint* bward )
     @return waypoint
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 WayPoint* WayPoint::GetForward() const
 {
@@ -176,7 +176,7 @@ WayPoint* WayPoint::GetForward() const
     @return waypoint
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 WayPoint* WayPoint::GetBackward() const
 {
@@ -190,7 +190,7 @@ WayPoint* WayPoint::GetBackward() const
     @param id path id
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void WayPoint::SetPath( int id )
 {
@@ -205,7 +205,7 @@ void WayPoint::SetPath( int id )
     @param id path id
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const int WayPoint::GetPath() const
 {
@@ -220,7 +220,7 @@ const int WayPoint::GetPath() const
     @return waypoint component
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 ncWayPoint* WayPoint::GetComponent() const
 {
@@ -234,7 +234,7 @@ ncWayPoint* WayPoint::GetComponent() const
     @param component waypoint component
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 void WayPoint::SetComponent( ncWayPoint* component )
 {

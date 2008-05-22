@@ -470,8 +470,8 @@ private:
     @return true/false
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 28-Jan-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 28-Jan-2005   Zombie         inlined
 */
 inline 
 const bool ncPhysicsObj::IsEnabled() const
@@ -484,8 +484,8 @@ const bool ncPhysicsObj::IsEnabled() const
     Enables the physic object
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 28-Jan-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 28-Jan-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::Enable()
@@ -498,8 +498,8 @@ void ncPhysicsObj::Enable()
     Disables the physic object.
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 28-Jan-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 28-Jan-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::Disable() 
@@ -514,7 +514,7 @@ void ncPhysicsObj::Disable()
     @return treshold value
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 inline
 phyreal ncPhysicsObj::GetImpactTreshold() const
@@ -529,7 +529,7 @@ phyreal ncPhysicsObj::GetImpactTreshold() const
     @param force treshold value
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::ShowImpactWhenForceLargeThan( const phyreal force )
@@ -547,7 +547,7 @@ void ncPhysicsObj::ShowImpactWhenForceLargeThan( const phyreal force )
     @param az orientation angle for the z-axis
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::SetOrientation( phyreal ax, phyreal ay, phyreal az )
@@ -560,7 +560,7 @@ void ncPhysicsObj::SetOrientation( phyreal ax, phyreal ay, phyreal az )
     Sets to update transfrom.
 
     history:
-        - 11-May-2005   David Reyes    created
+        - 11-May-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::UpdateTransform()
@@ -573,7 +573,7 @@ void ncPhysicsObj::UpdateTransform()
     Unsets to update transfrom.
 
     history:
-        - 11-May-2005   David Reyes    created
+        - 11-May-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::NoUpdateTransform()
@@ -588,7 +588,7 @@ void ncPhysicsObj::NoUpdateTransform()
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::Scale( const phyreal /*factor*/ )
@@ -602,8 +602,8 @@ void ncPhysicsObj::Scale( const phyreal /*factor*/ )
     @return id
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 24-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 int ncPhysicsObj::Id() const
@@ -618,8 +618,8 @@ int ncPhysicsObj::Id() const
     @param world  represents the world where this object exists
 
     history:
-        - 27-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 27-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetWorld( nPhysicsWorld* world )
@@ -634,8 +634,8 @@ void ncPhysicsObj::SetWorld( nPhysicsWorld* world )
     @return world where this object exists
 
     history:
-        - 27-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 27-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 nPhysicsWorld* ncPhysicsObj::GetWorld() const
@@ -650,9 +650,9 @@ nPhysicsWorld* ncPhysicsObj::GetWorld() const
     @param newspace     newspace
 
     history:
-        - 11-Oct-2004   David Reyes    created
-        - 29-Nov-2004   David Reyes    virtualized
-        - 12-May-2005   David Reyes    inlined
+        - 11-Oct-2004   Zombie         created
+        - 29-Nov-2004   Zombie         virtualized
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::MoveToSpace( nPhySpace* newspace )
@@ -667,8 +667,8 @@ void ncPhysicsObj::MoveToSpace( nPhySpace* newspace )
     @param newspace     newspace
 
     history:
-        - 28-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 28-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetSpace( nPhySpace* newspace )
@@ -683,8 +683,8 @@ void ncPhysicsObj::SetSpace( nPhySpace* newspace )
     @return object type
 
     history:
-        - 14-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 14-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhysicsObj::ObjectType ncPhysicsObj::GetType() const
@@ -699,8 +699,8 @@ ncPhysicsObj::ObjectType ncPhysicsObj::GetType() const
     @param newtype new object type
 
     history:
-        - 14-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 14-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetType( ObjectType newtype )
@@ -715,8 +715,8 @@ void ncPhysicsObj::SetType( ObjectType newtype )
     @param material material id
 
     history:
-        - 27-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 27-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetMaterial( nPhyMaterial::idmaterial material )
@@ -731,8 +731,8 @@ void ncPhysicsObj::SetMaterial( nPhyMaterial::idmaterial material )
     @return num geometries
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 int ncPhysicsObj::GetNumGeometries() const
@@ -749,8 +749,8 @@ int ncPhysicsObj::GetNumGeometries() const
     @return geometry
 
     history:
-        - 29-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 29-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 nPhysicsGeom* ncPhysicsObj::GetGeometry( int /*index*/ ) const
@@ -765,8 +765,8 @@ nPhysicsGeom* ncPhysicsObj::GetGeometry( int /*index*/ ) const
     @return material id
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 nPhyMaterial::idmaterial ncPhysicsObj::GetMaterial() const
@@ -781,8 +781,8 @@ nPhyMaterial::idmaterial ncPhysicsObj::GetMaterial() const
     @return space
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 nPhySpace* ncPhysicsObj::GetParentSpace() const
@@ -797,8 +797,8 @@ nPhySpace* ncPhysicsObj::GetParentSpace() const
     @return body
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 nPhyRigidBody* ncPhysicsObj::GetBody() const
@@ -813,8 +813,8 @@ nPhyRigidBody* ncPhysicsObj::GetBody() const
     @param velocity new velocity
 
     history:
-        - 02-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 02-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetLinearVelocity( const vector3& velocity )
@@ -831,8 +831,8 @@ void ncPhysicsObj::SetLinearVelocity( const vector3& velocity )
     @param velocity
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::GetLinearVelocity( vector3& velocity ) const
@@ -849,8 +849,8 @@ void ncPhysicsObj::GetLinearVelocity( vector3& velocity ) const
     @param velocity     new angular velocity
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetAngularVelocity( const vector3& velocity )
@@ -867,8 +867,8 @@ void ncPhysicsObj::SetAngularVelocity( const vector3& velocity )
     @param velocity
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::GetAngularVelocity( vector3& velocity ) const
@@ -885,8 +885,8 @@ void ncPhysicsObj::GetAngularVelocity( vector3& velocity ) const
     @param force
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddForce( const vector3& force )
@@ -903,8 +903,8 @@ void ncPhysicsObj::AddForce( const vector3& force )
     @param torque
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddTorque( const vector3& torque )
@@ -921,8 +921,8 @@ void ncPhysicsObj::AddTorque( const vector3& torque )
     @param force
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddRelativeForce( const vector3& force )
@@ -939,8 +939,8 @@ void ncPhysicsObj::AddRelativeForce( const vector3& force )
     @param torque
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddRelativeTorque( const vector3& torque )
@@ -958,8 +958,8 @@ void ncPhysicsObj::AddRelativeTorque( const vector3& torque )
     @param position
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddForceAtPosition( const vector3& force, const vector3& position )
@@ -977,8 +977,8 @@ void ncPhysicsObj::AddForceAtPosition( const vector3& force, const vector3& posi
     @param position
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddForceAtRelativePosition( const vector3& force, const vector3& position )
@@ -996,8 +996,8 @@ void ncPhysicsObj::AddForceAtRelativePosition( const vector3& force, const vecto
     @param position
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddRelativeForceAtPosition( const vector3& force, const vector3& position )
@@ -1015,8 +1015,8 @@ void ncPhysicsObj::AddRelativeForceAtPosition( const vector3& force, const vecto
     @param position
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::AddRelativeForceAtRelativePosition( const vector3& force, const vector3& position )
@@ -1033,8 +1033,8 @@ void ncPhysicsObj::AddRelativeForceAtRelativePosition( const vector3& force, con
     @param force
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetForce( const vector3& force )
@@ -1051,8 +1051,8 @@ void ncPhysicsObj::SetForce( const vector3& force )
     @param torque
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetTorque( const vector3& torque )
@@ -1069,8 +1069,8 @@ void ncPhysicsObj::SetTorque( const vector3& torque )
     @param force
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::GetForce( vector3& force ) const
@@ -1087,8 +1087,8 @@ void ncPhysicsObj::GetForce( vector3& force ) const
     @param torque
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::GetTorque( vector3& torque ) const  
@@ -1105,8 +1105,8 @@ void ncPhysicsObj::GetTorque( vector3& torque ) const
     @param body
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetBody( nPhyRigidBody* body )
@@ -1121,8 +1121,8 @@ void ncPhysicsObj::SetBody( nPhyRigidBody* body )
     @param mass
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetMass( phyreal mass )
@@ -1138,8 +1138,8 @@ void ncPhysicsObj::SetMass( phyreal mass )
     @param density
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetDensity( phyreal density )
@@ -1155,8 +1155,8 @@ void ncPhysicsObj::SetDensity( phyreal density )
     @return mass
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal ncPhysicsObj::GetMass() const
@@ -1171,8 +1171,8 @@ phyreal ncPhysicsObj::GetMass() const
     @return density
 
     history:
-        - 13-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 13-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal ncPhysicsObj::GetDensity() const
@@ -1189,8 +1189,8 @@ phyreal ncPhysicsObj::GetDensity() const
     @return if all the flags are present with true otherwise false
 
     history:
-        - 24-Jan-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 24-Jan-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 bool ncPhysicsObj::IsState( uint32 flags ) const
@@ -1205,8 +1205,8 @@ bool ncPhysicsObj::IsState( uint32 flags ) const
     @param flags mask of state flags
 
     history:
-        - 24-Jan-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 24-Jan-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetState( uint32 flags )
@@ -1221,8 +1221,8 @@ void ncPhysicsObj::SetState( uint32 flags )
     @param flags mask of state flags
 
     history:
-        - 24-Jan-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 24-Jan-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::RemoveState( uint32 flags )
@@ -1235,8 +1235,8 @@ void ncPhysicsObj::RemoveState( uint32 flags )
     Resets flags for each physics step.
 
     history:
-        - 17-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 17-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::Resets()
@@ -1251,8 +1251,8 @@ void ncPhysicsObj::Resets()
     @return true/false
 
     history:
-        - 26-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 26-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 const bool ncPhysicsObj::IsFastRotatingObject() const
@@ -1267,8 +1267,8 @@ const bool ncPhysicsObj::IsFastRotatingObject() const
     @param material new object's material
 
     history:
-        - 28-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 28-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void ncPhysicsObj::SetMaterial( const nPhyMaterial* material )
@@ -1283,7 +1283,7 @@ void ncPhysicsObj::SetMaterial( const nPhyMaterial* material )
     Auto-inserts the object in the space.
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::AutoInsertInSpace()
@@ -1296,7 +1296,7 @@ void ncPhysicsObj::AutoInsertInSpace()
     Sets the owner.
 
     history:
-        - 02-Jun-2005   David Reyes    created
+        - 02-Jun-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::SetOwner( ncPhysicsObj* obj )
@@ -1311,7 +1311,7 @@ void ncPhysicsObj::SetOwner( ncPhysicsObj* obj )
     @return physics object
 
     history:
-        - 02-Jun-2005   David Reyes    created
+        - 02-Jun-2005   Zombie         created
 */
 inline
 ncPhysicsObj* ncPhysicsObj::GetOwner() const
@@ -1327,7 +1327,7 @@ ncPhysicsObj* ncPhysicsObj::GetOwner() const
     @return space name
 
     history:
-        - 06-Jun-2005   David Reyes    created
+        - 06-Jun-2005   Zombie         created
 */
 inline
 const nString& ncPhysicsObj::GetSpaceName() const
@@ -1343,7 +1343,7 @@ const nString& ncPhysicsObj::GetSpaceName() const
     @return scale factor value
 
     history:
-        - 15-Jun-2005   David Reyes    created
+        - 15-Jun-2005   Zombie         created
 */
 inline
 phyreal ncPhysicsObj::GetLastScaledFactor() const
@@ -1358,7 +1358,7 @@ phyreal ncPhysicsObj::GetLastScaledFactor() const
     @param factor scale factor
 
     history:
-        - 15-Jun-2005   David Reyes    created
+        - 15-Jun-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::SetLastScaledFactor( const phyreal factor )
@@ -1371,7 +1371,7 @@ void ncPhysicsObj::SetLastScaledFactor( const phyreal factor )
     Adds the object to the default world.
 
     history:
-        - 22-Jun-2005   David Reyes    created
+        - 22-Jun-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::InsertInTheWorld()
@@ -1386,7 +1386,7 @@ void ncPhysicsObj::InsertInTheWorld()
     @param position new object's position
 
     history:
-        - 22-Jun-2005   David Reyes    created
+        - 22-Jun-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::SetPositionPhyObj( const vector3& position )
@@ -1399,7 +1399,7 @@ void ncPhysicsObj::SetPositionPhyObj( const vector3& position )
     Makes the object clean.
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 inline
 void ncPhysicsObj::Clean()
@@ -1414,7 +1414,7 @@ void ncPhysicsObj::Clean()
     @return true/false
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 inline
 bool ncPhysicsObj::IsDirty() const

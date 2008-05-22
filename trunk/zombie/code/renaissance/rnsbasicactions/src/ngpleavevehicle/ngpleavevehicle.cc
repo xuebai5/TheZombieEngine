@@ -87,7 +87,7 @@ nGPLeaveVehicle::IsDone() const
     @return if the run has end
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 bool nGPLeaveVehicle::Run()
 {
@@ -147,7 +147,7 @@ bool nGPLeaveVehicle::Run()
     @return if it's been able to find an exit point
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 const bool nGPLeaveVehicle::ExitPosition( vector3& exitposition )
 {

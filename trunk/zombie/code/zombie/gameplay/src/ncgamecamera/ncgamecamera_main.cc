@@ -36,7 +36,7 @@ namespace
     Constructor
 
     history:
-        - nGameCameraManager   David Reyes    created
+        - nGameCameraManager   Zombie         created
 */
 ncGameCamera::ncGameCamera() : 
     cameraType( free ),
@@ -74,7 +74,7 @@ ncGameCamera::ncGameCamera() :
     Destructor
 
     history:
-        - nGameCameraManager   David Reyes    created
+        - nGameCameraManager   Zombie         created
 */
 ncGameCamera::~ncGameCamera()
 {
@@ -94,7 +94,7 @@ ncGameCamera::~ncGameCamera()
     Enables camera.
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::Enable()
 {
@@ -106,7 +106,7 @@ void ncGameCamera::Enable()
     Disables camera.
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::Disable()
 {
@@ -120,7 +120,7 @@ void ncGameCamera::Disable()
     @return true/false
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 const bool ncGameCamera::IsEnabled() const
 {
@@ -134,7 +134,7 @@ const bool ncGameCamera::IsEnabled() const
     @param type camera type free, attach... etc..
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetCameraType( const type cameratype )
 {
@@ -148,7 +148,7 @@ void ncGameCamera::SetCameraType( const type cameratype )
     @return camera type free, attach... etc..
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 const ncGameCamera::type ncGameCamera::GetCameraType() const
 {
@@ -162,7 +162,7 @@ const ncGameCamera::type ncGameCamera::GetCameraType() const
     @param attributes camera attributes
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetAttributes( const int attributes )
 {
@@ -176,7 +176,7 @@ void ncGameCamera::SetAttributes( const int attributes )
     @return amera attributes
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 const int ncGameCamera::GetAttributes() const
 {
@@ -190,7 +190,7 @@ const int ncGameCamera::GetAttributes() const
     @param attributes camera attributes
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::AddAttributes( const int attributes )
 {
@@ -204,7 +204,7 @@ void ncGameCamera::AddAttributes( const int attributes )
     @param attributes camera attributes
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::RemoveAttributes( const int attributes )
 {
@@ -218,7 +218,7 @@ void ncGameCamera::RemoveAttributes( const int attributes )
     @param entity an entity that MUST have the ncTransform component.
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetAnchorPoint( nEntityObject* entity )
 {
@@ -280,7 +280,7 @@ void ncGameCamera::SetAnchorPoint( nEntityObject* entity )
     @return entity
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 nEntityObject* ncGameCamera::GetAnchorPoint() const
 {
@@ -302,7 +302,7 @@ nEntityObject* ncGameCamera::GetAnchorPoint() const
     Updates camera.
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::Update( const nTime& time )
 {
@@ -359,7 +359,7 @@ void ncGameCamera::Update( const nTime& time )
     @param value height value
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetHeight( const float value )
 {
@@ -373,7 +373,7 @@ void ncGameCamera::SetHeight( const float value )
     @return height value
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 const float ncGameCamera::GetHeight() const
 {
@@ -387,7 +387,7 @@ const float ncGameCamera::GetHeight() const
     @param value distance value
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetDistance( const float value )
 {
@@ -401,7 +401,7 @@ void ncGameCamera::SetDistance( const float value )
     @return distance value
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 const float ncGameCamera::GetDistance() const
 {
@@ -415,7 +415,7 @@ const float ncGameCamera::GetDistance() const
     @param name route name
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetRoute( const int id )
 {
@@ -429,7 +429,7 @@ void ncGameCamera::SetRoute( const int id )
     @return route name
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 const int ncGameCamera::GetRoute() const
 {
@@ -443,7 +443,7 @@ const int ncGameCamera::GetRoute() const
     @param view the viewport where the camera will be applied
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetViewPort( nAppViewport* view )
 {
@@ -459,7 +459,7 @@ void ncGameCamera::SetViewPort( nAppViewport* view )
     @return the viewport where the camera will be applied
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 nAppViewport* ncGameCamera::GetViewPort() const
 {
@@ -471,7 +471,7 @@ nAppViewport* ncGameCamera::GetViewPort() const
     Updates camera position.
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::UpdatePosition()
 {
@@ -499,7 +499,7 @@ void ncGameCamera::UpdatePosition()
     Updates orientation.
 
     history:
-        - 10-Nov-2005   David Reyes    created
+        - 10-Nov-2005   Zombie         created
 */
 void ncGameCamera::UpdateOrientation()
 {
@@ -526,7 +526,7 @@ void ncGameCamera::UpdateOrientation()
     Updates the position for an attached camera.
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 void ncGameCamera::UpdatePositionAttached()
 {
@@ -543,7 +543,7 @@ void ncGameCamera::UpdatePositionAttached()
     @param offset offset in the different axis
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetCameraOffset( const vector3& offset )
 {
@@ -557,7 +557,7 @@ void ncGameCamera::SetCameraOffset( const vector3& offset )
     @return offset in the different axis
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 const vector3& ncGameCamera::GetCameraOffset() const
 {
@@ -571,7 +571,7 @@ const vector3& ncGameCamera::GetCameraOffset() const
     @return offset in the different axis
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 void ncGameCamera::LookAt( nEntityObject* entity )
 {
@@ -589,7 +589,7 @@ void ncGameCamera::LookAt( nEntityObject* entity )
     @return offset in the different axis
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 void ncGameCamera::UpdateLookAt()
 {
@@ -624,7 +624,7 @@ void ncGameCamera::UpdateLookAt()
     Updates transition.
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 void ncGameCamera::UpdateTransition()
 {
@@ -736,7 +736,7 @@ void ncGameCamera::UpdateTransition()
     @param shouldbe where it should be
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 void ncGameCamera::ComputeInmediatlyTransition( float& value, const float shouldbe )
 {
@@ -748,7 +748,7 @@ void ncGameCamera::ComputeInmediatlyTransition( float& value, const float should
     Updates the object orientation.
 
     history:
-        - 11-Nov-2005   David Reyes    created
+        - 11-Nov-2005   Zombie         created
 */
 void ncGameCamera::UpdateObjectOrientation()
 {
@@ -760,7 +760,7 @@ void ncGameCamera::UpdateObjectOrientation()
     Compute dampened transition.
 
     history:
-        - 15-Nov-2005   David Reyes    created
+        - 15-Nov-2005   Zombie         created
 */
 void ncGameCamera::ComputeDampenTransition( float& value, const float shouldbe, const float vDampen )
 {
@@ -772,7 +772,7 @@ void ncGameCamera::ComputeDampenTransition( float& value, const float shouldbe, 
     Computes the position for a third person camera.
 
     history:
-        - 17-Nov-2005   David Reyes    created
+        - 17-Nov-2005   Zombie         created
 */
 void ncGameCamera::ComputePositionThirdPerson()
 {
@@ -788,7 +788,7 @@ void ncGameCamera::ComputePositionThirdPerson()
     Checks for max and min distance.
 
     history:
-        - 17-Nov-2005   David Reyes    created
+        - 17-Nov-2005   Zombie         created
 */
 void ncGameCamera::CheckMaxMinDistance()
 {
@@ -828,7 +828,7 @@ void ncGameCamera::CheckMaxMinDistance()
     Once setup build data for the camera.
 
     history:
-        - 17-Nov-2005   David Reyes    created
+        - 17-Nov-2005   Zombie         created
 */
 void ncGameCamera::Build()
 {
@@ -854,7 +854,7 @@ void ncGameCamera::Build()
     Checks collision.
 
     history:
-        - 17-Nov-2005   David Reyes    created
+        - 17-Nov-2005   Zombie         created
 */
 void ncGameCamera::CheckCollision()
 {
@@ -908,7 +908,7 @@ void ncGameCamera::CheckCollision()
     @param value step value
 
     history:
-        - 23-Nov-2005   David Reyes    created
+        - 23-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetStep( const float value )
 {
@@ -924,7 +924,7 @@ void ncGameCamera::SetStep( const float value )
     @return step value
 
     history:
-        - 23-Nov-2005   David Reyes    created
+        - 23-Nov-2005   Zombie         created
 */
 const float ncGameCamera::GetStep() const
 {
@@ -936,7 +936,7 @@ const float ncGameCamera::GetStep() const
     Updates position base in a route.
 
     history:
-        - 23-Nov-2005   David Reyes    created
+        - 23-Nov-2005   Zombie         created
 */
 void ncGameCamera::UpdatePositionByRoute()
 {
@@ -999,7 +999,7 @@ void ncGameCamera::UpdatePositionByRoute()
     Sets the transposition type for position in X.
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetTranspositionXType( const transition typeTrans )
 {
@@ -1011,7 +1011,7 @@ void ncGameCamera::SetTranspositionXType( const transition typeTrans )
     Gets the transposition type for position in X.
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const ncGameCamera::transition ncGameCamera::GetTranspositionXType() const
 {
@@ -1023,7 +1023,7 @@ const ncGameCamera::transition ncGameCamera::GetTranspositionXType() const
     Sets the transposition type for position in Y.
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetTranspositionYType( const transition typeTrans )
 {
@@ -1035,7 +1035,7 @@ void ncGameCamera::SetTranspositionYType( const transition typeTrans )
     Gets the transposition type for position in Y.
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const ncGameCamera::transition ncGameCamera::GetTranspositionYType() const
 {
@@ -1048,7 +1048,7 @@ const ncGameCamera::transition ncGameCamera::GetTranspositionYType() const
     Sets the transposition type for position in Z.
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetTranspositionZType( const transition typeTrans )
 {
@@ -1060,7 +1060,7 @@ void ncGameCamera::SetTranspositionZType( const transition typeTrans )
     Gets the transposition type for position in Z.
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const ncGameCamera::transition ncGameCamera::GetTranspositionZType() const
 {
@@ -1072,7 +1072,7 @@ const ncGameCamera::transition ncGameCamera::GetTranspositionZType() const
     Sets the dampening for the different axis (0..1) in position
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetDampeningPosition( const vector3& dampen )
 {
@@ -1084,7 +1084,7 @@ void ncGameCamera::SetDampeningPosition( const vector3& dampen )
     Gets the dampening for the different axis (0..1) in position
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const vector3& ncGameCamera::GetDampeningPosition() const
 {
@@ -1096,7 +1096,7 @@ const vector3& ncGameCamera::GetDampeningPosition() const
     Sets the dampening for the orientation
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetDampeningOrientation( const float percentatge )
 {
@@ -1111,7 +1111,7 @@ void ncGameCamera::SetDampeningOrientation( const float percentatge )
     Gets the dampening for the orientation
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const float ncGameCamera::GetDampeningOrientation() const
 {
@@ -1123,7 +1123,7 @@ const float ncGameCamera::GetDampeningOrientation() const
     Sets the max distance of the camera
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetMaxDistance(const float distance)
 {
@@ -1135,7 +1135,7 @@ void ncGameCamera::SetMaxDistance(const float distance)
     Gets the max distance of the camera
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const float ncGameCamera::GetMaxDistance() const
 {
@@ -1147,7 +1147,7 @@ const float ncGameCamera::GetMaxDistance() const
     Sets the min distance of the camera
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetMinDistance(const float distance)
 {
@@ -1159,7 +1159,7 @@ void ncGameCamera::SetMinDistance(const float distance)
     Gets the min distance of the camera
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const float ncGameCamera::GetMinDistance() const
 {
@@ -1171,7 +1171,7 @@ const float ncGameCamera::GetMinDistance() const
     Sets the orientation transition type
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 void ncGameCamera::SetTranspositionOrientationType(const transition trans)
 {
@@ -1183,7 +1183,7 @@ void ncGameCamera::SetTranspositionOrientationType(const transition trans)
     Gets the orientation transition type
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 const ncGameCamera::transition ncGameCamera::GetTranspositionOrientationType() const
 {
@@ -1197,7 +1197,7 @@ const ncGameCamera::transition ncGameCamera::GetTranspositionOrientationType() c
     @returns the anchor point transformation
 
     history:
-        - 25-Nov-2005   David Reyes    created
+        - 25-Nov-2005   Zombie         created
 */
 ncTransform* ncGameCamera::GetInternalAnchor()
 {
@@ -1211,7 +1211,7 @@ ncTransform* ncGameCamera::GetInternalAnchor()
     @param newvalue new offset in the y axis
 
     history:
-        - 03-Feb-2006   David Reyes    created
+        - 03-Feb-2006   Zombie         created
 */
 void ncGameCamera::SetLookAtOffset(const float newvalue )
 {
@@ -1225,7 +1225,7 @@ void ncGameCamera::SetLookAtOffset(const float newvalue )
     @return new offset in the y axis
 
     history:
-        - 03-Feb-2006   David Reyes    created
+        - 03-Feb-2006   Zombie         created
 */
 const float ncGameCamera::GetLookAtOffset() const
 {

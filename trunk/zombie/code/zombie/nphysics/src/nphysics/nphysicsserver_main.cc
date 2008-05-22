@@ -59,7 +59,7 @@ nPhyMaterial::idmaterial nPhysicsServer::DefaultMaterial(0);
     Constructor
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 nPhysicsServer::nPhysicsServer() :
 #ifndef NGAME
@@ -100,7 +100,7 @@ nPhysicsServer::nPhysicsServer() :
     Destructor
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 nPhysicsServer::~nPhysicsServer()
 {
@@ -125,7 +125,7 @@ nPhysicsServer::~nPhysicsServer()
     @return pointer to the only instance of this object
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 nPhysicsServer* nPhysicsServer::Instance()
 {
@@ -142,7 +142,7 @@ nPhysicsServer* nPhysicsServer::Instance()
     @param nGfxServer2  drawing server
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 #ifndef NGAME
 void nPhysicsServer::Draw( nGfxServer2* server )
@@ -194,7 +194,7 @@ void nPhysicsServer::Draw( nGfxServer2* server )
     Update objects when the layers activeness it's changed.
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 void nPhysicsServer::LayersUpdate()
 {
@@ -213,8 +213,8 @@ void nPhysicsServer::LayersUpdate()
     @param server   graphics server
 
     history:
-        - 04-Oct-2004   David Reyes    created
-        - 27-Oct-2004   David Reyes    Added support to simulate more than one world
+        - 04-Oct-2004   Zombie         created
+        - 27-Oct-2004   Zombie         Added support to simulate more than one world
 */
 void nPhysicsServer::Run( phyreal frames )
 {
@@ -330,7 +330,7 @@ void nPhysicsServer::Run( phyreal frames )
     @return file server
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 nFileServer2* nPhysicsServer::GetFileServer() const
 {
@@ -344,7 +344,7 @@ nFileServer2* nPhysicsServer::GetFileServer() const
     @param fileserver  a file server
 
     history:
-        - 10-Oct-2004   David Reyes    created
+        - 10-Oct-2004   Zombie         created
 */
 void nPhysicsServer::SetFileServer( nFileServer2* fileserver )
 {
@@ -364,8 +364,8 @@ void nPhysicsServer::SetFileServer( nFileServer2* fileserver )
     @return num of contacts reported
 
     history:
-        - 11-Oct-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    new implememtation
+        - 11-Oct-2004   Zombie         created
+        - 31-Jan-2005   Zombie         new implememtation
 */
 int nPhysicsServer::Collide( 
     const nPhysicsGeom *geom,
@@ -430,7 +430,7 @@ int nPhysicsServer::Collide(
     Inits the server.
 
     history:
-        - 27-Oct-2004   David Reyes    created
+        - 27-Oct-2004   Zombie         created
 */
 void nPhysicsServer::Init()
 {
@@ -475,7 +475,7 @@ void nPhysicsServer::Init()
     @return number of the worlds
 
     History:
-        - 10-Feb-2005   David Reyes    created
+        - 10-Feb-2005   Zombie         created
 */
 int nPhysicsServer::GetNumOfWorldsToBeProcessed() const
 {
@@ -515,7 +515,7 @@ int nPhysicsServer::GetNumOfWorldsToBeProcessed() const
     @param pickableObj a pickable object
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 void nPhysicsServer::Add( ncPhyPickableObj* pickableObj )
 {
@@ -529,7 +529,7 @@ void nPhysicsServer::Add( ncPhyPickableObj* pickableObj )
     Returns if it's drawing alpha shapes.    
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 bool& nPhysicsServer::isDrawingAlphaShapes()
 {
@@ -543,7 +543,7 @@ bool& nPhysicsServer::isDrawingAlphaShapes()
     Returns the list of alpha shapes.
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 nArray<nPhysicsGeom*>& nPhysicsServer::ListAlphaShapes()
 {
@@ -561,7 +561,7 @@ nArray<nPhysicsGeom*>& nPhysicsServer::ListAlphaShapes()
     @return world
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 nPhysicsWorld* nPhysicsServer::GetDefaultWorld() const
 {
@@ -588,7 +588,7 @@ nPhysicsWorld* nPhysicsServer::GetDefaultWorld() const
     Resets the physics worlds.
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void nPhysicsServer::Reset()
 {
@@ -601,7 +601,7 @@ void nPhysicsServer::Reset()
     Destroys server's data.
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void nPhysicsServer::Destroy()
 {
@@ -626,7 +626,7 @@ void nPhysicsServer::Destroy()
     @return world
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 nPhysicsWorld* nPhysicsServer::GetDefaultWorld()
 {
@@ -640,7 +640,7 @@ nPhysicsWorld* nPhysicsServer::GetDefaultWorld()
     @param obj physics object
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */
 void nPhysicsServer::InsertInSpace( ncPhysicsObj* obj )
 {
@@ -834,7 +834,7 @@ void nPhysicsServer::InsertInSpace( ncPhysicsObj* obj )
     @param ignored
 
     history:
-        - 02-Nov-2005   David Reyes    created
+        - 02-Nov-2005   Zombie         created
 */
 void nPhysicsServer::InitInstance(nObject::InitInstanceMsg)
 {
@@ -846,7 +846,7 @@ void nPhysicsServer::InitInstance(nObject::InitInstanceMsg)
     Loads the physics materials.
 
     history:
-        - 02-Nov-2005   David Reyes    created
+        - 02-Nov-2005   Zombie         created
 */
 void nPhysicsServer::LoadMaterials() 
 {
@@ -895,7 +895,7 @@ void nPhysicsServer::LoadMaterials()
     @param material a physics material
 
     history:
-        - 02-Nov-2005   David Reyes    created
+        - 02-Nov-2005   Zombie         created
 */
 void nPhysicsServer::RemoveMaterial( nPhyMaterial* material )
 {
@@ -919,7 +919,7 @@ void nPhysicsServer::RemoveMaterial( nPhyMaterial* material )
     @return true/false
 
     history:
-        - 03-Nov-2005   David Reyes    created
+        - 03-Nov-2005   Zombie         created
 */
 const bool nPhysicsServer::ItsGameMaterialUsed( uint idgamematerial ) const
 {
@@ -966,7 +966,7 @@ const bool nPhysicsServer::ItsGameMaterialUsed( uint idgamematerial ) const
     @return how many contacts reported.
 
     history:
-        - 03-Nov-2005   David Reyes    created
+        - 03-Nov-2005   Zombie         created
 */
 int nPhysicsServer::Collide( const vector3& start, const vector3& direction, const phyreal lenght, 
     int numContacts, nPhyCollide::nContact* contact, int collidesWith )
@@ -986,7 +986,7 @@ int nPhysicsServer::Collide( const vector3& start, const vector3& direction, con
     @param report call-back function
 
     history:
-        - 14-Feb-2006   David Reyes    created
+        - 14-Feb-2006   Zombie         created
 */
 void nPhysicsServer::RegisterImpactCallBack( impactsReporting report )
 {
@@ -1000,7 +1000,7 @@ void nPhysicsServer::RegisterImpactCallBack( impactsReporting report )
     @return call-back function
 
     history:
-        - 14-Feb-2006   David Reyes    created
+        - 14-Feb-2006   Zombie         created
 */
 nPhysicsServer::impactsReporting nPhysicsServer::GetImpactCallBack() const
 {

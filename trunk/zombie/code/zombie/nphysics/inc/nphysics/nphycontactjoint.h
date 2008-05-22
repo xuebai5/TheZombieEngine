@@ -85,8 +85,8 @@ private:
     @param properties contact properties
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyContactJoint::SetData( nPhyMaterial::idmaterial idA, nPhyMaterial::idmaterial idB )
@@ -101,8 +101,8 @@ void nPhyContactJoint::SetData( nPhyMaterial::idmaterial idA, nPhyMaterial::idma
     @param properties contact information
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyContactJoint::SetData( const nPhyCollide::nContact& contact )
@@ -117,8 +117,8 @@ void nPhyContactJoint::SetData( const nPhyCollide::nContact& contact )
     @param properties contact information
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyContactJoint::SetData( const vector3& direction )
@@ -133,8 +133,8 @@ void nPhyContactJoint::SetData( const vector3& direction )
     @param properties contact information
 
     history:
-        - 25-Oct-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Oct-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhyContactJoint::SetData( surfacedata& data )
@@ -149,8 +149,8 @@ void nPhyContactJoint::SetData( surfacedata& data )
     @param dir friction direction
 
     history:
-        - 18-Apr-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 18-Apr-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyContactJoint::SetFrictionDirection( const vector3& fdir )
@@ -165,8 +165,8 @@ void nPhyContactJoint::SetFrictionDirection( const vector3& fdir )
     @param normal vertor normal
 
     history:
-        - 18-Apr-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 18-Apr-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyContactJoint::GetContactNormal( vector3& normal )
@@ -183,8 +183,8 @@ void nPhyContactJoint::GetContactNormal( vector3& normal )
     @return slipness coeficient
 
     history:
-        - 18-Apr-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 18-Apr-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 const phyreal nPhyContactJoint::GetSlipCoeficient( const bool first ) const
@@ -200,8 +200,8 @@ const phyreal nPhyContactJoint::GetSlipCoeficient( const bool first ) const
     @param first true = first, false = second
 
     history:
-        - 18-Apr-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 18-Apr-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyContactJoint::SetSlipCoeficient( const phyreal coeficient, const bool first )
@@ -216,8 +216,8 @@ void nPhyContactJoint::SetSlipCoeficient( const phyreal coeficient, const bool f
     @param factor scale factor
 
     history:
-     - 12-May-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 12-May-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyContactJoint::Scale( const phyreal /*factor*/ )

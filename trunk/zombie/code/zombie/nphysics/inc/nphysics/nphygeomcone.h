@@ -75,8 +75,8 @@ private:
     @return length of the cone
 
     history:
-        - 15-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyGeomCone::GetLength() const
@@ -93,8 +93,8 @@ phyreal nPhyGeomCone::GetLength() const
     @return radius of the cone
 
     history:
-        - 15-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyGeomCone::GetRadius() const
@@ -111,8 +111,8 @@ phyreal nPhyGeomCone::GetRadius() const
     @param length new length of the cone
 
     history:
-        - 15-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomCone::SetLength( phyreal length )
@@ -129,8 +129,8 @@ void nPhyGeomCone::SetLength( phyreal length )
     @param radius new radius of the cone
 
     history:
-        - 15-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomCone::SetRadius( phyreal radius )

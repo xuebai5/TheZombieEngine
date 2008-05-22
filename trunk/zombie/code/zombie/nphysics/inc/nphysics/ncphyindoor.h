@@ -162,7 +162,7 @@ private:
     @return space
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */
 inline
 nPhySpace* ncPhyIndoor::GetIndoorSpace()
@@ -177,7 +177,7 @@ nPhySpace* ncPhyIndoor::GetIndoorSpace()
     @return sub spaces list
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */
 inline
 ncPhyIndoor::tSpaces& ncPhyIndoor::GetSubSpaces()

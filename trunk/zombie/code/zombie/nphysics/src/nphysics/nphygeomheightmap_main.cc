@@ -20,7 +20,7 @@ nNebulaScriptClass(nPhyGeomHeightMap, "nphysicsgeom");
     Constructor
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 nPhyGeomHeightMap::nPhyGeomHeightMap() :
     heights(0),
@@ -34,7 +34,7 @@ nPhyGeomHeightMap::nPhyGeomHeightMap() :
     Creates the geometry
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void nPhyGeomHeightMap::Create()
 {
@@ -54,7 +54,7 @@ void nPhyGeomHeightMap::Create()
     Destructor
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 nPhyGeomHeightMap::~nPhyGeomHeightMap()
 {
@@ -68,7 +68,7 @@ nPhyGeomHeightMap::~nPhyGeomHeightMap()
     @param buffer heights buffer
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void nPhyGeomHeightMap::SetHeightsBuffer( phyreal* buffer )
 {
@@ -84,7 +84,7 @@ void nPhyGeomHeightMap::SetHeightsBuffer( phyreal* buffer )
     @param length heightmap length
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void nPhyGeomHeightMap::SetLength( phyreal length )
 {
@@ -100,7 +100,7 @@ void nPhyGeomHeightMap::SetLength( phyreal length )
     @param numnodes heightmap nodes
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void nPhyGeomHeightMap::SetNumNodes( int numnodes )
 {
@@ -115,7 +115,7 @@ void nPhyGeomHeightMap::SetNumNodes( int numnodes )
     Draws the geometry for debug pourposes.
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void nPhyGeomHeightMap::Draw( nGfxServer2* server )
 {
@@ -220,7 +220,7 @@ void nPhyGeomHeightMap::Draw( nGfxServer2* server )
     Updates the bounding box.
 
     history:
-        - 15-Jun-2005   David Reyes    created
+        - 15-Jun-2005   Zombie         created
 */
 void nPhyGeomHeightMap::UpdateAABB()
 {
@@ -238,7 +238,7 @@ void nPhyGeomHeightMap::UpdateAABB()
     @param z z node coordinates
 
     history:
-        - 28-Jun-2005   David Reyes    created
+        - 28-Jun-2005   Zombie         created
 */
 void nPhyGeomHeightMap::SetHole( int x, int z )
 {
@@ -255,7 +255,7 @@ void nPhyGeomHeightMap::SetHole( int x, int z )
     @return if hole present
 
     history:
-        - 13-Jan-2006   David Reyes    created
+        - 13-Jan-2006   Zombie         created
 */
 const bool nPhyGeomHeightMap::GetHole( const int x, const int z ) const
 {
@@ -268,7 +268,7 @@ const bool nPhyGeomHeightMap::GetHole( const int x, const int z ) const
     Removes all the holes.
 
     history:
-        - 28-Jun-2005   David Reyes    created
+        - 28-Jun-2005   Zombie         created
 */
 void nPhyGeomHeightMap::RemoveHoles()
 {

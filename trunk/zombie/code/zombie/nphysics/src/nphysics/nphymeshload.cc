@@ -13,7 +13,7 @@
     @param fs   fileserver to be used to perform the fileoperations
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 bool nPhyMeshLoad::Open(nFileServer2* fs)
 {
@@ -34,7 +34,7 @@ bool nPhyMeshLoad::Open(nFileServer2* fs)
     @return true/false
 
     history:
-        - 02-Feb-2006   David Reyes    created
+        - 02-Feb-2006   Zombie         created
 */
 const bool nPhyMeshLoad::IsNormalsPresent() const
 {

@@ -66,8 +66,8 @@ public:
     @param radius   real with the length of the radius
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomSphere::SetRadius( phyreal radius )
@@ -85,8 +85,8 @@ void nPhyGeomSphere::SetRadius( phyreal radius )
     @return radius   real with the length of the radius
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyGeomSphere::GetRadius() const
@@ -104,8 +104,8 @@ phyreal nPhyGeomSphere::GetRadius() const
     @param factor scale factor
     
     history:
-        - 12-May-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 12-May-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomSphere::Scale( const phyreal factor )

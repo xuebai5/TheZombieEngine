@@ -21,7 +21,7 @@ NSCRIPT_INITCMDS_END()
     Constructor
 
     history:
-        - 15-Dec-2005   David Reyes    created
+        - 15-Dec-2005   Zombie         created
 */
 ncWayPointClass::ncWayPointClass()
 {
@@ -33,7 +33,7 @@ ncWayPointClass::ncWayPointClass()
     Destructor
 
     history:
-        - 15-Dec-2005   David Reyes    created
+        - 15-Dec-2005   Zombie         created
 */
 ncWayPointClass::~ncWayPointClass()
 {
@@ -47,7 +47,7 @@ ncWayPointClass::~ncWayPointClass()
     @param loaded indicates if the instance is bare new or loaded
 
     history:
-        - 15-Dec-2005   David Reyes    created
+        - 15-Dec-2005   Zombie         created
 */
 void ncWayPointClass::InitInstance(nObject::InitInstanceMsg)
 {

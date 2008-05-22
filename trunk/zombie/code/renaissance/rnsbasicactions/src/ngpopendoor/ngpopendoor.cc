@@ -74,7 +74,7 @@ bool nGPOpenDoor::Init( nEntityObject * entity )
     @param true/false
 
     history:
-        - 07-Dec-2005   David Reyes    created
+        - 07-Dec-2005   Zombie         created
 */
 bool nGPOpenDoor::IsDone() const
 {
@@ -88,7 +88,7 @@ bool nGPOpenDoor::IsDone() const
     @param true/false
 
     history:
-        - 07-Dec-2005   David Reyes    created
+        - 07-Dec-2005   Zombie         created
 */
 bool nGPOpenDoor::Run()
 {

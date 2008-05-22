@@ -338,8 +338,8 @@ private:
     @return world id
 
     history:
-        - 23-Sep-2004   David Reyes   created
-        - 12-Dec-2004   David Reyes    inlined
+        - 23-Sep-2004   Zombie        created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 worldid nPhysicsWorld::Id() const
@@ -354,7 +354,7 @@ worldid nPhysicsWorld::Id() const
     @return joint group
 
     history:
-        - 12-Dec-2004   David Reyes     created
+        - 12-Dec-2004   Zombie          created
 */
 inline
 nPhyJointGroup* nPhysicsWorld::GetJointGroup() const
@@ -369,8 +369,8 @@ nPhyJointGroup* nPhysicsWorld::GetJointGroup() const
     @return boolean specyfing if the objects are created enabled or disabled
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 bool nPhysicsWorld::IsEnabled() const
@@ -387,8 +387,8 @@ bool nPhysicsWorld::IsEnabled() const
     @param gravity  vector giving the gravity effect in each axis of the world
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsWorld::SetGravity( const vector3& gravity )
@@ -407,8 +407,8 @@ void nPhysicsWorld::SetGravity( const vector3& gravity )
     @return vector giving the gravity effect in each axis of the world
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 const vector3& nPhysicsWorld::GetGravity() const
@@ -425,8 +425,8 @@ const vector3& nPhysicsWorld::GetGravity() const
     @return number of physics objects in the world
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 31-Jan-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 int nPhysicsWorld::GetNumPhysicObjs() const
@@ -441,8 +441,8 @@ int nPhysicsWorld::GetNumPhysicObjs() const
     @return a physic object
 
     history:
-        - 23-Sep-2004   David Reyes   created
-        - 31-Jan-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie        created
+        - 31-Jan-2005   Zombie         inlined
 */
 inline
 ncPhysicsObj* nPhysicsWorld::GetPhysicObj( int index ) const
@@ -461,8 +461,8 @@ ncPhysicsObj* nPhysicsWorld::GetPhysicObj( int index ) const
     @param boom an explosion
 
     history:
-        - 25-Nov-2004   David Reyes   created
-        - 31-Jan-2005   David Reyes   inlined
+        - 25-Nov-2004   Zombie        created
+        - 31-Jan-2005   Zombie        inlined
 */
 inline
 void nPhysicsWorld::RegisterExplosion( nPhyBoom& boom )
@@ -479,7 +479,7 @@ void nPhysicsWorld::RegisterExplosion( nPhyBoom& boom )
     @param object a physics object
 
     history:
-        - 21-Apr-2005   David Reyes   created
+        - 21-Apr-2005   Zombie        created
 */
 inline
 void nPhysicsWorld::RegisterPostProcess( ncPhysicsObj* object )
@@ -496,7 +496,7 @@ void nPhysicsWorld::RegisterPostProcess( ncPhysicsObj* object )
     @param object a physics object
 
     history:
-        - 21-Apr-2005   David Reyes   created
+        - 21-Apr-2005   Zombie        created
 */
 inline
 void nPhysicsWorld::UnregisterPostProcess( ncPhysicsObj* object )
@@ -516,8 +516,8 @@ void nPhysicsWorld::UnregisterPostProcess( ncPhysicsObj* object )
     @param object a physics object
 
     history:
-        - 16-Dec-2004   David Reyes   created
-        - 31-Jan-2005   David Reyes   inlined
+        - 16-Dec-2004   Zombie        created
+        - 31-Jan-2005   Zombie        inlined
 */
 inline
 void nPhysicsWorld::UnregisterPreProcess( ncPhysicsObj* object )
@@ -537,8 +537,8 @@ void nPhysicsWorld::UnregisterPreProcess( ncPhysicsObj* object )
     @return joint group
 
     history:
-        - 16-Dec-2004   David Reyes   created
-        - 31-Jan-2005   David Reyes   inlined
+        - 16-Dec-2004   Zombie        created
+        - 31-Jan-2005   Zombie        inlined
 */
 inline
 nPhyJointGroup* nPhysicsWorld::GetGeneralJointGroup() const
@@ -553,8 +553,8 @@ nPhyJointGroup* nPhysicsWorld::GetGeneralJointGroup() const
     @param object a physics object
 
     history:
-        - 16-Dec-2004   David Reyes   created
-        - 31-Jan-2005   David Reyes   inlined
+        - 16-Dec-2004   Zombie        created
+        - 31-Jan-2005   Zombie        inlined
 */
 inline
 void nPhysicsWorld::RegisterPreProcess( ncPhysicsObj* object )
@@ -571,7 +571,7 @@ void nPhysicsWorld::RegisterPreProcess( ncPhysicsObj* object )
     @return steps
 
     history:
-        - 22-Mar-2005   David Reyes   created
+        - 22-Mar-2005   Zombie        created
 */
 inline
 unsigned long nPhysicsWorld::GetStep() const
@@ -586,7 +586,7 @@ unsigned long nPhysicsWorld::GetStep() const
     @return object managers
 
     history:
-        - 27-Jun-2005   David Reyes   created
+        - 27-Jun-2005   Zombie        created
 */
 inline
 phyObjManager* nPhysicsWorld::GetObjectManager()
@@ -601,7 +601,7 @@ phyObjManager* nPhysicsWorld::GetObjectManager()
     @return list of rigid bodies
 
     history:
-        - 27-Jun-2005   David Reyes   created
+        - 27-Jun-2005   Zombie        created
 */
 inline
 nPhysicsWorld::tContainerRigidBodies const& nPhysicsWorld::GetRigidBodies() const

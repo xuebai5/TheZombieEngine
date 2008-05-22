@@ -89,7 +89,7 @@ private:
     @return limb id
 
     history:
-        - 14-Mar-2005   David Reyes    created
+        - 14-Mar-2005   Zombie         created
 */
 inline
 const ncPhyRagDollLimb::rdId ncPhyRagDollLimb::GetLimbId() const

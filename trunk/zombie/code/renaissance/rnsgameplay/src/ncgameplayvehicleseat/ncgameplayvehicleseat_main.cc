@@ -48,7 +48,7 @@ ncGameplayVehicleSeat::~ncGameplayVehicleSeat()
     @param number assigned number
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::SetSeatNumber( const int number )
 {
@@ -62,7 +62,7 @@ void ncGameplayVehicleSeat::SetSeatNumber( const int number )
     @return seat's assigned number
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 const int ncGameplayVehicleSeat::GetSeatNumber() const
 {
@@ -76,7 +76,7 @@ const int ncGameplayVehicleSeat::GetSeatNumber() const
     @return seat's assigned number
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 const vector3& ncGameplayVehicleSeat::GetSeatOffset() const
 {
@@ -90,7 +90,7 @@ const vector3& ncGameplayVehicleSeat::GetSeatOffset() const
     @param newoffset new seat's offset
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::SetSeatOffset(const vector3 newoffset )
 {
@@ -104,7 +104,7 @@ void ncGameplayVehicleSeat::SetSeatOffset(const vector3 newoffset )
     @return vehicle
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 nEntityObject* ncGameplayVehicleSeat::GetVehicle() const
 {
@@ -118,7 +118,7 @@ nEntityObject* ncGameplayVehicleSeat::GetVehicle() const
     @param newvehicle seat's vehicle
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::SetVehicle( nEntityObject* newvehicle )
 {
@@ -132,7 +132,7 @@ void ncGameplayVehicleSeat::SetVehicle( nEntityObject* newvehicle )
     @param frameTime
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::ManagePlayer( const float frameTime )
 {
@@ -154,7 +154,7 @@ void ncGameplayVehicleSeat::ManagePlayer( const float frameTime )
     @param frameTime
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::ManageDriver( const float /*frameTime*/ )
 {
@@ -234,7 +234,7 @@ void ncGameplayVehicleSeat::ManageDriver( const float /*frameTime*/ )
     @return exit position
 
     history:
-        - 25-Jan-2006   David Reyes    created
+        - 25-Jan-2006   Zombie         created
 */
 const vector3& ncGameplayVehicleSeat::GetExitPosition() const
 {
@@ -248,7 +248,7 @@ const vector3& ncGameplayVehicleSeat::GetExitPosition() const
     @param newposition exit position
 
     history:
-        - 02-Feb-2006   David Reyes    created
+        - 02-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::SetExitPosition( const vector3& newposition )
 {
@@ -262,7 +262,7 @@ void ncGameplayVehicleSeat::SetExitPosition( const vector3& newposition )
     @param initType type of initialization
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::InitInstance(nObject::InitInstanceMsg /*initType*/)
 {
@@ -279,7 +279,7 @@ void ncGameplayVehicleSeat::InitInstance(nObject::InitInstanceMsg /*initType*/)
     @return seat's type
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 const int ncGameplayVehicleSeat::GetSeatType() const
 {
@@ -294,7 +294,7 @@ const int ncGameplayVehicleSeat::GetSeatType() const
     @param is true/false
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::SetSeatFree( const bool is )
 {
@@ -308,7 +308,7 @@ void ncGameplayVehicleSeat::SetSeatFree( const bool is )
     @return true/false
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 const bool ncGameplayVehicleSeat::GetSeatFree() const
 {
@@ -322,7 +322,7 @@ const bool ncGameplayVehicleSeat::GetSeatFree() const
     @param newpassanger passenger object
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::SetPassenger (nEntityObject* newpassenger)
 {
@@ -336,7 +336,7 @@ void ncGameplayVehicleSeat::SetPassenger (nEntityObject* newpassenger)
     @return passenger object
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 nEntityObject* ncGameplayVehicleSeat::GetPassenger() const
 {
@@ -350,7 +350,7 @@ nEntityObject* ncGameplayVehicleSeat::GetPassenger() const
     @param frameTime elapsed time between frames
 
     history:
-        - 06-Feb-2006   David Reyes    created
+        - 06-Feb-2006   Zombie         created
 */
 void ncGameplayVehicleSeat::ManageNormal( const float /*frameTime*/ )
 {

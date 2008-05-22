@@ -121,7 +121,7 @@ public:
     @return structure containing the contact info
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 inline
 contactgeom& nPhyCollide::nContact::GetContact()
@@ -136,7 +136,7 @@ contactgeom& nPhyCollide::nContact::GetContact()
     @return structure containing the contact info
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 inline
 const contactgeom& nPhyCollide::nContact::GetContact() const
@@ -151,7 +151,7 @@ const contactgeom& nPhyCollide::nContact::GetContact() const
     @param contact a vector with the position of the contact
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 inline
 void nPhyCollide::nContact::GetContactPosition( vector3& contact ) const
@@ -166,7 +166,7 @@ void nPhyCollide::nContact::GetContactPosition( vector3& contact ) const
     @param a vector with the normal of the contact
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 inline
 void nPhyCollide::nContact::GetContactNormal( vector3& normal ) const
@@ -181,7 +181,7 @@ void nPhyCollide::nContact::GetContactNormal( vector3& normal ) const
     @return Penetration Depth
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 inline
 phyreal nPhyCollide::nContact::GetContactPenetrationDepth() const
@@ -196,7 +196,7 @@ phyreal nPhyCollide::nContact::GetContactPenetrationDepth() const
     @return geometry id
 
     history:
-        - 28-Sep-2004   David Reyes    created
+        - 28-Sep-2004   Zombie         created
 */
 inline
 geomid nPhyCollide::nContact::GetGeometryIdA() const
@@ -211,7 +211,7 @@ geomid nPhyCollide::nContact::GetGeometryIdA() const
     @return geometry id
 
     history:
-        - 28-Sep-2004   David Reyes    created
+        - 28-Sep-2004   Zombie         created
 */
 inline
 geomid nPhyCollide::nContact::GetGeometryIdB() const
@@ -226,7 +226,7 @@ geomid nPhyCollide::nContact::GetGeometryIdB() const
     @return geometry
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 inline
 nPhysicsGeom* nPhyCollide::nContact::GetGeometryA() const
@@ -241,7 +241,7 @@ nPhysicsGeom* nPhyCollide::nContact::GetGeometryA() const
     @return geometry
 
     history:
-        - 11-Oct-2004   David Reyes    created
+        - 11-Oct-2004   Zombie         created
 */
 inline
 nPhysicsGeom* nPhyCollide::nContact::GetGeometryB() const

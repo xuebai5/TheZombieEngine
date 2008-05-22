@@ -928,7 +928,7 @@ ncGameplayPlayer::SetRightLean( bool activate )
     @param newstate new player's state
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
 
 */
 void ncGameplayPlayer::SetState( const state newstate )
@@ -960,7 +960,7 @@ void ncGameplayPlayer::SetState( const state newstate )
     @return player's state
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 const ncGameplayPlayer::state ncGameplayPlayer::GetState() const
@@ -973,7 +973,7 @@ const ncGameplayPlayer::state ncGameplayPlayer::GetState() const
     Deactivates player's physics.
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 void ncGameplayPlayer::DeactivePhysics()
@@ -987,7 +987,7 @@ void ncGameplayPlayer::DeactivePhysics()
     Activates player's physics.
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 void ncGameplayPlayer::ActivatePhysics()
@@ -1003,7 +1003,7 @@ void ncGameplayPlayer::ActivatePhysics()
     @return the seat entity
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 nEntityObject* ncGameplayPlayer::GetSeat() const
@@ -1018,7 +1018,7 @@ nEntityObject* ncGameplayPlayer::GetSeat() const
     @param newseat a seat entity
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 void ncGameplayPlayer::SetSeat( nEntityObject* newseat )
@@ -1077,7 +1077,7 @@ ncGameplayPlayer::GetSpecialEquipment( int equipment ) const
     @return the players physics object (not collision). 
 
     history:
-     - 27-Jan-2006   David Reyes    created
+     - 27-Jan-2006   Zombie         created
    
 */
 ncPhyCharacter* ncGameplayPlayer::GetPlayersPhysics()

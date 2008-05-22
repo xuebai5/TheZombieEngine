@@ -248,8 +248,8 @@ private:
     @return the ragdoll head
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetHeadObj() const
@@ -264,8 +264,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetHeadObj() const
     @return the ragdoll left arm
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetLeftArm() const
@@ -280,8 +280,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetLeftArm() const
     @return the ragdoll right arm
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetRightArm() const
@@ -296,8 +296,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetRightArm() const
     @return the ragdoll left fore arm
     
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetLeftForeArm() const
@@ -312,8 +312,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetLeftForeArm() const
     @return the ragdoll right fore arm
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetRightForeArm() const
@@ -328,8 +328,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetRightForeArm() const
     @return the ragdoll left leg
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetLeftLeg() const
@@ -344,8 +344,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetLeftLeg() const
     @return the ragdoll right leg
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetRightLeg() const
@@ -360,8 +360,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetRightLeg() const
     @return the ragdoll fore left leg
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetForeLeftLeg() const
@@ -376,8 +376,8 @@ ncPhyRagDollLimb* ncPhyHumRagDoll::GetForeLeftLeg() const
     @return the ragdoll fore right leg
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 ncPhyRagDollLimb* ncPhyHumRagDoll::GetForeRightLeg() const

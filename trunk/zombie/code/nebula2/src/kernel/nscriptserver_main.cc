@@ -247,7 +247,7 @@ nScriptServer::Trigger()
 /**
     Adds the last ouput.
 
-     - 27-May-2005   David Reyes    created
+     - 27-May-2005   Zombie         created
 */
 void 
 nScriptServer::AddOutput( const nString& output )
@@ -268,7 +268,7 @@ nScriptServer::AddOutput( const nString& output )
 /**
     Adds a last output without jumping a line.
 
-     - 27-May-2005   David Reyes    created
+     - 27-May-2005   Zombie         created
 */
 void nScriptServer::AppendOutput( const nString& output )
 {
@@ -288,7 +288,7 @@ void nScriptServer::AppendOutput( const nString& output )
 /**
     Returns the last output line and flushes it.
 
-     - 27-May-2005   David Reyes    created
+     - 27-May-2005   Zombie         created
 */
 bool nScriptServer::FlushLastOutput( nString& output )
 {

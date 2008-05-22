@@ -14,7 +14,7 @@ nNebulaComponentObject(ncPhyAreaDensity,ncPhySimpleObj);
     Constructor
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 ncPhyAreaDensity::ncPhyAreaDensity() :
     fluidResistance(0)
@@ -27,7 +27,7 @@ ncPhyAreaDensity::ncPhyAreaDensity() :
     Destructor
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 ncPhyAreaDensity::~ncPhyAreaDensity()
 {
@@ -43,7 +43,7 @@ ncPhyAreaDensity::~ncPhyAreaDensity()
     @return if it's under the fluid
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 bool ncPhyAreaDensity::IsUnderFluid( const nPhysicsAABB& /*box*/ ) const
 {
@@ -56,7 +56,7 @@ bool ncPhyAreaDensity::IsUnderFluid( const nPhysicsAABB& /*box*/ ) const
     Process function.
 
     history:
-        - 14-Jan-2005   David Reyes    created
+        - 14-Jan-2005   Zombie         created
 */
 void ncPhyAreaDensity::PreProcess()
 {
@@ -101,7 +101,7 @@ void ncPhyAreaDensity::PreProcess()
     @return if any collision was processed
 
     history:
-        - 17-Jan-2005   David Reyes    created
+        - 17-Jan-2005   Zombie         created
 */
 bool ncPhyAreaDensity::CollisionProcess( int /*numContacts*/, nPhyCollide::nContact* /*contacts*/ )
 {
@@ -115,7 +115,7 @@ bool ncPhyAreaDensity::CollisionProcess( int /*numContacts*/, nPhyCollide::nCont
     @param obj object that will be resisted by the fluid
 
     history:
-        - 17-Mar-2005   David Reyes    created
+        - 17-Mar-2005   Zombie         created
 */
 void ncPhyAreaDensity::Resistance( ncPhysicsObj* obj )
 {
@@ -148,7 +148,7 @@ void ncPhyAreaDensity::Resistance( ncPhysicsObj* obj )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 17-May-2005   David Reyes    created
+        - 17-May-2005   Zombie         created
 */
 void ncPhyAreaDensity::InitInstance(nObject::InitInstanceMsg initType)
 {

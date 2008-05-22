@@ -16,7 +16,7 @@ nNebulaScriptClass(nPhyBoom, "nobject");
     Constructor.
 
     history:
-        - 25-Oct-2004   David Reyes    created
+        - 25-Oct-2004   Zombie         created
 */
 nPhyBoom::nPhyBoom() :
     boomForce(0),
@@ -32,7 +32,7 @@ nPhyBoom::nPhyBoom() :
     Destructor.
 
     history:
-        - 25-Oct-2004   David Reyes    created
+        - 25-Oct-2004   Zombie         created
 */
 nPhyBoom::~nPhyBoom()
 {
@@ -46,7 +46,7 @@ nPhyBoom::~nPhyBoom()
     @param world world where this explosion will live
 
     history:
-        - 25-Oct-2004   David Reyes    created
+        - 25-Oct-2004   Zombie         created
 */
 void nPhyBoom::GoBoomAt( const vector3& position ) 
 {
@@ -66,7 +66,7 @@ void nPhyBoom::GoBoomAt( const vector3& position )
     @param boom     an explosion
 
     history:
-        - 25-Oct-2004   David Reyes    created
+        - 25-Oct-2004   Zombie         created
 */
 nPhyBoom& nPhyBoom::operator = ( const nPhyBoom& boom )
 {
@@ -88,7 +88,7 @@ nPhyBoom& nPhyBoom::operator = ( const nPhyBoom& boom )
     @return last registered explosion position
 
     history:
-        - 25-Oct-2004   David Reyes    created
+        - 25-Oct-2004   Zombie         created
 */
 bool nPhyBoom::IsAffected( const nPhyRigidBody* body ) const
 {
@@ -207,7 +207,7 @@ bool nPhyBoom::IsAffected( const nPhyRigidBody* body ) const
     @param point where the blast has happened
 
     history:
-        - 02-Dec-2004   David Reyes    created
+        - 02-Dec-2004   Zombie         created
 */
 bool nPhyBoom::IsBlastAffected( const vector3& point ) const
 {

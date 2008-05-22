@@ -199,7 +199,7 @@ private:
     @return cell number
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */
 inline
 int ncPhyTerrain::GetNumberOfCells() const
@@ -215,7 +215,7 @@ int ncPhyTerrain::GetNumberOfCells() const
     @return terrain cell
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */
 inline
 ncPhyTerrainCell* ncPhyTerrain::GetTerrainCell( int index ) const
@@ -237,7 +237,7 @@ ncPhyTerrainCell* ncPhyTerrain::GetTerrainCell( int index ) const
     @return cell lenght
 
     history:
-        - 27-Jun-2005   David Reyes    created
+        - 27-Jun-2005   Zombie         created
 */
 inline
 int ncPhyTerrain::GetLenghtCell() const
@@ -252,7 +252,7 @@ int ncPhyTerrain::GetLenghtCell() const
     @return associated heightmap
 
     history:
-        - 28-Jun-2005   David Reyes    created
+        - 28-Jun-2005   Zombie         created
 */
 inline
 nFloatMap* ncPhyTerrain::GetHeightMapInfo() const

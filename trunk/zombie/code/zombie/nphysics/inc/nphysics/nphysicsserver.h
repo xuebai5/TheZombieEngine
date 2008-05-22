@@ -306,8 +306,8 @@ private:
     @return nObject object
 
     history:
-        - 04-Oct-2004   David Reyes    created
-        - 01-Jan-2005   David Reyes    inlined
+        - 04-Oct-2004   Zombie         created
+        - 01-Jan-2005   Zombie         inlined
 */
 inline
 nObject* nPhysicsServer::GetPhysicsObjects() const
@@ -322,8 +322,8 @@ nObject* nPhysicsServer::GetPhysicsObjects() const
     @return world
 
     history:
-        - 27-Oct-2004   David Reyes    created
-        - 01-Jan-2005   David Reyes    inlined
+        - 27-Oct-2004   Zombie         created
+        - 01-Jan-2005   Zombie         inlined
 */
 inline
 nPhysicsWorld* nPhysicsServer::GetWorldBeenProcessed()
@@ -340,8 +340,8 @@ nPhysicsWorld* nPhysicsServer::GetWorldBeenProcessed()
     @return real value
 
     history:
-        - 27-Oct-2004   David Reyes    created
-        - 01-Jan-2005   David Reyes    inlined
+        - 27-Oct-2004   Zombie         created
+        - 01-Jan-2005   Zombie         inlined
 */
 inline
 phyreal nPhysicsServer::Proportion( const phyreal value )
@@ -356,8 +356,8 @@ phyreal nPhysicsServer::Proportion( const phyreal value )
     @return real value
 
     history:
-        - 27-Oct-2004   David Reyes    created
-        - 01-Jan-2005   David Reyes    inlined
+        - 27-Oct-2004   Zombie         created
+        - 01-Jan-2005   Zombie         inlined
 */
 inline
 phyreal nPhysicsServer::SpeedServerInFrames()
@@ -372,8 +372,8 @@ phyreal nPhysicsServer::SpeedServerInFrames()
     @param world    the world to be added to the container
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsServer::Add( nPhysicsWorld* world )
@@ -390,8 +390,8 @@ void nPhysicsServer::Add( nPhysicsWorld* world )
     @param world    the world to be removed from the container
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 11-May-2005   David Reyes    inlined
+        - 23-Sep-2004   Zombie         created
+        - 11-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsServer::Remove( nPhysicsWorld* world )
@@ -409,7 +409,7 @@ void nPhysicsServer::Remove( nPhysicsWorld* world )
 
     history:
         - 10-Feb-2005   Ismael Noche    created
-        - 11-May-2005   David Reyes    inlined
+        - 11-May-2005   Zombie         inlined
 */
 inline
 const nPhysicsServer::tContainerWorlds& nPhysicsServer::GetWorldsContainer() const
@@ -424,7 +424,7 @@ const nPhysicsServer::tContainerWorlds& nPhysicsServer::GetWorldsContainer() con
     @param newstat server's state
 
     history:
-        - 31-May-2005   David Reyes    created
+        - 31-May-2005   Zombie         created
 */
 inline
 void nPhysicsServer::SetState( state newstate )
@@ -439,7 +439,7 @@ void nPhysicsServer::SetState( state newstate )
     @return server's state
 
     history:
-        - 31-May-2005   David Reyes    created
+        - 31-May-2005   Zombie         created
 */
 inline
 nPhysicsServer::state nPhysicsServer::GetState() const
@@ -453,7 +453,7 @@ nPhysicsServer::state nPhysicsServer::GetState() const
     Set what to draw.
 
     history:
-        - 02-Jun-2005   David Reyes    created
+        - 02-Jun-2005   Zombie         created
 */
 inline
 void nPhysicsServer::SetDraw( int drawflags )
@@ -466,7 +466,7 @@ void nPhysicsServer::SetDraw( int drawflags )
     Returns draw flags.
 
     history:
-        - 02-Jun-2005   David Reyes    created
+        - 02-Jun-2005   Zombie         created
 */
 inline
 int nPhysicsServer::GetDraw() const

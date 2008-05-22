@@ -15,7 +15,7 @@
     Constructor
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 ncPhyCompositeObj::ncPhyCompositeObj() :
     containerGeometries(NumInitialGeometries,NumGrowthGeometries),
@@ -30,7 +30,7 @@ ncPhyCompositeObj::ncPhyCompositeObj() :
     Destructor
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 ncPhyCompositeObj::~ncPhyCompositeObj()
 {
@@ -56,7 +56,7 @@ ncPhyCompositeObj::~ncPhyCompositeObj()
     @param geometry  geometry to be added
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void ncPhyCompositeObj::AddContainer( nPhysicsGeom* geometry )
 {
@@ -82,7 +82,7 @@ void ncPhyCompositeObj::AddContainer( nPhysicsGeom* geometry )
     @param geometry  geometry to be removed
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void ncPhyCompositeObj::RemoveContainer( nPhysicsGeom* geometry )
 {
@@ -100,7 +100,7 @@ void ncPhyCompositeObj::RemoveContainer( nPhysicsGeom* geometry )
     @param geometry  geometry to be added
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 
 void ncPhyCompositeObj::Add( nPhysicsGeom* geometry )
@@ -131,7 +131,7 @@ void ncPhyCompositeObj::Add( nPhysicsGeom* geometry )
     @param geometry  geometry to be removed
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhyCompositeObj::Remove( nPhysicsGeom* geometry )
 {
@@ -154,7 +154,7 @@ void ncPhyCompositeObj::Remove( nPhysicsGeom* geometry )
     @param newposition  new position
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhyCompositeObj::SetPosition( const vector3& newposition )
 {
@@ -198,7 +198,7 @@ void ncPhyCompositeObj::SetPosition( const vector3& newposition )
     @param neworientation  new orientation
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhyCompositeObj::SetRotation( const matrix33& neworientation )
 {
@@ -226,7 +226,7 @@ void ncPhyCompositeObj::SetRotation( const matrix33& neworientation )
     @param az   orientation in the z axis
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhyCompositeObj::SetRotation( phyreal ax, phyreal ay, phyreal az )
 {
@@ -244,7 +244,7 @@ void ncPhyCompositeObj::SetRotation( phyreal ax, phyreal ay, phyreal az )
     @param body new object body
 
     history:
-        - 19-Oct-2004   David Reyes    created
+        - 19-Oct-2004   Zombie         created
 */
 void ncPhyCompositeObj::SetBody( nPhyRigidBody* body )
 {
@@ -263,7 +263,7 @@ void ncPhyCompositeObj::SetBody( nPhyRigidBody* body )
     Enables the physic object.
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhyCompositeObj::Enable()
 {
@@ -286,7 +286,7 @@ void ncPhyCompositeObj::Enable()
     Disables the physic object.
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhyCompositeObj::Disable()
 {
@@ -312,7 +312,7 @@ void ncPhyCompositeObj::Disable()
     @param newspace the new object's space
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhyCompositeObj::MoveToSpace( nPhySpace* newspace )
 {
@@ -342,7 +342,7 @@ void ncPhyCompositeObj::MoveToSpace( nPhySpace* newspace )
     @return number of contacts found
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 int ncPhyCompositeObj::Collide( const nPhysicsGeom* geom,
     int numContacts, nPhyCollide::nContact* contact ) const
@@ -396,7 +396,7 @@ int ncPhyCompositeObj::Collide( const nPhysicsGeom* geom,
     @return number of contacts found
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 int ncPhyCompositeObj::Collide( const ncPhysicsObj* obj,
     int numContacts, nPhyCollide::nContact* contact ) const
@@ -448,7 +448,7 @@ int ncPhyCompositeObj::Collide( const ncPhysicsObj* obj,
     @param material material id
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhyCompositeObj::SetMaterial( nPhyMaterial::idmaterial material )
 {
@@ -468,7 +468,7 @@ void ncPhyCompositeObj::SetMaterial( nPhyMaterial::idmaterial material )
     @param material material id
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhyCompositeObj::GetAABB( nPhysicsAABB& boundingbox )
 {
@@ -505,7 +505,7 @@ void ncPhyCompositeObj::GetAABB( nPhysicsAABB& boundingbox )
     @param world it's the world where the object will be come to existance
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhyCompositeObj::Create( nPhysicsWorld* world )
 {
@@ -606,7 +606,7 @@ void ncPhyCompositeObj::Create( nPhysicsWorld* world )
     @param rotation matrix33 that will be filled with the object orientation
 
     history:
-        - 08-Apr-2005   David Reyes    created
+        - 08-Apr-2005   Zombie         created
 */
 void ncPhyCompositeObj::GetOrientation( matrix33& rotation )
 {
@@ -636,7 +636,7 @@ void ncPhyCompositeObj::GetOrientation( matrix33& rotation )
     @param loaded indicates if the instance is bare new of loaded
     
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyCompositeObj::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -652,7 +652,7 @@ void ncPhyCompositeObj::InitInstance(nObject::InitInstanceMsg initType)
     @return the created geometry
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 nPhysicsGeom* ncPhyCompositeObj::CreateGeometryObj( const nString& name ) 
 {
@@ -676,7 +676,7 @@ nPhysicsGeom* ncPhyCompositeObj::CreateGeometryObj( const nString& name )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void ncPhyCompositeObj::Scale( const phyreal factor )
 {
@@ -708,7 +708,7 @@ void ncPhyCompositeObj::Scale( const phyreal factor )
     @return number of contacts reported
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 int ncPhyCompositeObj::Collide( int numContacts, nPhyCollide::nContact* contact ) const
 {
@@ -734,7 +734,7 @@ int ncPhyCompositeObj::Collide( int numContacts, nPhyCollide::nContact* contact 
     @param categories bit's mask with the a new set of categories
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 void ncPhyCompositeObj::SetCategories( int categories ) 
 {
@@ -761,7 +761,7 @@ void ncPhyCompositeObj::SetCategories( int categories )
     @param categories bit's mask with the a new set of categories
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 void ncPhyCompositeObj::SetCollidesWith( int categories ) 
 {
@@ -789,7 +789,7 @@ void ncPhyCompositeObj::SetCollidesWith( int categories )
     @param category a category
 
     history:
-        - 13-Jun-2005   David Reyes    created
+        - 13-Jun-2005   Zombie         created
 */
 void ncPhyCompositeObj::RemovesCollidesWith( int category )
 {
@@ -808,7 +808,7 @@ void ncPhyCompositeObj::RemovesCollidesWith( int category )
     Creates composite space.
 
     history:
-        - 18-Jul-2005   David Reyes    created
+        - 18-Jul-2005   Zombie         created
 */
 void ncPhyCompositeObj::CreateSpace()
 {
@@ -825,7 +825,7 @@ void ncPhyCompositeObj::CreateSpace()
     @param is specifies if the object can create a sub-space
 
     history:
-        - 18-Jul-2005   David Reyes    created
+        - 18-Jul-2005   Zombie         created
 */
 void ncPhyCompositeObj::AllowCreateSubSpace( const bool is )
 {

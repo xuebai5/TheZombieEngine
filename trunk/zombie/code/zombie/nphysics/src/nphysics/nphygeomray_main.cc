@@ -18,7 +18,7 @@ nNebulaScriptClass(nPhyGeomRay, "nphysicsgeom");
     Constructor
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 nPhyGeomRay::nPhyGeomRay() : 
     lengthRay( DefaultLength )
@@ -33,7 +33,7 @@ nPhyGeomRay::nPhyGeomRay() :
     Destructor
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 nPhyGeomRay::~nPhyGeomRay()
 {
@@ -45,8 +45,8 @@ nPhyGeomRay::~nPhyGeomRay()
     Creates the geometry
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 01-Oct-2004   David Reyes    supress name
+        - 24-Sep-2004   Zombie         created
+        - 01-Oct-2004   Zombie         supress name
 */
 void nPhyGeomRay::Create()
 {
@@ -68,7 +68,7 @@ void nPhyGeomRay::Create()
     @param server  graphic server
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 void nPhyGeomRay::Draw( nGfxServer2* server )
 {
@@ -101,7 +101,7 @@ void nPhyGeomRay::Draw( nGfxServer2* server )
     @param position  end position
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 void nPhyGeomRay::GetEndPosition( vector3& position ) const
 {
@@ -127,7 +127,7 @@ void nPhyGeomRay::GetEndPosition( vector3& position ) const
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyGeomRay::Scale( const phyreal factor )
 {

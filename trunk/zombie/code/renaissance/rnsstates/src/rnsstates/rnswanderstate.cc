@@ -44,7 +44,7 @@ namespace
     Default constructor.
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 RnsWanderState::RnsWanderState() :
     input(0),
@@ -68,7 +68,7 @@ RnsWanderState::RnsWanderState() :
     Destructor.
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 RnsWanderState::~RnsWanderState()
 {
@@ -84,7 +84,7 @@ RnsWanderState::~RnsWanderState()
     @param application application running this state
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnCreate(nApplication* application)
 {
@@ -126,7 +126,7 @@ void RnsWanderState::OnCreate(nApplication* application)
     @param prevState string id of an state
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnStateEnter(const nString& prevState)
 {
@@ -173,7 +173,7 @@ void RnsWanderState::OnStateEnter(const nString& prevState)
     @param prevState string id of an state
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnStateLeave(const nString& nextState)
 {
@@ -193,7 +193,7 @@ void RnsWanderState::OnStateLeave(const nString& nextState)
     Called on state to perform state logic.
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnFrame()
 {
@@ -231,7 +231,7 @@ void RnsWanderState::OnFrame()
     Called on state to perform 3d rendering.
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnRender3D()
 {
@@ -245,7 +245,7 @@ void RnsWanderState::OnRender3D()
     Called on state to perform 2d rendering.
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnRender2D()
 {
@@ -260,7 +260,7 @@ void RnsWanderState::OnRender2D()
     Called before nSceneServer::RenderScene().
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnFrameBefore()
 {
@@ -272,7 +272,7 @@ void RnsWanderState::OnFrameBefore()
     Called after nSceneServer::RenderScene()
 
     history:
-        - 05-Oct-2005   David Reyes    created
+        - 05-Oct-2005   Zombie         created
 */
 void RnsWanderState::OnFrameRendered()
 {
@@ -284,7 +284,7 @@ void RnsWanderState::OnFrameRendered()
     Prepares viewport.
 
     history:
-        - 24-Oct-2005   David Reyes    created
+        - 24-Oct-2005   Zombie         created
 */
 void RnsWanderState::PrepareViewPort()
 {
@@ -308,7 +308,7 @@ void RnsWanderState::PrepareViewPort()
     Updates input information.
 
     history:
-        - 24-Oct-2005   David Reyes    created
+        - 24-Oct-2005   Zombie         created
 */
 void RnsWanderState::UpdateInput()
 {
@@ -444,7 +444,7 @@ void RnsWanderState::UpdateInput()
     Creates the player information.
 
     history:
-        - 25-Oct-2005   David Reyes    created
+        - 25-Oct-2005   Zombie         created
 */
 void RnsWanderState::CreatePlayer()
 {
@@ -470,7 +470,7 @@ void RnsWanderState::CreatePlayer()
     Destroys info.
 
     history:
-        - 25-Oct-2005   David Reyes    created
+        - 25-Oct-2005   Zombie         created
 */
 void RnsWanderState::Destroy()
 {
@@ -497,7 +497,7 @@ void RnsWanderState::Destroy()
     Sets the previous viewport.
 
     history:
-        - 25-Oct-2005   David Reyes    created
+        - 25-Oct-2005   Zombie         created
 */
 void RnsWanderState::SetPreviousViewport( nAppViewport* prevViewport )
 {
@@ -509,7 +509,7 @@ void RnsWanderState::SetPreviousViewport( nAppViewport* prevViewport )
     Updates camera.
 
     history:
-        - 25-Oct-2005   David Reyes    created
+        - 25-Oct-2005   Zombie         created
 */
 void RnsWanderState::UpdateCamera()
 {
@@ -521,7 +521,7 @@ void RnsWanderState::UpdateCamera()
     Manage player movement.
 
     history:
-        - 26-Oct-2005   David Reyes    created
+        - 26-Oct-2005   Zombie         created
 */
 void RnsWanderState::UpdatePlayerMovement()
 {
@@ -560,7 +560,7 @@ void RnsWanderState::UpdatePlayerMovement()
     Creates a graphic dummy representing the player.
 
     history:
-        - 26-Oct-2005   David Reyes    created
+        - 26-Oct-2005   Zombie         created
 */
 void RnsWanderState::CreateGraphicDummy()
 {

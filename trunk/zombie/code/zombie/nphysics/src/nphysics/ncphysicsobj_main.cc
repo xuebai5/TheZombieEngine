@@ -25,8 +25,8 @@ const phyreal ncPhysicsObj::NoImpactReport( phyreal(-1.) );
     Constructor
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 04-Oct-2004   David Reyes    adding itself to the physics server
+        - 24-Sep-2004   Zombie         created
+        - 04-Oct-2004   Zombie         adding itself to the physics server
 */
 ncPhysicsObj::ncPhysicsObj() :
     enabled(true),
@@ -62,7 +62,7 @@ ncPhysicsObj::ncPhysicsObj() :
     Destructor
 
     history:
-        - 24-Sep-2004   David Reyes    created
+        - 24-Sep-2004   Zombie         created
 */
 ncPhysicsObj::~ncPhysicsObj()
 {
@@ -95,8 +95,8 @@ ncPhysicsObj::~ncPhysicsObj()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 24-Sep-2004   David Reyes    created
-        - 01-Oct-2004   David Reyes    supressed name
+        - 24-Sep-2004   Zombie         created
+        - 01-Oct-2004   Zombie         supressed name
 */
 void ncPhysicsObj::Create( nPhysicsWorld* world )
 {
@@ -135,7 +135,7 @@ void ncPhysicsObj::Create( nPhysicsWorld* world )
     @param nGfxServer2  drawing server
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 #ifndef NGAME
 void ncPhysicsObj::Draw( nGfxServer2* /*server*/ )
@@ -157,7 +157,7 @@ void ncPhysicsObj::Draw( nGfxServer2* /*server*/ )
     @param category category flags
 
     history:
-        - 13-Jun-2004   David Reyes    created
+        - 13-Jun-2004   Zombie         created
 */
 void ncPhysicsObj::RemovesCollidesWith( int category )
 {
@@ -178,8 +178,8 @@ void ncPhysicsObj::RemovesCollidesWith( int category )
     @return number of contacts found
 
     history:
-        - 15-Oct-2004   David Reyes    created
-        - 29-Nov-2004   David Reyes    virtualized
+        - 15-Oct-2004   Zombie         created
+        - 29-Nov-2004   Zombie         virtualized
 */
 int ncPhysicsObj::Collide( const ncPhysicsObj* /*obj*/,
     int /*numContacts*/, nPhyCollide::nContact* /*contact*/ ) const
@@ -199,8 +199,8 @@ int ncPhysicsObj::Collide( const ncPhysicsObj* /*obj*/,
     @return number of contacts found
 
     history:
-        - 15-Oct-2004   David Reyes    created
-        - 29-Nov-2004   David Reyes    virtualized
+        - 15-Oct-2004   Zombie         created
+        - 29-Nov-2004   Zombie         virtualized
 */
 int ncPhysicsObj::Collide( const nPhysicsGeom* /*geom*/,
     int /*numContacts*/, nPhyCollide::nContact* /*contact*/ ) const
@@ -216,7 +216,7 @@ int ncPhysicsObj::Collide( const nPhysicsGeom* /*geom*/,
     @param newposition  sets the new position of this object
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhysicsObj::SetPosition( const vector3& newposition )
 {
@@ -239,7 +239,7 @@ void ncPhysicsObj::SetPosition( const vector3& newposition )
     @param newrotation  sets the new rotation of this object
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhysicsObj::SetRotation( const matrix33& newrotation )
 {
@@ -269,7 +269,7 @@ void ncPhysicsObj::SetRotation( const matrix33& newrotation )
     @param az angle orientation for the z-axis
 
     history:
-        - 16-Mar-2005   David Reyes    created
+        - 16-Mar-2005   Zombie         created
 */
 void ncPhysicsObj::SetRotation( phyreal ax, phyreal ay, phyreal az )
 {
@@ -293,7 +293,7 @@ void ncPhysicsObj::SetRotation( phyreal ax, phyreal ay, phyreal az )
     @param position returned position
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhysicsObj::GetPosition( vector3& position ) const
 {
@@ -307,7 +307,7 @@ void ncPhysicsObj::GetPosition( vector3& position ) const
     @param rotation matrix33
 
     history:
-        - 18-Oct-2004   David Reyes    created
+        - 18-Oct-2004   Zombie         created
 */
 void ncPhysicsObj::GetOrientation( matrix33& /*rotation*/ )
 {
@@ -321,7 +321,7 @@ void ncPhysicsObj::GetOrientation( matrix33& /*rotation*/ )
     @param boundingbox axis aligned bounding box
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhysicsObj::GetAABB( nPhysicsAABB& /*boundingbox*/ )
 {
@@ -334,7 +334,7 @@ void ncPhysicsObj::GetAABB( nPhysicsAABB& /*boundingbox*/ )
     Function to be process b4 running the simulation.
 
     history:
-        - 13-Dec-2004   David Reyes    created
+        - 13-Dec-2004   Zombie         created
 */
 void ncPhysicsObj::PreProcess()
 {
@@ -346,7 +346,7 @@ void ncPhysicsObj::PreProcess()
     Registers the object for process.
 
     history:
-        - 13-Dec-2004   David Reyes    created
+        - 13-Dec-2004   Zombie         created
 */
 void ncPhysicsObj::RegisterForPreProcess()
 {
@@ -367,7 +367,7 @@ void ncPhysicsObj::RegisterForPreProcess()
     Unregisters the object for process.
 
     history:
-        - 13-Dec-2004   David Reyes    created
+        - 13-Dec-2004   Zombie         created
 */
 void ncPhysicsObj::UnregisterForPreProcess()
 {
@@ -384,7 +384,7 @@ void ncPhysicsObj::UnregisterForPreProcess()
     Function to be process after running the simulation.
 
     history:
-        - 21-Apr-2005   David Reyes    created
+        - 21-Apr-2005   Zombie         created
 */
 void ncPhysicsObj::PostProcess()
 {
@@ -396,7 +396,7 @@ void ncPhysicsObj::PostProcess()
     Registers the object for post process.
 
     history:
-        - 21-Apr-2005   David Reyes    created
+        - 21-Apr-2005   Zombie         created
 */
 void ncPhysicsObj::RegisterForPostProcess()
 {
@@ -417,7 +417,7 @@ void ncPhysicsObj::RegisterForPostProcess()
     Unregisters the object for post process.
 
     history:
-        - 21-Apr-2005   David Reyes    created
+        - 21-Apr-2005   Zombie         created
 */
 void ncPhysicsObj::UnregisterForPostProcess()
 {
@@ -441,7 +441,7 @@ void ncPhysicsObj::UnregisterForPostProcess()
     @return if any collision was processed
 
     history:
-        - 17-Jan-2005   David Reyes    created
+        - 17-Jan-2005   Zombie         created
 */
 bool ncPhysicsObj::CollisionProcess( int /*numContacts*/, nPhyCollide::nContact* contacts )
 {
@@ -500,7 +500,7 @@ bool ncPhysicsObj::CollisionProcess( int /*numContacts*/, nPhyCollide::nContact*
     @param info impact information
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 void ncPhysicsObj::OnImpact( const tImpactInfo& /*info*/ )
 {
@@ -512,7 +512,7 @@ void ncPhysicsObj::OnImpact( const tImpactInfo& /*info*/ )
     Resets the physics.
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 void ncPhysicsObj::Reset()
 {
@@ -532,7 +532,7 @@ void ncPhysicsObj::Reset()
     @param cjoint contact joint
 
     history:
-        - 22-Apr-2005   David Reyes    created
+        - 22-Apr-2005   Zombie         created
 */
 void ncPhysicsObj::ProcessDynamicMaterial( nPhyContactJoint* cjoint )
 {
@@ -546,7 +546,7 @@ void ncPhysicsObj::ProcessDynamicMaterial( nPhyContactJoint* cjoint )
     @param is true/false rotation object
 
     history:
-        - 26-Apr-2005   David Reyes    created
+        - 26-Apr-2005   Zombie         created
 */
 void ncPhysicsObj::SetFastRotatingObject( const bool is )
 {
@@ -565,7 +565,7 @@ void ncPhysicsObj::SetFastRotatingObject( const bool is )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhysicsObj::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -639,7 +639,7 @@ void ncPhysicsObj::InitInstance(nObject::InitInstanceMsg initType)
     @param transform new object's transformation
 
     history:
-        - 11-May-2005   David Reyes    created
+        - 11-May-2005   Zombie         created
 */
 void ncPhysicsObj::Update( const matrix44& transform )
 {
@@ -663,7 +663,7 @@ void ncPhysicsObj::Update( const matrix44& transform )
     Sets to update transfrom info.
 
     history:
-        - 11-May-2005   David Reyes    created
+        - 11-May-2005   Zombie         created
 */
 void ncPhysicsObj::UpdateTransformInfo()
 {
@@ -709,7 +709,7 @@ void ncPhysicsObj::UpdateTransformInfo()
     @return number of contacts reported
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 int ncPhysicsObj::Collide( int /*numContacts*/, nPhyCollide::nContact* /*contact*/ ) const
 {
@@ -723,7 +723,7 @@ int ncPhysicsObj::Collide( int /*numContacts*/, nPhyCollide::nContact* /*contact
     @param cat categories flags
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 void ncPhysicsObj::SetCategories(int cat) 
 {
@@ -737,7 +737,7 @@ void ncPhysicsObj::SetCategories(int cat)
     @param cat categories flags
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 void ncPhysicsObj::SetCollidesWith(int cat) 
 {
@@ -751,7 +751,7 @@ void ncPhysicsObj::SetCollidesWith(int cat)
     @param categories flags
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */
 int ncPhysicsObj::GetCategories() const
 {
@@ -766,7 +766,7 @@ int ncPhysicsObj::GetCategories() const
     @param categories flags
 
     history:
-        - 03-Jun-2005   David Reyes    created
+        - 03-Jun-2005   Zombie         created
 */
 int ncPhysicsObj::GetCollidesWith() const
 {
@@ -780,7 +780,7 @@ int ncPhysicsObj::GetCollidesWith() const
     @param name space name
 
     history:
-        - 02-Jun-2005   David Reyes    created
+        - 02-Jun-2005   Zombie         created
 */
 #ifdef __ZOMBIE_EXPORTER__
 void ncPhysicsObj::SetSpaceByName( const nString& name ) 
@@ -806,7 +806,7 @@ void ncPhysicsObj::SetSpaceByName( const nString& name )
     Alienates the object from relations.
 
     history:
-        - 02-Jun-2005   David Reyes    created
+        - 02-Jun-2005   Zombie         created
 */
 void ncPhysicsObj::Alienate()
 {
@@ -831,7 +831,7 @@ void ncPhysicsObj::Alienate()
     Makes the object mobil.
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 void ncPhysicsObj::MakeItMobil()
 {
@@ -858,7 +858,7 @@ void ncPhysicsObj::MakeItMobil()
     @param offset 3d offset
 
     history:
-        - 24-Aug-2005   David Reyes    created
+        - 24-Aug-2005   Zombie         created
 */
 void ncPhysicsObj::SetTweakedOffset( const vector3& offset )
 {
@@ -872,7 +872,7 @@ void ncPhysicsObj::SetTweakedOffset( const vector3& offset )
     @param offset 3d offset
 
     history:
-        - 24-Aug-2005   David Reyes    created
+        - 24-Aug-2005   Zombie         created
 */
 void ncPhysicsObj::GetTweakedOffset( vector3& position )
 {
@@ -886,7 +886,7 @@ void ncPhysicsObj::GetTweakedOffset( vector3& position )
     Moves the object to limbo.
 
     history:
-        - 07-Sep-2005   David Reyes    created
+        - 07-Sep-2005   Zombie         created
 */
 void ncPhysicsObj::YouShallDwellIntoTheLimbo()
 {
@@ -905,7 +905,7 @@ void ncPhysicsObj::YouShallDwellIntoTheLimbo()
     Recovers an object from the limbo.
 
     history:
-        - 07-Sep-2005   David Reyes    created
+        - 07-Sep-2005   Zombie         created
 */
 void ncPhysicsObj::YourSoulMayComeBackFromLimbo()
 {
@@ -933,7 +933,7 @@ void ncPhysicsObj::YourSoulMayComeBackFromLimbo()
     Loads chunk information.
 
     history:
-        - 13-Sep-2005   David Reyes    created
+        - 13-Sep-2005   Zombie         created
 */
 bool ncPhysicsObj::LoadChunk(nObject::InitInstanceMsg /*initType*/)
 {
@@ -1026,7 +1026,7 @@ bool ncPhysicsObj::LoadChunk(nObject::InitInstanceMsg /*initType*/)
     Runs chunk.
 
     history:
-        - 13-Sep-2005   David Reyes    created
+        - 13-Sep-2005   Zombie         created
 */
 void ncPhysicsObj::PreparePhyObject()
 {
@@ -1038,7 +1038,7 @@ void ncPhysicsObj::PreparePhyObject()
     Loader.
 
     history:
-        - 22-Dec-2005   David Reyes    created
+        - 22-Dec-2005   Zombie         created
 */
 void ncPhysicsObj::Load()
 {

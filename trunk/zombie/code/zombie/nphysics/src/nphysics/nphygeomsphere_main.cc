@@ -19,7 +19,7 @@ nNebulaScriptClass(nPhyGeomSphere, "nphysicsgeom");
     Constructor
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 nPhyGeomSphere::nPhyGeomSphere()
 {
@@ -33,7 +33,7 @@ nPhyGeomSphere::nPhyGeomSphere()
     Destructor
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 nPhyGeomSphere::~nPhyGeomSphere()
 {
@@ -45,8 +45,8 @@ nPhyGeomSphere::~nPhyGeomSphere()
     Creates the geometry
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 01-Oct-2004   David Reyes    supressed name
+        - 23-Sep-2004   Zombie         created
+        - 01-Oct-2004   Zombie         supressed name
 */
 void nPhyGeomSphere::Create()
 {
@@ -67,7 +67,7 @@ void nPhyGeomSphere::Create()
     @param server     graphic server
 
     history:
-        - 29-Sep-2004   David Reyes    created
+        - 29-Sep-2004   Zombie         created
 */
 void nPhyGeomSphere::Draw( nGfxServer2 *server )
 {

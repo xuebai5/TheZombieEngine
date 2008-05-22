@@ -66,8 +66,8 @@ public:
     @param axis     slider axis
 
     history:
-        - 15-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhySliderJoint::SetAxis( const vector3& axis )
@@ -84,8 +84,8 @@ void nPhySliderJoint::SetAxis( const vector3& axis )
     @param axis     slider axis
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhySliderJoint::GetAxis( vector3& axis ) const
@@ -104,8 +104,8 @@ void nPhySliderJoint::GetAxis( vector3& axis ) const
     @param value new parameter's value
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhySliderJoint::SetParam( const phy::jointparameter parameter, const phy::jointaxis axis, const phyreal value )

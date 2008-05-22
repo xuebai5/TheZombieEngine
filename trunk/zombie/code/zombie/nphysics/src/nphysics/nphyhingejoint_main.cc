@@ -16,7 +16,7 @@ nNebulaScriptClass(nPhyHingeJoint, "nphysicsjoint");
     Constructor
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 nPhyHingeJoint::nPhyHingeJoint()
 {
@@ -28,7 +28,7 @@ nPhyHingeJoint::nPhyHingeJoint()
     Destructor
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 nPhyHingeJoint::~nPhyHingeJoint()
 {
@@ -43,7 +43,7 @@ nPhyHingeJoint::~nPhyHingeJoint()
     @param group joints group
 
     history:
-        - 15-Nov-2004   David Reyes    created
+        - 15-Nov-2004   Zombie         created
 */
 void nPhyHingeJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
 {
@@ -66,7 +66,7 @@ void nPhyHingeJoint::CreateIn( nPhysicsWorld* world, nPhyJointGroup* group )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void nPhyHingeJoint::Scale( const phyreal factor )
 {
@@ -89,7 +89,7 @@ void nPhyHingeJoint::Scale( const phyreal factor )
 	Draws the joint.
 
     history:
-     - 18-Aug-2005   David Reyes    created
+     - 18-Aug-2005   Zombie         created
 */
 void nPhyHingeJoint::Draw( nGfxServer2* server )
 {
@@ -139,7 +139,7 @@ void nPhyHingeJoint::Draw( nGfxServer2* server )
     @param axis which axis
 
     history:
-        - 25-Aug-2005   David Reyes    created
+        - 25-Aug-2005   Zombie         created
 */
 const phyreal nPhyHingeJoint::GetParam( const phy::jointparameter parameter, const phy::jointaxis axis ) const
 {

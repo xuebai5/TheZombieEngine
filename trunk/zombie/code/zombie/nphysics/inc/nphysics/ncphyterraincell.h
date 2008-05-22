@@ -132,8 +132,8 @@ private:
     @return space
 
     history:
-        - 01-Jun-2005   David Reyes    created
-        - 01-Jul-2005   David Reyes    inlined
+        - 01-Jun-2005   Zombie         created
+        - 01-Jul-2005   Zombie         inlined
 */
 inline
 nPhySpace* ncPhyTerrainCell::GetCellSpace()
@@ -148,7 +148,7 @@ nPhySpace* ncPhyTerrainCell::GetCellSpace()
     @return space
 
     history:
-        - 01-Jul-2005   David Reyes    created
+        - 01-Jul-2005   Zombie         created
 */
 inline
 nPhySpace* ncPhyTerrainCell::GetDynamicCellSpace()
@@ -163,7 +163,7 @@ nPhySpace* ncPhyTerrainCell::GetDynamicCellSpace()
     @return associated index
 
     history:
-        - 17-Jul-2006   David Reyes    created
+        - 17-Jul-2006   Zombie         created
 */
 inline
 const unsigned ncPhyTerrainCell::GetIndex() const

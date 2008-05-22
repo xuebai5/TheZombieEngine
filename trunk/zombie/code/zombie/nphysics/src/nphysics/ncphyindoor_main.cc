@@ -27,7 +27,7 @@ ncPhyIndoor* ncPhyIndoor::lastLoading(0);
     Constructor.
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 ncPhyIndoor::ncPhyIndoor() :
     indoorSpace(0),
@@ -44,7 +44,7 @@ ncPhyIndoor::ncPhyIndoor() :
     Destructor.
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 ncPhyIndoor::~ncPhyIndoor()
 {
@@ -82,7 +82,7 @@ ncPhyIndoor::~ncPhyIndoor()
     Creates the indoor's space.
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void ncPhyIndoor::CreateSpace()
 {
@@ -106,7 +106,7 @@ void ncPhyIndoor::CreateSpace()
     @param name new indoors name
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void ncPhyIndoor::SetIndoorName( const nString& name )
 {
@@ -120,7 +120,7 @@ void ncPhyIndoor::SetIndoorName( const nString& name )
     Enables the indoor.
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void ncPhyIndoor::Enable()
 {
@@ -134,7 +134,7 @@ void ncPhyIndoor::Enable()
     Disables the indoor.
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void ncPhyIndoor::Disable()
 {
@@ -150,7 +150,7 @@ void ncPhyIndoor::Disable()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void ncPhyIndoor::Create( nPhysicsWorld* world )
 {
@@ -185,7 +185,7 @@ void ncPhyIndoor::Create( nPhysicsWorld* world )
     @param obj object to be added to the indoor
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 void ncPhyIndoor::Add( ncPhysicsObj* object )
 {
@@ -258,7 +258,7 @@ void ncPhyIndoor::Add( ncPhysicsObj* object )
     @param space to be added to the indoor
 
     history:
-        - 31-May-2005   David Reyes    created
+        - 31-May-2005   Zombie         created
 */
 void ncPhyIndoor::Add( nPhySpace* space )
 {
@@ -280,7 +280,7 @@ void ncPhyIndoor::Add( nPhySpace* space )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 31-May-2005   David Reyes    created
+        - 31-May-2005   Zombie         created
 */
 void ncPhyIndoor::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -325,7 +325,7 @@ void ncPhyIndoor::InitInstance(nObject::InitInstanceMsg initType)
     @param object object to be removed
 
     history:
-        - 31-May-2005   David Reyes    created
+        - 31-May-2005   Zombie         created
 */
 void ncPhyIndoor::Remove( ncPhysicsObj* object )
 {
@@ -343,7 +343,7 @@ void ncPhyIndoor::Remove( ncPhysicsObj* object )
     @param newposition indoor's new position
 
     history:
-        - 02-Jun-2005   David Reyes    created
+        - 02-Jun-2005   Zombie         created
 */
 void ncPhyIndoor::SetPosition( const vector3& newposition )
 {
@@ -383,7 +383,7 @@ void ncPhyIndoor::SetPosition( const vector3& newposition )
     @param newrotation indoor's new rotation
 
     history:
-        - 29-Jun-2005   David Reyes    created
+        - 29-Jun-2005   Zombie         created
 */
 void ncPhyIndoor::SetRotation( const matrix33& newrotation )
 {
@@ -439,7 +439,7 @@ void ncPhyIndoor::SetRotation( const matrix33& newrotation )
     Rearranges spaces.
 
     history:
-        - 07-Jun-2005   David Reyes    created
+        - 07-Jun-2005   Zombie         created
 */
 void ncPhyIndoor::RearrangeSpaces()
 {
@@ -461,7 +461,7 @@ void ncPhyIndoor::RearrangeSpaces()
     @return indoor
 
     history:
-        - 07-Jun-2005   David Reyes    created
+        - 07-Jun-2005   Zombie         created
 */
 ncPhyIndoor* ncPhyIndoor::Loading()
 {
@@ -486,7 +486,7 @@ void ncPhyIndoor::BeginRunInstancier()
     @param filename file
 
     history:
-        - 07-Jun-2005   David Reyes    created
+        - 07-Jun-2005   Zombie         created
 */
 void ncPhyIndoor::RunInstancier( const nString& filename )
 {
@@ -512,7 +512,7 @@ void ncPhyIndoor::RunInstancier( const nString& filename )
     Ends the first load of objects.
 
     history:
-        - 07-Jun-2005   David Reyes    created
+        - 07-Jun-2005   Zombie         created
 */
 void ncPhyIndoor::EndRunInstancier()
 {
@@ -550,7 +550,7 @@ void ncPhyIndoor::EndRunInstancier()
     @param boundingbox axis aligned bounding box
 
     history:
-        - 10-Jun-2005   David Reyes    created
+        - 10-Jun-2005   Zombie         created
 */
 void ncPhyIndoor::GetAABB( nPhysicsAABB& boundingbox )
 {

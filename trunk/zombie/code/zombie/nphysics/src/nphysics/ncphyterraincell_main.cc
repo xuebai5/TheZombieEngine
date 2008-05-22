@@ -14,7 +14,7 @@ nNebulaComponentObject(ncPhyTerrainCell,ncPhySimpleObj);
     Constructor
 
     history:
-        - 08-Apr-2005   David Reyes    created
+        - 08-Apr-2005   Zombie         created
 */
 ncPhyTerrainCell::ncPhyTerrainCell() :
     terrainCell(0),
@@ -30,7 +30,7 @@ ncPhyTerrainCell::ncPhyTerrainCell() :
     Destructor
 
     history:
-        - 08-Apr-2005   David Reyes    created
+        - 08-Apr-2005   Zombie         created
 */
 ncPhyTerrainCell::~ncPhyTerrainCell()
 {
@@ -59,7 +59,7 @@ ncPhyTerrainCell::~ncPhyTerrainCell()
     Enables the cell.
 
     history:
-        - 08-Apr-2005   David Reyes    created
+        - 08-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::Enable()
 {
@@ -71,7 +71,7 @@ void ncPhyTerrainCell::Enable()
     Disables the cell.
 
     history:
-        - 08-Apr-2005   David Reyes    created
+        - 08-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::Disable()
 {
@@ -85,7 +85,7 @@ void ncPhyTerrainCell::Disable()
     @param world it's the world where the object will be come to existance
 
     history:
-        - 08-Apr-2005   David Reyes    created
+        - 08-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::Create( nPhysicsWorld* world )
 {
@@ -135,7 +135,7 @@ void ncPhyTerrainCell::Create( nPhysicsWorld* world )
     @param terrain terrain
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::SetTerrain( ncPhyTerrain* terrain )
 {
@@ -151,7 +151,7 @@ void ncPhyTerrainCell::SetTerrain( ncPhyTerrain* terrain )
     @param cellSize cell's size
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::SetSizeCell( const int cellSize )
 {
@@ -167,7 +167,7 @@ void ncPhyTerrainCell::SetSizeCell( const int cellSize )
     @param buffer phyreal's buffer
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::SetBuffer( const phyreal* buffer )
 {
@@ -181,7 +181,7 @@ void ncPhyTerrainCell::SetBuffer( const phyreal* buffer )
     @param length terrain cell length
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::SetLength( const phyreal length )
 {
@@ -193,7 +193,7 @@ void ncPhyTerrainCell::SetLength( const phyreal length )
     Creates the cell's space.
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 void ncPhyTerrainCell::CreateSpace()
 {
@@ -220,7 +220,7 @@ void ncPhyTerrainCell::CreateSpace()
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 01-Jun-2005   David Reyes    created
+        - 01-Jun-2005   Zombie         created
 */ 
 void ncPhyTerrainCell::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -233,7 +233,7 @@ void ncPhyTerrainCell::InitInstance(nObject::InitInstanceMsg initType)
     Updates the bounding box.
 
     history:
-        - 15-Jun-2005   David Reyes    created
+        - 15-Jun-2005   Zombie         created
 */ 
 void ncPhyTerrainCell::UpdateAABB()
 {
@@ -250,7 +250,7 @@ void ncPhyTerrainCell::UpdateAABB()
     @param z z coordinate in a plane
 
     history:
-        - 28-Jun-2005   David Reyes    created
+        - 28-Jun-2005   Zombie         created
 */
 void ncPhyTerrainCell::SetHole( int x, int z )
 {
@@ -262,7 +262,7 @@ void ncPhyTerrainCell::SetHole( int x, int z )
     Removes all the holes.
 
     history:
-        - 28-Jun-2005   David Reyes    created
+        - 28-Jun-2005   Zombie         created
 */
 void ncPhyTerrainCell::RemoveHoles()
 {
@@ -279,7 +279,7 @@ void ncPhyTerrainCell::RemoveHoles()
     @return if hole present
 
     history:
-        - 13-Jan-2006   David Reyes    created
+        - 13-Jan-2006   Zombie         created
 */
 const bool ncPhyTerrainCell::GetHole( const int x, const int z ) const
 {
@@ -293,7 +293,7 @@ const bool ncPhyTerrainCell::GetHole( const int x, const int z ) const
     @return if hole present
 
     history:
-    - 01-Feb-2006   David Reyes    created
+    - 01-Feb-2006   Zombie         created
 */
 const bool ncPhyTerrainCell::IsThereAnyHole() const
 {
@@ -305,7 +305,7 @@ const bool ncPhyTerrainCell::IsThereAnyHole() const
     Marks the cell as visible.
 
     history:
-    - 18-Jul-2006   David Reyes    created
+    - 18-Jul-2006   Zombie         created
 */
 void ncPhyTerrainCell::SetVisible()
 {
@@ -324,7 +324,7 @@ void ncPhyTerrainCell::SetVisible()
     @param indexCell index associated to this cell
 
     history:
-    - 18-Jul-2006   David Reyes    created
+    - 18-Jul-2006   Zombie         created
 */
 void ncPhyTerrainCell::SetIndex( const unsigned indexCell )
 {

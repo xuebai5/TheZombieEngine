@@ -34,7 +34,7 @@ ncPhyTerrain::SaveCmds(nPersistServer* /*server*/ )
     Persist holes.
 
     history:
-        - 12-Jan-2006   David Reyes     Created
+        - 12-Jan-2006   Zombie          Created
 */
 void ncPhyTerrain::SaveHoles()
 {
@@ -93,7 +93,7 @@ void ncPhyTerrain::SaveHoles()
     Loads holes.
 
     history:
-        - 12-Jan-2006   David Reyes     Created
+        - 12-Jan-2006   Zombie          Created
 */
 void ncPhyTerrain::Load()
 {

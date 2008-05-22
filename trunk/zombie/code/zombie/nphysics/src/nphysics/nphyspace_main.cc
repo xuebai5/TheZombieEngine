@@ -15,7 +15,7 @@ nNebulaScriptClass(nPhySpace, "nphysicsgeom");
     Constructor
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 nPhySpace::nPhySpace() : 
     spaceWorld(0),
@@ -31,7 +31,7 @@ nPhySpace::nPhySpace() :
     Destructor
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 nPhySpace::~nPhySpace()
 {
@@ -51,7 +51,7 @@ nPhySpace::~nPhySpace()
     Creates the geometry
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::Create()
 {
@@ -67,7 +67,7 @@ void nPhySpace::Create()
     @param geometry      geometry to be added to the space
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::Add( nPhysicsGeom* geometry )
 {
@@ -90,7 +90,7 @@ void nPhySpace::Add( nPhysicsGeom* geometry )
     @param geometry      geometry to be removed to the space
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::Remove( nPhysicsGeom* geometry )
 {
@@ -110,7 +110,7 @@ void nPhySpace::Remove( nPhysicsGeom* geometry )
     Enables this space and the geometris within
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::Enable()
 {
@@ -149,7 +149,7 @@ void nPhySpace::Enable()
     Disables this space and the geometris within
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::Disable()
 {
@@ -189,7 +189,7 @@ void nPhySpace::Disable()
     Draws the geometries contained in this space.
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::Draw( nGfxServer2* server )
 {
@@ -208,7 +208,7 @@ void nPhySpace::Draw( nGfxServer2* server )
     Sets the world of this space.
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::SetWorld( nPhysicsWorld* world )
 {
@@ -234,7 +234,7 @@ void nPhySpace::SetWorld( nPhysicsWorld* world )
     @param newposition new world position
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::SetPosition( const vector3& /*newposition*/ )
 {
@@ -250,7 +250,7 @@ void nPhySpace::SetPosition( const vector3& /*newposition*/ )
     @param az new az angle orientation
 
     history:
-        - 21-Mar-2005   David Reyes    created
+        - 21-Mar-2005   Zombie         created
 */
 void nPhySpace::SetOrientation( phyreal /*ax*/, phyreal /*ay*/, phyreal /*az*/ )
 {
@@ -264,7 +264,7 @@ void nPhySpace::SetOrientation( phyreal /*ax*/, phyreal /*ay*/, phyreal /*az*/ )
     @param position space's position
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 void nPhySpace::GetPosition( vector3& /*position*/ ) const
 {
@@ -278,7 +278,7 @@ void nPhySpace::GetPosition( vector3& /*position*/ ) const
     @param orientation space orientation
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 void nPhySpace::GetOrientation( matrix33& /*orientation*/ ) const
 {
@@ -294,7 +294,7 @@ void nPhySpace::GetOrientation( matrix33& /*orientation*/ ) const
     @param az az angle orientation
 
     history:
-        - 22-Mar-2005   David Reyes    created
+        - 22-Mar-2005   Zombie         created
 */
 void nPhySpace::GetOrientation( phyreal& /*ax*/, phyreal& /*ay*/, phyreal& /*az*/ )
 {

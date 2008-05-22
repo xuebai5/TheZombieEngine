@@ -81,7 +81,7 @@ private:
     @return world
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 inline
 nPhysicsWorld* nPhyPickObjManager::GetWorld()
@@ -96,8 +96,8 @@ nPhysicsWorld* nPhyPickObjManager::GetWorld()
     @param categories new set of categories flags
 
     history:
-        - 08-Apr-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 08-Apr-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyPickObjManager::SetCategoriesToCollideWith( int categories )

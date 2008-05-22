@@ -20,7 +20,7 @@ nNebulaScriptClass(nPhyGeomCylinder, "nphysicsgeom");
     Constructor
 
     history:
-        - 28-Sep-2004   David Reyes    created
+        - 28-Sep-2004   Zombie         created
 */
 nPhyGeomCylinder::nPhyGeomCylinder()
 {
@@ -34,7 +34,7 @@ nPhyGeomCylinder::nPhyGeomCylinder()
     Destructor
 
     history:
-        - 28-Sep-2004   David Reyes    created
+        - 28-Sep-2004   Zombie         created
 */
 nPhyGeomCylinder::~nPhyGeomCylinder()
 {
@@ -46,8 +46,8 @@ nPhyGeomCylinder::~nPhyGeomCylinder()
     Creates the geometry
 
     history:
-        - 28-Sep-2004   David Reyes    created
-        - 01-Oct-2004   David Reyes    supressed name
+        - 28-Sep-2004   Zombie         created
+        - 01-Oct-2004   Zombie         supressed name
 */
 void nPhyGeomCylinder::Create()
 {
@@ -69,8 +69,8 @@ void nPhyGeomCylinder::Create()
     @param server     graphic server
 
     history:
-        - 29-Sep-2004   David Reyes    created
-        - 05-Oct-2004   David Reyes    added caps visualization
+        - 29-Sep-2004   Zombie         created
+        - 05-Oct-2004   Zombie         added caps visualization
 */
 void nPhyGeomCylinder::Draw( nGfxServer2 *server )
 {

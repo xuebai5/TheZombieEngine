@@ -123,8 +123,8 @@ private:
     @return world
 
     history:
-        - 21-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 21-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 nPhysicsWorld* nPhySpace::GetWorld() const
@@ -139,7 +139,7 @@ nPhysicsWorld* nPhySpace::GetWorld() const
     @param name space's name
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 inline
 void nPhySpace::SetName( const nString& name )
@@ -155,7 +155,7 @@ void nPhySpace::SetName( const nString& name )
     @return space's name
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 inline
 const nString& nPhySpace::GetName() const
@@ -170,7 +170,7 @@ const nString& nPhySpace::GetName() const
     @return a tag
 
     history:
-        - 30-May-2005   David Reyes    created
+        - 30-May-2005   Zombie         created
 */
 inline
 const nTag& nPhySpace::GetTagName() const
@@ -183,8 +183,8 @@ const nTag& nPhySpace::GetTagName() const
     Hold out of space.
 
     history:
-        - 27-Jun-2005   David Reyes    created
-        - 02-Jul-2005   David Reyes    inlined
+        - 27-Jun-2005   Zombie         created
+        - 02-Jul-2005   Zombie         inlined
 */
 inline
 void nPhySpace::HoldOutOfSpace()
@@ -201,8 +201,8 @@ void nPhySpace::HoldOutOfSpace()
     Reconnects the geometry to the space.
 
     history:
-        - 27-Jun-2005   David Reyes    created
-        - 02-Jul-2005   David Reyes    inlined
+        - 27-Jun-2005   Zombie         created
+        - 02-Jul-2005   Zombie         inlined
 */
 inline
 void nPhySpace::ReconnectHoldSpace()
@@ -220,8 +220,8 @@ void nPhySpace::ReconnectHoldSpace()
     @param index index of the geometry to be retrieved
 
     history:
-        - 23-Sep-2005   David Reyes    created
-        - 08-Mar-2006   David Reyes    inlined
+        - 23-Sep-2005   Zombie         created
+        - 08-Mar-2006   Zombie         inlined
 */
 inline
 nPhysicsGeom* nPhySpace::GetGeometry( int index )
@@ -236,8 +236,8 @@ nPhysicsGeom* nPhySpace::GetGeometry( int index )
     @return number of geometries within the space
 
     history:
-        - 02-Jul-2005   David Reyes    created
-        - 08-Mar-2006   David Reyes    inlined
+        - 02-Jul-2005   Zombie         created
+        - 08-Mar-2006   Zombie         inlined
 */
 inline
 int nPhySpace::GetNumGeometries() const

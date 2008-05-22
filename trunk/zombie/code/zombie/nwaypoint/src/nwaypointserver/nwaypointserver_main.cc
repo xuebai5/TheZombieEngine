@@ -41,7 +41,7 @@ nWayPointServer* nWayPointServer::Singleton(0);
     Constructor
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 nWayPointServer::nWayPointServer() :
     wayPointsList( InitNumberOfWayPoints, InitGrowingFactorOfWayPoints ),
@@ -84,7 +84,7 @@ nWayPointServer::nWayPointServer() :
     Destructor
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 nWayPointServer::~nWayPointServer()
 {
@@ -101,7 +101,7 @@ nWayPointServer::~nWayPointServer()
     @return pointer to the only instance of this object
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 nWayPointServer* nWayPointServer::Instance()
 {
@@ -119,7 +119,7 @@ nWayPointServer* nWayPointServer::Instance()
     @return waypoint id
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 WayPoint::waypointid nWayPointServer::CreateNewWayPoint( const vector3& wpPosition )
 {
@@ -155,7 +155,7 @@ WayPoint::waypointid nWayPointServer::CreateNewWayPoint( const vector3& wpPositi
     @param namePath name new path
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 const int nWayPointServer::CreateNewPath( const nString& namePath )
 {
@@ -210,7 +210,7 @@ const int nWayPointServer::CreateNewPath( const nString& namePath )
     @param pathName path name
 
     history:
-        - 10-Jan-2006   David Reyes    created
+        - 10-Jan-2006   Zombie         created
 */
 void nWayPointServer::DestroysPath( const nString& pathName )
 {
@@ -274,7 +274,7 @@ void nWayPointServer::DestroysPath( const nString& pathName )
     @param pathName path name
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 void nWayPointServer::AddWayPointToPath( const WayPoint::waypointid id, const nString& pathName )
 {
@@ -321,7 +321,7 @@ void nWayPointServer::AddWayPointToPath( const WayPoint::waypointid id, const nS
     @param pathName path name
 
     history:
-        - 05-Oct-2004   David Reyes    created
+        - 05-Oct-2004   Zombie         created
 */
 void nWayPointServer::RemoveWayPointFromPath(const WayPoint::waypointid id, const nString& pathName )
 {
@@ -345,7 +345,7 @@ void nWayPointServer::RemoveWayPointFromPath(const WayPoint::waypointid id, cons
     @param pathName path name
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const bool nWayPointServer::CheckWayPointInPath(const WayPoint::waypointid id,const nString& pathName )
 {
@@ -368,7 +368,7 @@ const bool nWayPointServer::CheckWayPointInPath(const WayPoint::waypointid id,co
     @return waypoint path if any, otherwise null pointer
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 ncWayPointPath* nWayPointServer::CheckPathExists( const nString& pathName )
 {
@@ -388,7 +388,7 @@ ncWayPointPath* nWayPointServer::CheckPathExists( const nString& pathName )
     @return waypoint path if any, otherwise null pointer
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 ncWayPointPath* nWayPointServer::CheckPathExists( const int id )
 {
@@ -409,7 +409,7 @@ ncWayPointPath* nWayPointServer::CheckPathExists( const int id )
     @return waypoint if any, otherwise null pointer
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 WayPoint* nWayPointServer::CheckWayPointExists( const WayPoint::waypointid id )
 {
@@ -429,7 +429,7 @@ WayPoint* nWayPointServer::CheckWayPointExists( const WayPoint::waypointid id )
     @return waypoint if any, otherwise NoValidID
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const WayPoint::waypointid nWayPointServer::GetNewWayPointId()
 {
@@ -445,7 +445,7 @@ const WayPoint::waypointid nWayPointServer::GetNewWayPointId()
     @return waypoint if any, otherwise null pointer
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 WayPoint* nWayPointServer::GetWayPoint( const WayPoint::waypointid id )
 {
@@ -457,7 +457,7 @@ WayPoint* nWayPointServer::GetWayPoint( const WayPoint::waypointid id )
     Destroys information (not the server)
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void nWayPointServer::Destroy()
 {
@@ -502,7 +502,7 @@ void nWayPointServer::Destroy()
     Draws the waypoints
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
         - 08-Feb-2006   Carles Ros     skip deleted/hidden waypoints
         - 14-Feb-2006   Carles Ros     reverted changes to version prior to 08-Feb-2006
 */
@@ -616,7 +616,7 @@ void nWayPointServer::Draw()
     @param namepath path name
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 const int nWayPointServer::CreatePathWithTwoWayPoints( const waypointid idA, const waypointid idB, const nString& pathname )
 {
@@ -649,7 +649,7 @@ const int nWayPointServer::CreatePathWithTwoWayPoints( const waypointid idA, con
     @param idB id waypoint from a path
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void nWayPointServer::InsertWayPointInPath( const WayPoint::waypointid id,const WayPoint::waypointid idA,const WayPoint::waypointid idB )
 {
@@ -720,7 +720,7 @@ void nWayPointServer::InsertWayPointInPath( const WayPoint::waypointid id,const 
     @param id waypoint to be removed
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void nWayPointServer::RemoveWayPointFromItsPath( const WayPoint::waypointid id )
 {
@@ -761,7 +761,7 @@ void nWayPointServer::RemoveWayPointFromItsPath( const WayPoint::waypointid id )
     Called when a level is loaded
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::OnNewLevel()
 {
@@ -783,7 +783,7 @@ void nWayPointServer::OnNewLevel()
     @param path a waypoint path
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::AddPathToCreator( const nEntityObjectId idCreator, const ncWayPointPath* path )
 {
@@ -813,7 +813,7 @@ void nWayPointServer::AddPathToCreator( const nEntityObjectId idCreator, const n
     @param idCreator id of the path's creator
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::SetPathCreator( const nEntityObjectId 
 #ifndef NGAME
@@ -833,7 +833,7 @@ void nWayPointServer::SetPathCreator( const nEntityObjectId
     @param path path name
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::InsertWPAtTheBackOfPath(const WayPoint::waypointid id, const nString& namePath )
 {
@@ -877,7 +877,7 @@ void nWayPointServer::InsertWPAtTheBackOfPath(const WayPoint::waypointid id, con
     Called when a level is loaded
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::OnLoadLevel()
 {
@@ -907,7 +907,7 @@ void nWayPointServer::OnLoadLevel()
     Called when a level is saved
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::OnSaveLevel()
 {
@@ -944,7 +944,7 @@ void nWayPointServer::OnSaveLevel()
     Returns if the server it's loading information
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 const bool nWayPointServer::IsLoading() const
 {
@@ -958,7 +958,7 @@ const bool nWayPointServer::IsLoading() const
     @param id waypoint id
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::RemoveWayPointFromList( const WayPoint::waypointid id )
 {
@@ -972,7 +972,7 @@ void nWayPointServer::RemoveWayPointFromList( const WayPoint::waypointid id )
     @param wp waypoint
 
     history:
-        - 07-Oct-2004   David Reyes    created
+        - 07-Oct-2004   Zombie         created
 */
 void nWayPointServer::AddWayPointFromList( WayPoint* wp )
 {
@@ -991,7 +991,7 @@ void nWayPointServer::AddWayPointFromList( WayPoint* wp )
     @param traverse values: Horizontal (default), Vertical
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const int nWayPointServer::CreateRoute( const nString& path, int direction, int type, float radius )
 {
@@ -1008,7 +1008,7 @@ const int nWayPointServer::CreateRoute( const nString& path, int direction, int 
     @param routeid route id
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 void nWayPointServer::DestroyRoute( const int routeid )
 {
@@ -1023,7 +1023,7 @@ void nWayPointServer::DestroyRoute( const int routeid )
     @param step step size
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const bool nWayPointServer::FollowRoute( const int routeid, const float step, const bool stopNextWayPoint )
 {
@@ -1041,7 +1041,7 @@ const bool nWayPointServer::FollowRoute( const int routeid, const float step, co
     @return position
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const vector3& nWayPointServer::RoutePosition( const int id ) const
 {
@@ -1057,7 +1057,7 @@ const vector3& nWayPointServer::RoutePosition( const int id ) const
     @return num waypoints
 
     history:
-        - 14-Dec-2004   David Reyes    created
+        - 14-Dec-2004   Zombie         created
 */
 const int nWayPointServer::GetNumWayPoints( const nString& pathName )
 {
@@ -1077,7 +1077,7 @@ const int nWayPointServer::GetNumWayPoints( const nString& pathName )
     @return num waypoints
 
     history:
-        - 14-Dec-2004   David Reyes    created
+        - 14-Dec-2004   Zombie         created
 */
 const int nWayPointServer::GetNumWayPoints( const int id )
 {
@@ -1100,7 +1100,7 @@ const int nWayPointServer::GetNumWayPoints( const int id )
     @return waypoint
 
     history:
-        - 14-Dec-2004   David Reyes    created
+        - 14-Dec-2004   Zombie         created
 */
 WayPoint* nWayPointServer::GetWayPoint( const int pathid, const int index )
 {
@@ -1123,7 +1123,7 @@ WayPoint* nWayPointServer::GetWayPoint( const int pathid, const int index )
     @return waypoint
 
     history:
-        - 14-Dec-2004   David Reyes    created
+        - 14-Dec-2004   Zombie         created
 */
 WayPoint* nWayPointServer::GetWayPoint( const nString& path, const int index )
 {
@@ -1138,7 +1138,7 @@ WayPoint* nWayPointServer::GetWayPoint( const nString& path, const int index )
     @return path id
 
     history:
-        - 10-Jan-2006   David Reyes    created
+        - 10-Jan-2006   Zombie         created
 */
 const int nWayPointServer::GetPathId( const nString& pathName ) const
 {
@@ -1153,7 +1153,7 @@ const int nWayPointServer::GetPathId( const nString& pathName ) const
     @return num paths
 
     history:
-        - 14-Dec-2004   David Reyes    created
+        - 14-Dec-2004   Zombie         created
 */
 const int nWayPointServer::GetNumPaths() const
 {
@@ -1168,7 +1168,7 @@ const int nWayPointServer::GetNumPaths() const
     @return waypoint
 
     history:
-        - 10-Jan-2006   David Reyes    created
+        - 10-Jan-2006   Zombie         created
 */
 nEntityObject* nWayPointServer::GetWayPointFromPath( const int pathid, const int index)
 {
@@ -1189,7 +1189,7 @@ nEntityObject* nWayPointServer::GetWayPointFromPath( const int pathid, const int
     @return num paths
 
     history:
-        - 14-Dec-2004   David Reyes    created
+        - 14-Dec-2004   Zombie         created
 */
 const nString& nWayPointServer::GetPathName( const int index ) const
 {

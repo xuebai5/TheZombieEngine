@@ -17,7 +17,7 @@
     Constructor
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 nPhyCollide::nPhyCollide()
 {
@@ -29,7 +29,7 @@ nPhyCollide::nPhyCollide()
     Destructor
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 nPhyCollide::~nPhyCollide()
 {
@@ -48,9 +48,9 @@ nPhyCollide::~nPhyCollide()
     @return number of contacts reported
 
     history:
-        - 27-Sep-2004   David Reyes    created
-        - 06-Oct-2004   David Reyes    check if enabled
-        - 11-Oct-2004   David Reyes    check if it's the same geometry
+        - 27-Sep-2004   Zombie         created
+        - 06-Oct-2004   Zombie         check if enabled
+        - 11-Oct-2004   Zombie         check if it's the same geometry
 */
 int nPhyCollide::Collide( 
     const nPhysicsGeom *geomA, 
@@ -81,7 +81,7 @@ int nPhyCollide::Collide(
     Constructor
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 nPhyCollide::nContact::nContact()
 {
@@ -93,7 +93,7 @@ nPhyCollide::nContact::nContact()
     Destructor
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 nPhyCollide::nContact::~nContact()
 {
@@ -108,7 +108,7 @@ nPhyCollide::nContact::~nContact()
     @param server   graphics server
 
     history:
-        - 27-Sep-2004   David Reyes    created
+        - 27-Sep-2004   Zombie         created
 */
 void nPhyCollide::nContact::Draw( nGfxServer2* server )
 {
@@ -146,7 +146,7 @@ void nPhyCollide::nContact::Draw( nGfxServer2* server )
     @return number of contacts reported
 
     history:
-        - 26-Sep-2004   David Reyes    created
+        - 26-Sep-2004   Zombie         created
 */
 int nPhyCollide::Collide( 
     const geomid idA, 
@@ -174,7 +174,7 @@ int nPhyCollide::Collide(
     @return physics object
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 ncPhysicsObj* nPhyCollide::nContact::GetPhysicsObjA() const
 {
@@ -188,7 +188,7 @@ ncPhysicsObj* nPhyCollide::nContact::GetPhysicsObjA() const
     @return physics object
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 ncPhysicsObj* nPhyCollide::nContact::GetPhysicsObjB() const
 {
@@ -202,7 +202,7 @@ ncPhysicsObj* nPhyCollide::nContact::GetPhysicsObjB() const
     @return physics material
 
     history:
-        - 16-Jan-2006   David Reyes    created
+        - 16-Jan-2006   Zombie         created
 */
 nPhyMaterial* nPhyCollide::nContact::GetPhysicsMaterialA() const
 {
@@ -237,7 +237,7 @@ nPhyMaterial* nPhyCollide::nContact::GetPhysicsMaterialA() const
     @return physics material
 
     history:
-        - 16-Jan-2006   David Reyes    created
+        - 16-Jan-2006   Zombie         created
 */
 nPhyMaterial* nPhyCollide::nContact::GetPhysicsMaterialB() const
 {
@@ -272,7 +272,7 @@ nPhyMaterial* nPhyCollide::nContact::GetPhysicsMaterialB() const
     @return physics material
 
     history:
-        - 16-Jan-2006   David Reyes    created
+        - 16-Jan-2006   Zombie         created
 */
 nGameMaterial* nPhyCollide::nContact::GetGameMaterialA() const
 {
@@ -295,7 +295,7 @@ nGameMaterial* nPhyCollide::nContact::GetGameMaterialA() const
     @return physics material
 
     history:
-        - 16-Jan-2006   David Reyes    created
+        - 16-Jan-2006   Zombie         created
 */
 nGameMaterial* nPhyCollide::nContact::GetGameMaterialB() const
 {
@@ -318,7 +318,7 @@ nGameMaterial* nPhyCollide::nContact::GetGameMaterialB() const
     @return game material
 
     history:
-        - 16-Jan-2006   David Reyes    created
+        - 16-Jan-2006   Zombie         created
 */
 nGameMaterial* nPhyCollide::nContact::GetMaterialFromTheTerrain() const
 {

@@ -174,7 +174,7 @@ private:
     @param number it's the number of nodes in the x-axis.
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 inline
 void ncPhyCloth::SetNodesXAxis( const unsigned number )
@@ -191,7 +191,7 @@ void ncPhyCloth::SetNodesXAxis( const unsigned number )
     @param number it's the number of nodes in the z-axis.
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 inline
 void ncPhyCloth::SetNodesZAxis( const unsigned number )
@@ -208,7 +208,7 @@ void ncPhyCloth::SetNodesZAxis( const unsigned number )
     @param separation it's the separation between nodes in the x-axis
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 inline
 void ncPhyCloth::SetSeparationXAxis( const phyreal separation )
@@ -225,7 +225,7 @@ void ncPhyCloth::SetSeparationXAxis( const phyreal separation )
     @param separation it's the separation between nodes in the z-axis
 
     history:
-        - 05-Jun-2005   David Reyes    created
+        - 05-Jun-2005   Zombie         created
 */
 inline
 void ncPhyCloth::SetSeparationZAxis( const phyreal separation )

@@ -15,7 +15,7 @@ nNebulaComponentObject(ncPhySimpleObj,ncPhysicsObj);
     Constructor
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 ncPhySimpleObj::ncPhySimpleObj() :
     geometry(0)
@@ -28,7 +28,7 @@ ncPhySimpleObj::ncPhySimpleObj() :
     Destructor
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 ncPhySimpleObj::~ncPhySimpleObj()
 {
@@ -48,7 +48,7 @@ ncPhySimpleObj::~ncPhySimpleObj()
     @param geom     the new geometry
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhySimpleObj::SetGeometry( nPhysicsGeom* geom )
 {
@@ -70,7 +70,7 @@ void ncPhySimpleObj::SetGeometry( nPhysicsGeom* geom )
     Enables the physic object.
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhySimpleObj::Enable()
 {
@@ -93,7 +93,7 @@ void ncPhySimpleObj::Enable()
     Disables the physic object.
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhySimpleObj::Disable()
 {
@@ -120,7 +120,7 @@ void ncPhySimpleObj::Disable()
     @param contact  contact information
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 geomid ncPhySimpleObj::ObjectPicking( const nPhysicsGeom* geom, nPhyCollide::nContact& contact )
 {
@@ -150,7 +150,7 @@ geomid ncPhySimpleObj::ObjectPicking( const nPhysicsGeom* geom, nPhyCollide::nCo
     @param newspace     space
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhySimpleObj::MoveToSpace( nPhySpace* newspace )
 {
@@ -170,7 +170,7 @@ void ncPhySimpleObj::MoveToSpace( nPhySpace* newspace )
     @param contact      buffer with the information of the contacts
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 int ncPhySimpleObj::Collide( const ncPhysicsObj* obj,
     int numContacts, nPhyCollide::nContact* contact ) const
@@ -190,7 +190,7 @@ int ncPhySimpleObj::Collide( const ncPhysicsObj* obj,
     @param contact      buffer with the information of the contacts
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 int ncPhySimpleObj::Collide( const nPhysicsGeom* geom,
     int numContacts, nPhyCollide::nContact* contact ) const
@@ -209,7 +209,7 @@ int ncPhySimpleObj::Collide( const nPhysicsGeom* geom,
     @param world it's the world where the object will be come to existance
 
     history:
-        - 29-Nov-2004   David Reyes    created
+        - 29-Nov-2004   Zombie         created
 */
 void ncPhySimpleObj::Create( nPhysicsWorld* world )
 {
@@ -249,7 +249,7 @@ void ncPhySimpleObj::Create( nPhysicsWorld* world )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 09-May-2004   David Reyes    created
+        - 09-May-2004   Zombie         created
 */
 void ncPhySimpleObj::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -264,7 +264,7 @@ void ncPhySimpleObj::InitInstance(nObject::InitInstanceMsg initType)
     @return geometry
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 nPhysicsGeom* ncPhySimpleObj::CreateGeometryObj( const nString& name ) 
 {
@@ -288,7 +288,7 @@ nPhysicsGeom* ncPhySimpleObj::CreateGeometryObj( const nString& name )
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
+     - 12-May-2005   Zombie         created
 */
 void ncPhySimpleObj::Scale( const phyreal factor )
 {
@@ -318,7 +318,7 @@ void ncPhySimpleObj::Scale( const phyreal factor )
     @return number of contacts reported
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 int ncPhySimpleObj::Collide( int numContacts, nPhyCollide::nContact* contact ) const
 {
@@ -334,7 +334,7 @@ int ncPhySimpleObj::Collide( int numContacts, nPhyCollide::nContact* contact ) c
     @param categories categories flags
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 void ncPhySimpleObj::SetCategories( int categories ) 
 {
@@ -352,7 +352,7 @@ void ncPhySimpleObj::SetCategories( int categories )
     @param categories categories flags
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 void ncPhySimpleObj::SetCollidesWith( int categories ) 
 {
@@ -370,7 +370,7 @@ void ncPhySimpleObj::SetCollidesWith( int categories )
     @param category category flag
 
     history:
-        - 13-May-2005   David Reyes    created
+        - 13-May-2005   Zombie         created
 */
 void ncPhySimpleObj::RemovesCollidesWith( int category )
 {

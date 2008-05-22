@@ -27,7 +27,7 @@ NSCRIPT_INITCMDS_END()
     Constructor
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 ncWayPoint::ncWayPoint() :
     waypoint(0)
@@ -40,7 +40,7 @@ ncWayPoint::ncWayPoint() :
     Destructor
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 ncWayPoint::~ncWayPoint()
 {
@@ -55,7 +55,7 @@ ncWayPoint::~ncWayPoint()
     @param newposition world position
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void ncWayPoint::SetPosition( const vector3& newposition )
 {
@@ -76,7 +76,7 @@ void ncWayPoint::SetPosition( const vector3& newposition )
     @param realwaypoint a waypoint reference
 
     history:
-        - 06-Oct-2004   David Reyes    created
+        - 06-Oct-2004   Zombie         created
 */
 void ncWayPoint::SetWayPoint( WayPoint* realwaypoint )
 {
@@ -90,7 +90,7 @@ void ncWayPoint::SetWayPoint( WayPoint* realwaypoint )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 17-May-2005   David Reyes    created
+        - 17-May-2005   Zombie         created
 */
 void ncWayPoint::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -127,7 +127,7 @@ void ncWayPoint::InitInstance(nObject::InitInstanceMsg initType)
     @return waypoint id
 
     history:
-        - 10-Oct-2005   David Reyes    created
+        - 10-Oct-2005   Zombie         created
 */
 int ncWayPoint::GetWayPointId() const
 {
@@ -139,7 +139,7 @@ int ncWayPoint::GetWayPointId() const
     Moves the object to limbo.
 
     history:
-        - 10-Oct-2005   David Reyes    created
+        - 10-Oct-2005   Zombie         created
 */
 void ncWayPoint::YouShallDwellIntoTheLimbo()
 {
@@ -166,7 +166,7 @@ void ncWayPoint::YouShallDwellIntoTheLimbo()
     Recovers an object from the limbo.
 
     history:
-        - 10-Oct-2005   David Reyes    created
+        - 10-Oct-2005   Zombie         created
 */
 void ncWayPoint::YourSoulMayComeBackFromLimbo()
 {
@@ -221,7 +221,7 @@ void ncWayPoint::YourSoulMayComeBackFromLimbo()
     @return path id
 
     history:
-        - 10-Jan-2005   David Reyes    created
+        - 10-Jan-2005   Zombie         created
 */
 const int ncWayPoint::GetPathId() const
 {

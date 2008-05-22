@@ -4,7 +4,7 @@
 /**
     @class nTag
     @ingroup NebulaDataTypes
-    @author David Reyes
+    @author Zombie     
     @brief A tag to symbolize a string.
 
     (C) Conjurer Services, S.A.    

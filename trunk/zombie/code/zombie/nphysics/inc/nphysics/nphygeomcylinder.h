@@ -75,8 +75,8 @@ private:
     @return length of the cylinder
 
     history:
-        - 28-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 28-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyGeomCylinder::GetLength() const
@@ -93,8 +93,8 @@ phyreal nPhyGeomCylinder::GetLength() const
     @return radius of the cylinder
 
     history:
-        - 28-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 28-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyGeomCylinder::GetRadius() const
@@ -111,8 +111,8 @@ phyreal nPhyGeomCylinder::GetRadius() const
     @param length new length of the cylinder
 
     history:
-        - 28-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 28-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomCylinder::SetLength( phyreal length )
@@ -129,8 +129,8 @@ void nPhyGeomCylinder::SetLength( phyreal length )
     @param radius new radius of the cylinder
 
     history:
-        - 28-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 28-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomCylinder::SetRadius( phyreal radius )
@@ -147,8 +147,8 @@ void nPhyGeomCylinder::SetRadius( phyreal radius )
     @param factor scale factor
     
     history:
-     - 11-May-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 11-May-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyGeomCylinder::Scale( const phyreal factor )

@@ -180,7 +180,7 @@ ncCharacterClass::GetRagdollSkeletonClass(nString& ragClassName) const
     @return id
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 
 */
 const int ncCharacterClass::GetRagDollManagerId() const
@@ -193,7 +193,7 @@ const int ncCharacterClass::GetRagDollManagerId() const
     User init instance code
 
     history:
-        - 08-Nov-2005   David Reyes    created
+        - 08-Nov-2005   Zombie         created
 
 */
 void ncCharacterClass::InitInstance(nObject::InitInstanceMsg initType)

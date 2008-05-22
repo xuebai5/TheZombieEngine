@@ -12,7 +12,7 @@
     Constructor
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 nPhyJointGroup::nPhyJointGroup() :
     jointgroupID(NoValidID),
@@ -27,8 +27,8 @@ nPhyJointGroup::nPhyJointGroup() :
     Destructor
 
     history:
-        - 25-Sep-2004   David Reyes    created
-        - 26-Jan-2005   David Reyes    added code to destroy the joints
+        - 25-Sep-2004   Zombie         created
+        - 26-Jan-2005   Zombie         added code to destroy the joints
 */
 nPhyJointGroup::~nPhyJointGroup()
 {
@@ -56,7 +56,7 @@ nPhyJointGroup::~nPhyJointGroup()
     Creates the container.
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 void nPhyJointGroup::Create()
 {
@@ -72,7 +72,7 @@ void nPhyJointGroup::Create()
     Set size of the group (b4 it's created).
 
     history:
-        - 25-Sep-2004   David Reyes    created
+        - 25-Sep-2004   Zombie         created
 */
 void nPhyJointGroup::SetSize( int size )
 {
@@ -88,7 +88,7 @@ void nPhyJointGroup::SetSize( int size )
     Empties the group.
 
     history:
-        - 26-Sep-2004   David Reyes    created
+        - 26-Sep-2004   Zombie         created
 */
 void nPhyJointGroup::EmptyIt()
 {
@@ -111,7 +111,7 @@ void nPhyJointGroup::EmptyIt()
     @return number of joints
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 int nPhyJointGroup::GetNumJoints() const
 {
@@ -127,7 +127,7 @@ int nPhyJointGroup::GetNumJoints() const
     @return a joint
 
     history:
-        - 18-Aug-2005   David Reyes    created
+        - 18-Aug-2005   Zombie         created
 */
 nPhysicsJoint* nPhyJointGroup::GetJoint( int index ) const
 {

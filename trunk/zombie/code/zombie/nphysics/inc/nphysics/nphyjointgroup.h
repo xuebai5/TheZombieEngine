@@ -83,8 +83,8 @@ private:
     @return id to the joint group
 
     history:
-        - 25-Sep-2004   David Reyes    created
-        - 12-Dec-2004   David Reyes    inlined
+        - 25-Sep-2004   Zombie         created
+        - 12-Dec-2004   Zombie         inlined
 */
 inline
 jointgroupid nPhyJointGroup::Id() const
@@ -99,8 +99,8 @@ jointgroupid nPhyJointGroup::Id() const
     @param joint a joint
 
     history:
-        - 26-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 26-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyJointGroup::Add( nPhysicsJoint* joint )
@@ -118,8 +118,8 @@ void nPhyJointGroup::Add( nPhysicsJoint* joint )
     @param joint a joint
 
     history:
-        - 12-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 12-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyJointGroup::Remove( nPhysicsJoint* joint )
@@ -138,8 +138,8 @@ void nPhyJointGroup::Remove( nPhysicsJoint* joint )
     @param destroy true/false
 
     history:
-        - 26-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 26-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyJointGroup::SetDestroyJoints( const bool destroy )
@@ -154,8 +154,8 @@ void nPhyJointGroup::SetDestroyJoints( const bool destroy )
     @return true/false
 
     history:
-        - 26-Sep-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 26-Sep-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 bool nPhyJointGroup::GetDestroyJoints() const

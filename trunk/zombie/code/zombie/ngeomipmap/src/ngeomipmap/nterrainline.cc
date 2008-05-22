@@ -1723,7 +1723,7 @@ nTerrainLine::SaveCmds(nPersistServer* ps)
     @param world it's the world where the object will be come to existance
 
     history:
-        - 11-Jan-2006   David Reyes    created
+        - 11-Jan-2006   Zombie         created
 */
 void nTerrainLine::SetCW( const bool is )
 {
@@ -1738,7 +1738,7 @@ void nTerrainLine::SetCW( const bool is )
     @param b component b
 
     history:
-        - 11-Jan-2006   David Reyes    created
+        - 11-Jan-2006   Zombie         created
 */
 void nTerrainLine::AddPoint( const float a, const float b)
 {
@@ -1753,7 +1753,7 @@ void nTerrainLine::AddPoint( const float a, const float b)
     @param bb bounding box data structure to be filled
 
     history:
-        - 23-Jun-2006   David Reyes    created
+        - 23-Jun-2006   Zombie         created
 */
 void nTerrainLine::GetBBinXZ( bbox3& bb )
 {

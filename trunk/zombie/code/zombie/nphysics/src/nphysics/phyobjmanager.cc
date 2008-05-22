@@ -113,7 +113,7 @@ void DrawRectangleArea( nGfxServer2* server, const vector2& offset, nPhysicsAABB
     @param world a physics world
 
     history:
-        - 27-Jun-2005   David Reyes   created
+        - 27-Jun-2005   Zombie        created
 */
 phyObjManager::phyObjManager( nPhysicsWorld* world ) : 
     managedWorld( world ),
@@ -142,7 +142,7 @@ phyObjManager::phyObjManager( nPhysicsWorld* world ) :
     Destructor
 
     history:
-        - 27-Jun-2005   David Reyes   created
+        - 27-Jun-2005   Zombie        created
 */
 phyObjManager::~phyObjManager()
 {
@@ -165,7 +165,7 @@ phyObjManager::~phyObjManager()
     @return success
 
     history:
-        - 27-Jun-2005   David Reyes   created
+        - 27-Jun-2005   Zombie        created
 */
 bool phyObjManager::Init()
 {
@@ -248,7 +248,7 @@ bool phyObjManager::Init()
     Manage physics areas.
 
     history:
-        - 24-Jun-2005   David Reyes   created
+        - 24-Jun-2005   Zombie        created
 */
 void phyObjManager::ManagePhysicsAreas()
 {
@@ -299,8 +299,8 @@ void phyObjManager::ManagePhysicsAreas()
     @param dir direction in the playe x/z
 
     history:
-        - 24-Jun-2005   David Reyes   created
-        - 08-Mar-2006   David Reyes   removed direction hot point
+        - 24-Jun-2005   Zombie        created
+        - 08-Mar-2006   Zombie        removed direction hot point
         - 10-Aug-2006   Carles Ros    indoor's aabb expanded to check for hot point nearness
 */
 void phyObjManager::ProcessRadialHotPoint( const vector3& hotpoint )
@@ -422,7 +422,7 @@ void phyObjManager::ProcessRadialHotPoint( const vector3& hotpoint )
     @return success
 
     history:
-        - 24-Jun-2005   David Reyes   created
+        - 24-Jun-2005   Zombie        created
 */
 bool phyObjManager::Run() 
 {
@@ -437,7 +437,7 @@ bool phyObjManager::Run()
     Restores the world collision.
 
     history:
-        - 24-Jun-2005   David Reyes   created
+        - 24-Jun-2005   Zombie        created
 */
 void phyObjManager::Restore()
 {
@@ -492,7 +492,7 @@ void phyObjManager::Restore()
     Updates dynamic objects spaces.
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 void phyObjManager::UpdateDynamicObjects()
 {
@@ -570,7 +570,7 @@ void phyObjManager::UpdateDynamicObjects()
     @param obj a physic's object
 
     history:
-        - 02-Jul-2005   David Reyes    created
+        - 02-Jul-2005   Zombie         created
 */
 void phyObjManager::Insert( ncPhysicsObj* obj )
 {
@@ -619,7 +619,7 @@ void phyObjManager::Insert( ncPhysicsObj* obj )
     Updates the bitmap information.
 
     history:
-        - 03-Jul-2005   David Reyes    created
+        - 03-Jul-2005   Zombie         created
 */
 void phyObjManager::UpdateBitmapInformation()
 {
@@ -813,7 +813,7 @@ void phyObjManager::UpdateBitmapInformation()
     @param server graphics server
 
     history:
-        - 16-Jun-2005   David Reyes    created
+        - 16-Jun-2005   Zombie         created
 */
 void phyObjManager::DrawAreas( nGfxServer2* server )
 {
@@ -906,7 +906,7 @@ void phyObjManager::UpdateBitmapCell( const int cellx, const int celly )
     Resets the state.
     
     history:
-        - 18-Jul-2005   David Reyes    created
+        - 18-Jul-2005   Zombie         created
 */
 void phyObjManager::Reset()
 {
@@ -925,7 +925,7 @@ void phyObjManager::Reset()
     @param dynamic if the dynamic space has any geometry
     
     history:
-        - 18-Jul-2005   David Reyes    created
+        - 18-Jul-2005   Zombie         created
 */
 void phyObjManager::SetVisibleCell( const unsigned index, const bool dynamic )
 {

@@ -90,7 +90,7 @@ private:
     @param stepjump bytes to be jumper per line
 
     history:
-        - 11-Apr-2005   David Reyes    created
+        - 11-Apr-2005   Zombie         created
 */
 inline
 void nPhyGeomHeightMap::SetStep( int stepjump )

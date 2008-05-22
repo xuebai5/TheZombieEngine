@@ -29,7 +29,7 @@ namespace
     Constructor
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 ncPhyPickableObj::ncPhyPickableObj() :
     lenghts(1,1,1)
@@ -42,7 +42,7 @@ ncPhyPickableObj::ncPhyPickableObj() :
     Destructor
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 ncPhyPickableObj::~ncPhyPickableObj()
 {
@@ -57,7 +57,7 @@ ncPhyPickableObj::~ncPhyPickableObj()
     @param lenghts object lengths
 
     history:
-        - 07-Apr-2005   David Reyes    created
+        - 07-Apr-2005   Zombie         created
 */
 void ncPhyPickableObj::SetLengths( const vector3& lengths )
 {  
@@ -91,7 +91,7 @@ void ncPhyPickableObj::SetLengths( const vector3& lengths )
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 17-May-2005   David Reyes    created
+        - 17-May-2005   Zombie         created
 */
 void ncPhyPickableObj::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -125,7 +125,7 @@ void ncPhyPickableObj::InitInstance(nObject::InitInstanceMsg initType)
     @param world it's the world where the object will be come to existance
 
     history:
-        - 17-May-2005   David Reyes    created
+        - 17-May-2005   Zombie         created
 */
 void ncPhyPickableObj::Create( nPhysicsWorld* world )
 {

@@ -333,7 +333,7 @@ private:
     @return		geometry id
 
     history:
-        - 22-Sep-2004   David Reyes    created
+        - 22-Sep-2004   Zombie         created
 */
 inline
 geomid nPhysicsGeom::Id() const
@@ -349,8 +349,8 @@ geomid nPhysicsGeom::Id() const
 	@return boolean
 
     history:
-     - 06-Oct-2004   David Reyes    created
-     - 12-Dec-2004   David Reyes    inlined
+     - 06-Oct-2004   Zombie         created
+     - 12-Dec-2004   Zombie         inlined
 */
 inline 
 void nPhysicsGeom::DrawShape( bool draw )
@@ -366,8 +366,8 @@ void nPhysicsGeom::DrawShape( bool draw )
     @return number of contacts for this geometry
     
     history:
-     - 02-Nov-2004   David Reyes    created
-     - 12-Dec-2004   David Reyes    inlined
+     - 02-Nov-2004   Zombie         created
+     - 12-Dec-2004   Zombie         inlined
 */
 inline
 int nPhysicsGeom::GetNumContacts() const
@@ -383,8 +383,8 @@ int nPhysicsGeom::GetNumContacts() const
 	@return boolean
 
     history:
-     - 06-Oct-2004   David Reyes    created
-     - 12-Dec-2004   David Reyes    inlined
+     - 06-Oct-2004   Zombie         created
+     - 12-Dec-2004   Zombie         inlined
 */
 inline
 bool nPhysicsGeom::DrawShape() const
@@ -399,8 +399,8 @@ bool nPhysicsGeom::DrawShape() const
 	@return body to be attached
 
 	history:
-     - 24-Sep-2004   David Reyes    created
-     - 12-Dec-2004   David Reyes    inlined
+     - 24-Sep-2004   Zombie         created
+     - 12-Dec-2004   Zombie         inlined
 */
 inline
 nPhyRigidBody* nPhysicsGeom::GetBody() const
@@ -415,8 +415,8 @@ nPhyRigidBody* nPhysicsGeom::GetBody() const
 	@param position     vector position
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 12-Dec-2004   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhysicsGeom::GetPosition( vector3& position ) const
@@ -433,8 +433,8 @@ void nPhysicsGeom::GetPosition( vector3& position ) const
 	@param orientation     orientation matrix
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 12-Dec-2004   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 12-Dec-2004   Zombie         inlined
 */
 inline
 void nPhysicsGeom::GetOrientation( matrix33& orientation ) const
@@ -451,8 +451,8 @@ void nPhysicsGeom::GetOrientation( matrix33& orientation ) const
     @return     space id
 
     history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 spaceid nPhysicsGeom::SpaceId() const
@@ -469,8 +469,8 @@ spaceid nPhysicsGeom::SpaceId() const
     @return     geometry type
 
     history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 nPhysicsGeom::GeometryTypes nPhysicsGeom::Type() const
@@ -485,8 +485,8 @@ nPhysicsGeom::GeometryTypes nPhysicsGeom::Type() const
 	Enables this geometry
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::Enable() 
@@ -503,8 +503,8 @@ void nPhysicsGeom::Enable()
 	Disables this geometry
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::Disable() 
@@ -523,8 +523,8 @@ void nPhysicsGeom::Disable()
     @return boolean indicating if the geometry is enabled
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 bool nPhysicsGeom::IsEnabled() const 
@@ -541,8 +541,8 @@ bool nPhysicsGeom::IsEnabled() const
 	@return		boolean
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 bool nPhysicsGeom::IsSpace() const 
@@ -559,8 +559,8 @@ bool nPhysicsGeom::IsSpace() const
 	@param  newposition vector with a position in the world
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetPosition( const vector3& newposition )
@@ -577,8 +577,8 @@ void nPhysicsGeom::SetPosition( const vector3& newposition )
 	@param  neworientation matrix with a position in the world
 
 	history:
-     - 22-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 22-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetOrientation( const matrix33& neworientation )
@@ -595,8 +595,8 @@ void nPhysicsGeom::SetOrientation( const matrix33& neworientation )
 	@param boundingbox     bounding box to be filled
 
 	history:
-     - 24-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 24-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::GetAABB( nPhysicsAABB& boundingbox )
@@ -614,8 +614,8 @@ void nPhysicsGeom::GetAABB( nPhysicsAABB& boundingbox )
 	@param body     body to be attached
 
 	history:
-     - 24-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 24-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetBody( nPhyRigidBody* body )
@@ -638,8 +638,8 @@ void nPhysicsGeom::SetBody( nPhyRigidBody* body )
     @return number of contacts if any
 
 	history:
-     - 28-Sep-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 28-Sep-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 int nPhysicsGeom::Collide( 
@@ -656,8 +656,8 @@ int nPhysicsGeom::Collide(
 	@param Category new category for this geom
 
     history:
-     - 07-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 07-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::AddCategory( Category category )
@@ -672,8 +672,8 @@ void nPhysicsGeom::AddCategory( Category category )
 	Resets categories.
 
     history:
-     - 15-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 15-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::ResetCategory()
@@ -690,8 +690,8 @@ void nPhysicsGeom::ResetCategory()
 	@param Category new category for this geom
 
     history:
-     - 07-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 07-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::AddCollidesWith( Category category )
@@ -708,8 +708,8 @@ void nPhysicsGeom::AddCollidesWith( Category category )
 	@param Category new category for this geom
 
     history:
-     - 15-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 15-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::RemovesCollidesWith( Category category )
@@ -724,8 +724,8 @@ void nPhysicsGeom::RemovesCollidesWith( Category category )
 	Creates the geometry (should be call by all the classes that inheret from this one).
 
     history:
-     - 11-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 11-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::Create()
@@ -747,8 +747,8 @@ void nPhysicsGeom::Create()
     @param owner    the new owner of the geometry
 
     history:
-     - 14-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 14-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetOwner( ncPhysicsObj* owner )
@@ -764,8 +764,8 @@ void nPhysicsGeom::SetOwner( ncPhysicsObj* owner )
     @param categories new set of collide categories
 
     history:
-     - 19-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 19-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetCollidesWith( int categories )
@@ -782,8 +782,8 @@ void nPhysicsGeom::SetCollidesWith( int categories )
     @param categories new set of categories
     
     history:
-     - 19-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 19-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetCategories( int categories )
@@ -800,8 +800,8 @@ void nPhysicsGeom::SetCategories( int categories )
     @param material the new material for the 
     
     history:
-     - 29-Oct-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 29-Oct-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetMaterial( nPhyMaterial::idmaterial material )
@@ -820,8 +820,8 @@ void nPhysicsGeom::SetMaterial( nPhyMaterial::idmaterial material )
     @return categories flags
     
     history:
-     - 24-Nov-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 24-Nov-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 int nPhysicsGeom::GetCategories() const
@@ -838,8 +838,8 @@ int nPhysicsGeom::GetCategories() const
     @return categories flags
     
     history:
-     - 24-Nov-2004   David Reyes    created
-     - 31-Jan-2005   David Reyes    inlined
+     - 24-Nov-2004   Zombie         created
+     - 31-Jan-2005   Zombie         inlined
 */
 inline
 int nPhysicsGeom::GetCollidesWith() const
@@ -856,7 +856,7 @@ int nPhysicsGeom::GetCollidesWith() const
     @param material a material
     
     history:
-     - 05-Apr-2005   David Reyes    created
+     - 05-Apr-2005   Zombie         created
 */
 inline
 void nPhysicsGeom::SetMaterial( nPhyMaterial* material )
@@ -873,8 +873,8 @@ void nPhysicsGeom::SetMaterial( nPhyMaterial* material )
     @return if has all the attributes
 
     history:
-     - 02-Mar-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 02-Mar-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 bool nPhysicsGeom::HasAttributes( int attributesmask ) const
@@ -889,8 +889,8 @@ bool nPhysicsGeom::HasAttributes( int attributesmask ) const
     @return if has all the attributes
 
     history:
-     - 02-Mar-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 02-Mar-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetAttributes( int attributesmask )
@@ -905,8 +905,8 @@ void nPhysicsGeom::SetAttributes( int attributesmask )
     @param attributemask attribute's flags
 
     history:
-     - 02-Mar-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 02-Mar-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::AddAttributes( int attributesmask )
@@ -921,8 +921,8 @@ void nPhysicsGeom::AddAttributes( int attributesmask )
     @param attributemask attribute's flags
 
     history:
-     - 02-Mar-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 02-Mar-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::RemoveAttributes( int attributesmask )
@@ -937,8 +937,8 @@ void nPhysicsGeom::RemoveAttributes( int attributesmask )
     @return attribute's flags
 
     history:
-     - 02-Mar-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 02-Mar-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 int nPhysicsGeom::GetAttributes() const
@@ -953,8 +953,8 @@ int nPhysicsGeom::GetAttributes() const
     @param trans a transfrom geometry
 
     history:
-        - 21-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 21-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::SetTransform( nPhyGeomTrans* trans )
@@ -969,8 +969,8 @@ void nPhysicsGeom::SetTransform( nPhyGeomTrans* trans )
     @return a transfrom geometry
 
     history:
-        - 21-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 21-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 nPhyGeomTrans* nPhysicsGeom::GetTransform() const
@@ -985,8 +985,8 @@ nPhyGeomTrans* nPhysicsGeom::GetTransform() const
     @param factor scale factor
     
     history:
-     - 12-May-2005   David Reyes    created
-     - 12-May-2005   David Reyes    inlined
+     - 12-May-2005   Zombie         created
+     - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhysicsGeom::Scale( const phyreal /*factor*/ )

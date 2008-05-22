@@ -91,8 +91,8 @@ private:
     @return encapsulated geometry
 
     history:
-        - 18-Oct-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inline
+        - 18-Oct-2004   Zombie         created
+        - 12-May-2005   Zombie         inline
 */
 inline
 nPhysicsGeom* nPhyGeomTrans::GetGeometry() const
@@ -107,7 +107,7 @@ nPhysicsGeom* nPhyGeomTrans::GetGeometry() const
     @return material id
 
     history:
-        - 16-May-2004   David Reyes    created
+        - 16-May-2004   Zombie         created
 */
 inline
 const nPhyMaterial::idmaterial nPhyGeomTrans::GetMaterial() const
@@ -124,7 +124,7 @@ const nPhyMaterial::idmaterial nPhyGeomTrans::GetMaterial() const
     @return categories flags
 
     history:
-        - 16-May-2004   David Reyes    created
+        - 16-May-2004   Zombie         created
 */
 inline
 int nPhyGeomTrans::GetCategories() const
@@ -141,7 +141,7 @@ int nPhyGeomTrans::GetCategories() const
     @return categories flags
 
     history:
-        - 16-May-2004   David Reyes    created
+        - 16-May-2004   Zombie         created
 */
 inline
 int nPhyGeomTrans::GetCollidesWith() const
@@ -158,7 +158,7 @@ int nPhyGeomTrans::GetCollidesWith() const
     @return a physic object
 
     history:
-        - 16-May-2004   David Reyes    created
+        - 16-May-2004   Zombie         created
 */
 inline
 ncPhysicsObj* nPhyGeomTrans::GetOwner() const
@@ -175,7 +175,7 @@ ncPhysicsObj* nPhyGeomTrans::GetOwner() const
     @param categories new categories flags
 
     history:
-        - 22-Jul-2005   David Reyes    created
+        - 22-Jul-2005   Zombie         created
 */
 inline
 void nPhyGeomTrans::SetCategories( int categories )
@@ -193,7 +193,7 @@ void nPhyGeomTrans::SetCategories( int categories )
     @param categories new categories flags
 
     history:
-        - 22-Jul-2005   David Reyes    created
+        - 22-Jul-2005   Zombie         created
 */
 inline
 void nPhyGeomTrans::SetCollidesWith( int categories )

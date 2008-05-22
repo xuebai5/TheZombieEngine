@@ -40,7 +40,7 @@ namespace {
     Constructor.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 
 ncPhyFourleggedRagDollClass::ncPhyFourleggedRagDollClass() : 
@@ -68,7 +68,7 @@ ncPhyFourleggedRagDollClass::ncPhyFourleggedRagDollClass() :
     Destructor.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 ncPhyFourleggedRagDollClass::~ncPhyFourleggedRagDollClass()
 {
@@ -81,7 +81,7 @@ ncPhyFourleggedRagDollClass::~ncPhyFourleggedRagDollClass()
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetNeckFrontAngleMin() const
 {
@@ -95,7 +95,7 @@ phyreal ncPhyFourleggedRagDollClass::GetNeckFrontAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetNeckFrontAngleMax() const
 {
@@ -109,7 +109,7 @@ phyreal ncPhyFourleggedRagDollClass::GetNeckFrontAngleMax() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetNeckSidesAngleMin() const
 {
@@ -123,7 +123,7 @@ phyreal ncPhyFourleggedRagDollClass::GetNeckSidesAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetNeckSidesAngleMax() const
 {
@@ -137,7 +137,7 @@ phyreal ncPhyFourleggedRagDollClass::GetNeckSidesAngleMax() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetShoulderUpDownAngleMin() const
 {
@@ -151,7 +151,7 @@ phyreal ncPhyFourleggedRagDollClass::GetShoulderUpDownAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetShoulderUpDownAngleMax() const
 {
@@ -165,7 +165,7 @@ phyreal ncPhyFourleggedRagDollClass::GetShoulderUpDownAngleMax() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetShoulderFrontAngleMin() const
 {
@@ -179,7 +179,7 @@ phyreal ncPhyFourleggedRagDollClass::GetShoulderFrontAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetShoulderFrontAngleMax() const
 {
@@ -193,7 +193,7 @@ phyreal ncPhyFourleggedRagDollClass::GetShoulderFrontAngleMax() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetElbowUpDownAngleMin() const
 {
@@ -207,7 +207,7 @@ phyreal ncPhyFourleggedRagDollClass::GetElbowUpDownAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetElbowUpDownAngleMax() const
 {
@@ -221,7 +221,7 @@ phyreal ncPhyFourleggedRagDollClass::GetElbowUpDownAngleMax() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetWristUpDownAngleMin() const
 {
@@ -235,7 +235,7 @@ phyreal ncPhyFourleggedRagDollClass::GetWristUpDownAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetWristUpDownAngleMax() const
 {
@@ -249,7 +249,7 @@ phyreal ncPhyFourleggedRagDollClass::GetWristUpDownAngleMax() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetWristSidesAngleMin() const
 {
@@ -263,7 +263,7 @@ phyreal ncPhyFourleggedRagDollClass::GetWristSidesAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetWristSidesAngleMax() const
 {
@@ -277,7 +277,7 @@ phyreal ncPhyFourleggedRagDollClass::GetWristSidesAngleMax() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetKneeUpDownAngleMin() const
 {
@@ -291,7 +291,7 @@ phyreal ncPhyFourleggedRagDollClass::GetKneeUpDownAngleMin() const
     @return angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 phyreal ncPhyFourleggedRagDollClass::GetKneeUpDownAngleMax() const
 {
@@ -304,7 +304,7 @@ phyreal ncPhyFourleggedRagDollClass::GetKneeUpDownAngleMax() const
     Save state of the component.
 
     history:
-        - 06-May-2005   David Reyes    created
+        - 06-May-2005   Zombie         created
 */
 bool ncPhyFourleggedRagDollClass::SaveCmds(nPersistServer *server)
 {
@@ -454,7 +454,7 @@ bool ncPhyFourleggedRagDollClass::SaveCmds(nPersistServer *server)
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetNeckFrontAngleMin( const phyreal value )
 {
@@ -468,7 +468,7 @@ void ncPhyFourleggedRagDollClass::SetNeckFrontAngleMin( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetNeckFrontAngleMax( const phyreal value )
 {
@@ -482,7 +482,7 @@ void ncPhyFourleggedRagDollClass::SetNeckFrontAngleMax( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetNeckSidesAngleMin( const phyreal value )
 {
@@ -496,7 +496,7 @@ void ncPhyFourleggedRagDollClass::SetNeckSidesAngleMin( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetNeckSidesAngleMax( const phyreal value )
 {
@@ -510,7 +510,7 @@ void ncPhyFourleggedRagDollClass::SetNeckSidesAngleMax( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetShoulderUpDownAngleMin( const phyreal value )
 {
@@ -524,7 +524,7 @@ void ncPhyFourleggedRagDollClass::SetShoulderUpDownAngleMin( const phyreal value
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetShoulderUpDownAngleMax( const phyreal value )
 {
@@ -538,7 +538,7 @@ void ncPhyFourleggedRagDollClass::SetShoulderUpDownAngleMax( const phyreal value
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetShoulderFrontAngleMin( const phyreal value )
 {
@@ -552,7 +552,7 @@ void ncPhyFourleggedRagDollClass::SetShoulderFrontAngleMin( const phyreal value 
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetShoulderFrontAngleMax( const phyreal value )
 {
@@ -566,7 +566,7 @@ void ncPhyFourleggedRagDollClass::SetShoulderFrontAngleMax( const phyreal value 
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetElbowUpDownAngleMin( const phyreal value )
 {
@@ -580,7 +580,7 @@ void ncPhyFourleggedRagDollClass::SetElbowUpDownAngleMin( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetElbowUpDownAngleMax( const phyreal value )
 {
@@ -594,7 +594,7 @@ void ncPhyFourleggedRagDollClass::SetElbowUpDownAngleMax( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetWristUpDownAngleMin( const phyreal value )
 {
@@ -608,7 +608,7 @@ void ncPhyFourleggedRagDollClass::SetWristUpDownAngleMin( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetWristUpDownAngleMax( const phyreal value )
 {
@@ -622,7 +622,7 @@ void ncPhyFourleggedRagDollClass::SetWristUpDownAngleMax( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetWristSidesAngleMin( const phyreal value )
 {
@@ -636,7 +636,7 @@ void ncPhyFourleggedRagDollClass::SetWristSidesAngleMin( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetWristSidesAngleMax( const phyreal value )
 {
@@ -650,7 +650,7 @@ void ncPhyFourleggedRagDollClass::SetWristSidesAngleMax( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetKneeUpDownAngleMin( const phyreal value )
 {
@@ -664,7 +664,7 @@ void ncPhyFourleggedRagDollClass::SetKneeUpDownAngleMin( const phyreal value )
     @param value angle
 
     history:
-        - 09-May-2005   David Reyes    created
+        - 09-May-2005   Zombie         created
 */
 void ncPhyFourleggedRagDollClass::SetKneeUpDownAngleMax( const phyreal value )
 {

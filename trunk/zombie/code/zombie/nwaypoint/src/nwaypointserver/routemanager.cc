@@ -18,7 +18,7 @@
     @return a unique instance
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 RouteManager& RouteManager::Instance()
 {
@@ -31,7 +31,7 @@ RouteManager& RouteManager::Instance()
     Default constructor
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 RouteManager::RouteManager() : 
     indexLastFree(MaxRoutesAvaliable-1)
@@ -45,7 +45,7 @@ RouteManager::RouteManager() :
     Destructor
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 RouteManager::~RouteManager()
 {
@@ -62,7 +62,7 @@ RouteManager::~RouteManager()
     @param traverse values: Horizontal (default), Vertical
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const int RouteManager::CreateRoute( 
                                     const nString& path, 
@@ -107,7 +107,7 @@ const int RouteManager::CreateRoute(
     @param id id given when created route
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 void RouteManager::DestroyRoute( const int id )
 {
@@ -129,7 +129,7 @@ void RouteManager::DestroyRoute( const int id )
     @return true - if route ended false otherwise
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowRoute( const int id, const float step, vector3& newposition, bool waittonextwaypoint )
 {
@@ -162,7 +162,7 @@ const bool RouteManager::FollowRoute( const int id, const float step, vector3& n
     @return true - if route ended false otherwise
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLinear( Route& route, const float step, vector3& newposition )
 {
@@ -206,7 +206,7 @@ const bool RouteManager::FollowLinear( Route& route, const float step, vector3& 
     @return true - if route ended false otherwise
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLinearForward( Route& route, const float step, vector3& newposition )
 {
@@ -273,7 +273,7 @@ const bool RouteManager::FollowLinearForward( Route& route, const float step, ve
     @return position
 
     history:
-        - 13-Oct-2004   David Reyes    created
+        - 13-Oct-2004   Zombie         created
 */
 const vector3& RouteManager::GetPositionRoute( const int id ) const
 {
@@ -291,7 +291,7 @@ const vector3& RouteManager::GetPositionRoute( const int id ) const
     @return true - if route ended false otherwise
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLinearBackward( Route& route, const float step, vector3& newposition )
 {    
@@ -358,7 +358,7 @@ const bool RouteManager::FollowLinearBackward( Route& route, const float step, v
     @return true - if route ended false otherwise
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowPingPongLinear( Route& route, const float step, vector3& newposition )
 {
@@ -392,7 +392,7 @@ const bool RouteManager::FollowPingPongLinear( Route& route, const float step, v
     @return true - if route ended false otherwise
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLoopLinear( Route& route, const float step, vector3& newposition )
 {
@@ -419,7 +419,7 @@ const bool RouteManager::FollowLoopLinear( Route& route, const float step, vecto
     @return true - if route ended false otherwise
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLoopLinearForward( Route& route, const float step, vector3& newposition )
 {
@@ -478,7 +478,7 @@ const bool RouteManager::FollowLoopLinearForward( Route& route, const float step
     @return true - if route ended false otherwise
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLoopLinearBackward( Route& route, const float step, vector3& newposition )
 {
@@ -543,7 +543,7 @@ const bool RouteManager::FollowLoopLinearBackward( Route& route, const float ste
     @return true - if route ended false otherwise
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowBezier( Route& route, const float step, vector3& newposition )
 {    
@@ -591,7 +591,7 @@ const bool RouteManager::FollowBezier( Route& route, const float step, vector3& 
     @return true - if route ended false otherwise
 
     history:
-        - 14-Oct-2004   David Reyes    created
+        - 14-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowBezierForward( Route& route, const float step, vector3& newposition )
 {
@@ -662,7 +662,7 @@ const bool RouteManager::FollowBezierForward( Route& route, const float step, ve
     @param newposition where to go
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 void RouteManager::BezierRoute( Route& route, vector3& newposition )
 {
@@ -686,7 +686,7 @@ void RouteManager::BezierRoute( Route& route, vector3& newposition )
     @param newposition where to go
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 void RouteManager::BezierForward( Route& route, vector3& newposition )
 {
@@ -741,7 +741,7 @@ void RouteManager::BezierForward( Route& route, vector3& newposition )
     @param newposition where to go
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 void RouteManager::BezierBackward( Route& route, vector3& newposition )
 {
@@ -805,7 +805,7 @@ void RouteManager::BezierBackward( Route& route, vector3& newposition )
     @return true - if route ended false otherwise
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowBezierBackward( Route& route, const float step, vector3& newposition )
 {
@@ -878,7 +878,7 @@ const bool RouteManager::FollowBezierBackward( Route& route, const float step, v
     @return true - if route ended false otherwise
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowPingPongBezier( Route& route, const float step, vector3& newposition )
 {
@@ -912,7 +912,7 @@ const bool RouteManager::FollowPingPongBezier( Route& route, const float step, v
     @return true - if route ended false otherwise
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLoopBezierForward( Route& route, const float step, vector3& newposition )
 {
@@ -966,7 +966,7 @@ const bool RouteManager::FollowLoopBezierForward( Route& route, const float step
     @return true - if route ended false otherwise
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 const bool RouteManager::FollowLoopBezierBackward( Route& route, const float step, vector3& newposition )
 {
@@ -1020,7 +1020,7 @@ const bool RouteManager::FollowLoopBezierBackward( Route& route, const float ste
     Destroys all the allocated routes
 
     history:
-        - 20-Oct-2004   David Reyes    created
+        - 20-Oct-2004   Zombie         created
 */
 void RouteManager::DestroyAllRoutes()
 {
@@ -1038,7 +1038,7 @@ void RouteManager::DestroyAllRoutes()
     Reverses direction
 
     history:
-        - 23-Nov-2005   David Reyes    created
+        - 23-Nov-2005   Zombie         created
 */
 void RouteManager::Reverse( const int id )
 {

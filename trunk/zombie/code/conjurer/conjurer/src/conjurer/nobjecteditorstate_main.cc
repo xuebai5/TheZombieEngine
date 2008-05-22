@@ -996,7 +996,7 @@ nObjectEditorState::SetSelectionMode( int mode, bool saveChanges )
         if ( phyComp )
         {
             //HACK ma.garcias- this crashes the editor when editing indoor superentities
-            //it has been preventively disabled, but needs checking (david.reyes)
+            //it has been preventively disabled, but needs checking
             //phyComp->Disable();
         }
         break;

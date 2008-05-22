@@ -258,7 +258,7 @@ void ncPhyTerrain::PrepareBuffer( const phyreal* buffer )
     Creates the space for this terrain.
 
     history:
-        - 19-May-2005   David Reyes     created
+        - 19-May-2005   Zombie          created
 */
 void ncPhyTerrain::CreateSpace()
 {
@@ -301,7 +301,7 @@ void ncPhyTerrain::CreateSpace()
     Returns the terrain space.
 
     history:
-        - 19-May-2005   David Reyes     created
+        - 19-May-2005   Zombie          created
 */
 nPhySpace* ncPhyTerrain::GetTerrainSpace()
 {
@@ -316,7 +316,7 @@ nPhySpace* ncPhyTerrain::GetTerrainSpace()
     @return num nodes
 
     history:
-        - 20-May-2005   David Reyes     Created
+        - 20-May-2005   Zombie          Created
 */
 int ncPhyTerrain::GetTotalNumNodes()  const
 {
@@ -330,7 +330,7 @@ int ncPhyTerrain::GetTotalNumNodes()  const
     @param loaded indicates if the instance is bare new of loaded
 
     history:
-        - 20-May-2005   David Reyes     Created
+        - 20-May-2005   Zombie          Created
 */
 void ncPhyTerrain::InitInstance(nObject::InitInstanceMsg initType)
 {
@@ -360,7 +360,7 @@ void ncPhyTerrain::InitInstance(nObject::InitInstanceMsg initType)
     @param boundingbox axis aligned bounding box
 
     history:
-        - 02-Jun-2005   David Reyes     Created
+        - 02-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::GetAABB( nPhysicsAABB& boundingbox )
 {
@@ -384,7 +384,7 @@ void ncPhyTerrain::GetAABB( nPhysicsAABB& boundingbox )
     Enables the terrain.
 
     history:
-        - 03-Jun-2005   David Reyes     Created
+        - 03-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::Enable()
 {
@@ -401,7 +401,7 @@ void ncPhyTerrain::Enable()
     Disables the terrain.
 
     history:
-        - 03-Jun-2005   David Reyes     Created
+        - 03-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::Disable()
 {
@@ -421,7 +421,7 @@ void ncPhyTerrain::Disable()
     @param categories categories flags
 
     history:
-        - 03-Jun-2005   David Reyes     Created
+        - 03-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::SetCategories( int categories )
 {
@@ -440,7 +440,7 @@ void ncPhyTerrain::SetCategories( int categories )
     @param categories categories flags
 
     history:
-        - 03-Jun-2005   David Reyes     Created
+        - 03-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::SetCollidesWith( int categories )
 {
@@ -457,7 +457,7 @@ void ncPhyTerrain::SetCollidesWith( int categories )
     Updates the aabbs when the heightmap has changed.
 
     history:
-        - 15-Jun-2005   David Reyes     Created
+        - 15-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::UpdateTerrainBoundingBoxes()
 {
@@ -478,7 +478,7 @@ void ncPhyTerrain::UpdateTerrainBoundingBoxes()
             otherwise the polyLine passed as a param
 
     history:
-        - 21-Jul-2005   David Reyes     Created
+        - 21-Jul-2005   Zombie          Created
 */
 nTerrainLine*
 ncPhyTerrain::AddHole( nTerrainLine* polyLine )
@@ -506,7 +506,7 @@ ncPhyTerrain::AddHole( nTerrainLine* polyLine )
     @param polyLine line defining an area
 
     history:
-        - 13-Jan-2006   David Reyes     Created
+        - 13-Jan-2006   Zombie          Created
 */
 void ncPhyTerrain::AddHoleInCells( nTerrainLine* polyLine )
 {
@@ -553,7 +553,7 @@ void ncPhyTerrain::AddHoleInCells( nTerrainLine* polyLine )
     @param z z coordinate in a plane
 
     history:
-        - 28-Jun-2005   David Reyes     Created
+        - 28-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::SetHole( int x, int z )
 {
@@ -606,7 +606,7 @@ void ncPhyTerrain::SetHole( int x, int z )
     Removes all the holes.
 
     history:
-        - 28-Jun-2005   David Reyes     Created
+        - 28-Jun-2005   Zombie          Created
 */
 void ncPhyTerrain::RemoveHoles()
 {
@@ -623,7 +623,7 @@ void ncPhyTerrain::RemoveHoles()
     @return num of holes in the terrain
 
     history:
-        - 11-Jan-2006   David Reyes     Created
+        - 11-Jan-2006   Zombie          Created
 */
 const int ncPhyTerrain::GetNumHoles() const
 {
@@ -639,7 +639,7 @@ const int ncPhyTerrain::GetNumHoles() const
     @param index index to the list of holes
 
     history:
-        - 11-Jan-2006   David Reyes     Created
+        - 11-Jan-2006   Zombie          Created
 */
 nTerrainLine* ncPhyTerrain::GetHole( const int index ) const
 {
@@ -655,7 +655,7 @@ nTerrainLine* ncPhyTerrain::GetHole( const int index ) const
     @param index index to the list of holes
 
     history:
-        - 11-Jan-2006   David Reyes     Created
+        - 11-Jan-2006   Zombie          Created
 */
 void ncPhyTerrain::RemoveHole( const int index )
 {
@@ -701,7 +701,7 @@ void ncPhyTerrain::RemoveHoleForLine( nTerrainLine * line )
     @return a new terrain line object.
 
     history:
-        - 12-Jan-2006   David Reyes     Created
+        - 12-Jan-2006   Zombie          Created
 */
 nTerrainLine* ncPhyTerrain::CreateHole()
 {
@@ -717,7 +717,7 @@ nTerrainLine* ncPhyTerrain::CreateHole()
     Adds the last created hole.
 
     history:
-        - 12-Jan-2006   David Reyes     Created
+        - 12-Jan-2006   Zombie          Created
 */
 void ncPhyTerrain::AddLastHole()
 {
@@ -732,7 +732,7 @@ void ncPhyTerrain::AddLastHole()
     Draws the physic object.
 
     history:
-        - 13-Jan-2006   David Reyes     Created
+        - 13-Jan-2006   Zombie          Created
 */
 void ncPhyTerrain::Draw( nGfxServer2* /*server*/ )
 {

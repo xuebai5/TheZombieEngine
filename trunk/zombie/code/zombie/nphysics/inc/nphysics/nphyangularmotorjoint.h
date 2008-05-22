@@ -83,8 +83,8 @@ public:
     @param value new parameter's value
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyAngularMotorJoint::SetParam( const phy::jointparameter parameter, const phy::jointaxis axis, const phyreal value )
@@ -101,8 +101,8 @@ void nPhyAngularMotorJoint::SetParam( const phy::jointparameter parameter, const
     @param axis axis direction
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyAngularMotorJoint::SetFirstAxis( const vector3& axis )
@@ -121,8 +121,8 @@ void nPhyAngularMotorJoint::SetFirstAxis( const vector3& axis )
     @param axis axis direction
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyAngularMotorJoint::SetSecondAxis( const vector3& axis )
@@ -139,8 +139,8 @@ void nPhyAngularMotorJoint::SetSecondAxis( const vector3& axis )
     @param axis axis direction
 
     history:
-        - 09-Mar-2005   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 09-Mar-2005   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyAngularMotorJoint::SetThirdAxis( const vector3& axis )

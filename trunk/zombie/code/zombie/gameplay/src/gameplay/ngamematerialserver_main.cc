@@ -36,7 +36,7 @@ namespace
     Constructor
 
     history:
-        - 21-Oct-2005   David Reyes    created
+        - 21-Oct-2005   Zombie         created
 */
 nGameMaterialServer::nGameMaterialServer()
 {
@@ -50,7 +50,7 @@ nGameMaterialServer::nGameMaterialServer()
     Destructor
 
     history:
-        - 21-Oct-2005   David Reyes    created
+        - 21-Oct-2005   Zombie         created
 */
 nGameMaterialServer::~nGameMaterialServer()
 {
@@ -68,7 +68,7 @@ nGameMaterialServer::~nGameMaterialServer()
     @return pointer to the only instance of this object
 
     history:
-        - 21-Oct-2005   David Reyes    created
+        - 21-Oct-2005   Zombie         created
 */
 nGameMaterialServer* nGameMaterialServer::Instance()
 {
@@ -82,7 +82,7 @@ nGameMaterialServer* nGameMaterialServer::Instance()
     Destroys server's data
 
     history:
-        - 21-Oct-2005   David Reyes    created
+        - 21-Oct-2005   Zombie         created
 */
 void nGameMaterialServer::Destroy()
 {
@@ -96,8 +96,8 @@ void nGameMaterialServer::Destroy()
     @return a material otherwise a null pointer
 
     history:
-        - 01-Aug-2004   David Reyes   created
-        - 28-Oct-2005   David Reyes   moved from nGameMaterial
+        - 01-Aug-2004   Zombie        created
+        - 28-Oct-2005   Zombie        moved from nGameMaterial
 */
 nGameMaterial* nGameMaterialServer::GetMaterial( const unsigned int id ) const
 {
@@ -118,7 +118,7 @@ nGameMaterial* nGameMaterialServer::GetMaterial( const unsigned int id ) const
     @return a material otherwise a null pointer
 
     history:
-        - 28-Oct-2005   David Reyes     created
+        - 28-Oct-2005   Zombie          created
 */
 nGameMaterial* nGameMaterialServer::CreateMaterial( const nString& name )
 {
@@ -155,8 +155,8 @@ nGameMaterial* nGameMaterialServer::CreateMaterial( const nString& name )
     Updates list of materials.
 
     history:
-        - 01-Aug-2004   David Reyes   created
-        - 28-Oct-2005   David Reyes   moved from nGameMaterial
+        - 01-Aug-2004   Zombie        created
+        - 28-Oct-2005   Zombie        moved from nGameMaterial
 */
 void nGameMaterialServer::UpdateList()
 {
@@ -174,7 +174,7 @@ void nGameMaterialServer::UpdateList()
     @return material if any
 
     history:
-        - 28-Oct-2005   David Reyes   created
+        - 28-Oct-2005   Zombie        created
 */
 nGameMaterial* nGameMaterialServer::GetMaterialByName( const nString& name ) const
 {
@@ -189,7 +189,7 @@ nGameMaterial* nGameMaterialServer::GetMaterialByName( const nString& name ) con
     @param material a material
     
     history:
-        - 31-Oct-2005   David Reyes   created
+        - 31-Oct-2005   Zombie        created
 */
 void nGameMaterialServer::Add( nGameMaterial* material )
 {
@@ -223,7 +223,7 @@ void nGameMaterialServer::Add( nGameMaterial* material )
     @return true/false
     
     history:
-        - 31-Oct-2005   David Reyes   created
+        - 31-Oct-2005   Zombie        created
 */
 const bool nGameMaterialServer::IsDirty() const
 {
@@ -247,7 +247,7 @@ const bool nGameMaterialServer::IsDirty() const
     @param ignored
     
     history:
-        - 02-Nov-2005   David Reyes   created
+        - 02-Nov-2005   Zombie        created
 */
 void nGameMaterialServer::InitInstance(nObject::InitInstanceMsg)
 {
@@ -260,7 +260,7 @@ void nGameMaterialServer::InitInstance(nObject::InitInstanceMsg)
     Loads materials.
 
     history:
-        - 02-Nov-2005   David Reyes   created
+        - 02-Nov-2005   Zombie        created
 */
 void nGameMaterialServer::LoadMaterials()
 {
@@ -303,7 +303,7 @@ void nGameMaterialServer::LoadMaterials()
     @param material a game material
 
     history:
-        - 02-Nov-2005   David Reyes   created
+        - 02-Nov-2005   Zombie        created
 */
 void nGameMaterialServer::RemoveMaterial(nGameMaterial* material)
 {
@@ -340,7 +340,7 @@ void nGameMaterialServer::RemoveMaterial(nGameMaterial* material)
     @param material a game material
 
     history:
-        - 04-Nov-2005   David Reyes   created
+        - 04-Nov-2005   Zombie        created
 */
 void nGameMaterialServer::Remove(nGameMaterial* material)
 {
@@ -386,7 +386,7 @@ nGameMaterialServer::GetNumMaterials() const
     Debug function to update the last changes in materials.
 
     history:
-        - 07-Feb-2006   David Reyes   created
+        - 07-Feb-2006   Zombie        created
 */
 #ifndef NGAME
 void nGameMaterialServer::Update()

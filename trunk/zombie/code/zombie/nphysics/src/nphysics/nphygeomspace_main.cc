@@ -14,7 +14,7 @@ nNebulaScriptClass(nPhyGeomSpace, "nphyspace");
     Constructor
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 nPhyGeomSpace::nPhyGeomSpace()
 {
@@ -29,7 +29,7 @@ nPhyGeomSpace::nPhyGeomSpace()
     Destructor
 
     history:
-        - 23-Sep-2004   David Reyes    created
+        - 23-Sep-2004   Zombie         created
 */
 nPhyGeomSpace::~nPhyGeomSpace()
 {
@@ -41,8 +41,8 @@ nPhyGeomSpace::~nPhyGeomSpace()
     Creates the geometry
 
     history:
-        - 23-Sep-2004   David Reyes    created
-        - 01-Oct-2004   David Reyes    supressed name
+        - 23-Sep-2004   Zombie         created
+        - 01-Oct-2004   Zombie         supressed name
 */
 void nPhyGeomSpace::Create()
 {

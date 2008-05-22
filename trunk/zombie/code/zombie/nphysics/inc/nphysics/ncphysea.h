@@ -85,8 +85,8 @@ private:
     @return height value
 
     history:
-        - 14-Jan-2005   David Reyes    created
-        - 27-Jan-2005   David Reyes    inlined
+        - 14-Jan-2005   Zombie         created
+        - 27-Jan-2005   Zombie         inlined
 */
 inline
 phyreal ncPhySea::GetSeaLeavel() const

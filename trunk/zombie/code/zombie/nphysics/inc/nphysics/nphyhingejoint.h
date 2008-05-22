@@ -84,8 +84,8 @@ public:
     @param anchor hinge anchor
 
     history:
-        - 15-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyHingeJoint::SetAnchor( const vector3& anchor )
@@ -102,8 +102,8 @@ void nPhyHingeJoint::SetAnchor( const vector3& anchor )
     @param axis     hinge axis
 
     history:
-        - 15-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 15-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyHingeJoint::SetAxis( const vector3& axis )
@@ -120,8 +120,8 @@ void nPhyHingeJoint::SetAxis( const vector3& axis )
     @param anchor     hinge anchor
 
     history:
-        - 16-Nov-2004   David Rey6es    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyHingeJoint::GetAnchor( vector3& anchor ) const
@@ -138,8 +138,8 @@ void nPhyHingeJoint::GetAnchor( vector3& anchor ) const
     @param axis     hinge axis
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyHingeJoint::GetAxis( vector3& axis ) const
@@ -156,8 +156,8 @@ void nPhyHingeJoint::GetAxis( vector3& axis ) const
     @return angle between the two bodies
 
     history:
-        - 16-Nov-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 16-Nov-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 phyreal nPhyHingeJoint::GetAngle() const
@@ -176,8 +176,8 @@ phyreal nPhyHingeJoint::GetAngle() const
     @param value new parameter's value
 
     history:
-        - 21-Dec-2004   David Reyes    created
-        - 12-May-2005   David Reyes    inlined
+        - 21-Dec-2004   Zombie         created
+        - 12-May-2005   Zombie         inlined
 */
 inline
 void nPhyHingeJoint::SetParam( const phy::jointparameter parameter, const phy::jointaxis axis, const phyreal value )
