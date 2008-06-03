@@ -218,7 +218,7 @@ class PropertyGrid(pg.wxPropertyGrid):
 
     def __on_right_click (self, event):
         """ Send a right click event (also is treated as a double click) """
-        prop = event.GetProperty()        
+        prop = event.GetPropertyPtr()        
         if prop is not None and self.properties_by_internal_label.has_key( event.GetPropertyName() ):
             p = self.properties_by_internal_label[ event.GetPropertyName() ]
             self.GetEventHandler().ProcessEvent( events.RightClickEvent(
@@ -226,7 +226,7 @@ class PropertyGrid(pg.wxPropertyGrid):
 
     def __on_selected (self, event):
         """ Send a selected event with the correct pid and update special controls"""
-        prop = event.GetProperty()
+        prop = event.GetPropertyPtr()
         if prop is not None:
             if event.GetPropertyName() == '':
                 self.selected_pid = None                
