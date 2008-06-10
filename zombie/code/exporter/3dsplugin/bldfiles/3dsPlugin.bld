@@ -319,8 +319,8 @@ endmodule
 
 #trick for rc
 beginmodule nmaterialstextures
-setplatform win32
-setdir pluginmtltxt
+  setplatform win32
+  setdir pluginmtltxt
   setlibs_win32 {
         shell32.lib user32.lib
   }
@@ -334,8 +334,33 @@ begintarget nmaterialstextures
   setexceptions true
   setresource_win32 code/exporter/3dsplugin/res/pluginmtltxt/nmaterialstextures.rc
   #setmoddeffile  pluginmtltxt.def
-  setmodules {pluginmtltxt nmaterialstextures }
-  settargetdeps {xml}
+  setmodules { pluginmtltxt nmaterialstextures }
+  settargetdeps {
+        nkernel
+        nscene
+        nmaterial
+        nnebula
+        ndirect3d9
+        nlua
+        ntoollib
+        n3dsnebulapluginlib
+        n3dsutils
+        xml
+        nphysics
+        framework
+        nspatial
+        nentity
+        zombieentityexp
+        ncshared
+        crashreportdump
+        nscriptclassserver
+        nanimation
+        conjurerexp
+        n3dsexporterdeps
+        noctree
+        nnavmesh
+        nspecialfx
+    }
 endtarget
 
 #-------------------------------------------------------------------------------
