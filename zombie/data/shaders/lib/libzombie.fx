@@ -9,6 +9,13 @@
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 
+// geometry types
+#define GEOMETRY_DEFAULT    0
+#define GEOMETRY_SKINNED    1
+#define GEOMETRY_SWING      2
+#define GEOMETRY_INSTANCED  3
+
+// light types
 #define LIGHT_POINT     0
 #define LIGHT_SPOT      1
 #define LIGHT_DIR       2
@@ -168,6 +175,45 @@ transformInstancedNormal(in const float3 normal,
     oNormal.x = rotatedNormal.x * vcos.z - rotatedNormal.y * vsin.z;
     oNormal.y = rotatedNormal.y * vcos.z + rotatedNormal.x * vsin.z;
     return oNormal;
+}
+
+//------------------------------------------------------------------------------
+/**
+	transformBillBoard()
+	@param  pos is a centroid
+	@param  uv  is a displacement of centroid
+	@param  imv is a inverse model view
+	@param  modelEyePos
+*/
+float4
+transformBillBoard( const float4 pos,
+                    const float2 uv,
+                    const uniform float4x4 imv,
+                    const uniform float3 modelEyePos )
+{
+    float3 VecY; 
+    float3 VecZ;
+    float3 VecX;
+    float3 position = pos.xyz;
+    VecY = mul(float3(0,1,0),imv); // Vertical axis of camera, this is invariant
+    VecZ = position - modelEyePos; // vector to camera
+    VecX = cross( VecZ, VecY );
+    VecY = cross( VecX, VecZ );
+    VecX = normalize( VecX );
+    VecY = normalize( VecY );
+    position += uv.x * VecX + uv.y * VecY ;
+    return  float4(position , 1.0);
+}
+
+//------------------------------------------------------------------------------
+/**
+	swing2( )
+	...
+*/
+float4
+swing2( const float4 pos, const float3 weight, const uniform float time )
+{
+    return pos + float4 ( weight*float3( 0.03, 0.0, 0.03 ) * cos( 2*time + pos.y + pos.z  + pos.x ) , 0.0 );
 }
 
 //------------------------------------------------------------------------------

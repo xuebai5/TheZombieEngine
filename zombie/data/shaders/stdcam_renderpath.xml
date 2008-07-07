@@ -16,8 +16,6 @@
         <Shader name="alphatestnoculllinearfog" file="shaders:zombie_sequences.fx" technique="tSeqAlphaTestNoCullLinearFog" />
     </Shaders>
 
-    <RenderTarget name="ShadowBuffer0"  format="R32F" width="512" height="512" />
-
     <!-- declare variables -->
     <Float4 name="ShadowColor" value="0.0 0.0 0.0 0.5" />
     <Int    name="ShadowSrcBlend" value="1" />
