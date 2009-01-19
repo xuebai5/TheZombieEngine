@@ -32,7 +32,7 @@ ncCharacter::SetActiveStateByIndex(int stateIndex, bool backwards, bool repeat, 
     n_assert(this->character[0]);
     if (stateIndex < this->character[0]->GetAnimStateArray()->GetNumStates())
     {
-        //NLOG(animation, (0, "SetActiveStateByIndex entityobj: %s\t stateIdx: %i\t backwards: %i\t repeat: %i\t transition: %i\t",this->GetEntityClass()->GetName(), stateIndex, backwards, repeat, transi));
+        //NLOG(character, (0, "SetActiveStateByIndex entityobj: %s\t stateIdx: %i\t backwards: %i\t repeat: %i\t transition: %i\t",this->GetEntityClass()->GetName(), stateIndex, backwards, repeat, transi));
         nAnimState& animState = this->character[0]->GetAnimStateArray()->GetStateAt(stateIndex);
 
         if (speedFactor <= 0)
@@ -156,7 +156,7 @@ ncCharacter::SetFirstPersonActiveStateByIndex(int stateIndex, bool backwards, bo
 
     if (stateIndex < this->character[this->firstpersonCharIdx]->GetAnimStateArray()->GetNumStates())
     {
-        //NLOG(animation, (0 , "SetActiveStateByIndex entityobj: %s\t stateIdx: %i\t backwards: %i\t repeat: %i\t transition: %i\t",this->GetEntityClass()->GetName(), stateIndex, backwards, repeat, transi));
+        //NLOG(character, (0 , "SetActiveStateByIndex entityobj: %s\t stateIdx: %i\t backwards: %i\t repeat: %i\t transition: %i\t",this->GetEntityClass()->GetName(), stateIndex, backwards, repeat, transi));
         nAnimState& animState = this->character[this->firstpersonCharIdx]->GetAnimStateArray()->GetStateAt(stateIndex);
         this->fpersonActiveStates[animState.GetJointGroup()].SetData(stateIndex, backwards, repeat, transition, jointIdx, offset, speedFactor);
 

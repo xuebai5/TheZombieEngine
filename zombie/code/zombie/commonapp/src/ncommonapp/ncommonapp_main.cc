@@ -7,7 +7,8 @@
 #include "nnetworkenet/nnetutils.h"
 #include "rnsgameplay/ncgameplay.h"
 
-#include "nanimation/nanimationserver.h"
+#include "anim2/nanimationserver.h"
+#include "animcomp/ncharacterserver.h"
 #include "zombieentity/nloaderserver.h"
 #include "nscriptclassserver/nscriptclassserver.h"
 #include "nspecialfx/nfxserver.h"
@@ -86,6 +87,7 @@ nCommonApp::Open()
     this->refEntityObjectServer = (nEntityObjectServer *) kernelServer->New("nentityobjectserver", "/sys/servers/entityobject");
     this->refEntityClassServer = (nEntityClassServer *) kernelServer->New("nentityclassserver", "/sys/servers/entityclass");
 
+    this->refCharacterServer = (nCharacterServer*) kernelServer->New("ncharacterserver", "/sys/servers/character");
     this->refAnimationServer = (nAnimationServer*) kernelServer->New("nanimationserver", "/sys/servers/anim");
     this->refFXServer       = (nFXServer*) kernelServer->New("nfxserver", "/sys/servers/specialfx");
     this->refPhysicsServer  = (nPhysicsServer*) kernelServer->New("nphysicsserver", "/sys/servers/physics");
@@ -222,6 +224,11 @@ nCommonApp::Close()
         this->refGameMaterialServer->Release();
     }
 
+    if (this->refCharacterServer.isvalid())
+    {
+        this->refCharacterServer->Release();
+    }
+
     if (this->refAnimationServer.isvalid())
     {
         this->refAnimationServer->Release();
@@ -284,7 +291,7 @@ nCommonApp::DoFrame()
     this->profAppDoFrameAnimation.StartAccum();
     #endif
     // update animations
-    this->refAnimationServer->Trigger(this->GetTime(), (float)this->GetFPS());
+    this->refCharacterServer->Trigger(this->GetTime(), (float)this->GetFPS());
     #if __NEBULA_STATS__
     this->profAppDoFrameAnimation.StopAccum();
     #endif

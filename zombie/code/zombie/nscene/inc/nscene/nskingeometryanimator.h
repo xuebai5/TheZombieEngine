@@ -17,9 +17,9 @@
     (C) 2004 Conjurer Services, S.A.
 */
 #include "nscene/nanimator.h"
-#include "ncharacter/ncharskeleton.h"
-#include "ncharacter/ncharacter2.h"
-#include "nanimation/nanimstate.h"
+#include "character2/ncharskeleton.h"
+#include "character2/ncharacter2.h"
+#include "anim2/nanimstate.h"
 
 class nAnimation;
 class nAnimationServer;

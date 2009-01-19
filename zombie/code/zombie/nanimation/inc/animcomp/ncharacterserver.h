@@ -1,8 +1,8 @@
-#ifndef N_ANIMATIONSERVER_H
-#define N_ANIMATIONSERVER_H
+#ifndef N_CHARACTERSERVER_H
+#define N_CHARACTERSERVER_H
 //------------------------------------------------------------------------------
 /**
-    @class nAnimationServer
+    @class nCharacterServer
     @ingroup Anim2
 
     @brief The animation server offers central services of the animation
@@ -19,21 +19,17 @@ class nCharacter2;
 class ncCharacter;
 
 //------------------------------------------------------------------------------
-class nAnimationServer : public nRoot
+class nCharacterServer : public nRoot
 {
 public:
     typedef nArray<nEntityObject*> CharacterEntityPool;
 
     /// constructor
-    nAnimationServer();
+    nCharacterServer();
     /// destructor
-    virtual ~nAnimationServer();
+    virtual ~nCharacterServer();
     /// return instance pointer
-    static nAnimationServer* Instance();
-    /// create an in-memory animation object (always shared)
-    virtual nAnimation* NewMemoryAnimation(const char* rsrcName);
-    /// create a new streaming animation object (never shared)
-    virtual nAnimation* NewStreamingAnimation();
+    static nCharacterServer* Instance();
     
     /// Update joints and skeletons, delete unused skeletons
     void Trigger(nTime time, float frames);
@@ -68,7 +64,7 @@ public:
     #endif NGAME
 
 private:
-    static nAnimationServer* Singleton;
+    static nCharacterServer* Singleton;
 
     nAutoRef<nResourceServer> refResourceServer;
 
@@ -98,8 +94,8 @@ private:
 /**
 */
 inline
-nAnimationServer*
-nAnimationServer::Instance()
+nCharacterServer*
+nCharacterServer::Instance()
 {
     n_assert(Singleton);
     return Singleton;
@@ -110,7 +106,7 @@ nAnimationServer::Instance()
 */
 inline
 void
-nAnimationServer::SetFixedFPS(int fps)
+nCharacterServer::SetFixedFPS(int fps)
 {
     this->fixedFPS = fps;
     this->interFrameTime = 1.0f / this->fixedFPS;
@@ -121,7 +117,7 @@ nAnimationServer::SetFixedFPS(int fps)
 */
 inline
 int
-nAnimationServer::GetFixedFPS() const
+nCharacterServer::GetFixedFPS() const
 {
     return this->fixedFPS;
 }
@@ -131,7 +127,7 @@ nAnimationServer::GetFixedFPS() const
 */
 inline
 void
-nAnimationServer::SetFixedPhysicsFPS(int fps)
+nCharacterServer::SetFixedPhysicsFPS(int fps)
 {
     this->fixedPhysicsFPS = fps;
     this->interPhysicsFrameTime = 1.0f / this->fixedPhysicsFPS;
@@ -142,7 +138,7 @@ nAnimationServer::SetFixedPhysicsFPS(int fps)
 */
 inline
 int
-nAnimationServer::GetFixedPhysicsFPS() const
+nCharacterServer::GetFixedPhysicsFPS() const
 {
     return this->fixedPhysicsFPS;
 }
@@ -153,7 +149,7 @@ nAnimationServer::GetFixedPhysicsFPS() const
 */
 inline
 void
-nAnimationServer::SetPhysicsEnabled(bool enabled)
+nCharacterServer::SetPhysicsEnabled(bool enabled)
 {
     this->physicsEnabled = enabled;
 }
@@ -163,7 +159,7 @@ nAnimationServer::SetPhysicsEnabled(bool enabled)
 */
 inline
 bool
-nAnimationServer::GetPhysicsEnabled() const
+nCharacterServer::GetPhysicsEnabled() const
 {
     return this->physicsEnabled;
 }

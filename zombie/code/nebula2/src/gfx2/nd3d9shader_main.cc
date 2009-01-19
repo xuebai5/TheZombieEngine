@@ -232,7 +232,7 @@ nD3D9Shader::Load(nFile *file, int /*offset*/, int fileSize)
             NLOG(resource, (LOG_SHADER | 0, "nD3D9Shader: failed to load fx file '%s' with:\n\n%s\n",
                  mangledPath.Get(), errorBuffer ? errorBuffer->GetBufferPointer() : "No D3DX error message."));
 
-#if 0 // change to 1 for show assert when shader error and reload it
+#if 1 // change to 1 for show assert when shader error and reload it
             static bool ignoreAlways = false;
             if (!ignoreAlways)
             {

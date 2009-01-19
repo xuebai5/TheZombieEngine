@@ -15,7 +15,7 @@
 #include "util/nstring.h"
 #include "gfx2/nshaderparams.h"
 #include "mathlib/bbox.h"
-#include "ncharacter/ndynamicattachment.h"
+#include "animcomp/ndynamicattachment.h"
 
 class nSceneGraph;
 class ncTransform;

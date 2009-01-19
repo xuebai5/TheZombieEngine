@@ -3,6 +3,7 @@
 //  nccharacter_main.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
+#include "animcomp/ncharacterserver.h"
 #include "animcomp/nccharacter.h"
 #include "animcomp/nccharacterclass.h"
 #include "animcomp/ncskeletonclass.h"
@@ -93,8 +94,8 @@ ncCharacter::InitInstance(nObject::InitInstanceMsg N_IFNDEF_NGAME(initType))
 bool
 ncCharacter::UpdateCharacter(int charIndex, nTime curTime)
 {
-    NLOG(animation, (NLOG1|1 , "---------------------------------------------------------------------------------"));
-    NLOG(animation, (NLOG1|1 , "UpdateCharacter entityobject: %s\t charIndex: %d curTime: %f", this->GetEntityClass()->GetName(), charIndex, (float) curTime));
+    NLOG(character, (NLOG1|1 , "---------------------------------------------------------------------------------"));
+    NLOG(character, (NLOG1|1 , "UpdateCharacter entityobject: %s\t charIndex: %d curTime: %f", this->GetEntityClass()->GetName(), charIndex, (float) curTime));
 
     if ( charIndex < 0 || charIndex >= this->character.Size() ) return false;
 
@@ -118,7 +119,7 @@ ncCharacter::UpdateCharacter(int charIndex, nTime curTime)
             nVariableContext *varContext = &this->GetComponent<ncDictionary>()->VarContext();
 
             #if __NEBULA_STATS__
-            nAnimationServer::Instance()->profAnim.StartAccum();
+            nCharacterServer::Instance()->profAnim.StartAccum();
             #endif
 
             // choose which states must be used
@@ -133,7 +134,7 @@ ncCharacter::UpdateCharacter(int charIndex, nTime curTime)
             }
 
             #if __NEBULA_STATS__
-            nAnimationServer::Instance()->profAnim.StopAccum();
+            nCharacterServer::Instance()->profAnim.StopAccum();
             #endif
         }
         else
@@ -329,7 +330,7 @@ ncCharacter::CorrectAnimations()
 void
 ncCharacter::Register()
 {
-    nAnimationServer::Instance()->Register(this->GetEntityObject());
+    nCharacterServer::Instance()->Register(this->GetEntityObject());
 }
 
 //------------------------------------------------------------------------------
@@ -338,7 +339,7 @@ ncCharacter::Register()
 void
 ncCharacter::UnRegister()
 {
-    nAnimationServer::Instance()->Unregister(this->GetEntityObject());
+    nCharacterServer::Instance()->Unregister(this->GetEntityObject());
 }
 
 //------------------------------------------------------------------------------
@@ -492,7 +493,7 @@ nCharacter2*
 ncCharacter::UpdateAndGetCharacter(int charIndex, nTime curTime)
 {
     // update skeleton only if not update yet (ie. if not updated when nanimationserver::trigger)
-    if (nAnimationServer::Instance()->DoUpdate())
+    if (nCharacterServer::Instance()->DoUpdate())
     {    
         if (this->GetLastUpdatedCharacterIndex() != charIndex ||
             this->GetLastUpdatedTime() < curTime)

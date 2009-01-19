@@ -6,11 +6,15 @@
 #include "util/nstringlist.h"
 #include "kernel/ncmd.h"
 
+#ifndef NO_ENTITY
 static void n_getlist( void *, nCmd *);
 static void n_setlist( void *, nCmd *);
+#endif
 
 NSCRIPT_INITCMDS_BEGIN ( nStringList )
-    // No macro support
+
+#ifndef NO_ENTITY
+	// No macro support
     cl->AddCmd("l_getlist_v", 'GETL', n_getlist);
     cl->AddCmd("v_setlist_l", 'SETL', n_setlist);
 
@@ -26,8 +30,11 @@ NSCRIPT_INITCMDS_BEGIN ( nStringList )
     NSCRIPT_ADDCMD('GSIZ', int, Size, 0, (), 0, ());
     NSCRIPT_ADDCMD('GMNB', int, GetMagicNumber , 0, (), 0, ());
     NSCRIPT_ADDCMD('SMNB', void, SetMagicNumber, 1, (int), 0, ());
+#endif
+
 NSCRIPT_INITCMDS_END ()
 
+#ifndef NO_ENTITY
 //------------------------------------------------------------------------------
 /**
 */
@@ -147,3 +154,5 @@ nStringList::SaveCmds (nPersistServer* ps)
     }        
     return false;
 }
+
+#endif

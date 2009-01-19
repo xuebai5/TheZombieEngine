@@ -3,7 +3,7 @@
 //  ncskeletonclass_main.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
-#include "nanimation/nanimationserver.h"
+#include "anim2/nanimationserver.h"
 #include "animcomp/ncskeletonclass.h"
 #include "animcomp/nccharacterclass.h"
 #include "animcomp/nccharacter.h"

@@ -12,14 +12,18 @@
 
     (C) 2005 Conjurer Services, S.A.
 */
+
 #include "kernel/nroot.h"
 #include "util/nstring.h"
 #include "util/nsortedarray.h"
+
 #include "entity/nentityclassserver.h"
 #include "entity/nentityobjectserver.h"
 
 class nStringList: public nRoot
 {
+#ifndef NO_ENTITY
+
 public:
     /// Constructor
     nStringList();
@@ -79,7 +83,10 @@ private:
     int currentMagic;
     int magicNumber;
     nRoot* test;
+#endif
 };
+
+#ifndef NO_ENTITY
 
 //------------------------------------------------------------------------------
 /**
@@ -247,5 +254,7 @@ nStringList::GetMagicNumber( ) const
 {
     return this->magicNumber;
 }
+
+#endif
 
 #endif

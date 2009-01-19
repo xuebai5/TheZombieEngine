@@ -3,9 +3,12 @@
 //  nstringlist_main.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
+
 #include "util/nstringlist.h"
 
 nNebulaScriptClass(nStringList, "nroot");
+
+#ifndef NO_ENTITY
 
 //------------------------------------------------------------------------------
 /**
@@ -90,3 +93,5 @@ nStringList::AddComponent( const nString & component )
         }
     }
 }
+
+#endif

@@ -8,7 +8,7 @@
 #include "nscene/ncscene.h"
 #include "entity/nentity.h"
 #include "variable/nvariableserver.h"
-#include "nanimation/nanimationserver.h"
+#include "anim2/nanimationserver.h"
 #include "zombieentity/ncdictionary.h"
 
 nNebulaScriptClass(nSkinGeometryAnimator, "nanimator");

@@ -8,10 +8,13 @@
 #include "kernel/npersistserver.h"
 #include "kernel/ndependencyserver.h"
 #include "kernel/nkernelserverproxy.h"
-#include "entity/nentityobject.h"
-#include "entity/nentityobjectserver.h"
 #include "kernel/nfile.h"
 #include "kernel/nfileserver2.h"
+
+#ifndef NO_ENTITY
+#include "entity/nentityobject.h"
+#include "entity/nentityobjectserver.h"
+#endif
 
 nNebulaRootClass(nObject);
 #ifndef NGAME
@@ -127,11 +130,13 @@ nObject::BeginNewObject(const char * objClass, const char * objName)
     }
     else
     {
+		#ifndef NO_ENTITY
         // get entity object type for current object
         nEntityObject * eo = static_cast<nEntityObject *> (this);
         nEntityObjectServer::nEntityObjectType otype = nEntityObjectServer::Instance()->GetEntityObjectType(eo->GetId());
         // case when the it is an entity object (a new local id will be assigned)
         retObj = nEntityObjectServer::Instance()->NewEntityObjectFromType(objClass, otype, 0, false);
+		#endif
     }
 
     // report this to persist server

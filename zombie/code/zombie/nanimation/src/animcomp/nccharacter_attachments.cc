@@ -5,6 +5,8 @@
 #include "precompiled/pchnanimation.h"
 #include "animcomp/nccharacter.h"
 #include "animcomp/nccharacterclass.h"
+#include "nscene/ncscene.h"
+#include "zombieentity/nctransform.h"
 #include "entity/nentityobjectserver.h"
 
 #include "kernel/nlogclass.h"

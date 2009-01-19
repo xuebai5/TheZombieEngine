@@ -41,7 +41,6 @@ beginmodule n3dsexportplugin
                  paramblk2.lib
                  msxml2.lib
                  igame.lib
-                 morpher.lib
                  bmm.lib
                  geom.lib
              }
@@ -80,7 +79,6 @@ setlibs_win32 { odbc32.lib
                  paramblk2.lib
                  msxml2.lib
                  igame.lib
-                 morpher.lib
                  geom.lib
                  }
 endmodule

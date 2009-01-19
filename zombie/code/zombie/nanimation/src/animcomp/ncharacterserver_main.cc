@@ -1,17 +1,18 @@
 #include "precompiled/pchnanimation.h"
 //------------------------------------------------------------------------------
-//  nanimationserver_main.cc
+//  nCharacterServer_main.cc
 //  (C) 2003 RadonLabs GmbH
 //------------------------------------------------------------------------------
-#include "nanimation/nanimationserver.h"
+#include "animcomp/ncharacterserver.h"
 #include "animcomp/nccharacter.h"
 #include "animcomp/nccharacterclass.h"
 #include "nphysics/ncphycharacterobj.h"
+#include "zombieentity/nctransform.h"
 #include "entity/nentityobjectserver.h"
 
-nNebulaClass(nAnimationServer, "nroot");
+nNebulaClass(nCharacterServer, "nroot");
 
-nAnimationServer* nAnimationServer::Singleton = 0;
+nCharacterServer* nCharacterServer::Singleton = 0;
 
 //------------------------------------------------------------------------------
 static const char * animationLogNames[] = {
@@ -27,13 +28,12 @@ static const char * animationLogNames[] = {
     1- per-frame basic information (UpdateCharacter, etc.)
     2- per-frame complete information
 */
-NCREATELOGLEVELGROUP( animation, "Animation System", false, 2, animationLogNames, NLOG_GROUP_MASK )
+NCREATELOGLEVELGROUP( character, "Character System", false, 2, animationLogNames, NLOG_GROUP_MASK )
 
 //------------------------------------------------------------------------------
 /**
 */
-nAnimationServer::nAnimationServer() :
-    refResourceServer("/sys/servers/resource"),
+nCharacterServer::nCharacterServer() :
     characterEntityPool(0, 16),
     fixedFPS(100),
     fixedPhysicsFPS(30),
@@ -56,62 +56,24 @@ nAnimationServer::nAnimationServer() :
     // bind to signal of delete entity
     nEntityObjectServer::Instance()->BindSignal(nEntityObjectServer::SignalEntityDeleted, 
                                                 this,
-                                                &nAnimationServer::EntityDeleted,
+                                                &nCharacterServer::EntityDeleted,
                                                 0);
 }
 
 //------------------------------------------------------------------------------
 /**
 */
-nAnimationServer::~nAnimationServer()
+nCharacterServer::~nCharacterServer()
 {
-    // unload all animation resources
-    if (this->refResourceServer.isvalid())
-    {
-        this->refResourceServer->UnloadResources(nResource::Animation);
-    }
     n_assert(Singleton);
     Singleton = 0;
 }
 
 //------------------------------------------------------------------------------
 /**
-    Create a new memory animation object. Memory animations keep the
-    entire animation data in memory, but are generally shared. Memory anims
-    should be used when many objects are driven by the same animation.
-
-    @param  rsrcName    the resource name for resource sharing
-*/
-nAnimation*
-nAnimationServer::NewMemoryAnimation(const char* rsrcName)
-{
-    n_assert(rsrcName);
-    return (nAnimation*) this->refResourceServer->NewResource("nmemoryanimation", rsrcName, nResource::Animation);
-}
-
-//------------------------------------------------------------------------------
-/**
-    Create a new streaming animation. Streaming animations stream their
-    data from disk, which has the advantage that animations can be very
-    long (hours if you want), but each streaming animation needs its
-    own small streaming buffer, which may add up when many objects are driven
-    by streamed animations, also disk bandwidth and seek latency may become
-    a limiting factor.
-
-    Streaming animations generally cannot be shared, thus this method
-    has no resource name parameter.
-*/
-nAnimation*
-nAnimationServer::NewStreamingAnimation()
-{
-    return (nAnimation*) this->refResourceServer->NewResource("nstreaminganimation", 0, nResource::Animation);
-}
-
-//------------------------------------------------------------------------------
-/**
 */
 void
-nAnimationServer::Trigger(nTime time, float frames)
+nCharacterServer::Trigger(nTime time, float frames)
 {
     #if __NEBULA_STATS__
     //publish this profiler here, characters can be updated during the scene loop
@@ -181,7 +143,7 @@ nAnimationServer::Trigger(nTime time, float frames)
 /** 
 */
 bool
-nAnimationServer::Register(nEntityObject* charEntity)
+nCharacterServer::Register(nEntityObject* charEntity)
 {
     this->characterEntityPool.Append(charEntity);
     return true;
@@ -191,7 +153,7 @@ nAnimationServer::Register(nEntityObject* charEntity)
 /** 
 */
 void
-nAnimationServer::Unregister(nEntityObject* charEntity)
+nCharacterServer::Unregister(nEntityObject* charEntity)
 {
     CharacterEntityPool::iterator characterIter = this->characterEntityPool.Begin();
     while (characterIter != this->characterEntityPool.End())
@@ -209,7 +171,7 @@ nAnimationServer::Unregister(nEntityObject* charEntity)
 /** 
 */
 void
-nAnimationServer::EntityDeleted(int id)
+nCharacterServer::EntityDeleted(int id)
 {
     CharacterEntityPool::iterator characterIter = this->characterEntityPool.Begin();
     while (characterIter != this->characterEntityPool.End())
@@ -227,7 +189,7 @@ nAnimationServer::EntityDeleted(int id)
 /** 
 */
 bool 
-nAnimationServer::DoTrigger(float frames)
+nCharacterServer::DoTrigger(float frames)
 {
     #ifndef NGAME
     if (!this->physicsEnabled)
@@ -257,7 +219,7 @@ nAnimationServer::DoTrigger(float frames)
 /** 
 */
 float 
-nAnimationServer::GetAccumFrameTime() const
+nCharacterServer::GetAccumFrameTime() const
 {
     return this->accumTime;
 }
@@ -266,7 +228,7 @@ nAnimationServer::GetAccumFrameTime() const
 /** 
 */
 bool 
-nAnimationServer::DoUpdate()
+nCharacterServer::DoUpdate()
 {
     //must be updated (true if since last update have passed more than keytime)
     return this->accumTime >= this->interFrameTime || this->accumTime == 0;

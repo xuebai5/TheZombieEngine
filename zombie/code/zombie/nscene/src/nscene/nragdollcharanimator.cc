@@ -5,7 +5,7 @@
 //------------------------------------------------------------------------------
 #include "nscene/nragdollcharanimator.h"
 #include "variable/nvariableserver.h"
-#include "ncharacter/ncharacter2.h"
+#include "character2/ncharacter2.h"
 #include "ncragdoll/ncragdollclass.h"
 #include "nphysics/ncphyfourleggedragdoll.h"
 #include "nphysics/ncphyhumragdoll.h"

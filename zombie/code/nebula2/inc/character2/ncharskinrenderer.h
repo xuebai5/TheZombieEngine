@@ -13,8 +13,8 @@
 */
 
 #include "kernel/ntypes.h"
-#include "ncharacter/ncharskeleton.h"
-#include "ncharacter/ncharjointpalette.h"
+#include "character2/ncharskeleton.h"
+#include "character2/ncharjointpalette.h"
 #include "gfx2/nmesh2.h"
 
 //-----------------------------------------------------------------------------

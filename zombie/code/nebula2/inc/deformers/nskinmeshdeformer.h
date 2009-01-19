@@ -16,8 +16,8 @@
     (C) 2004 RadonLabs GmbH
 */
 #include "deformers/nmeshdeformer.h"
-#include "ncharacter/ncharskeleton.h"
-#include "ncharacter/ncharjointpalette.h"
+#include "character2/ncharskeleton.h"
+#include "character2/ncharjointpalette.h"
 
 //------------------------------------------------------------------------------
 class nSkinMeshDeformer : public nMeshDeformer

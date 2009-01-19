@@ -3,11 +3,7 @@
 #  Improved Character animation system modules
 #
 #  Modules:
-#      nanimationserver
-#      nanimstate
-#      nanimationevents
-#      ncharacter
-#      ncharjoint
+#      ncharacterserver
 #      nccharacter
 #      nccharacterclass
 #      ncskeleton
@@ -20,36 +16,18 @@
 #===============================================================================
 
 #===============================================================================
-#  animation modules
+#  nanimation modules
 #===============================================================================
-beginmodule nanimationserver
-    setdir nanimation
-    setfiles { nanimationserver_main }
-    setheaders { nanimationserver }
-endmodule
+
 #-------------------------------------------------------------------------------
-beginmodule nanimstate
-    setdir nanimation
-    setfiles { nanimstate nanimstatearray }
-    setheaders { nanimclip nanimstate nanimstatearray}
-endmodule
-#-------------------------------------------------------------------------------
-beginmodule nanimationevents
-    setdir nanimation
-    setfiles { nanimeventhandler }
-    setheaders { nanimevent nanimeventtrack nanimeventhandler }
-endmodule
-#-------------------------------------------------------------------------------
-beginmodule ncharacter
-    setdir ncharacter
-    setfiles { ncharacter2 ncharskinrenderer }
-    setheaders { ncharacter2 ncharskeleton ncharskinrenderer ndynamicattachment nstateinfo}
-endmodule
-#-------------------------------------------------------------------------------
-beginmodule ncharjoint
-    setdir ncharacter
-    setfiles { }
-    setheaders { ncharjoint ncharjointpalette njointgroup }
+beginmodule ncharacterserver
+    setdir animcomp
+    setfiles {
+        ncharacterserver_main
+    }
+    setheaders {
+        ncharacterserver
+    }
 endmodule
 #-------------------------------------------------------------------------------
 beginmodule nccharacter
@@ -174,9 +152,7 @@ begintarget nanimation
     setwarningslevel 4
     setpch true
     setmodules {
-        nanimationserver
-        nanimstate nanimationevents
-        ncharacter ncharjoint 
+        ncharacterserver
         nccharacter nccharacterclass
         ncskeleton ncskeletonclass
         ncragdoll ncragdollclass

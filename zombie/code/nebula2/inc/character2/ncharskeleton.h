@@ -10,12 +10,9 @@
     (C) 2002 RadonLabs GmbH
 */
 
-#include "ncharacter/ncharjoint.h"
-#include "ncharacter/njointgroup.h"
-#include "ncharacter/ndynamicattachment.h"
+#include "character2/ncharjoint.h"
+#include "character2/njointgroup.h"
 #include "util/nfixedarray.h"
-
-#include "entity/nentityobject.h"
 
 //------------------------------------------------------------------------------
 class nCharSkeleton

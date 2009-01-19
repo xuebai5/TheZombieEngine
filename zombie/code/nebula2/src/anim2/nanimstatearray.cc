@@ -1,9 +1,9 @@
-#include "precompiled/pchnanimation.h"
+#include "precompiled/pchnnebula.h"
 //------------------------------------------------------------------------------
 //  nanimstatearray.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
-#include "nanimation/nanimstatearray.h"
+#include "anim2/nanimstatearray.h"
 
 //------------------------------------------------------------------------------
 #ifndef __ZOMBIE_EXPORTER__

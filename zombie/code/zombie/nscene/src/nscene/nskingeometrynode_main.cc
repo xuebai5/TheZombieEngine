@@ -5,7 +5,7 @@
 //------------------------------------------------------------------------------
 #include "nscene/nskingeometrynode.h"
 #include "nscene/nscenegraph.h"
-#include "nanimation/nanimationserver.h"
+#include "anim2/nanimationserver.h"
 
 #include "entity/nentity.h"
 #include "animcomp/nccharacter.h"

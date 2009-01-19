@@ -10,7 +10,7 @@
     (C) 2005 Radon Labs GmbH
 */
 #include "shadow2/nshadowcaster2.h"
-#include "ncharacter/ncharskeleton.h"
+#include "character2/ncharskeleton.h"
 
 //------------------------------------------------------------------------------
 class nSkinnedShadowCaster2 : public nShadowCaster2

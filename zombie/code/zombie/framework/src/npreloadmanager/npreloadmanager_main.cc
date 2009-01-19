@@ -280,8 +280,11 @@ nPreloadManager::LoadClasses()
     {
         const char* className = this->classesToPreload[i].Get();
         nEntityClass* entityClass = nEntityClassServer::Instance()->GetEntityClass( className );
-        nLoaderServer::Instance()->LoadClassResources( entityClass );
-        nLoaderServer::Instance()->RetainClassResources( entityClass );
+		n_assert_if( entityClass )
+		{
+			nLoaderServer::Instance()->LoadClassResources( entityClass );
+			nLoaderServer::Instance()->RetainClassResources( entityClass );
+		}
     }
 }
 

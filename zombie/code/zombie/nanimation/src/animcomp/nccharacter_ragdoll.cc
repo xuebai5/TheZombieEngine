@@ -9,6 +9,7 @@
 #include "animcomp/nchumragdollclass.h"
 #include "animcomp/ncfourleggedragdoll.h"
 #include "animcomp/ncfourleggedragdollclass.h"
+#include "zombieentity/nctransform.h"
 #include "ncragdoll/ncragdoll.h"
 #include "ncragdoll/ncragdollclass.h"
 #include "entity/nentityobjectserver.h"

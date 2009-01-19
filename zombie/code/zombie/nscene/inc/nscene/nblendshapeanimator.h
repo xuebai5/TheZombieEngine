@@ -10,7 +10,7 @@
 #include "nscene/nanimator.h"
 #include "nscene/nblendstatearray.h"
 #include "anim2/nanimation.h"
-#include "nanimation/nanimationserver.h"
+#include "anim2/nanimationserver.h"
 
 //------------------------------------------------------------------------------
 class nBlendShapeAnimator : public nAnimator

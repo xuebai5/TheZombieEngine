@@ -8,9 +8,12 @@
 #include "kernel/npersistserver.h"
 #include "kernel/nfileserver2.h"
 #include "kernel/nfile.h"
+#include "kernel/nlogclass.h"
+
+#ifndef NO_ENTITY
 #include "entity/nentityobject.h"
 #include "entity/nentityobjectserver.h"
-#include "kernel/nlogclass.h"
+#endif
 
 //------------------------------------------------------------------------------
 /**
@@ -228,11 +231,13 @@ nPersistServer::BeginCloneObject(nObject *obj, nCmd * cmd, const char *name, boo
             }
             else
             {
+				#ifndef NO_ENTITY
                 // get entity object type for current object
                 nEntityObject * eo = static_cast<nEntityObject *> (obj);
                 nEntityObjectServer::nEntityObjectType otype = nEntityObjectServer::Instance()->GetEntityObjectType(eo->GetId());
                 // case when the it is an entity object (a new local id will be assigned)
                 this->cloneTarget = nEntityObjectServer::Instance()->NewEntityObjectFromType(cl, otype, 0, false);
+				#endif
             }
         }
     }

@@ -5,6 +5,8 @@
 //------------------------------------------------------------------------------
 #include "animcomp/nccharacter.h"
 #include "animcomp/nccharacterclass.h"
+#include "nscene/ncscene.h"
+#include "zombieentity/nctransform.h"
 #include "entity/nentityclassserver.h"
 #include "kernel/nlogclass.h"
 
@@ -145,7 +147,7 @@ ncCharacter::UpdateActiveStates(nTime curTime)
 void
 ncCharacter::SetActiveStateByGroup(int jointGroup, int stateIndex, nTime time, bool transition, bool repeat, bool backwards, int jointIdx, const vector3& offset, float velFactor, bool fperson)
 {
-    NLOG(animation, ( NLOG1 | 0, "SetActiveStateByGroup entity: %s, jointGroup: %d, stateIndex: %d (%s)", 
+    NLOG(character, ( NLOG1 | 0, "SetActiveStateByGroup entity: %s, jointGroup: %d, stateIndex: %d (%s)", 
          this->GetEntityClass()->GetName(), jointGroup, stateIndex,
          this->GetEntityClass()->GetComponent<ncCharacterClass>()->GetSkeletonClassPointer()->GetStateName(stateIndex)));
 
@@ -610,8 +612,8 @@ ncCharacter::GetRemainingTime(int stateIndex, bool fperson) const
         }
     }
 
-    //NLOGCOND(animation, (strcmp(this->GetEntityClass()->GetName(), "Localplayer") == 0),  (1 , "GetRemainingTime fperson: %d\t stateIdx: %i\t started: %f\t duration: %f\t curTime: %f\t remaining: %f", fperson, stateIndex, current[jointGroup].GetStateStarted(), this->GetStateDuration(stateIndex, fperson), curTime, remaining));
-    NLOG(animation, (NLOG1 | 2, "GetRemainingTime stateindex = %d, fperson= %d remaining = %f", stateIndex, fperson, remaining));
+    //NLOGCOND(character, (strcmp(this->GetEntityClass()->GetName(), "Localplayer") == 0),  (1 , "GetRemainingTime fperson: %d\t stateIdx: %i\t started: %f\t duration: %f\t curTime: %f\t remaining: %f", fperson, stateIndex, current[jointGroup].GetStateStarted(), this->GetStateDuration(stateIndex, fperson), curTime, remaining));
+    NLOG(character, (NLOG1 | 2, "GetRemainingTime stateindex = %d, fperson= %d remaining = %f", stateIndex, fperson, remaining));
 
     return remaining;
 }
@@ -648,18 +650,18 @@ ncCharacter::IsValidFirstPersonStateIndex(int i) const
 bool
 ncCharacter::LoopJustStarted(int stateIndex, bool fperson) const
 {
-    NLOG(animation, ( NLOG1 | 2, "LoopJustStarted stateindex = %d, fperson= %d", stateIndex, fperson));
+    NLOG(character, ( NLOG1 | 2, "LoopJustStarted stateindex = %d, fperson= %d", stateIndex, fperson));
 
     int jointGroup = this->GetJointGroup(stateIndex, fperson);
 
     if (!fperson)
     {
-        //NLOG(animation, (1, "LoopJustStarted 3person currentStateIndex = %d, stateindex = %d, jointGroup= %d, justStarted = %d ", this->currentStates[jointGroup].GetStateIndex(), stateIndex, jointGroup, this->currentStates[jointGroup].GetJustStarted()));
+        //NLOG(character, (1, "LoopJustStarted 3person currentStateIndex = %d, stateindex = %d, jointGroup= %d, justStarted = %d ", this->currentStates[jointGroup].GetStateIndex(), stateIndex, jointGroup, this->currentStates[jointGroup].GetJustStarted()));
         return (this->currentStates[jointGroup].GetStateIndex() == stateIndex) && this->currentStates[jointGroup].GetJustStarted();
     }
     else
     {
-        //NLOG(animation, (1, "LoopJustStarted 1person currentStateIndex = %d, stateindex = %d, jointGroup= %d, justStarted = %d ", this->fpersonCurrentStates[jointGroup].GetStateIndex(), stateIndex, jointGroup, this->fpersonCurrentStates[jointGroup].GetJustStarted()));
+        //NLOG(character, (1, "LoopJustStarted 1person currentStateIndex = %d, stateindex = %d, jointGroup= %d, justStarted = %d ", this->fpersonCurrentStates[jointGroup].GetStateIndex(), stateIndex, jointGroup, this->fpersonCurrentStates[jointGroup].GetJustStarted()));
         return (this->fpersonCurrentStates[jointGroup].GetStateIndex() == stateIndex) && this->fpersonCurrentStates[jointGroup].GetJustStarted();
     }
 }
@@ -791,7 +793,7 @@ ncCharacter::SetSpeedFactor(int stateIndex, float speedFactor, bool fperson)
         this->currentStates[jointGroup].SetVelocityFactor(speedFactor);
     }
 
-    NLOG(animation, (NLOG1 | 1, "SetSpeedFactor That index is not active!!! stateIndex= %d, fperson= %d", stateIndex, fperson));
+    NLOG(character, (NLOG1 | 1, "SetSpeedFactor That index is not active!!! stateIndex= %d, fperson= %d", stateIndex, fperson));
 }
 
 //------------------------------------------------------------------------------
@@ -855,7 +857,7 @@ ncCharacter::GetDisplacement(int stateIndex, float fromTime, float toTime) const
     {
         /// @todo ma.garcias - with 0!!
         const vector3 value = this->character[0]->GetStateDisplacement(this->currentStates[jointGroup], fromTime, toTime);
-        NLOG(animation, (NLOG1 | 1, "GetDisplacement entity: %s, fromTime: %.2f, toTime: %.2f, value: (%.2f, %.2f, %.2f)", 
+        NLOG(character, (NLOG1 | 1, "GetDisplacement entity: %s, fromTime: %.2f, toTime: %.2f, value: (%.2f, %.2f, %.2f)", 
              this->GetEntityClass()->GetName(), fromTime, toTime, value.x, value.y, value.z))
         return value;
     }

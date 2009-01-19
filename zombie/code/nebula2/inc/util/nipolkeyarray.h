@@ -19,7 +19,7 @@
     (C) 2004 Johannes Kellner
 */
 #include "kernel/ntypes.h"
-#include "nscene/nanimator.h"
+//#include "nscene/nanimator.h"
 #include "mathlib/nmath.h"
 
 //------------------------------------------------------------------------------

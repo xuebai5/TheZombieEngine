@@ -14,7 +14,7 @@
 */
 #include "nscene/nanimator.h"
 #include "anim2/nanimation.h"
-#include "nanimation/nanimationserver.h"
+#include "anim2/nanimationserver.h"
 
 //------------------------------------------------------------------------------
 class nTransformCurveAnimator : public nAnimator
