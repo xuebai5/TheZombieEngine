@@ -20,6 +20,7 @@ begintarget nnebula
         nmesh2 ntexture2 nsurface nfont2 nshader2 ngfxserver2
         naudioserver3 nsound3 nlistener3 nsoundresource
         nanimation nmemoryanimation nconserver
+        nanimationserver nanimstate nanimationevents ncharacter
         nparticle nparticleserver nparticleemitter
         nparticle2 nparticleserver2 nparticle2emitter
         nwindowhandler nwin32windowhandler

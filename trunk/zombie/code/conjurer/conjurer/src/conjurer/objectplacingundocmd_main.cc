@@ -11,7 +11,7 @@
 #include "nphysics/ncphysicsobj.h"
 #include "conjurer/nobjecteditorstate.h"
 #include "ndebug/ndebugcomponentserver.h"
-#include "nanimation/nanimationserver.h"
+#include "animcomp/ncharacterserver.h"
 #include "ndebug/nceditor.h"
 #include "zombieentity/ncsuperentity.h"
 #include "nspatial/ncspatial.h"

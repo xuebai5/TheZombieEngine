@@ -15,7 +15,7 @@
 #include "gfx2/ninstancestream.h"
 #include "gfx2/ntexturearray.h"
 #include "nscene/nscenenode.h"
-#include "ncharacter/ndynamicattachment.h"
+#include "animcomp/ndynamicattachment.h"
 
 //------------------------------------------------------------------------------
 class ncSceneClass : public nComponentClass

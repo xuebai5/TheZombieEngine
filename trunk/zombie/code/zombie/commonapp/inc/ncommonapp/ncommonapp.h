@@ -15,6 +15,7 @@
 
 class nMaterialServer;
 class nAnimationServer;
+class nCharacterServer;
 class nSoundScheduler;
 class nMusicTable;
 class nSpatialServer;
@@ -67,6 +68,7 @@ protected:
     /// load global variables
     void LoadGlobalVariables();
 
+    nRef<nCharacterServer>              refCharacterServer;
     nRef<nAnimationServer>              refAnimationServer;
     nRef<nPhysicsServer>                refPhysicsServer;
     nRef<nMaterialServer>               refMaterialServer;

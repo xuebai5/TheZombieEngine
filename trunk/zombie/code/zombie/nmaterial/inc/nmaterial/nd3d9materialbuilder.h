@@ -344,7 +344,7 @@ inline
 uint
 nD3D9MaterialBuilder::GetPass()
 {
-    n_assert(this->buildState == inBuildShaderTree);
+//    n_assert(this->buildState == inBuildShaderTree);
     return this->fourcc;
 }
 
@@ -356,7 +356,7 @@ inline
 const char *
 nD3D9MaterialBuilder::GetShaderName()
 {
-    n_assert(this->buildState == inBuildShader);
+//    n_assert(this->buildState == inBuildShader);
     return this->shaderName.Get();
 }
 

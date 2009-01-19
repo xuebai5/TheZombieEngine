@@ -21,7 +21,7 @@
     (C) 2004 Conjurer Services, S.A.
 */
 #include "nscene/ngeometrynode.h"
-#include "ncharacter/ncharjointpalette.h"
+#include "character2/ncharjointpalette.h"
 
 class nCharSkeleton;
 class nSkinGeometryAnimator;

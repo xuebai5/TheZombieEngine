@@ -17,11 +17,11 @@
     (C) 2003 RadonLabs GmbH
 */
 #include "kernel/ntypes.h"
-#include "nanimation/nanimclip.h"
+#include "anim2/nanimclip.h"
 #include "variable/nvariablecontext.h"
 #include "mathlib/quaternion.h"
 #include "mathlib/bbox.h"
-#include "nanimation/nanimeventhandler.h"
+#include "anim2/nanimeventhandler.h"
 
 //------------------------------------------------------------------------------
 class nAnimState

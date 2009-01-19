@@ -1,9 +1,9 @@
-#include "precompiled/pchnanimation.h"
+#include "precompiled/pchnnebula.h"
 //------------------------------------------------------------------------------
 //  ncharskinrenderer.cc
 //  (C) 2003 RadonLabs GmbH
 //------------------------------------------------------------------------------
-#include "ncharacter/ncharskinrenderer.h"
+#include "character2/ncharskinrenderer.h"
 #include "gfx2/nshader2.h"
 
 //------------------------------------------------------------------------------

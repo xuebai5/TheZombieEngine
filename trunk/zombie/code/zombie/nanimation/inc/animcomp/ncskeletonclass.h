@@ -11,8 +11,8 @@
     (C) 2005 Conjurer Services, S.A.
 */
 #include "entity/nentity.h"
-#include "ncharacter/ncharacter2.h"
-#include "ncharacter/ndynamicattachment.h"
+#include "character2/ncharacter2.h"
+#include "animcomp/ndynamicattachment.h"
 #include "kernel/ndynautoref.h"
 
 //------------------------------------------------------------------------------

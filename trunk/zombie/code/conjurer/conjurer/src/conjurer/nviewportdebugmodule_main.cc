@@ -15,7 +15,7 @@
 #include "nscene/ncsceneclass.h"
 #include "animcomp/nccharacter.h"
 #include "nscene/nscenegraph.h"
-#include "ncharacter/ncharskeleton.h"
+#include "character2/ncharskeleton.h"
 #include "gfx2/ngfxserver2.h"
 #include "gfx2/nshader2.h"
 #include "gfx2/ntexture2.h"

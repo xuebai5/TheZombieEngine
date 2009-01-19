@@ -12,10 +12,10 @@
 #include "kernel/ndirectory.h"
 #include "kernel/ndependencyserver.h"
 
-#include "nscriptclassserver/nscriptclassserver.h"
+//#include "nscriptclassserver/nscriptclassserver.h"
 
 #ifndef NGAME
-#include "ndebug/nceditorclass.h"
+//#include "ndebug/nceditorclass.h"
 #endif//!NGAME
 
 //------------------------------------------------------------------------------
@@ -175,14 +175,14 @@ nEntityClassServer::SaveEntityClass(nEntityClass * entityClass) const
     // save class
     bool valid = entityClass->SaveAs(path.Get());
 #ifndef NGAME
-    if( valid )
-    {
-        ncEditorClass * editorClass = entityClass->GetComponent<ncEditorClass>();
-        if( editorClass )
-        {
-            editorClass->SaveChunk();
-        }
-    }
+    //if( valid )
+    //{
+    //    ncEditorClass * editorClass = entityClass->GetComponent<ncEditorClass>();
+    //    if( editorClass )
+    //    {
+    //        editorClass->SaveChunk();
+    //    }
+    //}
 #endif//!NGAME
 
     return valid;
@@ -441,14 +441,14 @@ nEntityClassServer::CreateEntityClass(nEntityClass * neSuperClass, const char * 
 
     // append the class to the index
     this->AddClassToIndex(entClass, true);
-
+/*
     // add scripting to the class
     nScriptClassServer * scriptClass = nScriptClassServer::Instance();
     if( scriptClass )
     {
         scriptClass->AddClass( nString( name ) );
     }
-
+*/
 #ifndef NGAME
     entClass->BindSignal( nObject::SignalObjectDirty, this, &nEntityClassServer::TriggerClassDirty,10 );
 #endif

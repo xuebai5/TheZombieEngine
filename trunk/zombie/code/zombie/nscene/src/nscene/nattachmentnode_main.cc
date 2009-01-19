@@ -6,7 +6,7 @@
 #include "nscene/nattachmentnode.h"
 #include "nscene/nscenegraph.h"
 #include "animcomp/nccharacter.h"
-#include "nanimation/nanimationserver.h"
+#include "animcomp/ncharacterserver.h"
 #include "gfx2/ngfxserver2.h"
 
 

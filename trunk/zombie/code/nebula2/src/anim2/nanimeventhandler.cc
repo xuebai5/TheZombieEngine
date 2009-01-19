@@ -1,9 +1,9 @@
-#include "precompiled/pchnanimation.h"
+#include "precompiled/pchnnebula.h"
 //------------------------------------------------------------------------------
 //  nanimeventhandler.cc
 //  (C) 2005 Radon Labs GmbH
 //------------------------------------------------------------------------------
-#include "nanimation/nanimeventhandler.h"
+#include "anim2/nanimeventhandler.h"
 
 //------------------------------------------------------------------------------
 /**

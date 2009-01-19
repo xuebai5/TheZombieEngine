@@ -12,7 +12,8 @@
 */
 //------------------------------------------------------------------------------
 #include "entity/nentity.h"
-#include "ncharacter/ncharacter2.h"
+#include "animcomp/ndynamicattachment.h"
+#include "character2/ncharacter2.h"
 
 //------------------------------------------------------------------------------
 class nStateInfo;

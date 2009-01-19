@@ -21,7 +21,7 @@
 #include "ngeomipmap/ncterrainmaterialclass.h"
 #include "ngeomipmap/ncterraingmm.h"
 #include "nmaterial/nmaterialserver.h"
-#include "nanimation/nanimationserver.h"
+#include "animcomp/ncharacterserver.h"
 #include "nscene/nsceneserver.h"
 
 #ifndef NGAME
@@ -161,8 +161,8 @@ nEditorDebugModule::OnDebugOptionUpdated()
     nMaterialServer::Instance()->SetDebugMaterialEnabled(this->GetFlagEnabled("debugmaterial"));
     nMaterialServer::Instance()->SetDebugSurfaceEnabled(this->GetFlagEnabled("debugsurface"));
 
-    nAnimationServer::Instance()->SetFixedFPS(this->GetFlagEnabled("animfixedframerate") ? 30 : 100);
-    nAnimationServer::Instance()->SetPhysicsEnabled(!this->GetFlagEnabled("animdisablephysics"));
+    nCharacterServer::Instance()->SetFixedFPS(this->GetFlagEnabled("animfixedframerate") ? 30 : 100);
+    nCharacterServer::Instance()->SetPhysicsEnabled(!this->GetFlagEnabled("animdisablephysics"));
 
     #ifndef NGAME
     nD3D9Mesh::optimizeMesh = !this->GetFlagEnabled("nomeshoptimization");

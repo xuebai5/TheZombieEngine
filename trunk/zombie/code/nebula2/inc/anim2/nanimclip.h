@@ -12,7 +12,7 @@
 */
 #include "anim2/nanimation.h"
 #include "variable/nvariable.h"
-#include "nanimation/nanimeventtrack.h"
+#include "anim2/nanimeventtrack.h"
 
 //------------------------------------------------------------------------------
 class nAnimClip

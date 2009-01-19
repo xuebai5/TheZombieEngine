@@ -9,11 +9,11 @@
 
     (C) 2003 RadonLabs GmbH
 */
-#include "nanimation/nanimstatearray.h"
-#include "ncharacter/ncharskeleton.h"
-#include "ncharacter/nstateinfo.h"
+#include "anim2/nanimstatearray.h"
+#include "character2/ncharskeleton.h"
+#include "character2/nstateinfo.h"
 #include "kernel/nrefcounted.h"
-#include "nanimation/nanimeventhandler.h"
+#include "anim2/nanimeventhandler.h"
 
 //------------------------------------------------------------------------------
 class nCharacter2 : public nRefCounted

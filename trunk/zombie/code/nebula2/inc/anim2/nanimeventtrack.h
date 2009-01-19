@@ -13,7 +13,7 @@
 */
 #include "kernel/ntypes.h"
 #include "util/nfixedarray.h"
-#include "nanimation/nanimevent.h"
+#include "anim2/nanimevent.h"
 #include "util/nstring.h"
 
 //------------------------------------------------------------------------------

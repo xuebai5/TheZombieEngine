@@ -9,7 +9,7 @@
 #include "gfx2/nmesh2.h"
 #include "gfx2/ngfxserver2.h"
 #include "anim2/nanimation.h"
-#include "nanimation/nanimationserver.h"
+#include "anim2/nanimationserver.h"
 
 nNebulaClass(nResourceBundle, "nresource");
 

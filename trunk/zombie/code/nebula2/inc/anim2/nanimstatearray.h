@@ -10,7 +10,7 @@
     
     (C) 2003 RadonLabs GmbH
 */
-#include "nanimation/nanimstate.h"
+#include "anim2/nanimstate.h"
 #include "util/narray.h"
 #include "kernel/nfileserver2.h"
 

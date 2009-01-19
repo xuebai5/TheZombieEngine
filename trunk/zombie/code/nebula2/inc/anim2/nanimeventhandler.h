@@ -11,7 +11,7 @@
     (C) 2005 Radon Labs GmbH
 */
 #include "util/nnode.h"
-#include "nanimation/nanimeventtrack.h"
+#include "anim2/nanimeventtrack.h"
 #include "kernel/nrefcounted.h"
 
 //------------------------------------------------------------------------------

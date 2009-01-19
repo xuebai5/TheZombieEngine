@@ -1,9 +1,9 @@
-#include "precompiled/pchnanimation.h"
+#include "precompiled/pchnnebula.h"
 //------------------------------------------------------------------------------
 //  ncharacter2.cc
 //  (C) 2003 RadonLabs GmbH
 //------------------------------------------------------------------------------
-#include "ncharacter/ncharacter2.h"
+#include "character2/ncharacter2.h"
 #include "kernel/nlogclass.h"
 
 vector4 nCharacter2::scratchKeyArray[MaxCurves];
@@ -281,7 +281,7 @@ nCharacter2::EvaluateFullSkeleton(float time, nVariableContext* varContext, nArr
                     }
                 }
 
-                //nAnimationServer::Instance()->profAnimFullSkeleton.StartAccum();
+                //nCharacterServer::Instance()->profAnimFullSkeleton.StartAccum();
                 
                 nCharJoint& joint = this->charSkeleton.GetJointAt(jGroup.GetJointIndexAt(index));
                 // apply weapon/accessory offset
@@ -324,7 +324,7 @@ nCharacter2::EvaluateFullSkeleton(float time, nVariableContext* varContext, nArr
                 joint.SetRotate(rotate);
                 joint.SetScale(scale);
 
-                //nAnimationServer::Instance()->profAnimFullSkeleton.StopAccum();
+                //nCharacterServer::Instance()->profAnimFullSkeleton.StopAccum();
             }
         }
         else
