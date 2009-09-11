@@ -8,6 +8,9 @@
 //------------------------------------------------------------------------------
 /**
     Nebula class scripting initialization
+
+	28/Aug/2009 - SetStringArg was initially set to ESST which is also used by nobject's
+	savesateas, I've changed it to SSTE whcih isnt used by any class.
 */
 NSCRIPT_INITCMDS_BEGIN( nActionDesc )
     NSCRIPT_ADDCMD('ESAC', void, SetActionClass, 1, (const char*), 0, ());
@@ -22,7 +25,7 @@ NSCRIPT_INITCMDS_BEGIN( nActionDesc )
     NSCRIPT_ADDCMD('ESEI', void, SetEntityArgById, 2, (int, nEntityObjectId), 0, ());
     NSCRIPT_ADDCMD('EGEA', nEntityObject*, GetEntityArg, 1, (int), 0, ());
     NSCRIPT_ADDCMD('EGEI', nEntityObjectId, GetEntityArgAsId, 1, (int), 0, ());
-    NSCRIPT_ADDCMD('ESST', void, SetStringArg, 2, (int, const char*), 0, ());
+    NSCRIPT_ADDCMD('SSTE', void, SetStringArg, 2, (int, const char*), 0, ());
     NSCRIPT_ADDCMD('EGSA', const char*, GetStringArg, 1, (int), 0, ());
     NSCRIPT_ADDCMD('ESV3', void, SetVector3Arg, 2, (int, const vector3&), 0, ());
     NSCRIPT_ADDCMD('EGV3', void, GetVector3Arg, 1, (int), 1, (vector3&) );
@@ -75,7 +78,7 @@ nActionDesc::SaveCmds( nPersistServer* ps )
                 }
                 break;
             case nArg::String:
-                ps->Put( this, 'ESSA', index, arg.GetS() );
+                ps->Put( this, 'SSTE', index, arg.GetS() );
                 break;
 #ifndef NGAME
             default:
