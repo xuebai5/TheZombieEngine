@@ -532,7 +532,7 @@ class ActionChoicebook(wx.Panel):
             elif type == propgrid.Type_Object:
                 action.setentityarg( i, self.pg.get_property_value(pid) )
             elif type == propgrid.Type_String:
-                action.setstringarg( i, self.pg.get_property_value(pid) )
+                action.setstringarg( i, str(self.pg.get_property_value(pid)) )
             elif type == propgrid.Type_Vector3:
                 v = self.pg.get_property_value(pid)
                 action.setvector3arg( i, v[0], v[1], v[2] )
