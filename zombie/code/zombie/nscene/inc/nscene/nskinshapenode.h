@@ -16,8 +16,8 @@
     (C) 2003 RadonLabs GmbH
 */
 #include "nscene/nshapenode.h"
-#include "ncharacter/ncharjointpalette.h"
-#include "ncharacter/ncharskinrenderer.h"
+#include "character2/ncharjointpalette.h"
+#include "character2/ncharskinrenderer.h"
 #include "util/nstring.h"
 
 class nCharSkeleton;
