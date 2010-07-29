@@ -29,7 +29,7 @@
 
 #include <d3d9.h>
 #include <d3dx9.h>
-#include <dxerr9.h>
+#include <dxerr.h>
 
 #if D3D_SDK_VERSION < 32
 #error You must be using the DirectX 9 October 2004 Update SDK!  You may download it from http://www.microsoft.com/downloads/details.aspx?FamilyID=b7bc31fa-2df1-44fd-95a4-c2555446aed4&DisplayLang=en

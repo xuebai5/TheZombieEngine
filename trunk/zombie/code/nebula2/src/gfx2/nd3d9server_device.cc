@@ -467,7 +467,7 @@ nD3D9Server::DeviceOpen()
                                   &(this->d3d9Device));
     if (FAILED(hr))
     {
-        n_error("nD3D9Server: Could not create d3d device!\nDirectX Error is: %s\n", DXGetErrorString9(hr));
+        n_error("nD3D9Server: Could not create d3d device!\nDirectX Error is: %s\n", DXGetErrorString(hr));
         return false;
     }
     n_assert(this->d3d9Device);
@@ -476,7 +476,7 @@ nD3D9Server::DeviceOpen()
     hr = D3DXCreateEffectPool(&this->effectPool);
     if (FAILED(hr))
     {
-        n_error("nD3D9Server: Could not create effect pool!\nDirectX Error is: %s\n", DXGetErrorString9(hr));
+        n_error("nD3D9Server: Could not create effect pool!\nDirectX Error is: %s\n", DXGetErrorString(hr));
         return false;
     }
 
@@ -609,7 +609,7 @@ nD3D9Server::TestResetDevice()
         }
         if (FAILED(hr))
         {
-            n_printf("nD3D9Server: Failed to reset d3d device, Error %s !\n" , DXGetErrorString9(hr) );
+            n_printf("nD3D9Server: Failed to reset d3d device, Error %s !\n" , DXGetErrorString(hr) );
             return false;
         }
         n_printf("nD3D9Server: Device reset!\n");
