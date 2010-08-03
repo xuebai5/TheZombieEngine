@@ -4,9 +4,10 @@
 # Contents are licensed under the Nebula license.
 #--------------------------------------------------------------------------
 
+from vstudio7 import vstudio7
 from vstudio71 import vstudio71
 from vstudio8 import vstudio8
-from vstudio7 import vstudio7
+from vstudio10 import vstudio10
 from makefile import makefile
 from doxygen import doxygen
 #from scons import scons
@@ -20,6 +21,7 @@ class Factory:
         self.generators = { 'vstudio71' : vstudio71(buildSys),
                             'vstudio7'  : vstudio7(buildSys),
                             'vstudio8'  : vstudio8(buildSys),
+                            'vstudio10'  : vstudio10(buildSys),
                             'makefile'  : makefile(buildSys),
                             'doxygen'   : doxygen(buildSys),
 #                            'scons'     : scons(buildSys),
