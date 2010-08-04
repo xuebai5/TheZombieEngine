@@ -13,7 +13,7 @@
 #pragma warning (disable : 4201)
 #include <mmsystem.h>
 #pragma warning (default : 4201)
-#include <dxerr9.h>
+#include <dxerr.h>
 #include <dsound.h>
 #include "audio3/DSUtil.h"
 #include "audio3/DXUtil.h"
