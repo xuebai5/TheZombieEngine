@@ -14,8 +14,6 @@
 #include "shaders:../lib/lib.fx"
 #include "shaders:../lib/libzombie.fx"
 
-#include "shaders:../lib/bill.fx"
-
 shared float4x4 ModelViewProjection;
 shared float4x4 ModelView;
 shared float3   ModelEyePos;

@@ -19,7 +19,6 @@
 #include "shaders:../lib/lib.fx"
 #include "shaders:../lib/libzombie.fx"
 
-#include "shaders:../lib/bill.fx"
 #include "shaders:../lib/gmmt.fx"
 float4   LightAmbient;
 float4   LightDiffuse;

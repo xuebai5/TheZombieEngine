@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ascii" ?>
-<MaterialDatabase shaderPath="home:data/shaders/2.0/materials">
+<MaterialDatabase shaderPath="wc:libs/shaders/">
 
     <!-- declare variables -->
     <Float name="FadeMinDistance" value="0.0" />
