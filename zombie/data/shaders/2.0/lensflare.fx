@@ -7,7 +7,7 @@
 //  (C) 2003 RadonLabs GmbH
 //------------------------------------------------------------------------------
 #include "shaders:../lib/lib.fx"
-#include "shaders:../lib/bill.fx"
+#include "shaders:../lib/libzombie.fx"
 
 shared float4x4 ModelViewProjection;       // the model*view*projection matrix
 shared float3   ModelEyePos;               // the eye position in model space
