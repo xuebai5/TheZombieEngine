@@ -670,7 +670,7 @@ class vstudio10:
         projFile.write('\t\t\t<Tool Name="VCCustomBuildTool"/>\n')
 
         # now either the linker or the librarian
-        libInDirs = libraryDir + ';' + libInDirs
+        libInDirs = libraryDir + ';' + libInDirs + ';' + self.libDirStr
         libraryDir = os.path.join(libraryDir, 'vstudio10')
         if 'lib' == target.type:
             projFile.write(STR_PROJ_CONFIG_LIBRARIAN_TOOL \
