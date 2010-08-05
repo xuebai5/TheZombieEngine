@@ -32,7 +32,7 @@ beginmodule nd3d9server
     }
     setheaders { nd3d9server }
     setlibs_win32 {
-        d3d9.lib d3dx9.lib dxguid.lib dxerr9.lib
+        d3d9.lib d3dx9.lib dxguid.lib dxerr.lib
         user32.lib gdi32.lib advapi32.lib
     }
     setmoduledeps { nd3d9mesh nd3d9texture nd3d9shader }
