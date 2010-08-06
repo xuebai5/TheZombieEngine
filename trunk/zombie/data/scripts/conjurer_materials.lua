@@ -613,10 +613,6 @@ function BuildShader()
         builder:puts('#include "shaders:../lib/libzombie.fx"\n')
         builder:puts('\n')
 
-        if (builder:getattrib('billboard') == 'true' or  builder:getattrib('swinging') == 'true') then
-            builder:puts('#include "shaders:../lib/bill.fx"\n')
-        end
-
         if (hasFog) then
             builder:puts('#include "shaders:../lib/fog.fx"\n')
         end
