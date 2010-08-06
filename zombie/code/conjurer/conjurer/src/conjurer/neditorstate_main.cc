@@ -51,10 +51,7 @@ nEditorState::OnCreate(nApplication* app)
     n_assert(this->refViewportUI.isvalid());
     
     this->refPreview = (nAppViewport*) this->refViewportUI->Find("preview");
-    n_assert(this->refPreview.isvalid());
-
     this->refMapView = static_cast<nAppViewport*>(kernelServer->Lookup("/usr/mapview"));
-    n_assert(this->refMapView.isvalid());
 }
 
 //------------------------------------------------------------------------------
@@ -127,7 +124,7 @@ nEditorState::OnFrame()
     }
 
     // update preview viewport --FIXME move to nConjurerLayout::Trigger()
-    if (this->refPreview->GetVisible())
+    if (this->refPreview.isvalid() && this->refPreview->GetVisible())
     {
         this->refPreview->SetFrameId(this->app->GetFrameId());
         this->refPreview->SetFrameTime(this->app->GetFrameTime());
@@ -136,7 +133,7 @@ nEditorState::OnFrame()
     }
 
     // update map viewport --FIXME move to nConjurerLayout::Trigger()
-    if (this->refMapView->GetVisible())
+    if (this->refMapView.isvalid() && this->refMapView->GetVisible())
     {
         this->refMapView->SetFrameId(this->app->GetFrameId());
         this->refMapView->SetFrameTime(this->app->GetFrameTime());
@@ -197,13 +194,13 @@ nEditorState::OnRender3D()
     }
 
     // render preview viewport --FIXME
-    if (this->refPreview->GetVisible())
+    if (this->refPreview.isvalid() && this->refPreview->GetVisible())
     {
         this->refPreview->OnRender3D();
     }
 
     // render map viewport --FIXME
-    if (this->refMapView->GetVisible())
+    if (this->refMapView.isvalid() && this->refMapView->GetVisible())
     {
         this->refMapView->OnRender3D();
     }
@@ -230,13 +227,13 @@ nEditorState::OnRender2D()
         this->GetApp()->refViewportUI->OnRender2D(); // do it after endscene
 
         // render preview as overlay --FIXME
-        if (this->refPreview->GetVisible())
+        if (this->refPreview.isvalid() && this->refPreview->GetVisible())
         {
             this->refPreview->OnRender2D();
         }
 
         // render map as overlay --FIXME
-        if (this->refMapView->GetVisible())
+        if (this->refMapView.isvalid() && this->refMapView->GetVisible())
         {
             this->refMapView->OnRender2D();
         }

@@ -21,7 +21,6 @@ class nAppViewportUI;
 class nSpatialServer;
 class nPhysicsServer;
 class nMaterialServer;
-class nUndoServer;
 class nDebugServer;
 class nMonitorServer;
 class nLayerManager;
@@ -158,9 +157,9 @@ public:
         /// get current viewport name
         const char * GetCurrentViewport();
         /// move current viewport to entity position
-        void MoveCameraToEntity(nEntityObjectId);
+        //void MoveCameraToEntity(nEntityObjectId);
         /// makes the current viewport camera to face the specified position
-        void MoveCameraToSelection ();
+        //void MoveCameraToSelection ();
 
         /// add a camera bookmark
         void AddBookmark(const vector3&, const polar2&);
@@ -174,9 +173,9 @@ public:
         void LoadBookmarks(const char *);
 
         /// open a viewport to preview a class asset
-        void OpenPreview(const char *);
+        //void OpenPreview(const char *);
         /// close the preview viewport
-        void ClosePreview();
+        //void ClosePreview();
 
         /// add temporary working copy
         void SetTempWorkingCopyDir(const char *);
@@ -232,7 +231,6 @@ private:
 
     nAutoRef<nScriptServer> refScriptServer;
     nRef<nScriptServer> refPythonScriptServer;
-    nRef<nUndoServer> refUndoServer;
     nRef<nDebugServer> refDebugServer;
     nRef<nDebugComponentServer> refDebugComponentServer;
     nRef<nMonitorServer> refMonitorServer;
@@ -276,9 +274,9 @@ private:
 
     nRef<nAssetLoadState> refLoaderState;   ///< asset load state
     nRef<nAppViewportUI> refViewportUI;     ///< viewport layout
-    nRef<nAppViewport> refRnsViewport;      ///< game viewport
-    nRef<nAppViewport> refMapViewport;      ///< map viewport
-    nRef<nPreviewViewport> refPreview;      ///< preview viewport
+    //nRef<nAppViewport> refRnsViewport;      ///< game viewport
+    //nRef<nAppViewport> refMapViewport;      ///< map viewport
+    //nRef<nPreviewViewport> refPreview;      ///< preview viewport
     nArray<nViewerParams> bookmarks;        ///< bookmark array
 
     // save manager used to save the editor state

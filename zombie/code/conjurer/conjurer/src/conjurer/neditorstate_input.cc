@@ -68,13 +68,13 @@ nEditorState::HandleInput(nTime /*frameTime*/)
     }
 
     // handle input for preview viewport 
-    if (this->refMapView->GetVisible())
+    if (this->refMapView.isvalid() && this->refMapView->GetVisible())
     {
         this->app->SetInputHandled(this->refMapView->HandleInput(this->app->GetFrameTime()));
     }
 
     // handle input for preview viewport 
-    if (this->refPreview->GetVisible())
+    if (this->refPreview.isvalid() && this->refPreview->GetVisible())
     {
         this->app->SetInputHandled(this->refPreview->HandleInput(this->app->GetFrameTime()));
     }
