@@ -194,7 +194,7 @@ public:
         /// new level
         void NewLevel(const char*);
         /// load level
-        void LoadLevel(const char*);
+        bool LoadLevel(const char*);
         /// delete level
         void DeleteLevel(const char*);
         /// save level

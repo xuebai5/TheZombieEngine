@@ -41,7 +41,7 @@ endmodule
 #===============================================================================
 #  conjurer Targets
 #===============================================================================
-begintarget explorer
+begintarget wanderer
     annotate "Explorer app"
     seticon conjurer.ico
     settype exe

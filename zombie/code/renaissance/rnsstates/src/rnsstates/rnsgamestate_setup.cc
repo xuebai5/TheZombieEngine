@@ -312,7 +312,11 @@ RnsGameState::OnStateLeave( const nString & /*nextState*/ )
 
 	// stop music
 	// @todo Make music table a singleton or get its NOH path from a constant
-    static_cast<nMusicTable*>( nKernelServer::Instance()->Lookup("/usr/musictable") )->StopMusic();
+    nAutoRef<nMusicTable> refMusicTable("/usr/musictable");
+    if (refMusicTable.isvalid())
+    {
+        refMusicTable->StopMusic();
+    }
 
 #ifndef NGAME
     // save editor state if coming from the editor

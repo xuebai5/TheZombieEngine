@@ -93,11 +93,10 @@ RnsLoadState::OnStateEnter( const nString & prevState )
     }
 
     // get the resources from sound
-    nMusicTable* musicTable = (nMusicTable*) kernelServer->Lookup(musicTableNOHPath);
-    n_assert( musicTable );
-    if ( musicTable )
+    nAutoRef<nMusicTable> refMusicTable(musicTableNOHPath);
+    if (refMusicTable.isvalid())
     {
-        musicTable->LoadAllSamples();
+        refMusicTable->LoadAllSamples();
     }
 
     this->maxPreLoads = this->preLoadClasses.Size();

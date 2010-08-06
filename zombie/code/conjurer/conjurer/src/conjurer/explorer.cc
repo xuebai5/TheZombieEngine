@@ -77,7 +77,7 @@ nNebulaUsePackage(ngui);
 nNebulaUsePackage(nspecialfx);
 nNebulaUsePackage(ndshow);
 
-nNebulaUsePackage(explorer);
+nNebulaUsePackage(wanderer);
 
 //------------------------------------------------------------------------------
 /**
@@ -237,7 +237,7 @@ NebulaMain(int argc, char * argv[])
     kernelServer->AddPackage(ngui);
     kernelServer->AddPackage(ndshow);
 
-    kernelServer->AddPackage(explorer);
+    kernelServer->AddPackage(wanderer);
 
     // enable frame time in time server
     kernelServer->GetTimeServer()->EnableFrameTime();
