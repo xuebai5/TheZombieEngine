@@ -264,31 +264,20 @@ nExplorerApp::Open()
     // create application states
     this->CreateState("neditorstate", "editor");
     this->CreateState("nassetloadstate", "loader");
-    this->CreateState("nterraineditorstate", "terrain");
-    this->CreateState("nobjecteditorstate", "object");
-    this->CreateState("nclasseditorstate", "class");
-    this->CreateState("nnavmeshbuilderstate", "navbuilder");
-    this->CreateState("ngeometrystreameditorstate", "geometrystream");
-
-    this->CreateState( "rnsmenustate", "menu" );
-    this->CreateState( "rnsloadstate", "load" );
-    this->CreateState( "rnsgamestate", "game" );
-    this->CreateState( "rnsaistate", "ai" );
-    this->CreateState( "rnswanderstate", "wander" );
 
     // if state need to be created in the begin, use FindState to force creation
     this->FindState("editor");
     this->FindState("loader");
-    this->FindState("terrain");
-    this->FindState("object");
-    this->FindState("class");
-    this->FindState("navbuilder");
-    this->FindState("geometrystream");
-    this->FindState("aitest");
-    this->FindState("wander");
-    this->FindState("game");
-    this->FindState("load");
-    this->FindState("menu");
+    //this->FindState("terrain");
+    //this->FindState("object");
+    //this->FindState("class");
+    //this->FindState("navbuilder");
+    //this->FindState("geometrystream");
+    //this->FindState("aitest");
+    //this->FindState("wander");
+    //this->FindState("game");
+    //this->FindState("load");
+    //this->FindState("menu");
 
     this->refLoaderState = (nAssetLoadState*) this->FindState("loader");
     this->refLoaderState->SetLoadClassName(this->GetLoadClassName());

@@ -84,37 +84,6 @@ nExplorerApp::HandleInput()
         return true;
     }
 
-    // Object tools
-    nObjectEditorState* objState = (nObjectEditorState*) this->FindState("object");
-    n_assert( objState );
-    if ( objState->HandleGlobalInput() )
-    {
-        return true;
-    }
-
-    // load outgui
-    if (inputServer->GetButton("outgui"))
-    {
-        // Set a default script file if it hasn't been specified yet
-        if (!this->GetGuiScriptFile())
-        {
-            this->SetGUIScriptFile("outgui:outgui.py");
-        }
-
-        // Open OutGUI if it isn't already opened
-        // Test if a dummy object created always by the OutGUI is present
-        if ( !nKernelServer::Instance()->Lookup( this->outguiDummyPath ) )
-        {
-            if (this->RunGUIScript(this->GetGuiScriptFile()))
-            {
-                nString result;
-                this->refPythonScriptServer->RunFunction("Restore", result);
-            }
-        }
-
-        return true;
-    }
-
     // Toggle visibility of cursor
     if (inputServer->GetButton("toggle_cursor"))
     {
