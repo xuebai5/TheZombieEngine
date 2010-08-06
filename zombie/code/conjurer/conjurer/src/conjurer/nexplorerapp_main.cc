@@ -83,7 +83,6 @@ nExplorerApp::nExplorerApp() :
     refScriptServer("/sys/servers/script"),
     renderWindowEmbedded(false),
     outguiDummyPath("/editor/outguiisopened"),
-    quitConfirmationPending(false),
     saveManager(0),
     stateFile(0)
 {
@@ -128,25 +127,13 @@ nExplorerApp::Open()
         return false;
     }
     this->kernelServer->GetFileServer()->SetAssign("outgui", "home:code/conjurer/conjurer/gui/");
-        
-    this->refPythonScriptServer = (nScriptServer*)  kernelServer->New("npythonserver" , "/sys/servers/persist/npythonserver");
-    this->refPythonScriptServer->SetFailOnError(false);
+
     this->refDebugServer        = (nDebugServer*)   kernelServer->New("ndebugserver", "/sys/servers/debug");
     this->refLayerManager       = (nLayerManager*)  kernelServer->New("nlayermanager", "/sys/servers/layermanager");
     this->refWatcherDirServer   = (nWatcherDirServer*) kernelServer->New("nwatcherdirserver", "/sys/servers/dirwatcher");
     this->refDebugComponentServer = (nDebugComponentServer*) kernelServer->New("nconjurerdebugcompserver", "/sys/servers/debugcomp");
 
     kernelServer->New("nkernelserverproxy", "/sys/servers/kernelserver");
-
-    // OUTGUI
-    if (this->GetGuiScriptFile())
-    {
-        this->RunGUIScript(this->GetGuiScriptFile());
-    }
-    else
-    {
-        this->SetRenderWindowEmbedded( false );
-    }
 
     nCommonApp::Open();
 
@@ -222,11 +209,6 @@ nExplorerApp::Open()
     n_assert(this->refViewportUI.isvalid());
     n_assert(this->refViewportUI->IsA("nappviewportui"));
 
-    // load viewport for preview
-    //this->refPreview = static_cast<nPreviewViewport*>(this->refViewportUI->Find("preview"));
-    //n_assert(this->refPreview.isvalid());
-    //this->refPreview->SetRelSize(0.0f, 0.0f, 0.5f, 0.5f);
-
     kernelServer->PopCwd();
 
     // load persisted viewport layout, then open
@@ -234,48 +216,20 @@ nExplorerApp::Open()
     this->refViewportUI->SetClientRect(0, 0, displayMode.GetWidth(), displayMode.GetHeight());
     this->refViewportUI->Open();
 
-    // load viewport for renaissance states
-    //this->refRnsViewport = static_cast<nAppViewport*>(kernelServer->LoadAs("home:data/appdata/conjurer/viewport/rnsview.n2", "/usr/rnsview"));
-    //n_assert(this->refRnsViewport.isvalid());
-    //n_assert(this->refRnsViewport->IsA("nappviewport"));
-    //this->refRnsViewport->Open();
-
-    // load map vieport for both editor and game states
-    //this->refMapViewport = static_cast<nAppViewport*>(kernelServer->LoadAs("home:data/appdata/conjurer/viewport/mapview.n2", "/usr/mapview"));
-    //n_assert(this->refMapViewport.isvalid());
-    //n_assert(this->refMapViewport->IsA("nappviewport"));
-    //this->refMapViewport->Open();
-
-    // open preview viewport
-    //this->refPreview->Open();
-
     // create debug module for editor component visualizations
     n_verify( nDebugServer::Instance()->CreateDebugModule("neditordebugmodule", "editor") );
     n_verify( nDebugServer::Instance()->CreateDebugModule("nscenedebugmodule", "scene") );
 
     // create application states
-    this->CreateState("neditorstate", "editor");
+    this->CreateState("nexplorerstate", "editor");
     this->CreateState("nassetloadstate", "loader");
 
     // if state need to be created in the begin, use FindState to force creation
     this->FindState("editor");
     this->FindState("loader");
-    //this->FindState("terrain");
-    //this->FindState("object");
-    //this->FindState("class");
-    //this->FindState("navbuilder");
-    //this->FindState("geometrystream");
-    //this->FindState("aitest");
-    //this->FindState("wander");
-    //this->FindState("game");
-    //this->FindState("load");
-    //this->FindState("menu");
 
     this->refLoaderState = (nAssetLoadState*) this->FindState("loader");
     this->refLoaderState->SetLoadClassName(this->GetLoadClassName());
-    //<OBSOLETE> keep for backwards compatibility
-    this->refLoaderState->SetSceneFile(this->GetSceneFile());
-    //<OBSOLETE>
 
     // check that initial state was created
     n_assert2( this->FindState( this->initState ), "No exist initial State in conjurer" );
@@ -308,17 +262,6 @@ nExplorerApp::Open()
     this->refGlobalVarEditor = (nGlobalVariableEditor*) kernelServer->New("nglobalvariableeditor", "/usr/globalvars");
     this->refGlobalVarEditor->LoadGlobalVariables();
 
-    // OUTGUI
-    if (this->GetGuiScriptFile())
-    {
-        nString result;
-        // restores the outgui windows state
-        this->refPythonScriptServer->RunFunction("Restore", result);
-    }
-
-    /// add unique strings for network
-    //this->AddNetworkUniqueStrings();
-
     return true;
 }
 
@@ -329,7 +272,7 @@ void
 nExplorerApp::Close()
 {
     // Close OutGUI first if it's opened
-    this->CloseOutGUI(true);
+    //this->CloseOutGUI(true);
 
     // leave current state
     nAppState* currentState = this->FindState( this->GetCurrentState() );
@@ -342,26 +285,15 @@ nExplorerApp::Close()
     {
         this->refAITester->Release();
     }
-
     if (this->refGlobalVarEditor.isvalid())
     {
         this->refGlobalVarEditor->Release();
     }
-
     if (this->refViewportUI.isvalid())
     {    
         this->refViewportUI->Close();
         this->refViewportUI->Release();
     }
-    //if (this->refRnsViewport.isvalid())
-    //{
-    //    this->refRnsViewport->Release();
-    //}
-    //if (this->refMapViewport.isvalid())
-    //{    
-    //    this->refMapViewport->Release();
-    //}
-
     if (this->refMaterial.isvalid())
     {
         this->refMaterial->Release();
@@ -369,11 +301,6 @@ nExplorerApp::Close()
     if (this->refSceneNode.isvalid())
     {
         this->refSceneNode->Release();
-    }
-
-    if (this->refPythonScriptServer.isvalid())
-    {
-        this->refPythonScriptServer->Release();
     }
     if (this->refDebugServer.isvalid())
     {
@@ -415,19 +342,6 @@ nExplorerApp::Close()
 void
 nExplorerApp::DoFrame()
 {
-    // trigger script server
-    if (!this->refPythonScriptServer->Trigger())
-    {
-        this->SetQuitRequested(true);
-    }
-    
-    // Ask user for saving changes when the window close icon has been clicked
-    if ( this->quitConfirmationPending )
-    {
-        this->SetQuitRequested( this->CloseOutGUI() );
-        this->quitConfirmationPending = false;
-    }
-
     // Reload resource if have changed
     this->refWatcherDirServer->Trigger();
 
@@ -625,37 +539,6 @@ nExplorerApp::CaptureScreenshot()
 
 //------------------------------------------------------------------------------
 /**
-    Runs a script with the specific script server for the gui.
-*/
-bool 
-nExplorerApp::RunGUIScript( const char* scriptfilename )
-{
-    nString textResult;
-
-    if( !this->refPythonScriptServer->RunScript( scriptfilename, textResult ) )
-    {
-        n_error( "Failed running: %s", textResult );
-        return false;
-    }
-
-    nString PythonFunction( "StartOutterGUI(False)" );
-
-    if( this->IsRenderWindowEmbedded() )
-    {
-        PythonFunction = "StartOutterGUI(True)";
-    }
-
-    if( !this->refPythonScriptServer->Run( PythonFunction.Get(), textResult ) )
-    {
-        n_error( "Failed running: %s", textResult );
-        return false;
-    }
-
-    return true;
-}
-
-//------------------------------------------------------------------------------
-/**
     Try a guess on the view parameter.
     If it inside a "classes/" or "levels/" directory, the file *could* be
     an entity class or a level file. If the parent directory *looks* like
@@ -810,41 +693,6 @@ nExplorerApp::CalcTitleString( const char* prefix )
 
 //------------------------------------------------------------------------------
 /**
-    Try to close outgui, returning false if user vetoes it
-
-    If forceToClose is set to true, the user isn't asked and the outgui will be
-    closed without saving any data.
-*/
-bool
-nExplorerApp::CloseOutGUI( bool forceToClose ) const
-{
-    // Try to close OutGUI if it's opened
-    if ( nKernelServer::Instance()->Lookup( this->outguiDummyPath ) )
-    {
-        nString result;
-        nString cmd( "EndOutterGUI(" );
-        cmd += forceToClose? "True" : "False";
-        cmd += ")";
-        this->refPythonScriptServer->Run( cmd.Get(), result );
-        this->refPythonScriptServer->Trigger();
-    }
-
-    // OutGUI is known to be closed when its dummy object doesn't exist
-    return !nKernelServer::Instance()->Lookup( this->outguiDummyPath );
-}
-
-//------------------------------------------------------------------------------
-/**
-    Set the quit confirmation flag
-*/
-void
-nExplorerApp::SetQuitConfirmationPending( bool b )
-{
-    this->quitConfirmationPending = b;
-}
-
-//------------------------------------------------------------------------------
-/**
     Create new level
 */
 void
@@ -939,10 +787,6 @@ nExplorerApp::GetInstanceName() const
 void 
 nExplorerApp::SaveEditorState()
 {
-    //this->stateFile = nFileServer2::Instance()->NewFileObject();
-    //this->stateFile = n_new(nMemFile);
-    //n_assert(this->stateFile);
-
     this->saveManager = static_cast<nSaveManager *> (nKernelServer::Instance()->New("nsavemanager"));
     n_assert(this->saveManager);
 
@@ -1106,11 +950,6 @@ nExplorerApp::RestoreEditorState()
         this->stateFile->Release();
         this->stateFile = 0;
     }
-
-    // Check selection and remove lost objects
-    //nObjectEditorState* objState = static_cast<nObjectEditorState*>( this->FindState("object") );
-    //n_assert( objState );
-    //objState->CheckSelection();
 }
 
 //------------------------------------------------------------------------------
