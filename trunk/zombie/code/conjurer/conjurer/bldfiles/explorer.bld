@@ -1,0 +1,101 @@
+#===============================================================================
+#  explorer.bld
+#===============================================================================
+
+#===============================================================================
+#  conjurer modules
+#===============================================================================
+beginmodule explorer
+    setdir conjurer
+    setfiles {
+        explorer
+    }
+    setheaders{ personal }
+    setlibs_win32 { 
+        shell32.lib
+    }
+endmodule
+
+beginmodule nexplorerapp
+    setdir conjurer
+    setfiles {
+        nexplorerapp_main
+        nexplorerapp_cmds
+        nexplorerapp_input
+    }
+    setheaders{
+        nexplorerapp
+    }
+endmodule
+
+#===============================================================================
+#  conjurer Targets
+#===============================================================================
+begintarget explorer
+    annotate "Explorer app"
+    seticon conjurer.ico
+    settype exe
+    setwarningslevel 4
+    setpch true
+    setstacksize 5120000
+
+    setmodules {
+        explorer
+        nexplorerapp
+    }
+    settargetdeps {
+        gpbasicactions
+        rnsbasicactions
+        conjurerapp
+        conjurerexp
+        crashreportdump
+        framework
+        napplication
+        ndebug
+        ndinput8
+        ndirect3d9
+        nfsm
+        ngeomipmap
+        nkernel
+        nlua
+        nmaterial
+        nnavmesh
+        nnebula
+        noctree
+        nphysics
+        npythonserver
+        nscene
+        nspatial
+        ntoollib
+        ntrigger
+        nundoserver
+        xml
+        nnetworkenet
+        nnetwork
+        framework
+        rnsstates
+        rnsnetwork
+        nentity
+        ncshared
+        zombieentity
+        zombieentityexp
+        rnsentity
+        gameplay
+        rnsgameplay
+        ndsound
+        nmusictable
+        ncsound
+        nscriptclassserver
+        appinfo
+        nwaypoint
+        nanimation
+        ncommonapp
+        renaissanceapp
+        ngrass
+        ngrass_conjurer
+        nspecialfx
+        ngui
+        rnsscene
+        ndshow
+    }
+endtarget
