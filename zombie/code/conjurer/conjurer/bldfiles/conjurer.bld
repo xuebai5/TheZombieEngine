@@ -672,6 +672,7 @@ beginworkspace conjurer
         "/I ../../../../ode/OPCODE"
     }
     settargets {
+        explorer
         conjurer
         conjurerexp
         gameplay
