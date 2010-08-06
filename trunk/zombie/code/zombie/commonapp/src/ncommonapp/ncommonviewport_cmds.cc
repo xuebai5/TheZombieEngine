@@ -24,6 +24,7 @@ NSCRIPT_INITCMDS_BEGIN(nCommonViewport)
     NSCRIPT_ADDCMD('GRSF', const char *, GetResourceFile, 0, (), 0, ());
     NSCRIPT_ADDCMD('GVPE', nEntityObject*, GetViewportEntity, 0, (), 0, ());
     NSCRIPT_ADDCMD('MBVE', nEntityObject*, BeginViewportEntity, 1, (const char *), 0, ());
+    NSCRIPT_ADDCMD('LSOL', void, SetObeyLightLinks, 1, (bool), 0, ());
     NSCRIPT_ADDCMD('LGMX', float, GetMouseXFactor , 0, (), 0, ());
     NSCRIPT_ADDCMD('LSMX', void, SetMouseXFactor, 1, (float), 0, ());
     NSCRIPT_ADDCMD('LGMY', float, GetMouseYFactor , 0, (), 0, ());
@@ -75,6 +76,9 @@ nCommonViewport::SaveCmds(nPersistServer* ps)
                 ps->EndObject(false);
             }
         }
+
+        //--- setmousexfactor ---
+        ps->Put( this, 'LSOL', this->GetObeyLightLinks() );
 
         //--- setmousexfactor ---
         ps->Put( this, 'LSMX', this->GetMouseXFactor() );

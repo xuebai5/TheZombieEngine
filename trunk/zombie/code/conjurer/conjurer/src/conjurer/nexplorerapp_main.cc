@@ -262,6 +262,9 @@ nExplorerApp::Open()
     this->refGlobalVarEditor = (nGlobalVariableEditor*) kernelServer->New("nglobalvariableeditor", "/usr/globalvars");
     this->refGlobalVarEditor->LoadGlobalVariables();
 
+    // load level preset
+    this->refScriptServer->RunFunction("OnConjurerLoadLevel", result);
+
     return true;
 }
 
@@ -710,15 +713,20 @@ nExplorerApp::NewLevel(const char *fileName)
 /**
     Load level
 */
-void
+bool
 nExplorerApp::LoadLevel(const char *fileName)
 {
-    this->refLevelManager->LoadLevel(fileName);
+    if (this->refLevelManager->LoadLevel(fileName))
+    {
+        // allow customizing level loading
+        // @todo reimplement using signals?
+        nString result;
+        this->refScriptServer->RunFunction("OnConjurerLoadLevel", result);
 
-    // allow customizing level loading
-    // @todo reimplement using signals?
-    nString result;
-    this->refScriptServer->RunFunction("OnConjurerLoadLevel", result);
+        return true;
+    }
+
+    return false;
 }
 
 //------------------------------------------------------------------------------

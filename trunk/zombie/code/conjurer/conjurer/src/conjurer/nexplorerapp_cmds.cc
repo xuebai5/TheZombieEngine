@@ -42,7 +42,7 @@ NSCRIPT_INITCMDS_BEGIN(nExplorerApp)
     NSCRIPT_ADDCMD('ESWT', void, SetWindowTitle, 1, (const char*), 0, ());
     NSCRIPT_ADDCMD('BCTS', nString, CalcTitleString, 1, (const char*), 0, ());
     NSCRIPT_ADDCMD('NLEV', void, NewLevel, 1, (const char*), 0, ());
-    NSCRIPT_ADDCMD('LLEV', void, LoadLevel, 1, (const char*), 0, ());
+    NSCRIPT_ADDCMD('LLEV', bool, LoadLevel, 1, (const char*), 0, ());
     NSCRIPT_ADDCMD('DLEV', void, DeleteLevel, 1, (const char*), 0, ());
     NSCRIPT_ADDCMD('SLEV', void, SaveLevel, 0, (), 0, ());
     NSCRIPT_ADDCMD('YSLA', bool, SaveCurrentLevelAs, 1, (const char*), 0, ());
