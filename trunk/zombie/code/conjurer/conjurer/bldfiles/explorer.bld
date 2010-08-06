@@ -28,6 +28,16 @@ beginmodule nexplorerapp
     }
 endmodule
 
+beginmodule nexplorerstate
+    setdir conjurer
+    setfiles {
+        nexplorerstate
+    }
+    setheaders{
+        nexplorerstate
+    }
+endmodule
+
 #===============================================================================
 #  conjurer Targets
 #===============================================================================
@@ -42,6 +52,7 @@ begintarget explorer
     setmodules {
         explorer
         nexplorerapp
+        nexplorerstate
     }
     settargetdeps {
         gpbasicactions

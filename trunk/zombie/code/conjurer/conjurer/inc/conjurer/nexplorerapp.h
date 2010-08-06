@@ -108,7 +108,7 @@ public:
     const char* GetWatch() const;
 
     /// try to close outgui, returning false if user vetoes it
-    bool CloseOutGUI( bool forceToClose = false ) const;
+    //bool CloseOutGUI( bool forceToClose = false ) const;
 
     /// open the application
     virtual bool Open();
@@ -116,13 +116,13 @@ public:
     virtual void Close();
 
     /// runs a script with the specific script server for the gui
-    bool RunGUIScript(const char* scriptfilename);
+    //bool RunGUIScript(const char* scriptfilename);
     /// stores the gui script file
-    void SetGUIScriptFile(const char* scriptfilename);
+    //void SetGUIScriptFile(const char* scriptfilename);
     /// retrieves the gui script file
-    const char* GetGuiScriptFile() const;
+    //const char* GetGuiScriptFile() const;
     /// set the quit confirmation flag
-    void SetQuitConfirmationPending( bool b );
+    //void SetQuitConfirmationPending( bool b );
     /// enable / disable physics (for editor states only)
     void SetPhysicsEnabled( bool b );
     /// is physics enabled (for editor states only)
@@ -230,7 +230,6 @@ private:
     bool ShouldSaveObjectState(nEntityObject * obj) const;
 
     nAutoRef<nScriptServer> refScriptServer;
-    nRef<nScriptServer> refPythonScriptServer;
     nRef<nDebugServer> refDebugServer;
     nRef<nDebugComponentServer> refDebugComponentServer;
     nRef<nMonitorServer> refMonitorServer;
@@ -270,7 +269,7 @@ private:
     const char* outguiDummyPath;
     /// It's pending asking to the user if he/she wants to exit application? 
     /// (user has clicked close window icon)
-    bool quitConfirmationPending;
+    //bool quitConfirmationPending;
 
     nRef<nAssetLoadState> refLoaderState;   ///< asset load state
     nRef<nAppViewportUI> refViewportUI;     ///< viewport layout
@@ -480,45 +479,45 @@ nExplorerApp::GetWatch() const
 /**
     Stores the gui script file.
 */
-inline
-void 
-nExplorerApp::SetGUIScriptFile(const char* scriptfilename)
-{
-    this->guiScriptFile = scriptfilename;
-}
+//inline
+//void 
+//nExplorerApp::SetGUIScriptFile(const char* scriptfilename)
+//{
+//    this->guiScriptFile = scriptfilename;
+//}
 
 //------------------------------------------------------------------------------
 /**
     Retrieves the gui script file.
 */
-inline
-const char* 
-nExplorerApp::GetGuiScriptFile() const
-{
-    return this->guiScriptFile.IsEmpty() ? 0 : this->guiScriptFile.Get();
-}
+//inline
+//const char* 
+//nExplorerApp::GetGuiScriptFile() const
+//{
+//    return this->guiScriptFile.IsEmpty() ? 0 : this->guiScriptFile.Get();
+//}
 
 //------------------------------------------------------------------------------
 /**
     Accessor to know if the render window must be embedded.
 */
-inline 
-const bool 
-nExplorerApp::IsRenderWindowEmbedded() const
-{
-    return this->renderWindowEmbedded;
-}
+//inline 
+//const bool 
+//nExplorerApp::IsRenderWindowEmbedded() const
+//{
+//    return this->renderWindowEmbedded;
+//}
 
 //------------------------------------------------------------------------------
 /**
     To set if the render window must be embedded.
 */
-inline
-void 
-nExplorerApp::SetRenderWindowEmbedded( const bool is )
-{
-    this->renderWindowEmbedded = is;
-}
+//inline
+//void 
+//nExplorerApp::SetRenderWindowEmbedded( const bool is )
+//{
+//    this->renderWindowEmbedded = is;
+//}
 
 //------------------------------------------------------------------------------
 /**
