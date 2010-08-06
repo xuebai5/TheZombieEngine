@@ -4,8 +4,6 @@
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
 #include "conjurer/nexplorerapp.h"
-#include "conjurer/nobjecteditorstate.h"
-#include "conjurer/nconjurersceneserver.h"
 #include "conjurer/nassetloadstate.h"
 #include "conjurer/npreviewviewport.h"
 #include "conjurer/nviewerparams.h"
@@ -20,8 +18,6 @@
 #include "kernel/nscriptserver.h"
 #include "kernel/nremoteserver.h"
 #include "kernel/nkernelserverproxy.h"
-#include "nundo/nundoserver.h"
-#include "nundo/undocmdbyscript.h"
 #include "misc/nconserver.h"
 #include "gfx2/ngfxutils.h"
 #include "input/ninputserver.h"
@@ -135,7 +131,6 @@ nExplorerApp::Open()
         
     this->refPythonScriptServer = (nScriptServer*)  kernelServer->New("npythonserver" , "/sys/servers/persist/npythonserver");
     this->refPythonScriptServer->SetFailOnError(false);
-    this->refUndoServer         = (nUndoServer*)    kernelServer->New("nundoserver", "/sys/servers/undo");
     this->refDebugServer        = (nDebugServer*)   kernelServer->New("ndebugserver", "/sys/servers/debug");
     this->refLayerManager       = (nLayerManager*)  kernelServer->New("nlayermanager", "/sys/servers/layermanager");
     this->refWatcherDirServer   = (nWatcherDirServer*) kernelServer->New("nwatcherdirserver", "/sys/servers/dirwatcher");
@@ -159,9 +154,6 @@ nExplorerApp::Open()
 
     // Monitor server uses a reference to gfx server, so this is created after the gfx one
     this->refMonitorServer = (nMonitorServer*) kernelServer->New("nmonitorserver", "/sys/servers/monitorserver");
-
-    // initialize By Script undo/redo
-    UndoCmdByScript::SetScriptServer(this->refPythonScriptServer);
 
     if (this->GetWatch())
     {
@@ -231,9 +223,9 @@ nExplorerApp::Open()
     n_assert(this->refViewportUI->IsA("nappviewportui"));
 
     // load viewport for preview
-    this->refPreview = static_cast<nPreviewViewport*>(this->refViewportUI->Find("preview"));
-    n_assert(this->refPreview.isvalid());
-    this->refPreview->SetRelSize(0.0f, 0.0f, 0.5f, 0.5f);
+    //this->refPreview = static_cast<nPreviewViewport*>(this->refViewportUI->Find("preview"));
+    //n_assert(this->refPreview.isvalid());
+    //this->refPreview->SetRelSize(0.0f, 0.0f, 0.5f, 0.5f);
 
     kernelServer->PopCwd();
 
@@ -243,19 +235,19 @@ nExplorerApp::Open()
     this->refViewportUI->Open();
 
     // load viewport for renaissance states
-    this->refRnsViewport = static_cast<nAppViewport*>(kernelServer->LoadAs("home:data/appdata/conjurer/viewport/rnsview.n2", "/usr/rnsview"));
-    n_assert(this->refRnsViewport.isvalid());
-    n_assert(this->refRnsViewport->IsA("nappviewport"));
-    this->refRnsViewport->Open();
+    //this->refRnsViewport = static_cast<nAppViewport*>(kernelServer->LoadAs("home:data/appdata/conjurer/viewport/rnsview.n2", "/usr/rnsview"));
+    //n_assert(this->refRnsViewport.isvalid());
+    //n_assert(this->refRnsViewport->IsA("nappviewport"));
+    //this->refRnsViewport->Open();
 
     // load map vieport for both editor and game states
-    this->refMapViewport = static_cast<nAppViewport*>(kernelServer->LoadAs("home:data/appdata/conjurer/viewport/mapview.n2", "/usr/mapview"));
-    n_assert(this->refMapViewport.isvalid());
-    n_assert(this->refMapViewport->IsA("nappviewport"));
-    this->refMapViewport->Open();
+    //this->refMapViewport = static_cast<nAppViewport*>(kernelServer->LoadAs("home:data/appdata/conjurer/viewport/mapview.n2", "/usr/mapview"));
+    //n_assert(this->refMapViewport.isvalid());
+    //n_assert(this->refMapViewport->IsA("nappviewport"));
+    //this->refMapViewport->Open();
 
     // open preview viewport
-    this->refPreview->Open();
+    //this->refPreview->Open();
 
     // create debug module for editor component visualizations
     n_verify( nDebugServer::Instance()->CreateDebugModule("neditordebugmodule", "editor") );
@@ -361,20 +353,14 @@ nExplorerApp::Close()
         this->refViewportUI->Close();
         this->refViewportUI->Release();
     }
-    if (this->refRnsViewport.isvalid())
-    {
-        this->refRnsViewport->Release();
-    }
-    if (this->refMapViewport.isvalid())
-    {    
-        this->refMapViewport->Release();
-    }
-
-    // release undo server before level to release entity references!
-    if (this->refUndoServer.isvalid())
-    {
-        this->refUndoServer->Release();
-    }
+    //if (this->refRnsViewport.isvalid())
+    //{
+    //    this->refRnsViewport->Release();
+    //}
+    //if (this->refMapViewport.isvalid())
+    //{    
+    //    this->refMapViewport->Release();
+    //}
 
     if (this->refMaterial.isvalid())
     {
@@ -1122,9 +1108,9 @@ nExplorerApp::RestoreEditorState()
     }
 
     // Check selection and remove lost objects
-    nObjectEditorState* objState = static_cast<nObjectEditorState*>( this->FindState("object") );
-    n_assert( objState );
-    objState->CheckSelection();
+    //nObjectEditorState* objState = static_cast<nObjectEditorState*>( this->FindState("object") );
+    //n_assert( objState );
+    //objState->CheckSelection();
 }
 
 //------------------------------------------------------------------------------
