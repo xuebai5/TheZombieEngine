@@ -1,20 +1,20 @@
-#include "precompiled/pchexplorer.h"
+#include "precompiled/pchsummoner.h"
 //------------------------------------------------------------------------------
-//  nexplorerstate_input.cc
+//  nsummonerstate_input.cc
 //  (C) 2005 The Zombie Team
 //------------------------------------------------------------------------------
-#include "conjurer/nexplorerstate.h"
+#include "conjurer/nsummonerstate.h"
 #include "napplication/napplication.h"
 #include "napplication/nappviewportui.h"
 #include "napplication/nappviewport.h"
 
-nNebulaClass(nExplorerState, "neditorstate");
+nNebulaClass(nSummonerState, "neditorstate");
 
-nExplorerState::nExplorerState()
+nSummonerState::nSummonerState()
 {
 }
 
-nExplorerState::~nExplorerState()
+nSummonerState::~nSummonerState()
 {
 }
 
@@ -24,7 +24,7 @@ nExplorerState::~nExplorerState()
     always call nEditorState::HandleInput(frameTime) at the end.
 */
 bool
-nExplorerState::HandleInput(nTime /*frameTime*/)
+nSummonerState::HandleInput(nTime /*frameTime*/)
 {
     // handle viewport input
     nAppViewport* curViewport = this->refViewportUI->GetCurrentViewport();

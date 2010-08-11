@@ -1,9 +1,9 @@
-#include "precompiled/pchexplorer.h"
+#include "precompiled/pchsummoner.h"
 //------------------------------------------------------------------------------
-//  nExplorerApp_input.cc
+//  nSummonerApp_input.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
-#include "conjurer/nexplorerapp.h"
+#include "conjurer/nsummonerapp.h"
 #include "conjurer/npreviewviewport.h"
 #include "conjurer/nobjecteditorstate.h"
 #include "napplication/nappviewportui.h"
@@ -25,7 +25,7 @@
     @return true if input has already been handled
 */
 bool
-nExplorerApp::HandleInput()
+nSummonerApp::HandleInput()
 {
     nInputServer* inputServer = nInputServer::Instance();
 

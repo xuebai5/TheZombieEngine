@@ -1,8 +1,8 @@
-#ifndef N_EXPLORERAPP_H
-#define N_EXPLORERAPP_H
+#ifndef N_SUMMONERAPP_H
+#define N_SUMMONERAPP_H
 //------------------------------------------------------------------------------
 /**
-    @class nExplorerApp
+    @class nSummonerApp
 */
 
 #include "ncommonapp/ncommonapp.h"
@@ -46,7 +46,7 @@ class nDebugComponentServer;
 class nGlobalVariableEditor;
 
 //------------------------------------------------------------------------------
-class nExplorerApp : public nCommonApp
+class nSummonerApp : public nCommonApp
 {
 public:
     /// control mode
@@ -57,11 +57,11 @@ public:
     };
 
     /// constructor
-    nExplorerApp();
+    nSummonerApp();
     /// destructor
-    virtual ~nExplorerApp();
+    virtual ~nSummonerApp();
     /// get instance pointer
-    static nExplorerApp* Instance();
+    static nSummonerApp* Instance();
 
     /// set instance name
     void SetInstanceName(const char *);
@@ -210,6 +210,10 @@ public:
     //@}
 
 protected:
+
+    /// create scene server
+    virtual nSceneServer* CreateSceneServer();
+
     /// do one complete frame
     virtual void DoFrame();
     /// called when 2d rendering should be performed
@@ -289,10 +293,10 @@ private:
 /**
 */
 inline 
-nExplorerApp *
-nExplorerApp::Instance()
+nSummonerApp *
+nSummonerApp::Instance()
 {
-    return (nExplorerApp *) nApplication::Instance();
+    return (nSummonerApp *) nApplication::Instance();
 }
 
 //------------------------------------------------------------------------------
@@ -300,7 +304,7 @@ nExplorerApp::Instance()
 */
 inline
 void
-nExplorerApp::SetControlMode(ControlMode mode)
+nSummonerApp::SetControlMode(ControlMode mode)
 {
     this->controlMode = mode;
 }
@@ -309,8 +313,8 @@ nExplorerApp::SetControlMode(ControlMode mode)
 /**
 */
 inline
-nExplorerApp::ControlMode
-nExplorerApp::GetControlMode() const
+nSummonerApp::ControlMode
+nSummonerApp::GetControlMode() const
 {
     return this->controlMode;
 }
@@ -320,7 +324,7 @@ nExplorerApp::GetControlMode() const
 */
 inline
 void
-nExplorerApp::SetLevelFile(const char* filename)
+nSummonerApp::SetLevelFile(const char* filename)
 {
     this->levelFilename = filename;
 }
@@ -330,7 +334,7 @@ nExplorerApp::SetLevelFile(const char* filename)
 */
 inline
 const char*
-nExplorerApp::GetLevelFile() const
+nSummonerApp::GetLevelFile() const
 {
     return this->levelFilename.IsEmpty() ? 0 : this->levelFilename.Get();
 }
@@ -340,7 +344,7 @@ nExplorerApp::GetLevelFile() const
 */
 inline
 void
-nExplorerApp::SetSceneFile(const char* filename)
+nSummonerApp::SetSceneFile(const char* filename)
 {
     this->sceneFilename = filename;
 }
@@ -350,7 +354,7 @@ nExplorerApp::SetSceneFile(const char* filename)
 */
 inline
 const char*
-nExplorerApp::GetSceneFile() const
+nSummonerApp::GetSceneFile() const
 {
     return this->sceneFilename.IsEmpty() ? 0 : this->sceneFilename.Get();
 }
@@ -360,7 +364,7 @@ nExplorerApp::GetSceneFile() const
 */
 inline
 void
-nExplorerApp::SetLoadClassName(const char* classname)
+nSummonerApp::SetLoadClassName(const char* classname)
 {
     this->loadClassName = classname;
 }
@@ -370,7 +374,7 @@ nExplorerApp::SetLoadClassName(const char* classname)
 */
 inline
 const char*
-nExplorerApp::GetLoadClassName() const
+nSummonerApp::GetLoadClassName() const
 {
     return this->loadClassName.IsEmpty() ? 0 : this->loadClassName.Get();
 }
@@ -380,7 +384,7 @@ nExplorerApp::GetLoadClassName() const
 */
 inline
 void
-nExplorerApp::SetAnimState(const int animStateIndex)
+nSummonerApp::SetAnimState(const int animStateIndex)
 {
     this->animStateIndex = animStateIndex;
 }
@@ -390,7 +394,7 @@ nExplorerApp::SetAnimState(const int animStateIndex)
 */
 inline
 const int
-nExplorerApp::GetAnimState() const
+nSummonerApp::GetAnimState() const
 {
     return this->animStateIndex;
 }
@@ -400,7 +404,7 @@ nExplorerApp::GetAnimState() const
 */
 inline
 void
-nExplorerApp::SetScriptServerClass(const char* type)
+nSummonerApp::SetScriptServerClass(const char* type)
 {
     this->scriptserverClass = type;
 }
@@ -410,7 +414,7 @@ nExplorerApp::SetScriptServerClass(const char* type)
 */
 inline
 const char*
-nExplorerApp::GetScriptServerClass() const
+nSummonerApp::GetScriptServerClass() const
 {
     return this->scriptserverClass.IsEmpty() ? 0 : this->scriptserverClass.Get();
 }
@@ -420,7 +424,7 @@ nExplorerApp::GetScriptServerClass() const
 */
 inline
 void
-nExplorerApp::SetViewportLayout(const char* layoutFile)
+nSummonerApp::SetViewportLayout(const char* layoutFile)
 {
     this->viewportLayoutFile = layoutFile;
 }
@@ -430,7 +434,7 @@ nExplorerApp::SetViewportLayout(const char* layoutFile)
 */
 inline
 const char *
-nExplorerApp::GetViewportLayout() const
+nSummonerApp::GetViewportLayout() const
 {
     return this->viewportLayoutFile.IsEmpty() ? 0 : this->viewportLayoutFile.Get();
 }
@@ -440,7 +444,7 @@ nExplorerApp::GetViewportLayout() const
 */
 inline
 void
-nExplorerApp::SetOverlayEnabled(bool b)
+nSummonerApp::SetOverlayEnabled(bool b)
 {
     this->isOverlayEnabled = b;
 }
@@ -450,7 +454,7 @@ nExplorerApp::SetOverlayEnabled(bool b)
 */
 inline
 bool
-nExplorerApp::GetOverlayEnabled() const
+nSummonerApp::GetOverlayEnabled() const
 {
     return this->isOverlayEnabled;
 }
@@ -460,7 +464,7 @@ nExplorerApp::GetOverlayEnabled() const
 */
 inline
 void 
-nExplorerApp::SetWatch(const char* name)
+nSummonerApp::SetWatch(const char* name)
 {
     this->initialWatch = name;
 }
@@ -470,7 +474,7 @@ nExplorerApp::SetWatch(const char* name)
 */
 inline
 const char* 
-nExplorerApp::GetWatch() const
+nSummonerApp::GetWatch() const
 {
     return this->initialWatch.IsEmpty() ? 0 : this->initialWatch.Get();
 }
@@ -481,7 +485,7 @@ nExplorerApp::GetWatch() const
 */
 //inline
 //void 
-//nExplorerApp::SetGUIScriptFile(const char* scriptfilename)
+//nSummonerApp::SetGUIScriptFile(const char* scriptfilename)
 //{
 //    this->guiScriptFile = scriptfilename;
 //}
@@ -492,7 +496,7 @@ nExplorerApp::GetWatch() const
 */
 //inline
 //const char* 
-//nExplorerApp::GetGuiScriptFile() const
+//nSummonerApp::GetGuiScriptFile() const
 //{
 //    return this->guiScriptFile.IsEmpty() ? 0 : this->guiScriptFile.Get();
 //}
@@ -503,7 +507,7 @@ nExplorerApp::GetWatch() const
 */
 //inline 
 //const bool 
-//nExplorerApp::IsRenderWindowEmbedded() const
+//nSummonerApp::IsRenderWindowEmbedded() const
 //{
 //    return this->renderWindowEmbedded;
 //}
@@ -514,7 +518,7 @@ nExplorerApp::GetWatch() const
 */
 //inline
 //void 
-//nExplorerApp::SetRenderWindowEmbedded( const bool is )
+//nSummonerApp::SetRenderWindowEmbedded( const bool is )
 //{
 //    this->renderWindowEmbedded = is;
 //}
@@ -525,7 +529,7 @@ nExplorerApp::GetWatch() const
 */
 inline
 void 
-nExplorerApp::SetTempWorkingCopyDir(const char* dirPath)
+nSummonerApp::SetTempWorkingCopyDir(const char* dirPath)
 {
     this->tempWorkingCopyDir = dirPath;
     if (this->IsOpen())
@@ -540,7 +544,7 @@ nExplorerApp::SetTempWorkingCopyDir(const char* dirPath)
 */
 inline
 const char * 
-nExplorerApp::GetTempWorkingCopyDir() const
+nSummonerApp::GetTempWorkingCopyDir() const
 {
     return this->tempWorkingCopyDir.IsEmpty() ? 0 : this->tempWorkingCopyDir.Get();
 }
@@ -550,7 +554,7 @@ nExplorerApp::GetTempWorkingCopyDir() const
 */
 inline
 void 
-nExplorerApp::SetTemporaryModeEnabled(bool enabled)
+nSummonerApp::SetTemporaryModeEnabled(bool enabled)
 {
     if (enabled != this->tempModeEnabled)
     {
@@ -568,7 +572,7 @@ nExplorerApp::SetTemporaryModeEnabled(bool enabled)
 */
 inline
 bool
-nExplorerApp::GetTemporaryModeEnabled()
+nSummonerApp::GetTemporaryModeEnabled()
 {
     return this->tempModeEnabled;
 }
@@ -578,7 +582,7 @@ nExplorerApp::GetTemporaryModeEnabled()
 */
 inline
 void
-nExplorerApp::SetInitState( const nString & state )
+nSummonerApp::SetInitState( const nString & state )
 {
     this->initState = state;
 }
@@ -588,7 +592,7 @@ nExplorerApp::SetInitState( const nString & state )
 */
 inline
 const nString &
-nExplorerApp::GetInitState() const
+nSummonerApp::GetInitState() const
 {
     return this->initState;
 }
@@ -598,7 +602,7 @@ nExplorerApp::GetInitState() const
 */
 inline
 void
-nExplorerApp::SetPhysicsEnabled(bool value)
+nSummonerApp::SetPhysicsEnabled(bool value)
 {
     this->runPhysics = value;
 
@@ -619,7 +623,7 @@ nExplorerApp::SetPhysicsEnabled(bool value)
 */
 inline
 bool
-nExplorerApp::IsPhysicsEnabled() const
+nSummonerApp::IsPhysicsEnabled() const
 {
     return this->runPhysics;
 }
@@ -629,7 +633,7 @@ nExplorerApp::IsPhysicsEnabled() const
 */
 inline
 void
-nExplorerApp::SetAttachEnabled(bool value)
+nSummonerApp::SetAttachEnabled(bool value)
 {
     this->attachEnabled = value;
 }
@@ -639,7 +643,7 @@ nExplorerApp::SetAttachEnabled(bool value)
 */
 inline
 bool
-nExplorerApp::IsAttachEnabled() const
+nSummonerApp::IsAttachEnabled() const
 {
     return this->attachEnabled;
 }
@@ -649,7 +653,7 @@ nExplorerApp::IsAttachEnabled() const
 */
 inline
 void
-nExplorerApp::SetRenderEnabled(bool value)
+nSummonerApp::SetRenderEnabled(bool value)
 {
     this->renderEnabled = value;
 }
@@ -659,7 +663,7 @@ nExplorerApp::SetRenderEnabled(bool value)
 */
 inline
 bool
-nExplorerApp::IsRenderEnabled() const
+nSummonerApp::IsRenderEnabled() const
 {
     return this->renderEnabled;
 }

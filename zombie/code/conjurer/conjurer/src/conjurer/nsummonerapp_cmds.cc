@@ -1,19 +1,19 @@
-#include "precompiled/pchexplorer.h"
+#include "precompiled/pchsummoner.h"
 //------------------------------------------------------------------------------
-//  nexplorerapp_cmds.cc
+//  nsummonerapp_cmds.cc
 //  (C) 2004 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
-#include "conjurer/nexplorerapp.h"
+#include "conjurer/nsummonerapp.h"
 
 static void n_getreleasebuildinfo(void *, nCmd *);
 static void n_getreleasesubversioninfo(void *, nCmd *);
 //------------------------------------------------------------------------------
 /**
     @scriptclass
-    nExplorerApp
+    nSummonerApp
 
     @cppclass
-    nExplorerApp
+    nSummonerApp
 
     @superclass
     ncommonapp
@@ -21,7 +21,7 @@ static void n_getreleasesubversioninfo(void *, nCmd *);
     @classinfo
     The main conjurer editor application.
 */
-NSCRIPT_INITCMDS_BEGIN(nExplorerApp)
+NSCRIPT_INITCMDS_BEGIN(nSummonerApp)
     NSCRIPT_ADDCMD('SCVP', void, SetCurrentViewport, 1, (const char *), 0, ());
     NSCRIPT_ADDCMD('GCVP', const char *, GetCurrentViewport, 0, (), 0, ());
     //NSCRIPT_ADDCMD('MVTE', void, MoveCameraToEntity, 1, (nEntityObjectId), 0, ());
