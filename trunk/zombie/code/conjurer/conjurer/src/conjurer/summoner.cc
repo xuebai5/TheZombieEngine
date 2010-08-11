@@ -1,10 +1,10 @@
-#include "precompiled/pchexplorer.h"
+#include "precompiled/pchsummoner.h"
 //------------------------------------------------------------------------------
 /**
-    Explorer
+    Summoner
 */
 
-#include "conjurer/nexplorerapp.h"
+#include "conjurer/nsummonerapp.h"
 #include "conjurer/personal.h"
 // Uncomment this line to activate visual leak detector
 //#define VLD_AGGREGATE_DUPLICATES
@@ -77,7 +77,7 @@ nNebulaUsePackage(ngui);
 nNebulaUsePackage(nspecialfx);
 nNebulaUsePackage(ndshow);
 
-nNebulaUsePackage(wanderer);
+nNebulaUsePackage(summoner);
 
 //------------------------------------------------------------------------------
 /**
@@ -237,7 +237,7 @@ NebulaMain(int argc, char * argv[])
     kernelServer->AddPackage(ngui);
     kernelServer->AddPackage(ndshow);
 
-    kernelServer->AddPackage(wanderer);
+    kernelServer->AddPackage(summoner);
 
     // enable frame time in time server
     kernelServer->GetTimeServer()->EnableFrameTime();
@@ -248,9 +248,9 @@ NebulaMain(int argc, char * argv[])
     }
 
     // initialize a viewer app object
-    nExplorerApp *app = (nExplorerApp *) kernelServer->New("nexplorerapp", "/app/conjurer");
+    nSummonerApp *app = (nSummonerApp *) kernelServer->New("nsummonerapp", "/app/conjurer");
     app->SetCompanyName("The Zombie Team");
-    app->SetAppName("Explorer");
+    app->SetAppName("Summoner");
     app->SetDisplayMode(displayMode);
     app->SetInstanceName(newInstance);
 

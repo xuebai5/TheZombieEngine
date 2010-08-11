@@ -1,9 +1,9 @@
-#include "precompiled/pchexplorer.h"
+#include "precompiled/pchsummoner.h"
 //------------------------------------------------------------------------------
-//  nExplorerApp_main.cc
+//  nSummonerApp_main.cc
 //  (C) 2005 Conjurer Services, S.A.
 //------------------------------------------------------------------------------
-#include "conjurer/nexplorerapp.h"
+#include "conjurer/nsummonerapp.h"
 #include "conjurer/nassetloadstate.h"
 #include "conjurer/npreviewviewport.h"
 #include "conjurer/nviewerparams.h"
@@ -62,7 +62,7 @@
 
 #include "gameplay/nmissionhandler.h"
 
-nNebulaScriptClass(nExplorerApp, "ncommonapp");
+nNebulaScriptClass(nSummonerApp, "ncommonapp");
 
 //------------------------------------------------------------------------------
 static const char sessionFileName[] = "user:editorstate.n2";
@@ -70,7 +70,7 @@ static const char sessionFileName[] = "user:editorstate.n2";
 //------------------------------------------------------------------------------
 /**
 */
-nExplorerApp::nExplorerApp() :
+nSummonerApp::nSummonerApp() :
     isOverlayEnabled(true),
     tempModeEnabled(false),
     controlMode(FreeCam),
@@ -92,7 +92,7 @@ nExplorerApp::nExplorerApp() :
 //------------------------------------------------------------------------------
 /**
 */
-nExplorerApp::~nExplorerApp()
+nSummonerApp::~nSummonerApp()
 {
     this->bookmarks.Clear();
 
@@ -113,7 +113,7 @@ nExplorerApp::~nExplorerApp()
 /**
 */
 bool
-nExplorerApp::Open()
+nSummonerApp::Open()
 {
     // before assigning the working copy, some things could be inferred from
     // the -view parameter if it is a .n2 file (a level or a class)
@@ -221,7 +221,7 @@ nExplorerApp::Open()
     n_verify( nDebugServer::Instance()->CreateDebugModule("nscenedebugmodule", "scene") );
 
     // create application states
-    this->CreateState("nexplorerstate", "editor");
+    this->CreateState("nsummonerstate", "editor");
     this->CreateState("nassetloadstate", "loader");
 
     // if state need to be created in the begin, use FindState to force creation
@@ -272,7 +272,7 @@ nExplorerApp::Open()
 /**
 */
 void
-nExplorerApp::Close()
+nSummonerApp::Close()
 {
     // Close OutGUI first if it's opened
     //this->CloseOutGUI(true);
@@ -340,10 +340,21 @@ nExplorerApp::Close()
 
 //------------------------------------------------------------------------------
 /**
+    Create application-specific scene server that provides debug rendering.
+    TODO: This is a temporary solution while we implement a proper debug server.
+*/
+nSceneServer*
+nSummonerApp::CreateSceneServer()
+{
+    return (nSceneServer*) kernelServer->New("nconjurersceneserver", "/sys/servers/scene");
+}
+
+//------------------------------------------------------------------------------
+/**
     Do one complete frame.
 */
 void
-nExplorerApp::DoFrame()
+nSummonerApp::DoFrame()
 {
     // Reload resource if have changed
     this->refWatcherDirServer->Trigger();
@@ -370,7 +381,7 @@ nExplorerApp::DoFrame()
     Do one complete frame.
 */
 void
-nExplorerApp::OnRender2D()
+nSummonerApp::OnRender2D()
 {
     if (!this->captureFrame)
     {
@@ -388,7 +399,7 @@ nExplorerApp::OnRender2D()
 /**
 */
 void
-nExplorerApp::SetCurrentViewport(const char* name)
+nSummonerApp::SetCurrentViewport(const char* name)
 {
     nAppViewport* viewport = this->refViewportUI->FindViewport(name);
     if (viewport)
@@ -401,7 +412,7 @@ nExplorerApp::SetCurrentViewport(const char* name)
 /**
 */
 const char*
-nExplorerApp::GetCurrentViewport()
+nSummonerApp::GetCurrentViewport()
 {
     return this->refViewportUI->GetCurrentViewport()->GetName();
 }
@@ -411,7 +422,7 @@ nExplorerApp::GetCurrentViewport()
     Adds a viewer bookmark with the current viewport
 */
 void
-nExplorerApp::AddBookmark(const vector3& position, const polar2& angles)
+nSummonerApp::AddBookmark(const vector3& position, const polar2& angles)
 {
     // if there is a bookmark with the exact same value, clear it
     nArray<nViewerParams>::iterator iter = this->bookmarks.Find(nViewerParams(position, angles));
@@ -430,7 +441,7 @@ nExplorerApp::AddBookmark(const vector3& position, const polar2& angles)
     Sets a saved bookmark
 */
 void
-nExplorerApp::SetBookmark(int index)
+nSummonerApp::SetBookmark(int index)
 {
     if (index < 0 || index > this->bookmarks.Size())
     {
@@ -447,7 +458,7 @@ nExplorerApp::SetBookmark(int index)
     Sets a saved bookmark
 */
 int
-nExplorerApp::GetNumBookmarks()
+nSummonerApp::GetNumBookmarks()
 {
     return this->bookmarks.Size();
 }
@@ -457,7 +468,7 @@ nExplorerApp::GetNumBookmarks()
     Sets a saved bookmark
 */
 void
-nExplorerApp::SaveBookmarks(const char *filename)
+nSummonerApp::SaveBookmarks(const char *filename)
 {
     // save bookmarks for the level, if any
     if (!this->bookmarks.Empty())
@@ -489,7 +500,7 @@ nExplorerApp::SaveBookmarks(const char *filename)
     Sets a saved bookmark
 */
 void
-nExplorerApp::LoadBookmarks(const char *filename)
+nSummonerApp::LoadBookmarks(const char *filename)
 {
     // load bookmarks for the level
     this->bookmarks.Clear();
@@ -505,7 +516,7 @@ nExplorerApp::LoadBookmarks(const char *filename)
 /**
 */
 void
-nExplorerApp::CaptureScreenshot()
+nSummonerApp::CaptureScreenshot()
 {
     nString filename;
     const char* sceneFile = this->refLoaderState->GetSceneFile();
@@ -549,7 +560,7 @@ nExplorerApp::CaptureScreenshot()
     file to load.
 */
 void
-nExplorerApp::MangleSceneFileParameter()
+nSummonerApp::MangleSceneFileParameter()
 {
     if (!this->GetSceneFile())
     {
@@ -605,7 +616,7 @@ nExplorerApp::MangleSceneFileParameter()
     Set the "wc" assign for use from conjurer
 */
 bool
-nExplorerApp::InitWorkingCopyAssign()
+nSummonerApp::InitWorkingCopyAssign()
 {
     nFileServer2 *fileServer = kernelServer->GetFileServer();
     nArray<nString> wcPaths;
@@ -665,7 +676,7 @@ nExplorerApp::InitWorkingCopyAssign()
     Set the window title
 */
 void
-nExplorerApp::SetWindowTitle( const char* title )
+nSummonerApp::SetWindowTitle( const char* title )
 {
     nGfxServer2::Instance()->SetWindowTitle( title );
 }
@@ -675,7 +686,7 @@ nExplorerApp::SetWindowTitle( const char* title )
     Calculate the window title
 */
 nString
-nExplorerApp::CalcTitleString( const char* prefix )
+nSummonerApp::CalcTitleString( const char* prefix )
 {
     nString level( this->GetLevelFile() );
     level = level.ExtractFileName();
@@ -699,7 +710,7 @@ nExplorerApp::CalcTitleString( const char* prefix )
     Create new level
 */
 void
-nExplorerApp::NewLevel(const char *fileName)
+nSummonerApp::NewLevel(const char *fileName)
 {
     this->refLevelManager->NewLevel(fileName);
 
@@ -714,7 +725,7 @@ nExplorerApp::NewLevel(const char *fileName)
     Load level
 */
 bool
-nExplorerApp::LoadLevel(const char *fileName)
+nSummonerApp::LoadLevel(const char *fileName)
 {
     if (this->refLevelManager->LoadLevel(fileName))
     {
@@ -734,7 +745,7 @@ nExplorerApp::LoadLevel(const char *fileName)
     Load level
 */
 void
-nExplorerApp::DeleteLevel(const char *fileName)
+nSummonerApp::DeleteLevel(const char *fileName)
 {
     this->refLevelManager->DeleteLevel(fileName);
 }
@@ -744,7 +755,7 @@ nExplorerApp::DeleteLevel(const char *fileName)
     save current level
 */
 void
-nExplorerApp::SaveLevel()
+nSummonerApp::SaveLevel()
 {
     this->refLevelManager->SaveLevel();
 }
@@ -754,7 +765,7 @@ nExplorerApp::SaveLevel()
     save current level under a different name
 */
 bool
-nExplorerApp::SaveCurrentLevelAs(const char* newLevelName)
+nSummonerApp::SaveCurrentLevelAs(const char* newLevelName)
 {
     n_assert_return2(newLevelName, false, "no name supplied");
 
@@ -766,7 +777,7 @@ nExplorerApp::SaveCurrentLevelAs(const char* newLevelName)
     set the current instance name
 */
 void 
-nExplorerApp::SetInstanceName(const char * name)
+nSummonerApp::SetInstanceName(const char * name)
 {
     if (name)
     {
@@ -783,7 +794,7 @@ nExplorerApp::SetInstanceName(const char * name)
     get instance name
 */
 const char * 
-nExplorerApp::GetInstanceName() const
+nSummonerApp::GetInstanceName() const
 {
     return this->instanceName.Get();
 }
@@ -793,7 +804,7 @@ nExplorerApp::GetInstanceName() const
     save the editor state before entering game
 */
 void 
-nExplorerApp::SaveEditorState()
+nSummonerApp::SaveEditorState()
 {
     this->saveManager = static_cast<nSaveManager *> (nKernelServer::Instance()->New("nsavemanager"));
     n_assert(this->saveManager);
@@ -831,7 +842,7 @@ nExplorerApp::SaveEditorState()
     determine if an object state must be saved or not
 */
 bool
-nExplorerApp::ShouldSaveObjectState(nEntityObject * entity) const
+nSummonerApp::ShouldSaveObjectState(nEntityObject * entity) const
 {
     static nClass * clneoutdoor = nKernelServer::Instance()->FindClass("neoutdoor");
     n_assert(clneoutdoor);
@@ -914,7 +925,7 @@ nExplorerApp::ShouldSaveObjectState(nEntityObject * entity) const
     restore the editor state after entering game
 */
 void 
-nExplorerApp::RestoreEditorState()
+nSummonerApp::RestoreEditorState()
 {
     for ( nEntityObject* entity = nEntityObjectServer::Instance()->GetFirstEntityObject(); entity; entity = nEntityObjectServer::Instance()->GetNextEntityObject() )
     {
@@ -964,7 +975,7 @@ nExplorerApp::RestoreEditorState()
 /**
 */
 void
-nExplorerApp::AddNetworkUniqueStrings()
+nSummonerApp::AddNetworkUniqueStrings()
 {
     nKernelServer * ks = nKernelServer::ks;
 

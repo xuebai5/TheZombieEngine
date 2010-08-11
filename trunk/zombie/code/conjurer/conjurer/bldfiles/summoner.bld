@@ -1,14 +1,14 @@
 #===============================================================================
-#  explorer.bld
+#  summoner.bld
 #===============================================================================
 
 #===============================================================================
 #  conjurer modules
 #===============================================================================
-beginmodule explorer
+beginmodule summoner
     setdir conjurer
     setfiles {
-        explorer
+        summoner
     }
     setheaders{ personal }
     setlibs_win32 { 
@@ -16,33 +16,33 @@ beginmodule explorer
     }
 endmodule
 
-beginmodule nexplorerapp
+beginmodule nsummonerapp
     setdir conjurer
     setfiles {
-        nexplorerapp_main
-        nexplorerapp_cmds
-        nexplorerapp_input
+        nsummonerapp_main
+        nsummonerapp_cmds
+        nsummonerapp_input
     }
     setheaders{
-        nexplorerapp
+        nsummonerapp
     }
 endmodule
 
-beginmodule nexplorerstate
+beginmodule nsummonerstate
     setdir conjurer
     setfiles {
-        nexplorerstate
+        nsummonerstate
     }
     setheaders{
-        nexplorerstate
+        nsummonerstate
     }
 endmodule
 
 #===============================================================================
 #  conjurer Targets
 #===============================================================================
-begintarget wanderer
-    annotate "Explorer app"
+begintarget summoner
+    annotate "summoner app"
     seticon conjurer.ico
     settype exe
     setwarningslevel 4
@@ -50,9 +50,9 @@ begintarget wanderer
     setstacksize 5120000
 
     setmodules {
-        explorer
-        nexplorerapp
-        nexplorerstate
+        summoner
+        nsummonerapp
+        nsummonerstate
     }
     settargetdeps {
         gpbasicactions

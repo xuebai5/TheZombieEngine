@@ -1,8 +1,8 @@
-#ifndef N_EXPLORERSTATE_H
-#define N_EXPLORERSTATE_H
+#ifndef N_SUMMONERSTATE_H
+#define N_SUMMONERSTATE_H
 //------------------------------------------------------------------------------
 /**
-    @class nExploerState
+    @class nSummonerState
     @ingroup NebulaConjurerEditor
 
     (C) 2010 The Zombie Team
@@ -10,13 +10,13 @@
 #include "conjurer/neditorstate.h"
 
 //------------------------------------------------------------------------------
-class nExplorerState : public nEditorState
+class nSummonerState : public nEditorState
 {
 public:
     /// constructor
-    nExplorerState();
+    nSummonerState();
     /// destructor
-    virtual ~nExplorerState();
+    virtual ~nSummonerState();
 
 protected:
     /// handle input
