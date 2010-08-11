@@ -60,7 +60,7 @@ main(int argc, const char** argv)
     // initialize Nebula runtime
     nKernelServer* kernel = n_new( nKernelServer );
     #ifdef __WIN32__
-        nWin32LogHandler logHandler("snakes");
+        nWin32LogHandler logHandler("demoapp");
         kernel->SetLogHandler(&logHandler);
     #endif
     kernel->AddPackage(nnebula);
@@ -69,7 +69,7 @@ main(int argc, const char** argv)
     kernel->AddPackage(nlua);
 
     // initialize a display mode object
-    nString title("Snakes");
+    nString title("Zombie Demo");
     nDisplayMode2 displayMode;
     displayMode.SetIcon("NebulaIcon");
     displayMode.SetDialogBoxMode(true);

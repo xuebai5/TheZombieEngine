@@ -19,7 +19,7 @@ beginmodule demoapp
 endmodule
 
 #===============================================================================
-#  renaissance Targets
+#  Demos Targets
 #===============================================================================
 begintarget demo
     annotate "Demos app"
@@ -44,7 +44,7 @@ begintarget demo
 endtarget
 
 #===============================================================================
-#  renaissance Workspaces
+#  Demos Workspaces
 #===============================================================================
 beginworkspace demos
     setbinarydir ./bin/

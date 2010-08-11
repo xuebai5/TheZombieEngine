@@ -61,7 +61,7 @@ DemoApp::LoadResource( nResource* pResource, const nString& strFilename )
 int
 DemoApp::BeginDraw(nShader2 *pShader, nMesh2 *pMesh)
 {
-    //draw snakes
+    //setup shader
     nGfxServer2::Instance()->SetShader( pShader );
     int nPasses = pShader->Begin( false );
 
