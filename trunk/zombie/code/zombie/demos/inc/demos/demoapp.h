@@ -27,7 +27,7 @@ public:
 
     virtual void Render();
 
-private:
+protected:
 
     bool LoadResource( nResource* pResource, const nString& strFilename );
 
