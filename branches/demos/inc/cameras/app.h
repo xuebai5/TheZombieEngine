@@ -30,6 +30,7 @@ public:
     {
         FreeCam = 0,
         LookAt,
+        FirstPerson,
 
         Max_CameraModes,
     };
