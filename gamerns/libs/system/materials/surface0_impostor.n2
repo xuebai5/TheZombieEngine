@@ -1,9 +1,0 @@
--- -----------------------------------------------------------
--- $parser:nluaserver$ $class:nmaterialnode$
--- -----------------------------------------------------------
-nthis:settexture([[diffMap]], [[wc:libs/system/textures/impostor.dds]])
-nthis:setint([[isSkinned]], 2)
-nthis:setvector([[MatDiffuse]], 1.0, 1.0, 1.0, 1.0)
-nthis:setdependency([[wc:libs/system/materials/mat0_impostor.n2]], [[/sys/servers/dependency/nmaterialdependencyserver]], [[setmaterial]]) 
--- -----------------------------------------------------------
--- Eof

@@ -1,9 +1,0 @@
--- -----------------------------------------------------------
--- $parser:nluaserver$ $class:beginnewobjectentityclass(nescene,Stdocean)$
--- -----------------------------------------------------------
-nthis:setresourcefile([[wc:libs/system/objects/ocean.n2]])
-nthis:clearragdollresources()
-nthis:setinstanceenabled(false)
-nthis:setmaxmateriallevel(0)
--- -----------------------------------------------------------
--- Eof

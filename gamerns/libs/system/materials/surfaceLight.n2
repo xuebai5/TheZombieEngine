@@ -1,8 +1,0 @@
--- -----------------------------------------------------------
--- $parser:nluaserver$ $class:nsurfacenode$
--- -----------------------------------------------------------
-nthis:settexture([[diffMap]], [[wc:libs/system/textures/lightbulb.tga]])
-nthis:setfloat([[Scale]], 0.300000)
-nthis:setshader([[edit]], [[shaders:sfx_edit_billboard.fx]])
--- -----------------------------------------------------------
--- Eof

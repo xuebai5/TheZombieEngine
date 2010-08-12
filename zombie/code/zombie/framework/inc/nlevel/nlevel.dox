@@ -1,8 +1,0 @@
-/**
-    @defgroup NebulaLevelSystem Level Subsystem
-    @ingroup Framework
-    @brief A wrapper class for the set of data that makes up a game level.
-    
-    Every type of level (derived class) manages a different set of level data
-    and has a different behavior from the game perspective.
-*/

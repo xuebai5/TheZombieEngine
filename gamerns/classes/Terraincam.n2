@@ -1,9 +1,0 @@
--- -----------------------------------------------------------
--- $parser:nluaserver$ $class:beginnewobjectentityclass(neviewport,Terraincam)$
--- -----------------------------------------------------------
-nthis:setresourcefile([[wc:libs/system/cameras/terraincam.n2]])
-nthis:clearragdollresources()
-nthis:setinstanceenabled(false)
-nthis:setmaxmateriallevel(0)
--- -----------------------------------------------------------
--- Eof

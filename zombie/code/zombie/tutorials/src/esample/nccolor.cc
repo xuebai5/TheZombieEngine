@@ -1,1 +1,0 @@
-#include "esample/nccolor.h"

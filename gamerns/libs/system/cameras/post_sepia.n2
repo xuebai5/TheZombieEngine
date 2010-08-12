@@ -1,9 +1,0 @@
--- -----------------------------------------------------------
--- $parser:nluaserver$ $class:ntransformnode$
--- -----------------------------------------------------------
-nthis:beginnewobject([[nviewportnode]], [[viewport]])
-  nthis:setrenderpathfilename([[home:data/shaders/sepiacam_renderpath.xml]])
-  nthis:setoverride(true)
-nthis:endobject()
--- -----------------------------------------------------------
--- Eof

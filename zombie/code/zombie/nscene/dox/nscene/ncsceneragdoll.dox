@@ -1,9 +1,0 @@
-
-//---------------------------------------------------------------------------------
-/**
-    @component Graphics
-    @cppclass ncSceneRagdoll
-    @superclass ncScene
-    @classinfo
-      Graphic ragdoll object.
-*/

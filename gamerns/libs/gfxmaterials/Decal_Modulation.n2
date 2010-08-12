@@ -1,9 +1,0 @@
--- -----------------------------------------------------------
--- $parser:nluaserver$ $class:nmaterial$
--- -----------------------------------------------------------
-nthis:addparam([[hasalpha]], [[true]])
-nthis:addparam([[map]], [[colormap]])
-nthis:addparam([[pro]], [[depthbias]])
-nthis:addparam([[pro]], [[decalmodulation]])
--- -----------------------------------------------------------
--- Eof

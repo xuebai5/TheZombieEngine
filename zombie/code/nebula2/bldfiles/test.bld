@@ -1,9 +1,0 @@
-#-------------------------------------------------------------------------------
-#  Modules used for testing
-#
-#-------------------------------------------------------------------------------
-beginmodule ntestcmdprotocpp
-    setdir "../test/ntestcmdprotocpp"
-    setfiles { ntestcmdprotocpp_cmds ntestcmdprotocpp_main }
-    setheaders { ntestcmdprotocpp }
-endmodule
