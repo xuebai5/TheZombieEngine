@@ -83,6 +83,8 @@ void CamerasApp::Tick( float fTimeElapsed )
     if (inputServer->GetButton("reset"))
     {
         this->cameraMode = (CameraMode)((this->cameraMode + 1) % Max_CameraModes);
+
+        //hide the cursor in first person camera
         if (this->cameraMode == FirstPerson)
         {
             gfxServer->SetCursorVisibility( nGfxServer2::None );
@@ -90,6 +92,12 @@ void CamerasApp::Tick( float fTimeElapsed )
         else
         {
             gfxServer->SetCursorVisibility( nGfxServer2::System );
+        }
+
+        //initialize the offset to its current value
+        if (this->cameraMode == ThirdPerson)
+        {
+            this->vecFrom = this->vecEye - this->vecAt;
         }
     }
 
@@ -103,6 +111,7 @@ void CamerasApp::Tick( float fTimeElapsed )
     {
     case FreeCam:
     case FirstPerson:
+    case ThirdPerson:
         //camera look around
         if (cameraMode == FirstPerson || inputServer->GetButton("left_pressed"))
         {
@@ -161,6 +170,23 @@ void CamerasApp::Tick( float fTimeElapsed )
 
         break;
 
+    case ThirdPerson:
+        mat.rotate_x( this->vecRot.x );
+        mat.rotate_y( this->vecRot.y );
+        mat.translate( this->vecAt );
+
+        this->vecAt = mat * vecMove;
+        this->vecAt.y = 0.f;
+
+        mat.ident();
+        mat.rotate_x( this->vecRot.x );
+        mat.rotate_y( this->vecRot.y );
+
+        this->vecEye = mat * this->vecFrom;
+        this->vecEye += this->vecAt;
+        
+        break;
+
     case LookAt:
         mat.ident();
         mat.translate( this->vecEye );
@@ -182,6 +208,7 @@ void CamerasApp::Render()
     switch (this->cameraMode)
     {
     case LookAt:
+    case ThirdPerson:
         this->matView.ident();
         this->matView.translate( this->vecEye );
         this->matView.lookatRh( this->vecAt, this->vecUp );
@@ -189,7 +216,6 @@ void CamerasApp::Render()
         break;
 
     case FreeCam:
-    default:
         this->matView.ident();
         this->matView.rotate_x( this->vecRot.x );//pitch
         this->matView.rotate_y( this->vecRot.y );//yaw
@@ -209,6 +235,7 @@ void CamerasApp::Render()
     this->refShader->SetTexture( nShaderState::diffMap, this->refTexture );
     vector3 vecScale( 1.f, 1.f, 1.f );
     vector3 vecPosition( 0.f, 1.f, 0.f );
+    vecPosition += this->vecAt; //for third person camera
     this->Draw( vecPosition, vecScale );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
@@ -234,12 +261,18 @@ void CamerasApp::Render()
 
     switch (this->cameraMode)
     {
+    case FreeCam:
+        str = "Free Camera";
+        break;
+    case FirstPerson:
+        str = "First Person Camera";
+        break;
+    case ThirdPerson:
+        str = "Third Person Camera";
+        break;
     case LookAt:
         str = "Look-at Camera";
         break;
-    case FreeCam:
-    default:
-        str = "Free Camera";
     }
     gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );
 }
