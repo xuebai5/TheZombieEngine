@@ -75,12 +75,23 @@ void CamerasApp::Close()
 void CamerasApp::Tick( float fTimeElapsed )
 {
     nInputServer* inputServer = nInputServer::Instance();
+    nGfxServer2* gfxServer = nGfxServer2::Instance();
 
     if (inputServer->GetButton("wireframe"))
         this->bWireframe = !this->bWireframe;
 
     if (inputServer->GetButton("reset"))
+    {
         this->cameraMode = (CameraMode)((this->cameraMode + 1) % Max_CameraModes);
+        if (this->cameraMode == FirstPerson)
+        {
+            gfxServer->SetCursorVisibility( nGfxServer2::None );
+        }
+        else
+        {
+            gfxServer->SetCursorVisibility( nGfxServer2::System );
+        }
+    }
 
     float mouse_x = (inputServer->GetSlider("slider_left") - inputServer->GetSlider("slider_right"));
     float mouse_y = (inputServer->GetSlider("slider_up") - inputServer->GetSlider("slider_down"));
@@ -91,8 +102,9 @@ void CamerasApp::Tick( float fTimeElapsed )
     switch (cameraMode)
     {
     case FreeCam:
+    case FirstPerson:
         //camera look around
-        if (inputServer->GetButton("left_pressed"))
+        if (cameraMode == FirstPerson || inputServer->GetButton("left_pressed"))
         {
             this->vecRot.y += mouse_x * angleSpace;
             this->vecRot.x += mouse_y * angleSpace;
@@ -131,6 +143,8 @@ void CamerasApp::Tick( float fTimeElapsed )
     switch (cameraMode)
     {
     case FreeCam:
+    case FirstPerson:
+
         //update camera position
         mat.rotate_x( this->vecRot.x );
         mat.rotate_y( this->vecRot.y );
