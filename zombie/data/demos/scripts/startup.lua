@@ -47,12 +47,28 @@ function OnMapInput()
     input = lookup('/sys/servers/input')
     
     input:beginmap()
+    
+    input:map('mouse0:btn1.pressed', 'left_pressed')
+    
+    input:map('relmouse0:-x', 'slider_left')
+    input:map('relmouse0:+x', 'slider_right')
+    input:map('relmouse0:-y', 'slider_up')
+    input:map('relmouse0:+y', 'slider_down')
+
+    input:map('keyb0:w.pressed', 'forward')
+    input:map('keyb0:s.pressed', 'backward')
+    input:map('keyb0:a.pressed', 'strafe_left')
+    input:map('keyb0:d.pressed', 'strafe_right')
+    
     input:map( 'keyb0:esc.pressed', 'menu' )
     input:map( 'keyb0:left.pressed', 'left' )
     input:map( 'keyb0:right.pressed', 'right' )
     input:map( 'keyb0:up.pressed', 'up' )
     input:map( 'keyb0:down.pressed', 'down' )
-    input:map( 'keyb0:space.pressed', 'reset' )
+    
+    input:map( 'keyb0:0.down', 'wireframe' )
+    
+    input:map( 'keyb0:space.down', 'reset' )
     input:endmap()
     popcwd()
 
