@@ -53,8 +53,14 @@ technique tColorStatic
 {
     pass p0
     {
+        ColorWriteEnable = RED|GREEN|BLUE|ALPHA;
+        ZWriteEnable    = True;
+        ZEnable         = True;
+        ZFunc           = LessEqual;
+        
         FillMode        = <FillMode>;
         CullMode        = None;
+        
         VertexShader    = compile vs_1_1 vsMain(GEOMETRY_DEFAULT);
         PixelShader     = compile ps_1_1 psMain();
     }
