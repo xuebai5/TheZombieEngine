@@ -19,7 +19,7 @@ void CamerasApp::Init()
 
     this->cameraMode = FreeCam;
 
-    this->vecEye.set(0,2,10);
+    this->vecEye.set(0,5,10);
 
     //FreeCam
     //Pitch: X-rot, Yaw: Y-rot, Roll: Z-rot
@@ -97,6 +97,8 @@ void CamerasApp::Tick( float fTimeElapsed )
         //initialize the offset to its current value
         if (this->cameraMode == ThirdPerson)
         {
+            //FIXME- initialize the rotation and offset vector from the current offset
+            this->vecRot.set(0,0,0);
             this->vecFrom = this->vecEye - this->vecAt;
         }
     }
@@ -178,12 +180,7 @@ void CamerasApp::Tick( float fTimeElapsed )
         this->vecAt = mat * vecMove;
         this->vecAt.y = 0.f;
 
-        mat.ident();
-        mat.rotate_x( this->vecRot.x );
-        mat.rotate_y( this->vecRot.y );
-
-        this->vecEye = mat * this->vecFrom;
-        this->vecEye += this->vecAt;
+        this->vecEye = this->vecAt + this->vecFrom;
         
         break;
 
@@ -216,6 +213,7 @@ void CamerasApp::Render()
         break;
 
     case FreeCam:
+    case FirstPerson:
         this->matView.ident();
         this->matView.rotate_x( this->vecRot.x );//pitch
         this->matView.rotate_y( this->vecRot.y );//yaw
@@ -256,8 +254,30 @@ void CamerasApp::Render()
     str.Format("Position: (x=%.2f,y=%.2f,z=%.2f)", vecEye.x, vecEye.y, vecEye.z);
     gfxServer->Text(str.Get(), vector4(1.f,0,0,1), -1.f, textY );
     textY += rowheight;
-    str.Format("Rotation: (pitch=%.2f,yaw=%.2f,roll=%.2f)", vecRot.x, vecRot.y, vecRot.z);
-    gfxServer->Text(str.Get(), vector4(1.f,0,0,1), -1.f, textY );
+    switch (this->cameraMode)
+    {
+    case FreeCam:
+    case FirstPerson:
+    case ThirdPerson:
+        str.Format("Rotation: (pitch=%.2f,yaw=%.2f,roll=%.2f)", vecRot.x, vecRot.y, vecRot.z);
+        gfxServer->Text(str.Get(), vector4(1.f,0,0,1), -1.f, textY );
+        textY += rowheight;
+        break;
+
+    }
+
+    switch (this->cameraMode)
+    {
+    case ThirdPerson:
+    case LookAt:
+        str.Format("LookAt: (x=%.2f,y=%.2f,z=%.2f)", vecAt.x, vecAt.y, vecAt.z);
+        gfxServer->Text(str.Get(), vector4(1.f,0,0,1), -1.f, textY );
+        textY += rowheight;
+        str.Format("LookUp: (x=%.2f,y=%.2f,z=%.2f)", vecUp.x, vecUp.y, vecUp.z);
+        gfxServer->Text(str.Get(), vector4(1.f,0,0,1), -1.f, textY );
+        textY += rowheight;
+        break;
+    }
 
     switch (this->cameraMode)
     {
@@ -274,5 +294,6 @@ void CamerasApp::Render()
         str = "Look-at Camera";
         break;
     }
+
     gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );
 }
