@@ -29,8 +29,9 @@ public:
     enum CameraMode
     {
         FreeCam = 0,
-        LookAt,
         FirstPerson,
+        ThirdPerson,
+        LookAt,
 
         Max_CameraModes,
     };
@@ -46,6 +47,8 @@ private:
 
     vector3 vecAt; //look-at target
     vector3 vecUp; //up vector
+
+    vector3 vecFrom; //third person offset
 
     matrix44 matView;
 
