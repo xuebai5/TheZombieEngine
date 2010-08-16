@@ -1,4 +1,4 @@
-#include "cameras/app.h"
+#include "cameras/camerasapp.h"
 
 #include "kernel/nfileserver2.h"
 #include "kernel/ntimeserver.h"
@@ -19,7 +19,7 @@ void CamerasApp::Init()
 
     this->cameraMode = FreeCam;
 
-    this->vecEye.set(0,5,10);
+    this->vecEye.set(0,5,10);  
 
     //FreeCam
     //Pitch: X-rot, Yaw: Y-rot, Roll: Z-rot
@@ -67,6 +67,7 @@ void CamerasApp::Close()
     this->refMesh->Release();
     this->refFloorMesh->Release();
     this->refTexture->Release();
+    this->refFloorTexture->Release();
     this->refShader->Release();
 }
 

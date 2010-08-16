@@ -6,8 +6,9 @@
 //------------------------------------------------------------------------------
 #include "kernel/nkernelserver.h"
 #include "demos/demoapp.h"
-#include "cameras/app.h"
-//#include "snakes/snakesapp.h"
+#include "snakes/snakesapp.h"
+#include "cameras/camerasapp.h"
+#include "transform/transformapp.h"
 
 #ifdef __WIN32__
 #include "kernel/nwin32loghandler.h"
@@ -51,6 +52,7 @@ main(int argc, const char** argv)
 	const char* scriptserverArg = args.GetStringArg("-scriptserver", "nluaserver");
 	const char* projDirArg = args.GetStringArg("-proj", "home:data/demos");
 	const char* startupArg = args.GetStringArg("-startup", "proj:scripts/startup.lua");
+    const char* appArg = args.GetStringArg("-app", "transform");
 
     bool fullscreenArg	= args.GetBoolArg("-fullscreen");
     bool alwaysOnTopArg = args.GetBoolArg("-alwaysontop");
@@ -108,8 +110,16 @@ main(int argc, const char** argv)
 		pScriptServer->RunFunction("OnGraphicsStartup", scriptResult);
 	}
 
-    CamerasApp app;
+    DemoApp* app(0);
+    if (!strcmp( appArg, "snakes" ))
+        app = n_new(SnakesApp);
+    else if (!strcmp( appArg, "cameras" ))
+        app = n_new(CamerasApp);
+    else if (!strcmp( appArg, "transform" ))
+        app = n_new(TransformApp);
     //SnakesApp app;
+    else
+        app = n_new(DemoApp);
 
     pGfxServer->SetDisplayMode(displayMode);
     nCamera2 camera(n_deg2rad(60), float(displayMode.GetHeight())/float(displayMode.GetWidth()),1.f,100.f);
@@ -128,9 +138,9 @@ main(int argc, const char** argv)
     //maybe even for initializing other modules?
 
     //call game loop
-	app.Init();
+	app->Init();
 
-    if ( app.Open() )
+    if ( app->Open() )
     {
         // run the render loop
         bool running = true;
@@ -155,13 +165,13 @@ main(int argc, const char** argv)
             
             //TODO- toggle console
 
-            app.Tick( frameTime );
+            app->Tick( frameTime );
 
             if ( pGfxServer->BeginFrame() )
             {
                 if ( pGfxServer->BeginScene() )
                 {
-                    app.Render();
+                    app->Render();
                     pGfxServer->DrawTextBuffer();
                     pGfxServer->EndScene();
                     pGfxServer->PresentScene();
@@ -176,11 +186,13 @@ main(int argc, const char** argv)
             n_sleep(0.0);
         }
 
-        app.Close();
+        app->Close();
     }
 
     //shutdown systems
 	pGfxServer->CloseDisplay();
+
+    n_delete(app);
 
 Exit:
 	//
