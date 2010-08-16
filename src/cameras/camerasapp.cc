@@ -116,7 +116,7 @@ void CamerasApp::Tick( float fTimeElapsed )
     case FirstPerson:
     case ThirdPerson:
         //camera look around
-        if (cameraMode == FirstPerson || inputServer->GetButton("left_pressed"))
+        if (cameraMode == FirstPerson || inputServer->GetButton("right_pressed"))
         {
             this->vecRot.y += mouse_x * angleSpace;
             this->vecRot.x += mouse_y * angleSpace;
@@ -144,7 +144,7 @@ void CamerasApp::Tick( float fTimeElapsed )
 
     if (cameraMode == LookAt)
     {
-        if (inputServer->GetButton("left_pressed"))
+        if (inputServer->GetButton("right_pressed"))
         {
             vecMove.x += mouse_x * moveSpace * 20.f;
             vecMove.y -= mouse_y * moveSpace * 20.f;
