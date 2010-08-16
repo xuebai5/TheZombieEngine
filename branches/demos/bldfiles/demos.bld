@@ -31,7 +31,9 @@ begintarget demo
            
     setmodules {
         demoapp
+        snakesapp
         camerasapp
+        transformapp
     }
     settargetdeps {
         nkernel

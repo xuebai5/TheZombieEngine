@@ -1,16 +1,16 @@
 #===============================================================================
-#  Demos.bld
+#  tranform.bld
 #===============================================================================
 
 #===============================================================================
-#  Camera modules
+#  Transform modules
 #===============================================================================
-beginmodule camerasapp
-    setdir cameras
+beginmodule transformapp
+    setdir transform
     setfiles {
-        camerasapp
+        transformapp
     }
     setheaders{
-        camerasapp
+        transformapp
     }
 endmodule
