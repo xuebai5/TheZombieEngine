@@ -48,7 +48,8 @@ function OnMapInput()
     
     input:beginmap()
     
-    input:map('mouse0:btn1.pressed', 'left_pressed')
+    input:map('mouse0:btn0.pressed', 'left_pressed')
+    input:map('mouse0:btn1.pressed', 'right_pressed')
     
     input:map('relmouse0:-x', 'slider_left')
     input:map('relmouse0:+x', 'slider_right')
