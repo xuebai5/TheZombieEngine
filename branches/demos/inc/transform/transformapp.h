@@ -4,6 +4,7 @@
 #include "kernel/nref.h"
 #include "util/narray.h"
 #include "mathlib/matrix.h"
+#include "mathlib/bbox.h"
 
 #include "demos/demoapp.h"
 
@@ -28,12 +29,26 @@ public:
 
 private:
 
+    enum TransformMode
+    {
+        Translate = 0,
+        Rotate,
+        Scale,
+
+        Max_TransformModes
+    };
+
     bool bWireframe;
+
+    int transformMode;
 
     vector3 vecEye;//eye position
     vector3 vecRot;//euler rotation
 
     matrix44 matView;
+
+    bbox3 bbox;
+    vector3 vecPosition;
 
     nRef<nMesh2> refMesh;
     nRef<nMesh2> refFloorMesh;

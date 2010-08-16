@@ -6,6 +6,7 @@
 #include "gfx2/ngfxserver2.h"
 #include "gfx2/nmesh2.h"
 #include "gfx2/nshader2.h"
+#include "gfx2/nmeshgroup.h"
 #include "util/nrandomlogic.h"
 
 //------------------------------------------------------------------------------
@@ -17,7 +18,11 @@ void TransformApp::Init()
 {
     this->bWireframe = false;
 
+    this->transformMode = Translate;
+
     this->vecEye.set(0,5,10);
+
+    this->vecPosition.set( 0.f, 1.f, 0.f );
 
     //FreeCam
     //Pitch: X-rot, Yaw: Y-rot, Roll: Z-rot
@@ -51,6 +56,9 @@ bool TransformApp::Open()
     if (!this->LoadResource(this->refShader, "proj:shaders/color.fx"))
         return false;
 
+    nMeshGroup& group = this->refMesh->Group(0);
+    this->bbox = group.GetBoundingBox();
+
     return true;
 }
 
@@ -71,6 +79,10 @@ void TransformApp::Tick( float fTimeElapsed )
 {
     nInputServer* inputServer = nInputServer::Instance();
 
+    if (inputServer->GetButton("reset"))
+        this->transformMode = ((int)this->transformMode + 1) % Max_TransformModes;
+
+/// --- copied from camerasapp ---
     if (inputServer->GetButton("wireframe"))
         this->bWireframe = !this->bWireframe;
 
@@ -81,7 +93,7 @@ void TransformApp::Tick( float fTimeElapsed )
     float moveSpace = 10.f * fTimeElapsed;//=cameraSpeed
 
     //camera look around
-    if (inputServer->GetButton("left_pressed"))
+    if (inputServer->GetButton("right_pressed"))
     {
         this->vecRot.y += mouse_x * angleSpace;
         this->vecRot.x += mouse_y * angleSpace;
@@ -120,6 +132,28 @@ void TransformApp::Tick( float fTimeElapsed )
     //matMove.translate(vecMove);//the transform for the movement
     //matMove = matMove * mat;
     //this->vecEye = matMove.pos_component();
+
+/// --- copied from camerasapp ---
+
+    //left click on the object to transform
+    //1- transform the click (x,y) into a line in 3D
+    //2- does the line go through the bounding box of the object
+    //3- if so, select it, otherwise don't.
+
+    //Once the object is selected
+    //translate:
+    //left-click + up/down, left/right: translate along the view plane
+    //camera look around
+    if (inputServer->GetButton("left_pressed"))
+    {
+        //mouse_x, mouse_y contain the distance for the mouse *in clip space*
+        //we need to convert these to the scale of the object
+        this->vecPosition.y += mouse_y; //up/down: translate on Y
+        vector3 x_axis = mat.x_component();
+        x_axis *= -1.f;
+        x_axis.y = 0.f;
+        this->vecPosition += x_axis * mouse_x;
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -146,10 +180,36 @@ void TransformApp::Render()
     this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
     this->refShader->SetTexture( nShaderState::diffMap, this->refTexture );
     vector3 vecScale( 1.f, 1.f, 1.f );
-    vector3 vecPosition( 0.f, 1.f, 0.f );
-    this->Draw( vecPosition, vecScale );
+    this->Draw( this->vecPosition, vecScale );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
+
+    //draw the object bounding box using 3d lines
+    static nArray<vector3> vertices;
+    vertices.Reset();
+    vertices.Append( this->bbox.corner_point(0) );
+    vertices.Append( this->bbox.corner_point(1) );
+    vertices.Append( this->bbox.corner_point(2) );
+    vertices.Append( this->bbox.corner_point(3) );
+    vertices.Append( this->bbox.corner_point(0) );
+
+    vertices.Append( this->bbox.corner_point(6) );
+    vertices.Append( this->bbox.corner_point(7) );
+    vertices.Append( this->bbox.corner_point(4) );
+    vertices.Append( this->bbox.corner_point(5) );
+    vertices.Append( this->bbox.corner_point(6) );
+
+    //5,1,2,4,7,3
+    vertices.Append( this->bbox.corner_point(5) );
+    vertices.Append( this->bbox.corner_point(1) );
+    vertices.Append( this->bbox.corner_point(2) );
+    vertices.Append( this->bbox.corner_point(4) );
+    vertices.Append( this->bbox.corner_point(7) );
+    vertices.Append( this->bbox.corner_point(3) );
+
+    gfxServer->BeginLines();
+    gfxServer->DrawLines3d( vertices.Begin(), vertices.Size(), vector4(1.f,0.f,0.f,1.f) );
+    gfxServer->EndLines();
 
     //draw the floor
     this->BeginDraw( this->refShader, this->refFloorMesh );
