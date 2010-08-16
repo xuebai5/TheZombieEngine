@@ -90,9 +90,17 @@ DemoApp::Draw( const vector3& vPosition, const vector3& vScale )
     matrix44 matWorld;
     matWorld.scale( vScale );
     matWorld.translate( vPosition );
-    nGfxServer2* pGfxServer( nGfxServer2::Instance() );
-    pGfxServer->SetTransform( nGfxServer2::Model, matWorld );
-    pGfxServer->DrawIndexedNS( nGfxServer2::TriangleList );
+    this->Draw( matWorld );
+}
+
+//------------------------------------------------------------------------------
+
+void
+DemoApp::Draw( const matrix44& matWorld )
+{
+    nGfxServer2* gfxServer( nGfxServer2::Instance() );
+    gfxServer->SetTransform( nGfxServer2::Model, matWorld );
+    gfxServer->DrawIndexedNS( nGfxServer2::TriangleList );
 }
 
 //------------------------------------------------------------------------------

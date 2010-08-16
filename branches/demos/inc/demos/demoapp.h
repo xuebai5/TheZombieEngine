@@ -8,6 +8,7 @@
 */
 
 #include "util/nstring.h"
+#include "mathlib/matrix.h"
 //------------------------------------------------------------------------------
 
 class nMesh2;
@@ -35,6 +36,7 @@ protected:
     int BeginDraw( nShader2* pShader, nMesh2* pMesh );
     void BeginPass( nShader2* pShader, int passIndex );
     void Draw( const vector3& vPosition, const vector3& vScale );
+    void Draw( const matrix44& matWorld );
     void EndPass( nShader2* );
     void EndDraw( nShader2* );
 };

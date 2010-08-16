@@ -46,9 +46,12 @@ private:
     vector3 vecRot;//euler rotation
 
     matrix44 matView;
+    matrix44 matWorld;
 
     bbox3 bbox;
     vector3 vecPosition;
+    vector3 vecRotation;
+    vector3 vecScale;
 
     nRef<nMesh2> refMesh;
     nRef<nMesh2> refFloorMesh;

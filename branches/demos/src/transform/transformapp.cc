@@ -23,6 +23,8 @@ void TransformApp::Init()
     this->vecEye.set(0,5,10);
 
     this->vecPosition.set( 0.f, 1.f, 0.f );
+    this->vecRotation.set( 0.f, 0.f, 0.f );
+    this->vecScale.set( 1.f, 1.f, 1.f );
 
     //FreeCam
     //Pitch: X-rot, Yaw: Y-rot, Roll: Z-rot
@@ -146,13 +148,29 @@ void TransformApp::Tick( float fTimeElapsed )
     //camera look around
     if (inputServer->GetButton("left_pressed"))
     {
-        //mouse_x, mouse_y contain the distance for the mouse *in clip space*
-        //we need to convert these to the scale of the object
-        this->vecPosition.y += mouse_y; //up/down: translate on Y
-        vector3 x_axis = mat.x_component();
-        x_axis *= -1.f;
-        x_axis.y = 0.f;
-        this->vecPosition += x_axis * mouse_x;
+        switch (this->transformMode)
+        {
+        case Translate:
+            {
+                //mouse_x, mouse_y contain the distance for the mouse *in clip space*
+                //we need to convert these to the scale of the object
+                this->vecPosition.y += mouse_y; //up/down: translate on Y
+                vector3 x_axis = mat.x_component();
+                x_axis *= -1.f;
+                x_axis.y = 0.f;
+                this->vecPosition += x_axis * mouse_x;
+            }
+            break;
+
+        case Rotate:
+            this->vecRotation.y += mouse_x * n_deg2rad(30) * -1.f;
+            //TODO- x,z rotation
+            break;
+
+        case Scale:
+            this->vecScale += vector3( 1.f,1.f,1.f ) * mouse_y * .5f;//scale factor
+            break;
+        }
     }
 }
 
@@ -175,12 +193,18 @@ void TransformApp::Render()
     gfxServer->SetCamera( cam );
 
     //draw the torus
+    this->matWorld.ident();
+    this->matWorld.scale( this->vecScale );
+    this->matWorld.rotate_x( this->vecRotation.x );
+    this->matWorld.rotate_y( this->vecRotation.y );
+    this->matWorld.rotate_z( this->vecRotation.z );
+    this->matWorld.translate( this->vecPosition );//pitch
+
     this->BeginDraw( this->refShader, this->refMesh );
     this->BeginPass( this->refShader, 0 );
     this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
     this->refShader->SetTexture( nShaderState::diffMap, this->refTexture );
-    vector3 vecScale( 1.f, 1.f, 1.f );
-    this->Draw( this->vecPosition, vecScale );
+    this->Draw( matWorld );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
 
@@ -219,4 +243,23 @@ void TransformApp::Render()
     this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
+
+    //draw text
+    float rowheight = 32.f / gfxServer->GetDisplayMode().GetHeight();
+    nString str;
+
+    switch (this->transformMode)
+    {
+    case Translate:
+        str = "Translate";
+        break;
+    case Rotate:
+        str = "Rotate";
+        break;
+    case Scale:
+        str = "Scale";
+        break;
+    }
+
+    gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );
 }
