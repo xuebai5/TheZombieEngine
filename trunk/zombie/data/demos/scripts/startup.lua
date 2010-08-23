@@ -70,6 +70,9 @@ function OnMapInput()
     input:map( 'keyb0:0.down', 'wireframe' )
     
     input:map( 'keyb0:space.down', 'reset' )
+    input:map( 'keyb0:t.down', 'toggle' )
+    input:map( 'keyb0:l.down', 'light' )
+
     input:endmap()
     popcwd()
 
