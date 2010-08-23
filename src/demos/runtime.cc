@@ -9,6 +9,7 @@
 #include "snakes/snakesapp.h"
 #include "cameras/camerasapp.h"
 #include "transform/transformapp.h"
+#include "shaders/shadersapp.h"
 
 #ifdef __WIN32__
 #include "kernel/nwin32loghandler.h"
@@ -52,7 +53,7 @@ main(int argc, const char** argv)
 	const char* scriptserverArg = args.GetStringArg("-scriptserver", "nluaserver");
 	const char* projDirArg = args.GetStringArg("-proj", "home:data/demos");
 	const char* startupArg = args.GetStringArg("-startup", "proj:scripts/startup.lua");
-    const char* appArg = args.GetStringArg("-app", "transform");
+    const char* appArg = args.GetStringArg("-app", "shaders");
 
     bool fullscreenArg	= args.GetBoolArg("-fullscreen");
     bool alwaysOnTopArg = args.GetBoolArg("-alwaysontop");
@@ -117,7 +118,8 @@ main(int argc, const char** argv)
         app = n_new(CamerasApp);
     else if (!strcmp( appArg, "transform" ))
         app = n_new(TransformApp);
-    //SnakesApp app;
+    else if (!strcmp( appArg, "shaders" ))
+        app = n_new(ShadersApp);
     else
         app = n_new(DemoApp);
 
