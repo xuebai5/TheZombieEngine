@@ -1,4 +1,4 @@
-#include "transform/transformapp.h"
+#include "shaders/shadersapp.h"
 
 #include "kernel/nfileserver2.h"
 #include "kernel/ntimeserver.h"
@@ -6,7 +6,6 @@
 #include "gfx2/ngfxserver2.h"
 #include "gfx2/nmesh2.h"
 #include "gfx2/nshader2.h"
-#include "gfx2/nmeshgroup.h"
 #include "util/nrandomlogic.h"
 
 //------------------------------------------------------------------------------
@@ -14,30 +13,31 @@
     run script that loads required resources, etc.
 	and sets initial position of everything
 */
-void TransformApp::Init()
+void ShadersApp::Init()
 {
     this->bWireframe = false;
 
-    this->transformMode = Translate;
-
-    this->vecEye.set(0,5,10);
-
+    //model
     this->vecPosition.set( 0.f, 1.f, 0.f );
     this->vecRotation.set( 0.f, 0.f, 0.f );
     this->vecScale.set( 1.f, 1.f, 1.f );
 
-    //FreeCam
-    //Pitch: X-rot, Yaw: Y-rot, Roll: Z-rot
+    //camera
+    this->vecEye.set(0,5,10);
     this->vecRot.set(n_deg2rad(-30),0,0); //looking down 30 degrees
+
+    //light
+    this->vecLightPos.set( 0.f ,5.f ,-10.f );
 }
 
 //------------------------------------------------------------------------------
 /**
 */
-bool TransformApp::Open()
+bool ShadersApp::Open()
 {
     nGfxServer2* gfxServer = nGfxServer2::Instance();
 
+/// --- copied from camerasapp
     this->refMesh = gfxServer->NewMesh("torus");
     if (!this->LoadResource(this->refMesh, "proj:meshes/torus.n3d2"))
         return false;
@@ -54,35 +54,58 @@ bool TransformApp::Open()
     if (!this->LoadResource(this->refFloorTexture, "proj:textures/sidewalk.dds"))
         return false;
 
-    this->refShader = gfxServer->NewShader("color");
-    if (!this->LoadResource(this->refShader, "proj:shaders/color.fx"))
+    this->refFloorShader = gfxServer->NewShader("color");
+    if (!this->LoadResource(this->refFloorShader, "proj:shaders/color.fx"))
+        return false;
+/// --- copied from camerasapp
+    
+    this->refShader = gfxServer->NewShader("phong_bump_reflect");
+    if (!this->LoadResource(this->refShader, "proj:shaders/phong_bump_reflect.fx"))
         return false;
 
-    nMeshGroup& group = this->refMesh->Group(0);
-    this->bbox = group.GetBoundingBox();
+    this->refBumpTexture = gfxServer->NewTexture("default_bump_normal");
+    if (!this->LoadResource(this->refBumpTexture, "proj:textures/default_bump_normal.dds"))
+        return false;
+
+    this->refCubeTexture = gfxServer->NewTexture("default_reflection");
+    if (!this->LoadResource( this->refCubeTexture, "proj:textures/default_reflection.dds"))
+        return false;
+
+    //light sphere mesh and shader
+    this->refSphereMesh = gfxServer->NewMesh("sphere");
+    if (!this->LoadResource(refSphereMesh, "proj:meshes/sphere.n3d2"))
+        return false;
+
+    this->refColorShader = gfxServer->NewShader("default");
+    if (!this->LoadResource(this->refColorShader, "proj:shaders/default.fx"))
+        return false;
 
     return true;
 }
 
 //------------------------------------------------------------------------------
 
-void TransformApp::Close()
+void ShadersApp::Close()
 {
-    this->refMesh->Release();
-    this->refFloorMesh->Release();
-    this->refTexture->Release();
-    this->refFloorTexture->Release();
-    this->refShader->Release();
+    N_REF_RELEASE(this->refMesh);
+    N_REF_RELEASE(this->refTexture);
+    N_REF_RELEASE(this->refShader);
+    N_REF_RELEASE(this->refBumpTexture);
+    N_REF_RELEASE(this->refCubeTexture);    
+
+    N_REF_RELEASE(this->refFloorMesh);
+    N_REF_RELEASE(this->refFloorTexture);
+    N_REF_RELEASE(this->refFloorShader);
+
+    N_REF_RELEASE(this->refSphereMesh);
+    N_REF_RELEASE(this->refColorShader);
 }
 
 //------------------------------------------------------------------------------
 
-void TransformApp::Tick( float fTimeElapsed )
+void ShadersApp::Tick( float fTimeElapsed )
 {
     nInputServer* inputServer = nInputServer::Instance();
-
-    if (inputServer->GetButton("reset"))
-        this->transformMode = ((int)this->transformMode + 1) % Max_TransformModes;
 
 /// --- copied from camerasapp ---
     if (inputServer->GetButton("wireframe"))
@@ -130,61 +153,43 @@ void TransformApp::Tick( float fTimeElapsed )
     this->vecEye = mat * vecMove;
 
 /// --- copied from camerasapp ---
-
-    //left click on the object to transform
-    //1- transform the click (x,y) into a line in 3D
-    //2- does the line go through the bounding box of the object
-    //3- if so, select it, otherwise don't.
-
-    //Once the object is selected
-    //translate:
-    //left-click + up/down, left/right: translate along the view plane
-    //camera look around
-    if (inputServer->GetButton("left_pressed"))
-    {
-        switch (this->transformMode)
-        {
-        case Translate:
-            {
-                //mouse_x, mouse_y contain the distance for the mouse *in clip space*
-                //we need to convert these to the scale of the object
-                this->vecPosition.y += mouse_y; //up/down: translate on Y
-                vector3 x_axis = mat.x_component();
-                x_axis *= -1.f;
-                x_axis.y = 0.f;
-                this->vecPosition += x_axis * mouse_x;
-            }
-            break;
-
-        case Rotate:
-            this->vecRotation.y += mouse_x * n_deg2rad(30) * -1.f;
-            //TODO- x,z rotation
-            break;
-
-        case Scale:
-            this->vecScale += vector3( 1.f,1.f,1.f ) * mouse_y * .5f;//scale factor
-            break;
-        }
-    }
+    if (inputServer->GetButton("light"))
+        this->vecLightPos.set( this->vecEye );
 }
 
 //------------------------------------------------------------------------------
 
-void TransformApp::Render()
+void ShadersApp::Render()
 {
     nGfxServer2* gfxServer = nGfxServer2::Instance();
     gfxServer->Clear( nGfxServer2::AllBuffers, .3f, .3f, .3f, 1.f, 1.f, 0 );
 
+    //view transform
     this->matView.ident();
     this->matView.rotate_x( this->vecRot.x );//pitch
     this->matView.rotate_y( this->vecRot.y );//yaw
     this->matView.translate( this->vecEye );
+
     this->matView.invert_simple();
 
     gfxServer->SetTransform( nGfxServer2::View, this->matView );
 
     nCamera2 cam;
     gfxServer->SetCamera( cam );
+
+    //Lighting
+    //vector3 vecLightPos(0,5,-10);//(-0.5f,2.0f,1.25f
+    vector4 vecLightDiffuse(1.f, 0.f, 0.f, 1.f);
+    vector4 vecLightAmbient(.3f, .3f, .3f, 1.f);
+
+    matrix44 matLight;
+    matLight.translate( vecLightPos );
+    gfxServer->SetTransform( nGfxServer2::Light, matLight );
+
+    float fSpecular = .4f;
+    float fSpecularPower = 64.f;
+    float fBumpScale = 1.f;
+    float fReflectionScale = .5f;
 
     //draw the torus
     this->matWorld.ident();
@@ -196,64 +201,38 @@ void TransformApp::Render()
 
     this->BeginDraw( this->refShader, this->refMesh );
     this->BeginPass( this->refShader, 0 );
+    //BEGIN- shader parameters (TODO- use ShaderParams)
     this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShader->SetTexture( nShaderState::diffMap, this->refTexture );
+    this->refShader->SetVector3( nShaderState::LightPos, vecLightPos );
+    this->refShader->SetVector4( nShaderState::LightDiffuse, vecLightDiffuse );
+    this->refShader->SetVector4( nShaderState::LightAmbient, vecLightAmbient );
+    this->refShader->SetFloat( nShaderState::MatSpecular, fSpecular );
+    this->refShader->SetFloat( nShaderState::MatSpecularPower, fSpecularPower );
+    this->refShader->SetFloat( nShaderState::BumpScale, fBumpScale );
+    this->refShader->SetFloat( nShaderState::MatLevel, fReflectionScale );
+
+    this->refShader->SetTexture( nShaderState::DiffMap0, this->refTexture );
+    this->refShader->SetTexture( nShaderState::BumpMap0, this->refBumpTexture );
+    this->refShader->SetTexture( nShaderState::CubeMap0, this->refCubeTexture );
+    //END- shader parameters
     this->Draw( matWorld );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
 
-    //draw the object bounding box using 3d lines
-    static nArray<vector3> vertices;
-    vertices.Reset();
-    vertices.Append( this->bbox.corner_point(0) );
-    vertices.Append( this->bbox.corner_point(1) );
-    vertices.Append( this->bbox.corner_point(2) );
-    vertices.Append( this->bbox.corner_point(3) );
-    vertices.Append( this->bbox.corner_point(0) );
-
-    vertices.Append( this->bbox.corner_point(6) );
-    vertices.Append( this->bbox.corner_point(7) );
-    vertices.Append( this->bbox.corner_point(4) );
-    vertices.Append( this->bbox.corner_point(5) );
-    vertices.Append( this->bbox.corner_point(6) );
-
-    //5,1,2,4,7,3
-    vertices.Append( this->bbox.corner_point(5) );
-    vertices.Append( this->bbox.corner_point(1) );
-    vertices.Append( this->bbox.corner_point(2) );
-    vertices.Append( this->bbox.corner_point(4) );
-    vertices.Append( this->bbox.corner_point(7) );
-    vertices.Append( this->bbox.corner_point(3) );
-
-    gfxServer->BeginLines();
-    gfxServer->DrawLines3d( vertices.Begin(), vertices.Size(), vector4(1.f,0.f,0.f,1.f) );
-    gfxServer->EndLines();
+    //draw the light
+    this->BeginDraw( this->refColorShader, this->refSphereMesh );
+    this->BeginPass( this->refColorShader, 0 );
+    this->refColorShader->SetVector4( nShaderState::matDiffuse, vecLightDiffuse );
+    this->Draw( vecLightPos, vector3( .5f, .5f, .5f ) );
+    this->EndPass( this->refColorShader );
+    this->EndDraw( this->refColorShader );
 
     //draw the floor
-    this->BeginDraw( this->refShader, this->refFloorMesh );
-    this->BeginPass( this->refShader, 0 );
-    this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShader->SetTexture( nShaderState::diffMap, this->refFloorTexture );
+    this->BeginDraw( this->refFloorShader, this->refFloorMesh );
+    this->BeginPass( this->refFloorShader, 0 );
+    this->refFloorShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+    this->refFloorShader->SetTexture( nShaderState::diffMap, this->refFloorTexture );
     this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
-    this->EndPass( this->refShader );
-    this->EndDraw( this->refShader );
-
-    //draw text
-    float rowheight = 32.f / gfxServer->GetDisplayMode().GetHeight();
-    nString str;
-
-    switch (this->transformMode)
-    {
-    case Translate:
-        str = "Translate";
-        break;
-    case Rotate:
-        str = "Rotate";
-        break;
-    case Scale:
-        str = "Scale";
-        break;
-    }
-
-    gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );
+    this->EndPass( this->refFloorShader );
+    this->EndDraw( this->refFloorShader );
 }

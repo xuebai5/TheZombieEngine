@@ -16,6 +16,8 @@ class nTexture2;
 class nShader2;
 class nResource;
 
+#define N_REF_RELEASE(a) if (a.isvalid()) {a->Release(); a.invalidate();}
+
 class DemoApp
 {
 public:
