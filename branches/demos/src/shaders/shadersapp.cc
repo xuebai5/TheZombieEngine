@@ -90,8 +90,24 @@ bool ShadersApp::Open()
     //load materials
     Material* material(0);
 
-    //MATERIAL- phong_bump_reflect
+    //MATERIAL- diffuse
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refDiffTexture) );
+    material->refShader = gfxServer->NewShader("diffuse");
+    if (!this->LoadResource( material->refShader, "proj:shaders/diffuse.fx") )
+        return false;
 
+    //MATERIAL- wood
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refPulseTexture) );
+    material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(1.f, 0.f, 0.f, 1.f) );//lightWood
+    material->shaderParams.SetArg( nShaderState::MatSpecular, vector4(1.f, 1.f, 0.f, 1.f) );//darkwood
+    material->shaderParams.SetArg( nShaderState::Frequency, .5f );//ringfrequency
+    material->refShader = gfxServer->NewShader("wood");
+    if (!this->LoadResource( material->refShader, "proj:shaders/wood.fx") )
+        return false;
+
+    //MATERIAL- phong_bump_reflect
     float fSpecular = .4f;
     float fSpecularPower = 64.f;
     float fBumpScale = 1.f;
@@ -109,23 +125,6 @@ bool ShadersApp::Open()
 
     material->refShader = gfxServer->NewShader("phong_bump_reflect");
     if (!this->LoadResource( material->refShader, "proj:shaders/phong_bump_reflect.fx") )
-        return false;
-
-    //MATERIAL- wood
-    material = &this->materials.PushBack( Material() );
-    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refPulseTexture) );
-    material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(1.f, 0.f, 0.f, 1.f) );//lightWood
-    material->shaderParams.SetArg( nShaderState::MatSpecular, vector4(1.f, 1.f, 0.f, 1.f) );//darkwood
-    material->shaderParams.SetArg( nShaderState::Frequency, .5f );//ringfrequency
-    material->refShader = gfxServer->NewShader("wood");
-    if (!this->LoadResource( material->refShader, "proj:shaders/wood.fx") )
-        return false;
-
-    //MATERIAL- diffuse
-    material = &this->materials.PushBack( Material() );
-    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refDiffTexture) );
-    material->refShader = gfxServer->NewShader("diffuse");
-    if (!this->LoadResource( material->refShader, "proj:shaders/diffuse.fx") )
         return false;
 
     return true;
