@@ -28,6 +28,9 @@ void ShadersApp::Init()
 
     //light
     this->vecLightPos.set( 0.f ,5.f ,-10.f );
+
+    //materials
+    this->curMaterialIndex = 0;
 }
 
 //------------------------------------------------------------------------------
@@ -42,8 +45,8 @@ bool ShadersApp::Open()
     if (!this->LoadResource(this->refMesh, "proj:meshes/torus.n3d2"))
         return false;
 
-    this->refTexture = gfxServer->NewTexture("brick");
-    if (!this->LoadResource(this->refTexture, "proj:textures/brick.bmp"))
+    this->refDiffTexture = gfxServer->NewTexture("brick");
+    if (!this->LoadResource(this->refDiffTexture, "proj:textures/brick.bmp"))
         return false;
 
     this->refFloorMesh = gfxServer->NewMesh("plane");
@@ -59,9 +62,9 @@ bool ShadersApp::Open()
         return false;
 /// --- copied from camerasapp
     
-    this->refShader = gfxServer->NewShader("phong_bump_reflect");
-    if (!this->LoadResource(this->refShader, "proj:shaders/phong_bump_reflect.fx"))
-        return false;
+    //this->refShader = gfxServer->NewShader("phong_bump_reflect");
+    //if (!this->LoadResource(this->refShader, "proj:shaders/phong_bump_reflect.fx"))
+    //    return false;
 
     this->refBumpTexture = gfxServer->NewTexture("default_bump_normal");
     if (!this->LoadResource(this->refBumpTexture, "proj:textures/default_bump_normal.dds"))
@@ -80,6 +83,37 @@ bool ShadersApp::Open()
     if (!this->LoadResource(this->refColorShader, "proj:shaders/default.fx"))
         return false;
 
+    //load materials
+    Material* material(0);
+
+    //MATERIAL 1- phong_bump_reflect
+
+    float fSpecular = .4f;
+    float fSpecularPower = 64.f;
+    float fBumpScale = 1.f;
+    float fReflectionScale = .5f;
+
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refDiffTexture) );
+    material->shaderParams.SetArg( nShaderState::BumpMap0, nShaderArg(this->refBumpTexture) );
+    material->shaderParams.SetArg( nShaderState::CubeMap0, nShaderArg(this->refCubeTexture) );
+
+    material->shaderParams.SetArg( nShaderState::MatSpecular, fSpecular );
+    material->shaderParams.SetArg( nShaderState::MatSpecularPower, fSpecularPower );
+    material->shaderParams.SetArg( nShaderState::BumpScale, fBumpScale );
+    material->shaderParams.SetArg( nShaderState::MatLevel, fReflectionScale );
+
+    material->refShader = gfxServer->NewShader("phong_bump_reflect");
+    if (!this->LoadResource( material->refShader, "proj:shaders/phong_bump_reflect.fx") )
+        return false;
+
+    //MATERIAL 2- diffuse
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refDiffTexture) );
+    material->refShader = gfxServer->NewShader("diffuse");
+    if (!this->LoadResource( material->refShader, "proj:shaders/diffuse.fx") )
+        return false;
+
     return true;
 }
 
@@ -88,10 +122,10 @@ bool ShadersApp::Open()
 void ShadersApp::Close()
 {
     N_REF_RELEASE(this->refMesh);
-    N_REF_RELEASE(this->refTexture);
-    N_REF_RELEASE(this->refShader);
+    N_REF_RELEASE(this->refDiffTexture);
+    //N_REF_RELEASE(this->refShader);
     N_REF_RELEASE(this->refBumpTexture);
-    N_REF_RELEASE(this->refCubeTexture);    
+    N_REF_RELEASE(this->refCubeTexture);
 
     N_REF_RELEASE(this->refFloorMesh);
     N_REF_RELEASE(this->refFloorTexture);
@@ -155,6 +189,9 @@ void ShadersApp::Tick( float fTimeElapsed )
 /// --- copied from camerasapp ---
     if (inputServer->GetButton("light"))
         this->vecLightPos.set( this->vecEye );
+
+    if (inputServer->GetButton("toggle"))
+        this->curMaterialIndex = (this->curMaterialIndex + 1) % this->materials.Size();
 }
 
 //------------------------------------------------------------------------------
@@ -186,11 +223,6 @@ void ShadersApp::Render()
     matLight.translate( vecLightPos );
     gfxServer->SetTransform( nGfxServer2::Light, matLight );
 
-    float fSpecular = .4f;
-    float fSpecularPower = 64.f;
-    float fBumpScale = 1.f;
-    float fReflectionScale = .5f;
-
     //draw the torus
     this->matWorld.ident();
     this->matWorld.scale( this->vecScale );
@@ -199,25 +231,22 @@ void ShadersApp::Render()
     this->matWorld.rotate_z( this->vecRotation.z );
     this->matWorld.translate( this->vecPosition );//pitch
 
-    this->BeginDraw( this->refShader, this->refMesh );
-    this->BeginPass( this->refShader, 0 );
-    //BEGIN- shader parameters (TODO- use ShaderParams)
-    this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShader->SetVector3( nShaderState::LightPos, vecLightPos );
-    this->refShader->SetVector4( nShaderState::LightDiffuse, vecLightDiffuse );
-    this->refShader->SetVector4( nShaderState::LightAmbient, vecLightAmbient );
-    this->refShader->SetFloat( nShaderState::MatSpecular, fSpecular );
-    this->refShader->SetFloat( nShaderState::MatSpecularPower, fSpecularPower );
-    this->refShader->SetFloat( nShaderState::BumpScale, fBumpScale );
-    this->refShader->SetFloat( nShaderState::MatLevel, fReflectionScale );
+    //set light parameters
+    Material* material = &materials[curMaterialIndex];
 
-    this->refShader->SetTexture( nShaderState::DiffMap0, this->refTexture );
-    this->refShader->SetTexture( nShaderState::BumpMap0, this->refBumpTexture );
-    this->refShader->SetTexture( nShaderState::CubeMap0, this->refCubeTexture );
-    //END- shader parameters
+    this->BeginDraw( material->refShader, this->refMesh );
+    this->BeginPass( material->refShader, 0 );
+
+    material->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+    //set light params
+    material->shaderParams.SetArg( nShaderState::LightPos, vecLightPos );
+    material->shaderParams.SetArg( nShaderState::LightDiffuse, vecLightDiffuse );
+    material->shaderParams.SetArg( nShaderState::LightAmbient, vecLightAmbient );
+    material->refShader->SetParams( material->shaderParams );
+
     this->Draw( matWorld );
-    this->EndPass( this->refShader );
-    this->EndDraw( this->refShader );
+    this->EndPass( material->refShader );
+    this->EndDraw( material->refShader );
 
     //draw the light
     this->BeginDraw( this->refColorShader, this->refSphereMesh );
@@ -235,4 +264,9 @@ void ShadersApp::Render()
     this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
     this->EndPass( this->refFloorShader );
     this->EndDraw( this->refFloorShader );
+
+    //draw text
+    float rowheight = 32.f / gfxServer->GetDisplayMode().GetHeight();
+    gfxServer->Text( material->refShader->GetName(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );
+
 }
