@@ -57,6 +57,8 @@ private:
     nRef<nTexture2> refDiffTexture;
     nRef<nTexture2> refBumpTexture;
     nRef<nTexture2> refCubeTexture;
+
+    nRef<nTexture2> refPulseTexture;
     //nRef<nShader2> refShader;
 
     nRef<nShader2> refColorShader;
