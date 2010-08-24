@@ -17,7 +17,8 @@ float MatLevel = 0.5;
 
 texture DiffMap0 : DIFFUSE;
 
-sampler2D ColorSampler = sampler_state {
+sampler2D ColorSampler = sampler_state
+{
     Texture = <DiffMap0>;
     MinFilter = Linear;
     MagFilter = Linear;
@@ -76,10 +77,11 @@ vertexOutput std_VS( appdata IN )
 {
     vertexOutput OUT = (vertexOutput)0;
 
-    OUT.WorldNormal = mul(IN.Normal, (matrix<float,3,3>) InvModel).xyz;
-    OUT.WorldTangent = mul(IN.Tangent, (matrix<float,3,3>) InvModel).xyz;
+    float3x3 InvModelTangent = (matrix<float,3,3>) InvModel;
+    OUT.WorldNormal = mul(IN.Normal, InvModelTangent).xyz;
+    OUT.WorldTangent = mul(IN.Tangent, InvModelTangent).xyz;
     float3 binormal = cross(IN.Normal, IN.Tangent);
-    OUT.WorldBinormal = mul( binormal, (matrix<float,3,3>) InvModel).xyz;
+    OUT.WorldBinormal = mul( binormal, InvModelTangent).xyz;
     
     float4 Po = float4(IN.Position.xyz, 1);
     float3 Pw = mul(Po, Model).xyz;
