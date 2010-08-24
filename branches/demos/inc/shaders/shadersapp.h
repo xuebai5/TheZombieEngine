@@ -3,6 +3,7 @@
 
 #include "kernel/nref.h"
 #include "util/narray.h"
+#include "gfx2/ngfxserver2.h"
 
 #include "demos/demoapp.h"
 
@@ -29,6 +30,15 @@ private:
 
     bool bWireframe;
 
+    struct Material
+    {
+        nRef<nShader2> refShader;
+        nShaderParams shaderParams;
+    };
+
+    nArray<Material> materials;
+    int curMaterialIndex;
+
     vector3 vecEye;//eye position
     vector3 vecRot;//euler rotation
 
@@ -44,10 +54,10 @@ private:
     //vector4 vecLightAmbient;
 
     nRef<nMesh2> refMesh;
-    nRef<nTexture2> refTexture;
+    nRef<nTexture2> refDiffTexture;
     nRef<nTexture2> refBumpTexture;
     nRef<nTexture2> refCubeTexture;
-    nRef<nShader2> refShader;
+    //nRef<nShader2> refShader;
 
     nRef<nShader2> refColorShader;
     nRef<nMesh2> refSphereMesh;
