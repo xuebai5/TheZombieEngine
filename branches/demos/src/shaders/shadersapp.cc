@@ -78,6 +78,26 @@ bool ShadersApp::Open()
     if (!this->LoadResource( this->refPulseTexture, "proj:textures/pulse.tga"))
         return false;
 
+    this->refOutlineTexture = gfxServer->NewTexture("outline");
+    if (!this->LoadResource( this->refOutlineTexture, "proj:textures/outline.tga"))
+        return false;
+
+    this->refEnvTexture = gfxServer->NewTexture("chrome");
+    if (!this->LoadResource( this->refEnvTexture, "proj:textures/chrome.tga"))
+        return false;
+
+    this->refNHk2Texture = gfxServer->NewTexture("NHHH_K256");
+    if (!this->LoadResource( this->refNHk2Texture, "proj:textures/NHHH_K256.tga"))
+        return false;
+
+    this->refSplineTexture = gfxServer->NewTexture("blue_spline");
+    if (!this->LoadResource( this->refSplineTexture, "proj:textures/BlueSpline.tga"))
+        return false;
+
+    this->refNoiseTexture = gfxServer->NewTexture("noise");
+    if (!this->LoadResource( this->refNoiseTexture, "proj:textures/noise.tga"))
+        return false;
+
     //light sphere mesh and shader
     this->refSphereMesh = gfxServer->NewMesh("sphere");
     if (!this->LoadResource(refSphereMesh, "proj:meshes/sphere.n3d2"))
@@ -89,6 +109,34 @@ bool ShadersApp::Open()
 
     //load materials
     Material* material(0);
+
+    //MATERIAL- marble
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refSplineTexture) );
+    material->shaderParams.SetArg( nShaderState::NoiseMap0, nShaderArg(this->refNoiseTexture) );
+    material->shaderParams.SetArg( nShaderState::Noise, nShaderArg(1.f) );//noise amplitude
+    material->shaderParams.SetArg( nShaderState::Frequency, nShaderArg(0.3f) );//noise frequency
+    material->refShader = gfxServer->NewShader("marble");
+    if (!this->LoadResource( material->refShader, "proj:shaders/marble.fx") )
+        return false;
+
+    //MATERIAL- metal
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::AmbientMap0, nShaderArg(this->refEnvTexture) );
+    material->shaderParams.SetArg( nShaderState::AmbientMap1, nShaderArg(this->refNHk2Texture) );
+    material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(1.f,1.0f,1.0f,1.0f) );
+    material->shaderParams.SetArg( nShaderState::MatSpecular, vector4(1.f,1.0f,1.0f,1.0f) );
+    material->refShader = gfxServer->NewShader("metal_asm");
+    if (!this->LoadResource( material->refShader, "proj:shaders/metal_asm.fx") )
+        return false;
+
+    //MATERIAL- plastic
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refDiffTexture) );
+    material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(1.f,0.3f,0.0f,1.0f) );
+    material->refShader = gfxServer->NewShader("plastic");
+    if (!this->LoadResource( material->refShader, "proj:shaders/plastic.fx") )
+        return false;
 
     //MATERIAL- diffuse
     material = &this->materials.PushBack( Material() );
@@ -147,6 +195,12 @@ void ShadersApp::Close()
     N_REF_RELEASE(this->refColorShader);
 
     N_REF_RELEASE(this->refPulseTexture);
+    N_REF_RELEASE(this->refOutlineTexture);
+    N_REF_RELEASE(this->refEnvTexture);
+    N_REF_RELEASE(this->refNHk2Texture);
+
+    N_REF_RELEASE(this->refNoiseTexture);
+    N_REF_RELEASE(this->refSplineTexture);
 
     for (int index=0; index<this->materials.Size(); index++)
         N_REF_RELEASE(this->materials[index].refShader);
@@ -256,9 +310,11 @@ void ShadersApp::Render()
     this->BeginDraw( material->refShader, this->refMesh );
     this->BeginPass( material->refShader, 0 );
 
-    material->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+    material->shaderParams.SetArg( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
     //set light params
-    material->shaderParams.SetArg( nShaderState::LightPos, vecLightPos );
+    material->shaderParams.SetArg( nShaderState::LightPos, this->vecLightPos );
+    vector3 vecModelLightPos = matWorld * vecLightPos;
+    material->shaderParams.SetArg( nShaderState::ModelLightPos, vecModelLightPos );
     material->shaderParams.SetArg( nShaderState::LightDiffuse, vecLightDiffuse );
     material->shaderParams.SetArg( nShaderState::LightAmbient, vecLightAmbient );
     material->refShader->SetParams( material->shaderParams );
