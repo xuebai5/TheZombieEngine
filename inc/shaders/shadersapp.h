@@ -59,7 +59,13 @@ private:
     nRef<nTexture2> refCubeTexture;
 
     nRef<nTexture2> refPulseTexture;
-    //nRef<nShader2> refShader;
+    nRef<nTexture2> refOutlineTexture;
+
+    nRef<nTexture2> refSplineTexture;//1D texture
+    nRef<nTexture2> refNoiseTexture;//volume texture
+
+    nRef<nTexture2> refEnvTexture;
+    nRef<nTexture2> refNHk2Texture;
 
     nRef<nShader2> refColorShader;
     nRef<nMesh2> refSphereMesh;
