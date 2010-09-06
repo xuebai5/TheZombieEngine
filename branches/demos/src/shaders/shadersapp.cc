@@ -110,6 +110,25 @@ bool ShadersApp::Open()
     //load materials
     Material* material(0);
 
+    //MATERIAL- anisotropic
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::NoiseMap0, nShaderArg(this->refNoiseTexture) );
+    material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(1.f, .3f, 0.f, 1.f) );//color
+    material->shaderParams.SetArg( nShaderState::MatSpecular, vector4(.7f, .6f, 0.4f, 1.f) );//gloss
+    material->shaderParams.SetArg( nShaderState::Noise, nShaderArg(.5f) );//noise scale
+    material->shaderParams.SetArg( nShaderState::Frequency, nShaderArg(0.02f) );//noise rate
+    material->refShader = gfxServer->NewShader("anisotropic");
+    if (!this->LoadResource( material->refShader, "proj:shaders/anisotropic.fx") )
+        return false;
+
+    //MATERIAL- phong diffuse
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(1.f, .3f, 0.f, 1.f) );//color
+    material->shaderParams.SetArg( nShaderState::MatSpecular, vector4(.7f, .6f, 0.4f, 1.f) );//gloss
+    material->refShader = gfxServer->NewShader("phong");
+    if (!this->LoadResource( material->refShader, "proj:shaders/phong.fx") )
+        return false;
+
     //MATERIAL- marble
     material = &this->materials.PushBack( Material() );
     material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refSplineTexture) );
@@ -304,6 +323,9 @@ void ShadersApp::Render()
     this->matWorld.rotate_z( this->vecRotation.z );
     this->matWorld.translate( this->vecPosition );//pitch
 
+    matrix44 matModel(matWorld); //Model matrix = inverse world matrix (from World->Model)
+    matModel.invert_simple();
+
     //set light parameters
     Material* material = &materials[curMaterialIndex];
 
@@ -313,7 +335,7 @@ void ShadersApp::Render()
     material->shaderParams.SetArg( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
     //set light params
     material->shaderParams.SetArg( nShaderState::LightPos, this->vecLightPos );
-    vector3 vecModelLightPos = matWorld * vecLightPos;
+    vector3 vecModelLightPos = matModel * vecLightPos;
     material->shaderParams.SetArg( nShaderState::ModelLightPos, vecModelLightPos );
     material->shaderParams.SetArg( nShaderState::LightDiffuse, vecLightDiffuse );
     material->shaderParams.SetArg( nShaderState::LightAmbient, vecLightAmbient );
