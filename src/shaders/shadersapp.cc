@@ -98,6 +98,10 @@ bool ShadersApp::Open()
     if (!this->LoadResource( this->refNoiseTexture, "proj:textures/noise.tga"))
         return false;
 
+    this->refAnisoTexture = gfxServer->NewTexture("aniso");
+    if (!this->LoadResource( this->refAnisoTexture, "proj:textures/aniso.tga"))
+        return false;
+
     //light sphere mesh and shader
     this->refSphereMesh = gfxServer->NewMesh("sphere");
     if (!this->LoadResource(refSphereMesh, "proj:meshes/sphere.n3d2"))
@@ -112,13 +116,20 @@ bool ShadersApp::Open()
 
     //MATERIAL- anisotropic
     material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refAnisoTexture) );
+    material->refShader = gfxServer->NewShader("anisotropic");
+    if (!this->LoadResource( material->refShader, "proj:shaders/anisotropic.fx") )
+        return false;
+
+    //MATERIAL- satin
+    material = &this->materials.PushBack( Material() );
     material->shaderParams.SetArg( nShaderState::NoiseMap0, nShaderArg(this->refNoiseTexture) );
     material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(1.f, .3f, 0.f, 1.f) );//color
     material->shaderParams.SetArg( nShaderState::MatSpecular, vector4(.7f, .6f, 0.4f, 1.f) );//gloss
-    material->shaderParams.SetArg( nShaderState::Noise, nShaderArg(.5f) );//noise scale
+    material->shaderParams.SetArg( nShaderState::Noise, nShaderArg(0.5f) );//noise scale
     material->shaderParams.SetArg( nShaderState::Frequency, nShaderArg(0.02f) );//noise rate
-    material->refShader = gfxServer->NewShader("anisotropic");
-    if (!this->LoadResource( material->refShader, "proj:shaders/anisotropic.fx") )
+    material->refShader = gfxServer->NewShader("satin");
+    if (!this->LoadResource( material->refShader, "proj:shaders/satin.fx") )
         return false;
 
     //MATERIAL- phong diffuse
@@ -218,6 +229,7 @@ void ShadersApp::Close()
     N_REF_RELEASE(this->refEnvTexture);
     N_REF_RELEASE(this->refNHk2Texture);
 
+    N_REF_RELEASE(this->refAnisoTexture);
     N_REF_RELEASE(this->refNoiseTexture);
     N_REF_RELEASE(this->refSplineTexture);
 
