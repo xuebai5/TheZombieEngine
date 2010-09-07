@@ -102,6 +102,10 @@ bool ShadersApp::Open()
     if (!this->LoadResource( this->refAnisoTexture, "proj:textures/aniso.tga"))
         return false;
 
+    this->refFurTexture = gfxServer->NewTexture("fur");
+    if (!this->LoadResource( this->refFurTexture, "proj:textures/fur.tga"))
+        return false;
+
     //light sphere mesh and shader
     this->refSphereMesh = gfxServer->NewMesh("sphere");
     if (!this->LoadResource(refSphereMesh, "proj:meshes/sphere.n3d2"))
@@ -113,6 +117,15 @@ bool ShadersApp::Open()
 
     //load materials
     Material* material(0);
+
+    //MATERIAL- fur
+    material = &this->materials.PushBack( Material() );
+    material->shaderParams.SetArg( nShaderState::DiffMap0, nShaderArg(this->refFurTexture) );
+    material->shaderParams.SetArg( nShaderState::MatDiffuse, vector4(.6f, .4f, .1f, .4f) );
+    material->shaderParams.SetArg( nShaderState::MinDist, nShaderArg(.24f) );//shell distance
+    material->refShader = gfxServer->NewShader("fur");
+    if (!this->LoadResource( material->refShader, "proj:shaders/fur.fx") )
+        return false;
 
     //MATERIAL- anisotropic
     material = &this->materials.PushBack( Material() );
@@ -230,6 +243,7 @@ void ShadersApp::Close()
     N_REF_RELEASE(this->refNHk2Texture);
 
     N_REF_RELEASE(this->refAnisoTexture);
+    N_REF_RELEASE(this->refFurTexture);
     N_REF_RELEASE(this->refNoiseTexture);
     N_REF_RELEASE(this->refSplineTexture);
 
@@ -327,6 +341,15 @@ void ShadersApp::Render()
     matLight.translate( vecLightPos );
     gfxServer->SetTransform( nGfxServer2::Light, matLight );
 
+    //draw the floor
+    this->BeginDraw( this->refFloorShader, this->refFloorMesh );
+    this->BeginPass( this->refFloorShader, 0 );
+    this->refFloorShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+    this->refFloorShader->SetTexture( nShaderState::diffMap, this->refFloorTexture );
+    this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
+    this->EndPass( this->refFloorShader );
+    this->EndDraw( this->refFloorShader );
+
     //draw the torus
     this->matWorld.ident();
     this->matWorld.scale( this->vecScale );
@@ -341,20 +364,23 @@ void ShadersApp::Render()
     //set light parameters
     Material* material = &materials[curMaterialIndex];
 
-    this->BeginDraw( material->refShader, this->refMesh );
-    this->BeginPass( material->refShader, 0 );
+    int numPasses = this->BeginDraw( material->refShader, this->refMesh );
+    for (int passIndex = 0; passIndex < numPasses; passIndex++)
+    {
+        this->BeginPass( material->refShader, passIndex );
 
-    material->shaderParams.SetArg( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    //set light params
-    material->shaderParams.SetArg( nShaderState::LightPos, this->vecLightPos );
-    vector3 vecModelLightPos = matModel * vecLightPos;
-    material->shaderParams.SetArg( nShaderState::ModelLightPos, vecModelLightPos );
-    material->shaderParams.SetArg( nShaderState::LightDiffuse, vecLightDiffuse );
-    material->shaderParams.SetArg( nShaderState::LightAmbient, vecLightAmbient );
-    material->refShader->SetParams( material->shaderParams );
+        material->shaderParams.SetArg( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+        //set light params
+        material->shaderParams.SetArg( nShaderState::LightPos, this->vecLightPos );
+        vector3 vecModelLightPos = matModel * vecLightPos;
+        material->shaderParams.SetArg( nShaderState::ModelLightPos, vecModelLightPos );
+        material->shaderParams.SetArg( nShaderState::LightDiffuse, vecLightDiffuse );
+        material->shaderParams.SetArg( nShaderState::LightAmbient, vecLightAmbient );
+        material->refShader->SetParams( material->shaderParams );
 
-    this->Draw( matWorld );
-    this->EndPass( material->refShader );
+        this->Draw( matWorld );
+        this->EndPass( material->refShader );
+    }   
     this->EndDraw( material->refShader );
 
     //draw the light
@@ -364,15 +390,6 @@ void ShadersApp::Render()
     this->Draw( vecLightPos, vector3( .5f, .5f, .5f ) );
     this->EndPass( this->refColorShader );
     this->EndDraw( this->refColorShader );
-
-    //draw the floor
-    this->BeginDraw( this->refFloorShader, this->refFloorMesh );
-    this->BeginPass( this->refFloorShader, 0 );
-    this->refFloorShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refFloorShader->SetTexture( nShaderState::diffMap, this->refFloorTexture );
-    this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
-    this->EndPass( this->refFloorShader );
-    this->EndDraw( this->refFloorShader );
 
     //draw text
     float rowheight = 32.f / gfxServer->GetDisplayMode().GetHeight();
