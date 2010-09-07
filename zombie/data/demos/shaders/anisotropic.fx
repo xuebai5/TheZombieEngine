@@ -1,110 +1,98 @@
-#include "shaders:../lib/lib.fx"
-#include "shaders:../lib/libzombie.fx"
-
+/**
+    Anisotropic lighting
+    From NVIDIA SDK _
+*/
 shared float4x4 ModelViewProjection;
+shared float4x4 InvModel;
 shared float4x4 Model;
-shared float4x4 View;
-shared float4x4 ModelView;
 
-shared float3 LightPos;
-shared float3 EyePos;
+shared float3   LightPos;
+shared float3   EyePos;
 
-float4 MatDiffuse;
-float4 MatSpecular;
+int FillMode = 3;//=Solid
 
-float Frequency; //noise_rate
-float Noise;     //noise_scale
+texture DiffMap0;
 
-int FillMode = 3; //1=Point, 2=Wireframe, 3=Solid
-
-texture NoiseMap0;
-
-sampler2D NoiseSampler = sampler_state
+sampler LookupMap = sampler_state
 {
-    Texture = <NoiseMap0>;
-    MinFilter = Linear;
-    MagFilter = Linear;
-    MipFilter = Linear;
-    AddressU = Wrap;
-    AddressV = Wrap;
-}; 
-
-struct VertexInput
-{
-    float4 position : POSITION;
-    float3 normal   : NORMAL;
-    float3 tangent  : TANGENT;
+    Texture   = <DiffMap0>;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+    //MipFilter = NONE;  // inherit setting from app
+    AddressU  = MIRROR;
+//    AddressV = ?
 };
 
-struct VertexOutput
+struct VS_INPUT
 {
-    float4 position : POSITION;
-    float3 normal   : TEXCOORD0;
-    float3 tangent  : TEXCOORD1;
-    float3 binormal : TEXCOORD2;
-    float3 viewVec  : TEXCOORD3;
-    float3 lightVec : TEXCOORD4;
-    float3 pos      : TEXCOORD5;
+    float3 Position : POSITION;
+    float3 Normal   : NORMAL;
 };
 
-VertexOutput vsMain(const VertexInput IN)
+struct VS_OUTPUT
 {
-    VertexOutput OUT = (VertexOutput) 0;
-    
-    float4 position = IN.position;
-    OUT.position = mul(position, ModelViewProjection);
+    float4 vPosition  : POSITION;
+    float2 vTexCoord0 : TEXCOORD0;
+};
 
-    OUT.normal = mul(IN.normal, Model).xyz;
-    OUT.tangent = mul(IN.tangent, Model).xyz;
-    float3 binormal = cross(IN.normal, IN.tangent);
-    OUT.binormal = mul(binormal, Model).xyz;
-    
-    float3 worldPos = mul(position, Model).xyz;
-    OUT.lightVec = (LightPos - worldPos);
+VS_OUTPUT main(const VS_INPUT IN)
+{
+    VS_OUTPUT OUT;
 
-    //OUT.viewVec = -mul(position, InvView);//eye vector in view space
-    OUT.viewVec = EyePos - worldPos;
-    OUT.pos = position.xyz * Frequency;
+    float3 worldNormal = normalize(mul((float3x3)Model, IN.Normal));
+
+    //build float4
+    float4 tempPos;
+    tempPos.xyz = IN.Position.xyz;
+    tempPos.w   = 1.0;
+
+    //compute worldspace position
+    float3 worldSpacePos = mul((float4x3)Model, tempPos);
+    
+    //vector from vertex to eye, normalized
+    float3 vertToEye = normalize(EyePos - worldSpacePos);
+
+    //h = normalize(l + e)
+    float3 LightVec = normalize(LightPos); //assume directional light
+    float3 halfAngle = normalize(vertToEye + LightVec);
+
+    OUT.vTexCoord0.x = max(dot(LightVec, worldNormal), 0.0);
+    OUT.vTexCoord0.y = max(dot(halfAngle, worldNormal), 0.0);
+    
+    // transform into homogeneous-clip space
+    OUT.vPosition = mul(tempPos, ModelViewProjection);
 
     return OUT;
 }
 
-float4 psMain(const VertexOutput IN) : COLOR
+
+technique AnisotropicLighting
 {
-    float3 viewVec = normalize(IN.viewVec);
-    float3 lightVec = normalize(IN.lightVec);
-
-    float angle = Noise * (tex2D(NoiseSampler, IN.pos.xz).r - 0.5);
-    float cosA, sinA;
-    sincos(angle, sinA, cosA);
-
-   float3 tangent = sinA * IN.tangent + cosA * IN.binormal;
-
-    // Do the anisotropic lighting
-    float diffuse = saturate(dot(lightVec, IN.normal));
-    float cs = -dot(viewVec, tangent);
-    float sn = sqrt(1 - cs * cs);
-    float cl = dot(lightVec, tangent);
-    float sl = sqrt(1 - cl * cl);
-    float specular = pow(saturate(cs * cl + sn * sl), 32);
-
-   // Output the results
-   return diffuse * (MatDiffuse + specular * MatSpecular);
-}
-                           
-technique t0
-{
-    pass p0
+    pass P0
     {
-        ColorWriteEnable = RED|GREEN|BLUE|ALPHA;
-        ZWriteEnable    = True;
-        ZEnable         = True;
-        ZFunc           = LessEqual;
-        
-        FillMode        = <FillMode>;
-        CullMode        = None;
+		ZEnable = true;
+		ZWriteEnable = true;
+		ZFunc = LessEqual;
+		AlphaBlendEnable = false;
 
-        VertexShader    = compile vs_1_1 vsMain();
-        PixelShader     = compile ps_2_0 psMain();
+		CullMode = None;
+		FillMode = <FillMode>;
+
+        // Set texture & filtering modes for texture stage #0
+        Sampler[0]  = (LookupMap);
+        
+        // Set up TSS stages to use the texture color 
+        // ( in a convoluted way: color = (tex.rgb * tex.aaa)*4 )
+        ColorOp[0]   = Modulate4X;
+        ColorArg1[0] = Texture;
+        ColorArg2[0] = Texture | AlphaReplicate;
+        ColorOp[1]   = Disable;
+        
+        // Render states:
+        Lighting     = False;
+
+        // Shaders
+        VertexShader = compile vs_1_1 main();
+        PixelShader  = NULL;  
     }
 }
