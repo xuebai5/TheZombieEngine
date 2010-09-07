@@ -23,7 +23,7 @@ sampler2D ColorSampler = sampler_state
     MipFilter = Linear;
     AddressU = Wrap;
     AddressV = Wrap;
-}; 
+};
 
 texture BumpMap0;
 
