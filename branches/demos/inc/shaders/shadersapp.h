@@ -67,6 +67,9 @@ private:
     nRef<nTexture2> refEnvTexture;
     nRef<nTexture2> refNHk2Texture;
 
+    nRef<nTexture2> refAnisoTexture;
+    nRef<nTexture2> refFurTexture;
+
     nRef<nShader2> refColorShader;
     nRef<nMesh2> refSphereMesh;
 
