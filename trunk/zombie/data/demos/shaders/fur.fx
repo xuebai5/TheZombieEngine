@@ -55,8 +55,9 @@ technique t0
     pass p0
     {
         ColorWriteEnable = RED|GREEN|BLUE|ALPHA;
-        ZWriteEnable    = False;
+        ZWriteEnable    = True;
         ZEnable         = True;
+        ZFunc           = LessEqual;
 
         AlphaBlendEnable = True;
         BlendOp         = Add;
