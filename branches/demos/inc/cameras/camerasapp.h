@@ -41,6 +41,7 @@ public:
 private:
 
     bool bWireframe;
+    bool bShowAxes;
 
     vector3 vecEye;//eye position
     vector3 vecRot;//euler rotation

@@ -16,6 +16,7 @@
 void CamerasApp::Init()
 {
     this->bWireframe = false;
+    this->bShowAxes = false;
 
     this->cameraMode = FreeCam;
 
@@ -80,6 +81,9 @@ void CamerasApp::Tick( float fTimeElapsed )
 
     if (inputServer->GetButton("wireframe"))
         this->bWireframe = !this->bWireframe;
+
+    if (inputServer->GetButton("axes"))
+        this->bShowAxes = !this->bShowAxes;
 
     if (inputServer->GetButton("reset"))
     {
@@ -297,4 +301,50 @@ void CamerasApp::Render()
     }
 
     gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );
+
+    //draw onscreen axes
+    if (this->bShowAxes)
+    {
+        const nDisplayMode2& displayMode = gfxServer->GetDisplayMode();
+        const matrix44& view = gfxServer->GetTransform(nGfxServer2::View);
+        const matrix44& proj = gfxServer->GetTransform(nGfxServer2::Projection);
+        const nViewport& viewport = gfxServer->GetViewport();
+
+        static vector4 color[3] = { vector4(1.0f, 0.0f, 0.0f, 1.0f),
+                                    vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                                    vector4(0.0f, 0.0f, 1.0f, 1.0f) };
+
+        static char* buf[3] = { "x", "y" ,"z" };
+
+        rectangle rect;
+
+        matrix44 matModel;
+        matModel.scale( vector3(20, -30, 0) );
+        matModel.translate( vector3(20, viewport.height - 30, 0) );
+
+        vector3 offset(0.f, 0.f, -2.01f); //projected origin, Z negative goes into the screen
+        vector3 point = matModel * offset;
+
+        vector2 points[2];
+        points[0].set(point.x, point.y);
+
+        gfxServer->BeginLines();
+
+        for (int idx=0; idx<3; idx++)
+        {
+            vector3 axis( view.m[idx][0], view.m[idx][1], view.m[idx][2] ); //get axes from view matrix
+            axis.norm();
+            axis += offset;
+            point = proj.transform_coord(axis); //transform vector, projecting back into w=1
+            point = matModel * point;
+            points[1].set(point.x, point.y);
+            gfxServer->DrawLines2d(points, 2, color[idx]);
+
+            rect.set(vector2((viewport.x + points[1].x) / displayMode.GetWidth(),
+                             (viewport.y + points[1].y) / displayMode.GetHeight()),
+                     vector2(1.0f, 1.0f));
+            gfxServer->DrawText(buf[idx], color[idx], rect, 0);
+        }
+        gfxServer->EndLines();
+    }
 }
