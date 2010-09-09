@@ -16,6 +16,15 @@ class nTexture2;
 class nShader2;
 class nResource;
 
+#define N_REF_LOAD_MESH(a,name,file) a = gfxServer->NewMesh(name);\
+    if (!this->LoadResource(a, file)) return false;
+
+#define N_REF_LOAD_TEXTURE(a,name,file) a = gfxServer->NewTexture(name);\
+    if (!this->LoadResource(a, file)) return false;
+
+#define N_REF_LOAD_SHADER(a,name,file) a = gfxServer->NewShader(name);\
+    if (!this->LoadResource(a, file)) return false;
+
 #define N_REF_RELEASE(a) if (a.isvalid()) {a->Release(); a.invalidate();}
 
 class DemoApp

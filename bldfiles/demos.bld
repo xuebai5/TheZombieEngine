@@ -35,6 +35,7 @@ begintarget demo
         camerasapp
         transformapp
         shadersapp
+        ambientapp
     }
     settargetdeps {
         nkernel

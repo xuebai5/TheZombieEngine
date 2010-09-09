@@ -1,0 +1,17 @@
+#===============================================================================
+#  ambient.bld
+#  demos for ambient effects: athmosferic, ambient occlusion, reflections
+#===============================================================================
+
+#===============================================================================
+#  Ambient modules
+#===============================================================================
+beginmodule ambientapp
+    setdir ambient
+    setfiles {
+        ambientapp
+    }
+    setheaders{
+        ambientapp
+    }
+endmodule
