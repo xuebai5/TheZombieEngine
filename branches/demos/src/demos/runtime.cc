@@ -10,6 +10,7 @@
 #include "cameras/camerasapp.h"
 #include "transform/transformapp.h"
 #include "shaders/shadersapp.h"
+#include "ambient/ambientapp.h"
 
 #ifdef __WIN32__
 #include "kernel/nwin32loghandler.h"
@@ -53,7 +54,7 @@ main(int argc, const char** argv)
 	const char* scriptserverArg = args.GetStringArg("-scriptserver", "nluaserver");
 	const char* projDirArg = args.GetStringArg("-proj", "home:data/demos");
 	const char* startupArg = args.GetStringArg("-startup", "proj:scripts/startup.lua");
-    const char* appArg = args.GetStringArg("-app", "shaders");
+    const char* appArg = args.GetStringArg("-app", "ambient");
 
     bool fullscreenArg	= args.GetBoolArg("-fullscreen");
     bool alwaysOnTopArg = args.GetBoolArg("-alwaysontop");
@@ -120,6 +121,8 @@ main(int argc, const char** argv)
         app = n_new(TransformApp);
     else if (!strcmp( appArg, "shaders" ))
         app = n_new(ShadersApp);
+    else if (!strcmp( appArg, "ambient" ))
+        app = n_new(AmbientApp);
     else
         app = n_new(DemoApp);
 
