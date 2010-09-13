@@ -18,12 +18,12 @@ void ShootemApp::Init()
     this->bWireframe = false;
     this->bCameraOrtho = false;
 
-    this->vecEye.set(0,5,-2);
-    this->vecRot.set(n_deg2rad(60),0,0); //looking down 30 degrees
-
     this->vecPlayerPos.set(0,0,0);
-    this->vecCameraOffset.set(0,5,-2);
+    this->vecCameraOffset.set(0,7,-2);
     this->fCameraThreshold = 1.f;
+
+    this->vecEye = this->vecPlayerPos + this->vecCameraOffset;
+    this->vecRot.set(n_deg2rad(60),0,0); //looking down 30 degrees
 
     this->fPlayerSpeed = 5.f;
     this->fPlayerSize = 1.f;
@@ -35,31 +35,52 @@ void ShootemApp::Init()
     this->fProjectileSpeed = 10.f;
 
     this->fEnemySpeed = 3.f;
-    this->fEnemyDyingTime = 1.;
+    this->fEnemyHitTime = .2f;
+    this->fEnemyDyingTime = 1.f;
+
+    //initial level
+    this->gameLevel = 1;
+    this->ResetLevel();
+}
+
+//------------------------------------------------------------------------------
+
+void ShootemApp::ResetLevel()
+{
+    //initialize player
+    this->vecPlayerPos.set(0,0,0);
+
+    this->fEnemySpeed = 3.f + float(gameLevel - 1);
 
     //initialize ground
-    const int numTiles = 4;
+    int numTiles = 4 + gameLevel;
     this->tiles.SetFixedSize(numTiles);
 
-    const vector4 colors[numTiles] = { vector4(1.0f, 1.0f, 1.0f, 1.0f),
-                                       vector4(0.0f, 1.0f, 0.0f, 1.0f),
-                                       vector4(0.0f, 1.0f, 1.0f, 1.0f),
-                                       vector4(1.0f, 0.0f, 0.0f, 1.0f) };
-    vector3 tilePos( -5.f, 0.f, -5.f );
+    min_x = -5.f;
+    min_z = -5.f;
+    max_x = min_x + 10.f;//tilesize
+    max_z = min_z + 10.f * numTiles;//tilesize
+
+    const vector4 colors[] = { vector4(1.0f, 1.0f, 1.0f, 1.0f),
+                               vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                               vector4(0.0f, 1.0f, 1.0f, 1.0f),
+                               vector4(1.0f, 0.0f, 0.0f, 1.0f),
+                               vector4(1.0f, 0.0f, 1.0f, 0.0f) };
+
+    vector3 tilePos( min_x, 0.f, min_z );
 
     for (int index=0; index<numTiles; index++)
     {
         this->tiles[index].vecPos = tilePos;
         this->tiles[index].vecScale.set( 10.f, 0.f, 10.f );
-        this->tiles[index].color = colors[index];
+        this->tiles[index].color = colors[index % sizeof(colors)];
         tilePos.z += 10.f;
     }
 
-#if 1
+
     //initialize props
     {
-        const int numPropsPerTile = 10;
-        //int propIndex = 0;
+        int numPropsPerTile = 10 + 2 * gameLevel;
         for (int tileIndex=0; tileIndex<numTiles; tileIndex++)
         {
             Tile& tile = this->tiles[tileIndex];
@@ -72,12 +93,12 @@ void ShootemApp::Init()
                 newProp.vecPos.z = min_z + n_rand_real(1.f) * tile.vecScale.z;//tilesize_z
                 newProp.vecScale.set(1,1,1);
                 newProp.highlight = false;
-                //TODO- check for collision
+                //TODO- check for collision with other props?
+
                 this->props.Append(newProp);
             }
         }
     }
-#endif
 
     //initialize items (shoot and pick, or just pick)
 
@@ -181,6 +202,8 @@ void ShootemApp::Tick( float fTimeElapsed )
 
         //update player position
         vector3 playerPos = this->vecPlayerPos + vecMove;
+        playerPos.x = n_clamp(playerPos.x, min_x, max_x);//adjust to tilesize
+
         Prop* prop = this->CheckProps(playerPos, this->fPlayerSize);
         if (prop)
         {
@@ -192,6 +215,12 @@ void ShootemApp::Tick( float fTimeElapsed )
         }
 
         this->vecPlayerPos = playerPos;
+
+        //end of level?
+        if (this->vecPlayerPos.z > max_z)
+        {
+            this->OnLevelEnd();
+        }
 
         //check for collisions with enemies
         Enemy* enemy = this->CheckEnemies(playerPos, this->fPlayerSize);
@@ -252,7 +281,7 @@ void ShootemApp::TickProjectiles(float fTimeElapsed)
         }
 
         proj.vecPos += proj.vecDir * this->fProjectileSpeed * fTimeElapsed;
-        
+
         //TODO- check for collisions
         Enemy* enemy = this->CheckEnemies(proj.vecPos, proj.vecSize.x);
         if (enemy)
@@ -339,9 +368,12 @@ void ShootemApp::SpawnEnemies()
     //the spawn point is a fixed number of units in front of the player
     //they follow a fixed trajectory (a path) and can shoot projectiles
 
-    const int numEnemies = 5;
+    int numEnemies = 5 + (gameLevel - 1) * 3;
     vector3 vecPos = this->vecPlayerPos;
     vecPos.z += 10.f;
+
+    if (vecPos.z > max_z) return;
+
     //float min_x = -5.f;
     //do {
         vecPos.x = 1.f;//min_x + n_rand_real(1.f) * 10.f;
@@ -351,6 +383,7 @@ void ShootemApp::SpawnEnemies()
     {
         Enemy newEnemy;
         newEnemy.state = ES_Alive;
+        newEnemy.hitPoints = this->gameLevel;
         newEnemy.vecPos = vecPos;
         newEnemy.vecScale.set(1.f,1.f,1.f);
         newEnemy.color.set(1,0,0,1);
@@ -376,12 +409,24 @@ void ShootemApp::TickEnemies(float fTimeElapsed)
         Enemy& enemy = this->enemies.At(index);
         switch (enemy.state)
         {
+        case ES_Hit:
+            enemy.fTimeElapsed += fTimeElapsed;
+            if (enemy.fTimeElapsed > this->fEnemyHitTime)
+                enemy.state = ES_Alive;
+            //fall through
+
         case ES_Alive:
             {
                 vector3 vecMove(0,0,-1);
                 vecMove.x = float(n_sgn(this->vecPlayerPos.x - enemy.vecPos.x));
+                vecMove.norm();
                 vecMove *= this->fEnemySpeed * fTimeElapsed;
                 enemy.vecPos += vecMove;
+                if (enemy.vecPos.z < this->vecPlayerPos.z - 10.f)
+                {
+                    this->enemies.EraseQuick(index);
+                    continue;
+                }
             }
             break;
 
@@ -421,7 +466,12 @@ ShootemApp::Enemy* ShootemApp::CheckEnemies(const vector3& pos, float fDistance)
 void ShootemApp::OnEnemyHit(Enemy* enemy)
 {
     n_assert(enemy);
-    enemy->state = ES_Dying;
+    enemy->hitPoints--;
+    if (enemy->hitPoints > 0)
+        enemy->state = ES_Hit;
+    else
+        enemy->state = ES_Dying;
+
     enemy->fTimeElapsed = 0.f;
 }
 
@@ -431,6 +481,14 @@ void ShootemApp::OnPlayerHit()
 {
     this->playerState = PS_Dying;
     this->fPlayerTimeElapsed = 0.f;
+}
+
+//------------------------------------------------------------------------------
+
+void ShootemApp::OnLevelEnd()
+{
+    this->gameLevel++;
+    this->ResetLevel();
 }
 
 //------------------------------------------------------------------------------
@@ -447,10 +505,10 @@ void ShootemApp::DrawEnemies()
         Enemy& enemy = this->enemies.At(index);
 
         vector4 color(enemy.color);
+        if (enemy.state == ES_Hit)
+            color.lerp(vector4(1,1,0,1), enemy.fTimeElapsed / this->fEnemyHitTime);
         if (enemy.state == ES_Dying)
-        {
             color.lerp(enemy.color, vector4(0,0,0,1), enemy.fTimeElapsed / this->fEnemyDyingTime );
-        }
 
         this->refShaderColor->SetVector4( nShaderState::MatDiffuse, color );
 
@@ -458,7 +516,7 @@ void ShootemApp::DrawEnemies()
         matWorld.scale(enemy.vecScale);
         matWorld.scale(vector3(.5f,.5f,.5f));
         matWorld.rotate_x(n_deg2rad(90.f));
-        matWorld.translate(enemy.vecPos);
+        matWorld.translate(enemy.vecPos + vector3(0,1,0));
 
         this->Draw(matWorld);
     }
@@ -547,7 +605,7 @@ void ShootemApp::Render()
     //score
 
     //debug text
-    str.Format("Projectiles.Size = %d", this->projectiles.Size());
+    str.Format("Projectiles = %d, Enemies = %d", this->projectiles.Size(), this->enemies.Size());
     gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );//lower-left corner
 }
 

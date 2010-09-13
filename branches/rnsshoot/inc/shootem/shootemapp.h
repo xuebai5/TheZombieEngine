@@ -74,6 +74,9 @@ protected:
 
     PlayerState playerState;
 
+    int gameLevel;
+
+    void ResetLevel();
     void ResetGame();
 
     //fire
@@ -103,6 +106,8 @@ protected:
 
     nArray<Tile> tiles;
 
+    float min_x, max_x, min_z, max_z;
+
     //props
     struct Prop
     {
@@ -120,6 +125,7 @@ protected:
     enum EnemyState
     {
         ES_Alive,
+        ES_Hit,
         ES_Dying,
     };
 
@@ -128,13 +134,17 @@ protected:
         vector3 vecPos;
         vector3 vecScale;
         vector4 color;
+        
         EnemyState state;
+        int hitPoints;
+
         float fTimeElapsed;
     };
 
     nArray<Enemy> enemies;
 
     float fEnemySpeed;
+    float fEnemyHitTime;
     float fEnemyDyingTime;
 
     void TickEnemies(float fTimeElapsed);
@@ -144,6 +154,7 @@ protected:
     Enemy* CheckEnemies(const vector3& pos, float fDistance);
     void OnEnemyHit(Enemy* enemy);
     void OnPlayerHit();
+    void OnLevelEnd();
 
     //resources
     nRef<nMesh2> refMeshGround;
