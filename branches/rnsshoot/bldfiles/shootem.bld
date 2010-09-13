@@ -1,0 +1,64 @@
+#===============================================================================
+#  shootem.bld
+#===============================================================================
+
+#===============================================================================
+#  Shootem application modules
+#===============================================================================
+beginmodule shootemapp
+    setdir shootem
+    setfiles {
+        runtime shootemapp
+    }
+    setheaders{
+        personal shootemapp
+    }
+    setlibs_win32 { 
+        shell32.lib
+    }
+endmodule
+
+#===============================================================================
+#  Shootem Targets
+#===============================================================================
+begintarget shootem
+    annotate "Demos app"
+    seticon zombie.ico
+    settype exe
+    setwarningslevel 4
+    setpch true
+    setstacksize 5120000
+           
+    setmodules {
+        shootemapp
+    }
+    settargetdeps {
+        nkernel
+        nnebula
+        ndirect3d9
+        ndinput8
+        nlua
+        nscriptclassserver
+        xml
+    }
+endtarget
+
+#===============================================================================
+#  Demos Workspaces
+#===============================================================================
+beginworkspace shootem
+    setbinarydir ./bin/
+    annotate "The Demos workspace."
+    addglobaldef NO_ENTITY
+    settargets {
+        shootem
+        demo
+        nkernel
+        nnebula
+        ndirect3d9
+        ndinput8
+        nlua
+        nscriptclassserver
+        xml
+    }
+endworkspace
