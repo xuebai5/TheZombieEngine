@@ -63,6 +63,19 @@ protected:
     float fPlayerSpeed;
     float fPlayerSize;
 
+    float fPlayerTimeElapsed;
+    float fPlayerDyingTime;
+
+    enum PlayerState
+    {
+        PS_Alive = 0,
+        PS_Dying,
+    };
+
+    PlayerState playerState;
+
+    void ResetGame();
+
     //fire
     struct Projectile
     {
@@ -102,6 +115,35 @@ protected:
     nArray<Prop> props;
     void DrawProps();
     Prop* CheckProps(const vector3& pos, float fDistance);
+
+    //enemies
+    enum EnemyState
+    {
+        ES_Alive,
+        ES_Dying,
+    };
+
+    struct Enemy
+    {
+        vector3 vecPos;
+        vector3 vecScale;
+        vector4 color;
+        EnemyState state;
+        float fTimeElapsed;
+    };
+
+    nArray<Enemy> enemies;
+
+    float fEnemySpeed;
+    float fEnemyDyingTime;
+
+    void TickEnemies(float fTimeElapsed);
+    void SpawnEnemies();
+    void DrawEnemies();
+
+    Enemy* CheckEnemies(const vector3& pos, float fDistance);
+    void OnEnemyHit(Enemy* enemy);
+    void OnPlayerHit();
 
     //resources
     nRef<nMesh2> refMeshGround;

@@ -28,10 +28,14 @@ void ShootemApp::Init()
     this->fPlayerSpeed = 5.f;
     this->fPlayerSize = 1.f;
 
-    this->projectiles.Reset();
+    this->fPlayerDyingTime = 2.f;
+    this->fPlayerTimeElapsed = 0.f;
 
     this->fProjectileMaxTime = 2.f;
     this->fProjectileSpeed = 10.f;
+
+    this->fEnemySpeed = 3.f;
+    this->fEnemyDyingTime = 1.;
 
     //initialize ground
     const int numTiles = 4;
@@ -51,6 +55,7 @@ void ShootemApp::Init()
         tilePos.z += 10.f;
     }
 
+#if 1
     //initialize props
     {
         const int numPropsPerTile = 10;
@@ -72,8 +77,22 @@ void ShootemApp::Init()
             }
         }
     }
+#endif
 
     //initialize items (shoot and pick, or just pick)
+
+    this->ResetGame();
+}
+
+//------------------------------------------------------------------------------
+
+void ShootemApp::ResetGame()
+{
+    this->fPlayerTimeElapsed = 0.f;
+    this->playerState = PS_Alive;
+
+    this->projectiles.Reset();
+    this->enemies.Reset();
 }
 
 //------------------------------------------------------------------------------
@@ -128,54 +147,82 @@ void ShootemApp::Tick( float fTimeElapsed )
     if (inputServer->GetButton("toggle"))
         this->bCameraOrtho = !this->bCameraOrtho;
 
-    float moveSpace = this->fPlayerSpeed * fTimeElapsed;//=cameraSpeed
+    switch (this->playerState)
+    {
+    case PS_Dying:
+        this->fPlayerTimeElapsed += fTimeElapsed;
+        if (this->fPlayerTimeElapsed > this->fPlayerDyingTime)
+        {
+            this->ResetGame();
+        }
+        break;
 
-    //camera move
-    vector3 vecMove;
-    if (inputServer->GetButton("forward"))
-    {
-        vecMove.z += moveSpace;
-    }
-    if (inputServer->GetButton("backward"))
-    {
-        vecMove.z -= moveSpace;
-    }
-    if (inputServer->GetButton("strafe_left"))
-    {
-        vecMove.x -= moveSpace;
-    }
-    if (inputServer->GetButton("strafe_right"))
-    {
-        vecMove.x += moveSpace;
-    }
+    case PS_Alive:
+        float moveSpace = this->fPlayerSpeed * fTimeElapsed;//=cameraSpeed
 
-    //update camera position
-    vector3 playerPos = this->vecPlayerPos + vecMove;
-    Prop* prop = this->CheckProps(playerPos, this->fPlayerSize);
-    if (prop)
-        prop->highlight = true;
-    else
-        this->vecPlayerPos += vecMove;
+        //camera move
+        vector3 vecMove;
+        if (inputServer->GetButton("forward"))
+        {
+            vecMove.z += moveSpace;
+        }
+        if (inputServer->GetButton("backward"))
+        {
+            vecMove.z -= moveSpace;
+        }
+        if (inputServer->GetButton("strafe_left"))
+        {
+            vecMove.x -= moveSpace;
+        }
+        if (inputServer->GetButton("strafe_right"))
+        {
+            vecMove.x += moveSpace;
+        }
 
-    //move the camera when the position of the player exceeds a margin
-    vector3 eyePos = this->vecPlayerPos + this->vecCameraOffset;
-    if ((eyePos.z - this->vecEye.z) > this->fCameraThreshold)
-    {
-        this->vecEye.z = eyePos.z - this->fCameraThreshold;
-    }
-    else if ((this->vecEye.z - eyePos.z) > this->fCameraThreshold)
-    {
-        this->vecEye.z = eyePos.z + this->fCameraThreshold;
-    }
+        //update player position
+        vector3 playerPos = this->vecPlayerPos + vecMove;
+        Prop* prop = this->CheckProps(playerPos, this->fPlayerSize);
+        if (prop)
+        {
+            prop->highlight = true;
+            vector3 vecBack = playerPos - prop->vecPos;//push away
+            vecBack.norm();
+            vecBack *= this->fPlayerSize - vector3::distance(playerPos, prop->vecPos);
+            playerPos += vecBack;
+        }
 
-    //shoot
-    if (inputServer->GetButton("fire"))
-    {
-        this->AddProjectile();
+        this->vecPlayerPos = playerPos;
+
+        //check for collisions with enemies
+        Enemy* enemy = this->CheckEnemies(playerPos, this->fPlayerSize);
+        if (enemy)
+        {
+            this->OnPlayerHit();
+        }
+
+        //update camera position applying threshold
+        vector3 eyePos = this->vecPlayerPos + this->vecCameraOffset;
+        if ((eyePos.z - this->vecEye.z) > this->fCameraThreshold)
+        {
+            this->vecEye.z = eyePos.z - this->fCameraThreshold;
+        }
+        else if ((this->vecEye.z - eyePos.z) > this->fCameraThreshold)
+        {
+            this->vecEye.z = eyePos.z + this->fCameraThreshold;
+        }
+
+        //shoot
+        if (inputServer->GetButton("fire"))
+        {
+            this->AddProjectile();
+        }
     }
 
     //update projectiles
     this->TickProjectiles(fTimeElapsed);
+
+    //update enemies
+    this->TickEnemies(fTimeElapsed);
 }
 
 //------------------------------------------------------------------------------
@@ -194,9 +241,9 @@ void ShootemApp::AddProjectile()
 void ShootemApp::TickProjectiles(float fTimeElapsed)
 {
     int index=0;
-    while (index < projectiles.Size())
+    while (index < this->projectiles.Size())
     {
-        Projectile& proj = projectiles.At(index);
+        Projectile& proj = this->projectiles.At(index);
         proj.fTimeElapsed += fTimeElapsed;
         if (proj.fTimeElapsed > this->fProjectileMaxTime)
         {
@@ -205,7 +252,16 @@ void ShootemApp::TickProjectiles(float fTimeElapsed)
         }
 
         proj.vecPos += proj.vecDir * this->fProjectileSpeed * fTimeElapsed;
+        
         //TODO- check for collisions
+        Enemy* enemy = this->CheckEnemies(proj.vecPos, proj.vecSize.x);
+        if (enemy)
+        {
+            this->OnEnemyHit(enemy);
+            projectiles.EraseQuick(index);
+            continue;
+        }
+
         index++;
     }
 }
@@ -277,6 +333,141 @@ ShootemApp::Prop* ShootemApp::CheckProps(const vector3& pos, float fDistance)
 
 //------------------------------------------------------------------------------
 
+void ShootemApp::SpawnEnemies()
+{
+    //create a wave of enemies by instancing a row of them
+    //the spawn point is a fixed number of units in front of the player
+    //they follow a fixed trajectory (a path) and can shoot projectiles
+
+    const int numEnemies = 5;
+    vector3 vecPos = this->vecPlayerPos;
+    vecPos.z += 10.f;
+    //float min_x = -5.f;
+    //do {
+        vecPos.x = 1.f;//min_x + n_rand_real(1.f) * 10.f;
+    //} while( this->CheckProps(vecPos, 1.f));//size
+
+    for (int index=0; index<numEnemies; index++)
+    {
+        Enemy newEnemy;
+        newEnemy.state = ES_Alive;
+        newEnemy.vecPos = vecPos;
+        newEnemy.vecScale.set(1.f,1.f,1.f);
+        newEnemy.color.set(1,0,0,1);
+        this->enemies.Append(newEnemy);
+
+        vecPos.z += 2.f;//spread
+    }
+}
+
+//------------------------------------------------------------------------------
+
+void ShootemApp::TickEnemies(float fTimeElapsed)
+{
+    if (this->enemies.Empty())
+    {
+        this->SpawnEnemies();
+    }
+
+    int index=0;
+    while (index < this->enemies.Size())
+    {
+        //TODO- depending on state
+        Enemy& enemy = this->enemies.At(index);
+        switch (enemy.state)
+        {
+        case ES_Alive:
+            {
+                vector3 vecMove(0,0,-1);
+                vecMove.x = float(n_sgn(this->vecPlayerPos.x - enemy.vecPos.x));
+                vecMove *= this->fEnemySpeed * fTimeElapsed;
+                enemy.vecPos += vecMove;
+            }
+            break;
+
+        case ES_Dying:
+            enemy.fTimeElapsed += fTimeElapsed;
+            if (enemy.fTimeElapsed > this->fEnemyDyingTime)
+            {
+                this->enemies.EraseQuick(index);
+                continue;
+            }
+        }
+
+        index++;
+    }
+}
+
+//------------------------------------------------------------------------------
+
+ShootemApp::Enemy* ShootemApp::CheckEnemies(const vector3& pos, float fDistance)
+{
+    int numEnemies = this->enemies.Size();
+    float fDistSq = fDistance * fDistance;
+    for (int index=0; index<numEnemies; index++)
+    {
+        if (this->enemies[index].state == ES_Dying)
+            continue;
+
+        vector3 dist(pos - this->enemies[index].vecPos);
+        if (dist.lensquared() < fDistSq)
+            return &this->enemies[index];
+    }
+    return 0;
+}
+
+//------------------------------------------------------------------------------
+
+void ShootemApp::OnEnemyHit(Enemy* enemy)
+{
+    n_assert(enemy);
+    enemy->state = ES_Dying;
+    enemy->fTimeElapsed = 0.f;
+}
+
+//------------------------------------------------------------------------------
+
+void ShootemApp::OnPlayerHit()
+{
+    this->playerState = PS_Dying;
+    this->fPlayerTimeElapsed = 0.f;
+}
+
+//------------------------------------------------------------------------------
+
+void ShootemApp::DrawEnemies()
+{
+    this->BeginDraw( this->refShaderColor, this->refMeshCylinder );
+    this->BeginPass( this->refShaderColor, 0 );
+    this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+
+    int numEnemies = this->enemies.Size();
+    for (int index=0; index<numEnemies; index++)
+    {
+        Enemy& enemy = this->enemies.At(index);
+
+        vector4 color(enemy.color);
+        if (enemy.state == ES_Dying)
+        {
+            color.lerp(enemy.color, vector4(0,0,0,1), enemy.fTimeElapsed / this->fEnemyDyingTime );
+        }
+
+        this->refShaderColor->SetVector4( nShaderState::MatDiffuse, color );
+
+        matrix44 matWorld;
+        matWorld.scale(enemy.vecScale);
+        matWorld.scale(vector3(.5f,.5f,.5f));
+        matWorld.rotate_x(n_deg2rad(90.f));
+        matWorld.translate(enemy.vecPos);
+
+        this->Draw(matWorld);
+    }
+    this->EndPass( this->refShaderColor );
+    this->EndDraw( this->refShaderColor );
+}
+
+//------------------------------------------------------------------------------
+
 void ShootemApp::Render()
 {
     nGfxServer2* gfxServer = nGfxServer2::Instance();
@@ -303,21 +494,33 @@ void ShootemApp::Render()
     gfxServer->SetTransform(nGfxServer2::Projection, matProj);
 
     //draw the player
+    vector4 playerColor(0,0,1,1);//blue
+    vector3 playerScale(.5f,.5f,.5f);
+    if (this->playerState == PS_Dying)
+    {
+        float lerpVal = this->fPlayerTimeElapsed / this->fPlayerDyingTime;
+        playerColor.lerp(playerColor, vector4(0,0,0,0), lerpVal);
+        playerScale.lerp(playerScale, vector3(.5f,.5f,0.f), lerpVal);
+    }
+
     matrix44 matWorld;
-    matWorld.scale(vector3(.5f,.5f,.5f));
+    matWorld.scale(playerScale);
     matWorld.rotate_x(n_deg2rad(90.f));
     matWorld.translate(this->vecPlayerPos);
 
     this->BeginDraw( this->refShaderColor, this->refMeshCylinder );
     this->BeginPass( this->refShaderColor, 0 );
     this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShaderColor->SetVector4( nShaderState::MatDiffuse, vector4(1,0,1,1) );
+    this->refShaderColor->SetVector4( nShaderState::MatDiffuse, playerColor );
     this->Draw(matWorld);
     this->EndPass( this->refShaderColor );
     this->EndDraw( this->refShaderColor );
 
     //draw the stage
     this->DrawProps();
+
+    //draw the enemies
+    this->DrawEnemies();
 
     //draw the bullets
     this->DrawProjectiles();
