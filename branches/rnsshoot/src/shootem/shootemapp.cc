@@ -18,14 +18,15 @@ void ShootemApp::Init()
     this->bWireframe = false;
     this->bCameraOrtho = false;
 
-    this->vecEye.set(0,5,-3);
+    this->vecEye.set(0,5,-2);
     this->vecRot.set(n_deg2rad(60),0,0); //looking down 30 degrees
 
     this->vecPlayerPos.set(0,0,0);
-    this->vecCameraOffset.set(0,5,-3);
-    this->fCameraThreshold = 2.f;
+    this->vecCameraOffset.set(0,5,-2);
+    this->fCameraThreshold = 1.f;
 
     this->fPlayerSpeed = 5.f;
+    this->fPlayerSize = 1.f;
 
     this->projectiles.Reset();
 
@@ -49,6 +50,30 @@ void ShootemApp::Init()
         this->tiles[index].color = colors[index];
         tilePos.z += 10.f;
     }
+
+    //initialize props
+    {
+        const int numPropsPerTile = 10;
+        //int propIndex = 0;
+        for (int tileIndex=0; tileIndex<numTiles; tileIndex++)
+        {
+            Tile& tile = this->tiles[tileIndex];
+            float min_x = tile.vecPos.x;
+            float min_z = tile.vecPos.z;
+            for (int index=0; index<numPropsPerTile; index++)
+            {
+                Prop newProp;
+                newProp.vecPos.x = min_x + n_rand_real(1.f) * tile.vecScale.x;//tilesize_x
+                newProp.vecPos.z = min_z + n_rand_real(1.f) * tile.vecScale.z;//tilesize_z
+                newProp.vecScale.set(1,1,1);
+                newProp.highlight = false;
+                //TODO- check for collision
+                this->props.Append(newProp);
+            }
+        }
+    }
+
+    //initialize items (shoot and pick, or just pick)
 }
 
 //------------------------------------------------------------------------------
@@ -61,6 +86,7 @@ bool ShootemApp::Open()
     N_REF_LOAD_MESH(this->refMeshGround, "plane", "proj:meshes/plane.n3d2");
     N_REF_LOAD_MESH(this->refMeshCylinder, "cylinder", "proj:meshes/cylinder.n3d2");
     N_REF_LOAD_MESH(this->refMeshSphere, "sphere", "proj:meshes/sphere.n3d2");
+    N_REF_LOAD_MESH(this->refMeshCone, "cone", "proj:meshes/cone.nvx2");
 
     N_REF_LOAD_TEXTURE(this->refTextureGround, "checker", "proj:textures/checker.jpg");
 
@@ -77,11 +103,16 @@ void ShootemApp::Close()
     N_REF_RELEASE(this->refMeshGround);
     N_REF_RELEASE(this->refMeshCylinder);
     N_REF_RELEASE(this->refMeshSphere);
+    N_REF_RELEASE(this->refMeshCone);
 
     N_REF_RELEASE(this->refTextureGround);
 
     N_REF_RELEASE(this->refShaderColor);
     N_REF_RELEASE(this->refShaderDiffuse);
+
+    this->projectiles.Clear();
+    this->tiles.Clear();
+    this->props.Clear();
 }
 
 //------------------------------------------------------------------------------
@@ -119,7 +150,12 @@ void ShootemApp::Tick( float fTimeElapsed )
     }
 
     //update camera position
-    this->vecPlayerPos += vecMove;
+    vector3 playerPos = this->vecPlayerPos + vecMove;
+    Prop* prop = this->CheckProps(playerPos, this->fPlayerSize);
+    if (prop)
+        prop->highlight = true;
+    else
+        this->vecPlayerPos += vecMove;
 
     //move the camera when the position of the player exceeds a margin
     vector3 eyePos = this->vecPlayerPos + this->vecCameraOffset;
@@ -194,6 +230,53 @@ void ShootemApp::DrawProjectiles()
 
 //------------------------------------------------------------------------------
 
+void ShootemApp::DrawProps()
+{
+    this->BeginDraw( this->refShaderColor, this->refMeshCone );
+    this->BeginPass( this->refShaderColor, 0 );
+    this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+    int numProps = this->props.Size();
+    for (int index=0; index<numProps; index++)
+    {
+        Prop& prop = this->props.At(index);
+
+        if (prop.highlight)
+        {
+            this->refShaderColor->SetVector4( nShaderState::MatDiffuse, vector4(1,1,0,1) );
+            prop.highlight = false;
+        }
+        else
+            this->refShaderColor->SetVector4( nShaderState::MatDiffuse, vector4(0,1,0,1) );
+
+        matrix44 matWorld;
+        matWorld.scale(prop.vecScale);
+        matWorld.rotate_x(n_deg2rad(90.f));
+        vector3 pos(prop.vecPos);
+        pos += vector3(0,prop.vecScale.y,0);//model offset
+        matWorld.translate(pos);
+        this->Draw(matWorld);
+    }
+    this->EndPass( this->refShaderColor );
+    this->EndDraw( this->refShaderColor );
+}
+
+//------------------------------------------------------------------------------
+
+ShootemApp::Prop* ShootemApp::CheckProps(const vector3& pos, float fDistance)
+{
+    int numProps = this->props.Size();
+    float fDistSq = fDistance * fDistance;
+    for (int index=0; index<numProps; index++)
+    {
+        vector3 dist(pos - this->props[index].vecPos);
+        if (dist.lensquared() < fDistSq)
+            return &this->props[index];
+    }
+    return 0;
+}
+
+//------------------------------------------------------------------------------
+
 void ShootemApp::Render()
 {
     nGfxServer2* gfxServer = nGfxServer2::Instance();
@@ -233,6 +316,9 @@ void ShootemApp::Render()
     this->EndPass( this->refShaderColor );
     this->EndDraw( this->refShaderColor );
 
+    //draw the stage
+    this->DrawProps();
+
     //draw the bullets
     this->DrawProjectiles();
 
@@ -255,6 +341,9 @@ void ShootemApp::Render()
     //render text
     float rowheight = 32.f / gfxServer->GetDisplayMode().GetHeight();
     nString str;
+    //score
+
+    //debug text
     str.Format("Projectiles.Size = %d", this->projectiles.Size());
     gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );//lower-left corner
 }

@@ -61,6 +61,7 @@ protected:
     matrix44 matProj;
 
     float fPlayerSpeed;
+    float fPlayerSize;
 
     //fire
     struct Projectile
@@ -89,12 +90,26 @@ protected:
 
     nArray<Tile> tiles;
 
+    //props
+    struct Prop
+    {
+        vector3 vecPos;
+        vector3 vecScale;
+        vector4 color;
+        bool highlight;
+    };
+
+    nArray<Prop> props;
+    void DrawProps();
+    Prop* CheckProps(const vector3& pos, float fDistance);
+
     //resources
     nRef<nMesh2> refMeshGround;
     nRef<nTexture2> refTextureGround;
 
     nRef<nMesh2> refMeshCylinder;
     nRef<nMesh2> refMeshSphere;
+    nRef<nMesh2> refMeshCone;
 
     nRef<nShader2> refShaderColor; //diffusecolor-only shader
     nRef<nShader2> refShaderDiffuse; //diffusemap-only shader
