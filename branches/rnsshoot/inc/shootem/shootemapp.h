@@ -47,6 +47,7 @@ protected:
 
     //options
     bool bWireframe;
+    bool bCameraOrtho;
 
     vector3 vecEye;
     vector3 vecRot;
@@ -57,6 +58,7 @@ protected:
     float fCameraThreshold;
 
     matrix44 matView;
+    matrix44 matProj;
 
     float fPlayerSpeed;
 
@@ -76,6 +78,16 @@ protected:
     void AddProjectile();
     void TickProjectiles(float fTimeElapsed);
     void DrawProjectiles();
+
+    //tiles
+    struct Tile
+    {
+        vector3 vecPos;
+        vector3 vecScale;
+        vector4 color;
+    };
+
+    nArray<Tile> tiles;
 
     //resources
     nRef<nMesh2> refMeshGround;

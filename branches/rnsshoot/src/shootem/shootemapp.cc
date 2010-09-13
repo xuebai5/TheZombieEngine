@@ -16,12 +16,13 @@
 void ShootemApp::Init()
 {
     this->bWireframe = false;
+    this->bCameraOrtho = false;
 
-    this->vecEye.set(0,5,3);
-    this->vecRot.set(n_deg2rad(-60),0,0); //looking down 30 degrees
+    this->vecEye.set(0,5,-3);
+    this->vecRot.set(n_deg2rad(60),0,0); //looking down 30 degrees
 
     this->vecPlayerPos.set(0,0,0);
-    this->vecCameraOffset.set(0,5,3);
+    this->vecCameraOffset.set(0,5,-3);
     this->fCameraThreshold = 2.f;
 
     this->fPlayerSpeed = 5.f;
@@ -30,6 +31,24 @@ void ShootemApp::Init()
 
     this->fProjectileMaxTime = 2.f;
     this->fProjectileSpeed = 10.f;
+
+    //initialize ground
+    const int numTiles = 4;
+    this->tiles.SetFixedSize(numTiles);
+
+    const vector4 colors[numTiles] = { vector4(1.0f, 1.0f, 1.0f, 1.0f),
+                                       vector4(0.0f, 1.0f, 0.0f, 1.0f),
+                                       vector4(0.0f, 1.0f, 1.0f, 1.0f),
+                                       vector4(1.0f, 0.0f, 0.0f, 1.0f) };
+    vector3 tilePos( -5.f, 0.f, -5.f );
+
+    for (int index=0; index<numTiles; index++)
+    {
+        this->tiles[index].vecPos = tilePos;
+        this->tiles[index].vecScale.set( 10.f, 0.f, 10.f );
+        this->tiles[index].color = colors[index];
+        tilePos.z += 10.f;
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -73,9 +92,10 @@ void ShootemApp::Tick( float fTimeElapsed )
 
     //toggle options
     if (inputServer->GetButton("wireframe"))
-    {
         this->bWireframe = !this->bWireframe;
-    }
+
+    if (inputServer->GetButton("toggle"))
+        this->bCameraOrtho = !this->bCameraOrtho;
 
     float moveSpace = this->fPlayerSpeed * fTimeElapsed;//=cameraSpeed
 
@@ -83,11 +103,11 @@ void ShootemApp::Tick( float fTimeElapsed )
     vector3 vecMove;
     if (inputServer->GetButton("forward"))
     {
-        vecMove.z -= moveSpace;
+        vecMove.z += moveSpace;
     }
     if (inputServer->GetButton("backward"))
     {
-        vecMove.z += moveSpace;
+        vecMove.z -= moveSpace;
     }
     if (inputServer->GetButton("strafe_left"))
     {
@@ -128,7 +148,7 @@ void ShootemApp::AddProjectile()
 {
     Projectile& projectile = this->projectiles.PushBack(Projectile());
     projectile.vecPos.set( vecPlayerPos );
-    projectile.vecDir.set( 0.f, 0.f, -1.f );
+    projectile.vecDir.set( 0.f, 0.f, 1.f );
     projectile.vecSize.set( .1f, .1f, .1f );
     projectile.fTimeElapsed = 0.f;
 }
@@ -189,9 +209,15 @@ void ShootemApp::Render()
 
     gfxServer->SetTransform(nGfxServer2::View, matView);
 
-    nCamera2 cam;
+    //nCamera2 cam;
     //cam.SetOrthogonal(10.f, 10.f, .1f, 5000.f);
-    gfxServer->SetCamera( cam );
+    //gfxServer->SetCamera( cam );
+    if (this->bCameraOrtho)
+        this->matProj.orthoLh(10.f, 10.f, 0.1f, 100.f);
+    else
+        this->matProj.perspFovLh(n_deg2rad(60.0f), float(4.0f / 3.0f), 0.1f, 100.f);
+
+    gfxServer->SetTransform(nGfxServer2::Projection, matProj);
 
     //draw the player
     matrix44 matWorld;
@@ -215,8 +241,14 @@ void ShootemApp::Render()
     this->BeginPass( this->refShaderDiffuse, 0 );
     this->refShaderDiffuse->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
     this->refShaderDiffuse->SetTexture( nShaderState::DiffMap0, this->refTextureGround );
-    this->refShaderDiffuse->SetVector4( nShaderState::MatDiffuse, vector4(1,1,1,1) );
-    this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
+
+    int numTiles = this->tiles.Size();
+    for (int tileIndex=0; tileIndex<numTiles; tileIndex++)
+    {
+        this->refShaderDiffuse->SetVector4( nShaderState::MatDiffuse, this->tiles[tileIndex].color );
+        this->Draw( this->tiles[tileIndex].vecPos, this->tiles[tileIndex].vecScale );
+    }
+
     this->EndPass( this->refShaderDiffuse );
     this->EndDraw( this->refShaderDiffuse );
 
