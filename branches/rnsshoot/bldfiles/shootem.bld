@@ -8,10 +8,16 @@
 beginmodule shootemapp
     setdir shootem
     setfiles {
-        runtime shootemapp
+        runtime
+        shootemapp
+        shootemapp_model
+        textfile
     }
     setheaders{
-        personal shootemapp
+        personal
+        shootemapp
+        model
+        textfile
     }
     setlibs_win32 { 
         shell32.lib

@@ -53,8 +53,8 @@ main(int argc, const char** argv)
     bool alwaysOnTopArg = args.GetBoolArg("-alwaysontop");
     ushort xPosArg      = (ushort) args.GetIntArg("-x", 0);
     ushort yPosArg      = (ushort) args.GetIntArg("-y", 0);
-    ushort widthArg     = (ushort) args.GetIntArg("-w", 640);
-    ushort heightArg    = (ushort) args.GetIntArg("-h", 480);
+    ushort widthArg     = (ushort) args.GetIntArg("-w", 800);
+    ushort heightArg    = (ushort) args.GetIntArg("-h", 600);
 
     // initialize Nebula runtime
     nKernelServer* kernel = n_new( nKernelServer );

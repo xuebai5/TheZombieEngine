@@ -6,12 +6,12 @@
 
     A minimal demo framework for Zombie apps
 */
-#include "util/nstring.h"
-#include "mathlib/matrix.h"
-
 #include "kernel/nref.h"
+#include "util/nstring.h"
 #include "util/narray.h"
 #include "mathlib/matrix.h"
+
+#include "gfx2/ngfxserver2.h"
 
 //------------------------------------------------------------------------------
 
@@ -19,6 +19,9 @@ class nMesh2;
 class nTexture2;
 class nShader2;
 class nResource;
+
+class Model;
+class Shape;
 
 #define N_REF_LOAD_MESH(a,name,file) a = gfxServer->NewMesh(name);\
     if (!this->LoadResource(a, file)) return false;
@@ -48,6 +51,7 @@ protected:
     //options
     bool bWireframe;
     bool bCameraOrtho;
+    bool bShowBoxes;
 
     vector3 vecEye;
     vector3 vecRot;
@@ -78,6 +82,21 @@ protected:
 
     void ResetLevel();
     void ResetGame();
+
+    //models
+    bool LoadModels();
+    void ReleaseModels();
+
+    bool LoadModel(Model* model, const char* path);
+    bool LoadScene(Model* model, const char* path);
+    bool LoadMaterial(Shape* shape, const char* path);
+    void ReleaseModel(Model* model);
+
+    void DrawModel(Model* model, matrix44& matWorld);
+    nShaderParams shaderParams;
+
+    nArray<Model*> models;
+    int playerModel;//index into models[]
 
     //fire
     struct Projectile

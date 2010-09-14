@@ -1,4 +1,5 @@
 #include "shootem/shootemapp.h"
+#include "shootem/model.h"
 
 #include "kernel/nfileserver2.h"
 #include "kernel/ntimeserver.h"
@@ -17,13 +18,15 @@ void ShootemApp::Init()
 {
     this->bWireframe = false;
     this->bCameraOrtho = false;
+    this->bShowBoxes = false;
 
     this->vecPlayerPos.set(0,0,0);
-    this->vecCameraOffset.set(0,7,-2);
+    this->vecCameraOffset.set(0,3,-5);
     this->fCameraThreshold = 1.f;
 
     this->vecEye = this->vecPlayerPos + this->vecCameraOffset;
-    this->vecRot.set(n_deg2rad(60),0,0); //looking down 30 degrees
+    //this->vecRot.set(n_deg2rad(60),0,0); //looking down 30 degrees
+    this->vecRot.set(n_deg2rad(30),0,0);
 
     this->fPlayerSpeed = 5.f;
     this->fPlayerSize = 1.f;
@@ -133,6 +136,8 @@ bool ShootemApp::Open()
     N_REF_LOAD_SHADER(this->refShaderColor, "color", "proj:shaders/color.fx");
     N_REF_LOAD_SHADER(this->refShaderDiffuse, "diffuse", "proj:shaders/diffuse.fx");
 
+    if (!this->LoadModels()) return false;
+
     return true;
 }
 
@@ -150,6 +155,8 @@ void ShootemApp::Close()
     N_REF_RELEASE(this->refShaderColor);
     N_REF_RELEASE(this->refShaderDiffuse);
 
+    this->ReleaseModels();
+
     this->projectiles.Clear();
     this->tiles.Clear();
     this->props.Clear();
@@ -165,8 +172,11 @@ void ShootemApp::Tick( float fTimeElapsed )
     if (inputServer->GetButton("wireframe"))
         this->bWireframe = !this->bWireframe;
 
-    if (inputServer->GetButton("toggle"))
+    if (inputServer->GetButton("ortho"))
         this->bCameraOrtho = !this->bCameraOrtho;
+
+    if (inputServer->GetButton("toggle"))
+        this->bShowBoxes = !this->bShowBoxes;
 
     switch (this->playerState)
     {
@@ -239,7 +249,8 @@ void ShootemApp::Tick( float fTimeElapsed )
         {
             this->vecEye.z = eyePos.z + this->fCameraThreshold;
         }
-
+        this->vecEye.x = eyePos.x;
+        
         //shoot
         if (inputServer->GetButton("fire"))
         {
@@ -317,32 +328,51 @@ void ShootemApp::DrawProjectiles()
 
 void ShootemApp::DrawProps()
 {
-    this->BeginDraw( this->refShaderColor, this->refMeshCone );
-    this->BeginPass( this->refShaderColor, 0 );
-    this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    int numProps = this->props.Size();
-    for (int index=0; index<numProps; index++)
+    if (this->bShowBoxes)
     {
-        Prop& prop = this->props.At(index);
-
-        if (prop.highlight)
+        this->BeginDraw( this->refShaderColor, this->refMeshCone );
+        this->BeginPass( this->refShaderColor, 0 );
+        this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+        int numProps = this->props.Size();
+        for (int index=0; index<numProps; index++)
         {
-            this->refShaderColor->SetVector4( nShaderState::MatDiffuse, vector4(1,1,0,1) );
-            prop.highlight = false;
-        }
-        else
-            this->refShaderColor->SetVector4( nShaderState::MatDiffuse, vector4(0,1,0,1) );
+            Prop& prop = this->props.At(index);
 
-        matrix44 matWorld;
-        matWorld.scale(prop.vecScale);
-        matWorld.rotate_x(n_deg2rad(90.f));
-        vector3 pos(prop.vecPos);
-        pos += vector3(0,prop.vecScale.y,0);//model offset
-        matWorld.translate(pos);
-        this->Draw(matWorld);
+            if (prop.highlight)
+            {
+                this->refShaderColor->SetVector4( nShaderState::MatDiffuse, vector4(1,1,0,1) );
+                prop.highlight = false;
+            }
+            else
+                this->refShaderColor->SetVector4( nShaderState::MatDiffuse, vector4(0,1,0,1) );
+
+            matrix44 matWorld;
+            matWorld.scale(prop.vecScale);
+            matWorld.rotate_x(n_deg2rad(90.f));
+            vector3 pos(prop.vecPos);
+            pos += vector3(0,prop.vecScale.y,0);//model offset
+            matWorld.translate(pos);
+            this->Draw(matWorld);
+        }
+        this->EndPass( this->refShaderColor );
+        this->EndDraw( this->refShaderColor );
     }
-    this->EndPass( this->refShaderColor );
-    this->EndDraw( this->refShaderColor );
+    else
+    {
+        int numProps = this->props.Size();
+        for (int index=0; index<numProps; index++)
+        {
+            Prop& prop = this->props.At(index);
+
+            matrix44 matWorld;
+            vector3 scale(prop.vecScale);
+            scale *= .3f;
+            matWorld.scale(scale);
+            matWorld.translate(prop.vecPos);
+
+            this->DrawModel(this->models[Model_Tree], matWorld);
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -495,33 +525,58 @@ void ShootemApp::OnLevelEnd()
 
 void ShootemApp::DrawEnemies()
 {
-    this->BeginDraw( this->refShaderColor, this->refMeshCylinder );
-    this->BeginPass( this->refShaderColor, 0 );
-    this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-
-    int numEnemies = this->enemies.Size();
-    for (int index=0; index<numEnemies; index++)
+    if (this->bShowBoxes)
     {
-        Enemy& enemy = this->enemies.At(index);
+        this->BeginDraw( this->refShaderColor, this->refMeshCylinder );
+        this->BeginPass( this->refShaderColor, 0 );
+        this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
 
-        vector4 color(enemy.color);
-        if (enemy.state == ES_Hit)
-            color.lerp(vector4(1,1,0,1), enemy.fTimeElapsed / this->fEnemyHitTime);
-        if (enemy.state == ES_Dying)
-            color.lerp(enemy.color, vector4(0,0,0,1), enemy.fTimeElapsed / this->fEnemyDyingTime );
+        int numEnemies = this->enemies.Size();
+        for (int index=0; index<numEnemies; index++)
+        {
+            Enemy& enemy = this->enemies.At(index);
 
-        this->refShaderColor->SetVector4( nShaderState::MatDiffuse, color );
+            vector4 color(enemy.color);
+            if (enemy.state == ES_Hit)
+                color.lerp(vector4(1,1,0,1), enemy.fTimeElapsed / this->fEnemyHitTime);
+            if (enemy.state == ES_Dying)
+                color.lerp(enemy.color, vector4(0,0,0,1), enemy.fTimeElapsed / this->fEnemyDyingTime );
 
-        matrix44 matWorld;
-        matWorld.scale(enemy.vecScale);
-        matWorld.scale(vector3(.5f,.5f,.5f));
-        matWorld.rotate_x(n_deg2rad(90.f));
-        matWorld.translate(enemy.vecPos + vector3(0,1,0));
+            this->refShaderColor->SetVector4( nShaderState::MatDiffuse, color );
 
-        this->Draw(matWorld);
+            matrix44 matWorld;
+            matWorld.scale(enemy.vecScale);
+            matWorld.scale(vector3(.5f,.5f,.5f));
+            matWorld.rotate_x(n_deg2rad(90.f));
+            matWorld.translate(enemy.vecPos + vector3(0,1,0));
+
+            this->Draw(matWorld);
+        }
+        this->EndPass( this->refShaderColor );
+        this->EndDraw( this->refShaderColor );
     }
-    this->EndPass( this->refShaderColor );
-    this->EndDraw( this->refShaderColor );
+    else
+    {
+        int numEnemies = this->enemies.Size();
+        for (int index=0; index<numEnemies; index++)
+        {
+            Enemy& enemy = this->enemies.At(index);
+
+            vector4 color(1,1,1,1);
+            if (enemy.state == ES_Hit)
+                color.lerp(vector4(1,1,0,1), enemy.fTimeElapsed / this->fEnemyHitTime);
+            if (enemy.state == ES_Dying)
+                color.lerp(color, vector4(0,0,0,1), enemy.fTimeElapsed / this->fEnemyDyingTime );
+
+            this->shaderParams.SetArg(nShaderState::MatDiffuse, color);
+            
+            matrix44 matWorld;
+            matWorld.scale(enemy.vecScale);
+            matWorld.translate(enemy.vecPos);
+
+            this->DrawModel(this->models[Model_Enemy], matWorld);
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -552,8 +607,14 @@ void ShootemApp::Render()
     gfxServer->SetTransform(nGfxServer2::Projection, matProj);
 
     //draw the player
-    vector4 playerColor(0,0,1,1);//blue
-    vector3 playerScale(.5f,.5f,.5f);
+    vector4 playerColor(1.f,1.f,1.f,1.f);//blue
+    vector3 playerScale(1.f,1.f,1.f);
+    if (this->bShowBoxes)
+    {
+        playerColor.set(0,0,1,1);//blue
+        playerScale.set(.5f,.5f,.5f);
+    }
+
     if (this->playerState == PS_Dying)
     {
         float lerpVal = this->fPlayerTimeElapsed / this->fPlayerDyingTime;
@@ -561,18 +622,29 @@ void ShootemApp::Render()
         playerScale.lerp(playerScale, vector3(.5f,.5f,0.f), lerpVal);
     }
 
-    matrix44 matWorld;
-    matWorld.scale(playerScale);
-    matWorld.rotate_x(n_deg2rad(90.f));
-    matWorld.translate(this->vecPlayerPos);
+    if (this->bShowBoxes)
+    {
+        matrix44 matWorld;
+        matWorld.scale(playerScale);
+        matWorld.rotate_x(n_deg2rad(90.f));
+        matWorld.translate(this->vecPlayerPos);
 
-    this->BeginDraw( this->refShaderColor, this->refMeshCylinder );
-    this->BeginPass( this->refShaderColor, 0 );
-    this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShaderColor->SetVector4( nShaderState::MatDiffuse, playerColor );
-    this->Draw(matWorld);
-    this->EndPass( this->refShaderColor );
-    this->EndDraw( this->refShaderColor );
+        this->BeginDraw( this->refShaderColor, this->refMeshCylinder );
+        this->BeginPass( this->refShaderColor, 0 );
+        this->refShaderColor->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
+        this->refShaderColor->SetVector4( nShaderState::MatDiffuse, playerColor );
+        this->Draw(matWorld);
+        this->EndPass( this->refShaderColor );
+        this->EndDraw( this->refShaderColor );
+    }
+    else
+    {
+        matrix44 matWorld;
+        matWorld.scale(playerScale);
+        matWorld.translate(this->vecPlayerPos);
+        this->shaderParams.SetArg(nShaderState::MatDiffuse, playerColor);
+        this->DrawModel(this->models[Model_Player], matWorld);
+    }
 
     //draw the stage
     this->DrawProps();
