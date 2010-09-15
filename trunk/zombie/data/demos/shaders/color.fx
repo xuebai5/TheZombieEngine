@@ -8,14 +8,10 @@ shared float4x4 ModelViewProjection;
 
 matrix<float,4,3> JointPalette[72];
 
-int mipMapLodBias;
-
 int FillMode = 3; //1=Point, 2=Wireframe, 3=Solid
 int CullMode = 2; //1=NoCull, 2=CW, 3=CCW
 
-texture diffMap;
-
-#include "shaders:../lib/diffsampler.fx"
+float4 MatDiffuse = float4(1.f,0.f,1.f,0.f);
 
 struct VsInput
 {
@@ -46,7 +42,7 @@ VsOutput vsMain(const VsInput vsIn, const uniform int geomType)
 
 float4 psMain(const VsOutput psIn) : COLOR
 {
-    return tex2D( DiffSampler, psIn.uv0 );
+    return MatDiffuse;
 }
                            
 technique tColorStatic

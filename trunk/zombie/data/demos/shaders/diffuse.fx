@@ -13,6 +13,8 @@ int mipMapLodBias;
 int FillMode = 3; //1=Point, 2=Wireframe, 3=Solid
 int CullMode = 2; //1=NoCull, 2=CW, 3=CCW
 
+float4 MatDiffuse = float4(1.f,1.f,1.f,1.f);
+
 texture DiffMap0 : DIFFUSE;
 
 sampler2D ColorSampler = sampler_state
@@ -54,7 +56,7 @@ VsOutput vsMain(const VsInput vsIn, const uniform int geomType)
 
 float4 psMain(const VsOutput psIn) : COLOR
 {
-    return tex2D( ColorSampler, psIn.uv0 );
+    return MatDiffuse * tex2D( ColorSampler, psIn.uv0 );
 }
                            
 technique tColorStatic

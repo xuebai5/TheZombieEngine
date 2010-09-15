@@ -22,7 +22,8 @@ function OnStartup()
     proj = f:manglepath('proj:')
     home = f:manglepath('home:')
 
-    f:setassign('wc', proj)
+    f:setassign('wc', 'home:../scourge')
+    f:setassign('wctextures', 'wc:export/textures')
     f:setassign('shaders', home .. '/data/shaders/2.0/')
 
     popcwd()
@@ -60,6 +61,10 @@ function OnMapInput()
     input:map('keyb0:s.pressed', 'backward')
     input:map('keyb0:a.pressed', 'strafe_left')
     input:map('keyb0:d.pressed', 'strafe_right')
+
+    input:map('keyb0:space.down', 'jump')
+    input:map('mouse0:btn0.down', 'fire')
+    input:map('mouse0:g.down', 'grenade')
     
     input:map( 'keyb0:esc.pressed', 'menu' )
     input:map( 'keyb0:left.pressed', 'left' )
@@ -70,6 +75,7 @@ function OnMapInput()
     input:map( 'keyb0:0.down', 'wireframe' )
     
     input:map( 'keyb0:space.down', 'reset' )
+    input:map( 'keyb0:o.down', 'ortho' )
     input:map( 'keyb0:t.down', 'toggle' )
     input:map( 'keyb0:l.down', 'light' )
     input:map( 'keyb0:x.down', 'axes' )
