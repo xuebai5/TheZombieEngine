@@ -85,10 +85,10 @@ VsOutput vsMain(const VsInput vsIn)
 float4 psMain(const VsOutput psIn) : COLOR
 {
     float4 color = tex2D( ColorSampler, psIn.uv0 );
-    float spec = .7f + tex2D( SpecSampler, psIn.uv0 ) * .3f;
+    float spec = .5f * tex2D( SpecSampler, psIn.uv0 ) + .5f;
     float4 diff = texCUBE( DiffCubeSampler, psIn.normal );
 
-    return color * spec * diff;
+    return spec * diff * color;
 }
                            
 technique t0
