@@ -5,12 +5,16 @@
 */
 //------------------------------------------------------------------------------
 #include "kernel/nkernelserver.h"
-#include "demos/demoapp.h"
-#include "snakes/snakesapp.h"
-#include "cameras/camerasapp.h"
-#include "transform/transformapp.h"
-#include "shaders/shadersapp.h"
-#include "ambient/ambientapp.h"
+
+//#include "demos/demoapp.h"
+//#include "snakes/snakesapp.h"
+//#include "cameras/camerasapp.h"
+//#include "transform/transformapp.h"
+//#include "shaders/shadersapp.h"
+//#include "ambient/ambientapp.h"
+//#include "models/modelsapp.h"
+
+#include "shootem/shootemapp.h"
 
 #ifdef __WIN32__
 #include "kernel/nwin32loghandler.h"
@@ -54,7 +58,6 @@ main(int argc, const char** argv)
 	const char* scriptserverArg = args.GetStringArg("-scriptserver", "nluaserver");
 	const char* projDirArg = args.GetStringArg("-proj", "home:data/demos");
 	const char* startupArg = args.GetStringArg("-startup", "proj:scripts/startup.lua");
-    const char* appArg = args.GetStringArg("-app", "ambient");
 
     bool fullscreenArg	= args.GetBoolArg("-fullscreen");
     bool alwaysOnTopArg = args.GetBoolArg("-alwaysontop");
@@ -113,18 +116,14 @@ main(int argc, const char** argv)
 	}
 
     DemoApp* app(0);
-    if (!strcmp( appArg, "snakes" ))
-        app = n_new(SnakesApp);
-    else if (!strcmp( appArg, "cameras" ))
-        app = n_new(CamerasApp);
-    else if (!strcmp( appArg, "transform" ))
-        app = n_new(TransformApp);
-    else if (!strcmp( appArg, "shaders" ))
-        app = n_new(ShadersApp);
-    else if (!strcmp( appArg, "ambient" ))
-        app = n_new(AmbientApp);
-    else
-        app = n_new(DemoApp);
+    //app = n_new(DemoApp);
+    //app = n_new(SnakesApp);
+    //app = n_new(CamerasApp);
+    //app = n_new(TransformApp);
+    //app = n_new(ShadersApp);
+    //app = n_new(AmbientApp);
+    //app = n_new(ModelsApp);
+    app = n_new(ShootemApp);
 
     pGfxServer->SetDisplayMode(displayMode);
     nCamera2 camera(n_deg2rad(60), float(displayMode.GetHeight())/float(displayMode.GetWidth()),1.f,100.f);
