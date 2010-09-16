@@ -15,6 +15,9 @@
 #include "nlevel/nlevel.h"
 #include "zombieentity/nctransform.h"
 
+#include "gfx2/nshader2.h"
+#include "gfx2/nmesh2.h"
+
 nNebulaClass(nShootemState, "ncommonstate");
 
 //------------------------------------------------------------------------------
@@ -27,12 +30,43 @@ nShootemState::nShootemState()
     this->cameraOffset.set(0, 3.f, -5.f);
     this->cameraThreshold = 1.f;
     this->cameraAngles.set(n_deg2rad(-15), 0.f);
+
+    this->fProjectileMaxTime = 2.f;
+    this->fProjectileSpeed = 10.f;
 }
 
 //------------------------------------------------------------------------------
 
 nShootemState::~nShootemState()
 {
+}
+
+//------------------------------------------------------------------------------
+
+void
+nShootemState::OnCreate(nApplication* application)
+{
+    nGfxServer2* gfxServer = nGfxServer2::Instance();
+
+    this->refShaderColor = gfxServer->NewShader("color");
+    n_assert(this->refShaderColor.isvalid());
+    this->refShaderColor->SetFilename("home:data/demos/shaders/color.fx");
+    if (!this->refShaderColor->Load())
+    {
+        this->refShaderColor->Release();
+        this->refShaderColor.invalidate();
+    }
+
+    this->refMeshCone = gfxServer->NewMesh("cone");
+    n_assert(this->refMeshCone.isvalid());
+    this->refMeshCone->SetFilename("home:data/demos/meshes/cone.nvx2");
+    if (!this->refMeshCone->Load())
+    {
+        this->refMeshCone->Release();
+        this->refMeshCone.invalidate();
+    }
+
+    nCommonState::OnCreate(application);
 }
 
 //------------------------------------------------------------------------------
@@ -80,8 +114,10 @@ nShootemState::OnStateLeave( const nString & nextState )
 void
 nShootemState::OnFrame()
 {
-    nInputServer* inputServer = nInputServer::Instance();
     nTime frameTime = this->app->GetFrameTime();
+
+    //---HandleInput(frameTime)---
+    nInputServer* inputServer = nInputServer::Instance();
 
     //player rotate
     float angleSpace = this->turnSpeed * float(frameTime);
@@ -136,7 +172,15 @@ nShootemState::OnFrame()
     //this->cameraPos.x = eyePos.x;
     this->cameraPos = eyePos;
     this->cameraAngles.rho = this->playerRot.y + n_deg2rad(180);//can't figure this out!
-    
+
+    //shoot
+    if (inputServer->GetButton("PrimaryAttack"))
+    {
+        this->AddProjectile();
+    }
+
+    this->TickProjectiles(float(frameTime));
+
     //update entities
     ncTransform* transform = this->refPlayerEntity->GetComponentSafe<ncTransform>();
     transform->SetPosition(this->playerPos);
@@ -161,4 +205,24 @@ void
 nShootemState::OnRender3D()
 {
     this->refViewport->OnRender3D();
+}
+
+//------------------------------------------------------------------------------
+/**
+*/
+void
+nShootemState::OnRender2D()
+{
+    nGfxServer2* gfxServer = nGfxServer2::Instance();
+    
+    //draw projectiles
+    this->DrawProjectiles();
+
+    //render text
+    float rowheight = 32.f / gfxServer->GetDisplayMode().GetHeight();
+    nString str;
+
+    //debug text
+    str.Format("Projectiles = %d", this->projectiles.Size());
+    gfxServer->Text( str.Get(), vector4(1.f,1.f,0,1), -1.f, 1.f - rowheight );//lower-left corner
 }
