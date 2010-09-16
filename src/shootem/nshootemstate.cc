@@ -14,6 +14,7 @@
 #include "nlevel/nlevelmanager.h"
 #include "nlevel/nlevel.h"
 #include "zombieentity/nctransform.h"
+#include "ngeomipmap/ncterraingmmclass.h"
 
 #include "gfx2/nshader2.h"
 #include "gfx2/nmesh2.h"
@@ -89,6 +90,17 @@ nShootemState::OnStateEnter( const nString & prevState )
         this->playerRot.set(transform->GetEuler());
     }
 
+    //find the terrain entity
+    nRefEntityObject refTerrain(level->FindEntity("outdoor"));
+    if (refTerrain.isvalid())
+    {
+        ncTerrainGMMClass * terraincomp = refTerrain->GetClassComponent<ncTerrainGMMClass>();
+        if (terraincomp)
+        {
+            this->refHeightMap = terraincomp->GetHeightMap();
+        }
+    }
+
     this->cameraPos = this->playerPos + this->cameraOffset;
     this->cameraAngles.set(n_deg2rad(-15.f), this->playerRot.y + n_deg2rad(180.f));
 
@@ -158,6 +170,16 @@ nShootemState::OnFrame()
 
     //update player position
     this->playerPos = matWorld * vecMove;
+
+    //adjust to terrain
+    if (this->refHeightMap)
+    {
+        float height;
+        if (this->refHeightMap->GetHeight(this->playerPos.x, this->playerPos.z, height))
+        {
+            this->playerPos.y=height;
+        }
+    }
 
     //update camera position applying threshold
     vector3 eyePos = matWorld * this->cameraOffset;
