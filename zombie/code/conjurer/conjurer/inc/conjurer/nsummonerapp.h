@@ -277,9 +277,7 @@ private:
 
     nRef<nAssetLoadState> refLoaderState;   ///< asset load state
     nRef<nAppViewportUI> refViewportUI;     ///< viewport layout
-    //nRef<nAppViewport> refRnsViewport;      ///< game viewport
-    //nRef<nAppViewport> refMapViewport;      ///< map viewport
-    //nRef<nPreviewViewport> refPreview;      ///< preview viewport
+    nRef<nAppViewport> refRnsViewport;      ///< game viewport
     nArray<nViewerParams> bookmarks;        ///< bookmark array
 
     // save manager used to save the editor state

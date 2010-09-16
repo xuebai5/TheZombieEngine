@@ -216,6 +216,12 @@ nSummonerApp::Open()
     this->refViewportUI->SetClientRect(0, 0, displayMode.GetWidth(), displayMode.GetHeight());
     this->refViewportUI->Open();
 
+    // load viewport for renaissance states
+    this->refRnsViewport = static_cast<nAppViewport*>(kernelServer->LoadAs("home:data/appdata/conjurer/viewport/rnsview.n2", "/usr/rnsview"));
+    n_assert(this->refRnsViewport.isvalid());
+    n_assert(this->refRnsViewport->IsA("nappviewport"));
+    this->refRnsViewport->Open();
+
     // create debug module for editor component visualizations
     n_verify( nDebugServer::Instance()->CreateDebugModule("neditordebugmodule", "editor") );
     n_verify( nDebugServer::Instance()->CreateDebugModule("nscenedebugmodule", "scene") );
@@ -223,6 +229,8 @@ nSummonerApp::Open()
     // create application states
     this->CreateState("nsummonerstate", "editor");
     this->CreateState("nassetloadstate", "loader");
+
+    this->CreateState("nshootemstate", "game");
 
     // if state need to be created in the begin, use FindState to force creation
     this->FindState("editor");
@@ -296,6 +304,10 @@ nSummonerApp::Close()
     {    
         this->refViewportUI->Close();
         this->refViewportUI->Release();
+    }
+    if (this->refRnsViewport.isvalid())
+    {
+        this->refRnsViewport->Release();
     }
     if (this->refMaterial.isvalid())
     {
