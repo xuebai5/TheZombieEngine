@@ -12,7 +12,8 @@
 #include "entity/nentityobject.h"
 #include "entity/nrefentityobject.h"
 
-class DemoApp;
+class nShader2;
+class nMesh2;
 //------------------------------------------------------------------------------
 class nShootemState : public nCommonState
 {
@@ -21,7 +22,8 @@ public:
     nShootemState();
     /// destructor
     virtual ~nShootemState();
-
+    /// called when state is created
+    virtual void OnCreate(nApplication* application);
     /// Called when state is becoming active
     void OnStateEnter( const nString& prevState );
     /// Called when state is becoming inactive
@@ -31,7 +33,7 @@ public:
     /// Called on state to perform 3d rendering
     virtual void OnRender3D();
     /// Called on state to perform 2d rendering
-    //virtual void OnRender2D();
+    virtual void OnRender2D();
 
     bool HandleInput(nTime frameTime);
 
@@ -40,6 +42,10 @@ protected:
     //virtual bool HandleInput(nTime frameTime);
     nRef<nAppViewport> refViewport;
     nRefEntityObject refPlayerEntity;
+
+    //graphics
+    nRef<nShader2> refShaderColor;
+    nRef<nMesh2> refMeshCone;
 
     //player
     vector3 playerPos;
@@ -52,6 +58,25 @@ protected:
     vector3 cameraPos;
     polar2 cameraAngles;
     float cameraThreshold;
+
+    //projectiles
+    struct Projectile
+    {
+        float fTimeElapsed;
+        vector3 vecPos;
+        vector3 vecRot;
+        vector3 vecDir;
+        vector3 vecSize;
+    };
+
+    nArray<Projectile> projectiles;//current projectiles
+    float fProjectileMaxTime;
+    float fProjectileSpeed;
+
+    void AddProjectile();
+    void TickProjectiles(float frameTime);
+    void DrawProjectiles();
+
 };
 
 //------------------------------------------------------------------------------
