@@ -1,0 +1,32 @@
+#===============================================================================
+#  shootem.bld
+#===============================================================================
+
+#===============================================================================
+#  Shootem application modules
+#===============================================================================
+beginmodule shootemapp
+    setdir shootem
+    setfiles {
+        shootemapp
+        shootemapp_model
+    }
+    setheaders{
+        shootemapp
+        shootemapp_model
+    }
+    setlibs_win32 { 
+        shell32.lib
+    }
+endmodule
+
+beginmodule nshootemstate
+    setdir shootem
+    setfiles {
+        nshootemstate
+    }
+    setheaders{
+        nshootemstate
+    }
+endmodule
+
