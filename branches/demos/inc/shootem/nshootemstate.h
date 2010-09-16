@@ -14,6 +14,8 @@
 
 class nShader2;
 class nMesh2;
+class nFloatMap;
+
 //------------------------------------------------------------------------------
 class nShootemState : public nCommonState
 {
@@ -42,6 +44,7 @@ protected:
     //virtual bool HandleInput(nTime frameTime);
     nRef<nAppViewport> refViewport;
     nRefEntityObject refPlayerEntity;
+    nRef<nFloatMap> refHeightMap;
 
     //graphics
     nRef<nShader2> refShaderColor;
