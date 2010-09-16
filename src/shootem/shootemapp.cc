@@ -257,8 +257,8 @@ void ShootemApp::Tick( float fTimeElapsed )
         //update camera position applying threshold
         matrix44 matWorld;
         matWorld.rotate_y(this->vecPlayerRot.y);
-        //matWorld.invert_simple();
-        this->vecEye = this->vecPlayerPos + matWorld * this->vecCameraOffset;
+        matWorld.translate(this->vecPlayerPos);
+        this->vecEye = /*this->vecPlayerPos + */ matWorld * this->vecCameraOffset;
         this->vecRot.set(n_deg2rad(30), this->vecPlayerRot.y, 0);//vecCameraRotOffset+vecPlayerRot
         
         //vector3 eyePos = this->vecPlayerPos + this->vecCameraOffset;
