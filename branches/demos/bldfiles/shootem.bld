@@ -24,6 +24,9 @@ beginmodule nshootemstate
     setdir shootem
     setfiles {
         nshootemstate
+        nshootemstate_projectile
+        nshootemstate_enemy
+        nshootemstate_events
     }
     setheaders{
         nshootemstate

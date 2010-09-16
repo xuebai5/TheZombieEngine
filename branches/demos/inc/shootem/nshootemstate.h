@@ -45,6 +45,7 @@ protected:
     nRef<nAppViewport> refViewport;
     nRefEntityObject refPlayerEntity;
     nRef<nFloatMap> refHeightMap;
+    void AdjustHeight(vector3& position);
 
     //graphics
     nRef<nShader2> refShaderColor;
@@ -80,6 +81,47 @@ protected:
     void TickProjectiles(float frameTime);
     void DrawProjectiles();
 
+    //enemies
+    enum EnemyState
+    {
+        ES_Idle = 0,
+        ES_Active,
+        ES_Hit,
+        ES_Dying,
+    };
+
+    struct Enemy
+    {
+        nRef<nEntityObject> refEntity;
+
+        vector3 vecPos;
+        float radius2D;
+        vector4 color;
+
+        EnemyState state;
+        int hitPoints;
+
+        float fTimeElapsed;
+    };
+
+    nArray<Enemy> enemies;
+
+    float fEnemySpawnDistance;
+    float fEnemySpeed;
+    float fEnemyHitTime;
+    float fEnemyDyingTime;
+
+    void InitEnemies();
+    void TickEnemies(float fTimeElapsed);
+    void SpawnEnemies();
+    void DrawEnemies();
+
+    Enemy* CheckEnemies(const vector3& pos, float radius);
+
+    //events
+    void OnEnemyHit(Enemy* enemy);
+    void OnPlayerHit();
+    void OnLevelEnd();
 };
 
 //------------------------------------------------------------------------------
