@@ -23,6 +23,7 @@ void ShootemApp::Init()
     this->bShowBoxes = false;
 
     this->vecPlayerPos.set(0,0,0);
+    this->vecPlayerRot.set(0,0,0);
     this->vecCameraOffset.set(0,3,-3);
     this->fCameraThreshold = 1.f;
 
@@ -32,6 +33,7 @@ void ShootemApp::Init()
 
     this->fPlayerSpeed = 5.f;
     this->fPlayerSize = 1.f;
+    this->fTurnSpeed = n_deg2rad(360.f);
 
     this->fPlayerDyingTime = 2.f;
     this->fPlayerTimeElapsed = 0.f;
@@ -191,9 +193,20 @@ void ShootemApp::Tick( float fTimeElapsed )
         break;
 
     case PS_Alive:
-        float moveSpace = this->fPlayerSpeed * fTimeElapsed;//=cameraSpeed
+        //camera rotate
+        float mouse_x = (inputServer->GetSlider("slider_left") - inputServer->GetSlider("slider_right"));
+        float mouse_y = (inputServer->GetSlider("slider_up") - inputServer->GetSlider("slider_down"));
+        float angleSpace = this->fTurnSpeed * 10.f * fTimeElapsed;
+
+        if (inputServer->GetButton("right_pressed"))
+        {
+            this->vecPlayerRot.y -= mouse_x * angleSpace;//unlike cameras, rotation is interpreted the other way
+            this->vecPlayerRot.x -= mouse_y * angleSpace;
+        }
 
         //camera move
+        float moveSpace = this->fPlayerSpeed * fTimeElapsed;
+
         vector3 vecMove;
         if (inputServer->GetButton("forward"))
         {
@@ -242,16 +255,22 @@ void ShootemApp::Tick( float fTimeElapsed )
         }
 
         //update camera position applying threshold
-        vector3 eyePos = this->vecPlayerPos + this->vecCameraOffset;
-        if ((eyePos.z - this->vecEye.z) > this->fCameraThreshold)
-        {
-            this->vecEye.z = eyePos.z - this->fCameraThreshold;
-        }
-        else if ((this->vecEye.z - eyePos.z) > this->fCameraThreshold)
-        {
-            this->vecEye.z = eyePos.z + this->fCameraThreshold;
-        }
-        this->vecEye.x = eyePos.x;
+        matrix44 matWorld;
+        matWorld.rotate_y(this->vecPlayerRot.y);
+        //matWorld.invert_simple();
+        this->vecEye = this->vecPlayerPos + matWorld * this->vecCameraOffset;
+        this->vecRot.set(n_deg2rad(30), this->vecPlayerRot.y, 0);//vecCameraRotOffset+vecPlayerRot
+        
+        //vector3 eyePos = this->vecPlayerPos + this->vecCameraOffset;
+        //if ((eyePos.z - this->vecEye.z) > this->fCameraThreshold)
+        //{
+        //    this->vecEye.z = eyePos.z - this->fCameraThreshold;
+        //}
+        //else if ((this->vecEye.z - eyePos.z) > this->fCameraThreshold)
+        //{
+        //    this->vecEye.z = eyePos.z + this->fCameraThreshold;
+        //}
+        //this->vecEye.x = eyePos.x;
         
         //shoot
         if (inputServer->GetButton("fire"))
@@ -642,6 +661,8 @@ void ShootemApp::Render()
     else
     {
         matrix44 matWorld;
+        //matWorld.rotate_x(this->vecPlayerRot.x);
+        matWorld.rotate_y(this->vecPlayerRot.y);
         matWorld.scale(playerScale);
         matWorld.translate(this->vecPlayerPos);
         this->shaderParams.SetArg(nShaderState::MatDiffuse, playerColor);

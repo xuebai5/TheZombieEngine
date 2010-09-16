@@ -45,6 +45,7 @@ protected:
     vector3 vecRot;
 
     vector3 vecPlayerPos;
+    vector3 vecPlayerRot;
     vector3 vecCameraOffset;
 
     float fCameraThreshold;
@@ -53,6 +54,7 @@ protected:
     matrix44 matProj;
 
     float fPlayerSpeed;
+    float fTurnSpeed;
     float fPlayerSize;
 
     float fPlayerTimeElapsed;
