@@ -3,7 +3,7 @@
 #===============================================================================
 
 #===============================================================================
-#  conjurer modules
+#  summoner modules
 #===============================================================================
 beginmodule summoner
     setdir conjurer
@@ -33,13 +33,13 @@ beginmodule nsummonerstate
     setfiles {
         nsummonerstate
     }
-    setheaders{
+    setheaders {
         nsummonerstate
     }
 endmodule
 
 #===============================================================================
-#  conjurer Targets
+#  summoner Targets
 #===============================================================================
 begintarget summoner
     annotate "summoner app"
@@ -53,6 +53,9 @@ begintarget summoner
         summoner
         nsummonerapp
         nsummonerstate
+        
+        nshootemstate
+        shootemapp
     }
     settargetdeps {
         gpbasicactions

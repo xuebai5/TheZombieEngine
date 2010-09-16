@@ -45,10 +45,11 @@ protected:
     vector3 playerPos;
     vector3 playerRot;
     float playerSpeed;
+    float turnSpeed;
 
     //camera
-    vector3 cameraPos;
     vector3 cameraOffset;
+    vector3 cameraPos;
     polar2 cameraAngles;
     float cameraThreshold;
 };
