@@ -34,6 +34,11 @@ nShootemState::nShootemState()
 
     this->fProjectileMaxTime = 2.f;
     this->fProjectileSpeed = 10.f;
+
+    this->fEnemySpawnDistance = 100.f;//too much!
+    this->fEnemySpeed = 3.f;
+    this->fEnemyHitTime = .2f;
+    this->fEnemyDyingTime = 1.f;
 }
 
 //------------------------------------------------------------------------------
@@ -104,6 +109,9 @@ nShootemState::OnStateEnter( const nString & prevState )
     this->cameraPos = this->playerPos + this->cameraOffset;
     this->cameraAngles.set(n_deg2rad(-15.f), this->playerRot.y + n_deg2rad(180.f));
 
+    //find the enemies
+    this->InitEnemies();
+
     nCommonState::OnStateEnter(prevState);
 }
 
@@ -117,6 +125,22 @@ nShootemState::OnStateLeave( const nString & nextState )
     this->refViewport->SetVisible(false);
 
     nCommonState::OnStateLeave( nextState );
+}
+
+//------------------------------------------------------------------------------
+/**
+*/
+void
+nShootemState::AdjustHeight( vector3& position )
+{
+    if (this->refHeightMap)
+    {
+        float height;
+        if (this->refHeightMap->GetHeight(position.x, position.z, height))
+        {
+            position.y = height;
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -172,14 +196,7 @@ nShootemState::OnFrame()
     this->playerPos = matWorld * vecMove;
 
     //adjust to terrain
-    if (this->refHeightMap)
-    {
-        float height;
-        if (this->refHeightMap->GetHeight(this->playerPos.x, this->playerPos.z, height))
-        {
-            this->playerPos.y=height;
-        }
-    }
+    this->AdjustHeight( this->playerPos );
 
     //update camera position applying threshold
     vector3 eyePos = matWorld * this->cameraOffset;
@@ -202,6 +219,9 @@ nShootemState::OnFrame()
     }
 
     this->TickProjectiles(float(frameTime));
+
+    //enemies
+    this->TickEnemies(float(frameTime));
 
     //update entities
     ncTransform* transform = this->refPlayerEntity->GetComponentSafe<ncTransform>();

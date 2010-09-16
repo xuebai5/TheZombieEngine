@@ -41,13 +41,13 @@ void nShootemState::TickProjectiles(float fTimeElapsed)
         proj.vecPos += proj.vecDir * this->fProjectileSpeed * fTimeElapsed;
 
         //TODO- check for collisions
-        //Enemy* enemy = this->CheckEnemies(proj.vecPos, proj.vecSize.x);
-        //if (enemy)
-        //{
-        //    this->OnEnemyHit(enemy);
-        //    projectiles.EraseQuick(index);
-        //    continue;
-        //}
+        Enemy* enemy = this->CheckEnemies(proj.vecPos, 0);
+        if (enemy)
+        {
+            this->OnEnemyHit(enemy);
+            projectiles.EraseQuick(index);
+            continue;
+        }
 
         index++;
     }
