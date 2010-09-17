@@ -47,7 +47,7 @@ nShootemState::InitPlayerPath()
 //------------------------------------------------------------------------------
 
 void 
-nShootemState::SnapToPath(vector3& pos, vector3& rot)
+nShootemState::SnapToPath(vector3& pos)
 {
     //find the closest point in the path thast is _behind_ the position
     //and get the rotation corresponding to that segment
@@ -85,10 +85,6 @@ nShootemState::SnapToPath(vector3& pos, vector3& rot)
             vecPos.norm();
             pos = closest + vecPos * this->fMaxDistanceToPath;
         }
-
-        //adjust rotation to the segment
-        polar2 angles( segment.vec() );
-        rot.y = angles.rho;
     }
 }
 
@@ -101,15 +97,8 @@ nShootemState::HandleInput(nTime frameTime)
 
     //player rotate
     float angleSpace = this->turnSpeed * float(frameTime);
-
-    //if (inputServer->GetButton("StrafeLeft"))
-    //{
-    //    this->playerRot.y += angleSpace;
-    //}
-    //if (inputServer->GetButton("StrafeRight"))
-    //{
-    //    this->playerRot.y -= angleSpace;
-    //}
+    float mouse_x = (inputServer->GetSlider("slider_left") - inputServer->GetSlider("slider_right"));
+    this->playerRot.y += mouse_x * angleSpace;
 
     //player move
     float moveSpace = this->playerSpeed * float(frameTime);
@@ -148,8 +137,8 @@ nShootemState::HandleInput(nTime frameTime)
     this->playerPos = matWorld * vecMove;
 
     //adjust to path
-    vector3 playerRot;
-    this->SnapToPath( this->playerPos, playerRot );
+    vector3 cameraRot;
+    this->SnapToPath( this->playerPos, cameraRot );
     float diffAngle = playerRot.y - this->playerRot.y;
     float angle = n_clamp(diffAngle, -angleSpace, angleSpace);
     this->playerRot.y += angle;
@@ -169,7 +158,10 @@ nShootemState::HandleInput(nTime frameTime)
     //}
     //this->cameraPos.x = eyePos.x;
     this->cameraPos = eyePos;
-    this->cameraAngles.rho = this->playerRot.y + n_deg2rad(180);//can't figure this out!
+    float cameraYaw = this->playerRot.y + n_deg2rad(180);//can't figure this out!
+    float cameraTurn = cameraYaw - this->cameraAngles.rho;
+    cameraTurn = n_clamp(cameraTurn, -angleSpace, angleSpace);
+    this->cameraAngles.rho += cameraTurn;
 
     //shoot
     if (inputServer->GetButton("PrimaryAttack"))
