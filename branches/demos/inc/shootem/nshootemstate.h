@@ -75,7 +75,7 @@ protected:
     //player path
     void InitPlayerPath();
     void DrawPlayerPath();
-    void SnapToPath(vector3& pos, vector3& rot);
+    void SnapToPath(vector3& pos);
     nArray<vector3> playerPath;
     int currentWaypoint;
     float fMaxDistanceToPath;

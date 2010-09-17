@@ -138,7 +138,7 @@ nShootemState::HandleInput(nTime frameTime)
 
     //adjust to path
     vector3 cameraRot;
-    this->SnapToPath( this->playerPos, cameraRot );
+    this->SnapToPath( this->playerPos );
     float diffAngle = playerRot.y - this->playerRot.y;
     float angle = n_clamp(diffAngle, -angleSpace, angleSpace);
     this->playerRot.y += angle;
