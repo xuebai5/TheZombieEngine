@@ -31,7 +31,7 @@ void nShootemState::InitEnemies()
             newEnemy.vecPos = transform->GetPosition();
             newEnemy.radius2D = radius2D;
             newEnemy.color.set(1,1,1,1);
-            newEnemy.hitPoints = 1;
+            newEnemy.hitPoints = 3;
             newEnemy.fTimeElapsed = 0;
             newEnemy.state = ES_Invalid;
             newEnemy.refEntity.set(entity);
@@ -80,7 +80,7 @@ void nShootemState::TickEnemies(float fTimeElapsed)
             enemy.fTimeElapsed += fTimeElapsed;
             if (enemy.fTimeElapsed > this->fEnemyHitTime)
                 this->SetEnemyState(&enemy, ES_Active);
-            //fall through
+            break;
 
         case ES_Active:
             {
@@ -95,7 +95,6 @@ void nShootemState::TickEnemies(float fTimeElapsed)
 
                 //adjust to terrain
                 this->AdjustHeight( enemy.vecPos );
-                enemy.vecPos.y += 0.5f;//can't figure out why
 
                 //update the entity position
                 ncTransform* transform = enemy.refEntity->GetComponentSafe<ncTransform>();
@@ -109,7 +108,7 @@ void nShootemState::TickEnemies(float fTimeElapsed)
             if (enemy.fTimeElapsed > this->fEnemyDyingTime)
             {
                 nEntityObjectServer::Instance()->RemoveEntityObject(enemy.refEntity);
-                this->enemies.EraseQuick(index);
+                this->enemies.Erase(index);
                 continue;
             }
         }
