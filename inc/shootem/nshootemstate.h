@@ -58,6 +58,20 @@ protected:
     float playerSpeed;
     float turnSpeed;
 
+    enum PlayerState
+    {
+        PS_Idle = 0,
+        PS_Forward,
+        PS_Backward,
+        PS_StrafeLeft,
+        PS_StrafeRight,
+        PS_Die,
+        PS_Invalid
+    };
+
+    PlayerState playerState;
+    void SetPlayerState(PlayerState playerState);
+
     //player path
     void InitPlayerPath();
     void DrawPlayerPath();
@@ -97,6 +111,7 @@ protected:
         ES_Active,
         ES_Hit,
         ES_Dying,
+        ES_Invalid,
     };
 
     struct Enemy
@@ -119,6 +134,8 @@ protected:
     float fEnemySpeed;
     float fEnemyHitTime;
     float fEnemyDyingTime;
+
+    void SetEnemyState(Enemy* enemy, EnemyState state);
 
     void InitEnemies();
     void TickEnemies(float fTimeElapsed);

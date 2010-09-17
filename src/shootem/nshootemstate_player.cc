@@ -10,6 +10,7 @@
 #include "input/ninputserver.h"
 #include "nwaypointserver/nwaypointserver.h"
 #include "gfx2/ngfxserver2.h"
+#include "animcomp/nccharacter.h"
 
 //------------------------------------------------------------------------------
 
@@ -113,23 +114,31 @@ nShootemState::HandleInput(nTime frameTime)
     //player move
     float moveSpace = this->playerSpeed * float(frameTime);
 
+    PlayerState playerState = PS_Idle;
     vector3 vecMove;
-    if (inputServer->GetButton("Forward"))
-    {
-        vecMove.z += moveSpace;
-    }
-    if (inputServer->GetButton("Backward"))
-    {
-        vecMove.z -= moveSpace;
-    }
     if (inputServer->GetButton("StrafeLeft"))
     {
         vecMove.x += moveSpace;
+        playerState = PS_StrafeLeft;
     }
     if (inputServer->GetButton("StrafeRight"))
     {
         vecMove.x -= moveSpace;
+        playerState = PS_StrafeRight;
     }
+    if (inputServer->GetButton("Forward"))
+    {
+        vecMove.z += moveSpace;
+        playerState = PS_Forward;
+    }
+    if (inputServer->GetButton("Backward"))
+    {
+        vecMove.z -= moveSpace;
+        playerState = PS_Backward;
+    }
+
+    //update player state
+    this->SetPlayerState( playerState );
 
     matrix44 matWorld;
     matWorld.rotate_y(this->playerRot.y);
@@ -169,6 +178,40 @@ nShootemState::HandleInput(nTime frameTime)
     }
 
     return false;
+}
+
+//------------------------------------------------------------------------------
+
+void nShootemState::SetPlayerState(PlayerState state)
+{
+    n_assert(this->refPlayerEntity.isvalid());
+    ncCharacter* character = this->refPlayerEntity->GetComponentSafe<ncCharacter>();
+
+    if (state != this->playerState)
+    {
+        this->playerState = state;
+        switch (state)
+        {
+        case PS_Forward:
+        case PS_Backward:
+            character->SetActiveState("wis0_2a_walk", state==PS_Backward, true, true );
+            character->SetActiveState("wss0_2a_walk", state==PS_Backward, true, true );
+            break;
+        case PS_StrafeLeft:
+        case PS_StrafeRight:
+            character->SetActiveState("ais0_2a_walk", state==PS_Backward, true, true );
+            character->SetActiveState("ass0_2a_walk", state==PS_Backward, true, true );
+            break;
+        case PS_Die:
+            character->SetActiveState("$$$2_2a_die", false, false, true );
+            break;
+        case PS_Idle:
+        default://TEMP
+            character->SetActiveState("$is0_2a_idle00", false, true, true );
+            character->SetActiveState("$ss0_2a_idle00", false, true, true );
+            break;
+        }
+    }
 }
 
 //------------------------------------------------------------------------------
