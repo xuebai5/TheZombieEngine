@@ -117,6 +117,9 @@ nShootemState::OnStateEnter( const nString & prevState )
     //find the player path
     this->InitPlayerPath();
 
+    //hide the cursor
+    nGfxServer2::Instance()->SetCursorVisibility( nGfxServer2::None );
+
     //common behavior
     nCommonState::OnStateEnter(prevState);
 }
@@ -128,6 +131,9 @@ nShootemState::OnStateEnter( const nString & prevState )
 void
 nShootemState::OnStateLeave( const nString & nextState )
 {
+    //show the cursor
+    nGfxServer2::Instance()->SetCursorVisibility( nGfxServer2::System );
+
     this->refViewport->SetVisible(false);
 
     nCommonState::OnStateLeave( nextState );
@@ -180,6 +186,11 @@ nShootemState::OnFrame()
     this->refViewport->SetFrameTime(this->app->GetFrameTime());
     this->refViewport->SetTime(this->app->GetTime());
     this->refViewport->Trigger();
+
+    //move the cursor back
+    const nDisplayMode2 & mode = nGfxServer2::Instance()->GetDisplayMode(); 
+    nGfxServer2::Instance()->SetCursorPosition( 
+        mode.GetXPos() + ( mode.GetWidth() >> 1 ) , mode.GetYPos() + ( mode.GetHeight() >> 1 ) );
 
     nCommonState::OnFrame();
 }
