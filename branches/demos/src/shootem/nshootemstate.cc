@@ -10,7 +10,6 @@
 #include "napplication/napplication.h"
 #include "napplication/nappviewportui.h"
 #include "napplication/nappviewport.h"
-#include "input/ninputserver.h"
 #include "nlevel/nlevelmanager.h"
 #include "nlevel/nlevel.h"
 #include "zombieentity/nctransform.h"
@@ -39,6 +38,8 @@ nShootemState::nShootemState()
     this->fEnemySpeed = 3.f;
     this->fEnemyHitTime = .2f;
     this->fEnemyDyingTime = 1.f;
+
+    this->fMaxDistanceToPath = 4.f;
 }
 
 //------------------------------------------------------------------------------
@@ -112,6 +113,10 @@ nShootemState::OnStateEnter( const nString & prevState )
     //find the enemies
     this->InitEnemies();
 
+    //find the player path
+    this->InitPlayerPath();
+
+    //common behavior
     nCommonState::OnStateEnter(prevState);
 }
 
@@ -152,72 +157,10 @@ nShootemState::OnFrame()
 {
     nTime frameTime = this->app->GetFrameTime();
 
-    //---HandleInput(frameTime)---
-    nInputServer* inputServer = nInputServer::Instance();
+    //player input
+    this->HandleInput(frameTime);
 
-    //player rotate
-    float angleSpace = this->turnSpeed * float(frameTime);
-
-    if (inputServer->GetButton("StrafeLeft"))
-    {
-        this->playerRot.y += angleSpace;
-    }
-    if (inputServer->GetButton("StrafeRight"))
-    {
-        this->playerRot.y -= angleSpace;
-    }
-
-    //player move
-    float moveSpace = this->playerSpeed * float(frameTime);
-
-    vector3 vecMove;
-    if (inputServer->GetButton("Forward"))
-    {
-        vecMove.z += moveSpace;
-    }
-    if (inputServer->GetButton("Backward"))
-    {
-        vecMove.z -= moveSpace;
-    }
-    //if (inputServer->GetButton("StrafeLeft"))
-    //{
-    //    vecMove.x -= moveSpace;
-    //}
-    //if (inputServer->GetButton("StrafeRight"))
-    //{
-    //    vecMove.x += moveSpace;
-    //}
-
-    matrix44 matWorld;
-    matWorld.rotate_y(this->playerRot.y);
-    matWorld.translate(this->playerPos);
-
-    //update player position
-    this->playerPos = matWorld * vecMove;
-
-    //adjust to terrain
-    this->AdjustHeight( this->playerPos );
-
-    //update camera position applying threshold
-    vector3 eyePos = matWorld * this->cameraOffset;
-    //if ((eyePos.z - this->cameraPos.z) > this->cameraThreshold)
-    //{
-    //    this->cameraPos.z = eyePos.z - this->cameraThreshold;
-    //}
-    //else if ((this->cameraPos.z - eyePos.z) > this->cameraThreshold)
-    //{
-    //    this->cameraPos.z = eyePos.z + this->cameraThreshold;
-    //}
-    //this->cameraPos.x = eyePos.x;
-    this->cameraPos = eyePos;
-    this->cameraAngles.rho = this->playerRot.y + n_deg2rad(180);//can't figure this out!
-
-    //shoot
-    if (inputServer->GetButton("PrimaryAttack"))
-    {
-        this->AddProjectile();
-    }
-
+    //projectiles
     this->TickProjectiles(float(frameTime));
 
     //enemies
@@ -257,6 +200,9 @@ nShootemState::OnRender2D()
 {
     nGfxServer2* gfxServer = nGfxServer2::Instance();
     
+    //draw player path
+    this->DrawPlayerPath();
+
     //draw projectiles
     this->DrawProjectiles();
 

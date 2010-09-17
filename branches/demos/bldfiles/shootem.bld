@@ -27,6 +27,7 @@ beginmodule nshootemstate
         nshootemstate_projectile
         nshootemstate_enemy
         nshootemstate_events
+        nshootemstate_input
     }
     setheaders{
         nshootemstate
