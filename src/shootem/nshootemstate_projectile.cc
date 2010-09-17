@@ -12,13 +12,16 @@
 void nShootemState::AddProjectile()
 {
     Projectile& projectile = this->projectiles.PushBack(Projectile());
+
     vector3 pos(this->playerPos);
     pos.y += 1.0f;
     projectile.vecPos.set(pos);//TODO- add offset
     projectile.vecRot.set(this->playerRot);
+
     matrix44 matWorld;
     matWorld.rotate_y(this->playerRot.y);
     projectile.vecDir = matWorld * vector3(0,0,1);
+
     projectile.vecSize.set( .1f, .1f, .1f );
     projectile.fTimeElapsed = 0.f;
 }

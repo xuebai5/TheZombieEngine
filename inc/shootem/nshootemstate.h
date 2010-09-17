@@ -37,6 +37,7 @@ public:
     /// Called on state to perform 2d rendering
     virtual void OnRender2D();
 
+    /// handle player input
     bool HandleInput(nTime frameTime);
 
 protected:
@@ -56,6 +57,14 @@ protected:
     vector3 playerRot;
     float playerSpeed;
     float turnSpeed;
+
+    //player path
+    void InitPlayerPath();
+    void DrawPlayerPath();
+    void SnapToPath(vector3& pos, vector3& rot);
+    nArray<vector3> playerPath;
+    int currentWaypoint;
+    float fMaxDistanceToPath;
 
     //camera
     vector3 cameraOffset;
