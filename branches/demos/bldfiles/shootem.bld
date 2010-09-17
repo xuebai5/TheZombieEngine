@@ -24,10 +24,10 @@ beginmodule nshootemstate
     setdir shootem
     setfiles {
         nshootemstate
+        nshootemstate_player
         nshootemstate_projectile
         nshootemstate_enemy
         nshootemstate_events
-        nshootemstate_input
     }
     setheaders{
         nshootemstate

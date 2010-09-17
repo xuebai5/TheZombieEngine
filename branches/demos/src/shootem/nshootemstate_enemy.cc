@@ -7,6 +7,7 @@
 
 #include "zombieentity/nctransform.h"
 #include "nspatial/ncspatial.h"
+#include "animcomp/nccharacter.h"
 
 //------------------------------------------------------------------------------
 
@@ -30,12 +31,11 @@ void nShootemState::InitEnemies()
             newEnemy.vecPos = transform->GetPosition();
             newEnemy.radius2D = radius2D;
             newEnemy.color.set(1,1,1,1);
-            newEnemy.state = ES_Idle;
             newEnemy.hitPoints = 1;
             newEnemy.fTimeElapsed = 0;
-
+            newEnemy.state = ES_Invalid;
             newEnemy.refEntity.set(entity);
-
+            this->SetEnemyState(&newEnemy, ES_Idle);
             this->enemies.Append(newEnemy);
         }
 
@@ -56,7 +56,7 @@ void nShootemState::SpawnEnemies()
         {
             if (vector3(this->playerPos - enemy.vecPos).lensquared() < distSq)
             {
-                enemy.state = ES_Active;
+                this->SetEnemyState(&enemy, ES_Active);
             }
         }
     }
@@ -79,7 +79,7 @@ void nShootemState::TickEnemies(float fTimeElapsed)
         case ES_Hit:
             enemy.fTimeElapsed += fTimeElapsed;
             if (enemy.fTimeElapsed > this->fEnemyHitTime)
-                enemy.state = ES_Active;
+                this->SetEnemyState(&enemy, ES_Active);
             //fall through
 
         case ES_Active:
@@ -88,11 +88,14 @@ void nShootemState::TickEnemies(float fTimeElapsed)
                 vecMove.y = 0;
                 vecMove.norm();
                 polar2 angles(vecMove);
+                angles.theta = 0.f;//for some reason, the latitude is 90 degrees
+
                 vecMove *= this->fEnemySpeed * fTimeElapsed;
                 enemy.vecPos += vecMove;
 
                 //adjust to terrain
                 this->AdjustHeight( enemy.vecPos );
+                enemy.vecPos.y += 0.5f;//can't figure out why
 
                 //update the entity position
                 ncTransform* transform = enemy.refEntity->GetComponentSafe<ncTransform>();
@@ -112,6 +115,34 @@ void nShootemState::TickEnemies(float fTimeElapsed)
         }
 
         index++;
+    }
+}
+
+//------------------------------------------------------------------------------
+
+void nShootemState::SetEnemyState(Enemy* enemy, EnemyState state)
+{
+    if (state != enemy->state)
+    {
+        n_assert(enemy->refEntity.isvalid());
+        ncCharacter* character = enemy->refEntity->GetComponentSafe<ncCharacter>();
+        enemy->state = state;
+        switch (state)
+        {
+        case ES_Dying:
+            character->SetActiveState( "$$s2_1a_die", false, false, true );
+            break;
+        case ES_Hit:
+            character->SetActiveState( "$$s0_1a_impact00", false, false,  true );
+            break;
+        case ES_Active:
+            character->SetActiveState( "w$s0_1a_walk", false, true,  true );
+            break;
+        case ES_Idle:
+        default://TEMP
+            character->SetActiveState( "w$s0_1a_walk", false, true, true );
+            break;
+        }
     }
 }
 

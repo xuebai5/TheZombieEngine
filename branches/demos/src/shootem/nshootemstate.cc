@@ -26,6 +26,7 @@ nShootemState::nShootemState()
 {
     this->playerSpeed = 5.f;
     this->turnSpeed = n_deg2rad(60.f);
+    this->playerState = PS_Invalid;
 
     this->cameraOffset.set(0, 3.f, -5.f);
     this->cameraThreshold = 1.f;
