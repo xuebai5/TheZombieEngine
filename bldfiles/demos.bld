@@ -38,6 +38,7 @@ begintarget demo
         ambientapp
         modelsapp
         sceneapp
+        lightsapp
         shootemapp
     }
     settargetdeps {
