@@ -13,8 +13,8 @@
 //#include "shaders/shadersapp.h"
 //#include "ambient/ambientapp.h"
 //#include "models/modelsapp.h"
-
-#include "shootem/shootemapp.h"
+//#include "shootem/shootemapp.h"
+#include "lights/lightsapp.h"
 
 #ifdef __WIN32__
 #include "kernel/nwin32loghandler.h"
@@ -123,7 +123,8 @@ main(int argc, const char** argv)
     //app = n_new(ShadersApp);
     //app = n_new(AmbientApp);
     //app = n_new(ModelsApp);
-    app = n_new(ShootemApp);
+    //app = n_new(ShootemApp);
+    app = n_new(LightsApp);
 
     pGfxServer->SetDisplayMode(displayMode);
     nCamera2 camera(n_deg2rad(60), float(displayMode.GetHeight())/float(displayMode.GetWidth()),1.f,100.f);
