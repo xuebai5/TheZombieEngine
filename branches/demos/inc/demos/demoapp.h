@@ -44,7 +44,7 @@ protected:
     bool LoadResource( nResource* pResource, const nString& strFilename );
 
     //draw helpers
-    int BeginDraw( nShader2* pShader, nMesh2* pMesh );
+    int BeginDraw( nShader2* pShader, nMesh2* pMesh, const char* technique=0 );
     void BeginPass( nShader2* pShader, int passIndex );
     void Draw( const vector3& vPosition, const vector3& vScale );
     void Draw( const matrix44& matWorld );
