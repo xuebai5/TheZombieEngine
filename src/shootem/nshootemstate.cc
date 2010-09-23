@@ -33,7 +33,7 @@ nShootemState::nShootemState()
     this->cameraAngles.set(n_deg2rad(-15), 0.f);
 
     this->fProjectileMaxTime = 2.f;
-    this->fProjectileSpeed = 10.f;
+    this->fProjectileSpeed = 15.f;
 
     this->fEnemySpawnDistance = 100.f;//too much!
     this->fEnemySpeed = 3.f;

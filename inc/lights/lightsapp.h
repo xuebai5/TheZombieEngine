@@ -3,6 +3,7 @@
 
 #include "kernel/nref.h"
 #include "util/narray.h"
+#include "gfx2/ngfxserver2.h"
 
 #include "demos/demoapp.h"
 
@@ -27,15 +28,31 @@ public:
 
 private:
 
+    //resources
     nRef<nMesh2> refMesh;
-    nRef<nTexture2> refTexture;
+    nRef<nTexture2> refDiffMap;
+    nRef<nTexture2> refBumpMap;
+    nRef<nTexture2> refCubeMap;
 
     nRef<nMesh2> refMeshFloor;
     nRef<nTexture2> refTextureFloor;
 
+    nRef<nMesh2> refMeshSphere;
+
     nRef<nShader2> refShaderColor;
     nRef<nShader2> refShaderDiffuse;
 
+    struct Material
+    {
+        nRef<nShader2> refShader;
+        nShaderParams shaderParams;
+        nString technique;
+    };
+
+    nArray<Material> materials;
+    int curMaterialIndex;
+
+    //common stuff
     bool bWireframe;
 
     vector3 vecEye;//eye position
@@ -49,6 +66,8 @@ private:
     vector3 vecScale;
 
     vector3 vecLightPos;
+    vector4 vecLightAmbient;
+    vector4 vecLightDiffuse;
 };
 
-#endif //_TEMPLATEAPP_H
+#endif //LIGHTSAPP_H

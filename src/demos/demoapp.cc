@@ -52,17 +52,24 @@ void DemoApp::Render()
 bool
 DemoApp::LoadResource( nResource* pResource, const nString& strFilename )
 {
-    pResource->SetFilename( strFilename );
-    return pResource->Load();
+    if (!pResource->IsLoaded())
+    {
+        pResource->SetFilename( strFilename );
+        return pResource->Load();
+    }
+    return true;
 }
 
 //------------------------------------------------------------------------------
 
 int
-DemoApp::BeginDraw(nShader2 *pShader, nMesh2 *pMesh)
+DemoApp::BeginDraw(nShader2 *pShader, nMesh2 *pMesh, const char* technique)
 {
     //setup shader
     nGfxServer2::Instance()->SetShader( pShader );
+    if (technique)
+        pShader->SetTechnique(technique);
+
     int nPasses = pShader->Begin( false );
 
     //draw one sphere mesh for every joint
