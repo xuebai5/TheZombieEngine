@@ -33,7 +33,7 @@ bool SnakesApp::Open()
 
     //board shader- solid unlit
     this->refBoardShader = pGfxServer->NewShader( "solid" );
-    if ( !this->LoadResource( this->refBoardShader, "proj:shaders/color.fx" ) )
+    if ( !this->LoadResource( this->refBoardShader, "proj:shaders/diffuse.fx" ) )
         return false;
 
     //board texture- simple tiled floor
@@ -97,6 +97,12 @@ bool SnakesApp::Open()
 
 void SnakesApp::Close()
 {
+    this->refBoardMesh->Release();
+    this->refBoardShader->Release();
+    this->refBoardTexture->Release();
+    this->refSnakeMesh->Release();
+    this->refSnakeShader->Release();
+
     for ( int index = 0; index < this->snakes.Size(); ++index )
     {
         n_delete( this->snakes.At(index).pSnake );
@@ -265,7 +271,7 @@ void SnakesApp::Render()
                     vector3 vPosition( 10.f * iCol, 0.f, 10.f * iRow );
                     //set material values and textures
                     //this->refBoardShader->SetInt( nShaderState::FillMode, nShaderState::Wireframe );
-                    this->refBoardShader->SetTexture( nShaderState::diffMap, this->refBoardTexture );
+                    this->refBoardShader->SetTexture( nShaderState::DiffMap0, this->refBoardTexture );
                     this->Draw( vPosition, vScale );
                 }
             }

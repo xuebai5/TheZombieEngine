@@ -55,7 +55,7 @@ bool CamerasApp::Open()
         return false;
 
     this->refShader = gfxServer->NewShader("color");
-    if (!this->LoadResource(this->refShader, "proj:shaders/color.fx"))
+    if (!this->LoadResource(this->refShader, "proj:shaders/diffuse.fx"))
         return false;
 
     return true;
@@ -65,11 +65,11 @@ bool CamerasApp::Open()
 
 void CamerasApp::Close()
 {
-    this->refMesh->Release();
-    this->refFloorMesh->Release();
-    this->refTexture->Release();
-    this->refFloorTexture->Release();
-    this->refShader->Release();
+    N_REF_RELEASE(this->refMesh);
+    N_REF_RELEASE(this->refFloorMesh);
+    N_REF_RELEASE(this->refTexture);
+    N_REF_RELEASE(this->refFloorTexture);
+    N_REF_RELEASE(this->refShader);
 }
 
 //------------------------------------------------------------------------------
@@ -235,7 +235,7 @@ void CamerasApp::Render()
     this->BeginDraw( this->refShader, this->refMesh );
     this->BeginPass( this->refShader, 0 );
     this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShader->SetTexture( nShaderState::diffMap, this->refTexture );
+    this->refShader->SetTexture( nShaderState::DiffMap0, this->refTexture );
     vector3 vecScale( 1.f, 1.f, 1.f );
     vector3 vecPosition( 0.f, 1.f, 0.f );
     vecPosition += this->vecAt; //for third person camera
@@ -247,7 +247,7 @@ void CamerasApp::Render()
     this->BeginDraw( this->refShader, this->refFloorMesh );
     this->BeginPass( this->refShader, 0 );
     this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShader->SetTexture( nShaderState::diffMap, this->refFloorTexture );
+    this->refShader->SetTexture( nShaderState::DiffMap0, this->refFloorTexture );
     this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
