@@ -22,7 +22,7 @@ function OnStartup()
     proj = f:manglepath('proj:')
     home = f:manglepath('home:')
 
-    f:setassign('wc', 'home:../scourge')
+    f:setassign('wc', 'proj:')
     f:setassign('wctextures', 'wc:export/textures')
     f:setassign('shaders', home .. '/data/shaders/2.0/')
 
