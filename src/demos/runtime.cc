@@ -6,14 +6,14 @@
 //------------------------------------------------------------------------------
 #include "kernel/nkernelserver.h"
 
-//#include "demos/demoapp.h"
-//#include "snakes/snakesapp.h"
-//#include "cameras/camerasapp.h"
-//#include "transform/transformapp.h"
-//#include "shaders/shadersapp.h"
-//#include "ambient/ambientapp.h"
-//#include "models/modelsapp.h"
-//#include "shootem/shootemapp.h"
+#include "demos/demoapp.h"
+#include "snakes/snakesapp.h"
+#include "cameras/camerasapp.h"
+#include "transform/transformapp.h"
+#include "shaders/shadersapp.h"
+#include "ambient/ambientapp.h"
+#include "models/modelsapp.h"
+#include "shootem/shootemapp.h"
 #include "lights/lightsapp.h"
 
 #ifdef __WIN32__
@@ -116,7 +116,7 @@ main(int argc, const char** argv)
 	}
 
     DemoApp* app(0);
-    //app = n_new(DemoApp);
+    app = n_new(DemoApp);
     //app = n_new(SnakesApp);
     //app = n_new(CamerasApp);
     //app = n_new(TransformApp);
@@ -124,7 +124,7 @@ main(int argc, const char** argv)
     //app = n_new(AmbientApp);
     //app = n_new(ModelsApp);
     //app = n_new(ShootemApp);
-    app = n_new(LightsApp);
+    //app = n_new(LightsApp);
 
     pGfxServer->SetDisplayMode(displayMode);
     nCamera2 camera(n_deg2rad(60), float(displayMode.GetHeight())/float(displayMode.GetWidth()),1.f,100.f);

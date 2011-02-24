@@ -54,8 +54,8 @@ bool TransformApp::Open()
     if (!this->LoadResource(this->refFloorTexture, "proj:textures/sidewalk.dds"))
         return false;
 
-    this->refShader = gfxServer->NewShader("color");
-    if (!this->LoadResource(this->refShader, "proj:shaders/color.fx"))
+    this->refShader = gfxServer->NewShader("diffuse");
+    if (!this->LoadResource(this->refShader, "proj:shaders/diffuse.fx"))
         return false;
 
     nMeshGroup& group = this->refMesh->Group(0);
@@ -197,7 +197,7 @@ void TransformApp::Render()
     this->BeginDraw( this->refShader, this->refMesh );
     this->BeginPass( this->refShader, 0 );
     this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShader->SetTexture( nShaderState::diffMap, this->refTexture );
+    this->refShader->SetTexture( nShaderState::DiffMap0, this->refTexture );
     this->Draw( matWorld );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
@@ -233,7 +233,7 @@ void TransformApp::Render()
     this->BeginDraw( this->refShader, this->refFloorMesh );
     this->BeginPass( this->refShader, 0 );
     this->refShader->SetInt( nShaderState::FillMode, this->bWireframe ? nShaderState::Wireframe : nShaderState::Solid );
-    this->refShader->SetTexture( nShaderState::diffMap, this->refFloorTexture );
+    this->refShader->SetTexture( nShaderState::DiffMap0, this->refFloorTexture );
     this->Draw( vector3( -5.f, 0.f, -5.f ), vector3( 10.f, 0.f, 10.f ) );
     this->EndPass( this->refShader );
     this->EndDraw( this->refShader );
